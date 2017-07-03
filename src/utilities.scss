@@ -1,0 +1,206 @@
+/* ==========================================================================
+ * Utilities
+ * ========================================================================== */
+
+/* Clearfix hack
+ * -------------------------------------------------------------------------- */
+
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+/* Font style
+ * -------------------------------------------------------------------------- */
+
+// Italic text.
+.fnt-italic {
+	font-style: italic;
+}
+
+/* Font weight
+ * -------------------------------------------------------------------------- */
+
+// Font weight thin.
+.fnt-thin {
+	font-weight: 100;
+}
+
+// Font weight extra-light.
+.fnt-xlight {
+	font-weight: 200;
+}
+
+// Font weight light.
+.fnt-light {
+	font-weight: 300;
+}
+
+// Font weight regular.
+.fnt-regular {
+	font-weight: 400;
+}
+
+// Font weight medium.
+.fnt-medium {
+	font-weight: 500;
+}
+
+// Font weight semi-bold.
+.fnt-semibold {
+	font-weight: 600;
+}
+
+// Font weight bold.
+.fnt-bold {
+	font-weight: 700;
+}
+
+// Font weight extra-bold.
+.fnt-xbold {
+	font-weight: 800;
+}
+
+// Font weight black.
+.fnt-black {
+	font-weight: 900;
+}
+
+/* Spacing
+ * -------------------------------------------------------------------------- */
+
+// Margins.
+@for $i from 0 through $spacings {
+	.m-#{$i} {
+		margin: $spacing * $i;
+	}
+
+	.m-top-#{$i} {
+		margin-top: $spacing * $i;
+	}
+
+	.m-right-#{$i} {
+		margin-right: $spacing * $i;
+	}
+
+	.m-bottom-#{$i} {
+		margin-bottom: $spacing * $i;
+	}
+
+	.m-left-#{$i} {
+		margin-left: $spacing * $i;
+	}
+
+	.m-x-#{$i} {
+		margin-left: $spacing * $i;
+		margin-right: $spacing * $i;
+	}
+
+	.m-y-#{$i} {
+		margin-top: $spacing * $i;
+		margin-bottom: $spacing * $i;
+	}
+}
+
+// Paddings.
+@for $i from 0 through $spacings {
+	.p-#{$i} {
+		padding: $spacing * $i;
+	}
+
+	.p-top-#{$i} {
+		padding-top: $spacing * $i;
+	}
+
+	.p-right-#{$i} {
+		padding-right: $spacing * $i;
+	}
+
+	.p-bottom-#{$i} {
+		padding-bottom: $spacing * $i;
+	}
+
+	.p-left-#{$i} {
+		padding-left: $spacing * $i;
+	}
+
+	.p-x-#{$i} {
+		padding-left: $spacing * $i;
+		padding-right: $spacing * $i;
+	}
+
+	.p-y-#{$i} {
+		padding-top: $spacing * $i;
+		padding-bottom: $spacing * $i;
+	}
+}
+
+/* Sizing
+ * -------------------------------------------------------------------------- */
+
+@each $prop, $abbr in (width: w, height: h) {
+	@each $size, $length in $sizes {
+		.#{$abbr}-#{$size} {
+			#{$prop}: $length;
+		}
+	}
+}
+
+.w-max-100,
+.h-max-100 {
+	max-width: 100%;
+}
+
+/* Text alignment
+ * -------------------------------------------------------------------------- */
+
+// Center aligned text.
+.txt-center {
+	text-align: center;
+}
+
+// Left aligned text.
+.txt-left {
+	text-align: left;
+}
+
+// Right aligned text.
+.txt-right {
+	text-align: right;
+}
+
+/* Text decoration
+ * -------------------------------------------------------------------------- */
+
+// Strikethrough text.
+.txt-strike {
+	text-decoration: line-through;
+}
+
+/* Text transform
+ * -------------------------------------------------------------------------- */
+
+// Capitalized text.
+.txt-capitalize {
+	text-transform: capitalize;
+}
+
+// Lowercased text.
+.txt-lowercase {
+	text-transform: lowercase;
+}
+
+// Uppercased text.
+.txt-uppercase {
+	text-transform: uppercase;
+}
