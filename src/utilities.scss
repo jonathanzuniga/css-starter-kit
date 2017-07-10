@@ -1,11 +1,17 @@
-/* ==========================================================================
- * Utilities
- * ========================================================================== */
+@import '_variables';
 
-/* Clearfix hack
- * -------------------------------------------------------------------------- */
+/***
+ * Clearfix:
+ */
 
-// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+/**
+ * Clearfix:
+ * `.clrfix` Clears floats using clearfix hack class.
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ *     @example
+ *     div.clrfix
+ */
 .clrfix {
 	*zoom: 1;
 
@@ -20,187 +26,434 @@
 	}
 }
 
-/* Font style
- * -------------------------------------------------------------------------- */
+// ==========================================================================
 
-// Italic text.
-.fnt-italic {
-	font-style: italic;
-}
+/***
+ * Font weight and italics:
+ */
 
-/* Font weight
- * -------------------------------------------------------------------------- */
-
-// Font weight thin.
+/**
+ * Font weight thin:
+ * `.fnt-thin` Font weight thin.
+ *
+ *     @example
+ *     p.fnt-thin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-thin {
 	font-weight: 100;
 }
 
-// Font weight extra-light.
+/**
+ * Font weight extra-light:
+ * `.fnt-xlight` Font weight extra-light.
+ *
+ *     @example
+ *     p.fnt-xlight Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-xlight {
 	font-weight: 200;
 }
 
-// Font weight light.
+/**
+ * Font weight light:
+ * `.fnt-light` Font weight light.
+ *
+ *     @example
+ *     p.fnt-light Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-light {
 	font-weight: 300;
 }
 
-// Font weight regular.
+/**
+ * Font weight regular:
+ * `.fnt-regular` Font weight regular.
+ *
+ *     @example
+ *     p.fnt-regular Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-regular {
 	font-weight: 400;
 }
 
-// Font weight medium.
+/**
+ * Font weight medium:
+ * `.fnt-medium` Font weight medium.
+ *
+ *     @example
+ *     p.fnt-medium Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-medium {
 	font-weight: 500;
 }
 
-// Font weight semi-bold.
+/**
+ * Font weight semi-bold:
+ * `.fnt-semibold` Font weight semi-bold.
+ *
+ *     @example
+ *     p.fnt-semibold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-semibold {
 	font-weight: 600;
 }
 
-// Font weight bold.
+/**
+ * Font weight bold:
+ * `.fnt-bold` Font weight bold.
+ *
+ *     @example
+ *     p.fnt-bold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-bold {
 	font-weight: 700;
 }
 
-// Font weight extra-bold.
+/**
+ * Font weight extra-bold:
+ * `.fnt-xbold` Font weight extra-bold.
+ *
+ *     @example
+ *     p.fnt-xbold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-xbold {
 	font-weight: 800;
 }
 
-// Font weight black.
+/**
+ * Font weight black:
+ * `.fnt-black` Font weight black.
+ *
+ *     @example
+ *     p.fnt-black Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 .fnt-black {
 	font-weight: 900;
 }
 
-/* Spacing
- * -------------------------------------------------------------------------- */
+/**
+ * Italic text:
+ * `.fnt-italic` Italic text.
+ *
+ *     @example
+ *     p.fnt-italic Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-italic {
+	font-style: italic;
+}
 
-// Margins.
+// ==========================================================================
+
+/***
+ * Margin and padding:
+ */
+
 @for $i from 0 through $spacings {
+	/**
+	 * Margin #{$spacing * $i}:
+	 * `.m-#{$i}` Applies `margin: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-#{$i}
+	 */
 	.m-#{$i} {
 		margin: $spacing * $i;
 	}
 
+	/**
+	 * Margin top #{$spacing * $i}:
+	 * `.m-top-#{$i}` Applies `margin-top: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-top-#{$i}
+	 */
 	.m-top-#{$i} {
 		margin-top: $spacing * $i;
 	}
 
+	/**
+	 * Margin right #{$spacing * $i}:
+	 * `.m-right-#{$i}` Applies `margin-right: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-right-#{$i}
+	 */
 	.m-right-#{$i} {
 		margin-right: $spacing * $i;
 	}
 
+	/**
+	 * Margin bottom #{$spacing * $i}:
+	 * `.m-bottom-#{$i}` Applies `margin-bottom: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-bottom-#{$i}
+	 */
 	.m-bottom-#{$i} {
 		margin-bottom: $spacing * $i;
 	}
 
+	/**
+	 * Margin left #{$spacing * $i}:
+	 * `.m-left-#{$i}` Applies `margin-left: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-left-#{$i}
+	 */
 	.m-left-#{$i} {
 		margin-left: $spacing * $i;
 	}
 
+	/**
+	 * Margin right and left #{$spacing * $i}:
+	 * `.m-x-#{$i}` Applies `margin-right: #{$spacing * $i};  margin-left: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-x-#{$i}
+	 */
 	.m-x-#{$i} {
 		margin-left: $spacing * $i;
 		margin-right: $spacing * $i;
 	}
 
+	/**
+	 * Margin top and bottom #{$spacing * $i}:
+	 * `.m-y-#{$i}` Applies `margin-top: #{$spacing * $i};  margin-bottom: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.m-y-#{$i}
+	 */
 	.m-y-#{$i} {
 		margin-top: $spacing * $i;
 		margin-bottom: $spacing * $i;
 	}
 }
 
-// Paddings.
 @for $i from 0 through $spacings {
+	/**
+	 * Padding #{$spacing * $i}:
+	 * `.p-#{$i}` Applies `padding: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-#{$i}
+	 */
 	.p-#{$i} {
 		padding: $spacing * $i;
 	}
 
+	/**
+	 * Padding top #{$spacing * $i}:
+	 * `.p-top-#{$i}` Applies `padding-top: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-top-#{$i}
+	 */
 	.p-top-#{$i} {
 		padding-top: $spacing * $i;
 	}
 
+	/**
+	 * Padding right #{$spacing * $i}:
+	 * `.p-right-#{$i}` Applies `padding-right: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-right-#{$i}
+	 */
 	.p-right-#{$i} {
 		padding-right: $spacing * $i;
 	}
 
+	/**
+	 * Padding bottom #{$spacing * $i}:
+	 * `.p-bottom-#{$i}` Applies `padding-bottom: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-bottom-#{$i}
+	 */
 	.p-bottom-#{$i} {
 		padding-bottom: $spacing * $i;
 	}
 
+	/**
+	 * Padding left #{$spacing * $i}:
+	 * `.p-left-#{$i}` Applies `padding-left: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-left-#{$i}
+	 */
 	.p-left-#{$i} {
 		padding-left: $spacing * $i;
 	}
 
+	/**
+	 * Padding right and left #{$spacing * $i}:
+	 * `.p-x-#{$i}` Applies `padding-right: #{$spacing * $i}; padding-left: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-x-#{$i}
+	 */
 	.p-x-#{$i} {
 		padding-left: $spacing * $i;
 		padding-right: $spacing * $i;
 	}
 
+	/**
+	 * Padding top and bottom #{$spacing * $i}:
+	 * `.p-y-#{$i}` Applies `padding-top: #{$spacing * $i}; padding-bottom: #{$spacing * $i};` to element.
+	 *
+	 *     @example
+	 *     div.p-y-#{$i}
+	 */
 	.p-y-#{$i} {
 		padding-top: $spacing * $i;
 		padding-bottom: $spacing * $i;
 	}
 }
 
-/* Sizing
- * -------------------------------------------------------------------------- */
+// ==========================================================================
+
+/***
+ * Text alignment:
+ */
+
+/**
+ * Center aligned text:
+ * `.txt-center`
+ *
+ *     @example
+ *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-center {
+	text-align: center;
+}
+
+/**
+ * Left aligned text:
+ * `.txt-left`
+ *
+ *     @example
+ *     p.txt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-left {
+	text-align: left;
+}
+
+/**
+ * Right aligned text:
+ * `.txt-right`
+ *
+ *     @example
+ *     p.txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-right {
+	text-align: right;
+}
+
+// ==========================================================================
+
+/***
+ * Text strike:
+ */
+
+/**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+	text-decoration: line-through;
+}
+
+// ==========================================================================
+
+/***
+ * Text transform:
+ */
+
+/**
+ * Capitalized text:
+ * `.txt-capitalize`
+ *
+ *     @example
+ *     p.txt-capitalize Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-capitalize {
+	text-transform: capitalize;
+}
+
+/**
+ * Lowercased text:
+ * `.txt-lowercase`
+ *
+ *     @example
+ *     p.txt-lowercase Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-lowercase {
+	text-transform: lowercase;
+}
+
+/**
+ * Uppercased text:
+ * `.txt-uppercase`
+ *
+ *     @example
+ *     p.txt-uppercase Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-uppercase {
+	text-transform: uppercase;
+}
+
+// ==========================================================================
+
+/***
+ * Width and height:
+ */
 
 @each $prop, $abbr in (width: w, height: h) {
 	@each $size, $length in $sizes {
+		@if $abbr == w {
+			/**
+			 * Width #{$size}%:
+			 * `.#{$abbr}-#{$size}` Applies `width: #{$size}%;` to element.
+			 *
+			 *     @example
+			 *     div.#{$abbr}-#{$size}
+			 */
+		} @else {
+			/**
+			 * Height #{$size}%:
+			 * `.#{$abbr}-#{$size}` Applies `height: #{$size}%;` to element.
+			 *
+			 *     @example
+			 *     div.#{$abbr}-#{$size}
+			 */
+		}
 		.#{$abbr}-#{$size} {
 			#{$prop}: $length;
 		}
 	}
 }
 
-.w-max-100,
-.h-max-100 {
+/**
+ * Max. width 100%:
+ * `.w-max-100` Applies `max-width: 100%;` to element.
+ *
+ *     @example
+ *     div.w-max-100
+ */
+.w-max-100 {
 	max-width: 100%;
 }
 
-/* Text alignment
- * -------------------------------------------------------------------------- */
-
-// Center aligned text.
-.txt-center {
-	text-align: center;
-}
-
-// Left aligned text.
-.txt-left {
-	text-align: left;
-}
-
-// Right aligned text.
-.txt-right {
-	text-align: right;
-}
-
-/* Text decoration
- * -------------------------------------------------------------------------- */
-
-// Strikethrough text.
-.txt-strike {
-	text-decoration: line-through;
-}
-
-/* Text transform
- * -------------------------------------------------------------------------- */
-
-// Capitalized text.
-.txt-capitalize {
-	text-transform: capitalize;
-}
-
-// Lowercased text.
-.txt-lowercase {
-	text-transform: lowercase;
-}
-
-// Uppercased text.
-.txt-uppercase {
-	text-transform: uppercase;
+/**
+ * Max. height 100%:
+ * `.h-max-100` Applies `max-height: 100%;` to element.
+ *
+ *     @example
+ *     div.h-max-100
+ */
+.h-max-100 {
+	max-height: 100%;
 }

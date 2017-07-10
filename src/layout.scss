@@ -1,10 +1,181 @@
-/* ==========================================================================
- * Layout
- * ========================================================================== */
-
-/* Grid system
- * -------------------------------------------------------------------------- */
+@import '_variables';
 
 * {
 	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: $grid-row-bottom-space;
+
+	.row {
+		margin-left: -$grid-column-gutter;
+		margin-right: -$grid-column-gutter;
+	}
+}
+
+@mixin column {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+	width: 100%;
+}
+
+@mixin gutter {
+	padding-left: $grid-column-gutter;
+	padding-right: $grid-column-gutter;
+}
+
+%column {
+	@include column;
+	@include gutter;
+}
+
+.col,
+[class*="col-xsmall-"],
+[class*="col-small-"],
+[class*="col-medium-"],
+[class*="col-large-"],
+[class*="col-xlarge-"] {
+	@extend %column;
+}
+
+/* Horizontal modifiers
+ * ========================================================================== */
+.cols-left {
+	justify-content: flex-start;
+}
+
+.cols-center {
+	justify-content: center;
+}
+
+.cols-right {
+	justify-content: flex-end;
+}
+
+.cols-between {
+	justify-content: space-between;
+}
+
+.cols-around {
+	justify-content: space-around;
+}
+
+/* Vertical modifiers
+ * ========================================================================== */
+.cols-top {
+	align-items: flex-start;
+}
+
+.cols-middle {
+	align-items: center;
+}
+
+.cols-bottom {
+	align-items: flex-end;
+}
+
+.col-top {
+	align-self: flex-start;
+}
+
+.col-middle {
+	align-self: center;
+}
+
+.col-bottom {
+	align-self: flex-end;
+}
+
+/* Columns
+ * ========================================================================== */
+@for $i from 1 through $grid-columns-number {
+	.col-#{$i} {
+		@extend %column;
+
+		$column-width: percentage($i / $grid-columns-number);
+		flex-basis: $column-width;
+		max-width: $column-width;
+	}
+}
+
+/* Offsets
+ * ========================================================================== */
+@for $i from 1 through ($grid-columns-number - 1) {
+	.col-offset-#{$i} {
+		margin-left: percentage($i / $grid-columns-number);
+	}
+}
+
+/* Responsive classes
+ * ========================================================================== */
+@media (min-width: $breakpoint-xs-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-xsmall-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-sm-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-small-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-md-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-medium-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-lg-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-large-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-xl-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-xlarge-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+/* Collapse columns
+ * ========================================================================== */
+.cols-collapse {
+	&.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	[class^="col"] {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }

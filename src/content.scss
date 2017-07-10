@@ -1,0 +1,52 @@
+@import '_variables';
+
+/***
+ * Tables:
+ */
+
+/**
+ * Table:
+ * `.tbl` Tables are styled nicely for you.
+ *
+ *     @example
+ *     table.tbl
+ *         thead
+ *             tr
+ *                 th Fruit
+ *                 th Vegetable
+ *                 th Dessert
+ *         tbody
+ *             tr
+ *                 td Apple
+ *                 td Broccoli
+ *                 td Brownie
+ *             tr
+ *                 td Berry
+ *                 td Carrot
+ *                 td Cupcake
+ *             tr
+ *                 td Cherry
+ *                 td Spinach
+ *                 td Fruitcake
+ */
+.tbl {
+	width: 100%;
+
+	th, td {
+		text-align: left;
+	}
+}
+
+@each $prop, $abbr in (width: tbl-col) {
+	@each $size, $length in $sizes {
+		@for $i from 1 through length($sizes) {
+			$col: $i;
+			.#{$abbr}-#{$col}-#{$size} {
+				tr th:nth-child(#{$col}),
+				tr td:nth-child(#{$col}) {
+					#{$prop}: $length;
+				}
+			}
+		}
+	}
+}
