@@ -5,13 +5,26 @@
   <meta charset="utf-8">
   <title>Styledown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js"></script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css">
-  <link rel="stylesheet" href="../dist/main.css">
+
+  <link rel="stylesheet" href="../styledown.css">
+  <link rel="stylesheet" href="../dist/all.css">
+
+  <script src="../styledown.js"></script>
 
   <style type="text/css">
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    .sg-canvas {
+      *zoom: 1;
+    }
+    .sg-canvas:before,
+    .sg-canvas:after {
+      content: ' ';
+      display: table;
+    }
+    .sg-canvas:after {
+      clear: both;
     }
   </style>
 </head>
@@ -57,8 +70,55 @@
           </section>
         </section>
 
-        <section class="sg-section sg-section-font-weight-and-italics">
-          <h2 id="font-weight-and-italics" class="sg">Font weight and italics</h2>
+        <section class="sg-section sg-section-floats">
+          <h2 id="floats" class="sg">Floats</h2>
+          <section class="sg-block sg-section-float-element-to-left">
+            <div class="sg-text">
+              <h3 id="float-element-to-left" class="sg">Float element to left</h3>
+              <p class="sg">
+                <code class="sg">.flt-left</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <span class="flt-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;flt-left&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+            </div>
+          </section>
+          <section class="sg-block sg-section-float-element-to-right">
+            <div class="sg-text">
+              <h3 id="float-element-to-right" class="sg">Float element to right</h3>
+              <p class="sg">
+                <code class="sg">.flt-right</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <span class="flt-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;flt-right&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></pre>
+            </div>
+          </section>
+        </section>
+
+        <section class="sg-section sg-section-font-style">
+          <h2 id="font-style" class="sg">Font style</h2>
+          <section class="sg-block sg-section-italic-text">
+            <div class="sg-text">
+              <h3 id="italic-text" class="sg">Italic text</h3>
+              <p class="sg">
+                <code class="sg">.fnt-italic</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <p class="fnt-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fnt-italic&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+            </div>
+          </section>
+        </section>
+
+        <section class="sg-section sg-section-font-weight">
+          <h2 id="font-weight" class="sg">Font weight</h2>
           <section class="sg-block sg-section-font-weight-thin">
             <div class="sg-text">
               <h3 id="font-weight-thin" class="sg">Font weight thin</h3>
@@ -165,18 +225,6 @@
               <div class="sg-canvas">
                 <p class="fnt-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fnt-black&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-            </div>
-          </section>
-          <section class="sg-block sg-section-italic-text">
-            <div class="sg-text">
-              <h3 id="italic-text" class="sg">Italic text</h3>
-              <p class="sg">
-                <code class="sg">.fnt-italic</code>Italic text.</p>
-            </div>
-            <div class="sg-example">
-              <div class="sg-canvas">
-                <p class="fnt-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fnt-italic&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
             </div>
           </section>
         </section>

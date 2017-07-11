@@ -1,3 +1,15 @@
+/* ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px;
+  line-height: 1.6; }
+
 /***
  * Tables:
  */
@@ -431,20 +443,13 @@
 .tbl-col-10-100 tr td:nth-child(10) {
   width: 100%; }
 
-* {
-  box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0; }
-
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 15px; }
+  margin-bottom: 16px; }
   .row .row {
-    margin-left: -15px;
-    margin-right: -15px; }
+    margin-left: -16px;
+    margin-right: -16px; }
 
 .col,
 [class*="col-xsmall-"],
@@ -456,8 +461,8 @@ html, body {
   flex-grow: 1;
   max-width: 100%;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 16px;
+  padding-right: 16px; }
 
 /* Horizontal modifiers
  * ========================================================================== */
@@ -851,8 +856,47 @@ html, body {
   .clrfix:after {
     clear: both; }
 
+/* ========================================================================== */
 /***
- * Font weight and italics:
+ * Floats:
+ */
+/**
+ * Float element to left:
+ * `.flt-left`
+ *
+ *     @example
+ *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-left {
+  float: left; }
+
+/**
+ * Float element to right:
+ * `.flt-right`
+ *
+ *     @example
+ *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-right {
+  float: right; }
+
+/* ========================================================================== */
+/***
+ * Font style:
+ */
+/**
+ * Italic text:
+ * `.fnt-italic`
+ *
+ *     @example
+ *     p.fnt-italic Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-italic {
+  font-style: italic; }
+
+/* ========================================================================== */
+/***
+ * Font weight:
  */
 /**
  * Font weight thin:
@@ -944,16 +988,7 @@ html, body {
 .fnt-black {
   font-weight: 900; }
 
-/**
- * Italic text:
- * `.fnt-italic` Italic text.
- *
- *     @example
- *     p.fnt-italic Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.fnt-italic {
-  font-style: italic; }
-
+/* ========================================================================== */
 /***
  * Margin and padding:
  */
@@ -1821,6 +1856,7 @@ html, body {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+/* ========================================================================== */
 /***
  * Text alignment:
  */
@@ -1854,6 +1890,7 @@ html, body {
 .txt-right {
   text-align: right; }
 
+/* ========================================================================== */
 /***
  * Text strike:
  */
@@ -1867,6 +1904,7 @@ html, body {
 .txt-strike {
   text-decoration: line-through; }
 
+/* ========================================================================== */
 /***
  * Text transform:
  */
@@ -1900,6 +1938,7 @@ html, body {
 .txt-uppercase {
   text-transform: uppercase; }
 
+/* ========================================================================== */
 /***
  * Width and height:
  */
@@ -2123,30 +2162,4 @@ html, body {
 .h-max-100 {
   max-height: 100%; }
 
-/**
- * # Styleguide options
- *
- * ### Head
- *
- *     meta(name='viewport' content='width=device-width, initial-scale=1')
- *     script(src='styledown.js')
- *     link(rel='stylesheet' href='styledown.css')
- *     link(rel='stylesheet' href='dist/main.css')
- *
- *     style(type='text/css').
- *         body {
- *             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
- *         }
- *
- * ### Body
- *
- *     div.sg-container(sg-content)
- *         h1 CSS Starter Kit
- *
- *         p
- *             strong DISCLAIMER - This is a very early stage work in progress project
- *         p CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
- *         p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
- */
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=all.css.map */

@@ -1,7 +1,7 @@
 #!/bin/bash
 echo 'Compiling all, please wait...'
 
-sass src/main.scss:dist/main.css
+sass src/all.scss:dist/all.css
 
 sass src/content.scss:dist/content.css
 styledown dist/content.css config.md > guide/content.html

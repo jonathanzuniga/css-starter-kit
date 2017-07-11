@@ -5,13 +5,26 @@
   <meta charset="utf-8">
   <title>Styledown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js"></script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css">
-  <link rel="stylesheet" href="../dist/main.css">
+
+  <link rel="stylesheet" href="../styledown.css">
+  <link rel="stylesheet" href="../dist/all.css">
+
+  <script src="../styledown.js"></script>
 
   <style type="text/css">
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    .sg-canvas {
+      *zoom: 1;
+    }
+    .sg-canvas:before,
+    .sg-canvas:after {
+      content: ' ';
+      display: table;
+    }
+    .sg-canvas:after {
+      clear: both;
     }
   </style>
 </head>
