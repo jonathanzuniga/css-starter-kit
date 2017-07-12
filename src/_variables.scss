@@ -2,11 +2,83 @@
 // Variables
 // ==========================================================================
 
+// Body
+
+$text-color: #333;
+
 $base-font-size: 16px;
 $base-line-height: 1.6;
 $base-border-radius: 4px;
 
-$color-border: #ccc;
+// Borders
+
+$border-color: transparentize(LightSlateGray, 0.75);
+
+// Hyperlinks
+
+$link-color: #007ee5;
+$link-decoration: none;
+
+$link-visited-color: $link-color;
+$link-visited-decoration: $link-decoration;
+
+$link-hover-color: $text-color;
+$link-hover-decoration: $link-decoration;
+
+// Buttons
+
+$button-background-color: transparent;
+
+$button-border-color: transparentize(LightSlateGray, 0.5);
+$button-border-top: 1px solid $button-border-color;
+$button-border-right: 1px solid $button-border-color;
+$button-border-bottom: 1px solid $button-border-color;
+$button-border-left: 1px solid $button-border-color;
+
+$button-hover-background-color: $button-background-color;
+$button-hover-border-color: opacify($button-border-color, 0.35);
+
+$button-text-color: $text-color;
+
+$button-padding: 0.5em 1em;
+
+$button-focus-shadow: 0 0 0 2px transparentize(desaturate($link-color, 15%), 0.85);
+
+// Primary buttons
+
+$button-primary-background-color: $link-color;
+
+$button-primary-border-color: $link-color;
+$button-primary-border-top: 1px solid $button-primary-border-color;
+$button-primary-border-right: 1px solid $button-primary-border-color;
+$button-primary-border-bottom: 1px solid $button-primary-border-color;
+$button-primary-border-left: 1px solid $button-primary-border-color;
+
+$button-primary-text-color: #fff;
+
+$button-primary-hover-background-color: lighten(desaturate($link-color, 15%), 10%);
+$button-primary-hover-border-color: lighten(desaturate($link-color, 15%), 10%);
+
+// Secondary buttons
+
+$button-secondary-background-color: transparent;
+
+$button-secondary-border-color: transparentize(desaturate($link-color, 15%), 0.5);
+$button-secondary-border-top: 1px solid $button-secondary-border-color;
+$button-secondary-border-right: 1px solid $button-secondary-border-color;
+$button-secondary-border-bottom: 1px solid $button-secondary-border-color;
+$button-secondary-border-left: 1px solid $button-secondary-border-color;
+
+$button-secondary-text-color: $link-color;
+
+$button-secondary-hover-background-color: $button-secondary-background-color;
+$button-secondary-hover-border-color: opacify($button-secondary-border-color, 0.35);
+
+// Link buttons
+
+$button-link-hover-background-color: transparentize(LightSlateGray, 0.85);
+
+// ==========================================================================
 
 $spacings: 5 !default;
 $spacing: 4px !default;
@@ -26,7 +98,7 @@ $sizes: (
 
 // ==========================================================================
 
-// Grid layout
+// Grid
 
 // Número de columnas.
 $grid-columns-number: 12;

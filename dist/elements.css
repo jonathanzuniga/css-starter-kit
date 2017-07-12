@@ -7,8 +7,119 @@ html, body {
   padding: 0; }
 
 body {
+  color: #333;
   font-size: 16px;
   line-height: 1.6; }
+
+a {
+  color: #007ee5;
+  text-decoration: none; }
+  a:visited {
+    color: #007ee5; }
+  a:hover {
+    color: #333;
+    text-decoration: none; }
+
+/* ========================================================================== */
+/***
+ * Buttons:
+ */
+/**
+ * Button:
+ * `.btn`
+ *
+ *     @example
+ *     a.btn Button
+ */
+.btn {
+  background-color: transparent;
+  border-radius: 4px;
+  border-top: 1px solid rgba(119, 136, 153, 0.5);
+  border-right: 1px solid rgba(119, 136, 153, 0.5);
+  border-bottom: 1px solid rgba(119, 136, 153, 0.5);
+  border-left: 1px solid rgba(119, 136, 153, 0.5);
+  color: #333;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .btn:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(17, 124, 212, 0.15);
+    -moz-box-shadow: 0 0 0 2px rgba(17, 124, 212, 0.15);
+    box-shadow: 0 0 0 2px rgba(17, 124, 212, 0.15); }
+  .btn:hover {
+    background-color: transparent;
+    border-color: rgba(119, 136, 153, 0.85);
+    color: #333; }
+
+/**
+ * Primary button:
+ * `.btn--primary`
+ *
+ *     @example
+ *     a.btn.btn--primary Primary button
+ */
+.btn--primary {
+  background-color: #007ee5;
+  border-top: 1px solid #007ee5;
+  border-right: 1px solid #007ee5;
+  border-bottom: 1px solid #007ee5;
+  border-left: 1px solid #007ee5;
+  color: #fff; }
+  .btn--primary:hover {
+    background-color: #2a96ee;
+    border-color: #2a96ee;
+    color: #fff; }
+
+/**
+ * Secondary button:
+ * `.btn--secondary`
+ *
+ *     @example
+ *     a.btn.btn--secondary Secondary button
+ */
+.btn--secondary {
+  background-color: transparent;
+  border-top: 1px solid rgba(17, 124, 212, 0.5);
+  border-right: 1px solid rgba(17, 124, 212, 0.5);
+  border-bottom: 1px solid rgba(17, 124, 212, 0.5);
+  border-left: 1px solid rgba(17, 124, 212, 0.5);
+  color: #007ee5; }
+  .btn--secondary:hover {
+    background-color: transparent;
+    border-color: rgba(17, 124, 212, 0.85);
+    color: #007ee5; }
+
+/**
+ * Link button:
+ * `.btn--link`
+ *
+ *     @example
+ *     button.btn.btn--link Link button
+ */
+.btn--link {
+  border: none;
+  color: #007ee5; }
+  .btn--link:hover {
+    background-color: rgba(119, 136, 153, 0.15); }
+
+/**
+ * Pill button:
+ * `.btn--pill`
+ *
+ *     @example
+ *     a.btn.btn--pill Pill button
+ *     a.btn.btn--primary.btn--pill Primary pill button
+ *     a.btn.btn--secondary.btn--pill Secondary pill button
+ *     a.btn.btn--link.btn--pill Link pill button
+ */
+.btn--pill {
+  border-radius: 2em; }
 
 /* ========================================================================== */
 /***
@@ -466,4 +577,4 @@ body {
 .tbl-col-10-100 tr td:nth-child(10) {
   width: 100%; }
 
-/*# sourceMappingURL=content.css.map */
+/*# sourceMappingURL=elements.css.map */

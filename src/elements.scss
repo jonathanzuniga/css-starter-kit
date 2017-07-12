@@ -1,0 +1,241 @@
+@import '_variables';
+
+/* ========================================================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: $text-color;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+}
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+
+	&:visited {
+		color: $link-visited-color;
+	}
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Buttons:
+ */
+
+/**
+ * Button:
+ * `.btn`
+ *
+ *     @example
+ *     a.btn Button
+ */
+.btn {
+	background-color: $button-background-color;
+
+	border-radius: $base-border-radius;
+
+	border-top: $button-border-top;
+	border-right: $button-border-right;
+	border-bottom: $button-border-bottom;
+	border-left: $button-border-left;
+
+	color: $button-text-color;
+
+	display: inline-block;
+
+	font-size: 1rem;
+
+	padding: $button-padding;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:focus {
+		-webkit-box-shadow: $button-focus-shadow;
+		-moz-box-shadow: $button-focus-shadow;
+		box-shadow: $button-focus-shadow;
+	}
+
+	&:hover {
+		background-color: $button-hover-background-color;
+		border-color: $button-hover-border-color;
+		color: $button-text-color;
+	}
+}
+
+/**
+ * Primary button:
+ * `.btn--primary`
+ *
+ *     @example
+ *     a.btn.btn--primary Primary button
+ */
+.btn--primary {
+	background-color: $button-primary-background-color;
+	
+	border-top: $button-primary-border-top;
+	border-right: $button-primary-border-right;
+	border-bottom: $button-primary-border-bottom;
+	border-left: $button-primary-border-left;
+
+	color: $button-primary-text-color;
+
+	&:hover {
+		background-color: $button-primary-hover-background-color;
+		border-color: $button-primary-hover-border-color;
+		color: $button-primary-text-color;
+	}
+}
+
+/**
+ * Secondary button:
+ * `.btn--secondary`
+ *
+ *     @example
+ *     a.btn.btn--secondary Secondary button
+ */
+.btn--secondary {
+	background-color: $button-secondary-background-color;
+	
+	border-top: $button-secondary-border-top;
+	border-right: $button-secondary-border-right;
+	border-bottom: $button-secondary-border-bottom;
+	border-left: $button-secondary-border-left;
+
+	color: $button-secondary-text-color;
+
+	&:hover {
+		background-color: $button-secondary-hover-background-color;
+		border-color: $button-secondary-hover-border-color;
+		color: $button-secondary-text-color;
+	}
+}
+
+/**
+ * Link button:
+ * `.btn--link`
+ *
+ *     @example
+ *     button.btn.btn--link Link button
+ */
+.btn--link {
+	border: none;
+	color: $link-color;
+
+	&:hover {
+		background-color: $button-link-hover-background-color;
+	}
+}
+
+/**
+ * Pill button:
+ * `.btn--pill`
+ *
+ *     @example
+ *     a.btn.btn--pill Pill button
+ *     a.btn.btn--primary.btn--pill Primary pill button
+ *     a.btn.btn--secondary.btn--pill Secondary pill button
+ *     a.btn.btn--link.btn--pill Link pill button
+ */
+.btn--pill {
+	border-radius: 2em;
+}
+
+/* ========================================================================== */
+
+/***
+ * Lists:
+ */
+
+ /**
+ * Unstyled list:
+ * `.lst-unstyled`
+ *
+ *     @example
+ *     ul.lst-unstyled
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ *             ul
+ *                 li Caramel
+ *                 li Ice cream
+ */
+.lst-unstyled {
+	list-style: none;
+}
+
+/* ========================================================================== */
+
+/***
+ * Tables:
+ */
+
+/**
+ * Table:
+ * `.tbl` Tables are styled nicely for you.
+ *
+ *     @example
+ *     table.tbl
+ *         thead
+ *             tr
+ *                 th Fruit
+ *                 th Vegetable
+ *                 th Dessert
+ *         tbody
+ *             tr
+ *                 td Apple
+ *                 td Broccoli
+ *                 td Brownie
+ *             tr
+ *                 td Berry
+ *                 td Carrot
+ *                 td Cupcake
+ *             tr
+ *                 td Cherry
+ *                 td Spinach
+ *                 td Fruitcake
+ */
+.tbl {
+	border-collapse: separate;
+	border-spacing: 0;
+
+	width: 100%;
+
+	th, td {
+		text-align: left;
+	}
+}
+
+@each $prop, $abbr in (width: tbl-col) {
+	@each $size, $length in $sizes {
+		@for $i from 1 through length($sizes) {
+			$col: $i;
+			.#{$abbr}-#{$col}-#{$size} {
+				tr th:nth-child(#{$col}),
+				tr td:nth-child(#{$col}) {
+					#{$prop}: $length;
+				}
+			}
+		}
+	}
+}
