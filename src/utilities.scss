@@ -1,5 +1,212 @@
 @import '_variables';
 
+/* ========================================================================== */
+
+/***
+ * Borders:
+ */
+
+/**
+ * Four borders:
+ * `.brd`
+ *
+ *     @example
+ *     div.brd.p-5
+ */
+.brd {
+	border: 1px solid $color-border;
+}
+
+/**
+ * Top border:
+ * `.brd-top`
+ *
+ *     @example
+ *     div.brd-top.p-5
+ */
+.brd-top {
+	border-top: 1px solid $color-border;
+}
+
+/**
+ * Right border:
+ * `.brd-right`
+ *
+ *     @example
+ *     div.brd-right.p-5
+ */
+.brd-right {
+	border-right: 1px solid $color-border;
+}
+
+/**
+ * Bottom border:
+ * `.brd-bottom`
+ *
+ *     @example
+ *     div.brd-bottom.p-5
+ */
+.brd-bottom {
+	border-bottom: 1px solid $color-border;
+}
+
+/**
+ * Left border:
+ * `.brd-left`
+ *
+ *     @example
+ *     div.brd-left.p-5
+ */
+.brd-left {
+	border-left: 1px solid $color-border;
+}
+
+/**
+ * Right and left border:
+ * `.brd-x`
+ *
+ *     @example
+ *     div.brd-x.p-5
+ */
+.brd-x {
+	border-right: 1px solid $color-border;
+	border-left: 1px solid $color-border;
+}
+
+/**
+ * Top and bottom border:
+ * `.brd-y`
+ *
+ *     @example
+ *     div.brd-y.p-5
+ */
+.brd-y {
+	border-top: 1px solid $color-border;
+	border-bottom: 1px solid $color-border;
+}
+
+/**
+ * Remove borders:
+ * `.brd-0`
+ *
+ *     @example
+ *     div.brd.brd-0.p-5
+ */
+.brd-0 {
+	border: none;
+}
+
+/* ========================================================================== */
+
+/***
+ * Border radius:
+ */
+
+/**
+ * Rounded four corners:
+ * `.brd-radius`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius.p-5
+ */
+.brd-radius {
+	border-radius: $base-border-radius;
+}
+
+/**
+ * Rounded top right corner:
+ * `.brd-radius-1`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-1.p-5
+ */
+.brd-radius-1 {
+	border-top-right-radius: $base-border-radius;
+}
+
+/**
+ * Rounded bottom right corner:
+ * `.brd-radius-2`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-2.p-5
+ */
+.brd-radius-2 {
+	border-bottom-right-radius: $base-border-radius;
+}
+
+/**
+ * Rounded bottom left corner:
+ * `.brd-radius-3`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-3.p-5
+ */
+.brd-radius-3 {
+	border-bottom-left-radius: $base-border-radius;
+}
+
+/**
+ * Rounded top left corner:
+ * `.brd-radius-4`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-4.p-5
+ */
+.brd-radius-4 {
+	border-top-left-radius: $base-border-radius;
+}
+
+/**
+ * Rounded top corners:
+ * `.brd-radius-top`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-top.p-5
+ */
+.brd-radius-top {
+	border-top-right-radius: $base-border-radius;
+	border-top-left-radius: $base-border-radius;
+}
+
+/**
+ * Rounded right corners:
+ * `.brd-radius-right`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-right.p-5
+ */
+.brd-radius-right {
+	border-top-right-radius: $base-border-radius;
+	border-bottom-right-radius: $base-border-radius;
+}
+
+/**
+ * Rounded bottom corners:
+ * `.brd-radius-bottom`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-bottom.p-5
+ */
+.brd-radius-bottom {
+	border-bottom-right-radius: $base-border-radius;
+	border-bottom-left-radius: $base-border-radius;
+}
+
+/**
+ * Rounded left corners:
+ * `.brd-radius-left`
+ *
+ *     @example
+ *     div.bg-color-gray.brd-radius-left.p-5
+ */
+.brd-radius-left {
+	border-top-left-radius: $base-border-radius;
+	border-bottom-left-radius: $base-border-radius;
+}
+
+/* ========================================================================== */
+
 /***
  * Clearfix:
  */
@@ -24,6 +231,199 @@
 	&:after {
 		clear: both;
 	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Colors:
+ */
+
+/**
+ * IndianRed background color:
+ * `.bg-color-indianred`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-indianred
+ *             td.w-20.txt-select IndianRed
+ *             td.w-20.txt-select #cd5c5c
+ *             td.w-20.txt-select rgb(205, 92, 92)
+ */
+.bg-color-indianred {
+	background-color: IndianRed;
+}
+
+/**
+ * Gainsboro background color:
+ * `.bg-color-gainsboro`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-gainsboro
+ *             td.w-20.txt-select Gainsboro
+ *             td.w-20.txt-select #dcdcdc
+ *             td.w-20.txt-select rgb(220, 220, 220)
+ */
+.bg-color-gainsboro {
+	background-color: Gainsboro;
+}
+
+/**
+ * LightGray background color:
+ * `.bg-color-lightgray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-lightgray
+ *             td.w-20.txt-select LightGray
+ *             td.w-20.txt-select #d3d3d3
+ *             td.w-20.txt-select rgb(211, 211, 211)
+ */
+.bg-color-lightgray {
+	background-color: LightGray;
+}
+
+/**
+ * Silver background color:
+ * `.bg-color-silver`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-silver
+ *             td.w-20.txt-select Silver
+ *             td.w-20.txt-select #c0c0c0
+ *             td.w-20.txt-select rgb(192, 192, 192)
+ */
+.bg-color-silver {
+	background-color: Silver;
+}
+
+/**
+ * DarkGray background color:
+ * `.bg-color-darkgray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-darkgray
+ *             td.w-20.txt-select DarkGray
+ *             td.w-20.txt-select #a9a9a9
+ *             td.w-20.txt-select rgb(169, 169, 169)
+ */
+.bg-color-darkgray {
+	background-color: DarkGray;
+}
+
+/**
+ * Gray background color:
+ * `.bg-color-gray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-gray
+ *             td.w-20.txt-select Gray
+ *             td.w-20.txt-select #808080
+ *             td.w-20.txt-select rgb(128, 128, 128)
+ */
+.bg-color-gray {
+	background-color: Gray;
+}
+
+/**
+ * DimGray background color:
+ * `.bg-color-dimgray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-dimgray
+ *             td.w-20.txt-select DimGray
+ *             td.w-20.txt-select #696969
+ *             td.w-20.txt-select rgb(105, 105, 105)
+ */
+.bg-color-dimgray {
+	background-color: DimGray;
+}
+
+/**
+ * LightSlateGray background color:
+ * `.bg-color-lightslategray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-lightslategray
+ *             td.w-20.txt-select LightSlateGray
+ *             td.w-20.txt-select #789
+ *             td.w-20.txt-select rgb(119, 136, 153)
+ */
+.bg-color-lightslategray {
+	background-color: LightSlateGray;
+}
+
+/**
+ * SlateGray background color:
+ * `.bg-color-slategray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-slategray
+ *             td.w-20.txt-select SlateGray
+ *             td.w-20.txt-select #708090
+ *             td.w-20.txt-select rgb(112, 128, 144)
+ */
+.bg-color-slategray {
+	background-color: SlateGray;
+}
+
+/**
+ * DarkSlateGray background color:
+ * `.bg-color-darkslategray`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-darkslategray
+ *             td.w-20.txt-select DarkSlateGray
+ *             td.w-20.txt-select #2F4F4F
+ *             td.w-20.txt-select rgb(47, 79, 79)
+ */
+.bg-color-darkslategray {
+	background-color: DarkSlateGray;
+}
+
+/**
+ * Black background color:
+ * `.bg-color-black`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bg-color-black
+ *             td.w-20.txt-select Black
+ *             td.w-20.txt-select #000
+ *             td.w-20.txt-select rgb(0, 0, 0)
+ */
+.bg-color-black {
+	background-color: Black;
 }
 
 /* ========================================================================== */
@@ -179,7 +579,7 @@
 /* ========================================================================== */
 
 /***
- * Margin and padding:
+ * Margins:
  */
 
 @for $i from 0 through $spacings {
@@ -262,6 +662,10 @@
 		margin-bottom: $spacing * $i;
 	}
 }
+
+/***
+ * Paddings:
+ */
 
 @for $i from 0 through $spacings {
 	/**
@@ -381,6 +785,26 @@
  */
 .txt-right {
 	text-align: right;
+}
+
+/* ========================================================================== */
+
+/***
+ * Text selection:
+ */
+
+/**
+ * Selecting all text with one click:
+ * `.txt-select`
+ *
+ *     @example
+ *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-select {
+	-webkit-user-select: all; /* Chrome, Opera, Safari */
+    -moz-user-select: all; /* Firefox 2+ */
+    -ms-user-select: all; /* IE 10+ */
+	user-select: all; /* Standard syntax */
 }
 
 /* ========================================================================== */

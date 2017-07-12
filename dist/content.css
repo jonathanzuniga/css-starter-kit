@@ -10,6 +10,27 @@ body {
   font-size: 16px;
   line-height: 1.6; }
 
+/* ========================================================================== */
+/***
+ * Lists:
+ */
+/**
+* Unstyled list:
+* `.lst-unstyled`
+*
+*     @example
+*     ul.lst-unstyled
+*         li Apricot
+*         li Banana
+*         li Cherry
+*             ul
+*                 li Caramel
+*                 li Ice cream
+*/
+.lst-unstyled {
+  list-style: none; }
+
+/* ========================================================================== */
 /***
  * Tables:
  */
@@ -39,6 +60,8 @@ body {
  *                 td Fruitcake
  */
 .tbl {
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%; }
   .tbl th, .tbl td {
     text-align: left; }

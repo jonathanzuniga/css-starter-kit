@@ -1,3 +1,6 @@
+/***
+ * Grid system:
+ */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -19,20 +22,76 @@
   padding-left: 16px;
   padding-right: 16px; }
 
-/* Horizontal modifiers
- * ========================================================================== */
+/***
+ * Horizontal modifiers:
+ */
+/**
+ * Columns to left:
+ * `.cols-left`
+ *
+ *     @example
+ *     div.row.cols-left
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ */
 .cols-left {
   justify-content: flex-start; }
 
+/**
+ * Columns to center:
+ * `.cols-center`
+ *
+ *     @example
+ *     div.row.cols-center
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ */
 .cols-center {
   justify-content: center; }
 
+/**
+ * Columns to right:
+ * `.cols-right`
+ *
+ *     @example
+ *     div.row.cols-right
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ */
 .cols-right {
   justify-content: flex-end; }
 
+/**
+ * Space between columns:
+ * `.cols-between`
+ *
+ *     @example
+ *     div.row.cols-between
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ */
 .cols-between {
   justify-content: space-between; }
 
+/**
+ * Space around columns:
+ * `.cols-around`
+ *
+ *     @example
+ *     div.row.cols-around
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bg-color-gray.brd-radius &nbsp
+ */
 .cols-around {
   justify-content: space-around; }
 
