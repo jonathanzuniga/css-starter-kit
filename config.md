@@ -4,10 +4,10 @@
 
 	<meta name='viewport' content='width=device-width, initial-scale=1' />
 
-	<link rel='stylesheet' href='styledown.css' />
+	<link rel='stylesheet' href='css/styledown.css' />
 	<link rel='stylesheet' href='../dist/all.css' />
 	
-	<script src='styledown.js'></script>
+	<script src='js/styledown.js'></script>
 
 	<style type="text/css">
 		body {
@@ -37,7 +37,7 @@
 ### Body
 
 	<div class='row cols-center'>
-		<div class='col-xsmall-12 col-medium-10 col-large-9 col-xlarge-8'>
+		<div class='col-xs-12 col-md-10 col-lg-9 col-xl-8'>
 			<div class='sg-container' sg-content>
 				<h1>CSS Starter Kit</h1>
 
@@ -54,7 +54,7 @@
 				</p>
 
 				<div class="row">
-					<div class="col-small-4">
+					<div class="col-sm-4">
 						<h3>
 							<a href="layout.html">Layout</a>
 						</h3>
@@ -82,7 +82,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-small-4">
+					<div class="col-sm-4">
 						<h3>
 							<a href="elements.html">Elements</a>
 						</h3>
@@ -121,7 +121,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-small-4">
+					<div class="col-sm-4">
 						<h3>
 							<a href="helpers.html">Helpers</a>
 						</h3>
@@ -165,6 +165,30 @@
 									<li>
 										<a href="helpers.html#rounded-top-right-corner">Rounded top right corner</a>
 									</li>
+									<li>
+										<a href="helpers.html#rounded-bottom-right-corner">Rounded bottom right corner</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-bottom-left-corner">Rounded bottom left corner</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-top-left-corner">Rounded top left corner</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-top-corners">Rounded top corners</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-right-corners">Rounded right corners</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-bottom-corners">Rounded bottom corners</a>
+									</li>
+									<li>
+										<a href="helpers.html#rounded-left-corners">Rounded left corners</a>
+									</li>
+									<li>
+										<a href="helpers.html#remove-rounded-corners">Remove rounded corners</a>
+									</li>
 								</ul>
 							</li>
 							<li>
@@ -175,12 +199,52 @@
 							</li>
 							<li>
 								<a href="helpers.html#floats">Floats</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="helpers.html#float-left">Float left</a>
+									</li>
+									<li>
+										<a href="helpers.html#float-right">Float right</a>
+									</li>
+									<li>
+										<a href="helpers.html#don-t-float">Don't float</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="helpers.html#font-style">Font style</a>
 							</li>
 							<li>
 								<a href="helpers.html#font-weight">Font weight</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="helpers.html#font-weight-thin">Font weight thin</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-extra-light">Font weight extra-light</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-light">Font weight light</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-regular">Font weight regular</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-medium">Font weight medium</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-semi-bold">Font weight semi-bold</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-bold">Font weight bold</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-extra-bold">Font weight extra-bold</a>
+									</li>
+									<li>
+										<a href="helpers.html#font-weight-black">Font weight black</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="helpers.html#margins">Margins</a>
@@ -190,15 +254,42 @@
 							</li>
 							<li>
 								<a href="helpers.html#text-alignment">Text alignment</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="helpers.html#center-aligned-text">Center aligned text</a>
+									</li>
+									<li>
+										<a href="helpers.html#left-aligned-text">Left aligned text</a>
+									</li>
+									<li>
+										<a href="helpers.html#right-aligned-text">Right aligned text</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="helpers.html#text-selection">Text selection</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="helpers.html#text-strike">Text strike</a>
 							</li>
 							<li>
 								<a href="helpers.html#text-transform">Text transform</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="helpers.html#capitalized-text">Capitalized text</a>
+									</li>
+									<li>
+										<a href="helpers.html#lowercased-text">Lowercased text</a>
+									</li>
+									<li>
+										<a href="helpers.html#uppercased-text">Uppercased text</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="helpers.html#width-and-height">Width and height</a>

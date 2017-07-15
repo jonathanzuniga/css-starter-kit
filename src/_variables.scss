@@ -2,9 +2,36 @@
 // Variables
 // ==========================================================================
 
+// Color palette
+
+$color-cyan-1: #b1e0ec;
+$color-cyan-2: #6dc5dc;
+$color-cyan-3: #52bad5;
+$color-cyan-4: #2c9ab7;
+
+$color-gray-1: #f2f2f2;
+$color-gray-2: #b7b7b7;
+$color-gray-3: #5d5c5d;
+$color-gray-4: #373737;
+
+$color-teal-1: #c5e5de;
+$color-teal-2: #95d1c4;
+$color-teal-3: #72c1b0;
+$color-teal-4: #449a88;
+
+$color-red-1: #f5b7ab;
+$color-red-2: #ee836e;
+$color-red-3: #e85c41;
+$color-red-4: #db3a1b;
+
+$color-yellow-1: #ffe8aa;
+$color-yellow-2: #fede88;
+$color-yellow-3: #fed156;
+$color-yellow-4: #febe12;
+
 // Body
 
-$text-color: #333;
+$text-color: $color-gray-4;
 
 $base-font-size: 16px;
 $base-line-height: 1.6;
@@ -12,11 +39,11 @@ $base-border-radius: 4px;
 
 // Borders
 
-$border-color: transparentize(LightSlateGray, 0.75);
+$border-color: $color-gray-2;
 
 // Hyperlinks
 
-$link-color: #007ee5;
+$link-color: $color-cyan-4;
 $link-decoration: none;
 
 $link-visited-color: $link-color;
@@ -27,28 +54,28 @@ $link-hover-decoration: $link-decoration;
 
 // Buttons
 
-$button-background-color: transparent;
+$button-background-color: transparentize($color-gray-4, 0.84);
 
-$button-border-color: transparentize(LightSlateGray, 0.5);
+$button-border-color: transparent;
 $button-border-top: 1px solid $button-border-color;
 $button-border-right: 1px solid $button-border-color;
 $button-border-bottom: 1px solid $button-border-color;
 $button-border-left: 1px solid $button-border-color;
 
-$button-hover-background-color: $button-background-color;
-$button-hover-border-color: opacify($button-border-color, 0.35);
-
 $button-text-color: $text-color;
 
 $button-padding: 0.5em 1em;
 
-$button-focus-shadow: 0 0 0 2px transparentize(desaturate($link-color, 15%), 0.85);
+// $button-focus-shadow: 0 0 0 2px transparentize($link-color, 0.85);
+
+$button-hover-background-color: transparentize($color-gray-4, 0.78);
+$button-hover-border-color: transparent;
 
 // Primary buttons
 
 $button-primary-background-color: $link-color;
 
-$button-primary-border-color: $link-color;
+$button-primary-border-color: transparent;
 $button-primary-border-top: 1px solid $button-primary-border-color;
 $button-primary-border-right: 1px solid $button-primary-border-color;
 $button-primary-border-bottom: 1px solid $button-primary-border-color;
@@ -56,14 +83,14 @@ $button-primary-border-left: 1px solid $button-primary-border-color;
 
 $button-primary-text-color: #fff;
 
-$button-primary-hover-background-color: lighten(desaturate($link-color, 15%), 10%);
-$button-primary-hover-border-color: lighten(desaturate($link-color, 15%), 10%);
+$button-primary-hover-background-color: darken($link-color, 5%);
+$button-primary-hover-border-color: $button-primary-border-color;
 
 // Secondary buttons
 
 $button-secondary-background-color: transparent;
 
-$button-secondary-border-color: transparentize(desaturate($link-color, 15%), 0.5);
+$button-secondary-border-color: transparentize($link-color, 0.5);
 $button-secondary-border-top: 1px solid $button-secondary-border-color;
 $button-secondary-border-right: 1px solid $button-secondary-border-color;
 $button-secondary-border-bottom: 1px solid $button-secondary-border-color;
@@ -71,12 +98,23 @@ $button-secondary-border-left: 1px solid $button-secondary-border-color;
 
 $button-secondary-text-color: $link-color;
 
-$button-secondary-hover-background-color: $button-secondary-background-color;
+$button-secondary-hover-background-color: transparentize($link-color, 0.95);
 $button-secondary-hover-border-color: opacify($button-secondary-border-color, 0.35);
+
+$button-secondary-hover-text-color: $link-color;
 
 // Link buttons
 
 $button-link-hover-background-color: transparentize(LightSlateGray, 0.85);
+$button-link-hover-border-color: transparent;
+
+// Light buttons
+
+$button-light-background-color: transparentize(LightSlateGray, 0.85);
+$button-light-border-color: transparent;
+
+$button-light-hover-background-color: transparentize(LightSlateGray, 0.75);
+$button-light-hover-border-color: transparent;
 
 // ==========================================================================
 

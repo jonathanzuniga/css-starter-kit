@@ -57,10 +57,12 @@ a {
 	color: $button-text-color;
 
 	display: inline-block;
-
-	font-size: 1rem;
-
+	font-size: $base-font-size;
+	line-height: $base-line-height;
 	padding: $button-padding;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -70,11 +72,11 @@ a {
 	-ms-user-select: none;
 	user-select: none;
 
-	&:focus {
-		-webkit-box-shadow: $button-focus-shadow;
-		-moz-box-shadow: $button-focus-shadow;
-		box-shadow: $button-focus-shadow;
-	}
+	// &:focus {
+	// 	-webkit-box-shadow: $button-focus-shadow;
+	// 	-moz-box-shadow: $button-focus-shadow;
+	// 	box-shadow: $button-focus-shadow;
+	// }
 
 	&:hover {
 		background-color: $button-hover-background-color;
@@ -127,7 +129,8 @@ a {
 	&:hover {
 		background-color: $button-secondary-hover-background-color;
 		border-color: $button-secondary-hover-border-color;
-		color: $button-secondary-text-color;
+
+		color: $button-secondary-hover-text-color;
 	}
 }
 
@@ -139,11 +142,12 @@ a {
  *     button.btn.btn--link Link button
  */
 .btn--link {
-	border: none;
+	border-color: transparent;
 	color: $link-color;
 
 	&:hover {
 		background-color: $button-link-hover-background-color;
+		border-color: $button-link-hover-border-color;
 	}
 }
 
@@ -153,12 +157,26 @@ a {
  *
  *     @example
  *     a.btn.btn--pill Pill button
- *     a.btn.btn--primary.btn--pill Primary pill button
- *     a.btn.btn--secondary.btn--pill Secondary pill button
- *     a.btn.btn--link.btn--pill Link pill button
  */
 .btn--pill {
 	border-radius: 2em;
+}
+
+/**
+ * Light button:
+ * `.btn--light`
+ *
+ *     @example
+ *     button.btn.btn--light Light button
+ */
+.btn--light {
+	background-color: $button-light-background-color;
+	border-color: $button-light-border-color;
+
+	&:hover {
+		background-color: $button-light-hover-background-color;
+		border-color: $button-light-hover-border-color;
+	}
 }
 
 /* ========================================================================== */

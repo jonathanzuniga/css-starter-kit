@@ -33,11 +33,11 @@
 }
 
 .col,
-[class*="col-xsmall-"],
-[class*="col-small-"],
-[class*="col-medium-"],
-[class*="col-large-"],
-[class*="col-xlarge-"] {
+[class*="col-xs-"],
+[class*="col-sm-"],
+[class*="col-md-"],
+[class*="col-lg-"],
+[class*="col-xl-"] {
 	@extend %column;
 }
 
@@ -170,7 +170,7 @@
  * ========================================================================== */
 @media (min-width: $breakpoint-xs-min-width) {
 	@for $i from 1 through $grid-columns-number {
-		.col-xsmall-#{$i} {
+		.col-xs-#{$i} {
 			$column-width: percentage($i / $grid-columns-number);
 			flex-basis: $column-width;
 			max-width: $column-width;
@@ -180,7 +180,7 @@
 
 @media (min-width: $breakpoint-sm-min-width) {
 	@for $i from 1 through $grid-columns-number {
-		.col-small-#{$i} {
+		.col-sm-#{$i} {
 			$column-width: percentage($i / $grid-columns-number);
 			flex-basis: $column-width;
 			max-width: $column-width;
@@ -190,7 +190,7 @@
 
 @media (min-width: $breakpoint-md-min-width) {
 	@for $i from 1 through $grid-columns-number {
-		.col-medium-#{$i} {
+		.col-md-#{$i} {
 			$column-width: percentage($i / $grid-columns-number);
 			flex-basis: $column-width;
 			max-width: $column-width;
@@ -200,7 +200,7 @@
 
 @media (min-width: $breakpoint-lg-min-width) {
 	@for $i from 1 through $grid-columns-number {
-		.col-large-#{$i} {
+		.col-lg-#{$i} {
 			$column-width: percentage($i / $grid-columns-number);
 			flex-basis: $column-width;
 			max-width: $column-width;
@@ -210,7 +210,7 @@
 
 @media (min-width: $breakpoint-xl-min-width) {
 	@for $i from 1 through $grid-columns-number {
-		.col-xlarge-#{$i} {
+		.col-xl-#{$i} {
 			$column-width: percentage($i / $grid-columns-number);
 			flex-basis: $column-width;
 			max-width: $column-width;
@@ -218,9 +218,9 @@
 	}
 }
 
-/* Collapse columns
+/* Gutters
  * ========================================================================== */
-.cols-collapse {
+.cols-gutter-0 {
 	&.row {
 		margin-left: 0;
 		margin-right: 0;
@@ -229,5 +229,17 @@
 	[class^="col"] {
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+.cols-gutter-sm {
+	&.row {
+		margin-left: -$grid-column-gutter / 2;
+		margin-right: -$grid-column-gutter / 2;
+	}
+
+	[class^="col"] {
+		padding-left: $grid-column-gutter / 2;
+		padding-right: $grid-column-gutter / 2;
 	}
 }
