@@ -59,23 +59,16 @@ img {
  */
 .btn {
 	background-color: $button-background-color;
-
 	border-radius: $base-border-radius;
-
-	border-top: $button-border-top;
-	border-right: $button-border-right;
-	border-bottom: $button-border-bottom;
-	border-left: $button-border-left;
-
+	border: 1px solid $button-border-color;
 	color: $button-text-color;
-
 	display: inline-block;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	padding: $button-padding;
 	text-align: center;
-	white-space: nowrap;
 	vertical-align: middle;
+	white-space: nowrap;
 
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -107,12 +100,7 @@ img {
  */
 .btn--primary {
 	background-color: $button-primary-background-color;
-	
-	border-top: $button-primary-border-top;
-	border-right: $button-primary-border-right;
-	border-bottom: $button-primary-border-bottom;
-	border-left: $button-primary-border-left;
-
+	border-color: $button-primary-border-color;
 	color: $button-primary-text-color;
 
 	&:hover {
@@ -120,30 +108,37 @@ img {
 		border-color: $button-primary-hover-border-color;
 		color: $button-primary-text-color;
 	}
+
+	&.btn--outline {
+		background-color: $button-outline-background-color;
+		border-color: $button-primary-outline-border-color;
+		color: $button-primary-background-color;
+
+		&:hover {
+			background-color: $button-primary-background-color;
+			border-color: transparent;
+			color:  $button-primary-text-color;
+		}
+	}
 }
 
 /**
- * Secondary button:
- * `.btn--secondary`
+ * Outline button:
+ * `.btn--outline`
  *
  *     @example
- *     a.btn.btn--secondary Secondary button
+ *     a.btn.btn--outline Outline button
+ *     a.btn.btn--primary.btn--outline Primary outline button
  */
-.btn--secondary {
-	background-color: $button-secondary-background-color;
-	
-	border-top: $button-secondary-border-top;
-	border-right: $button-secondary-border-right;
-	border-bottom: $button-secondary-border-bottom;
-	border-left: $button-secondary-border-left;
-
-	color: $button-secondary-text-color;
+.btn--outline {
+	background-color: $button-outline-background-color;
+	border-color: $button-outline-border-color;
+	color: $button-outline-text-color;
 
 	&:hover {
-		background-color: $button-secondary-hover-background-color;
-		border-color: $button-secondary-hover-border-color;
-
-		color: $button-secondary-hover-text-color;
+		background-color: $button-outline-hover-background-color;
+		border-color: $button-outline-hover-border-color;
+		color: $button-outline-hover-text-color;
 	}
 }
 
@@ -155,6 +150,7 @@ img {
  *     button.btn.btn--link Link button
  */
 .btn--link {
+	background-color: transparent;
 	border-color: transparent;
 	color: $link-color;
 
@@ -173,23 +169,6 @@ img {
  */
 .btn--pill {
 	border-radius: 2em;
-}
-
-/**
- * Light button:
- * `.btn--light`
- *
- *     @example
- *     button.btn.btn--light Light button
- */
-.btn--light {
-	background-color: $button-light-background-color;
-	border-color: $button-light-border-color;
-
-	&:hover {
-		background-color: $button-light-hover-background-color;
-		border-color: $button-light-hover-border-color;
-	}
 }
 
 /* ========================================================================== */
