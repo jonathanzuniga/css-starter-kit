@@ -65,9 +65,9 @@ html, body {
  *     @example
  *     div.row.cols-left
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-left {
 	justify-content: flex-start;
@@ -80,9 +80,9 @@ html, body {
  *     @example
  *     div.row.cols-center
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-center {
 	justify-content: center;
@@ -95,9 +95,9 @@ html, body {
  *     @example
  *     div.row.cols-right
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-right {
 	justify-content: flex-end;
@@ -110,9 +110,9 @@ html, body {
  *     @example
  *     div.row.cols-between
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-between {
 	justify-content: space-between;
@@ -125,16 +125,31 @@ html, body {
  *     @example
  *     div.row.cols-around
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-around {
 	justify-content: space-around;
 }
 
-/* Vertical modifiers
- * ========================================================================== */
+/***
+ * Vertical modifiers:
+ */
+
+/**
+ * Columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ */
 .cols-top {
 	align-items: flex-start;
 }
@@ -173,9 +188,43 @@ html, body {
 
 /* Offsets
  * ========================================================================== */
-@for $i from 1 through ($grid-columns-number - 1) {
-	.col-offset-#{$i} {
-		margin-left: percentage($i / $grid-columns-number);
+@media (min-width: $breakpoint-xs-min-width) {
+	@for $i from 0 through ($grid-columns-number - 1) {
+		.col-os-xs-#{$i} {
+			margin-left: percentage($i / $grid-columns-number);
+		}
+	}
+}
+
+@media (min-width: $breakpoint-sm-min-width) {
+	@for $i from 0 through ($grid-columns-number - 1) {
+		.col-os-sm-#{$i} {
+			margin-left: percentage($i / $grid-columns-number);
+		}
+	}
+}
+
+@media (min-width: $breakpoint-md-min-width) {
+	@for $i from 0 through ($grid-columns-number - 1) {
+		.col-os-md-#{$i} {
+			margin-left: percentage($i / $grid-columns-number);
+		}
+	}
+}
+
+@media (min-width: $breakpoint-lg-min-width) {
+	@for $i from 0 through ($grid-columns-number - 1) {
+		.col-os-lg-#{$i} {
+			margin-left: percentage($i / $grid-columns-number);
+		}
+	}
+}
+
+@media (min-width: $breakpoint-xl-min-width) {
+	@for $i from 0 through ($grid-columns-number - 1) {
+		.col-os-xl-#{$i} {
+			margin-left: percentage($i / $grid-columns-number);
+		}
 	}
 }
 

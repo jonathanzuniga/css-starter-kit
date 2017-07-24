@@ -64,7 +64,7 @@ img {
 .btn {
 	background-color: $button-background-color;
 	border-radius: $base-border-radius;
-	border: 1px solid $button-border-color;
+	border: $button-border-width solid $button-border-color;
 	color: $button-text-color;
 	display: inline-block;
 	font-size: $base-font-size;
@@ -112,18 +112,6 @@ img {
 		border-color: $button-primary-hover-border-color;
 		color: $button-primary-text-color;
 	}
-
-	&.btn--outline {
-		background-color: $button-outline-background-color;
-		border-color: $button-primary-outline-border-color;
-		color: $button-primary-background-color;
-
-		&:hover {
-			background-color: $button-primary-background-color;
-			border-color: transparent;
-			color:  $button-primary-text-color;
-		}
-	}
 }
 
 /**
@@ -143,6 +131,18 @@ img {
 		background-color: $button-background-color;
 		border-color: $button-outline-hover-border-color;
 		color: $button-outline-hover-text-color;
+	}
+
+	&.btn--primary {
+		background-color: $button-primary-outline-background-color;
+		border-color: $button-primary-outline-border-color;
+		color: $button-primary-outline-text-color;
+
+		&:hover {
+			background-color: $button-primary-outline-hover-background-color;
+			border-color: transparent;
+			color: $button-primary-outline-hover-text-color;
+		}
 	}
 }
 

@@ -41,9 +41,9 @@ html, body {
  *     @example
  *     div.row.cols-left
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-left {
   justify-content: flex-start; }
@@ -55,9 +55,9 @@ html, body {
  *     @example
  *     div.row.cols-center
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-center {
   justify-content: center; }
@@ -69,9 +69,9 @@ html, body {
  *     @example
  *     div.row.cols-right
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-right {
   justify-content: flex-end; }
@@ -83,9 +83,9 @@ html, body {
  *     @example
  *     div.row.cols-between
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-between {
   justify-content: space-between; }
@@ -97,15 +97,29 @@ html, body {
  *     @example
  *     div.row.cols-around
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-around {
   justify-content: space-around; }
 
-/* Vertical modifiers
- * ========================================================================== */
+/***
+ * Vertical modifiers:
+ */
+/**
+ * Columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ */
 .cols-top {
   align-items: flex-start; }
 
@@ -176,39 +190,186 @@ html, body {
 
 /* Offsets
  * ========================================================================== */
-.col-offset-1 {
-  margin-left: 8.33333%; }
+@media (min-width: 0) {
+  .col-os-xs-0 {
+    margin-left: 0%; }
 
-.col-offset-2 {
-  margin-left: 16.66667%; }
+  .col-os-xs-1 {
+    margin-left: 8.33333%; }
 
-.col-offset-3 {
-  margin-left: 25%; }
+  .col-os-xs-2 {
+    margin-left: 16.66667%; }
 
-.col-offset-4 {
-  margin-left: 33.33333%; }
+  .col-os-xs-3 {
+    margin-left: 25%; }
 
-.col-offset-5 {
-  margin-left: 41.66667%; }
+  .col-os-xs-4 {
+    margin-left: 33.33333%; }
 
-.col-offset-6 {
-  margin-left: 50%; }
+  .col-os-xs-5 {
+    margin-left: 41.66667%; }
 
-.col-offset-7 {
-  margin-left: 58.33333%; }
+  .col-os-xs-6 {
+    margin-left: 50%; }
 
-.col-offset-8 {
-  margin-left: 66.66667%; }
+  .col-os-xs-7 {
+    margin-left: 58.33333%; }
 
-.col-offset-9 {
-  margin-left: 75%; }
+  .col-os-xs-8 {
+    margin-left: 66.66667%; }
 
-.col-offset-10 {
-  margin-left: 83.33333%; }
+  .col-os-xs-9 {
+    margin-left: 75%; }
 
-.col-offset-11 {
-  margin-left: 91.66667%; }
+  .col-os-xs-10 {
+    margin-left: 83.33333%; }
 
+  .col-os-xs-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 768px) {
+  .col-os-sm-0 {
+    margin-left: 0%; }
+
+  .col-os-sm-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-sm-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-sm-3 {
+    margin-left: 25%; }
+
+  .col-os-sm-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-sm-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-sm-6 {
+    margin-left: 50%; }
+
+  .col-os-sm-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-sm-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-sm-9 {
+    margin-left: 75%; }
+
+  .col-os-sm-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-sm-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1024px) {
+  .col-os-md-0 {
+    margin-left: 0%; }
+
+  .col-os-md-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-md-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-md-3 {
+    margin-left: 25%; }
+
+  .col-os-md-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-md-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-md-6 {
+    margin-left: 50%; }
+
+  .col-os-md-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-md-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-md-9 {
+    margin-left: 75%; }
+
+  .col-os-md-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-md-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1280px) {
+  .col-os-lg-0 {
+    margin-left: 0%; }
+
+  .col-os-lg-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-lg-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-lg-3 {
+    margin-left: 25%; }
+
+  .col-os-lg-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-lg-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-lg-6 {
+    margin-left: 50%; }
+
+  .col-os-lg-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-lg-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-lg-9 {
+    margin-left: 75%; }
+
+  .col-os-lg-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-lg-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1680px) {
+  .col-os-xl-0 {
+    margin-left: 0%; }
+
+  .col-os-xl-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-xl-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-xl-3 {
+    margin-left: 25%; }
+
+  .col-os-xl-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-xl-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-xl-6 {
+    margin-left: 50%; }
+
+  .col-os-xl-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-xl-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-xl-9 {
+    margin-left: 75%; }
+
+  .col-os-xl-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-xl-11 {
+    margin-left: 91.66667%; } }
 /* Responsive classes
  * ========================================================================== */
 @media (min-width: 0) {

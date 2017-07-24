@@ -41,9 +41,9 @@ html, body {
  *     @example
  *     div.row.cols-left
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-left {
   justify-content: flex-start; }
@@ -55,9 +55,9 @@ html, body {
  *     @example
  *     div.row.cols-center
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-center {
   justify-content: center; }
@@ -69,9 +69,9 @@ html, body {
  *     @example
  *     div.row.cols-right
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-right {
   justify-content: flex-end; }
@@ -83,9 +83,9 @@ html, body {
  *     @example
  *     div.row.cols-between
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-between {
   justify-content: space-between; }
@@ -97,15 +97,29 @@ html, body {
  *     @example
  *     div.row.cols-around
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  *         div.col-4
- *             div.bg-color-gray.brd-radius &nbsp
+ *             div.bgc-gray.brd-radius &nbsp
  */
 .cols-around {
   justify-content: space-around; }
 
-/* Vertical modifiers
- * ========================================================================== */
+/***
+ * Vertical modifiers:
+ */
+/**
+ * Columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ *         div.col-4
+ *             div.bgc-gray.brd-radius &nbsp
+ */
 .cols-top {
   align-items: flex-start; }
 
@@ -176,39 +190,186 @@ html, body {
 
 /* Offsets
  * ========================================================================== */
-.col-offset-1 {
-  margin-left: 8.33333%; }
+@media (min-width: 0) {
+  .col-os-xs-0 {
+    margin-left: 0%; }
 
-.col-offset-2 {
-  margin-left: 16.66667%; }
+  .col-os-xs-1 {
+    margin-left: 8.33333%; }
 
-.col-offset-3 {
-  margin-left: 25%; }
+  .col-os-xs-2 {
+    margin-left: 16.66667%; }
 
-.col-offset-4 {
-  margin-left: 33.33333%; }
+  .col-os-xs-3 {
+    margin-left: 25%; }
 
-.col-offset-5 {
-  margin-left: 41.66667%; }
+  .col-os-xs-4 {
+    margin-left: 33.33333%; }
 
-.col-offset-6 {
-  margin-left: 50%; }
+  .col-os-xs-5 {
+    margin-left: 41.66667%; }
 
-.col-offset-7 {
-  margin-left: 58.33333%; }
+  .col-os-xs-6 {
+    margin-left: 50%; }
 
-.col-offset-8 {
-  margin-left: 66.66667%; }
+  .col-os-xs-7 {
+    margin-left: 58.33333%; }
 
-.col-offset-9 {
-  margin-left: 75%; }
+  .col-os-xs-8 {
+    margin-left: 66.66667%; }
 
-.col-offset-10 {
-  margin-left: 83.33333%; }
+  .col-os-xs-9 {
+    margin-left: 75%; }
 
-.col-offset-11 {
-  margin-left: 91.66667%; }
+  .col-os-xs-10 {
+    margin-left: 83.33333%; }
 
+  .col-os-xs-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 768px) {
+  .col-os-sm-0 {
+    margin-left: 0%; }
+
+  .col-os-sm-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-sm-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-sm-3 {
+    margin-left: 25%; }
+
+  .col-os-sm-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-sm-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-sm-6 {
+    margin-left: 50%; }
+
+  .col-os-sm-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-sm-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-sm-9 {
+    margin-left: 75%; }
+
+  .col-os-sm-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-sm-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1024px) {
+  .col-os-md-0 {
+    margin-left: 0%; }
+
+  .col-os-md-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-md-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-md-3 {
+    margin-left: 25%; }
+
+  .col-os-md-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-md-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-md-6 {
+    margin-left: 50%; }
+
+  .col-os-md-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-md-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-md-9 {
+    margin-left: 75%; }
+
+  .col-os-md-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-md-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1280px) {
+  .col-os-lg-0 {
+    margin-left: 0%; }
+
+  .col-os-lg-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-lg-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-lg-3 {
+    margin-left: 25%; }
+
+  .col-os-lg-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-lg-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-lg-6 {
+    margin-left: 50%; }
+
+  .col-os-lg-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-lg-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-lg-9 {
+    margin-left: 75%; }
+
+  .col-os-lg-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-lg-11 {
+    margin-left: 91.66667%; } }
+@media (min-width: 1680px) {
+  .col-os-xl-0 {
+    margin-left: 0%; }
+
+  .col-os-xl-1 {
+    margin-left: 8.33333%; }
+
+  .col-os-xl-2 {
+    margin-left: 16.66667%; }
+
+  .col-os-xl-3 {
+    margin-left: 25%; }
+
+  .col-os-xl-4 {
+    margin-left: 33.33333%; }
+
+  .col-os-xl-5 {
+    margin-left: 41.66667%; }
+
+  .col-os-xl-6 {
+    margin-left: 50%; }
+
+  .col-os-xl-7 {
+    margin-left: 58.33333%; }
+
+  .col-os-xl-8 {
+    margin-left: 66.66667%; }
+
+  .col-os-xl-9 {
+    margin-left: 75%; }
+
+  .col-os-xl-10 {
+    margin-left: 83.33333%; }
+
+  .col-os-xl-11 {
+    margin-left: 91.66667%; } }
 /* Responsive classes
  * ========================================================================== */
 @media (min-width: 0) {
@@ -522,8 +683,8 @@ img {
 .btn {
   background-color: #e1e1e1;
   border-radius: 4px;
-  border: 1px solid transparent;
-  color: #373737;
+  border: 2px solid transparent;
+  color: #5d5c5d;
   display: inline-block;
   font-size: 16px;
   line-height: 1.5;
@@ -540,7 +701,7 @@ img {
   .btn:hover {
     background-color: #d4d4d4;
     border-color: transparent;
-    color: #373737; }
+    color: #5d5c5d; }
 
 /**
  * Primary button:
@@ -557,14 +718,6 @@ img {
     background-color: #2789a2;
     border-color: transparent;
     color: #fff; }
-  .btn--primary.btn--outline {
-    background-color: transparent;
-    border-color: rgba(39, 137, 162, 0.35);
-    color: #2c9ab7; }
-    .btn--primary.btn--outline:hover {
-      background-color: #2c9ab7;
-      border-color: transparent;
-      color: #fff; }
 
 /**
  * Outline button:
@@ -576,12 +729,20 @@ img {
  */
 .btn--outline {
   background-color: transparent;
-  border-color: #d4d4d4;
-  color: #373737; }
+  border-color: #e1e1e1;
+  color: #5d5c5d; }
   .btn--outline:hover {
     background-color: #e1e1e1;
     border-color: transparent;
     color: #373737; }
+  .btn--outline.btn--primary {
+    background-color: transparent;
+    border-color: #b1e0ec;
+    color: #2c9ab7; }
+    .btn--outline.btn--primary:hover {
+      background-color: #2c9ab7;
+      border-color: transparent;
+      color: #fff; }
 
 /**
  * Link button:
@@ -1280,186 +1441,6 @@ img {
 
 /* ========================================================================== */
 /***
- * Colors:
- */
-/**
- * IndianRed background color:
- * `.bgc-indianred`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-indianred
- *             td.w-20.txt-select IndianRed
- *             td.w-20.txt-select #cd5c5c
- *             td.w-20.txt-select rgb(205, 92, 92)
- */
-.bgc-indianred {
-  background-color: IndianRed; }
-
-/**
- * Gainsboro background color:
- * `.bgc-gainsboro`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-gainsboro
- *             td.w-20.txt-select Gainsboro
- *             td.w-20.txt-select #dcdcdc
- *             td.w-20.txt-select rgb(220, 220, 220)
- */
-.bgc-gainsboro {
-  background-color: Gainsboro; }
-
-/**
- * LightGray background color:
- * `.bgc-lightgray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-lightgray
- *             td.w-20.txt-select LightGray
- *             td.w-20.txt-select #d3d3d3
- *             td.w-20.txt-select rgb(211, 211, 211)
- */
-.bgc-lightgray {
-  background-color: LightGray; }
-
-/**
- * Silver background color:
- * `.bgc-silver`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-silver
- *             td.w-20.txt-select Silver
- *             td.w-20.txt-select #c0c0c0
- *             td.w-20.txt-select rgb(192, 192, 192)
- */
-.bgc-silver {
-  background-color: Silver; }
-
-/**
- * DarkGray background color:
- * `.bgc-darkgray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-darkgray
- *             td.w-20.txt-select DarkGray
- *             td.w-20.txt-select #a9a9a9
- *             td.w-20.txt-select rgb(169, 169, 169)
- */
-.bgc-darkgray {
-  background-color: DarkGray; }
-
-/**
- * Gray background color:
- * `.bgc-gray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-gray
- *             td.w-20.txt-select Gray
- *             td.w-20.txt-select #808080
- *             td.w-20.txt-select rgb(128, 128, 128)
- */
-.bgc-gray {
-  background-color: Gray; }
-
-/**
- * DimGray background color:
- * `.bgc-dimgray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-dimgray
- *             td.w-20.txt-select DimGray
- *             td.w-20.txt-select #696969
- *             td.w-20.txt-select rgb(105, 105, 105)
- */
-.bgc-dimgray {
-  background-color: DimGray; }
-
-/**
- * LightSlateGray background color:
- * `.bgc-lightslategray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-lightslategray
- *             td.w-20.txt-select LightSlateGray
- *             td.w-20.txt-select #789
- *             td.w-20.txt-select rgb(119, 136, 153)
- */
-.bgc-lightslategray {
-  background-color: LightSlateGray; }
-
-/**
- * SlateGray background color:
- * `.bgc-slategray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-slategray
- *             td.w-20.txt-select SlateGray
- *             td.w-20.txt-select #708090
- *             td.w-20.txt-select rgb(112, 128, 144)
- */
-.bgc-slategray {
-  background-color: SlateGray; }
-
-/**
- * DarkSlateGray background color:
- * `.bgc-darkslategray`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-darkslategray
- *             td.w-20.txt-select DarkSlateGray
- *             td.w-20.txt-select #2F4F4F
- *             td.w-20.txt-select rgb(47, 79, 79)
- */
-.bgc-darkslategray {
-  background-color: DarkSlateGray; }
-
-/**
- * Black background color:
- * `.bgc-black`
- *
- *     @example
- *     table.tbl
- *         tr
- *             td.w-20
- *                div.color-swatch.brd-radius.bgc-black
- *             td.w-20.txt-select Black
- *             td.w-20.txt-select #000
- *             td.w-20.txt-select rgb(0, 0, 0)
- */
-.bgc-black {
-  background-color: Black; }
-
-/* ========================================================================== */
-/***
  * Floats:
  */
 /**
@@ -1602,6 +1583,390 @@ img {
  */
 .fnt-black {
   font-weight: 900; }
+
+/* ========================================================================== */
+/***
+ * Colors:
+ */
+/**
+ * Cyan 1 color:
+ * `.bgc-cyan-1` `.txtc-cyan-1`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-cyan-1
+ *             td.w-20.txt-select.txtc-cyan-1 Cyan 1
+ *             td.w-20.txt-select #b1e0ec
+ *             td.w-20.txt-select rgb(177, 224, 236)
+ */
+.bgc-cyan-1 {
+  background-color: #b1e0ec; }
+
+.txtc-cyan-1 {
+  color: #b1e0ec; }
+
+/**
+ * Cyan 2 color:
+ * `.bgc-cyan-2` `.txtc-cyan-2`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-cyan-2
+ *             td.w-20.txt-select.txtc-cyan-2 Cyan 2
+ *             td.w-20.txt-select #6dc5dc
+ *             td.w-20.txt-select rgb(109, 197, 220)
+ */
+.bgc-cyan-2 {
+  background-color: #6dc5dc; }
+
+.txtc-cyan-2 {
+  color: #6dc5dc; }
+
+/**
+ * Cyan 3 color:
+ * `.bgc-cyan-3` `.txtc-cyan-3`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-cyan-3
+ *             td.w-20.txt-select.txtc-cyan-3 Cyan 3
+ *             td.w-20.txt-select #52bad5
+ *             td.w-20.txt-select rgb(82, 186, 213)
+ */
+.bgc-cyan-3 {
+  background-color: #52bad5; }
+
+.txtc-cyan-3 {
+  color: #52bad5; }
+
+/**
+ * Cyan 4 color:
+ * `.bgc-cyan-4` `.txtc-cyan-4`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-cyan-4
+ *             td.w-20.txt-select.txtc-cyan-4 Cyan 4
+ *             td.w-20.txt-select #2c9ab7
+ *             td.w-20.txt-select rgb(44, 154, 183)
+ */
+.bgc-cyan-4 {
+  background-color: #2c9ab7; }
+
+.txtc-cyan-4 {
+  color: #2c9ab7; }
+
+/**
+ * Gray 1 color:
+ * `.bgc-gray-1` `.txtc-gray-1`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-gray-1
+ *             td.w-20.txt-select.txtc-gray-1 Gray 1
+ *             td.w-20.txt-select #f2f2f2
+ *             td.w-20.txt-select rgb(242, 242, 242)
+ */
+.bgc-gray-1 {
+  background-color: #f2f2f2; }
+
+.txtc-gray-1 {
+  color: #f2f2f2; }
+
+/**
+ * Gray 2 color:
+ * `.bgc-gray-2` `.txtc-gray-2`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-gray-2
+ *             td.w-20.txt-select.txtc-gray-2 Gray 2
+ *             td.w-20.txt-select #b7b7b7
+ *             td.w-20.txt-select rgb(183, 183, 183)
+ */
+.bgc-gray-2 {
+  background-color: #b7b7b7; }
+
+.txtc-gray-2 {
+  color: #b7b7b7; }
+
+/**
+ * Gray 3 color:
+ * `.bgc-gray-3` `.txtc-gray-3`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-gray-3
+ *             td.w-20.txt-select.txtc-gray-3 Gray 3
+ *             td.w-20.txt-select #5d5c5d
+ *             td.w-20.txt-select rgb(93, 92, 93)
+ */
+.bgc-gray-3 {
+  background-color: #5d5c5d; }
+
+.txtc-gray-3 {
+  color: #5d5c5d; }
+
+/**
+ * Gray 4 color:
+ * `.bgc-gray-4` `.txtc-gray-4`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-gray-4
+ *             td.w-20.txt-select.txtc-gray-4 Gray 4
+ *             td.w-20.txt-select #373737
+ *             td.w-20.txt-select rgb(55, 55, 55)
+ */
+.bgc-gray-4 {
+  background-color: #373737; }
+
+.txtc-gray-4 {
+  color: #373737; }
+
+/**
+ * Red 1 color:
+ * `.bgc-red-1` `.txtc-red-1`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-red-1
+ *             td.w-20.txt-select.txtc-red-1 Red 1
+ *             td.w-20.txt-select #f5b7ab
+ *             td.w-20.txt-select rgb(245, 183, 171)
+ */
+.bgc-red-1 {
+  background-color: #f5b7ab; }
+
+.txtc-red-1 {
+  color: #f5b7ab; }
+
+/**
+ * Red 2 color:
+ * `.bgc-red-2` `.txtc-red-2`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-red-2
+ *             td.w-20.txt-select.txtc-red-2 Red 2
+ *             td.w-20.txt-select #ee836e
+ *             td.w-20.txt-select rgb(238, 131, 110)
+ */
+.bgc-red-2 {
+  background-color: #ee836e; }
+
+.txtc-red-2 {
+  color: #ee836e; }
+
+/**
+ * Red 3 color:
+ * `.bgc-red-3` `.txtc-red-3`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-red-3
+ *             td.w-20.txt-select.txtc-red-3 Red 3
+ *             td.w-20.txt-select #e85c41
+ *             td.w-20.txt-select rgb(232, 92, 65)
+ */
+.bgc-red-3 {
+  background-color: #e85c41; }
+
+.txtc-red-3 {
+  color: #e85c41; }
+
+/**
+ * Red 4 color:
+ * `.bgc-red-4` `.txtc-red-4`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-red-4
+ *             td.w-20.txt-select.txtc-red-4 Red 4
+ *             td.w-20.txt-select #db3a1b
+ *             td.w-20.txt-select rgb(219, 58, 27)
+ */
+.bgc-red-4 {
+  background-color: #db3a1b; }
+
+.txtc-red-4 {
+  color: #db3a1b; }
+
+/**
+ * Teal 1 color:
+ * `.bgc-teal-1` `.txtc-teal-1`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-teal-1
+ *             td.w-20.txt-select.txtc-teal-1 Teal 1
+ *             td.w-20.txt-select #c5e5de
+ *             td.w-20.txt-select rgb(197, 229, 222)
+ */
+.bgc-teal-1 {
+  background-color: #c5e5de; }
+
+.txtc-teal-1 {
+  color: #c5e5de; }
+
+/**
+ * Teal 2 color:
+ * `.bgc-teal-2` `.txtc-teal-2`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-teal-2
+ *             td.w-20.txt-select.txtc-teal-2 Teal 2
+ *             td.w-20.txt-select #95d1c4
+ *             td.w-20.txt-select rgb(149, 209, 196)
+ */
+.bgc-teal-2 {
+  background-color: #95d1c4; }
+
+.txtc-teal-2 {
+  color: #95d1c4; }
+
+/**
+ * Teal 3 color:
+ * `.bgc-teal-3` `.txtc-teal-3`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-teal-3
+ *             td.w-20.txt-select.txtc-teal-3 Teal 3
+ *             td.w-20.txt-select #72c1b0
+ *             td.w-20.txt-select rgb(114, 193, 176)
+ */
+.bgc-teal-3 {
+  background-color: #72c1b0; }
+
+.txtc-teal-3 {
+  color: #72c1b0; }
+
+/**
+ * Teal 4 color:
+ * `.bgc-teal-4` `.txtc-teal-4`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-teal-4
+ *             td.w-20.txt-select.txtc-teal-4 Teal 4
+ *             td.w-20.txt-select #449a88
+ *             td.w-20.txt-select rgb(68, 154, 136)
+ */
+.bgc-teal-4 {
+  background-color: #449a88; }
+
+.txtc-teal-4 {
+  color: #449a88; }
+
+/**
+ * Yellow 1 color:
+ * `.bgc-yellow-1` `.txtc-yellow-1`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-yellow-1
+ *             td.w-20.txt-select.txtc-yellow-1 Yellow 1
+ *             td.w-20.txt-select #ffe8aa
+ *             td.w-20.txt-select rgb(255, 232, 170)
+ */
+.bgc-yellow-1 {
+  background-color: #ffe8aa; }
+
+.txtc-yellow-1 {
+  color: #ffe8aa; }
+
+/**
+ * Yellow 2 color:
+ * `.bgc-yellow-2` `.txtc-yellow-2`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-yellow-2
+ *             td.w-20.txt-select.txtc-yellow-2 Yellow 2
+ *             td.w-20.txt-select #fede88
+ *             td.w-20.txt-select rgb(254, 222, 136)
+ */
+.bgc-yellow-2 {
+  background-color: #fede88; }
+
+.txtc-yellow-2 {
+  color: #fede88; }
+
+/**
+ * Yellow 3 color:
+ * `.bgc-yellow-3` `.txtc-yellow-3`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-yellow-3
+ *             td.w-20.txt-select.txtc-yellow-3 Yellow 3
+ *             td.w-20.txt-select #fed156
+ *             td.w-20.txt-select rgb(254, 209, 86)
+ */
+.bgc-yellow-3 {
+  background-color: #fed156; }
+
+.txtc-yellow-3 {
+  color: #fed156; }
+
+/**
+ * Yellow 4 color:
+ * `.bgc-yellow-4` `.txtc-yellow-4`
+ *
+ *     @example
+ *     table.tbl
+ *         tr
+ *             td.w-20
+ *                div.color-swatch.brd-radius.bgc-yellow-4
+ *             td.w-20.txt-select.txtc-yellow-4 Yellow 4
+ *             td.w-20.txt-select #febe12
+ *             td.w-20.txt-select rgb(254, 190, 18)
+ */
+.bgc-yellow-4 {
+  background-color: #febe12; }
+
+.txtc-yellow-4 {
+  color: #febe12; }
 
 /* ========================================================================== */
 /***
