@@ -2,61 +2,59 @@
 // Variables
 // ==========================================================================
 
+// Primary colors
+
+$primary-colors: (
+	'Primary': #2c9ab7,
+	'Secondary': #373737,
+	'Success': #449a88,
+	'Danger': #db3a1b,
+	'Warning': #febe12,
+);
+
+// Slightly lighten a color.
+@function tint($color, $percentage) {
+  	@return mix(white, $color, $percentage);
+}
+
+$tints: 3; // Número de tintas por cada color primario.
+$colors-list: 'black' #000, 'white' #fff;
+
+// Generar la lista completa de colores.
+@each $name, $hex in $primary-colors {
+	@for $tint from 1 to $tints + 2 {
+		@if $tint == 1 {
+			$colors-list: append($colors-list, '#{$name} #{$tint}' $hex, comma);
+		} @else {
+			$colors-list: append($colors-list, '#{$name} #{$tint}' tint($hex, percentage(1 - ((100 / $tint) / 100))), comma);
+		}
+	}
+}
+
 // Color palette
 
-$color-cyan-1: #b1e0ec;
-$color-cyan-2: #6dc5dc;
-$color-cyan-3: #52bad5;
-$color-cyan-4: #2c9ab7;
-
-$color-gray-1: #f2f2f2;
-$color-gray-2: #b7b7b7;
-$color-gray-3: #5d5c5d;
-$color-gray-4: #373737;
-
-$color-teal-1: #c5e5de;
-$color-teal-2: #95d1c4;
-$color-teal-3: #72c1b0;
-$color-teal-4: #449a88;
-
-$color-red-1: #f5b7ab;
-$color-red-2: #ee836e;
-$color-red-3: #e85c41;
-$color-red-4: #db3a1b;
-
-$color-yellow-1: #ffe8aa;
-$color-yellow-2: #fede88;
-$color-yellow-3: #fed156;
-$color-yellow-4: #febe12;
-
 $colors: (
-	'Cyan 1': $color-cyan-1,
-	'Cyan 2': $color-cyan-2,
-	'Cyan 3': $color-cyan-3,
-	'Cyan 4': $color-cyan-4,
-	'Gray 1': $color-gray-1,
-	'Gray 2': $color-gray-2,
-	'Gray 3': $color-gray-3,
-	'Gray 4': $color-gray-4,
-	'Red 1': $color-red-1,
-	'Red 2': $color-red-2,
-	'Red 3': $color-red-3,
-	'Red 4': $color-red-4,
-	'Teal 1': $color-teal-1,
-	'Teal 2': $color-teal-2,
-	'Teal 3': $color-teal-3,
-	'Teal 4': $color-teal-4,
-	'Yellow 1': $color-yellow-1,
-	'Yellow 2': $color-yellow-2,
-	'Yellow 3': $color-yellow-3,
-	'Yellow 4': $color-yellow-4
+	$colors-list
 ) !default;
+
+// @debug $colors;
+
+// Get one color from the list.
+@function get-color($color) {
+	@each $c in $colors {
+		@if nth($c, 1) == $color {
+			@return nth($c, 2);
+		}
+	}
+	@return unquote('#000');
+}
 
 // Body
 
 $spacing-unit: 32px;
 
-$text-color: $color-gray-4;
+// $text-color: $color-gray-4;
+$text-color: get-color('Secondary 1');
 
 $base-font-size: 16px;
 $base-line-height: 1.5;
@@ -64,25 +62,25 @@ $base-border-radius: 4px;
 
 // Borders
 
-$border-color: transparentize($color-gray-4, 0.85);
+$border-color: transparentize(get-color('Secondary 1'), 0.85);
 
 // Hyperlinks
 
-$link-color: $color-cyan-4;
+$link-color: get-color('Primary 1');
 $link-decoration: none;
 
 $link-visited-color: $link-color;
-$link-visited-decoration: $link-decoration;
+$link-visited-decoration: none;
 
 $link-hover-color: $text-color;
-$link-hover-decoration: $link-decoration;
+$link-hover-decoration: none;
 
 // Buttons
 
 $button-background-color: #e1e1e1;
 $button-border-color: transparent;
 $button-border-width: 2px;
-$button-text-color: $color-gray-3;
+$button-text-color: lighten($text-color, 15%);
 
 $button-padding: 0.5em 1em;
 
@@ -90,6 +88,7 @@ $button-padding: 0.5em 1em;
 
 $button-hover-background-color: darken($button-background-color, 5%);
 $button-hover-border-color: transparent;
+$button-hover-text-color: $text-color;
 
 // Primary buttons
 
@@ -110,7 +109,7 @@ $button-outline-hover-border-color: transparent;
 $button-outline-hover-text-color: $text-color;
 
 $button-primary-outline-background-color: transparent;
-$button-primary-outline-border-color: $color-cyan-1;
+$button-primary-outline-border-color: get-color('Primary 3');
 $button-primary-outline-text-color: $button-primary-background-color;
 
 $button-primary-outline-hover-background-color: $button-primary-background-color;
