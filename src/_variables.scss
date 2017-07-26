@@ -77,9 +77,10 @@ $link-hover-decoration: none;
 
 // Buttons
 
-$button-background-color: #e1e1e1;
+$button-background-color: lighten(get-color('Secondary 1'), 65%);
 $button-border-color: transparent;
 $button-border-width: 2px;
+$button-font-weight: 500;
 $button-text-color: lighten($text-color, 15%);
 
 $button-padding: 0.5em 1em;
@@ -88,7 +89,7 @@ $button-padding: 0.5em 1em;
 
 $button-hover-background-color: darken($button-background-color, 5%);
 $button-hover-border-color: transparent;
-$button-hover-text-color: $text-color;
+$button-hover-text-color: $button-text-color;
 
 // Primary buttons
 
@@ -106,7 +107,7 @@ $button-outline-border-color: $button-background-color;
 $button-outline-text-color: $button-text-color;
 
 $button-outline-hover-border-color: transparent;
-$button-outline-hover-text-color: $text-color;
+$button-outline-hover-text-color: $button-text-color;
 
 $button-primary-outline-background-color: transparent;
 $button-primary-outline-border-color: get-color('Primary 3');
