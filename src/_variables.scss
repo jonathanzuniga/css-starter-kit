@@ -55,20 +55,6 @@ $mono-font-family: Menlo, Courier, monospace;
 
 $text-color: get-color('Secondary 1');
 
-$base-font-size: 16px !default;
-$base-line-height: 26px !default;
-$base-spacing-unit: ($base-line-height + 6) !default;
-$half-spacing-unit: $base-spacing-unit / 2 !default;
-$quarter-spacing-unit: $base-spacing-unit / 4 !default;
-$line-height-ratio: $base-line-height / $base-font-size;
-
-$small-font-size: 80%;
-$large-font-size: 120%;
-
-$dropcap-color: get-color('Warning 1');
-$dropcap-size: $base-font-size * 3.25;
-$dropcap-weight: bold;
-
 // Calculate rems. $pixels = pixel size. $base = base pixel size
 @function px-to-rem($pixels, $base: $base-font-size) {
 	@return ($pixels / $base) * 1rem;
@@ -80,6 +66,24 @@ $dropcap-weight: bold;
 	@return $pixels / $base + 0em;
 }
 
+$base-font-size: 16px !default;
+$base-line-height: 26px !default;
+$base-spacing-unit: ($base-line-height + 6);
+$half-spacing-unit: $base-spacing-unit / 2;
+$quarter-spacing-unit: $base-spacing-unit / 4;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$base-spacing-unit: px-to-em($base-spacing-unit);
+$half-spacing-unit: px-to-em($half-spacing-unit);
+$quarter-spacing-unit: px-to-em($quarter-spacing-unit);
+
+$small-font-size: 80%;
+$large-font-size: 120%;
+
+$dropcap-color: get-color('Warning 1');
+$dropcap-size: $base-font-size * 3.25;
+$dropcap-weight: bold;
+
 $headings-sizes: (
 	'h1': $base-font-size * 2.5, // 2.5em (40px)
 	'h2': $base-font-size * 2, // 2em (32px)
@@ -89,14 +93,7 @@ $headings-sizes: (
 	'h6': $base-font-size // 1em (16px)
 ) !default;
 
-// $h1-size: px-to-em($base-font-size * 2.5) !default; // 2.5em (40px)
-// $h2-size: px-to-em($base-font-size * 2) !default; // 2em (32px)
-// $h3-size: px-to-em($base-font-size * 1.75) !default; // 1.75em (28px)
-// $h4-size: px-to-em($base-font-size * 1.5) !default; // 1.5em (24px)
-// $h5-size: px-to-em($base-font-size * 1.25) !default; // 1.25em (20px)
-// $h6-size: px-to-em($base-font-size) !default; // 1em (16px)
-
-$headings-line-height: 1.1;
+$heading-line-height: 1.1;
 
 $pre-background-color: transparentize(get-color('Secondary 1'), 0.95);
 
@@ -193,7 +190,8 @@ $grid-columns-number: 12;
 $grid-column-gutter: 16px;
 
 // Espacio inferior de cada renglón.
-$grid-row-bottom-space: 16px;
+$grid-row-margin-bottom: 0;
+$grid-row-margin-top: 0;
 
 $breakpoint-xs-min-width: 0 !default;
 $breakpoint-sm-min-width: 768px !default;
