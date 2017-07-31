@@ -1,8 +1,13 @@
+@charset "UTF-8";
 /* ========================================================================== */
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   color: #373737;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.625; }
 
 a {
   color: #2c9ab7;
@@ -14,22 +19,40 @@ a {
     text-decoration: none; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 2.5em;
+  line-height: 1.1; }
+  h1:not(.first-child) {
+    margin-top: 2.75rem; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 2em;
+  line-height: 1.1; }
+  h2:not(.first-child) {
+    margin-top: 2.25rem; }
 
 h3 {
-  font-size: 1.17em; }
+  font-size: 1.75em;
+  line-height: 1.1; }
+  h3:not(.first-child) {
+    margin-top: 2rem; }
 
 h4 {
-  font-size: 1.12em; }
+  font-size: 1.5em;
+  line-height: 1.1; }
+  h4:not(.first-child) {
+    margin-top: 1.75rem; }
 
 h5 {
-  font-size: 0.83em; }
+  font-size: 1.25em;
+  line-height: 1.1; }
+  h5:not(.first-child) {
+    margin-top: 1.5rem; }
 
 h6 {
-  font-size: 0.75em; }
+  font-size: 1em;
+  line-height: 1.1; }
+  h6:not(.first-child) {
+    margin-top: 1.25rem; }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -39,6 +62,131 @@ ul, ol, dl, figure {
 img {
   max-width: 100%; }
 
+blockquote {
+  border-left: 0.313rem solid rgba(55, 55, 55, 0.15);
+  padding: 0 0 0 calc(1.5rem - 0.313rem); }
+  blockquote p {
+    font-size: 1.125em;
+    font-weight: 500; }
+    blockquote p:after {
+      content: '”'; }
+    blockquote p:before {
+      content: '“'; }
+
+ol, ul {
+  list-style-position: inside;
+  padding: 0 0 0 calc(1.5rem - 0.313rem); }
+
+ul {
+  list-style: none; }
+  ul li {
+    margin-bottom: 1em; }
+    ul li strong {
+      display: block;
+      font-weight: normal; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+  figure img {
+    margin: 0; }
+  figure figcaption {
+    font-size: 80%;
+    font-style: italic;
+    text-align: center; }
+  figure code {
+    background-color: none;
+    padding: 0; }
+
+pre, code {
+  border-radius: 4px;
+  font-family: Menlo, Courier, monospace;
+  font-weight: normal; }
+
+pre {
+  background-color: rgba(55, 55, 55, 0.05);
+  overflow-x: auto;
+  padding: 0.5rem 1rem; }
+  pre code {
+    background-color: transparent; }
+
+code {
+  background-color: rgba(55, 55, 55, 0.15);
+  font-size: 0.9em;
+  padding: 0.2em; }
+  code textarea {
+    background: #eee;
+    font-size: 0.9em;
+    padding: 0.5rem 1rem;
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    min-height: 150px; }
+
+small {
+  font-size: 80%; }
+
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%; }
+
+td, th {
+  padding: 0; }
+
+th {
+  font-weight: 500;
+  text-align: left; }
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  border-top: 1px solid rgba(55, 55, 55, 0.15);
+  padding: 0.5rem;
+  vertical-align: top; }
+
+table > thead > tr > th {
+  background-color: rgba(55, 55, 55, 0.15);
+  vertical-align: bottom;
+  border-bottom: 2px solid rgba(55, 55, 55, 0.15); }
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+  border-top: 0; }
+
+.table-responsive {
+  border: 1px solid rgba(55, 55, 55, 0.15);
+  border-radius: 4px;
+  margin: 0 0 1.25rem;
+  min-height: 0.01%;
+  overflow-x: auto; }
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    width: 100%; }
+
+  .table-responsive > table {
+    border: none;
+    margin-top: 0; }
+
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap; } }
 /* ========================================================================== */
 /***
  * Buttons:
@@ -58,7 +206,7 @@ img {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 26px;
   padding: 0.5em 1em;
   text-align: center;
   vertical-align: middle;
@@ -108,7 +256,7 @@ img {
     color: #5d5d5d; }
   .btn--outline.btn--primary {
     background-color: transparent;
-    border-color: #b8dde7;
+    border-color: #b9dde7;
     color: #2c9ab7; }
     .btn--outline.btn--primary:hover {
       background-color: #2c9ab7;

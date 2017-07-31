@@ -2,15 +2,15 @@
 
 /* ========================================================================== */
 
-// * {
-// 	margin: 0;
-// 	padding: 0;
-// }
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	color: $text-color;
 	font-size: $base-font-size;
-	line-height: $base-line-height;
+	line-height: $line-height-ratio;
 }
 
 a {
@@ -27,17 +27,21 @@ a {
 	}
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.17em; }
-h4 { font-size: 1.12em; }
-h5 { font-size: 0.83em; }
-h6 { font-size: 0.75em; }
+@each $heading, $size in $headings-sizes {
+	#{$heading} {
+		font-size: px-to-em($size);
+		line-height: $headings-line-height;
+
+		&:not(.first-child) {
+			margin-top: px-to-rem($size) + 0.25;
+		}
+	}
+}
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-	margin-bottom: $spacing-unit / 2;
+	margin-bottom: $half-spacing-unit;
 }
 
 img {
@@ -47,6 +51,177 @@ img {
 // ol, ul {
 // 	padding-left: $spacing-unit - 8;
 // }
+
+blockquote {
+	border-left: 0.313rem solid $border-color;
+	padding: 0 0 0 calc(1.5rem - 0.313rem);
+
+	p {
+		font-size: 1.125em;
+		font-weight: 500;
+
+		&:after {
+			content: '”';
+		}
+
+		&:before {
+			content: '“';
+		}
+	}
+}
+
+ol, ul {
+	list-style-position: inside;
+	padding: 0 0 0 calc(1.5rem - 0.313rem);
+}
+
+ul {
+	// border-left: 0.313rem solid $color-cyan-1;
+	list-style: none;
+
+	li {
+		// font-size: $small-font-size;
+		margin-bottom: 1em;
+
+		strong {
+			display: block;
+			// font-size: 1rem;
+			font-weight: normal;
+		}
+	}
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+
+	img {
+		margin: 0;
+	}
+
+	figcaption {
+		font-size: $small-font-size;
+		font-style: italic;
+		text-align: center;
+	}
+
+	code {
+		background-color: none;
+		padding: 0;
+	}
+}
+
+pre, code {
+	border-radius: $border-radius;
+	font-family: $mono-font-family;
+	font-weight: normal;
+}
+
+pre {
+	background-color: $pre-background-color;
+	overflow-x: auto;
+	padding: 0.5rem 1rem;
+
+	code {
+		background-color: transparent;
+	}
+}
+
+code {
+	background-color: $border-color;
+	font-size: 0.9em;
+	padding: 0.2em;
+
+	textarea {
+		background: #eee;
+		// border: 1px solid $color-gray-4;
+		font-size: 0.9em;
+		padding: 0.5rem 1rem;
+		white-space: pre-wrap;
+
+		width: 100%;
+		height: 100%;
+		min-height: 150px;
+	}
+}
+
+small {
+	font-size: $small-font-size;
+}
+
+table {
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	max-width: 100%;
+	width: 100%;
+}
+
+td, th {
+	padding: 0;
+}
+
+th {
+	font-weight: 500;
+	text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+	border-top: 1px solid $border-color;
+	// line-height: 1.42857143;
+	padding: 0.5rem;
+	vertical-align: top;
+}
+
+table > thead > tr > th {
+	background-color: $border-color;
+	vertical-align: bottom;
+	border-bottom: 2px solid $border-color;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+
+.table-responsive {
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
+	margin: 0 0 1.25rem;
+	min-height: 0.01%;
+	overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		width: 100%;
+	}
+
+	.table-responsive > table {
+		border: none;
+		margin-top: 0;
+	}
+
+	.table-responsive > .table > thead > tr > th,
+	.table-responsive > .table > tbody > tr > th,
+	.table-responsive > .table > tfoot > tr > th,
+	.table-responsive > .table > thead > tr > td,
+	.table-responsive > .table > tbody > tr > td,
+	.table-responsive > .table > tfoot > tr > td {
+		white-space: nowrap;
+	}
+}
 
 /* ========================================================================== */
 
@@ -63,7 +238,7 @@ img {
  */
 .btn {
 	background-color: $button-background-color;
-	border-radius: $base-border-radius;
+	border-radius: $border-radius;
 	border: $button-border-width solid $button-border-color;
 	color: $button-text-color;
 	display: inline-block;
