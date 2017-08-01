@@ -39,7 +39,7 @@
 	<div class='row cols-center'>
 		<div class='col-xs-12 col-md-10 col-lg-9 col-xl-8'>
 			<div class='sg-container' sg-content>
-				<h1>CSS Starter Kit</h1>
+				<h1 class="fnt-thin">CSS Starter Kit</h1>
 
 				<p>
 					<b>DISCLAIMER - This is a very early stage work in progress project</b>
@@ -53,10 +53,14 @@
 					CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
 				</p>
 
+				<h2 class="fnt-thin">
+					Index
+				</h2>
+
 				<div class="row">
 					<div class="col-sm-4">
-						<h3>
-							<a href="layout.html">Layout</a>
+						<h3 class="fnt-thin">
+							Layout
 						</h3>
 
 						<ul class="lst-unstyled">
@@ -83,8 +87,8 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h3>
-							<a href="elements.html">Elements</a>
+						<h3 class="fnt-thin">
+							Elements
 						</h3>
 
 						<ul class="lst-unstyled">
@@ -122,8 +126,8 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h3>
-							<a href="helpers.html">Helpers</a>
+						<h3 class="fnt-thin">
+							Helpers
 						</h3>
 
 						<ul class="lst-unstyled">
