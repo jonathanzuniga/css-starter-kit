@@ -107,7 +107,7 @@
  * `.brd-radius`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius.p-5
+ *     div.bgc-secondary-2.brd-radius.p-5
  */
 .brd-radius {
 	border-radius: $border-radius;
@@ -118,7 +118,7 @@
  * `.brd-radius-1`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-1.p-5
+ *     div.bgc-secondary-2.brd-radius-1.p-5
  */
 .brd-radius-1 {
 	border-top-right-radius: $border-radius;
@@ -129,7 +129,7 @@
  * `.brd-radius-2`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-2.p-5
+ *     div.bgc-secondary-2.brd-radius-2.p-5
  */
 .brd-radius-2 {
 	border-bottom-right-radius: $border-radius;
@@ -140,7 +140,7 @@
  * `.brd-radius-3`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-3.p-5
+ *     div.bgc-secondary-2.brd-radius-3.p-5
  */
 .brd-radius-3 {
 	border-bottom-left-radius: $border-radius;
@@ -151,7 +151,7 @@
  * `.brd-radius-4`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-4.p-5
+ *     div.bgc-secondary-2.brd-radius-4.p-5
  */
 .brd-radius-4 {
 	border-top-left-radius: $border-radius;
@@ -162,7 +162,7 @@
  * `.brd-radius-top`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-top.p-5
+ *     div.bgc-secondary-2.brd-radius-top.p-5
  */
 .brd-radius-top {
 	border-top-right-radius: $border-radius;
@@ -174,7 +174,7 @@
  * `.brd-radius-right`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-right.p-5
+ *     div.bgc-secondary-2.brd-radius-right.p-5
  */
 .brd-radius-right {
 	border-top-right-radius: $border-radius;
@@ -186,7 +186,7 @@
  * `.brd-radius-bottom`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-bottom.p-5
+ *     div.bgc-secondary-2.brd-radius-bottom.p-5
  */
 .brd-radius-bottom {
 	border-bottom-right-radius: $border-radius;
@@ -198,7 +198,7 @@
  * `.brd-radius-left`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius-left.p-5
+ *     div.bgc-secondary-2.brd-radius-left.p-5
  */
 .brd-radius-left {
 	border-top-left-radius: $border-radius;
@@ -210,7 +210,7 @@
  * `.brd-radius-0`
  *
  *     @example
- *     div.bgc-secondary-4.brd-radius.brd-radius-0.p-5
+ *     div.bgc-secondary-2.brd-radius.brd-radius-0.p-5
  */
 .brd-radius-0 {
 	border-radius: 0;
@@ -438,7 +438,7 @@
 
 	/**
 	 * #{$name} color:
-	 * `.bgc-#{$lc-name}` `.txtc-#{$lc-name}`
+	 * `.bgc-#{$lc-name}` `.txtc-#{$lc-name}` `.brdc-#{$lc-name}`
 	 *
 	 *     @example
 	 *     table.tbl
@@ -451,6 +451,12 @@
 	 */
 	.bgc-#{$lc-name} {
 		background-color: $hex;
+	}
+
+	.brdc-#{$lc-name} {
+		@extend .brd;
+
+		border-color: $hex;
 	}
 
 	.txtc-#{$lc-name} {

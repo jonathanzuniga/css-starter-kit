@@ -26,10 +26,6 @@ html, body {
 
 /* ========================================================================== */
 
-/***
- * Flex grid:
- */
-
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -69,6 +65,141 @@ html, body {
 }
 
 /***
+ * Flex grid:
+ */
+
+/**
+ * Row and column:
+ * Remember, wrap any of the `.col*` classes inside of a `.row` class.
+ *
+ *     @example
+ *     div.row
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *     div.row
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ */
+@for $i from 1 through $grid-columns-number {
+	.col-#{$i} {
+		@extend %column;
+
+		$column-width: percentage($i / $grid-columns-number);
+		flex-basis: $column-width;
+		max-width: $column-width;
+	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Responsive classes
+ */
+
+ /**
+ * Extra small columns:
+ * `.col-xs-*` Resize the window to see how grid columns behave on the different breakpoints.
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-md-6
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-md-6
+ *             div.bgc-secondary-3 &nbsp
+ *     div.row
+ *         div.col-xs-6.col-md-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-6.col-md-4
+ *             div.bgc-secondary-3 &nbsp
+ *     div.row
+ *         div.col-xs-3.col-md-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-3.col-md-8
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: $breakpoint-xs-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-xs-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+/**
+ * Small columns:
+ * `.col-sm-*`
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-sm-6.col-md-9
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-sm-6.col-md-3
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: $breakpoint-sm-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-sm-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+/**
+ * Medium columns:
+ * `.col-sm-*`
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-sm-6.col-md-7
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-sm-6.col-md-5
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: $breakpoint-md-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-md-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-lg-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-lg-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+@media (min-width: $breakpoint-xl-min-width) {
+	@for $i from 1 through $grid-columns-number {
+		.col-xl-#{$i} {
+			$column-width: percentage($i / $grid-columns-number);
+			flex-basis: $column-width;
+			max-width: $column-width;
+		}
+	}
+}
+
+/* ========================================================================== */
+
+/***
  * Horizontal modifiers:
  */
 
@@ -79,9 +210,9 @@ html, body {
  *     @example
  *     div.row.cols-left
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-left {
 	justify-content: flex-start;
@@ -94,9 +225,9 @@ html, body {
  *     @example
  *     div.row.cols-center
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-center {
 	justify-content: center;
@@ -109,9 +240,9 @@ html, body {
  *     @example
  *     div.row.cols-right
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-right {
 	justify-content: flex-end;
@@ -124,9 +255,9 @@ html, body {
  *     @example
  *     div.row.cols-between
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-between {
 	justify-content: space-between;
@@ -139,9 +270,9 @@ html, body {
  *     @example
  *     div.row.cols-around
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-around {
 	justify-content: space-around;
@@ -156,13 +287,13 @@ html, body {
  * `.cols-top`
  *
  *     @example
- *     div.row.cols-top
+ *     div.row.cols-top.h-100px
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *             div.bgc-secondary-2 &nbsp
  */
 .cols-top {
 	align-items: flex-start;
@@ -186,18 +317,6 @@ html, body {
 
 .col-bottom {
 	align-self: flex-end;
-}
-
-/* Columns
- * ========================================================================== */
-@for $i from 1 through $grid-columns-number {
-	.col-#{$i} {
-		@extend %column;
-
-		$column-width: percentage($i / $grid-columns-number);
-		flex-basis: $column-width;
-		max-width: $column-width;
-	}
 }
 
 /* Offsets
@@ -238,58 +357,6 @@ html, body {
 	@for $i from 0 through ($grid-columns-number - 1) {
 		.col-os-xl-#{$i} {
 			margin-left: percentage($i / $grid-columns-number);
-		}
-	}
-}
-
-/* Responsive classes
- * ========================================================================== */
-@media (min-width: $breakpoint-xs-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-xs-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-sm-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-sm-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-md-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-md-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-lg-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-lg-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-xl-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-xl-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
 		}
 	}
 }

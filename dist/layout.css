@@ -12,9 +12,6 @@ html, body {
   max-width: 1040px; }
 
 /* ========================================================================== */
-/***
- * Flex grid:
- */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -38,114 +35,28 @@ html, body {
   padding-right: 16px; }
 
 /***
- * Horizontal modifiers:
+ * Flex grid:
  */
 /**
- * Columns to left:
- * `.cols-left`
+ * Row and column:
+ * Remember, wrap any of the `.col*` classes inside of a `.row` class.
  *
  *     @example
- *     div.row.cols-left
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
+ *     div.row
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *     div.row
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col
+ *             div.bgc-secondary-2 &nbsp
  */
-.cols-left {
-  justify-content: flex-start; }
-
-/**
- * Columns to center:
- * `.cols-center`
- *
- *     @example
- *     div.row.cols-center
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- */
-.cols-center {
-  justify-content: center; }
-
-/**
- * Columns to right:
- * `.cols-right`
- *
- *     @example
- *     div.row.cols-right
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- */
-.cols-right {
-  justify-content: flex-end; }
-
-/**
- * Space between columns:
- * `.cols-between`
- *
- *     @example
- *     div.row.cols-between
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- */
-.cols-between {
-  justify-content: space-between; }
-
-/**
- * Space around columns:
- * `.cols-around`
- *
- *     @example
- *     div.row.cols-around
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- */
-.cols-around {
-  justify-content: space-around; }
-
-/***
- * Vertical modifiers:
- */
-/**
- * Columns to top:
- * `.cols-top`
- *
- *     @example
- *     div.row.cols-top
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- *         div.col-4
- *             div.bgc-gray.brd-radius &nbsp
- */
-.cols-top {
-  align-items: flex-start; }
-
-.cols-middle {
-  align-items: center; }
-
-.cols-bottom {
-  align-items: flex-end; }
-
-.col-top {
-  align-self: flex-start; }
-
-.col-middle {
-  align-self: center; }
-
-.col-bottom {
-  align-self: flex-end; }
-
-/* Columns
- * ========================================================================== */
 .col-1 {
   flex-basis: 8.33333%;
   max-width: 8.33333%; }
@@ -193,6 +104,351 @@ html, body {
 .col-12 {
   flex-basis: 100%;
   max-width: 100%; }
+
+/* ========================================================================== */
+/***
+ * Responsive classes
+ */
+/**
+ * Extra small columns:
+ * `.col-xs-*` Resize the window to see how grid columns behave on the different breakpoints.
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-md-6
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-md-6
+ *             div.bgc-secondary-3 &nbsp
+ *     div.row
+ *         div.col-xs-6.col-md-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-6.col-md-4
+ *             div.bgc-secondary-3 &nbsp
+ *     div.row
+ *         div.col-xs-3.col-md-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-3.col-md-8
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: 0) {
+  .col-xs-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+  .col-xs-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+  .col-xs-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col-xs-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+  .col-xs-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+  .col-xs-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col-xs-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+  .col-xs-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .col-xs-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+  .col-xs-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+  .col-xs-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+  .col-xs-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+
+/**
+ * Small columns:
+ * `.col-sm-*`
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-sm-6.col-md-9
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-sm-6.col-md-3
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: 768px) {
+  .col-sm-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+  .col-sm-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+  .col-sm-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col-sm-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+  .col-sm-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+  .col-sm-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col-sm-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+  .col-sm-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .col-sm-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+  .col-sm-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+  .col-sm-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+  .col-sm-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+
+/**
+ * Medium columns:
+ * `.col-sm-*`
+ *
+ *     @example
+ *     div.row
+ *         div.col-xs-12.col-sm-6.col-md-7
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-xs-12.col-sm-6.col-md-5
+ *             div.bgc-secondary-3 &nbsp
+ */
+@media (min-width: 1024px) {
+  .col-md-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+  .col-md-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+  .col-md-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col-md-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+  .col-md-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+  .col-md-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col-md-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+  .col-md-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .col-md-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+  .col-md-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+  .col-md-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+  .col-md-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+
+@media (min-width: 1280px) {
+  .col-lg-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+  .col-lg-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+  .col-lg-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col-lg-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+  .col-lg-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+  .col-lg-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col-lg-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+  .col-lg-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .col-lg-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+  .col-lg-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+  .col-lg-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+  .col-lg-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+
+@media (min-width: 1680px) {
+  .col-xl-1 {
+    flex-basis: 8.33333%;
+    max-width: 8.33333%; }
+  .col-xl-2 {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%; }
+  .col-xl-3 {
+    flex-basis: 25%;
+    max-width: 25%; }
+  .col-xl-4 {
+    flex-basis: 33.33333%;
+    max-width: 33.33333%; }
+  .col-xl-5 {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%; }
+  .col-xl-6 {
+    flex-basis: 50%;
+    max-width: 50%; }
+  .col-xl-7 {
+    flex-basis: 58.33333%;
+    max-width: 58.33333%; }
+  .col-xl-8 {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .col-xl-9 {
+    flex-basis: 75%;
+    max-width: 75%; }
+  .col-xl-10 {
+    flex-basis: 83.33333%;
+    max-width: 83.33333%; }
+  .col-xl-11 {
+    flex-basis: 91.66667%;
+    max-width: 91.66667%; }
+  .col-xl-12 {
+    flex-basis: 100%;
+    max-width: 100%; } }
+
+/* ========================================================================== */
+/***
+ * Horizontal modifiers:
+ */
+/**
+ * Columns to left:
+ * `.cols-left`
+ *
+ *     @example
+ *     div.row.cols-left
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-left {
+  justify-content: flex-start; }
+
+/**
+ * Columns to center:
+ * `.cols-center`
+ *
+ *     @example
+ *     div.row.cols-center
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-center {
+  justify-content: center; }
+
+/**
+ * Columns to right:
+ * `.cols-right`
+ *
+ *     @example
+ *     div.row.cols-right
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-right {
+  justify-content: flex-end; }
+
+/**
+ * Space between columns:
+ * `.cols-between`
+ *
+ *     @example
+ *     div.row.cols-between
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-between {
+  justify-content: space-between; }
+
+/**
+ * Space around columns:
+ * `.cols-around`
+ *
+ *     @example
+ *     div.row.cols-around
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-around {
+  justify-content: space-around; }
+
+/***
+ * Vertical modifiers:
+ */
+/**
+ * Columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
+.cols-top {
+  align-items: flex-start; }
+
+.cols-middle {
+  align-items: center; }
+
+.cols-bottom {
+  align-items: flex-end; }
+
+.col-top {
+  align-self: flex-start; }
+
+.col-middle {
+  align-self: center; }
+
+.col-bottom {
+  align-self: flex-end; }
 
 /* Offsets
  * ========================================================================== */
@@ -325,198 +581,6 @@ html, body {
     margin-left: 83.33333%; }
   .col-os-xl-11 {
     margin-left: 91.66667%; } }
-
-/* Responsive classes
- * ========================================================================== */
-@media (min-width: 0) {
-  .col-xs-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-  .col-xs-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-  .col-xs-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-xs-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .col-xs-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-  .col-xs-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-xs-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-  .col-xs-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-  .col-xs-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-xs-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-  .col-xs-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-  .col-xs-12 {
-    flex-basis: 100%;
-    max-width: 100%; } }
-
-@media (min-width: 768px) {
-  .col-sm-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-  .col-sm-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-  .col-sm-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-sm-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .col-sm-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-  .col-sm-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-sm-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-  .col-sm-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-  .col-sm-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-sm-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-  .col-sm-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-  .col-sm-12 {
-    flex-basis: 100%;
-    max-width: 100%; } }
-
-@media (min-width: 1024px) {
-  .col-md-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-  .col-md-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-  .col-md-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-md-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .col-md-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-  .col-md-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-md-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-  .col-md-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-  .col-md-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-md-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-  .col-md-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-  .col-md-12 {
-    flex-basis: 100%;
-    max-width: 100%; } }
-
-@media (min-width: 1280px) {
-  .col-lg-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-  .col-lg-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-  .col-lg-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-lg-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .col-lg-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-  .col-lg-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-lg-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-  .col-lg-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-  .col-lg-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-lg-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-  .col-lg-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-  .col-lg-12 {
-    flex-basis: 100%;
-    max-width: 100%; } }
-
-@media (min-width: 1680px) {
-  .col-xl-1 {
-    flex-basis: 8.33333%;
-    max-width: 8.33333%; }
-  .col-xl-2 {
-    flex-basis: 16.66667%;
-    max-width: 16.66667%; }
-  .col-xl-3 {
-    flex-basis: 25%;
-    max-width: 25%; }
-  .col-xl-4 {
-    flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .col-xl-5 {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%; }
-  .col-xl-6 {
-    flex-basis: 50%;
-    max-width: 50%; }
-  .col-xl-7 {
-    flex-basis: 58.33333%;
-    max-width: 58.33333%; }
-  .col-xl-8 {
-    flex-basis: 66.66667%;
-    max-width: 66.66667%; }
-  .col-xl-9 {
-    flex-basis: 75%;
-    max-width: 75%; }
-  .col-xl-10 {
-    flex-basis: 83.33333%;
-    max-width: 83.33333%; }
-  .col-xl-11 {
-    flex-basis: 91.66667%;
-    max-width: 91.66667%; }
-  .col-xl-12 {
-    flex-basis: 100%;
-    max-width: 100%; } }
 
 /* Gutters
  * ========================================================================== */

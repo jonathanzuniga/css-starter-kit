@@ -14,6 +14,10 @@
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 		}
 
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 300;
+		}
+
 		.sg-canvas {
 			*zoom: 1;
 		}
@@ -32,6 +36,14 @@
 			width: 50px;
 			height: 25px;
 		}
+
+		.h-100px {
+			height: 100px;
+		}
+
+		.sg-example .row + .row {
+			margin-top: 1rem;
+		}
 	</style>
 
 ### Body
@@ -39,7 +51,7 @@
 	<div class='row cols-center'>
 		<div class='col-xs-12 col-md-10 col-lg-9 col-xl-8'>
 			<div class='sg-container' sg-content>
-				<h1 class="fnt-thin">CSS Starter Kit</h1>
+				<h1>CSS Starter Kit</h1>
 
 				<p>
 					<b>DISCLAIMER - This is a very early stage work in progress project</b>
@@ -53,13 +65,9 @@
 					CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
 				</p>
 
-				<h2 class="fnt-thin">
-					Index
-				</h2>
-
 				<div class="row">
 					<div class="col-sm-4">
-						<h3 class="fnt-thin">
+						<h3>
 							Layout
 						</h3>
 
@@ -87,7 +95,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h3 class="fnt-thin">
+						<h3>
 							Elements
 						</h3>
 
@@ -126,7 +134,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h3 class="fnt-thin">
+						<h3>
 							Helpers
 						</h3>
 
