@@ -1,106 +1,39 @@
 // ==========================================================================
-// Variables
+// Elements
 // ==========================================================================
 
-// Primary colors
-
-$primary-colors: (
-	'Primary': #2c9ab7,
-	'Secondary': #373737,
-	'Success': #449a88,
-	'Danger': #db3a1b,
-	'Warning': #febe12,
-);
-
-// Slightly lighten a color.
-@function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
-}
-
-$tints: 3; // Número de tintas por cada color primario.
-$colors-list: 'black' #000, 'white' #fff;
-
-// Generar la lista completa de colores.
-@each $name, $hex in $primary-colors {
-	@for $tint from 1 to $tints + 2 {
-		@if $tint == 1 {
-			$colors-list: append($colors-list, '#{$name} #{$tint}' $hex, comma);
-		} @else {
-			$colors-list: append($colors-list, '#{$name} #{$tint}' tint($hex, percentage(1 - ((100 / $tint) / 100))), comma);
-		}
-	}
-}
-
-// Color palette
-
-$colors: (
-	$colors-list
-) !default;
-
-// @debug $colors;
-
-// Get one color from the list.
-@function get-color($color) {
-	@each $c in $colors {
-		@if nth($c, 1) == $color {
-			@return nth($c, 2);
-		}
-	}
-	@return unquote('#000');
-}
-
-// Body
-
-$mono-font-family: Menlo, Courier, monospace;
-
-$text-color: get-color('Secondary 1');
-
-// Calculate rems. $pixels = pixel size. $base = base pixel size
-@function px-to-rem($pixels, $base: $base-font-size) {
-	@return ($pixels / $base) * 1rem;
-}
-
-// Calculate ems.
-@function px-to-em($pixels, $base: $base-font-size) {
-    @if $pixels == 0 { @return 0 }
-	@return $pixels / $base + 0em;
-}
+$text-color: #333;
 
 $base-font-size: 16px !default;
+
 $base-line-height: 26px !default;
 $base-spacing-unit: ($base-line-height + 6);
 $half-spacing-unit: $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 $line-height-ratio: $base-line-height / $base-font-size;
 
-$base-spacing-unit: px-to-em($base-spacing-unit);
-$half-spacing-unit: px-to-em($half-spacing-unit);
-$quarter-spacing-unit: px-to-em($quarter-spacing-unit);
+// Convert spacing units to ems.
 
-$small-font-size: 80%;
-$large-font-size: 120%;
+$base-spacing-unit: px-to-em($base-spacing-unit); // 2em (32px)
+$half-spacing-unit: px-to-em($half-spacing-unit); // 1em (16px)
+$quarter-spacing-unit: px-to-em($quarter-spacing-unit); // 0.5em (8px)
 
-$dropcap-color: get-color('Warning 1');
-$dropcap-size: $base-font-size * 3.25;
-$dropcap-weight: bold;
+// Colors
 
-$headings-sizes: (
-	'h1': $base-font-size * 2.5, // 2.5em (40px)
-	'h2': $base-font-size * 2, // 2em (32px)
-	'h3': $base-font-size * 1.75, // 1.75em (28px)
-	'h4': $base-font-size * 1.5, // 1.5em (24px)
-	'h5': $base-font-size * 1.25, // 1.25em (20px)
-	'h6': $base-font-size // 1em (16px)
+$colors: (
+	'Primary': #2c9ab7,
+	'Secondary': #373737,
+	'Success': #449a88,
+	'Warning': #febe12,
+	'Danger': #db3a1b
+);
+
+$tints: 6; // Número de tintas por cada color primario.
+
+// Color palette
+$color-palette: (
+	get-colors-list($colors, $tints)
 ) !default;
-
-$heading-line-height: 1.1;
-
-$pre-background-color: transparentize(get-color('Secondary 1'), 0.95);
-
-// Borders
-
-$border-color: transparentize(get-color('Secondary 1'), 0.85);
-$border-radius: 4px;
 
 // Hyperlinks
 
@@ -113,32 +46,44 @@ $link-visited-decoration: none;
 $link-hover-color: $text-color;
 $link-hover-decoration: none;
 
+// Code
+
+$mono-font-family: Menlo, Courier, monospace;
+$pre-background-color: transparentize(get-color('Secondary 1'), 0.95);
+
 // Buttons
 
-$button-background-color: lighten(get-color('Secondary 1'), 65%);
+$button-background-color-darken-percentage: 15%;
+
+$button-tint-percentage: 24%;
+$button-shade-percentage: 60%;
+
+$button-background-color: get-color('Secondary 7');
 $button-border-color: transparent;
 $button-border-width: 2px;
 $button-font-weight: 500;
-$button-text-color: lighten($text-color, 15%);
-
 $button-padding: 0.5em 1em;
+$button-text-color: transparentize(get-color('Secondary 1'), 0.25);
 
 // $button-focus-shadow: 0 0 0 2px transparentize($link-color, 0.85);
 
-$button-hover-background-color: darken($button-background-color, 5%);
+$button-hover-background-color: darken($button-background-color, $button-background-color-darken-percentage);
 $button-hover-border-color: transparent;
 $button-hover-text-color: $button-text-color;
 
 // Primary buttons
 
-$button-primary-background-color: $link-color;
+$button-primary-background-color: get-color('Primary 2');
 $button-primary-border-color: transparent;
 $button-primary-text-color: #fff;
 
-$button-primary-hover-background-color: darken($button-primary-background-color, 5%);
+$button-primary-hover-background-color: darken($button-primary-background-color, $button-background-color-darken-percentage);
 $button-primary-hover-border-color: $button-primary-border-color;
+$button-primary-hover-text-color: $button-primary-text-color;
 
 // Outline buttons
+
+// Outline button
 
 $button-outline-background-color: transparent;
 $button-outline-border-color: $button-background-color;
@@ -146,6 +91,8 @@ $button-outline-text-color: $button-text-color;
 
 $button-outline-hover-border-color: transparent;
 $button-outline-hover-text-color: $button-text-color;
+
+// Outline primary button
 
 $button-primary-outline-background-color: transparent;
 $button-primary-outline-border-color: get-color('Primary 3');
@@ -159,11 +106,84 @@ $button-primary-outline-hover-text-color: $button-primary-text-color;
 $button-link-hover-background-color: $button-background-color;
 $button-link-hover-border-color: transparent;
 
+// Colored buttons
+
+// Success button
+
+$button-success-background-color: get-color('Success 2');
+$button-success-border-color: transparent;
+$button-success-text-color: #fff;
+
+$button-success-hover-background-color: darken($button-success-background-color, $button-background-color-darken-percentage);
+$button-success-hover-border-color: $button-success-border-color;
+$button-success-hover-text-color: $button-success-text-color;
+
+// Warning button
+
+$button-warning-background-color: get-color('Warning 2');
+$button-warning-border-color: transparent;
+$button-warning-text-color: #fff;
+
+$button-warning-hover-background-color: darken($button-warning-background-color, $button-background-color-darken-percentage);
+$button-warning-hover-border-color: $button-warning-border-color;
+$button-warning-hover-text-color: $button-warning-text-color;
+
+// Danger button
+
+$button-danger-background-color: get-color('Danger 2');
+$button-danger-border-color: transparent;
+$button-danger-text-color: #fff;
+
+$button-danger-hover-background-color: darken($button-danger-background-color, $button-background-color-darken-percentage);
+$button-danger-hover-border-color: $button-danger-border-color;
+$button-danger-hover-text-color: $button-danger-text-color;
+
+// Headings
+
+$headings-sizes: (
+	'h1': $base-font-size * 2.5, // 2.5em (40px)
+	'h2': $base-font-size * 2, // 2em (32px)
+	'h3': $base-font-size * 1.75, // 1.75em (28px)
+	'h4': $base-font-size * 1.5, // 1.5em (24px)
+	'h5': $base-font-size * 1.25, // 1.25em (20px)
+	'h6': $base-font-size // 1em (16px)
+) !default;
+$heading-line-height: 1.1;
+
+
+// Tables
+
+$table-heading-weight: bold;
+$table-heading-align: left;
+
+
+// ==========================================================================
+// Helpers
 // ==========================================================================
 
+// Borders
+
+$border-color: transparentize(get-color('Secondary 1'), 0.85);
+$border-radius: 4px;
+
+// Drop caps
+
+$dropcap-color: get-color('Warning 1');
+$dropcap-size: $base-font-size * 3.25;
+$dropcap-weight: bold;
+
+// Font size
+
+$small-font-size: 80%;
+$large-font-size: 120%;
+
+// Cantidad de espacios para margins & paddings,
 $spacings: 5 !default;
+
+// incrementando cada...
 $spacing: 4px !default;
 
+// Porcentajes para widths & heights.
 $sizes: (
 	10: 10%,
 	20: 20%,
@@ -177,21 +197,25 @@ $sizes: (
 	100: 100%
 ) !default;
 
+
+// ==========================================================================
+// Layout
 // ==========================================================================
 
-// Grid
+// Flex grid
 
+// Tamaño máximo de anchura del contenedor.
 $container-max-width: 1040px;
 
 // Número de columnas.
 $grid-columns-number: 12;
 
-// Margen del lado izquierdo y derecho de cada columna.
-$grid-column-gutter: 16px;
-
-// Espacio inferior de cada renglón.
+// Margen superior e inferior de cada renglón.
 $grid-row-margin-bottom: 0;
 $grid-row-margin-top: 0;
+
+// Margen del lado izquierdo y derecho de cada columna.
+$grid-column-gutter: 16px;
 
 $breakpoint-xs-min-width: 0 !default;
 $breakpoint-sm-min-width: 768px !default;

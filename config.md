@@ -44,6 +44,10 @@
 		.sg-example .row + .row {
 			margin-top: 1rem;
 		}
+
+		.sg-block:last-of-type {
+			border-bottom: none;
+		}
 	</style>
 
 ### Body
@@ -66,34 +70,6 @@
 				</p>
 
 				<div class="row">
-					<div class="col-sm-4">
-						<h3>
-							Layout
-						</h3>
-
-						<ul class="lst-unstyled">
-							<li>
-								<a href="layout.html#flex-grid">Flex grid</a>
-							</li>
-							<li>
-								<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-								<ul class="lst-unstyled">
-									<li>
-										<a href="layout.html#columns-to-left">Columns to left</a>
-									</li>
-									<li>
-										<a href="layout.html#columns-to-center">Columns to center</a>
-									</li>
-									<li>
-										<a href="layout.html#space-between-columns">Space between columns</a>
-									</li>
-									<li>
-										<a href="layout.html#space-around-columns">Space around columns</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 					<div class="col-sm-4">
 						<h3>
 							Elements
@@ -130,6 +106,96 @@
 							</li>
 							<li>
 								<a href="elements.html#tables">Tables</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="elements.html#table">Table</a>
+									</li>
+									<li>
+										<a href="elements.html#bordered-table">Bordered table</a>
+									</li>
+									<li>
+										<a href="elements.html#responsive-table">Responsive table</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h3>
+							Layout
+						</h3>
+
+						<ul class="lst-unstyled">
+							<li>
+								<a href="layout.html#flex-grid">Flex grid</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#rows-and-columns">Rows and columns</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="layout.html#responsive-classes">Responsive classes</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#columns">Columns</a>
+									</li>
+								</ul>
+								<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
+									</li>
+									<li>
+										<a href="layout.html#space-between-columns">Space between columns</a>
+									</li>
+									<li>
+										<a href="layout.html#space-around-columns">Space around columns</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-column-to-top">Aligns column to top</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
+									</li>
+									<li>
+										<a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="layout.html#offsets">Offsets</a>
+							</li>
+							<li>
+								<a href="layout.html#offsets">Gutters</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#remove-gutters">Small gutters</a>
+									</li>
+									<li>
+										<a href="layout.html#remove-gutters">Remove gutters</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -210,6 +276,9 @@
 								<a href="helpers.html#colors">Colors</a>
 							</li>
 							<li>
+								<a href="helpers.html#drop-caps">Drop caps</a>
+							</li>
+							<li>
 								<a href="helpers.html#floats">Floats</a>
 								<ul class="lst-unstyled">
 									<li>
@@ -222,6 +291,9 @@
 										<a href="helpers.html#don-t-float">Don't float</a>
 									</li>
 								</ul>
+							</li>
+							<li>
+								<a href="helpers.html#font-size">Font size</a>
 							</li>
 							<li>
 								<a href="helpers.html#font-style">Font style</a>
@@ -304,7 +376,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="helpers.html#width-and-height">Width and height</a>
+								<a href="helpers.html#widths-and-heights">Widths and heights</a>
 							</li>
 						</ul>
 					</div>

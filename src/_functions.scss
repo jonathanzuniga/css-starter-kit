@@ -1,0 +1,44 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// Slightly lighten a color.
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+// Generar la lista completa de colores.
+@function get-colors-list($colors, $tints) {
+	$colors-list: 'Black' #000, 'White' #fff;
+	@each $name, $hex in $colors {
+		@for $tint from 1 to $tints + 2 {
+			@if $tint == 1 {
+				$colors-list: append($colors-list, '#{$name} #{$tint}' $hex, comma);
+			} @else {
+				$colors-list: append($colors-list, '#{$name} #{$tint}' tint($hex, percentage(1 - ((100 / $tint) / 64))), comma);
+			}
+		}
+	}
+	@return $colors-list;
+}
+
+// Get one color from the list.
+@function get-color($color) {
+	@each $cp in $color-palette {
+		@if nth($cp, 1) == $color {
+			@return nth($cp, 2);
+		}
+	}
+	@return unquote('#000');
+}
+
+// Calculate rems. $pixels = pixel size. $base = base pixel size
+@function px-to-rem($pixels, $base: $base-font-size) {
+	@return ($pixels / $base) * 1rem;
+}
+
+// Calculate ems.
+@function px-to-em($pixels, $base: $base-font-size) {
+    @if $pixels == 0 { @return 0 }
+	@return $pixels / $base + 0em;
+}

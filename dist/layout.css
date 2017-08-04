@@ -38,7 +38,7 @@ html, body {
  * Flex grid:
  */
 /**
- * Row and column:
+ * Rows and columns:
  * Remember, wrap any of the `.col*` classes inside of a `.row` class.
  *
  *     @example
@@ -107,27 +107,27 @@ html, body {
 
 /* ========================================================================== */
 /***
- * Responsive classes
+ * Responsive classes:
  */
 /**
- * Extra small columns:
- * `.col-xs-*` Resize the window to see how grid columns behave on the different breakpoints.
+ * Columns:
+ * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
  *     div.row
- *         div.col-xs-12.col-md-6
+ *         div.col-xs-6
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-md-6
+ *         div.col-xs-6
  *             div.bgc-secondary-3 &nbsp
  *     div.row
- *         div.col-xs-6.col-md-8
+ *         div.col-sm-6.col-md-8
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-6.col-md-4
+ *         div.col-sm-6.col-md-4
  *             div.bgc-secondary-3 &nbsp
  *     div.row
- *         div.col-xs-3.col-md-4
+ *         div.col-xs-12.col-sm-3.col-md-5.col-lg-7.col-xl-9
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-3.col-md-8
+ *         div.col-xs-12.col-sm-9.col-md-7.col-lg-5.col-xl-3
  *             div.bgc-secondary-3 &nbsp
  */
 @media (min-width: 0) {
@@ -168,17 +168,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/**
- * Small columns:
- * `.col-sm-*`
- *
- *     @example
- *     div.row
- *         div.col-xs-12.col-sm-6.col-md-9
- *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-sm-6.col-md-3
- *             div.bgc-secondary-3 &nbsp
- */
 @media (min-width: 768px) {
   .col-sm-1 {
     flex-basis: 8.33333%;
@@ -217,17 +206,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/**
- * Medium columns:
- * `.col-sm-*`
- *
- *     @example
- *     div.row
- *         div.col-xs-12.col-sm-6.col-md-7
- *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-sm-6.col-md-5
- *             div.bgc-secondary-3 &nbsp
- */
 @media (min-width: 1024px) {
   .col-md-1 {
     flex-basis: 8.33333%;
@@ -347,7 +325,7 @@ html, body {
  * Horizontal modifiers:
  */
 /**
- * Columns to left:
+ * Aligns columns to left:
  * `.cols-left`
  *
  *     @example
@@ -361,7 +339,7 @@ html, body {
   justify-content: flex-start; }
 
 /**
- * Columns to center:
+ * Aligns columns to center:
  * `.cols-center`
  *
  *     @example
@@ -375,7 +353,7 @@ html, body {
   justify-content: center; }
 
 /**
- * Columns to right:
+ * Aligns columns to right:
  * `.cols-right`
  *
  *     @example
@@ -420,7 +398,7 @@ html, body {
  * Vertical modifiers:
  */
 /**
- * Columns to top:
+ * Aligns columns to top:
  * `.cols-top`
  *
  *     @example
@@ -435,23 +413,90 @@ html, body {
 .cols-top {
   align-items: flex-start; }
 
+/**
+ * Aligns columns to middle:
+ * `.cols-middle`
+ *
+ *     @example
+ *     div.row.cols-middle.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-middle {
   align-items: center; }
 
+/**
+ * Aligns columns to bottom:
+ * `.cols-bottom`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-bottom {
   align-items: flex-end; }
 
+/**
+ * Aligns column to top:
+ * `.col-top`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4.col-top
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-top {
   align-self: flex-start; }
 
+/**
+ * Aligns column to middle:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4.col-middle
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-middle {
   align-self: center; }
 
+/**
+ * Aligns column to bottom:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4.col-bottom
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-bottom {
   align-self: flex-end; }
 
-/* Offsets
- * ========================================================================== */
+/* ========================================================================== */
+/***
+ * Offsets:
+ */
 @media (min-width: 0) {
   .col-os-xs-0 {
     margin-left: 0%; }
@@ -582,16 +627,21 @@ html, body {
   .col-os-xl-11 {
     margin-left: 91.66667%; } }
 
-/* Gutters
- * ========================================================================== */
-.cols-gutter-0.row {
-  margin-left: 0;
-  margin-right: 0; }
-
-.cols-gutter-0 [class^="col"] {
-  padding-left: 0;
-  padding-right: 0; }
-
+/* ========================================================================== */
+/***
+ * Gutters:
+ */
+/**
+ * Small gutters:
+ * `.cols-gutter-sm`
+ *
+ *     @example
+ *     div.row.cols-gutter-sm
+ *         div.col-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-gutter-sm.row {
   margin-left: -8px;
   margin-right: -8px; }
@@ -599,3 +649,22 @@ html, body {
 .cols-gutter-sm [class^="col"] {
   padding-left: 8px;
   padding-right: 8px; }
+
+/**
+ * Remove gutters:
+ * `.cols-gutter-0`
+ *
+ *     @example
+ *     div.row.cols-gutter-0
+ *         div.col-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-3 &nbsp
+ */
+.cols-gutter-0.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.cols-gutter-0 [class^="col"] {
+  padding-left: 0;
+  padding-right: 0; }

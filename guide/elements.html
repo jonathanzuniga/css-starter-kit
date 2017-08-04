@@ -44,6 +44,9 @@
     .sg-example .row + .row {
       margin-top: 1rem;
     }
+    .sg-block:last-of-type {
+      border-bottom: none;
+    }
   </style>
 </head>
 
@@ -66,34 +69,6 @@
         </p>
 
         <div class="row">
-          <div class="col-sm-4">
-            <h3>
-              Layout
-            </h3>
-
-            <ul class="lst-unstyled">
-              <li>
-                <a href="layout.html#flex-grid">Flex grid</a>
-              </li>
-              <li>
-                <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-                <ul class="lst-unstyled">
-                  <li>
-                    <a href="layout.html#columns-to-left">Columns to left</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#columns-to-center">Columns to center</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#space-between-columns">Space between columns</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#space-around-columns">Space around columns</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
           <div class="col-sm-4">
             <h3>
               Elements
@@ -130,6 +105,96 @@
               </li>
               <li>
                 <a href="elements.html#tables">Tables</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="elements.html#table">Table</a>
+                  </li>
+                  <li>
+                    <a href="elements.html#bordered-table">Bordered table</a>
+                  </li>
+                  <li>
+                    <a href="elements.html#responsive-table">Responsive table</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h3>
+              Layout
+            </h3>
+
+            <ul class="lst-unstyled">
+              <li>
+                <a href="layout.html#flex-grid">Flex grid</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="layout.html#rows-and-columns">Rows and columns</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="layout.html#responsive-classes">Responsive classes</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="layout.html#columns">Columns</a>
+                  </li>
+                </ul>
+                <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#space-between-columns">Space between columns</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#space-around-columns">Space around columns</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-column-to-top">Aligns column to top</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="layout.html#offsets">Offsets</a>
+              </li>
+              <li>
+                <a href="layout.html#offsets">Gutters</a>
+                <ul class="lst-unstyled">
+                  <li>
+                    <a href="layout.html#remove-gutters">Small gutters</a>
+                  </li>
+                  <li>
+                    <a href="layout.html#remove-gutters">Remove gutters</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -210,6 +275,9 @@
                 <a href="helpers.html#colors">Colors</a>
               </li>
               <li>
+                <a href="helpers.html#drop-caps">Drop caps</a>
+              </li>
+              <li>
                 <a href="helpers.html#floats">Floats</a>
                 <ul class="lst-unstyled">
                   <li>
@@ -222,6 +290,9 @@
                     <a href="helpers.html#don-t-float">Don&apos;t float</a>
                   </li>
                 </ul>
+              </li>
+              <li>
+                <a href="helpers.html#font-size">Font size</a>
               </li>
               <li>
                 <a href="helpers.html#font-style">Font style</a>
@@ -304,7 +375,7 @@
                 </ul>
               </li>
               <li>
-                <a href="helpers.html#width-and-height">Width and height</a>
+                <a href="helpers.html#widths-and-heights">Widths and heights</a>
               </li>
             </ul>
           </div>
@@ -380,6 +451,25 @@
               </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--pill&quot;</span>&gt;</span>Pill button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
             </div>
           </section>
+          <section class="sg-block sg-section-colored-buttons">
+            <div class="sg-text">
+              <h3 id="colored-buttons" class="sg">Colored buttons</h3>
+              <p class="sg">
+                <code class="sg">.btn--success</code>
+                <code class="sg">.btn--warning</code>
+                <code class="sg">.btn--danger</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <a class="btn btn--success">Success button</a>
+                <a class="btn btn--warning">Warning button</a>
+                <a class="btn btn--danger">Danger button</a>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--success&quot;</span>&gt;</span>Success button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--warning&quot;</span>&gt;</span>Warning button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--danger&quot;</span>&gt;</span>Danger button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+            </div>
+          </section>
         </section>
 
         <section class="sg-section sg-section-lists">
@@ -430,52 +520,178 @@
                 <table class="tbl">
                   <thead>
                     <tr>
-                      <th>Fruit</th>
-                      <th>Vegetable</th>
-                      <th>Dessert</th>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Apple</td>
-                      <td>Broccoli</td>
-                      <td>Brownie</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
                     </tr>
                     <tr>
-                      <td>Berry</td>
-                      <td>Carrot</td>
-                      <td>Cupcake</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
                     </tr>
                     <tr>
-                      <td>Cherry</td>
-                      <td>Spinach</td>
-                      <td>Fruitcake</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
                     </tr>
                   </tbody>
                 </table>
               </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Fruit<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Vegetable<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Dessert<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Apple<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Broccoli<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Brownie<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Berry<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Carrot<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cupcake<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Cherry<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Spinach<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Fruitcake<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+            </div>
+          </section>
+          <section class="sg-block sg-section-bordered-table">
+            <div class="sg-text">
+              <h3 id="bordered-table" class="sg">Bordered table</h3>
+              <p class="sg">
+                <code class="sg">.tbl-bordered</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <table class="tbl tbl-bordered">
+                  <thead>
+                    <tr>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-bordered&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+            </div>
+          </section>
+          <section class="sg-block sg-section-responsive-table">
+            <div class="sg-text">
+              <h3 id="responsive-table" class="sg">Responsive table</h3>
+              <p class="sg">
+                <code class="sg">.tbl-responsive</code>
+              </p>
+            </div>
+            <div class="sg-example">
+              <div class="sg-canvas">
+                <table class="tbl tbl-responsive">
+                  <thead>
+                    <tr>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
+                      <th>Table heading</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                    <tr>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                      <td>Table data</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Table data<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>

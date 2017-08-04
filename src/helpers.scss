@@ -1,3 +1,4 @@
+@import '_functions';
 @import '_variables';
 
 /* ========================================================================== */
@@ -246,6 +247,86 @@
 
 /* ========================================================================== */
 
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+/***
+ * Colors:
+ */
+
+@each $name, $hex in $color-palette {
+	$lc-name: str-replace(to-lower-case($name), ' ', '-');
+	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
+
+	/**
+	 * #{$name} color:
+	 * `.bgc-#{$lc-name}` `.txtc-#{$lc-name}` `.brdc-#{$lc-name}`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-#{$lc-name}
+	 *             td.w-20.txt-select.txtc-#{$lc-name} #{$name}
+	 *             td.w-20.txt-select #{$hex}
+	 *             td.w-20.txt-select #{$rgb}
+	 */
+	.bgc-#{$lc-name} {
+		background-color: $hex;
+	}
+
+	.brdc-#{$lc-name} {
+		@extend .brd;
+
+		border-color: $hex;
+	}
+
+	.txtc-#{$lc-name} {
+		color: $hex;
+	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Drop caps:
+ */
+
+/**
+ * Drop cap:
+ * `.dropcap`
+ *
+ *     @example
+ *     span.dropcap L
+ *     orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+.dropcap {
+	color: $dropcap-color;
+	display: block;
+	float: left;
+	font-size: $dropcap-size;
+	font-weight: $dropcap-weight;
+	line-height: 1;
+	height: $dropcap-size;
+	margin-right: $quarter-spacing-unit;
+	// width: $dropcap-size;
+}
+
+/* ========================================================================== */
+
 /***
  * Floats:
  */
@@ -287,6 +368,34 @@
 	.flt-xs-right {
 		float: right;
 	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Font size:
+ */
+
+/**
+ * Small font:
+ * `.fnt-sm`
+ *
+ *     @example
+ *     p.fnt-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-sm {
+	font-size: $small-font-size;
+}
+
+/**
+ * Large font:
+ * `.fnt-lg`
+ *
+ *     @example
+ *     p.fnt-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-lg {
+	font-size: $large-font-size;
 }
 
 /* ========================================================================== */
@@ -409,59 +518,6 @@
  */
 .fnt-black {
 	font-weight: 900;
-}
-
-/* ========================================================================== */
-
-/// Replace `$search` with `$replace` in `$string`
-/// @author Hugo Giraudel
-/// @param {String} $string - Initial string
-/// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
-/// @return {String} - Updated string
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  
-  @return $string;
-}
-
-/***
- * Colors:
- */
-@each $name, $hex in $colors {
-	$lc-name: str-replace(to-lower-case($name), ' ', '-');
-	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
-
-	/**
-	 * #{$name} color:
-	 * `.bgc-#{$lc-name}` `.txtc-#{$lc-name}` `.brdc-#{$lc-name}`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-#{$lc-name}
-	 *             td.w-20.txt-select.txtc-#{$lc-name} #{$name}
-	 *             td.w-20.txt-select #{$hex}
-	 *             td.w-20.txt-select #{$rgb}
-	 */
-	.bgc-#{$lc-name} {
-		background-color: $hex;
-	}
-
-	.brdc-#{$lc-name} {
-		@extend .brd;
-
-		border-color: $hex;
-	}
-
-	.txtc-#{$lc-name} {
-		color: $hex;
-	}
 }
 
 /* ========================================================================== */
@@ -690,8 +746,8 @@
  */
 .txt-select {
 	-webkit-user-select: all; /* Chrome, Opera, Safari */
-    -moz-user-select: all; /* Firefox 2+ */
-    -ms-user-select: all; /* IE 10+ */
+	-moz-user-select: all; /* Firefox 2+ */
+	-ms-user-select: all; /* IE 10+ */
 	user-select: all; /* Standard syntax */
 }
 
@@ -754,7 +810,7 @@
 /* ========================================================================== */
 
 /***
- * Width and height:
+ * Widths and heights:
  */
 
 @each $prop, $abbr in (width: w, height: h) {
@@ -802,24 +858,4 @@
  */
 .h-max-100 {
 	max-height: 100%;
-}
-
-.fnt-sm {
-	font-size: $small-font-size;
-}
-
-.fnt-lg {
-	font-size: $large-font-size;
-}
-
-.dropcap {
-	color: $dropcap-color;
-	display: block;
-	float: left;
-	font-size: $dropcap-size;
-	font-weight: $dropcap-weight;
-	line-height: 1;
-	height: $dropcap-size;
-	margin-right: $quarter-spacing-unit;
-	// width: $dropcap-size;
 }

@@ -39,7 +39,7 @@ html, body {
  * Flex grid:
  */
 /**
- * Row and column:
+ * Rows and columns:
  * Remember, wrap any of the `.col*` classes inside of a `.row` class.
  *
  *     @example
@@ -108,27 +108,27 @@ html, body {
 
 /* ========================================================================== */
 /***
- * Responsive classes
+ * Responsive classes:
  */
 /**
- * Extra small columns:
- * `.col-xs-*` Resize the window to see how grid columns behave on the different breakpoints.
+ * Columns:
+ * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
  *     div.row
- *         div.col-xs-12.col-md-6
+ *         div.col-xs-6
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-md-6
+ *         div.col-xs-6
  *             div.bgc-secondary-3 &nbsp
  *     div.row
- *         div.col-xs-6.col-md-8
+ *         div.col-sm-6.col-md-8
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-6.col-md-4
+ *         div.col-sm-6.col-md-4
  *             div.bgc-secondary-3 &nbsp
  *     div.row
- *         div.col-xs-3.col-md-4
+ *         div.col-xs-12.col-sm-3.col-md-5.col-lg-7.col-xl-9
  *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-3.col-md-8
+ *         div.col-xs-12.col-sm-9.col-md-7.col-lg-5.col-xl-3
  *             div.bgc-secondary-3 &nbsp
  */
 @media (min-width: 0) {
@@ -169,17 +169,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/**
- * Small columns:
- * `.col-sm-*`
- *
- *     @example
- *     div.row
- *         div.col-xs-12.col-sm-6.col-md-9
- *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-sm-6.col-md-3
- *             div.bgc-secondary-3 &nbsp
- */
 @media (min-width: 768px) {
   .col-sm-1 {
     flex-basis: 8.33333%;
@@ -218,17 +207,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/**
- * Medium columns:
- * `.col-sm-*`
- *
- *     @example
- *     div.row
- *         div.col-xs-12.col-sm-6.col-md-7
- *             div.bgc-secondary-2 &nbsp
- *         div.col-xs-12.col-sm-6.col-md-5
- *             div.bgc-secondary-3 &nbsp
- */
 @media (min-width: 1024px) {
   .col-md-1 {
     flex-basis: 8.33333%;
@@ -348,7 +326,7 @@ html, body {
  * Horizontal modifiers:
  */
 /**
- * Columns to left:
+ * Aligns columns to left:
  * `.cols-left`
  *
  *     @example
@@ -362,7 +340,7 @@ html, body {
   justify-content: flex-start; }
 
 /**
- * Columns to center:
+ * Aligns columns to center:
  * `.cols-center`
  *
  *     @example
@@ -376,7 +354,7 @@ html, body {
   justify-content: center; }
 
 /**
- * Columns to right:
+ * Aligns columns to right:
  * `.cols-right`
  *
  *     @example
@@ -421,7 +399,7 @@ html, body {
  * Vertical modifiers:
  */
 /**
- * Columns to top:
+ * Aligns columns to top:
  * `.cols-top`
  *
  *     @example
@@ -436,23 +414,90 @@ html, body {
 .cols-top {
   align-items: flex-start; }
 
+/**
+ * Aligns columns to middle:
+ * `.cols-middle`
+ *
+ *     @example
+ *     div.row.cols-middle.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-middle {
   align-items: center; }
 
+/**
+ * Aligns columns to bottom:
+ * `.cols-bottom`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-bottom {
   align-items: flex-end; }
 
+/**
+ * Aligns column to top:
+ * `.col-top`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4.col-top
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-top {
   align-self: flex-start; }
 
+/**
+ * Aligns column to middle:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4.col-middle
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-middle {
   align-self: center; }
 
+/**
+ * Aligns column to bottom:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4.col-bottom
+ *             div.bgc-secondary-2 &nbsp
+ */
 .col-bottom {
   align-self: flex-end; }
 
-/* Offsets
- * ========================================================================== */
+/* ========================================================================== */
+/***
+ * Offsets:
+ */
 @media (min-width: 0) {
   .col-os-xs-0 {
     margin-left: 0%; }
@@ -583,16 +628,21 @@ html, body {
   .col-os-xl-11 {
     margin-left: 91.66667%; } }
 
-/* Gutters
- * ========================================================================== */
-.cols-gutter-0.row {
-  margin-left: 0;
-  margin-right: 0; }
-
-.cols-gutter-0 [class^="col"] {
-  padding-left: 0;
-  padding-right: 0; }
-
+/* ========================================================================== */
+/***
+ * Gutters:
+ */
+/**
+ * Small gutters:
+ * `.cols-gutter-sm`
+ *
+ *     @example
+ *     div.row.cols-gutter-sm
+ *         div.col-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ */
 .cols-gutter-sm.row {
   margin-left: -8px;
   margin-right: -8px; }
@@ -601,13 +651,32 @@ html, body {
   padding-left: 8px;
   padding-right: 8px; }
 
+/**
+ * Remove gutters:
+ * `.cols-gutter-0`
+ *
+ *     @example
+ *     div.row.cols-gutter-0
+ *         div.col-8
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4
+ *             div.bgc-secondary-3 &nbsp
+ */
+.cols-gutter-0.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.cols-gutter-0 [class^="col"] {
+  padding-left: 0;
+  padding-right: 0; }
+
 /* ========================================================================== */
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  color: #373737;
+  color: #333;
   font-size: 16px;
   line-height: 1.625; }
 
@@ -617,7 +686,7 @@ a {
   a:visited {
     color: #2c9ab7; }
   a:hover {
-    color: #373737;
+    color: #333;
     text-decoration: none; }
 
 h1 {
@@ -716,66 +785,6 @@ code {
 small {
   font-size: 80%; }
 
-table {
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%; }
-
-td, th {
-  padding: 0; }
-
-th {
-  font-weight: 500;
-  text-align: left; }
-
-table > thead > tr > th,
-table > tbody > tr > th,
-table > tfoot > tr > th,
-table > thead > tr > td,
-table > tbody > tr > td,
-table > tfoot > tr > td {
-  border-top: 1px solid rgba(55, 55, 55, 0.15);
-  padding: 0.5rem;
-  vertical-align: top; }
-
-table > thead > tr > th {
-  background-color: rgba(55, 55, 55, 0.15);
-  vertical-align: bottom;
-  border-bottom: 2px solid rgba(55, 55, 55, 0.15); }
-
-table > caption + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > th,
-table > thead:first-child > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > td {
-  border-top: 0; }
-
-.table-responsive {
-  border: 1px solid rgba(55, 55, 55, 0.15);
-  border-radius: 4px;
-  margin: 0 0 1.25rem;
-  min-height: 0.01%;
-  overflow-x: auto; }
-
-@media screen and (max-width: 767px) {
-  .table-responsive {
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    width: 100%; }
-  .table-responsive > table {
-    border: none;
-    margin-top: 0; }
-  .table-responsive > .table > thead > tr > th,
-  .table-responsive > .table > tbody > tr > th,
-  .table-responsive > .table > tfoot > tr > th,
-  .table-responsive > .table > thead > tr > td,
-  .table-responsive > .table > tbody > tr > td,
-  .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap; } }
-
 /* ========================================================================== */
 /***
  * Buttons:
@@ -788,10 +797,10 @@ table > thead:first-child > tr:first-child > td {
  *     a.btn Button
  */
 .btn {
-  background-color: #dddddd;
+  background-color: #d2d2d2;
   border-radius: 4px;
   border: 2px solid transparent;
-  color: #5d5d5d;
+  color: rgba(55, 55, 55, 0.75);
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -807,9 +816,9 @@ table > thead:first-child > tr:first-child > td {
   -ms-user-select: none;
   user-select: none; }
   .btn:hover {
-    background-color: #d0d0d0;
+    background-color: #acacac;
     border-color: transparent;
-    color: #5d5d5d; }
+    color: rgba(55, 55, 55, 0.75); }
 
 /**
  * Primary button:
@@ -819,11 +828,11 @@ table > thead:first-child > tr:first-child > td {
  *     a.btn.btn--primary Primary button
  */
 .btn--primary {
-  background-color: #2c9ab7;
+  background-color: #5ab0c7;
   border-color: transparent;
   color: #fff; }
   .btn--primary:hover {
-    background-color: #2789a2;
+    background-color: #36899f;
     border-color: transparent;
     color: #fff; }
 
@@ -837,18 +846,18 @@ table > thead:first-child > tr:first-child > td {
  */
 .btn--outline {
   background-color: transparent;
-  border-color: #dddddd;
-  color: #5d5d5d; }
+  border-color: #d2d2d2;
+  color: rgba(55, 55, 55, 0.75); }
   .btn--outline:hover {
-    background-color: #dddddd;
+    background-color: #d2d2d2;
     border-color: transparent;
-    color: #5d5d5d; }
+    color: rgba(55, 55, 55, 0.75); }
   .btn--outline.btn--primary {
     background-color: transparent;
-    border-color: #b9dde7;
-    color: #2c9ab7; }
+    border-color: #91cada;
+    color: #5ab0c7; }
     .btn--outline.btn--primary:hover {
-      background-color: #2c9ab7;
+      background-color: #5ab0c7;
       border-color: transparent;
       color: #fff; }
 
@@ -864,7 +873,7 @@ table > thead:first-child > tr:first-child > td {
   border-color: transparent;
   color: #2c9ab7; }
   .btn--link:hover {
-    background-color: #dddddd;
+    background-color: #d2d2d2;
     border-color: transparent; }
 
 /**
@@ -876,6 +885,42 @@ table > thead:first-child > tr:first-child > td {
  */
 .btn--pill {
   border-radius: 2em; }
+
+/**
+ * Colored buttons:
+ * `.btn--success` `.btn--warning` `.btn--danger`
+ *
+ *     @example
+ *     a.btn.btn--success Success button
+ *     a.btn.btn--warning Warning button
+ *     a.btn.btn--danger Danger button
+ */
+.btn--success {
+  background-color: #6db0a2;
+  border-color: transparent;
+  color: #fff; }
+  .btn--success:hover {
+    background-color: #49877a;
+    border-color: transparent;
+    color: #fff; }
+
+.btn--warning {
+  background-color: #fecc46;
+  border-color: transparent;
+  color: #fff; }
+  .btn--warning:hover {
+    background-color: #f6b401;
+    border-color: transparent;
+    color: #fff; }
+
+.btn--danger {
+  background-color: #e3654d;
+  border-color: transparent;
+  color: #fff; }
+  .btn--danger:hover {
+    background-color: #c5391f;
+    border-color: transparent;
+    color: #fff; }
 
 /* ========================================================================== */
 /***
@@ -910,6 +955,15 @@ ul {
 /***
  * Tables:
  */
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%; }
+
+th {
+  text-align: left; }
+
 /**
  * Table:
  * `.tbl` Tables are styled nicely for you.
@@ -918,29 +972,33 @@ ul {
  *     table.tbl
  *         thead
  *             tr
- *                 th Fruit
- *                 th Vegetable
- *                 th Dessert
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
  *         tbody
  *             tr
- *                 td Apple
- *                 td Broccoli
- *                 td Brownie
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
  *             tr
- *                 td Berry
- *                 td Carrot
- *                 td Cupcake
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
  *             tr
- *                 td Cherry
- *                 td Spinach
- *                 td Fruitcake
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
  */
-.tbl {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%; }
-  .tbl th, .tbl td {
-    text-align: left; }
+.tbl tr + tr th, .tbl tr + tr td {
+  border-top: 1px solid rgba(55, 55, 55, 0.15); }
+
+.tbl th {
+  border-bottom: 2px solid rgba(55, 55, 55, 0.15);
+  font-weight: bold; }
+
+.tbl th, .tbl td {
+  padding: 0.5em;
+  vertical-align: top; }
 
 .tbl-col-1-10 tr th:nth-child(1),
 .tbl-col-1-10 tr td:nth-child(1) {
@@ -1342,6 +1400,70 @@ ul {
 .tbl-col-10-100 tr td:nth-child(10) {
   width: 100%; }
 
+/**
+ * Bordered table:
+ * `.tbl-bordered`
+ *
+ *     @example
+ *     table.tbl.tbl-bordered
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl-bordered {
+  border: 1px solid rgba(55, 55, 55, 0.15); }
+
+/**
+ * Responsive table:
+ * `.tbl-responsive`
+ *
+ *     @example
+ *     table.tbl.tbl-responsive
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl-responsive {
+  overflow-x: auto; }
+
+@media screen and (max-width: 767px) {
+  .tbl-responsive {
+    display: block;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .tbl-responsive th, .tbl-responsive td {
+      white-space: nowrap; } }
+
 /* ========================================================================== */
 /***
  * Borders:
@@ -1353,7 +1475,7 @@ ul {
  *     @example
  *     div.brd.p-5
  */
-.brd, .brdc-black, .brdc-white, .brdc-primary-1, .brdc-primary-2, .brdc-primary-3, .brdc-primary-4, .brdc-secondary-1, .brdc-secondary-2, .brdc-secondary-3, .brdc-secondary-4, .brdc-success-1, .brdc-success-2, .brdc-success-3, .brdc-success-4, .brdc-danger-1, .brdc-danger-2, .brdc-danger-3, .brdc-danger-4, .brdc-warning-1, .brdc-warning-2, .brdc-warning-3, .brdc-warning-4 {
+.brd, .brdc-black, .brdc-white, .brdc-primary-1, .brdc-primary-2, .brdc-primary-3, .brdc-primary-4, .brdc-primary-5, .brdc-primary-6, .brdc-primary-7, .brdc-secondary-1, .brdc-secondary-2, .brdc-secondary-3, .brdc-secondary-4, .brdc-secondary-5, .brdc-secondary-6, .brdc-secondary-7, .brdc-success-1, .brdc-success-2, .brdc-success-3, .brdc-success-4, .brdc-success-5, .brdc-success-6, .brdc-success-7, .brdc-warning-1, .brdc-warning-2, .brdc-warning-3, .brdc-warning-4, .brdc-warning-5, .brdc-warning-6, .brdc-warning-7, .brdc-danger-1, .brdc-danger-2, .brdc-danger-3, .brdc-danger-4, .brdc-danger-5, .brdc-danger-6, .brdc-danger-7 {
   border: 1px solid rgba(55, 55, 55, 0.15); }
 
 /**
@@ -1558,6 +1680,846 @@ ul {
 
 /* ========================================================================== */
 /***
+ * Colors:
+ */
+/**
+	 * Black color:
+	 * `.bgc-black` `.txtc-black` `.brdc-black`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-black
+	 *             td.w-20.txt-select.txtc-black Black
+	 *             td.w-20.txt-select #000
+	 *             td.w-20.txt-select rgb(0, 0, 0)
+	 */
+.bgc-black {
+  background-color: #000; }
+
+.brdc-black {
+  border-color: #000; }
+
+.txtc-black {
+  color: #000; }
+
+/**
+	 * White color:
+	 * `.bgc-white` `.txtc-white` `.brdc-white`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-white
+	 *             td.w-20.txt-select.txtc-white White
+	 *             td.w-20.txt-select #fff
+	 *             td.w-20.txt-select rgb(255, 255, 255)
+	 */
+.bgc-white {
+  background-color: #fff; }
+
+.brdc-white {
+  border-color: #fff; }
+
+.txtc-white {
+  color: #fff; }
+
+/**
+	 * Primary 1 color:
+	 * `.bgc-primary-1` `.txtc-primary-1` `.brdc-primary-1`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-1
+	 *             td.w-20.txt-select.txtc-primary-1 Primary 1
+	 *             td.w-20.txt-select #2c9ab7
+	 *             td.w-20.txt-select rgb(44, 154, 183)
+	 */
+.bgc-primary-1 {
+  background-color: #2c9ab7; }
+
+.brdc-primary-1 {
+  border-color: #2c9ab7; }
+
+.txtc-primary-1 {
+  color: #2c9ab7; }
+
+/**
+	 * Primary 2 color:
+	 * `.bgc-primary-2` `.txtc-primary-2` `.brdc-primary-2`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-2
+	 *             td.w-20.txt-select.txtc-primary-2 Primary 2
+	 *             td.w-20.txt-select #5ab0c7
+	 *             td.w-20.txt-select rgb(90, 176, 199)
+	 */
+.bgc-primary-2 {
+  background-color: #5ab0c7; }
+
+.brdc-primary-2 {
+  border-color: #5ab0c7; }
+
+.txtc-primary-2 {
+  color: #5ab0c7; }
+
+/**
+	 * Primary 3 color:
+	 * `.bgc-primary-3` `.txtc-primary-3` `.brdc-primary-3`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-3
+	 *             td.w-20.txt-select.txtc-primary-3 Primary 3
+	 *             td.w-20.txt-select #91cada
+	 *             td.w-20.txt-select rgb(145, 202, 218)
+	 */
+.bgc-primary-3 {
+  background-color: #91cada; }
+
+.brdc-primary-3 {
+  border-color: #91cada; }
+
+.txtc-primary-3 {
+  color: #91cada; }
+
+/**
+	 * Primary 4 color:
+	 * `.bgc-primary-4` `.txtc-primary-4` `.brdc-primary-4`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-4
+	 *             td.w-20.txt-select.txtc-primary-4 Primary 4
+	 *             td.w-20.txt-select #add8e3
+	 *             td.w-20.txt-select rgb(173, 216, 227)
+	 */
+.bgc-primary-4 {
+  background-color: #add8e3; }
+
+.brdc-primary-4 {
+  border-color: #add8e3; }
+
+.txtc-primary-4 {
+  color: #add8e3; }
+
+/**
+	 * Primary 5 color:
+	 * `.bgc-primary-5` `.txtc-primary-5` `.brdc-primary-5`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-5
+	 *             td.w-20.txt-select.txtc-primary-5 Primary 5
+	 *             td.w-20.txt-select #bddfe9
+	 *             td.w-20.txt-select rgb(189, 223, 233)
+	 */
+.bgc-primary-5 {
+  background-color: #bddfe9; }
+
+.brdc-primary-5 {
+  border-color: #bddfe9; }
+
+.txtc-primary-5 {
+  color: #bddfe9; }
+
+/**
+	 * Primary 6 color:
+	 * `.bgc-primary-6` `.txtc-primary-6` `.brdc-primary-6`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-6
+	 *             td.w-20.txt-select.txtc-primary-6 Primary 6
+	 *             td.w-20.txt-select #c8e5ec
+	 *             td.w-20.txt-select rgb(200, 229, 236)
+	 */
+.bgc-primary-6 {
+  background-color: #c8e5ec; }
+
+.brdc-primary-6 {
+  border-color: #c8e5ec; }
+
+.txtc-primary-6 {
+  color: #c8e5ec; }
+
+/**
+	 * Primary 7 color:
+	 * `.bgc-primary-7` `.txtc-primary-7` `.brdc-primary-7`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-primary-7
+	 *             td.w-20.txt-select.txtc-primary-7 Primary 7
+	 *             td.w-20.txt-select #d0e8ef
+	 *             td.w-20.txt-select rgb(208, 232, 239)
+	 */
+.bgc-primary-7 {
+  background-color: #d0e8ef; }
+
+.brdc-primary-7 {
+  border-color: #d0e8ef; }
+
+.txtc-primary-7 {
+  color: #d0e8ef; }
+
+/**
+	 * Secondary 1 color:
+	 * `.bgc-secondary-1` `.txtc-secondary-1` `.brdc-secondary-1`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-1
+	 *             td.w-20.txt-select.txtc-secondary-1 Secondary 1
+	 *             td.w-20.txt-select #373737
+	 *             td.w-20.txt-select rgb(55, 55, 55)
+	 */
+.bgc-secondary-1 {
+  background-color: #373737; }
+
+.brdc-secondary-1 {
+  border-color: #373737; }
+
+.txtc-secondary-1 {
+  color: #373737; }
+
+/**
+	 * Secondary 2 color:
+	 * `.bgc-secondary-2` `.txtc-secondary-2` `.brdc-secondary-2`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-2
+	 *             td.w-20.txt-select.txtc-secondary-2 Secondary 2
+	 *             td.w-20.txt-select #636363
+	 *             td.w-20.txt-select rgb(99, 99, 99)
+	 */
+.bgc-secondary-2 {
+  background-color: #636363; }
+
+.brdc-secondary-2 {
+  border-color: #636363; }
+
+.txtc-secondary-2 {
+  color: #636363; }
+
+/**
+	 * Secondary 3 color:
+	 * `.bgc-secondary-3` `.txtc-secondary-3` `.brdc-secondary-3`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-3
+	 *             td.w-20.txt-select.txtc-secondary-3 Secondary 3
+	 *             td.w-20.txt-select #979797
+	 *             td.w-20.txt-select rgb(151, 151, 151)
+	 */
+.bgc-secondary-3 {
+  background-color: #979797; }
+
+.brdc-secondary-3 {
+  border-color: #979797; }
+
+.txtc-secondary-3 {
+  color: #979797; }
+
+/**
+	 * Secondary 4 color:
+	 * `.bgc-secondary-4` `.txtc-secondary-4` `.brdc-secondary-4`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-4
+	 *             td.w-20.txt-select.txtc-secondary-4 Secondary 4
+	 *             td.w-20.txt-select #b1b1b1
+	 *             td.w-20.txt-select rgb(177, 177, 177)
+	 */
+.bgc-secondary-4 {
+  background-color: #b1b1b1; }
+
+.brdc-secondary-4 {
+  border-color: #b1b1b1; }
+
+.txtc-secondary-4 {
+  color: #b1b1b1; }
+
+/**
+	 * Secondary 5 color:
+	 * `.bgc-secondary-5` `.txtc-secondary-5` `.brdc-secondary-5`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-5
+	 *             td.w-20.txt-select.txtc-secondary-5 Secondary 5
+	 *             td.w-20.txt-select #c1c1c1
+	 *             td.w-20.txt-select rgb(193, 193, 193)
+	 */
+.bgc-secondary-5 {
+  background-color: #c1c1c1; }
+
+.brdc-secondary-5 {
+  border-color: #c1c1c1; }
+
+.txtc-secondary-5 {
+  color: #c1c1c1; }
+
+/**
+	 * Secondary 6 color:
+	 * `.bgc-secondary-6` `.txtc-secondary-6` `.brdc-secondary-6`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-6
+	 *             td.w-20.txt-select.txtc-secondary-6 Secondary 6
+	 *             td.w-20.txt-select #cbcbcb
+	 *             td.w-20.txt-select rgb(203, 203, 203)
+	 */
+.bgc-secondary-6 {
+  background-color: #cbcbcb; }
+
+.brdc-secondary-6 {
+  border-color: #cbcbcb; }
+
+.txtc-secondary-6 {
+  color: #cbcbcb; }
+
+/**
+	 * Secondary 7 color:
+	 * `.bgc-secondary-7` `.txtc-secondary-7` `.brdc-secondary-7`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-secondary-7
+	 *             td.w-20.txt-select.txtc-secondary-7 Secondary 7
+	 *             td.w-20.txt-select #d2d2d2
+	 *             td.w-20.txt-select rgb(210, 210, 210)
+	 */
+.bgc-secondary-7 {
+  background-color: #d2d2d2; }
+
+.brdc-secondary-7 {
+  border-color: #d2d2d2; }
+
+.txtc-secondary-7 {
+  color: #d2d2d2; }
+
+/**
+	 * Success 1 color:
+	 * `.bgc-success-1` `.txtc-success-1` `.brdc-success-1`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-1
+	 *             td.w-20.txt-select.txtc-success-1 Success 1
+	 *             td.w-20.txt-select #449a88
+	 *             td.w-20.txt-select rgb(68, 154, 136)
+	 */
+.bgc-success-1 {
+  background-color: #449a88; }
+
+.brdc-success-1 {
+  border-color: #449a88; }
+
+.txtc-success-1 {
+  color: #449a88; }
+
+/**
+	 * Success 2 color:
+	 * `.bgc-success-2` `.txtc-success-2` `.brdc-success-2`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-2
+	 *             td.w-20.txt-select.txtc-success-2 Success 2
+	 *             td.w-20.txt-select #6db0a2
+	 *             td.w-20.txt-select rgb(109, 176, 162)
+	 */
+.bgc-success-2 {
+  background-color: #6db0a2; }
+
+.brdc-success-2 {
+  border-color: #6db0a2; }
+
+.txtc-success-2 {
+  color: #6db0a2; }
+
+/**
+	 * Success 3 color:
+	 * `.bgc-success-3` `.txtc-success-3` `.brdc-success-3`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-3
+	 *             td.w-20.txt-select.txtc-success-3 Success 3
+	 *             td.w-20.txt-select #9ecac1
+	 *             td.w-20.txt-select rgb(158, 202, 193)
+	 */
+.bgc-success-3 {
+  background-color: #9ecac1; }
+
+.brdc-success-3 {
+  border-color: #9ecac1; }
+
+.txtc-success-3 {
+  color: #9ecac1; }
+
+/**
+	 * Success 4 color:
+	 * `.bgc-success-4` `.txtc-success-4` `.brdc-success-4`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-4
+	 *             td.w-20.txt-select.txtc-success-4 Success 4
+	 *             td.w-20.txt-select #b6d8d1
+	 *             td.w-20.txt-select rgb(182, 216, 209)
+	 */
+.bgc-success-4 {
+  background-color: #b6d8d1; }
+
+.brdc-success-4 {
+  border-color: #b6d8d1; }
+
+.txtc-success-4 {
+  color: #b6d8d1; }
+
+/**
+	 * Success 5 color:
+	 * `.bgc-success-5` `.txtc-success-5` `.brdc-success-5`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-5
+	 *             td.w-20.txt-select.txtc-success-5 Success 5
+	 *             td.w-20.txt-select #c5dfda
+	 *             td.w-20.txt-select rgb(197, 223, 218)
+	 */
+.bgc-success-5 {
+  background-color: #c5dfda; }
+
+.brdc-success-5 {
+  border-color: #c5dfda; }
+
+.txtc-success-5 {
+  color: #c5dfda; }
+
+/**
+	 * Success 6 color:
+	 * `.bgc-success-6` `.txtc-success-6` `.brdc-success-6`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-6
+	 *             td.w-20.txt-select.txtc-success-6 Success 6
+	 *             td.w-20.txt-select #cee5e0
+	 *             td.w-20.txt-select rgb(206, 229, 224)
+	 */
+.bgc-success-6 {
+  background-color: #cee5e0; }
+
+.brdc-success-6 {
+  border-color: #cee5e0; }
+
+.txtc-success-6 {
+  color: #cee5e0; }
+
+/**
+	 * Success 7 color:
+	 * `.bgc-success-7` `.txtc-success-7` `.brdc-success-7`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-success-7
+	 *             td.w-20.txt-select.txtc-success-7 Success 7
+	 *             td.w-20.txt-select #d5e8e4
+	 *             td.w-20.txt-select rgb(213, 232, 228)
+	 */
+.bgc-success-7 {
+  background-color: #d5e8e4; }
+
+.brdc-success-7 {
+  border-color: #d5e8e4; }
+
+.txtc-success-7 {
+  color: #d5e8e4; }
+
+/**
+	 * Warning 1 color:
+	 * `.bgc-warning-1` `.txtc-warning-1` `.brdc-warning-1`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-1
+	 *             td.w-20.txt-select.txtc-warning-1 Warning 1
+	 *             td.w-20.txt-select #febe12
+	 *             td.w-20.txt-select rgb(254, 190, 18)
+	 */
+.bgc-warning-1 {
+  background-color: #febe12; }
+
+.brdc-warning-1 {
+  border-color: #febe12; }
+
+.txtc-warning-1 {
+  color: #febe12; }
+
+/**
+	 * Warning 2 color:
+	 * `.bgc-warning-2` `.txtc-warning-2` `.brdc-warning-2`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-2
+	 *             td.w-20.txt-select.txtc-warning-2 Warning 2
+	 *             td.w-20.txt-select #fecc46
+	 *             td.w-20.txt-select rgb(254, 204, 70)
+	 */
+.bgc-warning-2 {
+  background-color: #fecc46; }
+
+.brdc-warning-2 {
+  border-color: #fecc46; }
+
+.txtc-warning-2 {
+  color: #fecc46; }
+
+/**
+	 * Warning 3 color:
+	 * `.bgc-warning-3` `.txtc-warning-3` `.brdc-warning-3`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-3
+	 *             td.w-20.txt-select.txtc-warning-3 Warning 3
+	 *             td.w-20.txt-select #fedd84
+	 *             td.w-20.txt-select rgb(254, 221, 132)
+	 */
+.bgc-warning-3 {
+  background-color: #fedd84; }
+
+.brdc-warning-3 {
+  border-color: #fedd84; }
+
+.txtc-warning-3 {
+  color: #fedd84; }
+
+/**
+	 * Warning 4 color:
+	 * `.bgc-warning-4` `.txtc-warning-4` `.brdc-warning-4`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-4
+	 *             td.w-20.txt-select.txtc-warning-4 Warning 4
+	 *             td.w-20.txt-select #ffe6a2
+	 *             td.w-20.txt-select rgb(255, 230, 162)
+	 */
+.bgc-warning-4 {
+  background-color: #ffe6a2; }
+
+.brdc-warning-4 {
+  border-color: #ffe6a2; }
+
+.txtc-warning-4 {
+  color: #ffe6a2; }
+
+/**
+	 * Warning 5 color:
+	 * `.bgc-warning-5` `.txtc-warning-5` `.brdc-warning-5`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-5
+	 *             td.w-20.txt-select.txtc-warning-5 Warning 5
+	 *             td.w-20.txt-select #ffebb5
+	 *             td.w-20.txt-select rgb(255, 235, 181)
+	 */
+.bgc-warning-5 {
+  background-color: #ffebb5; }
+
+.brdc-warning-5 {
+  border-color: #ffebb5; }
+
+.txtc-warning-5 {
+  color: #ffebb5; }
+
+/**
+	 * Warning 6 color:
+	 * `.bgc-warning-6` `.txtc-warning-6` `.brdc-warning-6`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-6
+	 *             td.w-20.txt-select.txtc-warning-6 Warning 6
+	 *             td.w-20.txt-select #ffeec1
+	 *             td.w-20.txt-select rgb(255, 238, 193)
+	 */
+.bgc-warning-6 {
+  background-color: #ffeec1; }
+
+.brdc-warning-6 {
+  border-color: #ffeec1; }
+
+.txtc-warning-6 {
+  color: #ffeec1; }
+
+/**
+	 * Warning 7 color:
+	 * `.bgc-warning-7` `.txtc-warning-7` `.brdc-warning-7`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-warning-7
+	 *             td.w-20.txt-select.txtc-warning-7 Warning 7
+	 *             td.w-20.txt-select #fff0ca
+	 *             td.w-20.txt-select rgb(255, 240, 202)
+	 */
+.bgc-warning-7 {
+  background-color: #fff0ca; }
+
+.brdc-warning-7 {
+  border-color: #fff0ca; }
+
+.txtc-warning-7 {
+  color: #fff0ca; }
+
+/**
+	 * Danger 1 color:
+	 * `.bgc-danger-1` `.txtc-danger-1` `.brdc-danger-1`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-1
+	 *             td.w-20.txt-select.txtc-danger-1 Danger 1
+	 *             td.w-20.txt-select #db3a1b
+	 *             td.w-20.txt-select rgb(219, 58, 27)
+	 */
+.bgc-danger-1 {
+  background-color: #db3a1b; }
+
+.brdc-danger-1 {
+  border-color: #db3a1b; }
+
+.txtc-danger-1 {
+  color: #db3a1b; }
+
+/**
+	 * Danger 2 color:
+	 * `.bgc-danger-2` `.txtc-danger-2` `.brdc-danger-2`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-2
+	 *             td.w-20.txt-select.txtc-danger-2 Danger 2
+	 *             td.w-20.txt-select #e3654d
+	 *             td.w-20.txt-select rgb(227, 101, 77)
+	 */
+.bgc-danger-2 {
+  background-color: #e3654d; }
+
+.brdc-danger-2 {
+  border-color: #e3654d; }
+
+.txtc-danger-2 {
+  color: #e3654d; }
+
+/**
+	 * Danger 3 color:
+	 * `.bgc-danger-3` `.txtc-danger-3` `.brdc-danger-3`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-3
+	 *             td.w-20.txt-select.txtc-danger-3 Danger 3
+	 *             td.w-20.txt-select #ec9888
+	 *             td.w-20.txt-select rgb(236, 152, 136)
+	 */
+.bgc-danger-3 {
+  background-color: #ec9888; }
+
+.brdc-danger-3 {
+  border-color: #ec9888; }
+
+.txtc-danger-3 {
+  color: #ec9888; }
+
+/**
+	 * Danger 4 color:
+	 * `.bgc-danger-4` `.txtc-danger-4` `.brdc-danger-4`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-4
+	 *             td.w-20.txt-select.txtc-danger-4 Danger 4
+	 *             td.w-20.txt-select #f1b2a6
+	 *             td.w-20.txt-select rgb(241, 178, 166)
+	 */
+.bgc-danger-4 {
+  background-color: #f1b2a6; }
+
+.brdc-danger-4 {
+  border-color: #f1b2a6; }
+
+.txtc-danger-4 {
+  color: #f1b2a6; }
+
+/**
+	 * Danger 5 color:
+	 * `.bgc-danger-5` `.txtc-danger-5` `.brdc-danger-5`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-5
+	 *             td.w-20.txt-select.txtc-danger-5 Danger 5
+	 *             td.w-20.txt-select #f4c1b8
+	 *             td.w-20.txt-select rgb(244, 193, 184)
+	 */
+.bgc-danger-5 {
+  background-color: #f4c1b8; }
+
+.brdc-danger-5 {
+  border-color: #f4c1b8; }
+
+.txtc-danger-5 {
+  color: #f4c1b8; }
+
+/**
+	 * Danger 6 color:
+	 * `.bgc-danger-6` `.txtc-danger-6` `.brdc-danger-6`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-6
+	 *             td.w-20.txt-select.txtc-danger-6 Danger 6
+	 *             td.w-20.txt-select #f6ccc4
+	 *             td.w-20.txt-select rgb(246, 204, 196)
+	 */
+.bgc-danger-6 {
+  background-color: #f6ccc4; }
+
+.brdc-danger-6 {
+  border-color: #f6ccc4; }
+
+.txtc-danger-6 {
+  color: #f6ccc4; }
+
+/**
+	 * Danger 7 color:
+	 * `.bgc-danger-7` `.txtc-danger-7` `.brdc-danger-7`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.brd-radius.bgc-danger-7
+	 *             td.w-20.txt-select.txtc-danger-7 Danger 7
+	 *             td.w-20.txt-select #f7d3cc
+	 *             td.w-20.txt-select rgb(247, 211, 204)
+	 */
+.bgc-danger-7 {
+  background-color: #f7d3cc; }
+
+.brdc-danger-7 {
+  border-color: #f7d3cc; }
+
+.txtc-danger-7 {
+  color: #f7d3cc; }
+
+/* ========================================================================== */
+/***
+ * Drop caps:
+ */
+/**
+ * Drop cap:
+ * `.dropcap`
+ *
+ *     @example
+ *     span.dropcap L
+ *     orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+.dropcap {
+  color: #febe12;
+  display: block;
+  float: left;
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 1;
+  height: 52px;
+  margin-right: 0.5em; }
+
+/* ========================================================================== */
+/***
  * Floats:
  */
 /**
@@ -1593,6 +2555,30 @@ ul {
 @media (min-width: 0) {
   .flt-xs-right {
     float: right; } }
+
+/* ========================================================================== */
+/***
+ * Font size:
+ */
+/**
+ * Small font:
+ * `.fnt-sm`
+ *
+ *     @example
+ *     p.fnt-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-sm {
+  font-size: 80%; }
+
+/**
+ * Large font:
+ * `.fnt-lg`
+ *
+ *     @example
+ *     p.fnt-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.fnt-lg {
+  font-size: 120%; }
 
 /* ========================================================================== */
 /***
@@ -1701,494 +2687,6 @@ ul {
  */
 .fnt-black {
   font-weight: 900; }
-
-/* ========================================================================== */
-/***
- * Colors:
- */
-/**
-	 * black color:
-	 * `.bgc-black` `.txtc-black` `.brdc-black`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-black
-	 *             td.w-20.txt-select.txtc-black black
-	 *             td.w-20.txt-select #000
-	 *             td.w-20.txt-select rgb(0, 0, 0)
-	 */
-.bgc-black {
-  background-color: #000; }
-
-.brdc-black {
-  border-color: #000; }
-
-.txtc-black {
-  color: #000; }
-
-/**
-	 * white color:
-	 * `.bgc-white` `.txtc-white` `.brdc-white`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-white
-	 *             td.w-20.txt-select.txtc-white white
-	 *             td.w-20.txt-select #fff
-	 *             td.w-20.txt-select rgb(255, 255, 255)
-	 */
-.bgc-white {
-  background-color: #fff; }
-
-.brdc-white {
-  border-color: #fff; }
-
-.txtc-white {
-  color: #fff; }
-
-/**
-	 * Primary 1 color:
-	 * `.bgc-primary-1` `.txtc-primary-1` `.brdc-primary-1`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-primary-1
-	 *             td.w-20.txt-select.txtc-primary-1 Primary 1
-	 *             td.w-20.txt-select #2c9ab7
-	 *             td.w-20.txt-select rgb(44, 154, 183)
-	 */
-.bgc-primary-1 {
-  background-color: #2c9ab7; }
-
-.brdc-primary-1 {
-  border-color: #2c9ab7; }
-
-.txtc-primary-1 {
-  color: #2c9ab7; }
-
-/**
-	 * Primary 2 color:
-	 * `.bgc-primary-2` `.txtc-primary-2` `.brdc-primary-2`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-primary-2
-	 *             td.w-20.txt-select.txtc-primary-2 Primary 2
-	 *             td.w-20.txt-select #96cddb
-	 *             td.w-20.txt-select rgb(150, 205, 219)
-	 */
-.bgc-primary-2 {
-  background-color: #96cddb; }
-
-.brdc-primary-2 {
-  border-color: #96cddb; }
-
-.txtc-primary-2 {
-  color: #96cddb; }
-
-/**
-	 * Primary 3 color:
-	 * `.bgc-primary-3` `.txtc-primary-3` `.brdc-primary-3`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-primary-3
-	 *             td.w-20.txt-select.txtc-primary-3 Primary 3
-	 *             td.w-20.txt-select #b9dde7
-	 *             td.w-20.txt-select rgb(185, 221, 231)
-	 */
-.bgc-primary-3 {
-  background-color: #b9dde7; }
-
-.brdc-primary-3 {
-  border-color: #b9dde7; }
-
-.txtc-primary-3 {
-  color: #b9dde7; }
-
-/**
-	 * Primary 4 color:
-	 * `.bgc-primary-4` `.txtc-primary-4` `.brdc-primary-4`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-primary-4
-	 *             td.w-20.txt-select.txtc-primary-4 Primary 4
-	 *             td.w-20.txt-select #cae6ed
-	 *             td.w-20.txt-select rgb(202, 230, 237)
-	 */
-.bgc-primary-4 {
-  background-color: #cae6ed; }
-
-.brdc-primary-4 {
-  border-color: #cae6ed; }
-
-.txtc-primary-4 {
-  color: #cae6ed; }
-
-/**
-	 * Secondary 1 color:
-	 * `.bgc-secondary-1` `.txtc-secondary-1` `.brdc-secondary-1`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-secondary-1
-	 *             td.w-20.txt-select.txtc-secondary-1 Secondary 1
-	 *             td.w-20.txt-select #373737
-	 *             td.w-20.txt-select rgb(55, 55, 55)
-	 */
-.bgc-secondary-1 {
-  background-color: #373737; }
-
-.brdc-secondary-1 {
-  border-color: #373737; }
-
-.txtc-secondary-1 {
-  color: #373737; }
-
-/**
-	 * Secondary 2 color:
-	 * `.bgc-secondary-2` `.txtc-secondary-2` `.brdc-secondary-2`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-secondary-2
-	 *             td.w-20.txt-select.txtc-secondary-2 Secondary 2
-	 *             td.w-20.txt-select #9b9b9b
-	 *             td.w-20.txt-select rgb(155, 155, 155)
-	 */
-.bgc-secondary-2 {
-  background-color: #9b9b9b; }
-
-.brdc-secondary-2 {
-  border-color: #9b9b9b; }
-
-.txtc-secondary-2 {
-  color: #9b9b9b; }
-
-/**
-	 * Secondary 3 color:
-	 * `.bgc-secondary-3` `.txtc-secondary-3` `.brdc-secondary-3`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-secondary-3
-	 *             td.w-20.txt-select.txtc-secondary-3 Secondary 3
-	 *             td.w-20.txt-select #bcbcbc
-	 *             td.w-20.txt-select rgb(188, 188, 188)
-	 */
-.bgc-secondary-3 {
-  background-color: #bcbcbc; }
-
-.brdc-secondary-3 {
-  border-color: #bcbcbc; }
-
-.txtc-secondary-3 {
-  color: #bcbcbc; }
-
-/**
-	 * Secondary 4 color:
-	 * `.bgc-secondary-4` `.txtc-secondary-4` `.brdc-secondary-4`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-secondary-4
-	 *             td.w-20.txt-select.txtc-secondary-4 Secondary 4
-	 *             td.w-20.txt-select #cdcdcd
-	 *             td.w-20.txt-select rgb(205, 205, 205)
-	 */
-.bgc-secondary-4 {
-  background-color: #cdcdcd; }
-
-.brdc-secondary-4 {
-  border-color: #cdcdcd; }
-
-.txtc-secondary-4 {
-  color: #cdcdcd; }
-
-/**
-	 * Success 1 color:
-	 * `.bgc-success-1` `.txtc-success-1` `.brdc-success-1`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-success-1
-	 *             td.w-20.txt-select.txtc-success-1 Success 1
-	 *             td.w-20.txt-select #449a88
-	 *             td.w-20.txt-select rgb(68, 154, 136)
-	 */
-.bgc-success-1 {
-  background-color: #449a88; }
-
-.brdc-success-1 {
-  border-color: #449a88; }
-
-.txtc-success-1 {
-  color: #449a88; }
-
-/**
-	 * Success 2 color:
-	 * `.bgc-success-2` `.txtc-success-2` `.brdc-success-2`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-success-2
-	 *             td.w-20.txt-select.txtc-success-2 Success 2
-	 *             td.w-20.txt-select #a2cdc4
-	 *             td.w-20.txt-select rgb(162, 205, 196)
-	 */
-.bgc-success-2 {
-  background-color: #a2cdc4; }
-
-.brdc-success-2 {
-  border-color: #a2cdc4; }
-
-.txtc-success-2 {
-  color: #a2cdc4; }
-
-/**
-	 * Success 3 color:
-	 * `.bgc-success-3` `.txtc-success-3` `.brdc-success-3`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-success-3
-	 *             td.w-20.txt-select.txtc-success-3 Success 3
-	 *             td.w-20.txt-select #c1ddd7
-	 *             td.w-20.txt-select rgb(193, 221, 215)
-	 */
-.bgc-success-3 {
-  background-color: #c1ddd7; }
-
-.brdc-success-3 {
-  border-color: #c1ddd7; }
-
-.txtc-success-3 {
-  color: #c1ddd7; }
-
-/**
-	 * Success 4 color:
-	 * `.bgc-success-4` `.txtc-success-4` `.brdc-success-4`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-success-4
-	 *             td.w-20.txt-select.txtc-success-4 Success 4
-	 *             td.w-20.txt-select #d0e6e1
-	 *             td.w-20.txt-select rgb(208, 230, 225)
-	 */
-.bgc-success-4 {
-  background-color: #d0e6e1; }
-
-.brdc-success-4 {
-  border-color: #d0e6e1; }
-
-.txtc-success-4 {
-  color: #d0e6e1; }
-
-/**
-	 * Danger 1 color:
-	 * `.bgc-danger-1` `.txtc-danger-1` `.brdc-danger-1`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-danger-1
-	 *             td.w-20.txt-select.txtc-danger-1 Danger 1
-	 *             td.w-20.txt-select #db3a1b
-	 *             td.w-20.txt-select rgb(219, 58, 27)
-	 */
-.bgc-danger-1 {
-  background-color: #db3a1b; }
-
-.brdc-danger-1 {
-  border-color: #db3a1b; }
-
-.txtc-danger-1 {
-  color: #db3a1b; }
-
-/**
-	 * Danger 2 color:
-	 * `.bgc-danger-2` `.txtc-danger-2` `.brdc-danger-2`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-danger-2
-	 *             td.w-20.txt-select.txtc-danger-2 Danger 2
-	 *             td.w-20.txt-select #ed9d8d
-	 *             td.w-20.txt-select rgb(237, 157, 141)
-	 */
-.bgc-danger-2 {
-  background-color: #ed9d8d; }
-
-.brdc-danger-2 {
-  border-color: #ed9d8d; }
-
-.txtc-danger-2 {
-  color: #ed9d8d; }
-
-/**
-	 * Danger 3 color:
-	 * `.bgc-danger-3` `.txtc-danger-3` `.brdc-danger-3`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-danger-3
-	 *             td.w-20.txt-select.txtc-danger-3 Danger 3
-	 *             td.w-20.txt-select #f3bdb3
-	 *             td.w-20.txt-select rgb(243, 189, 179)
-	 */
-.bgc-danger-3 {
-  background-color: #f3bdb3; }
-
-.brdc-danger-3 {
-  border-color: #f3bdb3; }
-
-.txtc-danger-3 {
-  color: #f3bdb3; }
-
-/**
-	 * Danger 4 color:
-	 * `.bgc-danger-4` `.txtc-danger-4` `.brdc-danger-4`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-danger-4
-	 *             td.w-20.txt-select.txtc-danger-4 Danger 4
-	 *             td.w-20.txt-select #f6cec6
-	 *             td.w-20.txt-select rgb(246, 206, 198)
-	 */
-.bgc-danger-4 {
-  background-color: #f6cec6; }
-
-.brdc-danger-4 {
-  border-color: #f6cec6; }
-
-.txtc-danger-4 {
-  color: #f6cec6; }
-
-/**
-	 * Warning 1 color:
-	 * `.bgc-warning-1` `.txtc-warning-1` `.brdc-warning-1`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-warning-1
-	 *             td.w-20.txt-select.txtc-warning-1 Warning 1
-	 *             td.w-20.txt-select #febe12
-	 *             td.w-20.txt-select rgb(254, 190, 18)
-	 */
-.bgc-warning-1 {
-  background-color: #febe12; }
-
-.brdc-warning-1 {
-  border-color: #febe12; }
-
-.txtc-warning-1 {
-  color: #febe12; }
-
-/**
-	 * Warning 2 color:
-	 * `.bgc-warning-2` `.txtc-warning-2` `.brdc-warning-2`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-warning-2
-	 *             td.w-20.txt-select.txtc-warning-2 Warning 2
-	 *             td.w-20.txt-select #ffdf89
-	 *             td.w-20.txt-select rgb(255, 223, 137)
-	 */
-.bgc-warning-2 {
-  background-color: #ffdf89; }
-
-.brdc-warning-2 {
-  border-color: #ffdf89; }
-
-.txtc-warning-2 {
-  color: #ffdf89; }
-
-/**
-	 * Warning 3 color:
-	 * `.bgc-warning-3` `.txtc-warning-3` `.brdc-warning-3`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-warning-3
-	 *             td.w-20.txt-select.txtc-warning-3 Warning 3
-	 *             td.w-20.txt-select #ffe9b0
-	 *             td.w-20.txt-select rgb(255, 233, 176)
-	 */
-.bgc-warning-3 {
-  background-color: #ffe9b0; }
-
-.brdc-warning-3 {
-  border-color: #ffe9b0; }
-
-.txtc-warning-3 {
-  color: #ffe9b0; }
-
-/**
-	 * Warning 4 color:
-	 * `.bgc-warning-4` `.txtc-warning-4` `.brdc-warning-4`
-	 *
-	 *     @example
-	 *     table.tbl
-	 *         tr
-	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-warning-4
-	 *             td.w-20.txt-select.txtc-warning-4 Warning 4
-	 *             td.w-20.txt-select #ffefc4
-	 *             td.w-20.txt-select rgb(255, 239, 196)
-	 */
-.bgc-warning-4 {
-  background-color: #ffefc4; }
-
-.brdc-warning-4 {
-  border-color: #ffefc4; }
-
-.txtc-warning-4 {
-  color: #ffefc4; }
 
 /* ========================================================================== */
 /***
@@ -3166,7 +3664,7 @@ ul {
 
 /* ========================================================================== */
 /***
- * Width and height:
+ * Widths and heights:
  */
 /**
 			 * Width 10%:
@@ -3387,19 +3885,3 @@ ul {
  */
 .h-max-100 {
   max-height: 100%; }
-
-.fnt-sm {
-  font-size: 80%; }
-
-.fnt-lg {
-  font-size: 120%; }
-
-.dropcap {
-  color: #febe12;
-  display: block;
-  float: left;
-  font-size: 52px;
-  font-weight: bold;
-  line-height: 1;
-  height: 52px;
-  margin-right: 0.5em; }
