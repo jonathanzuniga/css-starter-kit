@@ -12,11 +12,11 @@ $half-spacing-unit: $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 $line-height-ratio: $base-line-height / $base-font-size;
 
-// Convert spacing units to ems.
+// Convert spacing units to rems.
 
-$base-spacing-unit: px-to-em($base-spacing-unit); // 2em (32px)
-$half-spacing-unit: px-to-em($half-spacing-unit); // 1em (16px)
-$quarter-spacing-unit: px-to-em($quarter-spacing-unit); // 0.5em (8px)
+$base-spacing-unit: px-to-rem($base-spacing-unit); // 2rem (32px)
+$half-spacing-unit: px-to-rem($half-spacing-unit); // 1rem (16px)
+$quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
 
 // Colors
 
@@ -49,7 +49,13 @@ $link-hover-decoration: none;
 // Code
 
 $mono-font-family: Menlo, Courier, monospace;
+
+$code-border-radius: $quarter-spacing-unit / 2;
+$code-background-color: transparentize(get-color('Secondary 1'), 0.92);
+$code-font-size: 0.9em;
+
 $pre-background-color: transparentize(get-color('Secondary 1'), 0.95);
+$pre-border-radius: $quarter-spacing-unit / 2;
 
 // Buttons
 
@@ -164,13 +170,28 @@ $table-heading-align: left;
 // Borders
 
 $border-color: transparentize(get-color('Secondary 1'), 0.85);
-$border-radius: 4px;
+$border-radius: $quarter-spacing-unit / 2;
 
 // Drop caps
 
+$dropcap-border: none;
 $dropcap-color: get-color('Warning 1');
-$dropcap-size: $base-font-size * 3.25;
-$dropcap-weight: bold;
+$dropcap-line-height: 0.9;
+
+$dropcap-margin-top: 0;
+$dropcap-margin-right: $quarter-spacing-unit;
+
+$dropcap-size: px-to-em($base-font-size * 5);
+$dropcap-shadow: none;
+$dropcap-weight: normal;
+
+$dropcap-width: auto;
+$dropcap-height: px-to-rem($base-font-size * 4.8) - 0.5;
+
+// Small caps
+
+$smcaps-letter-spacing: 0.125em; // 2px
+$smcaps-margin-right: 0.188em; // 3px
 
 // Font size
 
@@ -205,7 +226,7 @@ $sizes: (
 // Flex grid
 
 // Tamaño máximo de anchura del contenedor.
-$container-max-width: 1040px;
+$container-max-width: 1052px;
 
 // Número de columnas.
 $grid-columns-number: 12;
