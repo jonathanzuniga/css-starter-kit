@@ -12,12 +12,6 @@ html, body {
 	padding: 0;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $container-max-width;
-}
-
 // @media screen and (min-width: 768px) {
 // 	.container {
 // 		padding-left: 16px;
@@ -30,13 +24,11 @@ html, body {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: $grid-row-margin-bottom;
-	margin-top: $grid-row-margin-top;
 
-	.row {
-		margin-left: -$grid-column-gutter;
-		margin-right: -$grid-column-gutter;
-	}
+	margin-top: $grid-row-margin-top;
+	margin-right: -$grid-column-gutter;
+	margin-bottom: $grid-row-margin-bottom;
+	margin-left: -$grid-column-gutter;
 }
 
 @mixin column {
@@ -63,6 +55,19 @@ html, body {
 [class*="col-lg-"],
 [class*="col-xl-"] {
 	@extend %column;
+}
+
+.container {
+	@extend .container-fluid;
+	max-width: $container-max-width;
+}
+
+.container-fluid {
+	@include gutter;
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 /***
@@ -369,42 +374,29 @@ html, body {
  * Offsets:
  */
 
-@media (min-width: $breakpoint-xs-min-width) {
-	@for $i from 0 through ($grid-columns-number - 1) {
-		.col-os-xs-#{$i} {
-			margin-left: percentage($i / $grid-columns-number);
-		}
-	}
-}
-
-@media (min-width: $breakpoint-sm-min-width) {
-	@for $i from 0 through ($grid-columns-number - 1) {
-		.col-os-sm-#{$i} {
-			margin-left: percentage($i / $grid-columns-number);
-		}
-	}
-}
-
-@media (min-width: $breakpoint-md-min-width) {
-	@for $i from 0 through ($grid-columns-number - 1) {
-		.col-os-md-#{$i} {
-			margin-left: percentage($i / $grid-columns-number);
-		}
-	}
-}
-
-@media (min-width: $breakpoint-lg-min-width) {
-	@for $i from 0 through ($grid-columns-number - 1) {
-		.col-os-lg-#{$i} {
-			margin-left: percentage($i / $grid-columns-number);
-		}
-	}
-}
-
-@media (min-width: $breakpoint-xl-min-width) {
-	@for $i from 0 through ($grid-columns-number - 1) {
-		.col-os-xl-#{$i} {
-			margin-left: percentage($i / $grid-columns-number);
+/**
+ * Offsetting columns:
+ * `.oset-*`
+ *
+ *     @example
+ *     div.row
+ *         div.col-4
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-4.oset-2
+ *             div.bgc-secondary-2 &nbsp
+ *     div.row
+ *         div.col-md-5
+ *             div.bgc-secondary-2 &nbsp
+ *         div.col-md-3.oset-lg-3
+ *             div.bgc-secondary-2 &nbsp
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.oset-#{$i},
+			.oset-#{$size}-#{$i} {
+				margin-left: percentage($i / $grid-columns-number);
+			}
 		}
 	}
 }
@@ -416,57 +408,69 @@ html, body {
  */
 
 /**
- * Small gutters:
- * `.cols-gutter-sm`
+ * Half size gutters:
+ * `.gutters-half` `.gutters-half-*`
  *
  *     @example
- *     div.row.cols-gutter-sm
+ *     div.row.gutters-half-md
  *         div.col-8
  *             div.bgc-secondary-2 &nbsp
  *         div.col-4
  *             div.bgc-secondary-2 &nbsp
  */
-.cols-gutter-sm {
-	.row {
+@mixin gutter-half {
+	&.row {
 		margin-left: -$grid-column-gutter / 2;
 		margin-right: -$grid-column-gutter / 2;
-	}
 
-	.col,
-	[class*="col-xs-"],
-	[class*="col-sm-"],
-	[class*="col-md-"],
-	[class*="col-lg-"],
-	[class*="col-xl-"] {
-		padding-left: $grid-column-gutter / 2;
-		padding-right: $grid-column-gutter / 2;
+		> .col,
+		> [class*="col-"] {
+			padding-left: $grid-column-gutter / 2;
+			padding-right: $grid-column-gutter / 2;
+		}
 	}
+}
+
+.gutters-half {
+	@include gutter-half;
 }
 
 /**
  * Remove gutters:
- * `.cols-gutter-0`
+ * `.gutters-0` `.gutters-0-*`
  *
  *     @example
- *     div.row.cols-gutter-0
+ *     div.row.gutters-0-md
  *         div.col-8
  *             div.bgc-secondary-2 &nbsp
  *         div.col-4
  *             div.bgc-secondary-3 &nbsp
  */
-.cols-gutter-0 {
-	.row {
+@mixin gutter-0 {
+	&.row {
 		margin-left: 0;
 		margin-right: 0;
-	}
 
-	.col,
-	[class*="col-xs-"],
-	[class*="col-sm-"],
-	[class*="col-md-"],
-	[class*="col-lg-"],
-	[class*="col-xl-"] {
-		padding-left: 0;
-		padding-right: 0;
+		> .col,
+		> [class*="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.gutters-0 {
+	@include gutter-0;
+}
+
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		.gutters-half-#{$size} {
+			@include gutter-half;
+		}
+
+		.gutters-0-#{$size} {
+			@include gutter-0;
+		}
 	}
 }

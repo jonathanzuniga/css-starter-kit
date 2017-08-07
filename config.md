@@ -48,13 +48,28 @@
 		.sg-block:last-of-type {
 			border-bottom: none;
 		}
+
+		.sidebar {
+			font-size: 14px;
+		}
+
+		.sidebar h1, 
+		.sidebar h2 {
+			border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+
+		.sidebar h1 {
+			margin-top: 2rem;
+		}
 	</style>
 
 ### Body
 
-	<div class='row cols-center'>
-		<div class='col-xs-12 col-md-10 col-lg-9 col-xl-8'>
-			<div class='sg-container' sg-content>
+	<div class='container-fluid'>
+		<div class="row cols-around gutters-half-md">
+			<div class="col-xs-12 col-md-3 sidebar">
 				<h1>CSS Starter Kit</h1>
 
 				<p>
@@ -70,10 +85,10 @@
 				</p>
 
 				<div class="row">
-					<div class="col-sm-4">
-						<h3>
+					<div class="col-xs-12 col-sm-6 col-md-12">
+						<h2>
 							Elements
-						</h3>
+						</h2>
 
 						<ul class="lst-unstyled">
 							<li>
@@ -120,10 +135,10 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-4">
-						<h3>
+					<div class="col-xs-12 col-sm-6 col-md-12">
+						<h2>
 							Layout
-						</h3>
+						</h2>
 
 						<ul class="lst-unstyled">
 							<li>
@@ -185,12 +200,17 @@
 							</li>
 							<li>
 								<a href="layout.html#offsets">Offsets</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="layout.html#offsetting-columns">Offsetting columns</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="layout.html#offsets">Gutters</a>
 								<ul class="lst-unstyled">
 									<li>
-										<a href="layout.html#remove-gutters">Small gutters</a>
+										<a href="layout.html#half-size-gutters">Half size gutters</a>
 									</li>
 									<li>
 										<a href="layout.html#remove-gutters">Remove gutters</a>
@@ -199,10 +219,10 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-4">
-						<h3>
+					<div class="col-xs-12 col-sm-6 col-md-12">
+						<h2>
 							Helpers
-						</h3>
+						</h2>
 
 						<ul class="lst-unstyled">
 							<li>
@@ -381,8 +401,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="row">
-				</div>
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<div class='sg-container' sg-content>
+				</div>	
 			</div>
 		</div>
 	</div>
