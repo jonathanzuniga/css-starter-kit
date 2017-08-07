@@ -642,11 +642,16 @@ html, body {
  *         div.col-4
  *             div.bgc-secondary-2 &nbsp
  */
-.cols-gutter-sm.row {
+.cols-gutter-sm .row {
   margin-left: -8px;
   margin-right: -8px; }
 
-.cols-gutter-sm [class^="col"] {
+.cols-gutter-sm .col,
+.cols-gutter-sm [class*="col-xs-"],
+.cols-gutter-sm [class*="col-sm-"],
+.cols-gutter-sm [class*="col-md-"],
+.cols-gutter-sm [class*="col-lg-"],
+.cols-gutter-sm [class*="col-xl-"] {
   padding-left: 8px;
   padding-right: 8px; }
 
@@ -661,10 +666,15 @@ html, body {
  *         div.col-4
  *             div.bgc-secondary-3 &nbsp
  */
-.cols-gutter-0.row {
+.cols-gutter-0 .row {
   margin-left: 0;
   margin-right: 0; }
 
-.cols-gutter-0 [class^="col"] {
+.cols-gutter-0 .col,
+.cols-gutter-0 [class*="col-xs-"],
+.cols-gutter-0 [class*="col-sm-"],
+.cols-gutter-0 [class*="col-md-"],
+.cols-gutter-0 [class*="col-lg-"],
+.cols-gutter-0 [class*="col-xl-"] {
   padding-left: 0;
   padding-right: 0; }

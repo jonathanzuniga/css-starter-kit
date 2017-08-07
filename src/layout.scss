@@ -427,12 +427,17 @@ html, body {
  *             div.bgc-secondary-2 &nbsp
  */
 .cols-gutter-sm {
-	&.row {
+	.row {
 		margin-left: -$grid-column-gutter / 2;
 		margin-right: -$grid-column-gutter / 2;
 	}
 
-	[class^="col"] {
+	.col,
+	[class*="col-xs-"],
+	[class*="col-sm-"],
+	[class*="col-md-"],
+	[class*="col-lg-"],
+	[class*="col-xl-"] {
 		padding-left: $grid-column-gutter / 2;
 		padding-right: $grid-column-gutter / 2;
 	}
@@ -450,12 +455,17 @@ html, body {
  *             div.bgc-secondary-3 &nbsp
  */
 .cols-gutter-0 {
-	&.row {
+	.row {
 		margin-left: 0;
 		margin-right: 0;
 	}
 
-	[class^="col"] {
+	.col,
+	[class*="col-xs-"],
+	[class*="col-sm-"],
+	[class*="col-md-"],
+	[class*="col-lg-"],
+	[class*="col-xl-"] {
 		padding-left: 0;
 		padding-right: 0;
 	}
