@@ -21,11 +21,11 @@ $quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
 // Colors
 
 $colors: (
-	'Primary': #2c9ab7,
-	'Secondary': #373737,
-	'Success': #449a88,
-	'Warning': #febe12,
-	'Danger': #db3a1b
+	'Primary' #2c9ab7 8%,
+	'Secondary' #373737 0%,
+	'Success' #449a88 8%,
+	'Warning' #febe12 8%,
+	'Danger' #db3a1b 8%
 );
 
 $tints: 6; // Número de tintas por cada color primario.
@@ -59,21 +59,14 @@ $pre-border-radius: $quarter-spacing-unit / 2;
 
 // Buttons
 
-$button-background-color-darken-percentage: 15%;
-
-$button-tint-percentage: 24%;
-$button-shade-percentage: 60%;
-
-$button-background-color: get-color('Secondary 7');
+$button-background-color: lighten(get-color('Secondary 7'), 5%);
 $button-border-color: transparent;
-$button-border-width: 2px;
+$button-border-width: 1px;
 $button-font-weight: 500;
 $button-padding: 0.5em 1em;
-$button-text-color: transparentize(get-color('Secondary 1'), 0.25);
+$button-text-color: get-color('Secondary 2');
 
-// $button-focus-shadow: 0 0 0 2px transparentize($link-color, 0.85);
-
-$button-hover-background-color: darken($button-background-color, $button-background-color-darken-percentage);
+$button-hover-background-color: get-color('Secondary 6');
 $button-hover-border-color: transparent;
 $button-hover-text-color: $button-text-color;
 
@@ -83,29 +76,33 @@ $button-primary-background-color: get-color('Primary 2');
 $button-primary-border-color: transparent;
 $button-primary-text-color: #fff;
 
-$button-primary-hover-background-color: darken($button-primary-background-color, $button-background-color-darken-percentage);
+$button-primary-hover-background-color: get-color('Primary 1');
 $button-primary-hover-border-color: $button-primary-border-color;
 $button-primary-hover-text-color: $button-primary-text-color;
 
 // Outline buttons
 
+$button-hover-background-color-transparentize-amount: 0.95;
+
 // Outline button
 
 $button-outline-background-color: transparent;
-$button-outline-border-color: $button-background-color;
-$button-outline-text-color: $button-text-color;
+$button-outline-border-color: get-color('Secondary 3');
+$button-outline-text-color: get-color('Secondary 3');
 
-$button-outline-hover-border-color: transparent;
-$button-outline-hover-text-color: $button-text-color;
+$button-outline-hover-background-color: transparentize(get-color('Secondary 1'), $button-hover-background-color-transparentize-amount);
+$button-outline-hover-border-color: $button-outline-border-color;
+$button-outline-hover-text-color: $button-outline-text-color;
 
 // Outline primary button
 
 $button-primary-outline-background-color: transparent;
-$button-primary-outline-border-color: get-color('Primary 3');
-$button-primary-outline-text-color: $button-primary-background-color;
+$button-primary-outline-border-color: get-color('Primary 2');
+$button-primary-outline-text-color: get-color('Primary 2');
 
-$button-primary-outline-hover-background-color: $button-primary-background-color;
-$button-primary-outline-hover-text-color: $button-primary-text-color;
+$button-primary-outline-hover-background-color: transparentize(get-color('Primary 1'), $button-hover-background-color-transparentize-amount);
+$button-primary-outline-hover-border-color: $button-primary-outline-border-color;
+$button-primary-outline-hover-text-color: $button-primary-outline-text-color;
 
 // Link buttons
 
@@ -120,7 +117,7 @@ $button-success-background-color: get-color('Success 2');
 $button-success-border-color: transparent;
 $button-success-text-color: #fff;
 
-$button-success-hover-background-color: darken($button-success-background-color, $button-background-color-darken-percentage);
+$button-success-hover-background-color: get-color('Success 1');
 $button-success-hover-border-color: $button-success-border-color;
 $button-success-hover-text-color: $button-success-text-color;
 
@@ -130,7 +127,7 @@ $button-warning-background-color: get-color('Warning 2');
 $button-warning-border-color: transparent;
 $button-warning-text-color: #fff;
 
-$button-warning-hover-background-color: darken($button-warning-background-color, $button-background-color-darken-percentage);
+$button-warning-hover-background-color: get-color('Warning 1');
 $button-warning-hover-border-color: $button-warning-border-color;
 $button-warning-hover-text-color: $button-warning-text-color;
 
@@ -140,7 +137,7 @@ $button-danger-background-color: get-color('Danger 2');
 $button-danger-border-color: transparent;
 $button-danger-text-color: #fff;
 
-$button-danger-hover-background-color: darken($button-danger-background-color, $button-background-color-darken-percentage);
+$button-danger-hover-background-color: get-color('Danger 1');
 $button-danger-hover-border-color: $button-danger-border-color;
 $button-danger-hover-text-color: $button-danger-text-color;
 
