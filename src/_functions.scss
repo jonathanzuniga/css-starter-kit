@@ -15,12 +15,12 @@
 // Generar la lista completa de colores.
 @function get-colors-list($colors, $tints) {
 	$colors-list: 'Black' #000, 'White' #fff;
-	@each $name, $hex, $desaturate in $colors {
+	@each $name, $hex, $saturate in $colors {
 		@for $tint from 1 to $tints + 2 {
 			@if $tint == 1 {
-				$colors-list: append($colors-list, '#{$name} #{$tint}' desaturate($hex, $desaturate), comma);
+				$colors-list: append($colors-list, '#{$name} #{$tint}' $hex, comma);
 			} @else {
-				$colors-list: append($colors-list, '#{$name} #{$tint}' desaturate(tint($hex, percentage(1 - ((100 / $tint) / 64))), $desaturate), comma);
+				$colors-list: append($colors-list, '#{$name} #{$tint}' saturate(tint($hex, percentage(1 - ((100 / $tint) / 64))), $saturate), comma);
 			}
 		}
 	}
