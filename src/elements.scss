@@ -172,9 +172,8 @@ small {
 	// }
 
 	&:hover {
-		background-color: $button-hover-background-color;
-		border-color: $button-hover-border-color;
-		color: $button-hover-text-color;
+		background-color: shade($button-background-color, $button-hover-background-color-shade-amount);
+		color: $button-text-color;
 	}
 }
 
@@ -187,13 +186,11 @@ small {
  */
 .btn--primary {
 	background-color: $button-primary-background-color;
-	border-color: $button-primary-border-color;
 	color: $button-primary-text-color;
 
 	&:hover {
-		background-color: $button-primary-hover-background-color;
-		border-color: $button-primary-hover-border-color;
-		color: $button-primary-hover-text-color;
+		background-color: shade($button-primary-background-color, $button-hover-background-color-shade-amount);
+		color: $button-primary-text-color;
 	}
 }
 
@@ -206,13 +203,41 @@ small {
  */
 .btn--secondary {
 	background-color: $button-secondary-background-color;
-	border-color: $button-secondary-border-color;
 	color: $button-secondary-text-color;
 
 	&:hover {
-		background-color: $button-secondary-hover-background-color;
-		border-color: $button-secondary-hover-border-color;
-		color: $button-secondary-hover-text-color;
+		background-color: shade($button-secondary-background-color, $button-hover-background-color-shade-amount);
+		color: $button-secondary-text-color;
+	}
+}
+
+/**
+ * Colored buttons:
+ * `.btn--success` `.btn--danger`
+ *
+ *     @example
+ *     a.btn.btn--success Success button
+ *     a.btn.btn--danger Danger button
+ */
+.btn--success {
+	background-color: $button-success-background-color;
+	border-color: $button-success-border-color;
+	color: $button-success-text-color;
+
+	&:hover {
+		background-color: shade($button-success-background-color, $button-hover-background-color-shade-amount);
+		color: $button-success-text-color;
+	}
+}
+
+.btn--danger {
+	background-color: $button-danger-background-color;
+	border-color: $button-danger-border-color;
+	color: $button-danger-text-color;
+
+	&:hover {
+		background-color: shade($button-danger-background-color, $button-hover-background-color-shade-amount);
+		color: $button-danger-text-color;
 	}
 }
 
@@ -230,9 +255,9 @@ small {
 	color: $button-outline-text-color;
 
 	&:hover {
-		background-color: $button-outline-hover-background-color;
-		border-color: $button-outline-hover-border-color;
-		color: $button-outline-hover-text-color;
+		background-color: transparentize($button-outline-text-color, $button-hover-background-color-transparentize-amount);
+		border-color: $button-outline-border-color;
+		color: $button-outline-text-color;
 	}
 
 	&.btn--primary {
@@ -241,9 +266,9 @@ small {
 		color: $button-primary-outline-text-color;
 
 		&:hover {
-			background-color: $button-primary-outline-hover-background-color;
-			border-color: $button-primary-outline-hover-border-color;
-			color: $button-primary-outline-hover-text-color;
+			background-color: transparentize($button-primary-outline-text-color, $button-hover-background-color-transparentize-amount);
+			border-color: $button-primary-outline-border-color;
+			color: $button-primary-outline-text-color;
 		}
 	}
 }
@@ -263,7 +288,7 @@ small {
 	&:hover {
 		background-color: $button-link-hover-background-color;
 		border-color: $button-link-hover-border-color;
-		color: $button-link-hover-text-color;
+		color: $button-secondary-text-color;
 	}
 }
 
@@ -279,69 +304,93 @@ small {
 }
 
 /**
- * Colored buttons:
- * `.btn--success` `.btn--warning` `.btn--danger`
+ * Gradient button:
+ * `.btn--gradient`
  *
  *     @example
- *     a.btn.btn--success Success button
- *     a.btn.btn--danger Danger button
+ *     a.btn.btn--gradient Gradient button
+ *     a.btn.btn--primary.btn--gradient Gradient button
+ *     a.btn.btn--success.btn--gradient Gradient button
  */
-.btn--success {
-	background-color: $button-success-background-color;
-	border-color: $button-success-border-color;
-	color: $button-success-text-color;
+.btn--gradient {
+	border: none;
+	// box-shadow: $button-gradient-box-shadow;
+
+	$button-gradient-background-color-top: tint($button-background-color, $button-gradient-background-color-top-tint-amount);
+	$button-gradient-background-color-bottom: shade($button-background-color, $button-gradient-background-color-bottom-shade-amount);
+
+	@include button-bg-gradient(
+		$button-gradient-background-color-top, 
+		$button-gradient-background-color-bottom
+	);
 
 	&:hover {
-		background-color: $button-success-hover-background-color;
-		border-color: $button-success-hover-border-color;
-		color: $button-success-hover-text-color;
+		@include button-bg-gradient(
+			shade($button-gradient-background-color-top, $button-hover-background-color-shade-amount), 
+			shade($button-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+		);
+	}
+
+	&.btn--primary {
+		$button-primary-gradient-background-color-top: tint($button-primary-background-color, $button-gradient-background-color-top-tint-amount);
+		$button-primary-gradient-background-color-bottom: shade($button-primary-background-color, $button-gradient-background-color-bottom-shade-amount);
+
+		@include button-bg-gradient(
+			$button-primary-gradient-background-color-top, 
+			$button-primary-gradient-background-color-bottom
+		);
+
+		&:hover {
+			@include button-bg-gradient(
+				shade($button-primary-gradient-background-color-top, $button-hover-background-color-shade-amount), 
+				shade($button-primary-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+			);
+		}
+	}
+
+	&.btn--secondary {
+		$button-secondary-gradient-background-color-top: tint($button-secondary-background-color, $button-gradient-background-color-top-tint-amount);
+		$button-secondary-gradient-background-color-bottom: shade($button-secondary-background-color, $button-gradient-background-color-bottom-shade-amount);
+
+		@include button-bg-gradient(
+			$button-secondary-gradient-background-color-top, 
+			$button-secondary-gradient-background-color-bottom
+		);
+
+		&:hover {
+			@include button-bg-gradient(
+				shade($button-secondary-gradient-background-color-top, $button-hover-background-color-shade-amount), 
+				shade($button-secondary-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+			);
+		}
+	}
+
+	&.btn--success {
+		$button-success-gradient-background-color-top: tint($button-success-background-color, $button-gradient-background-color-top-tint-amount);
+		$button-success-gradient-background-color-bottom: shade($button-success-background-color, $button-gradient-background-color-bottom-shade-amount);
+
+		@include button-bg-gradient($button-success-gradient-background-color-top, $button-success-gradient-background-color-bottom);
+
+		&:hover {
+			@include button-bg-gradient(
+				shade($button-success-gradient-background-color-top, $button-hover-background-color-shade-amount), 
+				shade($button-success-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+			);
+		}
 	}
 }
 
-// .btn--warning {
-// 	background-color: $button-warning-background-color;
-// 	border-color: $button-warning-border-color;
-// 	color: $button-warning-text-color;
-
-// 	&:hover {
-// 		background-color: $button-warning-hover-background-color;
-// 		border-color: $button-warning-hover-border-color;
-// 		color: $button-warning-hover-text-color;
-// 	}
-// }
-
-.btn--danger {
-	background-color: $button-danger-background-color;
-	border-color: $button-danger-border-color;
-	color: $button-danger-text-color;
-
-	&:hover {
-		background-color: $button-danger-hover-background-color;
-		border-color: $button-danger-hover-border-color;
-		color: $button-danger-hover-text-color;
-	}
+/**
+ * Expanded button:
+ * `.btn--expanded`
+ *
+ *     @example
+ *     a.btn.btn--primary.btn--gradient.btn--expanded Expanded button
+ */
+.btn--expanded {
+	display: block;
+	width: 100%;
 }
-
-// *
-//  * Gradient button:
-//  * `.btn--gradient`
-//  *
-//  *     @example
-//  *     a.btn.btn--primary.btn--gradient Primary button
-//  *     a.btn.btn--success.btn--gradient Success button
- 
-// .btn--gradient {
-// 	border: none;
-// 	// box-shadow: $button-primary-gradient-box-shadow;
-
-// 	&.btn--primary {
-// 		@include button-bg-gradient($button-primary-gradient-background-color-top, $button-primary-gradient-background-color-bottom);
-// 	}
-
-// 	&.btn--success {
-// 		@include button-bg-gradient($button-success-gradient-background-color-top, $button-success-gradient-background-color-bottom);
-// 	}
-// }
 
 /* ========================================================================== */
 
