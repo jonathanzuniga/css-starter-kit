@@ -21,22 +21,22 @@ $quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
 // Colors
 
 // Name color, hex color, saturare amount.
-// $colors: (
-// 	'Cyan' #2c9ab7 8%,
-// 	'Green' #449a88 8%,
-// 	'Grey' #373737 0%,
-// 	'Red' #db3a1b 8%,
-// 	'Yellow' #febe12 8%
-// );
-
 $colors: (
-	'Blue' #4183c4 0%,
-	'Green' #36b725 0%,
+	'Blue' #2c9ab7 8%,
+	'Green' #449a88 8%,
 	'Grey' #373737 0%,
-	'Orange' #fba447 0%,
-	'Red' #e65146 0%,
-	'Yellow' #ffc439 0%
+	'Red' #db3a1b 8%,
+	'Yellow' #febe12 8%
 );
+
+// $colors: (
+// 	'Blue' #4183c4,
+// 	'Green' #36b725,
+// 	'Grey' #373737,
+// 	'Orange' #fba447,
+// 	'Red' #e65146,
+// 	'Yellow' #ffc439
+// );
 
 // $colors: (
 // 	'Blue' #055ec2 5%,
@@ -83,15 +83,18 @@ $pre-border-radius: $quarter-spacing-unit / 2;
 $button-background-color: lighten(get-color('Grey 2'), 6%);
 $button-border-color: transparent;
 $button-border-width: 1px;
-$button-font-weight: 500;
-$button-padding: 0.5em 1em;
+$button-border-radius: rem-to-em($quarter-spacing-unit / 2);
+$button-font-weight: 400;
+$button-padding: 
+	rem-to-em($quarter-spacing-unit) 
+	rem-to-em($half-spacing-unit);
 $button-text-color: #fff;
 
 $button-hover-background-color-shade-amount: 12%;
 
 // Primary button
 
-$button-primary-background-color: get-color('Blue 1');
+$button-primary-background-color: get-color('Blue 2');
 $button-primary-text-color: #fff;
 
 // Secondary button
@@ -103,13 +106,13 @@ $button-secondary-text-color: transparentize(get-color('Grey 1'), 0.3);
 
 // Success button
 
-$button-success-background-color: get-color('Green 1');
+$button-success-background-color: get-color('Green 2');
 $button-success-border-color: transparent;
 $button-success-text-color: #fff;
 
 // Danger button
 
-$button-danger-background-color: get-color('Red 1');
+$button-danger-background-color: get-color('Red 2');
 $button-danger-border-color: transparent;
 $button-danger-text-color: #fff;
 
@@ -127,6 +130,18 @@ $button-primary-outline-background-color: transparent;
 $button-primary-outline-border-color: get-color('Blue 2');
 $button-primary-outline-text-color: get-color('Blue 2');
 
+// Outline success button
+
+$button-success-outline-background-color: transparent;
+$button-success-outline-border-color: get-color('Green 2');
+$button-success-outline-text-color: get-color('Green 2');
+
+// Outline danger button
+
+$button-danger-outline-background-color: transparent;
+$button-danger-outline-border-color: get-color('Red 2');
+$button-danger-outline-text-color: get-color('Red 2');
+
 // Link button
 
 $button-link-hover-background-color: $button-secondary-background-color;
@@ -134,10 +149,36 @@ $button-link-hover-border-color: transparent;
 
 // Gradient button
 
-$button-gradient-background-color-top-tint-amount: 4%;
-$button-gradient-background-color-bottom-shade-amount: 12%;
+$button-gradient-background-color-top-tint-amount: 3%;
+$button-gradient-background-color-bottom-shade-amount: 11%;
 
-// $button-gradient-box-shadow: 0 2px 0 shade(get-color('Blue 1'), 50%);
+$button-gradient-background-color-top-hue: -2.5;
+$button-gradient-background-color-top-saturation: 1.75;
+$button-gradient-background-color-top-lightness: 0.5;
+
+$button-gradient-background-color-bottom-hue: 3.25;
+$button-gradient-background-color-bottom-saturation: 3.25;
+$button-gradient-background-color-bottom-lightness: 3.25;
+
+// Small button
+
+$button-small-border-radius: 
+	rem-to-em(($quarter-spacing-unit / 2) - 0.063);
+$button-small-font-size: 
+	px-to-em($base-font-size - 3);
+$button-small-padding: 
+	rem-to-em($quarter-spacing-unit / 2) 
+	rem-to-em($half-spacing-unit - 0.25);
+
+// Large button
+
+$button-large-border-radius: 
+	rem-to-em($quarter-spacing-unit / 2);
+$button-large-font-size: 
+	px-to-em($base-font-size + 4);
+$button-large-padding: 
+	rem-to-em($quarter-spacing-unit + 0.25) 
+	rem-to-em($half-spacing-unit + 0.5);
 
 // Headings
 

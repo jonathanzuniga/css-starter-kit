@@ -18,9 +18,23 @@
 	@each $name, $hex, $saturate in $colors {
 		@for $tint from 1 to $tints + 2 {
 			@if $tint == 1 {
-				$colors-list: append($colors-list, '#{$name} #{$tint}' $hex, comma);
+				$colors-list: append(
+					$colors-list, 
+					'#{$name} #{$tint}' $hex, 
+					comma
+				);
 			} @else {
-				$colors-list: append($colors-list, '#{$name} #{$tint}' saturate(tint($hex, percentage(1 - ((100 / $tint) / 64))), $saturate), comma);
+				$colors-list: append(
+					$colors-list, 
+					'#{$name} #{$tint}' saturate(
+						tint(
+							$hex, 
+							percentage(1 - ((100 / $tint) / 64))
+						), 
+						$saturate
+					), 
+					comma
+				);
 			}
 		}
 	}
@@ -37,34 +51,61 @@
 	@return unquote('#000');
 }
 
-// Calculate rems. $pixels = pixel size. $base = base pixel size
-@function px-to-rem($pixels, $base: $base-font-size) {
-	@return ($pixels / $base) * 1rem;
+// Hepler. Remove unit from input number.
+@function clear-unit($value) {
+	@if type-of($value) == 'number' {
+		@if (unitless($value)) {
+			@return $value;
+		} @elseif unit($value) == 'em' {
+			@return $value / 1em;
+		} @elseif unit($value) == 'rem' {
+			@return $value / 1rem;
+		} @elseif unit($value) == 'px' {
+			@return $value / 1px;
+		} @elseif unit($value) == 'pt' {
+			@return $value / 1pt;
+		}
+	} @else {
+		@warn 'Not a number value: #{$value}';
+		@return $value;
+	}
+}
+
+// Hepler. Make unit from input number. 
+// Replace $value unit to target unit.
+@function make-unit($value, $unit: px) {
+	$value: clear-unit($value);
+	@if type-of($value) == 'number' {
+		@if $unit == 'em' {
+			@return $value * 1em;
+		} @elseif $unit == 'rem' {
+			@return $value * 1rem;
+		} @elseif $unit == 'px' {
+			@return $value * 1px;
+		} @elseif $unit == 'pt' {
+			@return $value * 1pt;
+		}
+	} @else {
+		@warn 'Not a number value: #{$value}';
+		@return $value;
+	}
+}
+
+// Calculate rems. $value = pixel size. $base = base pixel size
+@function px-to-rem($value, $base: $base-font-size) {
+	@return ($value / $base) * 1rem;
 }
 
 // Calculate ems.
-@function px-to-em($pixels, $base: $base-font-size) {
-    @if $pixels == 0 { @return 0 }
-	@return $pixels / $base + 0em;
+@function px-to-em($value, $base: $base-font-size) {
+		@if $value == 0 { @return 0 }
+	@return $value / $base + 0em;
 }
 
-// Button background gradient.
-@mixin button-bg-gradient($color-top, $color-bottom) {
-	background: #{$color-top};
-	background: -moz-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, #{$color-top}), color-stop(100%, #{$color-bottom}));
-	background: -webkit-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: -o-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: -ms-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: linear-gradient(to bottom, #{$color-top} 0%, #{$color-bottom} 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-top}', endColorstr='#{$color-bottom}', GradientType=0);
-}
-
-// Output vendor properties.
-@mixin vendor($property, $value) {
-    -webkit-#{$property}: $value;
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
-         	#{$property}: $value;
+// Rems to ems.
+@function rem-to-em($value, $base: $base-font-size) {
+	$value: clear-unit($value);
+	$font-size: clear-unit($base);
+	$base-font-size: clear-unit($base-font-size);
+	@return make-unit($value * $base-font-size / $font-size, em);
 }

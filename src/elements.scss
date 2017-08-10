@@ -1,4 +1,5 @@
 @import '_functions';
+@import '_mixins';
 @import '_variables';
 
 /* ========================================================================== */
@@ -145,8 +146,8 @@ small {
  */
 .btn {
 	background-color: $button-background-color;
-	border-radius: $border-radius;
 	border: $button-border-width solid $button-border-color;
+	border-radius: $button-border-radius;
 	color: $button-text-color;
 	display: inline-block;
 	font-size: $base-font-size;
@@ -172,7 +173,11 @@ small {
 	// }
 
 	&:hover {
-		background-color: shade($button-background-color, $button-hover-background-color-shade-amount);
+		background-color: 
+			shade(
+				$button-background-color, 
+				$button-hover-background-color-shade-amount
+			);
 		color: $button-text-color;
 	}
 }
@@ -189,7 +194,11 @@ small {
 	color: $button-primary-text-color;
 
 	&:hover {
-		background-color: shade($button-primary-background-color, $button-hover-background-color-shade-amount);
+		background-color: 
+			shade(
+				$button-primary-background-color, 
+				$button-hover-background-color-shade-amount
+			);
 		color: $button-primary-text-color;
 	}
 }
@@ -206,7 +215,11 @@ small {
 	color: $button-secondary-text-color;
 
 	&:hover {
-		background-color: shade($button-secondary-background-color, $button-hover-background-color-shade-amount);
+		background-color: 
+			shade(
+				$button-secondary-background-color, 
+				$button-hover-background-color-shade-amount
+			);
 		color: $button-secondary-text-color;
 	}
 }
@@ -225,7 +238,11 @@ small {
 	color: $button-success-text-color;
 
 	&:hover {
-		background-color: shade($button-success-background-color, $button-hover-background-color-shade-amount);
+		background-color: 
+			shade(
+				$button-success-background-color, 
+				$button-hover-background-color-shade-amount
+			);
 		color: $button-success-text-color;
 	}
 }
@@ -236,7 +253,11 @@ small {
 	color: $button-danger-text-color;
 
 	&:hover {
-		background-color: shade($button-danger-background-color, $button-hover-background-color-shade-amount);
+		background-color: 
+			shade(
+				$button-danger-background-color, 
+				$button-hover-background-color-shade-amount
+			);
 		color: $button-danger-text-color;
 	}
 }
@@ -255,7 +276,11 @@ small {
 	color: $button-outline-text-color;
 
 	&:hover {
-		background-color: transparentize($button-outline-text-color, $button-hover-background-color-transparentize-amount);
+		background-color: 
+			transparentize(
+				$button-outline-text-color, 
+				$button-hover-background-color-transparentize-amount
+			);
 		border-color: $button-outline-border-color;
 		color: $button-outline-text-color;
 	}
@@ -266,9 +291,45 @@ small {
 		color: $button-primary-outline-text-color;
 
 		&:hover {
-			background-color: transparentize($button-primary-outline-text-color, $button-hover-background-color-transparentize-amount);
+			background-color: 
+				transparentize(
+					$button-primary-outline-text-color, 
+					$button-hover-background-color-transparentize-amount
+				);
 			border-color: $button-primary-outline-border-color;
 			color: $button-primary-outline-text-color;
+		}
+	}
+
+	&.btn--success {
+		background-color: $button-success-outline-background-color;
+		border-color: $button-success-outline-border-color;
+		color: $button-success-outline-text-color;
+
+		&:hover {
+			background-color: 
+				transparentize(
+					$button-success-outline-text-color, 
+					$button-hover-background-color-transparentize-amount
+				);
+			border-color: $button-success-outline-border-color;
+			color: $button-success-outline-text-color;
+		}
+	}
+
+	&.btn--danger {
+		background-color: $button-danger-outline-background-color;
+		border-color: $button-danger-outline-border-color;
+		color: $button-danger-outline-text-color;
+
+		&:hover {
+			background-color: 
+				transparentize(
+					$button-danger-outline-text-color, 
+					$button-hover-background-color-transparentize-amount
+				);
+			border-color: $button-danger-outline-border-color;
+			color: $button-danger-outline-text-color;
 		}
 	}
 }
@@ -301,6 +362,11 @@ small {
  */
 .btn--pill {
 	border-radius: 2em;
+
+	&.btn--sm,
+	&.btn--lg {
+		@extend .btn--pill;
+	}
 }
 
 /**
@@ -314,10 +380,17 @@ small {
  */
 .btn--gradient {
 	border: none;
-	// box-shadow: $button-gradient-box-shadow;
 
-	$button-gradient-background-color-top: tint($button-background-color, $button-gradient-background-color-top-tint-amount);
-	$button-gradient-background-color-bottom: shade($button-background-color, $button-gradient-background-color-bottom-shade-amount);
+	$button-gradient-background-color-top: 
+		tint(
+			$button-background-color, 
+			$button-gradient-background-color-top-tint-amount
+		);
+	$button-gradient-background-color-bottom: 
+		shade(
+			$button-background-color, 
+			$button-gradient-background-color-bottom-shade-amount
+		);
 
 	@include button-bg-gradient(
 		$button-gradient-background-color-top, 
@@ -326,31 +399,72 @@ small {
 
 	&:hover {
 		@include button-bg-gradient(
-			shade($button-gradient-background-color-top, $button-hover-background-color-shade-amount), 
-			shade($button-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+			shade(
+				$button-gradient-background-color-top, 
+				$button-hover-background-color-shade-amount
+			), 
+			shade(
+				$button-gradient-background-color-bottom, 
+				$button-hover-background-color-shade-amount
+			)
 		);
 	}
 
 	&.btn--primary {
-		$button-primary-gradient-background-color-top: tint($button-primary-background-color, $button-gradient-background-color-top-tint-amount);
-		$button-primary-gradient-background-color-bottom: shade($button-primary-background-color, $button-gradient-background-color-bottom-shade-amount);
+		$button-primary-gradient-background-color-top: 
+			tint(
+				$button-primary-background-color, 
+				$button-gradient-background-color-top-tint-amount
+			);
+		$button-primary-gradient-background-color-bottom: 
+			shade(
+				$button-primary-background-color, 
+				$button-gradient-background-color-bottom-shade-amount
+			);
+
+		$button-gradient-background-color-top-hsl: 
+			hsl(
+				hue($button-primary-gradient-background-color-top) + $button-gradient-background-color-top-hue, 
+				saturation($button-primary-gradient-background-color-top) + $button-gradient-background-color-top-saturation, 
+				lightness($button-primary-gradient-background-color-top) + $button-gradient-background-color-top-lightness
+			);
+		$button-gradient-background-color-bottom-hsl: 
+			hsl(
+				hue($button-primary-gradient-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
+				saturation($button-primary-gradient-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
+				lightness($button-primary-gradient-background-color-bottom) + $button-gradient-background-color-bottom-lightness
+			);
 
 		@include button-bg-gradient(
-			$button-primary-gradient-background-color-top, 
-			$button-primary-gradient-background-color-bottom
+			$button-gradient-background-color-top-hsl,
+			$button-gradient-background-color-bottom-hsl
 		);
 
 		&:hover {
 			@include button-bg-gradient(
-				shade($button-primary-gradient-background-color-top, $button-hover-background-color-shade-amount), 
-				shade($button-primary-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+				shade(
+					$button-gradient-background-color-top-hsl, 
+					$button-hover-background-color-shade-amount
+				), 
+				shade(
+					$button-gradient-background-color-bottom-hsl, 
+					$button-hover-background-color-shade-amount
+				)
 			);
 		}
 	}
 
 	&.btn--secondary {
-		$button-secondary-gradient-background-color-top: tint($button-secondary-background-color, $button-gradient-background-color-top-tint-amount);
-		$button-secondary-gradient-background-color-bottom: shade($button-secondary-background-color, $button-gradient-background-color-bottom-shade-amount);
+		$button-secondary-gradient-background-color-top: 
+			tint(
+				$button-secondary-background-color, 
+				$button-gradient-background-color-top-tint-amount
+			);
+		$button-secondary-gradient-background-color-bottom: 
+			shade(
+				$button-secondary-background-color, 
+				$button-gradient-background-color-bottom-shade-amount
+			);
 
 		@include button-bg-gradient(
 			$button-secondary-gradient-background-color-top, 
@@ -359,22 +473,102 @@ small {
 
 		&:hover {
 			@include button-bg-gradient(
-				shade($button-secondary-gradient-background-color-top, $button-hover-background-color-shade-amount), 
-				shade($button-secondary-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+				shade(
+					$button-secondary-gradient-background-color-top, 
+					$button-hover-background-color-shade-amount
+				), 
+				shade(
+					$button-secondary-gradient-background-color-bottom, 
+					$button-hover-background-color-shade-amount
+				)
 			);
 		}
 	}
 
 	&.btn--success {
-		$button-success-gradient-background-color-top: tint($button-success-background-color, $button-gradient-background-color-top-tint-amount);
-		$button-success-gradient-background-color-bottom: shade($button-success-background-color, $button-gradient-background-color-bottom-shade-amount);
+		$button-success-gradient-background-color-top: 
+			tint(
+				$button-success-background-color, 
+				$button-gradient-background-color-top-tint-amount
+			);
+		$button-success-gradient-background-color-bottom: 
+			shade(
+				$button-success-background-color, 
+				$button-gradient-background-color-bottom-shade-amount
+			);
 
-		@include button-bg-gradient($button-success-gradient-background-color-top, $button-success-gradient-background-color-bottom);
+		$button-gradient-background-color-top-hsl: 
+			hsl(
+				hue($button-success-gradient-background-color-top) + $button-gradient-background-color-top-hue, 
+				saturation($button-success-gradient-background-color-top) + $button-gradient-background-color-top-saturation, 
+				lightness($button-success-gradient-background-color-top) + $button-gradient-background-color-top-lightness
+			);
+		$button-gradient-background-color-bottom-hsl: 
+			hsl(
+				hue($button-success-gradient-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
+				saturation($button-success-gradient-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
+				lightness($button-success-gradient-background-color-bottom) + $button-gradient-background-color-bottom-lightness
+			);
+
+		@include button-bg-gradient(
+			$button-gradient-background-color-top-hsl, 
+			$button-gradient-background-color-bottom-hsl
+		);
 
 		&:hover {
 			@include button-bg-gradient(
-				shade($button-success-gradient-background-color-top, $button-hover-background-color-shade-amount), 
-				shade($button-success-gradient-background-color-bottom, $button-hover-background-color-shade-amount)
+				shade(
+					$button-gradient-background-color-top-hsl, 
+					$button-hover-background-color-shade-amount
+				), 
+				shade(
+					$button-gradient-background-color-bottom-hsl, 
+					$button-hover-background-color-shade-amount
+				)
+			);
+		}
+	}
+
+	&.btn--danger {
+		$button-danger-gradient-background-color-top: 
+			tint(
+				$button-danger-background-color, 
+				$button-gradient-background-color-top-tint-amount
+			);
+		$button-danger-gradient-background-color-bottom: 
+			shade(
+				$button-danger-background-color, 
+				$button-gradient-background-color-bottom-shade-amount
+			);
+
+		$button-gradient-background-color-top-hsl: 
+			hsl(
+				hue($button-danger-gradient-background-color-top) + $button-gradient-background-color-top-hue, 
+				saturation($button-danger-gradient-background-color-top) + $button-gradient-background-color-top-saturation, 
+				lightness($button-danger-gradient-background-color-top) + $button-gradient-background-color-top-lightness
+			);
+		$button-gradient-background-color-bottom-hsl: 
+			hsl(
+				hue($button-danger-gradient-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
+				saturation($button-danger-gradient-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
+				lightness($button-danger-gradient-background-color-bottom) + $button-gradient-background-color-bottom-lightness
+			);
+
+		@include button-bg-gradient(
+			$button-gradient-background-color-top-hsl, 
+			$button-gradient-background-color-bottom-hsl
+		);
+
+		&:hover {
+			@include button-bg-gradient(
+				shade(
+					$button-gradient-background-color-top-hsl, 
+					$button-hover-background-color-shade-amount
+				), 
+				shade(
+					$button-gradient-background-color-bottom-hsl, 
+					$button-hover-background-color-shade-amount
+				)
 			);
 		}
 	}
@@ -385,11 +579,31 @@ small {
  * `.btn--expanded`
  *
  *     @example
- *     a.btn.btn--primary.btn--gradient.btn--expanded Expanded button
+ *     a.btn.btn--primary.btn--lg.btn--expanded Expanded button
  */
 .btn--expanded {
 	display: block;
 	width: 100%;
+}
+
+/**
+ * Small and large buttons:
+ * `.btn--sm` `.btn--lg`
+ *
+ *     @example
+ *     a.btn.btn--primary.btn--sm Small button
+ *     a.btn.btn--primary.btn--lg Large button
+ */
+.btn--sm {
+	border-radius: $button-small-border-radius;
+	font-size: $button-small-font-size;
+	padding: $button-small-padding;
+}
+
+.btn--lg {
+	border-radius: $button-large-border-radius;
+	font-size: $button-large-font-size;
+	padding: $button-large-padding;
 }
 
 /* ========================================================================== */
@@ -400,16 +614,13 @@ small {
 
 ol, ul {
 	list-style-position: outside;
-	// padding: 0 0 0 calc(1.5rem - 0.313rem);
 }
 
 ul {
 	// border-left: 0.313rem solid $color-cyan-1;
-	// list-style: none;
 	list-style: disc outside;
 
-	margin-left: $base-spacing-unit;
-	// margin-top: $half-spacing-unit;
+	padding-left: $half-spacing-unit * 2.5;
 
 	&:not(last-child) {
 		margin-bottom: $half-spacing-unit;
@@ -431,6 +642,29 @@ ul {
  */
 .lst-unstyled {
 	list-style: none;
+	padding-left: 0;
+}
+
+ /**
+ * Inline list:
+ * `.lst-inline`
+ *
+ *     @example
+ *     ul.lst-inline
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ */
+.lst-inline {
+	@extend .lst-unstyled;
+
+	li {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: $half-spacing-unit;
+		}
+	}
 }
 
 /* ========================================================================== */
