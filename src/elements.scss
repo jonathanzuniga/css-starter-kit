@@ -4,6 +4,9 @@
 
 /* ========================================================================== */
 
+/***
+ * Content:
+ */
 * {
 	margin: 0;
 	padding: 0;
@@ -13,6 +16,12 @@ body {
 	color: $text-color;
 	font-size: $base-font-size;
 	line-height: $line-height-ratio;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+	margin-bottom: $half-spacing-unit;
 }
 
 a {
@@ -29,6 +38,37 @@ a {
 	}
 }
 
+/**
+ * Bold and italic:
+ * `strong`
+ * `i`
+ *
+ *     @example
+ *     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     br
+ *     i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+b,
+strong {
+	font-weight: 700;
+}
+
+i {
+	font-style: italic;
+}
+
+/**
+ * Heading:
+ * `h1` `h2` `h3` `h4` `h5` `h6`
+ *
+ *     @example
+ *     h1 Heading
+ *     h2 Heading
+ *     h3 Heading
+ *     h4 Heading
+ *     h5 Heading
+ *     h6 Heading
+ */
 @each $heading, $size in $headings-sizes {
 	#{$heading} {
 		font-size: px-to-em($size);
@@ -38,17 +78,6 @@ a {
 			margin-top: px-to-rem($size) + 0.25;
 		}
 	}
-}
-
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure {
-	margin-bottom: $half-spacing-unit;
-}
-
-b,
-strong {
-	font-weight: 700;
 }
 
 img {
