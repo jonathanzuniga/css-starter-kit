@@ -329,6 +329,9 @@
 									<li>
 										<a href="helpers.html#don-t-float">Don't float</a>
 									</li>
+									<li>
+										<a href="helpers.html#responsive-floats">Responsive floats</a>
+									</li>
 								</ul>
 							</li>
 							<li>
