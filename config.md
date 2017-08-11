@@ -54,7 +54,8 @@
 		}
 
 		.sidebar h1, 
-		.sidebar h2 {
+		.sidebar h2,
+		.sidebar h3 {
 			border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 			margin-bottom: 20px;
 			padding-bottom: 20px;
@@ -62,6 +63,10 @@
 
 		.sidebar h1 {
 			margin-top: 2rem;
+		}
+
+		div > .lst-unstyled > li > a {
+			font-weight: bold;
 		}
 	</style>
 
@@ -86,9 +91,7 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<h2>
-							Elements
-						</h2>
+						<h3>Elements</h3>
 
 						<ul class="lst-unstyled">
 							<li>
@@ -124,6 +127,14 @@
 								</ul>
 							</li>
 							<li>
+								<a href="elements.html#forms">Forms</a>
+								<ul class="lst-unstyled">
+									<li>
+										<a href="elements.html#input">Input</a>
+									</li>
+								</ul>
+							</li>
+							<li>
 								<a href="elements.html#lists">Lists</a>
 								<ul class="lst-unstyled">
 									<li>
@@ -148,9 +159,7 @@
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<h2>
-							Layout
-						</h2>
+						<h3>Layout</h3>
 
 						<ul class="lst-unstyled">
 							<li>
@@ -232,9 +241,7 @@
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-12">
-						<h2>
-							Helpers
-						</h2>
+						<h3>Helpers</h3>
 
 						<ul class="lst-unstyled">
 							<li>

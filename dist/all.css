@@ -890,11 +890,15 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-bottom: 1rem; }
 
+b,
+strong {
+  font-weight: 700; }
+
 img {
   max-width: 100%; }
 
 blockquote {
-  border-left: 0.313rem solid rgba(55, 55, 55, 0.15);
+  border-left: 0.313rem solid rgba(55, 55, 55, 0.17);
   padding: 0 0 0 calc(1.5rem - 0.313rem); }
   blockquote p {
     font-size: 1.125em;
@@ -1223,6 +1227,30 @@ small {
 
 /* ========================================================================== */
 /***
+ * Forms:
+ */
+/**
+ * Input:
+ * `.input`
+ *
+ *     @example
+ *     input(type='text', placeholder='Text input').input
+ */
+.input {
+  border: 2px solid #d2d2d2;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  padding: 0.25em 0.5em;
+  width: 100%; }
+  .input:active {
+    border-color: #51b5d0; }
+  .input:focus {
+    border-color: #51b5d0; }
+  .input:hover {
+    border-color: #51b5d0; }
+
+/* ========================================================================== */
+/***
  * Lists:
  */
 ol, ul {
@@ -1305,10 +1333,10 @@ th {
  *                 td Table data
  */
 .tbl tr + tr th, .tbl tr + tr td {
-  border-top: 1px solid rgba(55, 55, 55, 0.15); }
+  border-top: 1px solid rgba(55, 55, 55, 0.17); }
 
 .tbl th {
-  border-bottom: 2px solid rgba(55, 55, 55, 0.15);
+  border-bottom: 2px solid rgba(55, 55, 55, 0.17);
   font-weight: bold; }
 
 .tbl th, .tbl td {
@@ -1741,7 +1769,7 @@ th {
  *                 td Table data
  */
 .tbl-bordered {
-  border: 1px solid rgba(55, 55, 55, 0.15); }
+  border: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Responsive table:
@@ -1791,7 +1819,7 @@ th {
  *     div.brd.p-5
  */
 .brd, .brdc-black, .brdc-white, .brdc-blue-1, .brdc-blue-2, .brdc-blue-3, .brdc-blue-4, .brdc-blue-5, .brdc-blue-6, .brdc-blue-7, .brdc-green-1, .brdc-green-2, .brdc-green-3, .brdc-green-4, .brdc-green-5, .brdc-green-6, .brdc-green-7, .brdc-grey-1, .brdc-grey-2, .brdc-grey-3, .brdc-grey-4, .brdc-grey-5, .brdc-grey-6, .brdc-grey-7, .brdc-red-1, .brdc-red-2, .brdc-red-3, .brdc-red-4, .brdc-red-5, .brdc-red-6, .brdc-red-7, .brdc-yellow-1, .brdc-yellow-2, .brdc-yellow-3, .brdc-yellow-4, .brdc-yellow-5, .brdc-yellow-6, .brdc-yellow-7 {
-  border: 1px solid rgba(55, 55, 55, 0.15); }
+  border: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Top border:
@@ -1801,7 +1829,7 @@ th {
  *     div.brd-top.p-5
  */
 .brd-top {
-  border-top: 1px solid rgba(55, 55, 55, 0.15); }
+  border-top: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Right border:
@@ -1811,7 +1839,7 @@ th {
  *     div.brd-right.p-5
  */
 .brd-right {
-  border-right: 1px solid rgba(55, 55, 55, 0.15); }
+  border-right: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Bottom border:
@@ -1821,7 +1849,7 @@ th {
  *     div.brd-bottom.p-5
  */
 .brd-bottom {
-  border-bottom: 1px solid rgba(55, 55, 55, 0.15); }
+  border-bottom: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Left border:
@@ -1831,7 +1859,7 @@ th {
  *     div.brd-left.p-5
  */
 .brd-left {
-  border-left: 1px solid rgba(55, 55, 55, 0.15); }
+  border-left: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Right and left border:
@@ -1841,8 +1869,8 @@ th {
  *     div.brd-x.p-5
  */
 .brd-x {
-  border-right: 1px solid rgba(55, 55, 55, 0.15);
-  border-left: 1px solid rgba(55, 55, 55, 0.15); }
+  border-right: 1px solid rgba(55, 55, 55, 0.17);
+  border-left: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Top and bottom border:
@@ -1852,8 +1880,8 @@ th {
  *     div.brd-y.p-5
  */
 .brd-y {
-  border-top: 1px solid rgba(55, 55, 55, 0.15);
-  border-bottom: 1px solid rgba(55, 55, 55, 0.15); }
+  border-top: 1px solid rgba(55, 55, 55, 0.17);
+  border-bottom: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Remove borders:

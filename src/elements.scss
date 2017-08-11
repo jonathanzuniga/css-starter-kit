@@ -46,13 +46,14 @@ ul, ol, dl, figure {
 	margin-bottom: $half-spacing-unit;
 }
 
+b,
+strong {
+	font-weight: 700;
+}
+
 img {
 	max-width: 100%;
 }
-
-// ol, ul {
-// 	padding-left: $spacing-unit - 8;
-// }
 
 blockquote {
 	border-left: 0.313rem solid $border-color;
@@ -604,6 +605,41 @@ small {
 	border-radius: $button-large-border-radius;
 	font-size: $button-large-font-size;
 	padding: $button-large-padding;
+}
+
+/* ========================================================================== */
+
+/***
+ * Forms:
+ */
+
+/**
+ * Input:
+ * `.input`
+ *
+ *     @example
+ *     input(type='text', placeholder='Text input').input
+ */
+.input {
+	border: $input-border;
+	border-radius: $input-border-radius;
+	font-size: $base-font-size;
+
+	padding: $input-padding-y $input-padding-x;
+
+	width: 100%;
+
+	&:active {
+		border-color: $input-active-border-color;
+	}
+
+	&:focus {
+		border-color: $input-focus-border-color;
+	}
+
+	&:hover {
+		border-color: $input-hover-border-color;
+	}
 }
 
 /* ========================================================================== */
