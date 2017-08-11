@@ -13,13 +13,6 @@ html, body {
 	padding: 0;
 }
 
-// @media screen and (min-width: 768px) {
-// 	.container {
-// 		padding-left: 16px;
-// 		padding-right: 16px;
-// 	}
-// }
-
 /* ========================================================================== */
 
 .row {
@@ -410,10 +403,10 @@ html, body {
 
 /**
  * Half size gutters:
- * `.gutters-half` `.gutters-half-*`
+ * `.gutters-half` `.gutters-*`
  *
  *     @example
- *     div.row.gutters-half-md
+ *     div.row.gutters-md-half
  *         div.col-8
  *             div.bgc-grey-2 &nbsp
  *         div.col-4
@@ -438,10 +431,10 @@ html, body {
 
 /**
  * Remove gutters:
- * `.gutters-0` `.gutters-0-*`
+ * `.gutters-0` `.gutters-*`
  *
  *     @example
- *     div.row.gutters-0-md
+ *     div.row.gutters-md-0
  *         div.col-8
  *             div.bgc-grey-2 &nbsp
  *         div.col-4
@@ -466,11 +459,11 @@ html, body {
 
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.gutters-half-#{$size} {
+		.gutters-#{$size}-half {
 			@include gutter-half;
 		}
 
-		.gutters-0-#{$size} {
+		.gutters-#{$size}-0 {
 			@include gutter-0;
 		}
 	}
