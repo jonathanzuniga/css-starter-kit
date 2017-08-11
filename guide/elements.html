@@ -93,10 +93,25 @@
                 <a href="elements.html#content">Content</a>
                 <ul class="lst-unstyled">
                   <li>
+                    <a href="elements.html#blockquote">Blockquote</a>
+                  </li>
+                  <li>
                     <a href="elements.html#bold-and-italic">Bold and italic</a>
                   </li>
                   <li>
+                    <a href="elements.html#code">Code</a>
+                  </li>
+                  <li>
+                    <a href="elements.html#code-block">Code block</a>
+                  </li>
+                  <li>
                     <a href="elements.html#heading">Heading</a>
+                  </li>
+                  <li>
+                    <a href="elements.html#list">List</a>
+                  </li>
+                  <li>
+                    <a href="elements.html#small">Small</a>
                   </li>
                 </ul>
               </li>
@@ -128,7 +143,7 @@
                     <a href="elements.html#expanded-button">Expanded button</a>
                   </li>
                   <li>
-                    <a href="elements.html#small-and-large-buttons">Small and large buttons</a>
+                    <a href="elements.html#button-size">Button size</a>
                   </li>
                 </ul>
               </li>
@@ -434,6 +449,37 @@
         <div class="sg-container">
           <section class="sg-section sg-section-content">
             <h2 id="content" class="sg">Content</h2>
+            <section class="sg-block sg-section-blockquote">
+              <div class="sg-text">
+                <h3 id="blockquote" class="sg">Blockquote</h3>
+                <p class="sg">
+                  <code class="sg">blockquote</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas">
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </blockquote>
+                  <blockquote>
+                    <p class="m-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <footer>A common form of
+                      <cite>lorem ipsum</cite>
+                    </footer>
+                  </blockquote>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;m-bottom-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>A common form of
+    <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>
+              </div>
+            </section>
             <section class="sg-block sg-section-bold-and-italic">
               <div class="sg-text">
                 <h3 id="bold-and-italic" class="sg">Bold and italic</h3>
@@ -450,6 +496,37 @@
                 </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">i</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span></pre>
+              </div>
+            </section>
+            <section class="sg-block sg-section-code">
+              <div class="sg-text">
+                <h3 id="code" class="sg">Code</h3>
+                <p class="sg">
+                  <code class="sg">code</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas">
+                  <p>Use
+                    <code>&lt;code&gt;</code>for inline code that can wrap.</p>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Use
+  <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;code&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>for inline code that can wrap.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+              </div>
+            </section>
+            <section class="sg-block sg-section-code-block">
+              <div class="sg-text">
+                <h3 id="code-block" class="sg">Code block</h3>
+                <p class="sg">
+                  <code class="sg">pre</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas"><pre><code>body {
+    font-size: 100%;
+}</code></pre>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>body {
+    font-size: 100%;
+}<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></pre>
               </div>
             </section>
             <section class="sg-block sg-section-heading">
@@ -478,6 +555,63 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+              </div>
+            </section>
+            <section class="sg-block sg-section-list">
+              <div class="sg-text">
+                <h3 id="list" class="sg">List</h3>
+                <p class="sg">
+                  <code class="sg">ol</code>
+                  <code class="sg">ul</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas">
+                  <div class="row">
+                    <div class="col-6">
+                      <ol>
+                        <li>List item</li>
+                        <li>List item</li>
+                        <li>List item</li>
+                      </ol>
+                    </div>
+                    <div class="col-6">
+                      <ul>
+                        <li>List item</li>
+                        <li>List item</li>
+                        <li>List item</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+              </div>
+            </section>
+            <section class="sg-block sg-section-small">
+              <div class="sg-text">
+                <h3 id="small" class="sg">Small</h3>
+                <p class="sg">
+                  <code class="sg">small</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas">
+                  <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span></pre>
               </div>
             </section>
           </section>
@@ -610,9 +744,9 @@
                 </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--lg btn--expanded&quot;</span>&gt;</span>Expanded button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
               </div>
             </section>
-            <section class="sg-block sg-section-small-and-large-buttons">
+            <section class="sg-block sg-section-button-size">
               <div class="sg-text">
-                <h3 id="small-and-large-buttons" class="sg">Small and large buttons</h3>
+                <h3 id="button-size" class="sg">Button size</h3>
                 <p class="sg">
                   <code class="sg">.btn--sm</code>
                   <code class="sg">.btn--lg</code>

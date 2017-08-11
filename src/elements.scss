@@ -38,10 +38,51 @@ a {
 	}
 }
 
+img {
+	max-width: 100%;
+}
+
+/**
+ * Blockquote:
+ * `blockquote`
+ *
+ *     @example
+ *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *         footer A common form of 
+ *             cite lorem ipsum
+ */
+blockquote {
+	border-left: 0.313rem solid $border-color;
+	padding: 0 0 0 ($base-spacing-unit - 0.5) - 0.313;
+
+	p {
+		font-size: 1.125em;
+
+		&:after {
+			content: '”';
+		}
+
+		&:before {
+			content: '“';
+		}
+	}
+
+	footer {
+		font-size: $small-font-size;
+
+		&:before {
+			content: '— ';
+		}
+	}
+}
+
 /**
  * Bold and italic:
- * `strong`
- * `i`
+ * `strong` `i`
  *
  *     @example
  *     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -55,6 +96,66 @@ strong {
 
 i {
 	font-style: italic;
+}
+
+/**
+ * Code:
+ * `code`
+ *
+ *     @example
+ *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
+ */
+code, pre {
+	font-family: $mono-font-family;
+}
+
+code {
+	background-color: $code-background-color;
+	border-radius: $code-border-radius;
+	font-size: $code-font-size;
+	padding: $quarter-spacing-unit / 2;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+
+	figcaption {
+		font-size: $small-font-size;
+		font-style: italic;
+		text-align: center;
+	}
+
+	code {
+		background-color: none;
+		padding: 0;
+	}
+
+	img {
+		margin: 0;
+	}
+}
+
+/**
+ * Code block:
+ * `pre`
+ *
+ *     @example
+ *     pre
+ *         code
+ *             | body {
+ *             |     font-size: 100%;
+ *             | }
+ */
+pre {
+	background-color: $pre-background-color;
+	border-radius: $pre-border-radius;
+	overflow-x: auto;
+	padding: $quarter-spacing-unit $half-spacing-unit;
+
+	code {
+		background-color: transparent;
+	}
 }
 
 /**
@@ -80,83 +181,43 @@ i {
 	}
 }
 
-img {
-	max-width: 100%;
-}
+/**
+ * List:
+ * `ol` `ul`
+ *
+ *     @example
+ *     div.row
+ *         div.col-6
+ *             ol
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ *         div.col-6
+ *             ul
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ */
+ol, ul {
+	list-style-position: outside;
+	padding-left: $half-spacing-unit * 2.5;
 
-blockquote {
-	border-left: 0.313rem solid $border-color;
-	padding: 0 0 0 calc(1.5rem - 0.313rem);
-
-	p {
-		font-size: 1.125em;
-		font-weight: 500;
-
-		&:after {
-			content: '”';
-		}
-
-		&:before {
-			content: '“';
-		}
+	&:not(last-child) {
+		margin-bottom: $half-spacing-unit;
 	}
 }
 
-figure {
-	margin-left: 0;
-	margin-right: 0;
-
-	img {
-		margin: 0;
-	}
-
-	figcaption {
-		font-size: $small-font-size;
-		font-style: italic;
-		text-align: center;
-	}
-
-	code {
-		background-color: none;
-		padding: 0;
-	}
+ul {
+	list-style-type: disc;
 }
 
-pre, code {
-	font-family: $mono-font-family;
-	font-weight: normal;
-}
-
-pre {
-	background-color: $pre-background-color;
-	border-radius: $pre-border-radius;
-	overflow-x: auto;
-	padding: $quarter-spacing-unit $half-spacing-unit;
-
-	code {
-		background-color: transparent;
-	}
-}
-
-code {
-	background-color: $code-background-color;
-	border-radius: $code-border-radius;
-	font-size: $code-font-size;
-	padding: $quarter-spacing-unit / 2;
-
-	// textarea {
-	// 	background: #eee;
-	// 	// border: 1px solid $color-gray-4;
-	// 	font-size: 0.9em;
-	// 	padding: 0.5rem 1rem;
-	// 	white-space: pre-wrap;
-
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	min-height: 150px;
-	// }
-}
-
+/**
+ * Small:
+ * `small`
+ *
+ *     @example
+ *     small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 small {
 	font-size: $small-font-size;
 }
@@ -617,7 +678,7 @@ small {
 }
 
 /**
- * Small and large buttons:
+ * Button size:
  * `.btn--sm` `.btn--lg`
  *
  *     @example
@@ -676,21 +737,6 @@ small {
 /***
  * Lists:
  */
-
-ol, ul {
-	list-style-position: outside;
-}
-
-ul {
-	// border-left: 0.313rem solid $color-cyan-1;
-	list-style: disc outside;
-
-	padding-left: $half-spacing-unit * 2.5;
-
-	&:not(last-child) {
-		margin-bottom: $half-spacing-unit;
-	}
-}
 
  /**
  * Unstyled list:

@@ -857,10 +857,39 @@ a {
     color: #333;
     text-decoration: none; }
 
+img {
+  max-width: 100%; }
+
+/**
+ * Blockquote:
+ * `blockquote`
+ *
+ *     @example
+ *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *         footer A common form of 
+ *             cite lorem ipsum
+ */
+blockquote {
+  border-left: 0.313rem solid rgba(55, 55, 55, 0.17);
+  padding: 0 0 0 1.187rem; }
+  blockquote p {
+    font-size: 1.125em; }
+    blockquote p:after {
+      content: '”'; }
+    blockquote p:before {
+      content: '“'; }
+  blockquote footer {
+    font-size: 80%; }
+    blockquote footer:before {
+      content: '— '; }
+
 /**
  * Bold and italic:
- * `strong`
- * `i`
+ * `strong` `i`
  *
  *     @example
  *     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -873,6 +902,54 @@ strong {
 
 i {
   font-style: italic; }
+
+/**
+ * Code:
+ * `code`
+ *
+ *     @example
+ *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
+ */
+code, pre {
+  font-family: Menlo, Courier, monospace; }
+
+code {
+  background-color: rgba(55, 55, 55, 0.08);
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  padding: 0.25rem; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+  figure figcaption {
+    font-size: 80%;
+    font-style: italic;
+    text-align: center; }
+  figure code {
+    background-color: none;
+    padding: 0; }
+  figure img {
+    margin: 0; }
+
+/**
+ * Code block:
+ * `pre`
+ *
+ *     @example
+ *     pre
+ *         code
+ *             | body {
+ *             |     font-size: 100%;
+ *             | }
+ */
+pre {
+  background-color: rgba(55, 55, 55, 0.05);
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  padding: 0.5rem 1rem; }
+  pre code {
+    background-color: transparent; }
 
 /**
  * Heading:
@@ -922,51 +999,39 @@ h6 {
   h6:not(.first-child) {
     margin-top: 1.25rem; }
 
-img {
-  max-width: 100%; }
+/**
+ * List:
+ * `ol` `ul`
+ *
+ *     @example
+ *     div.row
+ *         div.col-6
+ *             ol
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ *         div.col-6
+ *             ul
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ */
+ol, ul {
+  list-style-position: outside;
+  padding-left: 2.5rem; }
+  ol:not(last-child), ul:not(last-child) {
+    margin-bottom: 1rem; }
 
-blockquote {
-  border-left: 0.313rem solid rgba(55, 55, 55, 0.17);
-  padding: 0 0 0 calc(1.5rem - 0.313rem); }
-  blockquote p {
-    font-size: 1.125em;
-    font-weight: 500; }
-    blockquote p:after {
-      content: '”'; }
-    blockquote p:before {
-      content: '“'; }
+ul {
+  list-style-type: disc; }
 
-figure {
-  margin-left: 0;
-  margin-right: 0; }
-  figure img {
-    margin: 0; }
-  figure figcaption {
-    font-size: 80%;
-    font-style: italic;
-    text-align: center; }
-  figure code {
-    background-color: none;
-    padding: 0; }
-
-pre, code {
-  font-family: Menlo, Courier, monospace;
-  font-weight: normal; }
-
-pre {
-  background-color: rgba(55, 55, 55, 0.05);
-  border-radius: 0.25rem;
-  overflow-x: auto;
-  padding: 0.5rem 1rem; }
-  pre code {
-    background-color: transparent; }
-
-code {
-  background-color: rgba(55, 55, 55, 0.08);
-  border-radius: 0.25rem;
-  font-size: 0.9em;
-  padding: 0.25rem; }
-
+/**
+ * Small:
+ * `small`
+ *
+ *     @example
+ *     small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 small {
   font-size: 80%; }
 
@@ -1236,7 +1301,7 @@ small {
   width: 100%; }
 
 /**
- * Small and large buttons:
+ * Button size:
  * `.btn--sm` `.btn--lg`
  *
  *     @example
@@ -1281,15 +1346,6 @@ small {
 /***
  * Lists:
  */
-ol, ul {
-  list-style-position: outside; }
-
-ul {
-  list-style: disc outside;
-  padding-left: 2.5rem; }
-  ul:not(last-child) {
-    margin-bottom: 1rem; }
-
 /**
  * Unstyled list:
  * `.lst-unstyled`

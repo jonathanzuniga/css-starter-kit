@@ -98,10 +98,25 @@
 								<a href="elements.html#content">Content</a>
 								<ul class="lst-unstyled">
 									<li>
+										<a href="elements.html#blockquote">Blockquote</a>
+									</li>
+									<li>
 										<a href="elements.html#bold-and-italic">Bold and italic</a>
 									</li>
 									<li>
+										<a href="elements.html#code">Code</a>
+									</li>
+									<li>
+										<a href="elements.html#code-block">Code block</a>
+									</li>
+									<li>
 										<a href="elements.html#heading">Heading</a>
+									</li>
+									<li>
+										<a href="elements.html#list">List</a>
+									</li>
+									<li>
+										<a href="elements.html#small">Small</a>
 									</li>
 								</ul>
 							</li>
@@ -133,7 +148,7 @@
 										<a href="elements.html#expanded-button">Expanded button</a>
 									</li>
 									<li>
-										<a href="elements.html#small-and-large-buttons">Small and large buttons</a>
+										<a href="elements.html#button-size">Button size</a>
 									</li>
 								</ul>
 							</li>
