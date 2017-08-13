@@ -68,11 +68,11 @@ $link-hover-decoration: none;
 
 // Code
 
-$mono-font-family: Menlo, Courier, monospace;
+$mono-font-family: monospace;
 
 $code-border-radius: $quarter-spacing-unit / 2;
 $code-background-color: transparentize(get-color('Grey 1'), 0.92);
-$code-font-size: 0.9em;
+$code-font-size: 1em;
 
 $pre-background-color: transparentize(get-color('Grey 1'), 0.95);
 $pre-border-radius: $quarter-spacing-unit / 2;
@@ -246,8 +246,8 @@ $smcaps-margin-right: 0.188em; // 3px
 
 // Font size
 
-$small-font-size: 80%;
-$large-font-size: 120%;
+$small-font-size: px-to-rem($base-font-size - 3); // 0.75em (12px) // 80%;
+$large-font-size: px-to-rem($base-font-size + 4); // 1.25em (20px) // 120%;
 
 // Cantidad de espacios para margins & paddings,
 $spacings: 5 !default;
