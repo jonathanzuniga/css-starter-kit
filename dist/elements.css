@@ -47,10 +47,14 @@ blockquote {
   padding: 0 0 0 1.187rem; }
   blockquote p {
     font-size: 1.125em; }
-    blockquote p:after {
-      content: '”'; }
+    blockquote p:before, blockquote p:after {
+      font-weight: bold; }
     blockquote p:before {
-      content: '“'; }
+      content: '“';
+      margin-right: 0.25rem; }
+    blockquote p:after {
+      content: '”';
+      margin-left: 0.25rem; }
   blockquote footer {
     font-size: 0.8125rem; }
     blockquote footer:before {
@@ -1023,6 +1027,10 @@ th {
  */
 .tbl-bordered {
   border: 1px solid rgba(55, 55, 55, 0.17); }
+
+.tbl-scroll {
+  display: block;
+  overflow-x: auto; }
 
 /**
  * Responsive table:

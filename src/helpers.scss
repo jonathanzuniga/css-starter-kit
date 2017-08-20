@@ -315,20 +315,30 @@
  *     orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
 .dcap {
+	background-color: $dropcap-background-color;
 	border: $dropcap-border;
 	color: $dropcap-color;
 	display: block;
 	float: left;
-	font-size: $dropcap-size;
-	font-weight: $dropcap-weight;
+
+	font-size: $dropcap-font-size;
+	font-style: $dropcap-font-style;
+	font-weight: $dropcap-font-weight;
+
+	letter-spacing: $dropcap-letter-spacing;
 	line-height: $dropcap-line-height;
-	margin-right: $dropcap-margin-right;
+
 	margin-top: $dropcap-margin-top;
-	text-align: center;
-	text-shadow: $dropcap-shadow;
+	margin-right: $dropcap-margin-right;
+	padding: $dropcap-padding;
+
+	text-shadow: $dropcap-text-shadow;
 
 	width: $dropcap-width;
 	height: $dropcap-height;
+
+	text-align: $dropcap-text-align;
+	vertical-align: $dropcap-vertical-align;
 }
 
 .smcaps {
@@ -899,4 +909,16 @@
  */
 .maxh-100 {
 	max-height: 100%;
+}
+
+.content-indent {
+	// blockquote, pre,
+	// ul, ol, dl, figure {
+	// 	margin-top: $half-spacing-unit;
+	// }
+
+	p + p {
+		margin-bottom: 0;
+		text-indent: $half-spacing-unit + 0.5;
+	}
 }

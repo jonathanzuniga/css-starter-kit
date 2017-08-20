@@ -62,12 +62,19 @@ blockquote {
 	p {
 		font-size: 1.125em;
 
+		&:before,
 		&:after {
-			content: '”';
+			font-weight: bold;
 		}
 
 		&:before {
 			content: '“';
+			margin-right: $quarter-spacing-unit / 2;
+		}
+
+		&:after {
+			content: '”';
+			margin-left: $quarter-spacing-unit / 2;
 		}
 	}
 
@@ -883,6 +890,11 @@ th {
  */
 .tbl-bordered {
 	border: 1px solid $border-color;
+}
+
+.tbl-scroll {
+	display: block;
+	overflow-x: auto;
 }
 
 /**
