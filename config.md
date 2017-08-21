@@ -70,7 +70,7 @@
 			margin-top: -0.25rem;
 		}
 
-		div > .lst-unstyled > li > a {
+		div > .ls-unstyled > li > a {
 			font-weight: bold;
 		}
 	</style>
@@ -98,10 +98,10 @@
 					<div class="col-xs-12 col-sm-6 col-md-12">
 						<h3>Elements</h3>
 
-						<ul class="lst-unstyled">
+						<ul class="ls-unstyled">
 							<li>
 								<a href="elements.html#content">Content</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="elements.html#blockquote">Blockquote</a>
 									</li>
@@ -127,7 +127,7 @@
 							</li>
 							<li>
 								<a href="elements.html#buttons">Buttons</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="elements.html#button">Button</a>
 									</li>
@@ -159,7 +159,7 @@
 							</li>
 							<li>
 								<a href="elements.html#forms">Forms</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="elements.html#input">Input</a>
 									</li>
@@ -167,7 +167,7 @@
 							</li>
 							<li>
 								<a href="elements.html#lists">Lists</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="elements.html#unstyled-list">Unstyled list</a>
 									</li>
@@ -175,7 +175,7 @@
 							</li>
 							<li>
 								<a href="elements.html#tables">Tables</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="elements.html#table">Table</a>
 									</li>
@@ -185,6 +185,9 @@
 									<li>
 										<a href="elements.html#responsive-table">Responsive table</a>
 									</li>
+									<li>
+										<a href="elements.html#scrolling-table">Scrolling table</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -192,10 +195,10 @@
 					<div class="col-xs-12 col-sm-6 col-md-12">
 						<h3>Layout</h3>
 
-						<ul class="lst-unstyled">
+						<ul class="ls-unstyled">
 							<li>
 								<a href="layout.html#flex-grid">Flex grid</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#rows-and-columns">Rows and columns</a>
 									</li>
@@ -203,13 +206,13 @@
 							</li>
 							<li>
 								<a href="layout.html#responsive-classes">Responsive classes</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#columns">Columns</a>
 									</li>
 								</ul>
 								<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
 									</li>
@@ -229,7 +232,7 @@
 							</li>
 							<li>
 								<a href="layout.html#vertical-modifiers">Vertical modifiers</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
 									</li>
@@ -252,7 +255,7 @@
 							</li>
 							<li>
 								<a href="layout.html#offsets">Offsets</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#offsetting-columns">Offsetting columns</a>
 									</li>
@@ -260,7 +263,7 @@
 							</li>
 							<li>
 								<a href="layout.html#offsets">Gutters</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="layout.html#half-size-gutters">Half size gutters</a>
 									</li>
@@ -274,10 +277,10 @@
 					<div class="col-xs-12 col-sm-6 col-md-12">
 						<h3>Helpers</h3>
 
-						<ul class="lst-unstyled">
+						<ul class="ls-unstyled">
 							<li>
 								<a href="helpers.html#borders">Borders</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#four-borders">Four borders</a>
 									</li>
@@ -306,7 +309,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#border-radius">Border radius</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#rounded-four-corners">Rounded four corners</a>
 									</li>
@@ -350,7 +353,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#floats">Floats</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#float-left">Float left</a>
 									</li>
@@ -373,7 +376,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#font-weight">Font weight</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#font-weight-thin">Font weight thin</a>
 									</li>
@@ -411,7 +414,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#text-alignment">Text alignment</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#center-aligned-text">Center aligned text</a>
 									</li>
@@ -425,7 +428,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#text-selection">Text selection</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
 									</li>
@@ -436,7 +439,7 @@
 							</li>
 							<li>
 								<a href="helpers.html#text-transform">Text transform</a>
-								<ul class="lst-unstyled">
+								<ul class="ls-unstyled">
 									<li>
 										<a href="helpers.html#capitalized-text">Capitalized text</a>
 									</li>

@@ -1351,10 +1351,10 @@ small {
  */
 /**
  * Unstyled list:
- * `.lst-unstyled`
+ * `.ls-unstyled`
  *
  *     @example
- *     ul.lst-unstyled
+ *     ul.ls-unstyled
  *         li Apricot
  *         li Banana
  *         li Cherry
@@ -1362,23 +1362,23 @@ small {
  *                 li Caramel
  *                 li Ice cream
  */
-.lst-unstyled, .lst-inline {
+.ls-unstyled, .ls-inline {
   list-style: none;
   padding-left: 0; }
 
 /**
  * Inline list:
- * `.lst-inline`
+ * `.ls-inline`
  *
  *     @example
- *     ul.lst-inline
+ *     ul.ls-inline
  *         li Apricot
  *         li Banana
  *         li Cherry
  */
-.lst-inline li {
+.ls-inline li {
   display: inline-block; }
-  .lst-inline li:not(:last-child) {
+  .ls-inline li:not(:last-child) {
     margin-right: 1rem; }
 
 /* ========================================================================== */
@@ -1858,10 +1858,6 @@ th {
 .tbl-bordered {
   border: 1px solid rgba(55, 55, 55, 0.17); }
 
-.tbl-scroll {
-  display: block;
-  overflow-x: auto; }
-
 /**
  * Responsive table:
  * `.tbl-responsive`
@@ -1893,10 +1889,39 @@ th {
 @media screen and (max-width: 767px) {
   .tbl-responsive {
     display: block;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar; }
-    .tbl-responsive th, .tbl-responsive td {
-      white-space: nowrap; } }
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: hidden; } }
+
+/**
+ * Scrolling table:
+ * `.tbl-scroll`
+ *
+ *     @example
+ *     table.tbl.tbl-scroll
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl-scroll {
+  display: block;
+  overflow-x: auto; }
+  .tbl-scroll th, .tbl-scroll td {
+    white-space: nowrap; }
 
 /* ========================================================================== */
 /***
@@ -1904,84 +1929,84 @@ th {
  */
 /**
  * Four borders:
- * `.brd`
+ * `.bd`
  *
  *     @example
- *     div.brd.p-5
+ *     div.bd.p-5
  */
-.brd, .brdc-black, .brdc-white, .brdc-blue-1, .brdc-blue-2, .brdc-blue-3, .brdc-blue-4, .brdc-blue-5, .brdc-blue-6, .brdc-blue-7, .brdc-green-1, .brdc-green-2, .brdc-green-3, .brdc-green-4, .brdc-green-5, .brdc-green-6, .brdc-green-7, .brdc-grey-1, .brdc-grey-2, .brdc-grey-3, .brdc-grey-4, .brdc-grey-5, .brdc-grey-6, .brdc-grey-7, .brdc-red-1, .brdc-red-2, .brdc-red-3, .brdc-red-4, .brdc-red-5, .brdc-red-6, .brdc-red-7, .brdc-yellow-1, .brdc-yellow-2, .brdc-yellow-3, .brdc-yellow-4, .brdc-yellow-5, .brdc-yellow-6, .brdc-yellow-7 {
+.bd, .bdc-black, .bdc-white, .bdc-blue-1, .bdc-blue-2, .bdc-blue-3, .bdc-blue-4, .bdc-blue-5, .bdc-blue-6, .bdc-blue-7, .bdc-green-1, .bdc-green-2, .bdc-green-3, .bdc-green-4, .bdc-green-5, .bdc-green-6, .bdc-green-7, .bdc-grey-1, .bdc-grey-2, .bdc-grey-3, .bdc-grey-4, .bdc-grey-5, .bdc-grey-6, .bdc-grey-7, .bdc-red-1, .bdc-red-2, .bdc-red-3, .bdc-red-4, .bdc-red-5, .bdc-red-6, .bdc-red-7, .bdc-yellow-1, .bdc-yellow-2, .bdc-yellow-3, .bdc-yellow-4, .bdc-yellow-5, .bdc-yellow-6, .bdc-yellow-7 {
   border: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Top border:
- * `.brd-top`
+ * `.bd-top`
  *
  *     @example
- *     div.brd-top.p-5
+ *     div.bd-top.p-5
  */
-.brd-top {
+.bd-top {
   border-top: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Right border:
- * `.brd-right`
+ * `.bd-right`
  *
  *     @example
- *     div.brd-right.p-5
+ *     div.bd-right.p-5
  */
-.brd-right {
+.bd-right {
   border-right: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Bottom border:
- * `.brd-bottom`
+ * `.bd-bottom`
  *
  *     @example
- *     div.brd-bottom.p-5
+ *     div.bd-bottom.p-5
  */
-.brd-bottom {
+.bd-bottom {
   border-bottom: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Left border:
- * `.brd-left`
+ * `.bd-left`
  *
  *     @example
- *     div.brd-left.p-5
+ *     div.bd-left.p-5
  */
-.brd-left {
+.bd-left {
   border-left: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Right and left border:
- * `.brd-x`
+ * `.bd-x`
  *
  *     @example
- *     div.brd-x.p-5
+ *     div.bd-x.p-5
  */
-.brd-x {
+.bd-x {
   border-right: 1px solid rgba(55, 55, 55, 0.17);
   border-left: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Top and bottom border:
- * `.brd-y`
+ * `.bd-y`
  *
  *     @example
- *     div.brd-y.p-5
+ *     div.bd-y.p-5
  */
-.brd-y {
+.bd-y {
   border-top: 1px solid rgba(55, 55, 55, 0.17);
   border-bottom: 1px solid rgba(55, 55, 55, 0.17); }
 
 /**
  * Remove borders:
- * `.brd-0`
+ * `.bd-0`
  *
  *     @example
- *     div.brd.brd-0.p-5
+ *     div.bd.bd-0.p-5
  */
-.brd-0 {
+.bd-0 {
   border: none; }
 
 /* ========================================================================== */
@@ -1990,106 +2015,106 @@ th {
  */
 /**
  * Rounded four corners:
- * `.brd-radius`
+ * `.bd-radius`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius.p-5
+ *     div.bgc-secondary-2.bd-radius.p-5
  */
-.brd-radius {
+.bd-radius {
   border-radius: 0.25rem; }
 
 /**
  * Rounded top right corner:
- * `.brd-radius-1`
+ * `.bd-radius-1`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-1.p-5
+ *     div.bgc-secondary-2.bd-radius-1.p-5
  */
-.brd-radius-1 {
+.bd-radius-1 {
   border-top-right-radius: 0.25rem; }
 
 /**
  * Rounded bottom right corner:
- * `.brd-radius-2`
+ * `.bd-radius-2`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-2.p-5
+ *     div.bgc-secondary-2.bd-radius-2.p-5
  */
-.brd-radius-2 {
+.bd-radius-2 {
   border-bottom-right-radius: 0.25rem; }
 
 /**
  * Rounded bottom left corner:
- * `.brd-radius-3`
+ * `.bd-radius-3`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-3.p-5
+ *     div.bgc-secondary-2.bd-radius-3.p-5
  */
-.brd-radius-3 {
+.bd-radius-3 {
   border-bottom-left-radius: 0.25rem; }
 
 /**
  * Rounded top left corner:
- * `.brd-radius-4`
+ * `.bd-radius-4`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-4.p-5
+ *     div.bgc-secondary-2.bd-radius-4.p-5
  */
-.brd-radius-4 {
+.bd-radius-4 {
   border-top-left-radius: 0.25rem; }
 
 /**
  * Rounded top corners:
- * `.brd-radius-top`
+ * `.bd-radius-top`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-top.p-5
+ *     div.bgc-secondary-2.bd-radius-top.p-5
  */
-.brd-radius-top {
+.bd-radius-top {
   border-top-right-radius: 0.25rem;
   border-top-left-radius: 0.25rem; }
 
 /**
  * Rounded right corners:
- * `.brd-radius-right`
+ * `.bd-radius-right`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-right.p-5
+ *     div.bgc-secondary-2.bd-radius-right.p-5
  */
-.brd-radius-right {
+.bd-radius-right {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
 /**
  * Rounded bottom corners:
- * `.brd-radius-bottom`
+ * `.bd-radius-bottom`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-bottom.p-5
+ *     div.bgc-secondary-2.bd-radius-bottom.p-5
  */
-.brd-radius-bottom {
+.bd-radius-bottom {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
 /**
  * Rounded left corners:
- * `.brd-radius-left`
+ * `.bd-radius-left`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius-left.p-5
+ *     div.bgc-secondary-2.bd-radius-left.p-5
  */
-.brd-radius-left {
+.bd-radius-left {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
 /**
  * Remove rounded corners:
- * `.brd-radius-0`
+ * `.bd-radius-0`
  *
  *     @example
- *     div.bgc-secondary-2.brd-radius.brd-radius-0.p-5
+ *     div.bgc-secondary-2.bd-radius.bd-radius-0.p-5
  */
-.brd-radius-0 {
+.bd-radius-0 {
   border-radius: 0; }
 
 /* ========================================================================== */
@@ -2118,13 +2143,13 @@ th {
  */
 /**
 	 * Black color:
-	 * `.bgc-black` `.txtc-black` `.brdc-black`
+	 * `.bgc-black` `.txtc-black` `.bdc-black`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-black
+	 *                div.color-swatch.bd-radius.bgc-black
 	 *             td.w-20.txt-select.txtc-black Black
 	 *             td.w-20.txt-select #000
 	 *             td.w-20.txt-select rgb(0, 0, 0)
@@ -2132,7 +2157,7 @@ th {
 .bgc-black {
   background-color: #000; }
 
-.brdc-black {
+.bdc-black {
   border-color: #000; }
 
 .txtc-black {
@@ -2140,13 +2165,13 @@ th {
 
 /**
 	 * White color:
-	 * `.bgc-white` `.txtc-white` `.brdc-white`
+	 * `.bgc-white` `.txtc-white` `.bdc-white`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-white
+	 *                div.color-swatch.bd-radius.bgc-white
 	 *             td.w-20.txt-select.txtc-white White
 	 *             td.w-20.txt-select #fff
 	 *             td.w-20.txt-select rgb(255, 255, 255)
@@ -2154,7 +2179,7 @@ th {
 .bgc-white {
   background-color: #fff; }
 
-.brdc-white {
+.bdc-white {
   border-color: #fff; }
 
 .txtc-white {
@@ -2162,13 +2187,13 @@ th {
 
 /**
 	 * Blue 1 color:
-	 * `.bgc-blue-1` `.txtc-blue-1` `.brdc-blue-1`
+	 * `.bgc-blue-1` `.txtc-blue-1` `.bdc-blue-1`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-1
+	 *                div.color-swatch.bd-radius.bgc-blue-1
 	 *             td.w-20.txt-select.txtc-blue-1 Blue 1
 	 *             td.w-20.txt-select #4183c4
 	 *             td.w-20.txt-select rgb(65, 131, 196)
@@ -2176,7 +2201,7 @@ th {
 .bgc-blue-1 {
   background-color: #4183c4; }
 
-.brdc-blue-1 {
+.bdc-blue-1 {
   border-color: #4183c4; }
 
 .txtc-blue-1 {
@@ -2184,13 +2209,13 @@ th {
 
 /**
 	 * Blue 2 color:
-	 * `.bgc-blue-2` `.txtc-blue-2` `.brdc-blue-2`
+	 * `.bgc-blue-2` `.txtc-blue-2` `.bdc-blue-2`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-2
+	 *                div.color-swatch.bd-radius.bgc-blue-2
 	 *             td.w-20.txt-select.txtc-blue-2 Blue 2
 	 *             td.w-20.txt-select #6b9ed1
 	 *             td.w-20.txt-select rgb(107, 158, 209)
@@ -2198,7 +2223,7 @@ th {
 .bgc-blue-2 {
   background-color: #6b9ed1; }
 
-.brdc-blue-2 {
+.bdc-blue-2 {
   border-color: #6b9ed1; }
 
 .txtc-blue-2 {
@@ -2206,13 +2231,13 @@ th {
 
 /**
 	 * Blue 3 color:
-	 * `.bgc-blue-3` `.txtc-blue-3` `.brdc-blue-3`
+	 * `.bgc-blue-3` `.txtc-blue-3` `.bdc-blue-3`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-3
+	 *                div.color-swatch.bd-radius.bgc-blue-3
 	 *             td.w-20.txt-select.txtc-blue-3 Blue 3
 	 *             td.w-20.txt-select #9cbee0
 	 *             td.w-20.txt-select rgb(156, 190, 224)
@@ -2220,7 +2245,7 @@ th {
 .bgc-blue-3 {
   background-color: #9cbee0; }
 
-.brdc-blue-3 {
+.bdc-blue-3 {
   border-color: #9cbee0; }
 
 .txtc-blue-3 {
@@ -2228,13 +2253,13 @@ th {
 
 /**
 	 * Blue 4 color:
-	 * `.bgc-blue-4` `.txtc-blue-4` `.brdc-blue-4`
+	 * `.bgc-blue-4` `.txtc-blue-4` `.bdc-blue-4`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-4
+	 *                div.color-swatch.bd-radius.bgc-blue-4
 	 *             td.w-20.txt-select.txtc-blue-4 Blue 4
 	 *             td.w-20.txt-select #b5cfe8
 	 *             td.w-20.txt-select rgb(181, 207, 232)
@@ -2242,7 +2267,7 @@ th {
 .bgc-blue-4 {
   background-color: #b5cfe8; }
 
-.brdc-blue-4 {
+.bdc-blue-4 {
   border-color: #b5cfe8; }
 
 .txtc-blue-4 {
@@ -2250,13 +2275,13 @@ th {
 
 /**
 	 * Blue 5 color:
-	 * `.bgc-blue-5` `.txtc-blue-5` `.brdc-blue-5`
+	 * `.bgc-blue-5` `.txtc-blue-5` `.bdc-blue-5`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-5
+	 *                div.color-swatch.bd-radius.bgc-blue-5
 	 *             td.w-20.txt-select.txtc-blue-5 Blue 5
 	 *             td.w-20.txt-select #c4d8ed
 	 *             td.w-20.txt-select rgb(196, 216, 237)
@@ -2264,7 +2289,7 @@ th {
 .bgc-blue-5 {
   background-color: #c4d8ed; }
 
-.brdc-blue-5 {
+.bdc-blue-5 {
   border-color: #c4d8ed; }
 
 .txtc-blue-5 {
@@ -2272,13 +2297,13 @@ th {
 
 /**
 	 * Blue 6 color:
-	 * `.bgc-blue-6` `.txtc-blue-6` `.brdc-blue-6`
+	 * `.bgc-blue-6` `.txtc-blue-6` `.bdc-blue-6`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-6
+	 *                div.color-swatch.bd-radius.bgc-blue-6
 	 *             td.w-20.txt-select.txtc-blue-6 Blue 6
 	 *             td.w-20.txt-select #cedff0
 	 *             td.w-20.txt-select rgb(206, 223, 240)
@@ -2286,7 +2311,7 @@ th {
 .bgc-blue-6 {
   background-color: #cedff0; }
 
-.brdc-blue-6 {
+.bdc-blue-6 {
   border-color: #cedff0; }
 
 .txtc-blue-6 {
@@ -2294,13 +2319,13 @@ th {
 
 /**
 	 * Blue 7 color:
-	 * `.bgc-blue-7` `.txtc-blue-7` `.brdc-blue-7`
+	 * `.bgc-blue-7` `.txtc-blue-7` `.bdc-blue-7`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-blue-7
+	 *                div.color-swatch.bd-radius.bgc-blue-7
 	 *             td.w-20.txt-select.txtc-blue-7 Blue 7
 	 *             td.w-20.txt-select #d5e3f2
 	 *             td.w-20.txt-select rgb(213, 227, 242)
@@ -2308,7 +2333,7 @@ th {
 .bgc-blue-7 {
   background-color: #d5e3f2; }
 
-.brdc-blue-7 {
+.bdc-blue-7 {
   border-color: #d5e3f2; }
 
 .txtc-blue-7 {
@@ -2316,13 +2341,13 @@ th {
 
 /**
 	 * Green 1 color:
-	 * `.bgc-green-1` `.txtc-green-1` `.brdc-green-1`
+	 * `.bgc-green-1` `.txtc-green-1` `.bdc-green-1`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-1
+	 *                div.color-swatch.bd-radius.bgc-green-1
 	 *             td.w-20.txt-select.txtc-green-1 Green 1
 	 *             td.w-20.txt-select #36b725
 	 *             td.w-20.txt-select rgb(54, 183, 37)
@@ -2330,7 +2355,7 @@ th {
 .bgc-green-1 {
   background-color: #36b725; }
 
-.brdc-green-1 {
+.bdc-green-1 {
   border-color: #36b725; }
 
 .txtc-green-1 {
@@ -2338,13 +2363,13 @@ th {
 
 /**
 	 * Green 2 color:
-	 * `.bgc-green-2` `.txtc-green-2` `.brdc-green-2`
+	 * `.bgc-green-2` `.txtc-green-2` `.bdc-green-2`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-2
+	 *                div.color-swatch.bd-radius.bgc-green-2
 	 *             td.w-20.txt-select.txtc-green-2 Green 2
 	 *             td.w-20.txt-select #62c755
 	 *             td.w-20.txt-select rgb(98, 199, 85)
@@ -2352,7 +2377,7 @@ th {
 .bgc-green-2 {
   background-color: #62c755; }
 
-.brdc-green-2 {
+.bdc-green-2 {
   border-color: #62c755; }
 
 .txtc-green-2 {
@@ -2360,13 +2385,13 @@ th {
 
 /**
 	 * Green 3 color:
-	 * `.bgc-green-3` `.txtc-green-3` `.brdc-green-3`
+	 * `.bgc-green-3` `.txtc-green-3` `.bdc-green-3`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-3
+	 *                div.color-swatch.bd-radius.bgc-green-3
 	 *             td.w-20.txt-select.txtc-green-3 Green 3
 	 *             td.w-20.txt-select #96da8d
 	 *             td.w-20.txt-select rgb(150, 218, 141)
@@ -2374,7 +2399,7 @@ th {
 .bgc-green-3 {
   background-color: #96da8d; }
 
-.brdc-green-3 {
+.bdc-green-3 {
   border-color: #96da8d; }
 
 .txtc-green-3 {
@@ -2382,13 +2407,13 @@ th {
 
 /**
 	 * Green 4 color:
-	 * `.bgc-green-4` `.txtc-green-4` `.brdc-green-4`
+	 * `.bgc-green-4` `.txtc-green-4` `.bdc-green-4`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-4
+	 *                div.color-swatch.bd-radius.bgc-green-4
 	 *             td.w-20.txt-select.txtc-green-4 Green 4
 	 *             td.w-20.txt-select #b0e3aa
 	 *             td.w-20.txt-select rgb(176, 227, 170)
@@ -2396,7 +2421,7 @@ th {
 .bgc-green-4 {
   background-color: #b0e3aa; }
 
-.brdc-green-4 {
+.bdc-green-4 {
   border-color: #b0e3aa; }
 
 .txtc-green-4 {
@@ -2404,13 +2429,13 @@ th {
 
 /**
 	 * Green 5 color:
-	 * `.bgc-green-5` `.txtc-green-5` `.brdc-green-5`
+	 * `.bgc-green-5` `.txtc-green-5` `.bdc-green-5`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-5
+	 *                div.color-swatch.bd-radius.bgc-green-5
 	 *             td.w-20.txt-select.txtc-green-5 Green 5
 	 *             td.w-20.txt-select #c0e9bb
 	 *             td.w-20.txt-select rgb(192, 233, 187)
@@ -2418,7 +2443,7 @@ th {
 .bgc-green-5 {
   background-color: #c0e9bb; }
 
-.brdc-green-5 {
+.bdc-green-5 {
   border-color: #c0e9bb; }
 
 .txtc-green-5 {
@@ -2426,13 +2451,13 @@ th {
 
 /**
 	 * Green 6 color:
-	 * `.bgc-green-6` `.txtc-green-6` `.brdc-green-6`
+	 * `.bgc-green-6` `.txtc-green-6` `.bdc-green-6`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-6
+	 *                div.color-swatch.bd-radius.bgc-green-6
 	 *             td.w-20.txt-select.txtc-green-6 Green 6
 	 *             td.w-20.txt-select #cbecc6
 	 *             td.w-20.txt-select rgb(203, 236, 198)
@@ -2440,7 +2465,7 @@ th {
 .bgc-green-6 {
   background-color: #cbecc6; }
 
-.brdc-green-6 {
+.bdc-green-6 {
   border-color: #cbecc6; }
 
 .txtc-green-6 {
@@ -2448,13 +2473,13 @@ th {
 
 /**
 	 * Green 7 color:
-	 * `.bgc-green-7` `.txtc-green-7` `.brdc-green-7`
+	 * `.bgc-green-7` `.txtc-green-7` `.bdc-green-7`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-green-7
+	 *                div.color-swatch.bd-radius.bgc-green-7
 	 *             td.w-20.txt-select.txtc-green-7 Green 7
 	 *             td.w-20.txt-select #d2efce
 	 *             td.w-20.txt-select rgb(210, 239, 206)
@@ -2462,7 +2487,7 @@ th {
 .bgc-green-7 {
   background-color: #d2efce; }
 
-.brdc-green-7 {
+.bdc-green-7 {
   border-color: #d2efce; }
 
 .txtc-green-7 {
@@ -2470,13 +2495,13 @@ th {
 
 /**
 	 * Grey 1 color:
-	 * `.bgc-grey-1` `.txtc-grey-1` `.brdc-grey-1`
+	 * `.bgc-grey-1` `.txtc-grey-1` `.bdc-grey-1`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-1
+	 *                div.color-swatch.bd-radius.bgc-grey-1
 	 *             td.w-20.txt-select.txtc-grey-1 Grey 1
 	 *             td.w-20.txt-select #373737
 	 *             td.w-20.txt-select rgb(55, 55, 55)
@@ -2484,7 +2509,7 @@ th {
 .bgc-grey-1 {
   background-color: #373737; }
 
-.brdc-grey-1 {
+.bdc-grey-1 {
   border-color: #373737; }
 
 .txtc-grey-1 {
@@ -2492,13 +2517,13 @@ th {
 
 /**
 	 * Grey 2 color:
-	 * `.bgc-grey-2` `.txtc-grey-2` `.brdc-grey-2`
+	 * `.bgc-grey-2` `.txtc-grey-2` `.bdc-grey-2`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-2
+	 *                div.color-swatch.bd-radius.bgc-grey-2
 	 *             td.w-20.txt-select.txtc-grey-2 Grey 2
 	 *             td.w-20.txt-select #636363
 	 *             td.w-20.txt-select rgb(99.0, 99.0, 99.0)
@@ -2506,7 +2531,7 @@ th {
 .bgc-grey-2 {
   background-color: #636363; }
 
-.brdc-grey-2 {
+.bdc-grey-2 {
   border-color: #636363; }
 
 .txtc-grey-2 {
@@ -2514,13 +2539,13 @@ th {
 
 /**
 	 * Grey 3 color:
-	 * `.bgc-grey-3` `.txtc-grey-3` `.brdc-grey-3`
+	 * `.bgc-grey-3` `.txtc-grey-3` `.bdc-grey-3`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-3
+	 *                div.color-swatch.bd-radius.bgc-grey-3
 	 *             td.w-20.txt-select.txtc-grey-3 Grey 3
 	 *             td.w-20.txt-select #979797
 	 *             td.w-20.txt-select rgb(151.0, 151.0, 151.0)
@@ -2528,7 +2553,7 @@ th {
 .bgc-grey-3 {
   background-color: #979797; }
 
-.brdc-grey-3 {
+.bdc-grey-3 {
   border-color: #979797; }
 
 .txtc-grey-3 {
@@ -2536,13 +2561,13 @@ th {
 
 /**
 	 * Grey 4 color:
-	 * `.bgc-grey-4` `.txtc-grey-4` `.brdc-grey-4`
+	 * `.bgc-grey-4` `.txtc-grey-4` `.bdc-grey-4`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-4
+	 *                div.color-swatch.bd-radius.bgc-grey-4
 	 *             td.w-20.txt-select.txtc-grey-4 Grey 4
 	 *             td.w-20.txt-select #b1b1b1
 	 *             td.w-20.txt-select rgb(177.0, 177.0, 177.0)
@@ -2550,7 +2575,7 @@ th {
 .bgc-grey-4 {
   background-color: #b1b1b1; }
 
-.brdc-grey-4 {
+.bdc-grey-4 {
   border-color: #b1b1b1; }
 
 .txtc-grey-4 {
@@ -2558,13 +2583,13 @@ th {
 
 /**
 	 * Grey 5 color:
-	 * `.bgc-grey-5` `.txtc-grey-5` `.brdc-grey-5`
+	 * `.bgc-grey-5` `.txtc-grey-5` `.bdc-grey-5`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-5
+	 *                div.color-swatch.bd-radius.bgc-grey-5
 	 *             td.w-20.txt-select.txtc-grey-5 Grey 5
 	 *             td.w-20.txt-select #c1c1c1
 	 *             td.w-20.txt-select rgb(193.0, 193.0, 193.0)
@@ -2572,7 +2597,7 @@ th {
 .bgc-grey-5 {
   background-color: #c1c1c1; }
 
-.brdc-grey-5 {
+.bdc-grey-5 {
   border-color: #c1c1c1; }
 
 .txtc-grey-5 {
@@ -2580,13 +2605,13 @@ th {
 
 /**
 	 * Grey 6 color:
-	 * `.bgc-grey-6` `.txtc-grey-6` `.brdc-grey-6`
+	 * `.bgc-grey-6` `.txtc-grey-6` `.bdc-grey-6`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-6
+	 *                div.color-swatch.bd-radius.bgc-grey-6
 	 *             td.w-20.txt-select.txtc-grey-6 Grey 6
 	 *             td.w-20.txt-select #cbcbcb
 	 *             td.w-20.txt-select rgb(203.0, 203.0, 203.0)
@@ -2594,7 +2619,7 @@ th {
 .bgc-grey-6 {
   background-color: #cbcbcb; }
 
-.brdc-grey-6 {
+.bdc-grey-6 {
   border-color: #cbcbcb; }
 
 .txtc-grey-6 {
@@ -2602,13 +2627,13 @@ th {
 
 /**
 	 * Grey 7 color:
-	 * `.bgc-grey-7` `.txtc-grey-7` `.brdc-grey-7`
+	 * `.bgc-grey-7` `.txtc-grey-7` `.bdc-grey-7`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-grey-7
+	 *                div.color-swatch.bd-radius.bgc-grey-7
 	 *             td.w-20.txt-select.txtc-grey-7 Grey 7
 	 *             td.w-20.txt-select #d2d2d2
 	 *             td.w-20.txt-select rgb(210.0, 210.0, 210.0)
@@ -2616,7 +2641,7 @@ th {
 .bgc-grey-7 {
   background-color: #d2d2d2; }
 
-.brdc-grey-7 {
+.bdc-grey-7 {
   border-color: #d2d2d2; }
 
 .txtc-grey-7 {
@@ -2624,13 +2649,13 @@ th {
 
 /**
 	 * Red 1 color:
-	 * `.bgc-red-1` `.txtc-red-1` `.brdc-red-1`
+	 * `.bgc-red-1` `.txtc-red-1` `.bdc-red-1`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-1
+	 *                div.color-swatch.bd-radius.bgc-red-1
 	 *             td.w-20.txt-select.txtc-red-1 Red 1
 	 *             td.w-20.txt-select #e65146
 	 *             td.w-20.txt-select rgb(230, 81, 70)
@@ -2638,7 +2663,7 @@ th {
 .bgc-red-1 {
   background-color: #e65146; }
 
-.brdc-red-1 {
+.bdc-red-1 {
   border-color: #e65146; }
 
 .txtc-red-1 {
@@ -2646,13 +2671,13 @@ th {
 
 /**
 	 * Red 2 color:
-	 * `.bgc-red-2` `.txtc-red-2` `.brdc-red-2`
+	 * `.bgc-red-2` `.txtc-red-2` `.bdc-red-2`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-2
+	 *                div.color-swatch.bd-radius.bgc-red-2
 	 *             td.w-20.txt-select.txtc-red-2 Red 2
 	 *             td.w-20.txt-select #eb776e
 	 *             td.w-20.txt-select rgb(235, 119, 110)
@@ -2660,7 +2685,7 @@ th {
 .bgc-red-2 {
   background-color: #eb776e; }
 
-.brdc-red-2 {
+.bdc-red-2 {
   border-color: #eb776e; }
 
 .txtc-red-2 {
@@ -2668,13 +2693,13 @@ th {
 
 /**
 	 * Red 3 color:
-	 * `.bgc-red-3` `.txtc-red-3` `.brdc-red-3`
+	 * `.bgc-red-3` `.txtc-red-3` `.bdc-red-3`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-3
+	 *                div.color-swatch.bd-radius.bgc-red-3
 	 *             td.w-20.txt-select.txtc-red-3 Red 3
 	 *             td.w-20.txt-select #f2a49f
 	 *             td.w-20.txt-select rgb(242, 164, 159)
@@ -2682,7 +2707,7 @@ th {
 .bgc-red-3 {
   background-color: #f2a49f; }
 
-.brdc-red-3 {
+.bdc-red-3 {
   border-color: #f2a49f; }
 
 .txtc-red-3 {
@@ -2690,13 +2715,13 @@ th {
 
 /**
 	 * Red 4 color:
-	 * `.bgc-red-4` `.txtc-red-4` `.brdc-red-4`
+	 * `.bgc-red-4` `.txtc-red-4` `.bdc-red-4`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-4
+	 *                div.color-swatch.bd-radius.bgc-red-4
 	 *             td.w-20.txt-select.txtc-red-4 Red 4
 	 *             td.w-20.txt-select #f5bbb7
 	 *             td.w-20.txt-select rgb(245, 187, 183)
@@ -2704,7 +2729,7 @@ th {
 .bgc-red-4 {
   background-color: #f5bbb7; }
 
-.brdc-red-4 {
+.bdc-red-4 {
   border-color: #f5bbb7; }
 
 .txtc-red-4 {
@@ -2712,13 +2737,13 @@ th {
 
 /**
 	 * Red 5 color:
-	 * `.bgc-red-5` `.txtc-red-5` `.brdc-red-5`
+	 * `.bgc-red-5` `.txtc-red-5` `.bdc-red-5`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-5
+	 *                div.color-swatch.bd-radius.bgc-red-5
 	 *             td.w-20.txt-select.txtc-red-5 Red 5
 	 *             td.w-20.txt-select #f7c9c5
 	 *             td.w-20.txt-select rgb(247, 201, 197)
@@ -2726,7 +2751,7 @@ th {
 .bgc-red-5 {
   background-color: #f7c9c5; }
 
-.brdc-red-5 {
+.bdc-red-5 {
   border-color: #f7c9c5; }
 
 .txtc-red-5 {
@@ -2734,13 +2759,13 @@ th {
 
 /**
 	 * Red 6 color:
-	 * `.bgc-red-6` `.txtc-red-6` `.brdc-red-6`
+	 * `.bgc-red-6` `.txtc-red-6` `.bdc-red-6`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-6
+	 *                div.color-swatch.bd-radius.bgc-red-6
 	 *             td.w-20.txt-select.txtc-red-6 Red 6
 	 *             td.w-20.txt-select #f8d2cf
 	 *             td.w-20.txt-select rgb(248, 210, 207)
@@ -2748,7 +2773,7 @@ th {
 .bgc-red-6 {
   background-color: #f8d2cf; }
 
-.brdc-red-6 {
+.bdc-red-6 {
   border-color: #f8d2cf; }
 
 .txtc-red-6 {
@@ -2756,13 +2781,13 @@ th {
 
 /**
 	 * Red 7 color:
-	 * `.bgc-red-7` `.txtc-red-7` `.brdc-red-7`
+	 * `.bgc-red-7` `.txtc-red-7` `.bdc-red-7`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-red-7
+	 *                div.color-swatch.bd-radius.bgc-red-7
 	 *             td.w-20.txt-select.txtc-red-7 Red 7
 	 *             td.w-20.txt-select #f9d8d6
 	 *             td.w-20.txt-select rgb(249, 216, 214)
@@ -2770,7 +2795,7 @@ th {
 .bgc-red-7 {
   background-color: #f9d8d6; }
 
-.brdc-red-7 {
+.bdc-red-7 {
   border-color: #f9d8d6; }
 
 .txtc-red-7 {
@@ -2778,13 +2803,13 @@ th {
 
 /**
 	 * Yellow 1 color:
-	 * `.bgc-yellow-1` `.txtc-yellow-1` `.brdc-yellow-1`
+	 * `.bgc-yellow-1` `.txtc-yellow-1` `.bdc-yellow-1`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-1
+	 *                div.color-swatch.bd-radius.bgc-yellow-1
 	 *             td.w-20.txt-select.txtc-yellow-1 Yellow 1
 	 *             td.w-20.txt-select #ffc439
 	 *             td.w-20.txt-select rgb(255, 196, 57)
@@ -2792,7 +2817,7 @@ th {
 .bgc-yellow-1 {
   background-color: #ffc439; }
 
-.brdc-yellow-1 {
+.bdc-yellow-1 {
   border-color: #ffc439; }
 
 .txtc-yellow-1 {
@@ -2800,13 +2825,13 @@ th {
 
 /**
 	 * Yellow 2 color:
-	 * `.bgc-yellow-2` `.txtc-yellow-2` `.brdc-yellow-2`
+	 * `.bgc-yellow-2` `.txtc-yellow-2` `.bdc-yellow-2`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-2
+	 *                div.color-swatch.bd-radius.bgc-yellow-2
 	 *             td.w-20.txt-select.txtc-yellow-2 Yellow 2
 	 *             td.w-20.txt-select #ffd164
 	 *             td.w-20.txt-select rgb(255, 209, 100)
@@ -2814,7 +2839,7 @@ th {
 .bgc-yellow-2 {
   background-color: #ffd164; }
 
-.brdc-yellow-2 {
+.bdc-yellow-2 {
   border-color: #ffd164; }
 
 .txtc-yellow-2 {
@@ -2822,13 +2847,13 @@ th {
 
 /**
 	 * Yellow 3 color:
-	 * `.bgc-yellow-3` `.txtc-yellow-3` `.brdc-yellow-3`
+	 * `.bgc-yellow-3` `.txtc-yellow-3` `.bdc-yellow-3`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-3
+	 *                div.color-swatch.bd-radius.bgc-yellow-3
 	 *             td.w-20.txt-select.txtc-yellow-3 Yellow 3
 	 *             td.w-20.txt-select #ffe098
 	 *             td.w-20.txt-select rgb(255, 224, 152)
@@ -2836,7 +2861,7 @@ th {
 .bgc-yellow-3 {
   background-color: #ffe098; }
 
-.brdc-yellow-3 {
+.bdc-yellow-3 {
   border-color: #ffe098; }
 
 .txtc-yellow-3 {
@@ -2844,13 +2869,13 @@ th {
 
 /**
 	 * Yellow 4 color:
-	 * `.bgc-yellow-4` `.txtc-yellow-4` `.brdc-yellow-4`
+	 * `.bgc-yellow-4` `.txtc-yellow-4` `.bdc-yellow-4`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-4
+	 *                div.color-swatch.bd-radius.bgc-yellow-4
 	 *             td.w-20.txt-select.txtc-yellow-4 Yellow 4
 	 *             td.w-20.txt-select #ffe8b2
 	 *             td.w-20.txt-select rgb(255, 232, 178)
@@ -2858,7 +2883,7 @@ th {
 .bgc-yellow-4 {
   background-color: #ffe8b2; }
 
-.brdc-yellow-4 {
+.bdc-yellow-4 {
   border-color: #ffe8b2; }
 
 .txtc-yellow-4 {
@@ -2866,13 +2891,13 @@ th {
 
 /**
 	 * Yellow 5 color:
-	 * `.bgc-yellow-5` `.txtc-yellow-5` `.brdc-yellow-5`
+	 * `.bgc-yellow-5` `.txtc-yellow-5` `.bdc-yellow-5`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-5
+	 *                div.color-swatch.bd-radius.bgc-yellow-5
 	 *             td.w-20.txt-select.txtc-yellow-5 Yellow 5
 	 *             td.w-20.txt-select #ffedc1
 	 *             td.w-20.txt-select rgb(255, 237, 193)
@@ -2880,7 +2905,7 @@ th {
 .bgc-yellow-5 {
   background-color: #ffedc1; }
 
-.brdc-yellow-5 {
+.bdc-yellow-5 {
   border-color: #ffedc1; }
 
 .txtc-yellow-5 {
@@ -2888,13 +2913,13 @@ th {
 
 /**
 	 * Yellow 6 color:
-	 * `.bgc-yellow-6` `.txtc-yellow-6` `.brdc-yellow-6`
+	 * `.bgc-yellow-6` `.txtc-yellow-6` `.bdc-yellow-6`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-6
+	 *                div.color-swatch.bd-radius.bgc-yellow-6
 	 *             td.w-20.txt-select.txtc-yellow-6 Yellow 6
 	 *             td.w-20.txt-select #fff0cb
 	 *             td.w-20.txt-select rgb(255, 240, 203)
@@ -2902,7 +2927,7 @@ th {
 .bgc-yellow-6 {
   background-color: #fff0cb; }
 
-.brdc-yellow-6 {
+.bdc-yellow-6 {
   border-color: #fff0cb; }
 
 .txtc-yellow-6 {
@@ -2910,13 +2935,13 @@ th {
 
 /**
 	 * Yellow 7 color:
-	 * `.bgc-yellow-7` `.txtc-yellow-7` `.brdc-yellow-7`
+	 * `.bgc-yellow-7` `.txtc-yellow-7` `.bdc-yellow-7`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.brd-radius.bgc-yellow-7
+	 *                div.color-swatch.bd-radius.bgc-yellow-7
 	 *             td.w-20.txt-select.txtc-yellow-7 Yellow 7
 	 *             td.w-20.txt-select #fff2d3
 	 *             td.w-20.txt-select rgb(255, 242, 211)
@@ -2924,7 +2949,7 @@ th {
 .bgc-yellow-7 {
   background-color: #fff2d3; }
 
-.brdc-yellow-7 {
+.bdc-yellow-7 {
   border-color: #fff2d3; }
 
 .txtc-yellow-7 {

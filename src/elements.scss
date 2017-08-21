@@ -747,10 +747,10 @@ small {
 
  /**
  * Unstyled list:
- * `.lst-unstyled`
+ * `.ls-unstyled`
  *
  *     @example
- *     ul.lst-unstyled
+ *     ul.ls-unstyled
  *         li Apricot
  *         li Banana
  *         li Cherry
@@ -758,23 +758,23 @@ small {
  *                 li Caramel
  *                 li Ice cream
  */
-.lst-unstyled {
+.ls-unstyled {
 	list-style: none;
 	padding-left: 0;
 }
 
  /**
  * Inline list:
- * `.lst-inline`
+ * `.ls-inline`
  *
  *     @example
- *     ul.lst-inline
+ *     ul.ls-inline
  *         li Apricot
  *         li Banana
  *         li Cherry
  */
-.lst-inline {
-	@extend .lst-unstyled;
+.ls-inline {
+	@extend .ls-unstyled;
 
 	li {
 		display: inline-block;
@@ -892,11 +892,6 @@ th {
 	border: 1px solid $border-color;
 }
 
-.tbl-scroll {
-	display: block;
-	overflow-x: auto;
-}
-
 /**
  * Responsive table:
  * `.tbl-responsive`
@@ -929,11 +924,41 @@ th {
 @media screen and (max-width: $breakpoint-sm-min-width - 1) {
 	.tbl-responsive {
 		display: block;
-		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-y: hidden;
+	}
+}
 
-		th, td {
-			white-space: nowrap;
-		}
+/**
+ * Scrolling table:
+ * `.tbl-scroll`
+ *
+ *     @example
+ *     table.tbl.tbl-scroll
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl-scroll {
+	display: block;
+	overflow-x: auto;
+
+	th, td {
+		white-space: nowrap;
 	}
 }
