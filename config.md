@@ -61,8 +61,13 @@
 			padding-bottom: 20px;
 		}
 
+		.container-fluid {
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+
 		.sidebar h1 {
-			margin-top: 2rem;
+			margin-top: -0.25rem;
 		}
 
 		div > .lst-unstyled > li > a {
