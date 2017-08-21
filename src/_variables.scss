@@ -21,21 +21,21 @@ $quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
 // Colors
 
 // Name color, hex color, saturare amount.
-$colors: (
-	'Blue' #2c9ab7 8%,
-	'Green' #449a88 8%,
-	'Grey' #373737 0%,
-	'Red' #db3a1b 8%,
-	'Yellow' #febe12 8%
-);
-
 // $colors: (
-// 	'Blue' #4183c4 0%,
-// 	'Green' #36b725 0%,
+// 	'Blue' #2c9ab7 8%,
+// 	'Green' #449a88 8%,
 // 	'Grey' #373737 0%,
-// 	'Red' #e65146 0%,
-// 	'Yellow' #ffc439 0%
+// 	'Red' #db3a1b 8%,
+// 	'Yellow' #febe12 8%
 // );
+
+$colors: (
+	'Blue' #4183c4 0%,
+	'Green' #36b725 0%,
+	'Grey' #373737 0%,
+	'Red' #e65146 0%,
+	'Yellow' #ffc439 0%
+);
 
 // $colors: (
 // 	'Blue' #055ec2 5%,
@@ -57,13 +57,15 @@ $color-palette: (
 
 // Hyperlinks
 
-$link-color: shade(get-color('Blue 1'), 20%); // #237a91
+$link-color: get-color('Blue 1');
+// $link-color: shade(get-color('Blue 1'), 20%); // #237a91
 $link-decoration: none;
 
 $link-visited-color: $link-color;
 $link-visited-decoration: none;
 
-$link-hover-color: get-color('Blue 1'); // #2c9ab7
+$link-hover-color: $text-color;
+// $link-hover-color: get-color('Blue 1'); // #2c9ab7
 $link-hover-decoration: none;
 
 // Code
@@ -93,7 +95,7 @@ $button-hover-background-color-shade-amount: 12%;
 
 // Primary button
 
-$button-primary-background-color: get-color('Blue 2');
+$button-primary-background-color: get-color('Blue 1');
 $button-primary-text-color: #fff;
 
 // Secondary button
@@ -105,13 +107,13 @@ $button-secondary-text-color: transparentize(get-color('Grey 1'), 0.3);
 
 // Success button
 
-$button-success-background-color: get-color('Green 2');
+$button-success-background-color: get-color('Green 1');
 $button-success-border-color: transparent;
 $button-success-text-color: #fff;
 
 // Danger button
 
-$button-danger-background-color: get-color('Red 2');
+$button-danger-background-color: get-color('Red 1');
 $button-danger-border-color: transparent;
 $button-danger-text-color: #fff;
 
