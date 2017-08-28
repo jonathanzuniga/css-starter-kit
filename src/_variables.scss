@@ -2,7 +2,7 @@
 // Elements
 // ==========================================================================
 
-$text-color: #333;
+$text-color: #151515;
 
 $base-font-size: 16px !default;
 
@@ -50,7 +50,7 @@ $colors: (
 // 	'Yellow' #ffb91d 5%
 // );
 
-$tints: 6; // Número de tintas por cada color primario.
+$tints: 7; // Número de tintas por cada color primario.
 
 // Color palette
 $color-palette: (
@@ -231,7 +231,7 @@ $border-radius: $quarter-spacing-unit / 2;
 
 $dropcap-background-color: transparent;
 $dropcap-border: none;
-$dropcap-color: get-color('Blue 1');
+$dropcap-color: $text-color;
 
 $dropcap-font-size: px-to-em($base-font-size * 3.5);
 $dropcap-font-style: normal;
@@ -240,8 +240,8 @@ $dropcap-font-weight: normal;
 $dropcap-letter-spacing: 0;
 $dropcap-line-height: 0.9;
 
-$dropcap-margin-top: 0;
-$dropcap-margin-right: $quarter-spacing-unit;
+$dropcap-margin-top: $quarter-spacing-unit;
+$dropcap-margin-right: $quarter-spacing-unit / 2;
 $dropcap-padding: 0;
 
 $dropcap-text-shadow: none;
@@ -283,8 +283,8 @@ $smcaps-margin-right: 0.188em; // 3px
 
 // Font size
 
-$small-font-size: px-to-rem($base-font-size - 3); // 0.813em (13px) // 80%;
-$large-font-size: px-to-rem($base-font-size + 4); // 1.25em (20px) // 120%;
+$small-font-size: px-to-em($base-font-size - 3); // 0.813em (13px)
+$large-font-size: px-to-em($base-font-size + 4); // 1.25em (20px)
 
 // Cantidad de espacios para margins & paddings,
 $spacings: 5 !default;

@@ -314,7 +314,7 @@
  *     span.dcap L
  *     orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
-.dcap {
+.dcap:first-letter {
 	background-color: $dropcap-background-color;
 	border: $dropcap-border;
 	color: $dropcap-color;
@@ -338,6 +338,7 @@
 	height: $dropcap-height;
 
 	text-align: $dropcap-text-align;
+	text-indent: 0;
 	vertical-align: $dropcap-vertical-align;
 }
 
@@ -912,13 +913,49 @@
 }
 
 .content-indented {
-	// blockquote, pre,
-	// ul, ol, dl, figure {
-	// 	margin-top: $half-spacing-unit;
-	// }
+	blockquote, pre,
+	ul, ol, dl, figure, img {
+		margin-top: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit;
+	}
 
-	p + p {
+	figure {
+		img {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	p {
 		margin-bottom: 0;
-		text-indent: $half-spacing-unit + 0.5;
+
+		& + p {
+			text-indent: $half-spacing-unit + 0.5;
+		}
+	}
+}
+
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.media-left-#{$size}-#{$i} {
+				float: left;
+				margin-right: $half-spacing-unit;
+			}
+
+			.media-right-#{$size}-#{$i} {
+				float: right;
+				margin-left: $half-spacing-unit;
+			}
+
+			.media-left-#{$size}-#{$i},
+			.media-right-#{$size}-#{$i},
+			.content-indented .media-left-#{$size}-#{$i},
+			.content-indented .media-right-#{$size}-#{$i} {
+				margin-top: 0.5rem;
+				margin-bottom: 0;
+				width: percentage($i / $grid-columns-number);
+			}
+		}
 	}
 }
