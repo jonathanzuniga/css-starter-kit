@@ -2,6 +2,9 @@
 // Elements
 // ==========================================================================
 
+
+// Basic
+
 $text-color: #151515;
 
 $base-font-size: 16px !default;
@@ -20,9 +23,11 @@ $base-spacing-unit: px-to-rem($base-spacing-unit); // 2rem (32px)
 $half-spacing-unit: px-to-rem($half-spacing-unit); // 1rem (16px)
 $quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
 
+
 // Colors
 
 // Name color, hex color, saturare amount.
+
 // $colors: (
 // 	'Blue' #2c9ab7 8%,
 // 	'Green' #449a88 8%,
@@ -50,12 +55,15 @@ $colors: (
 // 	'Yellow' #ffb91d 5%
 // );
 
-$tints: 7; // Número de tintas por cada color primario.
+// Número de tintas por cada color.
+$tints: 7;
 
 // Color palette
+
 $color-palette: (
 	get-colors-list($colors, $tints)
 ) !default;
+
 
 // Hyperlinks
 
@@ -70,6 +78,13 @@ $link-hover-color: $text-color;
 // $link-hover-color: get-color('Blue 1'); // #2c9ab7
 $link-hover-decoration: none;
 
+
+// Blockquote
+
+$blockquote-left-quotation-mark: '“';
+$blockquote-right-quotation-mark: '”';
+
+
 // Code
 
 $mono-font-family: monospace;
@@ -80,6 +95,7 @@ $code-font-size: 1em;
 
 $pre-background-color: transparentize(get-color('Grey 1'), 0.95);
 $pre-border-radius: $quarter-spacing-unit / 2;
+
 
 // Button
 
@@ -95,17 +111,18 @@ $button-text-color: #fff;
 
 $button-hover-background-color-shade-amount: 12%;
 
+
 // Primary button
 
 $button-primary-background-color: get-color('Blue 1');
 $button-primary-text-color: #fff;
+
 
 // Secondary button
 
 $button-secondary-background-color: lighten(get-color('Grey 7'), 6%);
 $button-secondary-text-color: transparentize(get-color('Grey 1'), 0.3);
 
-// Colored buttons
 
 // Success button
 
@@ -113,11 +130,13 @@ $button-success-background-color: get-color('Green 1');
 $button-success-border-color: transparent;
 $button-success-text-color: #fff;
 
+
 // Danger button
 
 $button-danger-background-color: get-color('Red 1');
 $button-danger-border-color: transparent;
 $button-danger-text-color: #fff;
+
 
 // Outline button
 
@@ -127,11 +146,13 @@ $button-outline-text-color: get-color('Grey 3');
 
 $button-hover-background-color-transparentize-amount: 0.9;
 
+
 // Outline primary button
 
 $button-primary-outline-background-color: transparent;
 $button-primary-outline-border-color: get-color('Blue 2');
 $button-primary-outline-text-color: get-color('Blue 2');
+
 
 // Outline success button
 
@@ -139,16 +160,19 @@ $button-success-outline-background-color: transparent;
 $button-success-outline-border-color: get-color('Green 2');
 $button-success-outline-text-color: get-color('Green 2');
 
+
 // Outline danger button
 
 $button-danger-outline-background-color: transparent;
 $button-danger-outline-border-color: get-color('Red 2');
 $button-danger-outline-text-color: get-color('Red 2');
 
+
 // Link button
 
 $button-link-hover-background-color: $button-secondary-background-color;
 $button-link-hover-border-color: transparent;
+
 
 // Gradient button
 
@@ -163,6 +187,7 @@ $button-gradient-background-color-bottom-hue: 3.25;
 $button-gradient-background-color-bottom-saturation: 3.25;
 $button-gradient-background-color-bottom-lightness: 3.25;
 
+
 // Small button
 
 $button-small-border-radius: 
@@ -172,6 +197,7 @@ $button-small-font-size:
 $button-small-padding: 
 	rem-to-em($quarter-spacing-unit / 2) 
 	rem-to-em($half-spacing-unit - 0.25);
+
 
 // Large button
 
@@ -183,8 +209,6 @@ $button-large-padding:
 	rem-to-em($quarter-spacing-unit + 0.25) 
 	rem-to-em($half-spacing-unit + 0.5);
 
-
-// Forms
 
 // Input
 
@@ -212,7 +236,7 @@ $headings-sizes: (
 $heading-line-height: 1.1;
 
 
-// Tables
+// Table
 
 $table-heading-font-weight: bold;
 $table-heading-text-align: left;
@@ -222,12 +246,14 @@ $table-heading-text-align: left;
 // Helpers
 // ==========================================================================
 
+
 // Borders
 
 $border-color: transparentize(get-color('Grey 1'), 0.83);
 $border-radius: $quarter-spacing-unit / 2;
 
-// Drop caps
+
+// Drop cap
 
 $dropcap-background-color: transparent;
 $dropcap-border: none;
@@ -252,45 +278,25 @@ $dropcap-height: auto;
 $dropcap-text-align: left;
 $dropcap-vertical-align: bottom;
 
-// $dropcap-background-color: get-color('Blue 1');
-// $dropcap-border: none;
-// $dropcap-color: get-color('White');
-
-// $dropcap-font-size: px-to-em($base-font-size * 2.5);
-// $dropcap-font-style: normal;
-// $dropcap-font-weight: bold;
-
-// $dropcap-letter-spacing: 0.075em; // 1px
-// $dropcap-line-height: 0.9;
-
-// $dropcap-margin-top: $quarter-spacing-unit;
-// $dropcap-margin-right: $quarter-spacing-unit;
-// $dropcap-padding: $quarter-spacing-unit / 4;
-
-// $dropcap-text-shadow: none;
-
-// $dropcap-width: px-to-em($base-font-size);
-// $dropcap-height: px-to-em($base-font-size);
-
-// $dropcap-text-align: center;
-// $dropcap-vertical-align: bottom;
-
 
 // Small caps
 
 $smcaps-letter-spacing: 0.125em; // 2px
 $smcaps-margin-right: 0.188em; // 3px
 
+
 // Font size
 
 $small-font-size: px-to-em($base-font-size - 3); // 0.813em (13px)
 $large-font-size: px-to-em($base-font-size + 4); // 1.25em (20px)
+
 
 // Cantidad de espacios para margins & paddings,
 $spacings: 5 !default;
 
 // incrementando cada...
 $spacing: 4px !default;
+
 
 // Porcentajes para widths & heights.
 $sizes: (

@@ -311,8 +311,7 @@
  * `.dcap`
  *
  *     @example
- *     span.dcap L
- *     orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
 .dcap:first-letter {
 	background-color: $dropcap-background-color;
@@ -342,11 +341,76 @@
 	vertical-align: $dropcap-vertical-align;
 }
 
+/* ========================================================================== */
+
+/***
+ * Small caps:
+ */
+
+/**
+ * Small caps:
+ * `.smcaps`
+ *
+ *     @example
+ *     p
+ *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
 .smcaps {
 	font-variant: small-caps;
 	letter-spacing: $smcaps-letter-spacing;
 	margin-right: $smcaps-margin-right;
 }
+
+/* ========================================================================== */
+
+/***
+ * Elements to left or right:
+ */
+
+/**
+ * Element to the left side:
+ * `.el-left-*`
+ *
+ *     @example
+ *     div.el-left-xs-4.bgc-grey-8.p-3
+ *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
+ *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+
+/**
+ * Element to the right side:
+ * `.el-right-*`
+ *
+ *     @example
+ *     div.el-right-md-4.bgc-grey-8.p-3
+ *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
+ *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.el-left-#{$size}-#{$i} {
+				float: left;
+				margin-right: $half-spacing-unit;
+			}
+
+			.el-right-#{$size}-#{$i} {
+				float: right;
+				margin-left: $half-spacing-unit;
+			}
+
+			.el-left-#{$size}-#{$i},
+			.el-right-#{$size}-#{$i},
+			.content-indented .el-left-#{$size}-#{$i},
+			.content-indented .el-right-#{$size}-#{$i} {
+				margin-top: 0.5rem;
+				margin-bottom: 0;
+				width: percentage($i / $grid-columns-number);
+			}
+		}
+	}
+}
+
 
 /* ========================================================================== */
 
@@ -931,31 +995,6 @@
 
 		& + p {
 			text-indent: $half-spacing-unit + 0.5;
-		}
-	}
-}
-
-@each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
-		@for $i from 0 through ($grid-columns-number - 1) {
-			.media-left-#{$size}-#{$i} {
-				float: left;
-				margin-right: $half-spacing-unit;
-			}
-
-			.media-right-#{$size}-#{$i} {
-				float: right;
-				margin-left: $half-spacing-unit;
-			}
-
-			.media-left-#{$size}-#{$i},
-			.media-right-#{$size}-#{$i},
-			.content-indented .media-left-#{$size}-#{$i},
-			.content-indented .media-right-#{$size}-#{$i} {
-				margin-top: 0.5rem;
-				margin-bottom: 0;
-				width: percentage($i / $grid-columns-number);
-			}
 		}
 	}
 }

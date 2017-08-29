@@ -91,18 +91,40 @@
 	}
 }
 
-// Calculate rems. $value = pixel size. $base = base pixel size
+// Convert pixels to rems. $value = pixel size. $base = base pixel size.
 @function px-to-rem($value, $base: $base-font-size) {
 	@return ($value / $base) * 1rem;
 }
 
-// Calculate ems.
+// Convert rems to pixels.
+@function rem-to-px($value) {
+	$value: clear-unit($value);
+	$base-font-size: clear-unit($base-font-size);
+	@return make-unit($value * $base-font-size, px);
+}
+
+// Convert pixels to ems.
 @function px-to-em($value, $base: $base-font-size) {
 		@if $value == 0 { @return 0 }
 	@return $value / $base + 0em;
 }
 
-// Rems to ems.
+// Convert ems to pixels.
+@function em-to-px($value, $base: $base-font-size) {
+	$value: clear-unit($value);
+	$font-size: clear-unit($base);
+	@return make-unit($value * $font-size, px);
+}
+
+// Convert ems to rems.
+@function em-to-rem($value, $base: $base-font-size) {
+	$value: clear-unit($value);
+	$font-size: clear-unit($base);
+	$base-font-size	: clear-unit($base-font-size);
+	@return make-unit($font-size * $value / $base-font-size, rem);
+}
+
+// Convert rems to ems.
 @function rem-to-em($value, $base: $base-font-size) {
 	$value: clear-unit($value);
 	$font-size: clear-unit($base);
