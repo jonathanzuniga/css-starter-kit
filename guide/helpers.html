@@ -50,6 +50,20 @@
     .sidebar {
       font-size: 14px;
     }
+    @media (min-width: 1024px) {
+      .sidebar {
+        /* Make it sticky. */
+        max-height: 100vh;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+      .sidebar__content {
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    }
     .sidebar h1,
     .sidebar h2,
     .sidebar h3 {
@@ -57,15 +71,16 @@
       margin-bottom: 20px;
       padding-bottom: 20px;
     }
-    .container-fluid {
-      padding-top: 2.5rem;
-      padding-bottom: 2.5rem;
-    }
     .sidebar h1 {
       margin-top: -0.25rem;
     }
-    div > .ls-unstyled > li > a {
+    .sidebar__content div[class*="col-"] > .ls-unstyled > li > a {
       font-weight: bold;
+    }
+    .sidebar__content,
+    .main {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
     }
   </style>
 </head>
@@ -74,399 +89,404 @@
   <div class="container-fluid">
     <div class="row cols-around gutters-half-md">
       <div class="col-xs-12 col-md-3 sidebar">
-        <h1>CSS Starter Kit</h1>
+        <div class="sidebar__content">
+          <h1>CSS Starter Kit</h1>
 
-        <p>
-          <b>DISCLAIMER - This is a very early stage work in progress project</b>
-        </p>
+          <p>
+            <b>DISCLAIMER - This is a very early stage work in progress project</b>
+          </p>
 
-        <p>
-          CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
-        </p>
+          <p>
+            CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
+          </p>
 
-        <p>
-          CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it&apos;s progressing.
-        </p>
+          <p>
+            CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it&apos;s progressing.
+          </p>
 
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-12">
-            <h3>Elements</h3>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <h3>Elements</h3>
 
-            <ul class="ls-unstyled">
-              <li>
-                <a href="elements.html#content">Content</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="elements.html#blockquote">Blockquote</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#bold-and-italic">Bold and italic</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#code">Code</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#code-block">Code block</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#heading">Heading</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#list">List</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#small">Small</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="elements.html#buttons">Buttons</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="elements.html#button">Button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#primary-button">Primary button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#secondary-button">Secondary button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#colored-buttons">Colored buttons</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#link-button">Link button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#pill-button">Pill button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#gradient-button">Gradient button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#expanded-button">Expanded button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#button-size">Button size</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="elements.html#forms">Forms</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="elements.html#input">Input</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="elements.html#lists">Lists</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="elements.html#unstyled-list">Unstyled list</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="elements.html#tables">Tables</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="elements.html#table">Table</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#bordered-table">Bordered table</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#responsive-table">Responsive table</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#scrolling-table">Scrolling table</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-12">
-            <h3>Helpers</h3>
+              <ul class="ls-unstyled">
+                <li>
+                  <a href="elements.html#content">Content</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="elements.html#blockquote">Blockquote</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#bold-and-italic">Bold and italic</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#code">Code</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#code-block">Code block</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#heading">Heading</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#list">List</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#small">Small</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="elements.html#buttons">Buttons</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="elements.html#button">Button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#primary-button">Primary button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#secondary-button">Secondary button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#colored-buttons">Colored buttons</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#link-button">Link button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#pill-button">Pill button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#gradient-button">Gradient button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#expanded-button">Expanded button</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#button-size">Button size</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="elements.html#forms">Forms</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="elements.html#input">Input</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="elements.html#lists">Lists</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="elements.html#unstyled-list">Unstyled list</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="elements.html#tables">Tables</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="elements.html#table">Table</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#bordered-table">Bordered table</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#responsive-table">Responsive table</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#scrolling-table">Scrolling table</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <h3>Helpers</h3>
 
-            <ul class="ls-unstyled">
-              <li>
-                <a href="helpers.html#borders">Borders</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#four-borders">Four borders</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#top-border">Top border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#right-border">Right border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#bottom-border">Bottom border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#left-border">Left border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#right-and-left-border">Right and left border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#top-and-bottom-border">Top and bottom border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#remove-borders">Remove borders</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#border-radius">Border radius</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#rounded-four-corners">Rounded four corners</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-top-right-corner">Rounded top right corner</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-bottom-right-corner">Rounded bottom right corner</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-bottom-left-corner">Rounded bottom left corner</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-top-left-corner">Rounded top left corner</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-top-corners">Rounded top corners</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-right-corners">Rounded right corners</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-bottom-corners">Rounded bottom corners</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#rounded-left-corners">Rounded left corners</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#remove-rounded-corners">Remove rounded corners</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#clearfix">Clearfix</a>
-              </li>
-              <li>
-                <a href="helpers.html#colors">Colors</a>
-              </li>
-              <li>
-                <a href="helpers.html#drop-caps">Drop caps</a>
-              </li>
-              <li>
-                <a href="helpers.html#small-caps">Small caps</a>
-              </li>
-              <li>
-                <a href="helpers.html#elements-to-left-or-right">Elements to left or right</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#element-to-the-left-side">Element to the left side</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#element-to-the-right-side">Element to the right side</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#floats">Floats</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#float-left">Float left</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#float-right">Float right</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#don-t-float">Don&apos;t float</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#responsive-float">Responsive float</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#font-size">Font size</a>
-              </li>
-              <li>
-                <a href="helpers.html#font-style">Font style</a>
-              </li>
-              <li>
-                <a href="helpers.html#font-weight">Font weight</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#font-weight-thin">Font weight thin</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-extra-light">Font weight extra-light</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-light">Font weight light</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-regular">Font weight regular</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-medium">Font weight medium</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-semi-bold">Font weight semi-bold</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-bold">Font weight bold</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-extra-bold">Font weight extra-bold</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#font-weight-black">Font weight black</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#margins">Margins</a>
-              </li>
-              <li>
-                <a href="helpers.html#paddings">Paddings</a>
-              </li>
-              <li>
-                <a href="helpers.html#text-alignment">Text alignment</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#center-aligned-text">Center aligned text</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#left-aligned-text">Left aligned text</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#right-aligned-text">Right aligned text</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#text-selection">Text selection</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#text-strike">Text strike</a>
-              </li>
-              <li>
-                <a href="helpers.html#text-transform">Text transform</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="helpers.html#capitalized-text">Capitalized text</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#lowercased-text">Lowercased text</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#uppercased-text">Uppercased text</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="helpers.html#widths-and-heights">Widths and heights</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-12">
-            <h3>Layout</h3>
+              <ul class="ls-unstyled">
+                <li>
+                  <a href="helpers.html#borders">Borders</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#four-borders">Four borders</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#top-border">Top border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#right-border">Right border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#bottom-border">Bottom border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#left-border">Left border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#right-and-left-border">Right and left border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#top-and-bottom-border">Top and bottom border</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#remove-borders">Remove borders</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#border-radius">Border radius</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#rounded-four-corners">Rounded four corners</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-top-right-corner">Rounded top right corner</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-bottom-right-corner">Rounded bottom right corner</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-bottom-left-corner">Rounded bottom left corner</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-top-left-corner">Rounded top left corner</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-top-corners">Rounded top corners</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-right-corners">Rounded right corners</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-bottom-corners">Rounded bottom corners</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#rounded-left-corners">Rounded left corners</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#remove-rounded-corners">Remove rounded corners</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#clearfix">Clearfix</a>
+                </li>
+                <li>
+                  <a href="helpers.html#colors">Colors</a>
+                </li>
+                <li>
+                  <a href="helpers.html#drop-caps">Drop caps</a>
+                </li>
+                <li>
+                  <a href="helpers.html#small-caps">Small caps</a>
+                </li>
+                <li>
+                  <a href="helpers.html#content-indented">Content indented</a>
+                </li>
+                <li>
+                  <a href="helpers.html#elements-to-left-or-right">Elements to left or right</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#element-to-the-left-side">Element to the left side</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#element-to-the-right-side">Element to the right side</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#floats">Floats</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#float-left">Float left</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#float-right">Float right</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#don-t-float">Don&apos;t float</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#responsive-float">Responsive float</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#font-size">Font size</a>
+                </li>
+                <li>
+                  <a href="helpers.html#font-style">Font style</a>
+                </li>
+                <li>
+                  <a href="helpers.html#font-weight">Font weight</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#font-weight-thin">Font weight thin</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-extra-light">Font weight extra-light</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-light">Font weight light</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-regular">Font weight regular</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-medium">Font weight medium</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-semi-bold">Font weight semi-bold</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-bold">Font weight bold</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-extra-bold">Font weight extra-bold</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#font-weight-black">Font weight black</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#margins">Margins</a>
+                </li>
+                <li>
+                  <a href="helpers.html#paddings">Paddings</a>
+                </li>
+                <li>
+                  <a href="helpers.html#text-alignment">Text alignment</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#center-aligned-text">Center aligned text</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#left-aligned-text">Left aligned text</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#right-aligned-text">Right aligned text</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#text-selection">Text selection</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#text-strike">Text strike</a>
+                </li>
+                <li>
+                  <a href="helpers.html#text-transform">Text transform</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#capitalized-text">Capitalized text</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#lowercased-text">Lowercased text</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#uppercased-text">Uppercased text</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#widths-and-heights">Widths and heights</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <h3>Layout</h3>
 
-            <ul class="ls-unstyled">
-              <li>
-                <a href="layout.html#flex-grid">Flex grid</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#rows-and-columns">Rows and columns</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="layout.html#responsive-classes">Responsive classes</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#columns">Columns</a>
-                  </li>
-                </ul>
-                <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#space-between-columns">Space between columns</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#space-around-columns">Space around columns</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-column-to-top">Aligns column to top</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="layout.html#offsets">Offsets</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#offsetting-columns">Offsetting columns</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="layout.html#offsets">Gutters</a>
-                <ul class="ls-unstyled">
-                  <li>
-                    <a href="layout.html#half-size-gutters">Half size gutters</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#remove-gutters">Remove gutters</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              <ul class="ls-unstyled">
+                <li>
+                  <a href="layout.html#flex-grid">Flex grid</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#rows-and-columns">Rows and columns</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="layout.html#responsive-classes">Responsive classes</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#columns">Columns</a>
+                    </li>
+                  </ul>
+                  <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#space-between-columns">Space between columns</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#space-around-columns">Space around columns</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-column-to-top">Aligns column to top</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="layout.html#offsets">Offsets</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#offsetting-columns">Offsetting columns</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="layout.html#offsets">Gutters</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="layout.html#half-size-gutters">Half size gutters</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#remove-gutters">Remove gutters</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-8">
+      <div class="col-xs-12 col-md-9 main">
         <div class="sg-container">
           <section class="sg-section sg-section-borders">
             <h2 id="borders" class="sg">Borders</h2>
@@ -2129,12 +2149,11 @@
               </div>
               <div class="sg-example">
                 <div class="sg-canvas">
-                  <p class="dcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta.</p>
+                  <p class="dcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.</p>
                 </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dcap&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
   nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel,
   viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur
-  cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula,
-  nec imperdiet urna porta.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+  cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
               </div>
             </section>
           </section>
@@ -2151,13 +2170,48 @@
               <div class="sg-example">
                 <div class="sg-canvas">
                   <p>
-                    <span class="smcaps">Lorem ipsum dolor sit amet,</span>consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta.</p>
+                    <span class="smcaps">Lorem ipsum dolor sit amet,</span>consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</p>
                 </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;smcaps&quot;</span>&gt;</span>Lorem ipsum dolor sit amet,<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum
-  gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra
-  vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur
-  cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula,
-  nec imperdiet urna porta.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+  gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+              </div>
+            </section>
+          </section>
+
+          <section class="sg-section sg-section-content-indented">
+            <h2 id="content-indented" class="sg">Content indented</h2>
+            <section class="sg-block sg-section-content-indented">
+              <div class="sg-text">
+                <h3 id="content-indented" class="sg">Content indented</h3>
+                <p class="sg">
+                  <code class="sg">.content-indented</code>
+                </p>
+              </div>
+              <div class="sg-example">
+                <div class="sg-canvas">
+                  <div class="content-indented">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.</p>
+                    <p>In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.</p>
+                    <p>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.</p>
+                  </div>
+                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;content-indented&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est.
+    Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio
+    aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh,
+    eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor
+    ut, fermentum quam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh
+    ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod
+    diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas
+    mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin
+    sem quis gravida cursus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis,
+    odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl
+    magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit
+    amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque
+    commodo.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
               </div>
             </section>
           </section>
