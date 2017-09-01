@@ -291,6 +291,18 @@ $small-font-size: px-to-em($base-font-size - 3); // 0.813em (13px)
 $large-font-size: px-to-em($base-font-size + 4); // 1.25em (20px)
 
 
+// Highlighting text
+
+$hightlight-border-radius: rem-to-em($half-spacing-unit) 0 rem-to-em($half-spacing-unit) 0;
+$hightlight-background: 
+	linear-gradient(
+		-100deg, 
+		rgba(get-color('Yellow 4'), 0.3), 
+		rgba(get-color('Yellow 4'), 0.7) 95%, 
+		rgba(get-color('Yellow 4'), 0.1)
+	);
+
+
 // Cantidad de espacios para margins & paddings,
 $spacings: 5 !default;
 

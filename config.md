@@ -285,15 +285,6 @@
 									<a href="helpers.html#colors">Colors</a>
 								</li>
 								<li>
-									<a href="helpers.html#drop-caps">Drop caps</a>
-								</li>
-								<li>
-									<a href="helpers.html#small-caps">Small caps</a>
-								</li>
-								<li>
-									<a href="helpers.html#content-indented">Content indented</a>
-								</li>
-								<li>
 									<a href="helpers.html#elements-to-left-or-right">Elements to left or right</a>
 									<ul class="ls-unstyled">
 										<li>
@@ -380,17 +371,6 @@
 									</ul>
 								</li>
 								<li>
-									<a href="helpers.html#text-selection">Text selection</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="helpers.html#text-strike">Text strike</a>
-								</li>
-								<li>
 									<a href="helpers.html#text-transform">Text transform</a>
 									<ul class="ls-unstyled">
 										<li>
@@ -401,6 +381,29 @@
 										</li>
 										<li>
 											<a href="helpers.html#uppercased-text">Uppercased text</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="helpers.html#other-text-helpers">Other text helpers</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="helpers.html#highlighting-text">Highlighting text</a>
+										</li>
+										<li>
+											<a href="helpers.html#selecting-all-text-with-one-click">Selecting all text with one click</a>
+										</li>
+										<li>
+											<a href="helpers.html#text-strike">Text strike</a>
+										</li>
+										<li>
+											<a href="helpers.html#drop-caps">Drop caps</a>
+										</li>
+										<li>
+											<a href="helpers.html#small-caps">Small caps</a>
+										</li>
+										<li>
+											<a href="helpers.html#content-indented">Content indented</a>
 										</li>
 									</ul>
 								</li>

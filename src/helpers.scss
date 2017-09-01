@@ -303,108 +303,6 @@
 /* ========================================================================== */
 
 /***
- * Drop caps:
- */
-
-/**
- * Drop cap:
- * `.dcap`
- *
- *     @example
- *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
- */
-.dcap:first-letter {
-	background-color: $dropcap-background-color;
-	border: $dropcap-border;
-	color: $dropcap-color;
-	display: block;
-	float: left;
-
-	font-size: $dropcap-font-size;
-	font-style: $dropcap-font-style;
-	font-weight: $dropcap-font-weight;
-
-	letter-spacing: $dropcap-letter-spacing;
-	line-height: $dropcap-line-height;
-
-	margin-top: $dropcap-margin-top;
-	margin-right: $dropcap-margin-right;
-	padding: $dropcap-padding;
-
-	text-shadow: $dropcap-text-shadow;
-
-	width: $dropcap-width;
-	height: $dropcap-height;
-
-	text-align: $dropcap-text-align;
-	text-indent: 0;
-	vertical-align: $dropcap-vertical-align;
-}
-
-/* ========================================================================== */
-
-/***
- * Small caps:
- */
-
-/**
- * Small caps:
- * `.smcaps`
- *
- *     @example
- *     p
- *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- */
-.smcaps {
-	font-variant: small-caps;
-	letter-spacing: $smcaps-letter-spacing;
-	margin-right: $smcaps-margin-right;
-}
-
-/* ========================================================================== */
-
-/***
- * Content indented:
- */
-
-/**
- * Content indented:
- * `.content-indented`
- *
- *     @example
- *     div.content-indented
- *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *
- *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
- *
- *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
- */
-.content-indented {
-	blockquote, pre,
-	ul, ol, dl, figure, img {
-		margin-top: $half-spacing-unit;
-		margin-bottom: $half-spacing-unit;
-	}
-
-	figure {
-		img {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-
-	p {
-		margin-bottom: 0;
-
-		& + p {
-			text-indent: $half-spacing-unit + 0.5;
-		}
-	}
-}
-
-/* ========================================================================== */
-
-/***
  * Elements to left or right:
  */
 
@@ -451,7 +349,6 @@
 		}
 	}
 }
-
 
 /* ========================================================================== */
 
@@ -905,43 +802,6 @@
 /* ========================================================================== */
 
 /***
- * Text selection:
- */
-
-/**
- * Selecting all text with one click:
- * `.txt-select`
- *
- *     @example
- *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-select {
-	-webkit-user-select: all; /* Chrome, Opera, Safari */
-	-moz-user-select: all; /* Firefox 2+ */
-	-ms-user-select: all; /* IE 10+ */
-	user-select: all; /* Standard syntax */
-}
-
-/* ========================================================================== */
-
-/***
- * Text strike:
- */
-
-/**
- * Strikethrough text:
- * `.txt-strike`
- *
- *     @example
- *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-strike {
-	text-decoration: line-through;
-}
-
-/* ========================================================================== */
-
-/***
  * Text transform:
  */
 
@@ -976,6 +836,134 @@
  */
 .txt-uppercase {
 	text-transform: uppercase;
+}
+
+/* ========================================================================== */
+
+/***
+ * Other text helpers:
+ */
+
+/**
+ * Highlighting text:
+ * `.txt-hl`
+ *
+ *     @example
+ *     p 
+ *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-hl {
+	border-radius: $hightlight-border-radius;
+	background-image: $hightlight-background;
+}
+
+/**
+ * Selecting all text with one click:
+ * `.txt-select`
+ *
+ *     @example
+ *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-select {
+	-webkit-user-select: all; /* Chrome, Opera, Safari */
+	-moz-user-select: all; /* Firefox 2+ */
+	-ms-user-select: all; /* IE 10+ */
+	user-select: all; /* Standard syntax */
+}
+
+/**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+	text-decoration: line-through;
+}
+
+/**
+ * Drop cap:
+ * `.dcap`
+ *
+ *     @example
+ *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+.dcap:first-letter {
+	background-color: $dropcap-background-color;
+	border: $dropcap-border;
+	color: $dropcap-color;
+	display: block;
+	float: left;
+
+	font-size: $dropcap-font-size;
+	font-style: $dropcap-font-style;
+	font-weight: $dropcap-font-weight;
+
+	letter-spacing: $dropcap-letter-spacing;
+	line-height: $dropcap-line-height;
+
+	margin-top: $dropcap-margin-top;
+	margin-right: $dropcap-margin-right;
+	padding: $dropcap-padding;
+
+	text-shadow: $dropcap-text-shadow;
+
+	width: $dropcap-width;
+	height: $dropcap-height;
+
+	text-align: $dropcap-text-align;
+	text-indent: 0;
+	vertical-align: $dropcap-vertical-align;
+}
+
+/**
+ * Small caps:
+ * `.smcaps`
+ *
+ *     @example
+ *     p
+ *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+.smcaps {
+	font-variant: small-caps;
+	letter-spacing: $smcaps-letter-spacing;
+	margin-right: $smcaps-margin-right;
+}
+
+/**
+ * Content indented:
+ * `.content-indented`
+ *
+ *     @example
+ *     div.content-indented
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
+ *
+ *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
+ *
+ *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
+ */
+.content-indented {
+	blockquote, pre,
+	ul, ol, dl, figure, img {
+		margin-top: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit;
+	}
+
+	figure {
+		img {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+
+		& + p {
+			text-indent: $half-spacing-unit + 0.5;
+		}
+	}
 }
 
 /* ========================================================================== */

@@ -3068,85 +3068,6 @@ th {
 
 /* ========================================================================== */
 /***
- * Drop caps:
- */
-/**
- * Drop cap:
- * `.dcap`
- *
- *     @example
- *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
- */
-.dcap:first-letter {
-  background-color: transparent;
-  border: none;
-  color: #151515;
-  display: block;
-  float: left;
-  font-size: 3.5em;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: 0;
-  line-height: 0.9;
-  margin-top: 0.5rem;
-  margin-right: 0.25rem;
-  padding: 0;
-  text-shadow: none;
-  width: auto;
-  height: auto;
-  text-align: left;
-  text-indent: 0;
-  vertical-align: bottom; }
-
-/* ========================================================================== */
-/***
- * Small caps:
- */
-/**
- * Small caps:
- * `.smcaps`
- *
- *     @example
- *     p
- *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- */
-.smcaps {
-  font-variant: small-caps;
-  letter-spacing: 0.125em;
-  margin-right: 0.188em; }
-
-/* ========================================================================== */
-/***
- * Content indented:
- */
-/**
- * Content indented:
- * `.content-indented`
- *
- *     @example
- *     div.content-indented
- *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *
- *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
- *
- *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
- */
-.content-indented blockquote, .content-indented pre,
-.content-indented ul, .content-indented ol, .content-indented dl, .content-indented figure, .content-indented img {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-.content-indented figure img {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.content-indented p {
-  margin-bottom: 0; }
-  .content-indented p + p {
-    text-indent: 1.5rem; }
-
-/* ========================================================================== */
-/***
  * Elements to left or right:
  */
 /**
@@ -5161,41 +5082,6 @@ th {
 
 /* ========================================================================== */
 /***
- * Text selection:
- */
-/**
- * Selecting all text with one click:
- * `.txt-select`
- *
- *     @example
- *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-select {
-  -webkit-user-select: all;
-  /* Chrome, Opera, Safari */
-  -moz-user-select: all;
-  /* Firefox 2+ */
-  -ms-user-select: all;
-  /* IE 10+ */
-  user-select: all;
-  /* Standard syntax */ }
-
-/* ========================================================================== */
-/***
- * Text strike:
- */
-/**
- * Strikethrough text:
- * `.txt-strike`
- *
- *     @example
- *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-strike {
-  text-decoration: line-through; }
-
-/* ========================================================================== */
-/***
  * Text transform:
  */
 /**
@@ -5227,6 +5113,116 @@ th {
  */
 .txt-uppercase {
   text-transform: uppercase; }
+
+/* ========================================================================== */
+/***
+ * Other text helpers:
+ */
+/**
+ * Highlighting text:
+ * `.txt-hl`
+ *
+ *     @example
+ *     p 
+ *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-hl {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(-100deg, rgba(255, 232, 178, 0.3), rgba(255, 232, 178, 0.7) 95%, rgba(255, 232, 178, 0.1)); }
+
+/**
+ * Selecting all text with one click:
+ * `.txt-select`
+ *
+ *     @example
+ *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-select {
+  -webkit-user-select: all;
+  /* Chrome, Opera, Safari */
+  -moz-user-select: all;
+  /* Firefox 2+ */
+  -ms-user-select: all;
+  /* IE 10+ */
+  user-select: all;
+  /* Standard syntax */ }
+
+/**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+  text-decoration: line-through; }
+
+/**
+ * Drop cap:
+ * `.dcap`
+ *
+ *     @example
+ *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+.dcap:first-letter {
+  background-color: transparent;
+  border: none;
+  color: #151515;
+  display: block;
+  float: left;
+  font-size: 3.5em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 0.9;
+  margin-top: 0.5rem;
+  margin-right: 0.25rem;
+  padding: 0;
+  text-shadow: none;
+  width: auto;
+  height: auto;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: bottom; }
+
+/**
+ * Small caps:
+ * `.smcaps`
+ *
+ *     @example
+ *     p
+ *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+.smcaps {
+  font-variant: small-caps;
+  letter-spacing: 0.125em;
+  margin-right: 0.188em; }
+
+/**
+ * Content indented:
+ * `.content-indented`
+ *
+ *     @example
+ *     div.content-indented
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
+ *
+ *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
+ *
+ *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
+ */
+.content-indented blockquote, .content-indented pre,
+.content-indented ul, .content-indented ol, .content-indented dl, .content-indented figure, .content-indented img {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.content-indented figure img {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.content-indented p {
+  margin-bottom: 0; }
+  .content-indented p + p {
+    text-indent: 1.5rem; }
 
 /* ========================================================================== */
 /***
