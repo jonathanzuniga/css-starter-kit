@@ -5051,16 +5051,6 @@ th {
  * Text alignment:
  */
 /**
- * Center aligned text:
- * `.txt-center`
- *
- *     @example
- *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-center {
-  text-align: center; }
-
-/**
  * Left aligned text:
  * `.txt-left`
  *
@@ -5071,6 +5061,16 @@ th {
   text-align: left; }
 
 /**
+ * Center aligned text:
+ * `.txt-center`
+ *
+ *     @example
+ *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-center {
+  text-align: center; }
+
+/**
  * Right aligned text:
  * `.txt-right`
  *
@@ -5079,6 +5079,53 @@ th {
  */
 .txt-right {
   text-align: right; }
+
+/**
+ * Responsive text alignment:
+ * `.txt-*-*`
+ *
+ *     @example
+ *     p.txt-lg-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@media (min-width: 0) {
+  .txt-xs-left {
+    text-align: left; }
+  .txt-xs-center {
+    text-align: center; }
+  .txt-xs-right {
+    text-align: right; } }
+
+@media (min-width: 768px) {
+  .txt-sm-left {
+    text-align: left; }
+  .txt-sm-center {
+    text-align: center; }
+  .txt-sm-right {
+    text-align: right; } }
+
+@media (min-width: 1024px) {
+  .txt-md-left {
+    text-align: left; }
+  .txt-md-center {
+    text-align: center; }
+  .txt-md-right {
+    text-align: right; } }
+
+@media (min-width: 1280px) {
+  .txt-lg-left {
+    text-align: left; }
+  .txt-lg-center {
+    text-align: center; }
+  .txt-lg-right {
+    text-align: right; } }
+
+@media (min-width: 1680px) {
+  .txt-xl-left {
+    text-align: left; }
+  .txt-xl-center {
+    text-align: center; }
+  .txt-xl-right {
+    text-align: right; } }
 
 /* ========================================================================== */
 /***

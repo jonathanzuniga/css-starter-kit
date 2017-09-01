@@ -766,15 +766,16 @@
  * Text alignment:
  */
 
-/**
- * Center aligned text:
- * `.txt-center`
- *
- *     @example
- *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-center {
+@mixin text-left {
+	text-align: left;
+}
+
+@mixin text-center {
 	text-align: center;
+}
+
+@mixin text-right {
+	text-align: right;
 }
 
 /**
@@ -785,7 +786,18 @@
  *     p.txt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-left {
-	text-align: left;
+	@include text-left;
+}
+
+/**
+ * Center aligned text:
+ * `.txt-center`
+ *
+ *     @example
+ *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-center {
+	@include text-center;
 }
 
 /**
@@ -796,7 +808,30 @@
  *     p.txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-right {
-	text-align: right;
+	@include text-right;
+}
+
+/**
+ * Responsive text alignment:
+ * `.txt-*-*`
+ *
+ *     @example
+ *     p.txt-lg-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		.txt-#{$size}-left {
+			@include text-left;
+		}
+
+		.txt-#{$size}-center {
+			@include text-center;
+		}
+
+		.txt-#{$size}-right {
+			@include text-right;
+		}
+	}
 }
 
 /* ========================================================================== */

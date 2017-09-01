@@ -368,6 +368,9 @@
 										<li>
 											<a href="helpers.html#right-aligned-text">Right aligned text</a>
 										</li>
+										<li>
+											<a href="helpers.html#responsive-text-alignment">Responsive text alignment</a>
+										</li>
 									</ul>
 								</li>
 								<li>
