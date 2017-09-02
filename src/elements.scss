@@ -22,7 +22,8 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure {
+ul, ol, dl, figure,
+.fld {
 	margin-bottom: $half-spacing-unit;
 }
 
@@ -247,13 +248,13 @@ small {
  */
 .btn {
 	background-color: $button-background-color;
-	border: $button-border-width solid $button-border-color;
+	border: $button-border;
 	border-radius: $button-border-radius;
 	color: $button-text-color;
 	display: inline-block;
 	font-size: $base-font-size;
 	font-weight: $button-font-weight;
-	line-height: $base-line-height;
+	line-height: $button-line-height;
 	padding: $button-padding;
 	text-align: center;
 	vertical-align: middle;
@@ -724,6 +725,12 @@ small {
  * Forms:
  */
 
+.ctrl {
+	font-size: $base-font-size;
+	position: relative;
+	text-align: left;
+}
+
 /**
  * Input:
  * `.input`
@@ -735,8 +742,8 @@ small {
 	border: $input-border;
 	border-radius: $input-border-radius;
 	font-size: $base-font-size;
-
-	padding: $input-padding-y $input-padding-x;
+	line-height: $input-line-height;
+	padding: $input-padding;
 
 	width: 100%;
 
@@ -751,6 +758,55 @@ small {
 
 	&:hover {
 		border-color: $input-hover-border-color;
+	}
+}
+
+.fld--group {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-pack: start;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+
+	width: 100%;
+
+	> *:not(:last-child) {
+		margin-right: -1px;
+	}
+
+	.lbl {
+		&:first-child {
+			margin-right: $quarter-spacing-unit;
+
+			& + .input {
+				flex-grow: 2;
+			}
+		}
+	}
+
+	.input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+
+		width: auto;
+
+		&:first-child {
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
+
+		&:last-child {
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+
+	.btn {
+		&:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
 	}
 }
 

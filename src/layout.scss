@@ -401,6 +401,40 @@ html, body {
  * Gutters:
  */
 
+@mixin gutter-double {
+	&.row {
+		margin-left: -$grid-column-gutter;
+		margin-right: -$grid-column-gutter;
+
+		> .col,
+		> [class*="col-"] {
+			padding-left: $base-spacing-unit;
+			padding-right: $base-spacing-unit;
+		}
+	}
+}
+
+.gutters-double {
+	@include gutter-double;
+}
+
+@mixin gutter-plusquarter {
+	&.row {
+		margin-left: -$grid-column-gutter;
+		margin-right: -$grid-column-gutter;
+
+		> .col,
+		> [class*="col-"] {
+			padding-left: $grid-column-gutter + $quarter-spacing-unit;
+			padding-right: $grid-column-gutter + $quarter-spacing-unit;
+		}
+	}
+}
+
+.gutters-plusquarter {
+	@include gutter-plusquarter;
+}
+
 /**
  * Half size gutters:
  * `.gutters-half` `.gutters-[size]-half`
@@ -414,8 +448,8 @@ html, body {
  */
 @mixin gutter-half {
 	&.row {
-		margin-left: -$grid-column-gutter / 2;
-		margin-right: -$grid-column-gutter / 2;
+		margin-left: -($grid-column-gutter / 2);
+		margin-right: -($grid-column-gutter / 2);
 
 		> .col,
 		> [class*="col-"] {
@@ -442,8 +476,8 @@ html, body {
  */
 @mixin gutter-0 {
 	&.row {
-		margin-left: 0;
-		margin-right: 0;
+		margin-left: -$grid-column-gutter;
+		margin-right: -$grid-column-gutter;
 
 		> .col,
 		> [class*="col-"] {
@@ -459,6 +493,14 @@ html, body {
 
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
+		.gutters-#{$size}-double {
+			@include gutter-double;
+		}
+
+		.gutters-#{$size}-plusquarter {
+			@include gutter-plusquarter;
+		}
+
 		.gutters-#{$size}-half {
 			@include gutter-half;
 		}

@@ -5,7 +5,7 @@
 
 // Basic
 
-$text-color: #151515;
+$text-color: #000;
 
 $base-font-size: 16px !default;
 
@@ -81,8 +81,8 @@ $link-hover-decoration: none;
 
 // Blockquote
 
-$blockquote-left-quotation-mark: '“';
-$blockquote-right-quotation-mark: '”';
+$blockquote-left-quotation-mark: '«'; // '“';
+$blockquote-right-quotation-mark: '»'; // '”';
 
 
 // Code
@@ -100,13 +100,17 @@ $pre-border-radius: $quarter-spacing-unit / 2;
 // Button
 
 $button-background-color: lighten(get-color('Grey 2'), 6%);
-$button-border-color: transparent;
+
 $button-border-width: 1px;
+$button-border-color: transparent;
+$button-border: $button-border-width solid $button-border-color;
+
 $button-border-radius: rem-to-em($quarter-spacing-unit / 2);
 $button-font-weight: 400;
+$button-line-height: $line-height-ratio - $quarter-spacing-unit;
 $button-padding: 
 	rem-to-em($quarter-spacing-unit) 
-	rem-to-em($half-spacing-unit);
+	rem-to-em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
 $button-text-color: #fff;
 
 $button-hover-background-color-shade-amount: 12%;
@@ -215,11 +219,10 @@ $button-large-padding:
 
 // Input
 
-$input-border: 2px solid get-color('Grey 7');
+$input-border: $button-border-width solid get-color('Grey 7');
 $input-border-radius: $quarter-spacing-unit / 2;
-
-$input-padding-x: rem-to-em($quarter-spacing-unit);
-$input-padding-y: rem-to-em($quarter-spacing-unit / 2);
+$input-line-height: $button-line-height;
+$input-padding: $button-padding;
 
 $input-active-border-color: get-color('Blue 2');
 $input-focus-border-color: get-color('Blue 2');
@@ -345,7 +348,7 @@ $grid-row-margin-bottom: 0;
 $grid-row-margin-top: 0;
 
 // Margen del lado izquierdo y derecho de cada columna.
-$grid-column-gutter: 16px;
+$grid-column-gutter: $half-spacing-unit;;
 
 // Grid breakpoints, minimun widths.
 $grid-breakpoints: (
