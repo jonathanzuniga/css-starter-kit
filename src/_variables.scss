@@ -108,9 +108,13 @@ $button-border: $button-border-width solid $button-border-color;
 $button-border-radius: rem-to-em($quarter-spacing-unit / 2);
 $button-font-weight: 400;
 $button-line-height: $line-height-ratio - $quarter-spacing-unit;
-$button-padding: 
+
+// Se usa el mismo padding para los demas controles de las formas.
+$control-padding: 
 	rem-to-em($quarter-spacing-unit) 
 	rem-to-em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
+
+$button-padding: $control-padding;
 $button-text-color: #fff;
 
 $button-hover-background-color-shade-amount: 12%;
@@ -217,12 +221,17 @@ $button-large-padding:
 	rem-to-em($half-spacing-unit + 0.5);
 
 
+// Label
+
+$label-padding: rem-to-em($quarter-spacing-unit / 2) 0;
+
+
 // Input
 
 $input-border: $button-border-width solid get-color('Grey 7');
 $input-border-radius: $quarter-spacing-unit / 2;
 $input-line-height: $button-line-height;
-$input-padding: $button-padding;
+$input-padding: $control-padding;
 
 $input-active-border-color: get-color('Blue 2');
 $input-focus-border-color: get-color('Blue 2');
