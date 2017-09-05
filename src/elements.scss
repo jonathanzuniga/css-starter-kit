@@ -182,11 +182,11 @@ pre {
  */
 @each $heading, $size in $headings-sizes {
 	#{$heading} {
-		font-size: px-to-em($size);
+		font-size: $size;
 		line-height: $heading-line-height;
 
 		&:not(:first-child) {
-			margin-top: px-to-rem($size) + 0.25;
+			margin-top: em_to_rem($size) + 0.25;
 		}
 	}
 }
@@ -226,11 +226,12 @@ ul {
  * `small`
  *
  *     @example
- *     small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         small  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.
  */
 small {
 	font-size: $small-font-size;
-	// line-height: $line-height-ratio - 0.5;
+	// line-height: $line-height-ratio - px-to-em($base-font-size - em-to-px($small-font-size) + 1);
 }
 
 /* ========================================================================== */
@@ -492,7 +493,8 @@ small {
  *     a.btn.btn--success.btn--gradient Gradient button
  */
 .btn--gradient {
-	border: none;
+	border: $button-gradient-border;
+	padding: $button-gradient-padding;
 
 	$button-gradient-background-color-top: 
 		tint(
@@ -505,13 +507,13 @@ small {
 			$button-gradient-background-color-bottom-shade-amount
 		);
 
-	@include button-gradient-bg(
+	@include button_gradient_bg(
 		$button-gradient-background-color-top, 
 		$button-gradient-background-color-bottom
 	);
 
 	&:hover {
-		@include button-gradient-bg(
+		@include button_gradient_bg(
 			shade(
 				$button-gradient-background-color-top, 
 				$button-hover-background-color-shade-amount
@@ -548,13 +550,13 @@ small {
 				lightness($button-gradient-primary-background-color-bottom) + $button-gradient-background-color-bottom-lightness
 			);
 
-		@include button-gradient-bg(
-			$button-gradient-background-color-top-hsl,
-			$button-gradient-background-color-bottom-hsl
+		@include button_gradient_bg(
+			$button-gradient-background-color-top-hsl, // #478ec9
+			$button-gradient-background-color-bottom-hsl // #3a76be
 		);
 
 		&:hover {
-			@include button-gradient-bg(
+			@include button_gradient_bg(
 				shade(
 					$button-gradient-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
@@ -579,13 +581,13 @@ small {
 				$button-gradient-background-color-bottom-shade-amount
 			);
 
-		@include button-gradient-bg(
+		@include button_gradient_bg(
 			$button-gradient-secondary-background-color-top, 
 			$button-gradient-secondary-background-color-bottom
 		);
 
 		&:hover {
-			@include button-gradient-bg(
+			@include button_gradient_bg(
 				shade(
 					$button-gradient-secondary-background-color-top, 
 					$button-hover-background-color-shade-amount
@@ -623,13 +625,13 @@ small {
 				lightness($button-gradient-success-background-color-bottom) + $button-gradient-background-color-bottom-lightness
 			);
 
-		@include button-gradient-bg(
+		@include button_gradient_bg(
 			$button-gradient-background-color-top-hsl, 
 			$button-gradient-background-color-bottom-hsl
 		);
 
 		&:hover {
-			@include button-gradient-bg(
+			@include button_gradient_bg(
 				shade(
 					$button-gradient-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
@@ -667,13 +669,13 @@ small {
 				lightness($button-gradient-danger-background-color-bottom) + $button-gradient-background-color-bottom-lightness
 			);
 
-		@include button-gradient-bg(
+		@include button_gradient_bg(
 			$button-gradient-background-color-top-hsl, 
 			$button-gradient-background-color-bottom-hsl
 		);
 
 		&:hover {
-			@include button-gradient-bg(
+			@include button_gradient_bg(
 				shade(
 					$button-gradient-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
@@ -839,10 +841,10 @@ small {
 		}
 	}
 
-	.input,
-	.btn {
-		height: $base-spacing-unit + ($quarter-spacing-unit / 2);
-	}
+	// .input,
+	// .btn {
+	// 	height: rem-to-em($base-spacing-unit + ($quarter-spacing-unit / 2));
+	// }
 }
 
 /* ========================================================================== */

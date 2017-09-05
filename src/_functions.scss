@@ -13,9 +13,9 @@
 }
 
 // Generar la lista completa de colores.
-@function get-colors-list($colors, $tints) {
+@function get_colors_list($colors, $tints) {
 	$colors-list: 'Black' #000, 'White' #fff;
-	@each $name, $hex, $saturate in $colors {
+	@each $name, $hex in $colors {
 		@for $tint from 1 to $tints + 2 {
 			@if $tint == 1 {
 				$colors-list: append(
@@ -26,12 +26,9 @@
 			} @else {
 				$colors-list: append(
 					$colors-list, 
-					'#{$name} #{$tint}' saturate(
-						tint(
-							$hex, 
-							percentage(1 - ((100 / $tint) / 64))
-						), 
-						$saturate
+					'#{$name} #{$tint}' tint(
+						$hex, 
+						percentage(1 - ((100 / $tint) / 64))
 					), 
 					comma
 				);
@@ -42,7 +39,7 @@
 }
 
 // Get one color from the list.
-@function get-color($color) {
+@function get_color($color) {
 	@each $cp in $color-palette {
 		@if nth($cp, 1) == $color {
 			@return nth($cp, 2);
@@ -52,8 +49,8 @@
 }
 
 // Hepler. Remove unit from input number.
-@function clear-unit($value) {
-	@if type-of($value) == 'number' {
+@function clear_unit($value) {
+	@if type_of($value) == 'number' {
 		@if (unitless($value)) {
 			@return $value;
 		} @elseif unit($value) == 'em' {
@@ -73,9 +70,9 @@
 
 // Hepler. Make unit from input number. 
 // Replace $value unit to target unit.
-@function make-unit($value, $unit: px) {
-	$value: clear-unit($value);
-	@if type-of($value) == 'number' {
+@function make_unit($value, $unit: px) {
+	$value: clear_unit($value);
+	@if type_of($value) == 'number' {
 		@if $unit == 'em' {
 			@return $value * 1em;
 		} @elseif $unit == 'rem' {
@@ -92,42 +89,42 @@
 }
 
 // Convert pixels to rems. $value = pixel size. $base = base pixel size.
-@function px-to-rem($value, $base: $base-font-size) {
+@function px_to_rem($value, $base: $base-font-size) {
 	@return ($value / $base) * 1rem;
 }
 
 // Convert rems to pixels.
-@function rem-to-px($value) {
-	$value: clear-unit($value);
-	$base-font-size: clear-unit($base-font-size);
-	@return make-unit($value * $base-font-size, px);
+@function rem_to_px($value) {
+	$value: clear_unit($value);
+	$base-font-size: clear_unit($base-font-size);
+	@return make_unit($value * $base-font-size, px);
 }
 
 // Convert pixels to ems.
-@function px-to-em($value, $base: $base-font-size) {
-		@if $value == 0 { @return 0 }
-	@return $value / $base + 0em;
+@function px_to_em($value, $base: $base-font-size) {
+	@if $value == 0 { @return 0 }
+	@return ($value / $base) + 0em;
 }
 
 // Convert ems to pixels.
-@function em-to-px($value, $base: $base-font-size) {
-	$value: clear-unit($value);
-	$font-size: clear-unit($base);
-	@return make-unit($value * $font-size, px);
+@function em_to_px($value, $base: $base-font-size) {
+	$value: clear_unit($value);
+	$font-size: clear_unit($base);
+	@return make_unit($value * $font-size, px);
 }
 
 // Convert ems to rems.
-@function em-to-rem($value, $base: $base-font-size) {
-	$value: clear-unit($value);
-	$font-size: clear-unit($base);
-	$base-font-size	: clear-unit($base-font-size);
-	@return make-unit($font-size * $value / $base-font-size, rem);
+@function em_to_rem($value, $base: $base-font-size) {
+	$value: clear_unit($value);
+	$font-size: clear_unit($base);
+	$base-font-size	: clear_unit($base-font-size);
+	@return make_unit($font-size * $value / $base-font-size, rem);
 }
 
 // Convert rems to ems.
-@function rem-to-em($value, $base: $base-font-size) {
-	$value: clear-unit($value);
-	$font-size: clear-unit($base);
-	$base-font-size: clear-unit($base-font-size);
-	@return make-unit($value * $base-font-size / $font-size, em);
+@function rem_to_em($value, $base: $base-font-size) {
+	$value: clear_unit($value);
+	$font-size: clear_unit($base);
+	$base-font-size: clear_unit($base-font-size);
+	@return make_unit($value * $base-font-size / $font-size, em);
 }

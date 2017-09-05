@@ -2,80 +2,49 @@
 // Elements
 // ==========================================================================
 
-
-// Basic
-
-$text-color: #000;
+// Base font size and line-height
 
 $base-font-size: 16px !default;
-
 $base-line-height: 26px !default;
 
-$base-spacing-unit: ($base-line-height + 6);
+$base-spacing-unit: 2rem; // 32px
 $half-spacing-unit: $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 
 $line-height-ratio: $base-line-height / $base-font-size;
 
-// Convert spacing units to rems.
-
-$base-spacing-unit: px-to-rem($base-spacing-unit); // 2rem (32px)
-$half-spacing-unit: px-to-rem($half-spacing-unit); // 1rem (16px)
-$quarter-spacing-unit: px-to-rem($quarter-spacing-unit); // 0.5rem (8px)
-
 
 // Colors
 
-// Name color, hex color, saturare amount.
-
-// $colors: (
-// 	'Blue' #2c9ab7 8%,
-// 	'Green' #449a88 8%,
-// 	'Grey' #373737 0%,
-// 	'Red' #db3a1b 8%,
-// 	'Yellow' #febe12 8%
-// );
-
+// Name color and hex color code.
 $colors: (
-	'Blue' #4183c4 0%,
-	'Green' #36b725 0%,
-	'Grey' #373737 0%,
-	'Red' #e65146 0%,
-	'Yellow' #ffc439 0%
+	'Blue' #4183c4,
+	'Green' #36b725,
+	'Grey' #373737,
+	'Red' #e65146,
+	'Yellow' #ffc439
 );
 
-// $colors: (
-// 	'Blue' #055ec2 5%,
-// 	'Bright blue' #0098d0 5%,
-// 	'Green' #00b43c 5%,
-// 	'Grey' #4f4f4f 0%,
-// 	'Orange' #ff7800 5%,
-// 	'Purple' #be2265 5%,
-// 	'Red' #fb3840 0%,
-// 	'Yellow' #ffb91d 5%
-// );
-
-// Número de tintas por cada color.
+// Number of tints for each color.
 $tints: 7;
 
-// Color palette
-
+// Color palette.
 $color-palette: (
-	get-colors-list($colors, $tints)
+	get_colors_list($colors, $tints)
 ) !default;
+
+$text-color: get_color('Black');
 
 
 // Hyperlinks
 
-$link-color: get-color('Blue 1');
-// $link-color: shade(get-color('Blue 1'), 20%); // #237a91
+$link-color: get_color('Blue 1');
 $link-decoration: none;
 
 $link-visited-color: $link-color;
 $link-visited-decoration: none;
 
 $link-hover-color: $text-color;
-// $link-hover-color: get-color('Blue 1'); // #2c9ab7
 $link-hover-decoration: none;
 
 
@@ -90,31 +59,30 @@ $blockquote-right-quotation-mark: '»'; // '”';
 $mono-font-family: monospace;
 
 $code-border-radius: $quarter-spacing-unit / 2;
-$code-background-color: transparentize(get-color('Grey 1'), 0.92);
+$code-background-color: transparentize(get_color('Grey 1'), 0.92);
 $code-font-size: 1em;
 
-$pre-background-color: transparentize(get-color('Grey 1'), 0.95);
+$pre-background-color: transparentize(get_color('Grey 1'), 0.95);
 $pre-border-radius: $quarter-spacing-unit / 2;
 
 
 // Button
 
-$button-background-color: lighten(get-color('Grey 2'), 6%);
+$button-background-color: lighten(get_color('Grey 2'), 6%);
 
 $button-border-width: 1px;
 $button-border-color: transparent;
 $button-border: $button-border-width solid $button-border-color;
 
-$button-border-radius: rem-to-em($quarter-spacing-unit / 2);
+$button-border-radius: rem_to_em($quarter-spacing-unit / 2);
 $button-font-weight: 400;
 $button-line-height: $line-height-ratio - $quarter-spacing-unit;
 
 // Se usa el mismo padding para los demas controles de las formas.
-$control-padding: 
-	rem-to-em($quarter-spacing-unit) 
-	rem-to-em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
+$control-padding-y: rem_to_em($quarter-spacing-unit);
+$control-padding-x: rem_to_em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
 
-$button-padding: $control-padding;
+$button-padding: $control-padding-y $control-padding-x;
 $button-text-color: #fff;
 
 $button-hover-background-color-shade-amount: 12%;
@@ -122,26 +90,26 @@ $button-hover-background-color-shade-amount: 12%;
 
 // Primary button
 
-$button-primary-background-color: get-color('Blue 1');
+$button-primary-background-color: get_color('Blue 1');
 $button-primary-text-color: #fff;
 
 
 // Secondary button
 
-$button-secondary-background-color: lighten(get-color('Grey 7'), 6%);
-$button-secondary-text-color: transparentize(get-color('Grey 1'), 0.3);
+$button-secondary-background-color: lighten(get_color('Grey 7'), 6%);
+$button-secondary-text-color: transparentize(get_color('Grey 1'), 0.3);
 
 
 // Success button
 
-$button-success-background-color: get-color('Green 1');
+$button-success-background-color: get_color('Green 1');
 $button-success-border-color: transparent;
 $button-success-text-color: #fff;
 
 
 // Danger button
 
-$button-danger-background-color: get-color('Red 1');
+$button-danger-background-color: get_color('Red 1');
 $button-danger-border-color: transparent;
 $button-danger-text-color: #fff;
 
@@ -198,56 +166,62 @@ $button-gradient-background-color-bottom-hue: 3.25;
 $button-gradient-background-color-bottom-saturation: 3.25;
 $button-gradient-background-color-bottom-lightness: 3.25;
 
+$button-gradient-border: none;
+$button-gradient-padding: 
+	($control-padding-y + 0.063) // + 1px
+	($control-padding-x + 0.063); // + 1px
+
 
 // Small button
 
 $button-small-border-radius: 
-	rem-to-em(($quarter-spacing-unit / 2) - 0.063);
+	rem_to_em(($quarter-spacing-unit / 2) - 0.063);
 $button-small-font-size: 
-	px-to-em($base-font-size - 3);
+	px_to_em($base-font-size - 3);
 $button-small-padding: 
-	rem-to-em($quarter-spacing-unit / 2) 
-	rem-to-em($half-spacing-unit - 0.25);
+	rem_to_em($quarter-spacing-unit / 2) 
+	rem_to_em($half-spacing-unit - 0.25);
 
 
 // Large button
 
 $button-large-border-radius: 
-	rem-to-em($quarter-spacing-unit / 2);
+	rem_to_em($quarter-spacing-unit / 2);
 $button-large-font-size: 
-	px-to-em($base-font-size + 4);
+	px_to_em($base-font-size + 4);
 $button-large-padding: 
-	rem-to-em($quarter-spacing-unit + 0.25) 
-	rem-to-em($half-spacing-unit + 0.5);
+	rem_to_em($quarter-spacing-unit + 0.25) 
+	rem_to_em($half-spacing-unit + 0.5);
 
 
 // Label
 
-$label-padding: rem-to-em($quarter-spacing-unit / 2) 0;
+$label-padding: rem_to_em($quarter-spacing-unit / 2) 0;
 
 
 // Input
 
-$input-border: $button-border-width solid get-color('Grey 7');
+$input-border: $button-border-width solid get_color('Grey 7');
 $input-border-radius: $quarter-spacing-unit / 2;
 $input-line-height: $button-line-height;
-$input-padding: $control-padding;
+$input-padding: $control-padding-y $control-padding-x;
 
-$input-active-border-color: get-color('Blue 2');
-$input-focus-border-color: get-color('Blue 2');
-$input-hover-border-color: get-color('Grey 4');
+$input-active-border-color: get_color('Blue 2');
+$input-focus-border-color: get_color('Blue 2');
+$input-hover-border-color: get_color('Grey 4');
 
 
 // Headings
 
 $headings-sizes: (
-	'h1': $base-font-size * 2.5, // 2.5em (40px)
-	'h2': $base-font-size * 2, // 2em (32px)
-	'h3': $base-font-size * 1.75, // 1.75em (28px)
-	'h4': $base-font-size * 1.5, // 1.5em (24px)
-	'h5': $base-font-size * 1.25, // 1.25em (20px)
-	'h6': $base-font-size // 1em (16px)
+	'h1': 2.5em, // 40px
+	'h2': 2em, // 32px
+	'h3': 1.75em, // 28px
+	'h4': 1.5em, // 24px
+	'h5': 1.25em, // 20px
+	'h6': 1em // 16px
 ) !default;
+
 $heading-line-height: 1.1;
 
 
@@ -264,7 +238,7 @@ $table-heading-text-align: left;
 
 // Borders
 
-$border-color: transparentize(get-color('Grey 1'), 0.83);
+$border-color: transparentize(get_color('Grey 1'), 0.83);
 $border-radius: $quarter-spacing-unit / 2;
 
 
@@ -274,7 +248,7 @@ $dropcap-background-color: transparent;
 $dropcap-border: none;
 $dropcap-color: $text-color;
 
-$dropcap-font-size: px-to-em($base-font-size * 3.5);
+$dropcap-font-size: px_to_em($base-font-size * 3.5);
 $dropcap-font-style: normal;
 $dropcap-font-weight: normal;
 
@@ -302,19 +276,19 @@ $smcaps-margin-right: 0.188em; // 3px
 
 // Font size
 
-$small-font-size: px-to-em($base-font-size - 3); // 0.813em (13px)
-$large-font-size: px-to-em($base-font-size + 4); // 1.25em (20px)
+$small-font-size: px_to_em($base-font-size - 3); // 0.813em (13px)
+$large-font-size: px_to_em($base-font-size + 4); // 1.25em (20px)
 
 
 // Highlighting text
 
-$hightlight-border-radius: rem-to-em($half-spacing-unit) 0 rem-to-em($half-spacing-unit) 0;
+$hightlight-border-radius: rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
 $hightlight-background: 
 	linear-gradient(
 		-100deg, 
-		rgba(get-color('Yellow 4'), 0.3), 
-		rgba(get-color('Yellow 4'), 0.7) 95%, 
-		rgba(get-color('Yellow 4'), 0.1)
+		rgba(get_color('Yellow 4'), 0.3), 
+		rgba(get_color('Yellow 4'), 0.7) 95%, 
+		rgba(get_color('Yellow 4'), 0.1)
 	);
 
 
