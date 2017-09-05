@@ -333,17 +333,18 @@ $grid-row-margin-top: 0;
 // Margen del lado izquierdo y derecho de cada columna.
 $grid-column-gutter: $half-spacing-unit;;
 
-// Grid breakpoints, minimun widths.
+// Grid breakpoints, minimum widths.
+$breakpoint-xs-min-width: 0;
+$breakpoint-sm-min-width: 768px;
+$breakpoint-md-min-width: 1024px;
+$breakpoint-lg-min-width: 1280px;
+$breakpoint-xl-min-width: 1680px;
+
 $grid-breakpoints: (
-	xs: 0,
-	sm: 768px,
-	md: 1024px,
-	lg: 1280px,
-	xl: 1680px
+	xs: $breakpoint-xs-min-width,
+	sm: $breakpoint-sm-min-width,
+	md: $breakpoint-md-min-width,
+	lg: $breakpoint-lg-min-width,
+	xl: $breakpoint-xl-min-width
 ) !default;
 
-$breakpoint-xs-min-width: 0 !default;
-$breakpoint-sm-min-width: 768px !default;
-$breakpoint-md-min-width: 1024px !default;
-$breakpoint-lg-min-width: 1280px !default;
-$breakpoint-xl-min-width: 1680px !default;

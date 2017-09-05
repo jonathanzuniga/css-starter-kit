@@ -125,52 +125,14 @@ html, body {
  *         div.col-xs-12.col-sm-9.col-md-7.col-lg-5.col-xl-3
  *             div.bgc-grey-3 &nbsp;
  */
-@media (min-width: $breakpoint-xs-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-xs-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-sm-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-sm-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-md-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-md-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-lg-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-lg-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
-		}
-	}
-}
-
-@media (min-width: $breakpoint-xl-min-width) {
-	@for $i from 1 through $grid-columns-number {
-		.col-xl-#{$i} {
-			$column-width: percentage($i / $grid-columns-number);
-			flex-basis: $column-width;
-			max-width: $column-width;
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 1 through $grid-columns-number {
+			.col-#{$size}-#{$i} {
+				$column-width: percentage($i / $grid-columns-number);
+				flex-basis: $column-width;
+				max-width: $column-width;
+			}
 		}
 	}
 }
