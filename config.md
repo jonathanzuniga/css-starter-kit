@@ -324,13 +324,13 @@
 									</ul>
 								</li>
 								<li>
-									<a href="helpers.html#font-size">Font size</a>
+									<a href="helpers.html#margins">Margins</a>
 								</li>
 								<li>
-									<a href="helpers.html#font-style">Font style</a>
+									<a href="helpers.html#paddings">Paddings</a>
 								</li>
 								<li>
-									<a href="helpers.html#font-weight">Font weight</a>
+									<a href="helpers.html#text">Text</a>
 									<ul class="ls-unstyled">
 										<li>
 											<a href="helpers.html#font-weight-thin">Font weight thin</a>
@@ -359,13 +359,16 @@
 										<li>
 											<a href="helpers.html#font-weight-black">Font weight black</a>
 										</li>
+										<li>
+											<a href="helpers.html#italic-text">Italic text</a>
+										</li>
+										<li>
+											<a href="helpers.html#font-small">Font small</a>
+										</li>
+										<li>
+											<a href="helpers.html#font-large">Font large</a>
+										</li>
 									</ul>
-								</li>
-								<li>
-									<a href="helpers.html#margins">Margins</a>
-								</li>
-								<li>
-									<a href="helpers.html#paddings">Paddings</a>
 								</li>
 								<li>
 									<a href="helpers.html#text-alignment">Text alignment</a>
