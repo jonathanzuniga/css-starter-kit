@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* ========================================================================== */
+/***
+ * Flex grid:
+ */
 * {
   box-sizing: border-box; }
 
@@ -7,7 +9,6 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* ========================================================================== */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -35,9 +36,6 @@ html, body {
   margin-right: auto;
   width: 100%; }
 
-/***
- * Flex grid:
- */
 /**
  * Rows and columns:
  * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
@@ -106,12 +104,8 @@ html, body {
   flex-basis: 100%;
   max-width: 100%; }
 
-/* ========================================================================== */
-/***
- * Responsive classes:
- */
 /**
- * Columns:
+ * Responsive columns:
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
@@ -321,390 +315,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/* ========================================================================== */
-/***
- * Horizontal modifiers:
- */
-/**
- * Aligns columns to left:
- * `.cols-left`
- *
- *     @example
- *     div.row.cols-left
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-left {
-  justify-content: flex-start; }
-
-/**
- * Aligns columns to center:
- * `.cols-center`
- *
- *     @example
- *     div.row.cols-center
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-center {
-  justify-content: center; }
-
-/**
- * Aligns columns to right:
- * `.cols-right`
- *
- *     @example
- *     div.row.cols-right
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-right {
-  justify-content: flex-end; }
-
-/**
- * Space between columns:
- * `.cols-between`
- *
- *     @example
- *     div.row.cols-between
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-between {
-  justify-content: space-between; }
-
-/**
- * Space around columns:
- * `.cols-around`
- *
- *     @example
- *     div.row.cols-around
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-around {
-  justify-content: space-around; }
-
-/***
- * Vertical modifiers:
- */
-/**
- * Aligns columns to top:
- * `.cols-top`
- *
- *     @example
- *     div.row.cols-top.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-top {
-  align-items: flex-start; }
-
-/**
- * Aligns columns to middle:
- * `.cols-middle`
- *
- *     @example
- *     div.row.cols-middle.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-middle {
-  align-items: center; }
-
-/**
- * Aligns columns to bottom:
- * `.cols-bottom`
- *
- *     @example
- *     div.row.cols-bottom.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-bottom {
-  align-items: flex-end; }
-
-/**
- * Aligns column to top:
- * `.col-top`
- *
- *     @example
- *     div.row.cols-bottom.h-100px
- *         div.col-4.col-top
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.col-top {
-  align-self: flex-start; }
-
-/**
- * Aligns column to middle:
- * `.col-middle`
- *
- *     @example
- *     div.row.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.col-middle
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.col-middle {
-  align-self: center; }
-
-/**
- * Aligns column to bottom:
- * `.col-middle`
- *
- *     @example
- *     div.row.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.col-bottom
- *             div.bgc-grey-2 &nbsp;
- */
-.col-bottom {
-  align-self: flex-end; }
-
-/* ========================================================================== */
-/***
- * Offsets:
- */
-/**
- * Offsetting columns:
- * `.oset-[#]` `.[size]-oset-[#]`
- *
- *     @example
- *     div.row
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.oset-2
- *             div.bgc-grey-2 &nbsp;
- *     div.row
- *         div.md-col-5
- *             div.bgc-grey-2 &nbsp;
- *         div.md-col-3.lg-oset-3
- *             div.bgc-grey-2 &nbsp;
- */
-@media (min-width: 0) {
-  .oset-0,
-  .xs-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .xs-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .xs-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .xs-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .xs-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .xs-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .xs-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .xs-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .xs-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .xs-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .xs-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .xs-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 768px) {
-  .oset-0,
-  .sm-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .sm-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .sm-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .sm-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .sm-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .sm-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .sm-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .sm-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .sm-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .sm-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .sm-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .sm-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1024px) {
-  .oset-0,
-  .md-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .md-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .md-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .md-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .md-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .md-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .md-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .md-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .md-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .md-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .md-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .md-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1280px) {
-  .oset-0,
-  .lg-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .lg-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .lg-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .lg-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .lg-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .lg-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .lg-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .lg-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .lg-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .lg-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .lg-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .lg-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1680px) {
-  .oset-0,
-  .xl-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .xl-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .xl-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .xl-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .xl-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .xl-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .xl-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .xl-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .xl-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .xl-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .xl-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .xl-oset-11 {
-    margin-left: 91.66667%; } }
-
-/* ========================================================================== */
 /***
  * Gutters:
  */
@@ -945,7 +555,387 @@ html, body {
       padding-left: 0;
       padding-right: 0; } }
 
-/* ========================================================================== */
+/***
+ * Horizontal modifiers:
+ */
+/**
+ * Aligns columns to left:
+ * `.cols-left`
+ *
+ *     @example
+ *     div.row.cols-left
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-left {
+  justify-content: flex-start; }
+
+/**
+ * Aligns columns to center:
+ * `.cols-center`
+ *
+ *     @example
+ *     div.row.cols-center
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-center {
+  justify-content: center; }
+
+/**
+ * Aligns columns to right:
+ * `.cols-right`
+ *
+ *     @example
+ *     div.row.cols-right
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-right {
+  justify-content: flex-end; }
+
+/**
+ * Space between columns:
+ * `.cols-between`
+ *
+ *     @example
+ *     div.row.cols-between
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-between {
+  justify-content: space-between; }
+
+/**
+ * Space around columns:
+ * `.cols-around`
+ *
+ *     @example
+ *     div.row.cols-around
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-around {
+  justify-content: space-around; }
+
+/***
+ * Vertical modifiers:
+ */
+/**
+ * Aligns columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-top {
+  align-items: flex-start; }
+
+/**
+ * Aligns columns to middle:
+ * `.cols-middle`
+ *
+ *     @example
+ *     div.row.cols-middle.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-middle {
+  align-items: center; }
+
+/**
+ * Aligns columns to bottom:
+ * `.cols-bottom`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-bottom {
+  align-items: flex-end; }
+
+/**
+ * Aligns column to top:
+ * `.col-top`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4.col-top
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-top {
+  align-self: flex-start; }
+
+/**
+ * Aligns column to middle:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-middle
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-middle {
+  align-self: center; }
+
+/**
+ * Aligns column to bottom:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-bottom
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-bottom {
+  align-self: flex-end; }
+
+/***
+ * Offsets:
+ */
+/**
+ * Offsetting columns:
+ * `.oset-[#]` `.[size]-oset-[#]`
+ *
+ *     @example
+ *     div.row
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.oset-4
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.md-col-5
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-col-3.lg-oset-3
+ *             div.bgc-grey-2 &nbsp;
+ */
+@media (min-width: 0) {
+  .oset-0,
+  .xs-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .xs-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .xs-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .xs-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .xs-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .xs-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .xs-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .xs-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .xs-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .xs-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .xs-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .xs-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 768px) {
+  .oset-0,
+  .sm-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .sm-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .sm-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .sm-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .sm-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .sm-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .sm-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .sm-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .sm-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .sm-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .sm-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .sm-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1024px) {
+  .oset-0,
+  .md-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .md-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .md-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .md-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .md-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .md-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .md-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .md-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .md-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .md-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .md-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .md-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1280px) {
+  .oset-0,
+  .lg-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .lg-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .lg-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .lg-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .lg-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .lg-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .lg-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .lg-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .lg-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .lg-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .lg-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .lg-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1680px) {
+  .oset-0,
+  .xl-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .xl-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .xl-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .xl-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .xl-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .xl-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .xl-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .xl-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .xl-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .xl-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .xl-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .xl-oset-11 {
+    margin-left: 91.66667%; } }
+
 /***
  * Content:
  */
@@ -1157,7 +1147,6 @@ ul {
 small {
   font-size: 0.8125em; }
 
-/* ========================================================================== */
 /***
  * Buttons:
  */
@@ -1444,7 +1433,6 @@ small {
   font-size: 1.25em;
   padding: 0.75em 1.5em; }
 
-/* ========================================================================== */
 /***
  * Forms:
  */
@@ -1477,7 +1465,6 @@ small {
   .input:hover {
     border-color: #b1b1b1; }
 
-/* ========================================================================== */
 /***
  * Input group:
  */
@@ -1528,7 +1515,6 @@ small {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
 
-/* ========================================================================== */
 /***
  * Lists:
  */
@@ -1564,7 +1550,6 @@ small {
   .ls-inline li:not(:last-child) {
     margin-right: 1rem; }
 
-/* ========================================================================== */
 /***
  * Tables:
  */
@@ -2106,7 +2091,6 @@ th {
   .tbl-scroll th, .tbl-scroll td {
     white-space: nowrap; }
 
-/* ========================================================================== */
 /***
  * Borders:
  */
@@ -2192,7 +2176,6 @@ th {
 .bd-0 {
   border: none; }
 
-/* ========================================================================== */
 /***
  * Border radius:
  */
@@ -2300,7 +2283,6 @@ th {
 .bd-radius-0 {
   border-radius: 0; }
 
-/* ========================================================================== */
 /***
  * Clearfix:
  */
@@ -2320,7 +2302,6 @@ th {
   .cf:after {
     clear: both; }
 
-/* ========================================================================== */
 /***
  * Colors:
  */
@@ -3248,10 +3229,86 @@ th {
 .txtc-yellow-8 {
   color: #fff3d8; }
 
-/* ========================================================================== */
 /***
- * Elements to left or right:
+ * Float:
  */
+/**
+ * Float left:
+ * `.flt-left`
+ *
+ *     @example
+ *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-left {
+  float: left; }
+
+/**
+ * Float right:
+ * `.flt-right`
+ *
+ *     @example
+ *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-right {
+  float: right; }
+
+/**
+ * Don't float:
+ * `.flt-none`
+ *
+ *     @example
+ *     span.flt-none Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-none {
+  float: none; }
+
+/**
+ * Responsive float:
+ * `.[size]-flt-[position]`
+ *
+ *     @example
+ *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@media (min-width: 0) {
+  .xs-flt-left {
+    float: left; }
+  .xs-flt-right {
+    float: right; }
+  .xs-flt-none {
+    float: none; } }
+
+@media (min-width: 768px) {
+  .sm-flt-left {
+    float: left; }
+  .sm-flt-right {
+    float: right; }
+  .sm-flt-none {
+    float: none; } }
+
+@media (min-width: 1024px) {
+  .md-flt-left {
+    float: left; }
+  .md-flt-right {
+    float: right; }
+  .md-flt-none {
+    float: none; } }
+
+@media (min-width: 1280px) {
+  .lg-flt-left {
+    float: left; }
+  .lg-flt-right {
+    float: right; }
+  .lg-flt-none {
+    float: none; } }
+
+@media (min-width: 1680px) {
+  .xl-flt-left {
+    float: left; }
+  .xl-flt-right {
+    float: right; }
+  .xl-flt-none {
+    float: none; } }
+
 /**
  * Element to the left side:
  * `.[size]-el-left-[#]`
@@ -4060,90 +4117,241 @@ th {
     margin-bottom: 0;
     width: 91.66667%; } }
 
-/* ========================================================================== */
 /***
- * Floats:
+ * Sizing:
  */
 /**
- * Float left:
- * `.flt-left`
- *
- *     @example
- *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-left {
-  float: left; }
+			 * Width 10%:
+			 * `.w-10` Applies `width: 10%;` to element.
+			 *
+			 *     @example
+			 *     div.w-10.bgc-red-8 &nbsp;
+			 */
+.w-10 {
+  width: 10%; }
 
 /**
- * Float right:
- * `.flt-right`
- *
- *     @example
- *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-right {
-  float: right; }
+			 * Width 20%:
+			 * `.w-20` Applies `width: 20%;` to element.
+			 *
+			 *     @example
+			 *     div.w-20.bgc-red-8 &nbsp;
+			 */
+.w-20 {
+  width: 20%; }
 
 /**
- * Don't float:
- * `.flt-none`
- *
- *     @example
- *     span.flt-none Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-none {
-  float: none; }
+			 * Width 30%:
+			 * `.w-30` Applies `width: 30%;` to element.
+			 *
+			 *     @example
+			 *     div.w-30.bgc-red-8 &nbsp;
+			 */
+.w-30 {
+  width: 30%; }
 
 /**
- * Responsive float:
- * `.[size]-flt-[position]`
+			 * Width 40%:
+			 * `.w-40` Applies `width: 40%;` to element.
+			 *
+			 *     @example
+			 *     div.w-40.bgc-red-8 &nbsp;
+			 */
+.w-40 {
+  width: 40%; }
+
+/**
+			 * Width 50%:
+			 * `.w-50` Applies `width: 50%;` to element.
+			 *
+			 *     @example
+			 *     div.w-50.bgc-red-8 &nbsp;
+			 */
+.w-50 {
+  width: 50%; }
+
+/**
+			 * Width 60%:
+			 * `.w-60` Applies `width: 60%;` to element.
+			 *
+			 *     @example
+			 *     div.w-60.bgc-red-8 &nbsp;
+			 */
+.w-60 {
+  width: 60%; }
+
+/**
+			 * Width 70%:
+			 * `.w-70` Applies `width: 70%;` to element.
+			 *
+			 *     @example
+			 *     div.w-70.bgc-red-8 &nbsp;
+			 */
+.w-70 {
+  width: 70%; }
+
+/**
+			 * Width 80%:
+			 * `.w-80` Applies `width: 80%;` to element.
+			 *
+			 *     @example
+			 *     div.w-80.bgc-red-8 &nbsp;
+			 */
+.w-80 {
+  width: 80%; }
+
+/**
+			 * Width 90%:
+			 * `.w-90` Applies `width: 90%;` to element.
+			 *
+			 *     @example
+			 *     div.w-90.bgc-red-8 &nbsp;
+			 */
+.w-90 {
+  width: 90%; }
+
+/**
+			 * Width 100%:
+			 * `.w-100` Applies `width: 100%;` to element.
+			 *
+			 *     @example
+			 *     div.w-100.bgc-red-8 &nbsp;
+			 */
+.w-100 {
+  width: 100%; }
+
+/**
+			 * Height 10%:
+			 * `.h-10` Applies `height: 10%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-10.bgc-red-8 &nbsp;
+			 */
+.h-10 {
+  height: 10%; }
+
+/**
+			 * Height 20%:
+			 * `.h-20` Applies `height: 20%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-20.bgc-red-8 &nbsp;
+			 */
+.h-20 {
+  height: 20%; }
+
+/**
+			 * Height 30%:
+			 * `.h-30` Applies `height: 30%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-30.bgc-red-8 &nbsp;
+			 */
+.h-30 {
+  height: 30%; }
+
+/**
+			 * Height 40%:
+			 * `.h-40` Applies `height: 40%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-40.bgc-red-8 &nbsp;
+			 */
+.h-40 {
+  height: 40%; }
+
+/**
+			 * Height 50%:
+			 * `.h-50` Applies `height: 50%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-50.bgc-red-8 &nbsp;
+			 */
+.h-50 {
+  height: 50%; }
+
+/**
+			 * Height 60%:
+			 * `.h-60` Applies `height: 60%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-60.bgc-red-8 &nbsp;
+			 */
+.h-60 {
+  height: 60%; }
+
+/**
+			 * Height 70%:
+			 * `.h-70` Applies `height: 70%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-70.bgc-red-8 &nbsp;
+			 */
+.h-70 {
+  height: 70%; }
+
+/**
+			 * Height 80%:
+			 * `.h-80` Applies `height: 80%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-80.bgc-red-8 &nbsp;
+			 */
+.h-80 {
+  height: 80%; }
+
+/**
+			 * Height 90%:
+			 * `.h-90` Applies `height: 90%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-90.bgc-red-8 &nbsp;
+			 */
+.h-90 {
+  height: 90%; }
+
+/**
+			 * Height 100%:
+			 * `.h-100` Applies `height: 100%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-100.bgc-red-8 &nbsp;
+			 */
+.h-100 {
+  height: 100%; }
+
+/**
+ * Max. width 100%:
+ * `.maxw-100` Applies `max-width: 100%;` to element.
  *
  *     @example
- *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.maxw-100
  */
-@media (min-width: 0) {
-  .xs-flt-left {
-    float: left; }
-  .xs-flt-right {
-    float: right; }
-  .xs-flt-none {
-    float: none; } }
+.maxw-100 {
+  max-width: 100%; }
 
-@media (min-width: 768px) {
-  .sm-flt-left {
-    float: left; }
-  .sm-flt-right {
-    float: right; }
-  .sm-flt-none {
-    float: none; } }
+/**
+ * Max. height 100%:
+ * `.maxh-100` Applies `max-height: 100%;` to element.
+ *
+ *     @example
+ *     div.maxh-100
+ */
+.maxh-100 {
+  max-height: 100%; }
 
-@media (min-width: 1024px) {
-  .md-flt-left {
-    float: left; }
-  .md-flt-right {
-    float: right; }
-  .md-flt-none {
-    float: none; } }
-
-@media (min-width: 1280px) {
-  .lg-flt-left {
-    float: left; }
-  .lg-flt-right {
-    float: right; }
-  .lg-flt-none {
-    float: none; } }
-
-@media (min-width: 1680px) {
-  .xl-flt-left {
-    float: left; }
-  .xl-flt-right {
-    float: right; }
-  .xl-flt-none {
-    float: none; } }
-
-/* ========================================================================== */
 /***
- * Margins:
+ * Spacing:
  */
 /**
 	 * Margin 0px:
@@ -4619,9 +4827,6 @@ th {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-/***
- * Paddings:
- */
 /**
 	 * Padding 0px:
 	 * `.p-0` Applies `padding: 0px;` to element.
@@ -5096,7 +5301,6 @@ th {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* ========================================================================== */
 /***
  * Text:
  */
@@ -5444,237 +5648,3 @@ th {
   margin-bottom: 0; }
   .content-indented p + p {
     text-indent: 1.5rem; }
-
-/* ========================================================================== */
-/***
- * Widths and heights:
- */
-/**
-			 * Width 10%:
-			 * `.w-10` Applies `width: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.w-10.bgc-red-8 &nbsp;
-			 */
-.w-10 {
-  width: 10%; }
-
-/**
-			 * Width 20%:
-			 * `.w-20` Applies `width: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.w-20.bgc-red-8 &nbsp;
-			 */
-.w-20 {
-  width: 20%; }
-
-/**
-			 * Width 30%:
-			 * `.w-30` Applies `width: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.w-30.bgc-red-8 &nbsp;
-			 */
-.w-30 {
-  width: 30%; }
-
-/**
-			 * Width 40%:
-			 * `.w-40` Applies `width: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.w-40.bgc-red-8 &nbsp;
-			 */
-.w-40 {
-  width: 40%; }
-
-/**
-			 * Width 50%:
-			 * `.w-50` Applies `width: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.w-50.bgc-red-8 &nbsp;
-			 */
-.w-50 {
-  width: 50%; }
-
-/**
-			 * Width 60%:
-			 * `.w-60` Applies `width: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.w-60.bgc-red-8 &nbsp;
-			 */
-.w-60 {
-  width: 60%; }
-
-/**
-			 * Width 70%:
-			 * `.w-70` Applies `width: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.w-70.bgc-red-8 &nbsp;
-			 */
-.w-70 {
-  width: 70%; }
-
-/**
-			 * Width 80%:
-			 * `.w-80` Applies `width: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.w-80.bgc-red-8 &nbsp;
-			 */
-.w-80 {
-  width: 80%; }
-
-/**
-			 * Width 90%:
-			 * `.w-90` Applies `width: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.w-90.bgc-red-8 &nbsp;
-			 */
-.w-90 {
-  width: 90%; }
-
-/**
-			 * Width 100%:
-			 * `.w-100` Applies `width: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.w-100.bgc-red-8 &nbsp;
-			 */
-.w-100 {
-  width: 100%; }
-
-/**
-			 * Height 10%:
-			 * `.h-10` Applies `height: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-10.bgc-red-8 &nbsp;
-			 */
-.h-10 {
-  height: 10%; }
-
-/**
-			 * Height 20%:
-			 * `.h-20` Applies `height: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-20.bgc-red-8 &nbsp;
-			 */
-.h-20 {
-  height: 20%; }
-
-/**
-			 * Height 30%:
-			 * `.h-30` Applies `height: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-30.bgc-red-8 &nbsp;
-			 */
-.h-30 {
-  height: 30%; }
-
-/**
-			 * Height 40%:
-			 * `.h-40` Applies `height: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-40.bgc-red-8 &nbsp;
-			 */
-.h-40 {
-  height: 40%; }
-
-/**
-			 * Height 50%:
-			 * `.h-50` Applies `height: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-50.bgc-red-8 &nbsp;
-			 */
-.h-50 {
-  height: 50%; }
-
-/**
-			 * Height 60%:
-			 * `.h-60` Applies `height: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-60.bgc-red-8 &nbsp;
-			 */
-.h-60 {
-  height: 60%; }
-
-/**
-			 * Height 70%:
-			 * `.h-70` Applies `height: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-70.bgc-red-8 &nbsp;
-			 */
-.h-70 {
-  height: 70%; }
-
-/**
-			 * Height 80%:
-			 * `.h-80` Applies `height: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-80.bgc-red-8 &nbsp;
-			 */
-.h-80 {
-  height: 80%; }
-
-/**
-			 * Height 90%:
-			 * `.h-90` Applies `height: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-90.bgc-red-8 &nbsp;
-			 */
-.h-90 {
-  height: 90%; }
-
-/**
-			 * Height 100%:
-			 * `.h-100` Applies `height: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-100.bgc-red-8 &nbsp;
-			 */
-.h-100 {
-  height: 100%; }
-
-/**
- * Max. width 100%:
- * `.maxw-100` Applies `max-width: 100%;` to element.
- *
- *     @example
- *     div.maxw-100
- */
-.maxw-100 {
-  max-width: 100%; }
-
-/**
- * Max. height 100%:
- * `.maxh-100` Applies `max-height: 100%;` to element.
- *
- *     @example
- *     div.maxh-100
- */
-.maxh-100 {
-  max-height: 100%; }

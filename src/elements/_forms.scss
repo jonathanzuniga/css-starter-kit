@@ -1,0 +1,43 @@
+/***
+ * Forms:
+ */
+
+.ctrl {
+	font-size: $base-font-size;
+	position: relative;
+	text-align: left;
+}
+
+.lbl {
+	padding: $label-padding;
+}
+
+/**
+ * Input:
+ * `.input`
+ *
+ *     @example
+ *     input(type='text', placeholder='Text input').input
+ */
+.input {
+	border: $input-border;
+	border-radius: $input-border-radius;
+	font-size: $base-font-size;
+	line-height: $input-line-height;
+	padding: $input-padding;
+
+	width: 100%;
+
+	&:active {
+		border-color: $input-active-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $input-focus-border-color;
+	}
+
+	&:hover {
+		border-color: $input-hover-border-color;
+	}
+}

@@ -1,4 +1,6 @@
-/* ========================================================================== */
+/***
+ * Flex grid:
+ */
 * {
   box-sizing: border-box; }
 
@@ -6,7 +8,6 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* ========================================================================== */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -34,9 +35,6 @@ html, body {
   margin-right: auto;
   width: 100%; }
 
-/***
- * Flex grid:
- */
 /**
  * Rows and columns:
  * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
@@ -105,12 +103,8 @@ html, body {
   flex-basis: 100%;
   max-width: 100%; }
 
-/* ========================================================================== */
-/***
- * Responsive classes:
- */
 /**
- * Columns:
+ * Responsive columns:
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
@@ -320,390 +314,6 @@ html, body {
     flex-basis: 100%;
     max-width: 100%; } }
 
-/* ========================================================================== */
-/***
- * Horizontal modifiers:
- */
-/**
- * Aligns columns to left:
- * `.cols-left`
- *
- *     @example
- *     div.row.cols-left
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-left {
-  justify-content: flex-start; }
-
-/**
- * Aligns columns to center:
- * `.cols-center`
- *
- *     @example
- *     div.row.cols-center
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-center {
-  justify-content: center; }
-
-/**
- * Aligns columns to right:
- * `.cols-right`
- *
- *     @example
- *     div.row.cols-right
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-right {
-  justify-content: flex-end; }
-
-/**
- * Space between columns:
- * `.cols-between`
- *
- *     @example
- *     div.row.cols-between
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-between {
-  justify-content: space-between; }
-
-/**
- * Space around columns:
- * `.cols-around`
- *
- *     @example
- *     div.row.cols-around
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-around {
-  justify-content: space-around; }
-
-/***
- * Vertical modifiers:
- */
-/**
- * Aligns columns to top:
- * `.cols-top`
- *
- *     @example
- *     div.row.cols-top.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-top {
-  align-items: flex-start; }
-
-/**
- * Aligns columns to middle:
- * `.cols-middle`
- *
- *     @example
- *     div.row.cols-middle.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-middle {
-  align-items: center; }
-
-/**
- * Aligns columns to bottom:
- * `.cols-bottom`
- *
- *     @example
- *     div.row.cols-bottom.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.cols-bottom {
-  align-items: flex-end; }
-
-/**
- * Aligns column to top:
- * `.col-top`
- *
- *     @example
- *     div.row.cols-bottom.h-100px
- *         div.col-4.col-top
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.col-top {
-  align-self: flex-start; }
-
-/**
- * Aligns column to middle:
- * `.col-middle`
- *
- *     @example
- *     div.row.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.col-middle
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- */
-.col-middle {
-  align-self: center; }
-
-/**
- * Aligns column to bottom:
- * `.col-middle`
- *
- *     @example
- *     div.row.h-100px
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.col-bottom
- *             div.bgc-grey-2 &nbsp;
- */
-.col-bottom {
-  align-self: flex-end; }
-
-/* ========================================================================== */
-/***
- * Offsets:
- */
-/**
- * Offsetting columns:
- * `.oset-[#]` `.[size]-oset-[#]`
- *
- *     @example
- *     div.row
- *         div.col-4
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.oset-2
- *             div.bgc-grey-2 &nbsp;
- *     div.row
- *         div.md-col-5
- *             div.bgc-grey-2 &nbsp;
- *         div.md-col-3.lg-oset-3
- *             div.bgc-grey-2 &nbsp;
- */
-@media (min-width: 0) {
-  .oset-0,
-  .xs-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .xs-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .xs-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .xs-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .xs-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .xs-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .xs-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .xs-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .xs-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .xs-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .xs-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .xs-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 768px) {
-  .oset-0,
-  .sm-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .sm-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .sm-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .sm-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .sm-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .sm-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .sm-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .sm-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .sm-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .sm-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .sm-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .sm-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1024px) {
-  .oset-0,
-  .md-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .md-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .md-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .md-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .md-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .md-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .md-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .md-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .md-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .md-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .md-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .md-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1280px) {
-  .oset-0,
-  .lg-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .lg-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .lg-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .lg-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .lg-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .lg-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .lg-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .lg-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .lg-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .lg-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .lg-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .lg-oset-11 {
-    margin-left: 91.66667%; } }
-
-@media (min-width: 1680px) {
-  .oset-0,
-  .xl-oset-0 {
-    margin-left: 0%; }
-  .oset-1,
-  .xl-oset-1 {
-    margin-left: 8.33333%; }
-  .oset-2,
-  .xl-oset-2 {
-    margin-left: 16.66667%; }
-  .oset-3,
-  .xl-oset-3 {
-    margin-left: 25%; }
-  .oset-4,
-  .xl-oset-4 {
-    margin-left: 33.33333%; }
-  .oset-5,
-  .xl-oset-5 {
-    margin-left: 41.66667%; }
-  .oset-6,
-  .xl-oset-6 {
-    margin-left: 50%; }
-  .oset-7,
-  .xl-oset-7 {
-    margin-left: 58.33333%; }
-  .oset-8,
-  .xl-oset-8 {
-    margin-left: 66.66667%; }
-  .oset-9,
-  .xl-oset-9 {
-    margin-left: 75%; }
-  .oset-10,
-  .xl-oset-10 {
-    margin-left: 83.33333%; }
-  .oset-11,
-  .xl-oset-11 {
-    margin-left: 91.66667%; } }
-
-/* ========================================================================== */
 /***
  * Gutters:
  */
@@ -943,3 +553,384 @@ html, body {
     .xl-gutters-0.row > [class*="col-"] {
       padding-left: 0;
       padding-right: 0; } }
+
+/***
+ * Horizontal modifiers:
+ */
+/**
+ * Aligns columns to left:
+ * `.cols-left`
+ *
+ *     @example
+ *     div.row.cols-left
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-left {
+  justify-content: flex-start; }
+
+/**
+ * Aligns columns to center:
+ * `.cols-center`
+ *
+ *     @example
+ *     div.row.cols-center
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-center {
+  justify-content: center; }
+
+/**
+ * Aligns columns to right:
+ * `.cols-right`
+ *
+ *     @example
+ *     div.row.cols-right
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-right {
+  justify-content: flex-end; }
+
+/**
+ * Space between columns:
+ * `.cols-between`
+ *
+ *     @example
+ *     div.row.cols-between
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-between {
+  justify-content: space-between; }
+
+/**
+ * Space around columns:
+ * `.cols-around`
+ *
+ *     @example
+ *     div.row.cols-around
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-around {
+  justify-content: space-around; }
+
+/***
+ * Vertical modifiers:
+ */
+/**
+ * Aligns columns to top:
+ * `.cols-top`
+ *
+ *     @example
+ *     div.row.cols-top.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-top {
+  align-items: flex-start; }
+
+/**
+ * Aligns columns to middle:
+ * `.cols-middle`
+ *
+ *     @example
+ *     div.row.cols-middle.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-middle {
+  align-items: center; }
+
+/**
+ * Aligns columns to bottom:
+ * `.cols-bottom`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.cols-bottom {
+  align-items: flex-end; }
+
+/**
+ * Aligns column to top:
+ * `.col-top`
+ *
+ *     @example
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4.col-top
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-top {
+  align-self: flex-start; }
+
+/**
+ * Aligns column to middle:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-middle
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-middle {
+  align-self: center; }
+
+/**
+ * Aligns column to bottom:
+ * `.col-middle`
+ *
+ *     @example
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-bottom
+ *             div.bgc-grey-2 &nbsp;
+ */
+.col-bottom {
+  align-self: flex-end; }
+
+/***
+ * Offsets:
+ */
+/**
+ * Offsetting columns:
+ * `.oset-[#]` `.[size]-oset-[#]`
+ *
+ *     @example
+ *     div.row
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.oset-4
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.md-col-5
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-col-3.lg-oset-3
+ *             div.bgc-grey-2 &nbsp;
+ */
+@media (min-width: 0) {
+  .oset-0,
+  .xs-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .xs-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .xs-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .xs-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .xs-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .xs-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .xs-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .xs-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .xs-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .xs-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .xs-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .xs-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 768px) {
+  .oset-0,
+  .sm-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .sm-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .sm-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .sm-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .sm-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .sm-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .sm-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .sm-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .sm-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .sm-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .sm-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .sm-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1024px) {
+  .oset-0,
+  .md-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .md-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .md-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .md-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .md-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .md-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .md-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .md-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .md-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .md-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .md-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .md-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1280px) {
+  .oset-0,
+  .lg-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .lg-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .lg-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .lg-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .lg-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .lg-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .lg-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .lg-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .lg-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .lg-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .lg-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .lg-oset-11 {
+    margin-left: 91.66667%; } }
+
+@media (min-width: 1680px) {
+  .oset-0,
+  .xl-oset-0 {
+    margin-left: 0%; }
+  .oset-1,
+  .xl-oset-1 {
+    margin-left: 8.33333%; }
+  .oset-2,
+  .xl-oset-2 {
+    margin-left: 16.66667%; }
+  .oset-3,
+  .xl-oset-3 {
+    margin-left: 25%; }
+  .oset-4,
+  .xl-oset-4 {
+    margin-left: 33.33333%; }
+  .oset-5,
+  .xl-oset-5 {
+    margin-left: 41.66667%; }
+  .oset-6,
+  .xl-oset-6 {
+    margin-left: 50%; }
+  .oset-7,
+  .xl-oset-7 {
+    margin-left: 58.33333%; }
+  .oset-8,
+  .xl-oset-8 {
+    margin-left: 66.66667%; }
+  .oset-9,
+  .xl-oset-9 {
+    margin-left: 75%; }
+  .oset-10,
+  .xl-oset-10 {
+    margin-left: 83.33333%; }
+  .oset-11,
+  .xl-oset-11 {
+    margin-left: 91.66667%; } }

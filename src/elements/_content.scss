@@ -1,0 +1,230 @@
+/***
+ * Content:
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+
+	outline: none;
+}
+
+body {
+	color: $text-color;
+	font-size: $base-font-size;
+	line-height: $line-height-ratio;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.fld {
+	margin-bottom: $half-spacing-unit;
+}
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+
+	&:visited {
+		color: $link-visited-color;
+	}
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+/**
+ * Blockquote:
+ * `blockquote`
+ *
+ *     @example
+ *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *         footer A common form of 
+ *             cite lorem ipsum
+ */
+blockquote {
+	border-left: 0.313rem solid $border-color;
+	padding: 0 0 0 ($base-spacing-unit - 0.5) - 0.313;
+
+	p {
+		font-size: 1.125em;
+
+		&:before,
+		&:after {
+			font-weight: bold;
+		}
+
+		&:before {
+			content: $blockquote-left-quotation-mark;
+			margin-right: $quarter-spacing-unit / 2;
+		}
+
+		&:after {
+			content: $blockquote-right-quotation-mark;
+			margin-left: $quarter-spacing-unit / 2;
+		}
+	}
+
+	footer {
+		font-size: $small-font-size;
+
+		&:before {
+			content: '— ';
+		}
+	}
+}
+
+/**
+ * Bold and italic:
+ * `strong` `i`
+ *
+ *     @example
+ *     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     br
+ *     i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+b,
+strong {
+	font-weight: 700;
+}
+
+i {
+	font-style: italic;
+}
+
+/**
+ * Code:
+ * `code`
+ *
+ *     @example
+ *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
+ */
+code, pre {
+	font-family: $mono-font-family;
+}
+
+code {
+	background-color: $code-background-color;
+	border-radius: $code-border-radius;
+	font-size: $code-font-size;
+	padding: $quarter-spacing-unit / 2;
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+
+	figcaption {
+		font-size: $small-font-size;
+		font-style: italic;
+		text-align: center;
+	}
+
+	code {
+		background-color: none;
+		padding: 0;
+	}
+
+	img {
+		margin: 0;
+	}
+}
+
+/**
+ * Code block:
+ * `pre`
+ *
+ *     @example
+ *     pre
+ *         code
+ *             | body {
+ *             |     font-size: 100%;
+ *             | }
+ */
+pre {
+	background-color: $pre-background-color;
+	border-radius: $pre-border-radius;
+	overflow-x: auto;
+	padding: $quarter-spacing-unit $half-spacing-unit;
+
+	code {
+		background-color: transparent;
+	}
+}
+
+/**
+ * Heading:
+ * `h1` `h2` `h3` `h4` `h5` `h6`
+ *
+ *     @example
+ *     h1 Heading
+ *     h2 Heading
+ *     h3 Heading
+ *     h4 Heading
+ *     h5 Heading
+ *     h6 Heading
+ */
+@each $heading, $size in $headings-sizes {
+	#{$heading} {
+		font-size: $size;
+		line-height: $heading-line-height;
+
+		&:not(:first-child) {
+			margin-top: em_to_rem($size) + 0.25;
+		}
+	}
+}
+
+/**
+ * List:
+ * `ol` `ul`
+ *
+ *     @example
+ *     div.row
+ *         div.col-6
+ *             ol
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ *         div.col-6
+ *             ul
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ */
+ol, ul {
+	list-style-position: outside;
+	padding-left: $half-spacing-unit * 2.5;
+
+	&:not(last-child) {
+		margin-bottom: $half-spacing-unit;
+	}
+}
+
+ul {
+	list-style-type: disc;
+}
+
+/**
+ * Small:
+ * `small`
+ *
+ *     @example
+ *     p
+ *         small  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.
+ */
+small {
+	font-size: $small-font-size;
+	// line-height: $line-height-ratio - px-to-em($base-font-size - em-to-px($small-font-size) + 1);
+}

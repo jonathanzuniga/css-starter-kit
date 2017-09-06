@@ -1,0 +1,77 @@
+/***
+ * Input group:
+ */
+
+/**
+ * Button addons:
+ * `.fld--group`
+ *
+ *     @example
+ *     div.fld.fld--group
+ *         input(type='search', placeholder='Search...').input
+ *         a.btn.btn-secondary Go
+ */
+
+/**
+ * Mixed addons:
+ * `.fld--group`
+ *
+ *     @example
+ *     div.fld.fld--group
+ *         label.lbl Search:
+ *         input(type='search').input
+ *         a.btn.btn-secondary Go
+ */
+.fld--group {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-pack: start;
+	-webkit-box-pack: start;
+	justify-content: flex-start;
+
+	width: 100%;
+
+	> *:not(:last-child) {
+		margin-right: -1px;
+	}
+
+	.lbl {
+		&:first-child {
+			margin-right: $quarter-spacing-unit;
+
+			& + .input {
+				flex-grow: 2;
+			}
+		}
+	}
+
+	.input {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+
+		width: auto;
+
+		&:first-child {
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+		}
+
+		&:last-child {
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+
+	.btn {
+		&:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	// .input,
+	// .btn {
+	// 	height: rem-to-em($base-spacing-unit + ($quarter-spacing-unit / 2));
+	// }
+}

@@ -1,0 +1,30 @@
+/***
+ * Offsets:
+ */
+
+/**
+ * Offsetting columns:
+ * `.oset-[#]` `.[size]-oset-[#]`
+ *
+ *     @example
+ *     div.row
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.oset-4
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.md-col-5
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-col-3.lg-oset-3
+ *             div.bgc-grey-2 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.oset-#{$i},
+			.#{$size}-oset-#{$i} {
+				margin-left: percentage($i / $grid-columns-number);
+			}
+		}
+	}
+}

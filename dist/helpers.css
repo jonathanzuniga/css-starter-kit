@@ -1,4 +1,3 @@
-/* ========================================================================== */
 /***
  * Borders:
  */
@@ -84,7 +83,6 @@
 .bd-0 {
   border: none; }
 
-/* ========================================================================== */
 /***
  * Border radius:
  */
@@ -192,7 +190,6 @@
 .bd-radius-0 {
   border-radius: 0; }
 
-/* ========================================================================== */
 /***
  * Clearfix:
  */
@@ -212,7 +209,6 @@
   .cf:after {
     clear: both; }
 
-/* ========================================================================== */
 /***
  * Colors:
  */
@@ -1140,10 +1136,86 @@
 .txtc-yellow-8 {
   color: #fff3d8; }
 
-/* ========================================================================== */
 /***
- * Elements to left or right:
+ * Float:
  */
+/**
+ * Float left:
+ * `.flt-left`
+ *
+ *     @example
+ *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-left {
+  float: left; }
+
+/**
+ * Float right:
+ * `.flt-right`
+ *
+ *     @example
+ *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-right {
+  float: right; }
+
+/**
+ * Don't float:
+ * `.flt-none`
+ *
+ *     @example
+ *     span.flt-none Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-none {
+  float: none; }
+
+/**
+ * Responsive float:
+ * `.[size]-flt-[position]`
+ *
+ *     @example
+ *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@media (min-width: 0) {
+  .xs-flt-left {
+    float: left; }
+  .xs-flt-right {
+    float: right; }
+  .xs-flt-none {
+    float: none; } }
+
+@media (min-width: 768px) {
+  .sm-flt-left {
+    float: left; }
+  .sm-flt-right {
+    float: right; }
+  .sm-flt-none {
+    float: none; } }
+
+@media (min-width: 1024px) {
+  .md-flt-left {
+    float: left; }
+  .md-flt-right {
+    float: right; }
+  .md-flt-none {
+    float: none; } }
+
+@media (min-width: 1280px) {
+  .lg-flt-left {
+    float: left; }
+  .lg-flt-right {
+    float: right; }
+  .lg-flt-none {
+    float: none; } }
+
+@media (min-width: 1680px) {
+  .xl-flt-left {
+    float: left; }
+  .xl-flt-right {
+    float: right; }
+  .xl-flt-none {
+    float: none; } }
+
 /**
  * Element to the left side:
  * `.[size]-el-left-[#]`
@@ -1952,90 +2024,241 @@
     margin-bottom: 0;
     width: 91.66667%; } }
 
-/* ========================================================================== */
 /***
- * Floats:
+ * Sizing:
  */
 /**
- * Float left:
- * `.flt-left`
- *
- *     @example
- *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-left {
-  float: left; }
+			 * Width 10%:
+			 * `.w-10` Applies `width: 10%;` to element.
+			 *
+			 *     @example
+			 *     div.w-10.bgc-red-8 &nbsp;
+			 */
+.w-10 {
+  width: 10%; }
 
 /**
- * Float right:
- * `.flt-right`
- *
- *     @example
- *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-right {
-  float: right; }
+			 * Width 20%:
+			 * `.w-20` Applies `width: 20%;` to element.
+			 *
+			 *     @example
+			 *     div.w-20.bgc-red-8 &nbsp;
+			 */
+.w-20 {
+  width: 20%; }
 
 /**
- * Don't float:
- * `.flt-none`
- *
- *     @example
- *     span.flt-none Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.flt-none {
-  float: none; }
+			 * Width 30%:
+			 * `.w-30` Applies `width: 30%;` to element.
+			 *
+			 *     @example
+			 *     div.w-30.bgc-red-8 &nbsp;
+			 */
+.w-30 {
+  width: 30%; }
 
 /**
- * Responsive float:
- * `.[size]-flt-[position]`
+			 * Width 40%:
+			 * `.w-40` Applies `width: 40%;` to element.
+			 *
+			 *     @example
+			 *     div.w-40.bgc-red-8 &nbsp;
+			 */
+.w-40 {
+  width: 40%; }
+
+/**
+			 * Width 50%:
+			 * `.w-50` Applies `width: 50%;` to element.
+			 *
+			 *     @example
+			 *     div.w-50.bgc-red-8 &nbsp;
+			 */
+.w-50 {
+  width: 50%; }
+
+/**
+			 * Width 60%:
+			 * `.w-60` Applies `width: 60%;` to element.
+			 *
+			 *     @example
+			 *     div.w-60.bgc-red-8 &nbsp;
+			 */
+.w-60 {
+  width: 60%; }
+
+/**
+			 * Width 70%:
+			 * `.w-70` Applies `width: 70%;` to element.
+			 *
+			 *     @example
+			 *     div.w-70.bgc-red-8 &nbsp;
+			 */
+.w-70 {
+  width: 70%; }
+
+/**
+			 * Width 80%:
+			 * `.w-80` Applies `width: 80%;` to element.
+			 *
+			 *     @example
+			 *     div.w-80.bgc-red-8 &nbsp;
+			 */
+.w-80 {
+  width: 80%; }
+
+/**
+			 * Width 90%:
+			 * `.w-90` Applies `width: 90%;` to element.
+			 *
+			 *     @example
+			 *     div.w-90.bgc-red-8 &nbsp;
+			 */
+.w-90 {
+  width: 90%; }
+
+/**
+			 * Width 100%:
+			 * `.w-100` Applies `width: 100%;` to element.
+			 *
+			 *     @example
+			 *     div.w-100.bgc-red-8 &nbsp;
+			 */
+.w-100 {
+  width: 100%; }
+
+/**
+			 * Height 10%:
+			 * `.h-10` Applies `height: 10%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-10.bgc-red-8 &nbsp;
+			 */
+.h-10 {
+  height: 10%; }
+
+/**
+			 * Height 20%:
+			 * `.h-20` Applies `height: 20%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-20.bgc-red-8 &nbsp;
+			 */
+.h-20 {
+  height: 20%; }
+
+/**
+			 * Height 30%:
+			 * `.h-30` Applies `height: 30%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-30.bgc-red-8 &nbsp;
+			 */
+.h-30 {
+  height: 30%; }
+
+/**
+			 * Height 40%:
+			 * `.h-40` Applies `height: 40%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-40.bgc-red-8 &nbsp;
+			 */
+.h-40 {
+  height: 40%; }
+
+/**
+			 * Height 50%:
+			 * `.h-50` Applies `height: 50%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-50.bgc-red-8 &nbsp;
+			 */
+.h-50 {
+  height: 50%; }
+
+/**
+			 * Height 60%:
+			 * `.h-60` Applies `height: 60%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-60.bgc-red-8 &nbsp;
+			 */
+.h-60 {
+  height: 60%; }
+
+/**
+			 * Height 70%:
+			 * `.h-70` Applies `height: 70%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-70.bgc-red-8 &nbsp;
+			 */
+.h-70 {
+  height: 70%; }
+
+/**
+			 * Height 80%:
+			 * `.h-80` Applies `height: 80%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-80.bgc-red-8 &nbsp;
+			 */
+.h-80 {
+  height: 80%; }
+
+/**
+			 * Height 90%:
+			 * `.h-90` Applies `height: 90%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-90.bgc-red-8 &nbsp;
+			 */
+.h-90 {
+  height: 90%; }
+
+/**
+			 * Height 100%:
+			 * `.h-100` Applies `height: 100%;` to element.
+			 *
+			 *     @example
+			 *     div.h-100px
+			 *         div.h-100.bgc-red-8 &nbsp;
+			 */
+.h-100 {
+  height: 100%; }
+
+/**
+ * Max. width 100%:
+ * `.maxw-100` Applies `max-width: 100%;` to element.
  *
  *     @example
- *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.maxw-100
  */
-@media (min-width: 0) {
-  .xs-flt-left {
-    float: left; }
-  .xs-flt-right {
-    float: right; }
-  .xs-flt-none {
-    float: none; } }
+.maxw-100 {
+  max-width: 100%; }
 
-@media (min-width: 768px) {
-  .sm-flt-left {
-    float: left; }
-  .sm-flt-right {
-    float: right; }
-  .sm-flt-none {
-    float: none; } }
+/**
+ * Max. height 100%:
+ * `.maxh-100` Applies `max-height: 100%;` to element.
+ *
+ *     @example
+ *     div.maxh-100
+ */
+.maxh-100 {
+  max-height: 100%; }
 
-@media (min-width: 1024px) {
-  .md-flt-left {
-    float: left; }
-  .md-flt-right {
-    float: right; }
-  .md-flt-none {
-    float: none; } }
-
-@media (min-width: 1280px) {
-  .lg-flt-left {
-    float: left; }
-  .lg-flt-right {
-    float: right; }
-  .lg-flt-none {
-    float: none; } }
-
-@media (min-width: 1680px) {
-  .xl-flt-left {
-    float: left; }
-  .xl-flt-right {
-    float: right; }
-  .xl-flt-none {
-    float: none; } }
-
-/* ========================================================================== */
 /***
- * Margins:
+ * Spacing:
  */
 /**
 	 * Margin 0px:
@@ -2511,9 +2734,6 @@
   margin-top: 20px;
   margin-bottom: 20px; }
 
-/***
- * Paddings:
- */
 /**
 	 * Padding 0px:
 	 * `.p-0` Applies `padding: 0px;` to element.
@@ -2988,7 +3208,6 @@
   padding-top: 20px;
   padding-bottom: 20px; }
 
-/* ========================================================================== */
 /***
  * Text:
  */
@@ -3336,237 +3555,3 @@
   margin-bottom: 0; }
   .content-indented p + p {
     text-indent: 1.5rem; }
-
-/* ========================================================================== */
-/***
- * Widths and heights:
- */
-/**
-			 * Width 10%:
-			 * `.w-10` Applies `width: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.w-10.bgc-red-8 &nbsp;
-			 */
-.w-10 {
-  width: 10%; }
-
-/**
-			 * Width 20%:
-			 * `.w-20` Applies `width: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.w-20.bgc-red-8 &nbsp;
-			 */
-.w-20 {
-  width: 20%; }
-
-/**
-			 * Width 30%:
-			 * `.w-30` Applies `width: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.w-30.bgc-red-8 &nbsp;
-			 */
-.w-30 {
-  width: 30%; }
-
-/**
-			 * Width 40%:
-			 * `.w-40` Applies `width: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.w-40.bgc-red-8 &nbsp;
-			 */
-.w-40 {
-  width: 40%; }
-
-/**
-			 * Width 50%:
-			 * `.w-50` Applies `width: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.w-50.bgc-red-8 &nbsp;
-			 */
-.w-50 {
-  width: 50%; }
-
-/**
-			 * Width 60%:
-			 * `.w-60` Applies `width: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.w-60.bgc-red-8 &nbsp;
-			 */
-.w-60 {
-  width: 60%; }
-
-/**
-			 * Width 70%:
-			 * `.w-70` Applies `width: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.w-70.bgc-red-8 &nbsp;
-			 */
-.w-70 {
-  width: 70%; }
-
-/**
-			 * Width 80%:
-			 * `.w-80` Applies `width: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.w-80.bgc-red-8 &nbsp;
-			 */
-.w-80 {
-  width: 80%; }
-
-/**
-			 * Width 90%:
-			 * `.w-90` Applies `width: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.w-90.bgc-red-8 &nbsp;
-			 */
-.w-90 {
-  width: 90%; }
-
-/**
-			 * Width 100%:
-			 * `.w-100` Applies `width: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.w-100.bgc-red-8 &nbsp;
-			 */
-.w-100 {
-  width: 100%; }
-
-/**
-			 * Height 10%:
-			 * `.h-10` Applies `height: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-10.bgc-red-8 &nbsp;
-			 */
-.h-10 {
-  height: 10%; }
-
-/**
-			 * Height 20%:
-			 * `.h-20` Applies `height: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-20.bgc-red-8 &nbsp;
-			 */
-.h-20 {
-  height: 20%; }
-
-/**
-			 * Height 30%:
-			 * `.h-30` Applies `height: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-30.bgc-red-8 &nbsp;
-			 */
-.h-30 {
-  height: 30%; }
-
-/**
-			 * Height 40%:
-			 * `.h-40` Applies `height: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-40.bgc-red-8 &nbsp;
-			 */
-.h-40 {
-  height: 40%; }
-
-/**
-			 * Height 50%:
-			 * `.h-50` Applies `height: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-50.bgc-red-8 &nbsp;
-			 */
-.h-50 {
-  height: 50%; }
-
-/**
-			 * Height 60%:
-			 * `.h-60` Applies `height: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-60.bgc-red-8 &nbsp;
-			 */
-.h-60 {
-  height: 60%; }
-
-/**
-			 * Height 70%:
-			 * `.h-70` Applies `height: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-70.bgc-red-8 &nbsp;
-			 */
-.h-70 {
-  height: 70%; }
-
-/**
-			 * Height 80%:
-			 * `.h-80` Applies `height: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-80.bgc-red-8 &nbsp;
-			 */
-.h-80 {
-  height: 80%; }
-
-/**
-			 * Height 90%:
-			 * `.h-90` Applies `height: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-90.bgc-red-8 &nbsp;
-			 */
-.h-90 {
-  height: 90%; }
-
-/**
-			 * Height 100%:
-			 * `.h-100` Applies `height: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-100.bgc-red-8 &nbsp;
-			 */
-.h-100 {
-  height: 100%; }
-
-/**
- * Max. width 100%:
- * `.maxw-100` Applies `max-width: 100%;` to element.
- *
- *     @example
- *     div.maxw-100
- */
-.maxw-100 {
-  max-width: 100%; }
-
-/**
- * Max. height 100%:
- * `.maxh-100` Applies `max-height: 100%;` to element.
- *
- *     @example
- *     div.maxh-100
- */
-.maxh-100 {
-  max-height: 100%; }
