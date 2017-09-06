@@ -95,8 +95,8 @@
 ### Body
 
 	<div class='container-fluid'>
-		<div class="row cols-around gutters-half-md">
-			<div class="col-xs-12 col-md-3 sidebar">
+		<div class="row cols-around md-gutters-half">
+			<div class="xs-col-12 md-col-3 xl-col-2 sidebar">
 				<div class="sidebar__content">
 					<h1>CSS Starter Kit</h1>
 
@@ -113,7 +113,7 @@
 					</p>
 
 					<div class="row">
-						<div class="col-xs-12 col-sm-6 col-md-12">
+						<div class="xs-col-12 sm-col-6 md-col-12">
 							<h3>Elements</h3>
 
 							<ul class="ls-unstyled">
@@ -221,7 +221,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-xs-12 col-sm-6 col-md-12">
+						<div class="xs-col-12 sm-col-6 md-col-12">
 							<h3>Helpers</h3>
 
 							<ul class="ls-unstyled">
@@ -426,7 +426,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-xs-12 col-sm-6 col-md-12">
+						<div class="xs-col-12 sm-col-6 md-col-12">
 							<h3>Layout</h3>
 
 							<ul class="ls-unstyled">
@@ -499,6 +499,12 @@
 									<a href="layout.html#offsets">Gutters</a>
 									<ul class="ls-unstyled">
 										<li>
+											<a href="layout.html#double-size-gutters">Double size gutters</a>
+										</li>
+										<li>
+											<a href="layout.html#regular-plus-quarter-size-gutters">Regular plus quarter size gutters</a>
+										</li>
+										<li>
 											<a href="layout.html#half-size-gutters">Half size gutters</a>
 										</li>
 										<li>
@@ -511,9 +517,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-9 main">
-				<div class='sg-container' sg-content>
-				</div>	
+			<div class="xs-col-12 md-col-9 xl-col-10 main">
+				<div class="row cols-center">
+					<div class="lg-col-10">
+						<div class='sg-container' sg-content>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

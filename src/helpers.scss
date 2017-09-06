@@ -312,40 +312,40 @@
 
 /**
  * Element to the left side:
- * `.el-left-[size]-[#]`
+ * `.[size]-el-left-[#]`
  *
  *     @example
- *     div.el-left-xs-4.bgc-grey-8.p-3
+ *     div.xs-el-left-4.bgc-grey-8.p-3
  *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
  *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
 
 /**
  * Element to the right side:
- * `.el-right-[size]-[#]`
+ * `.[size]-el-right-[#]`
  *
  *     @example
- *     div.el-right-md-4.bgc-grey-8.p-3
+ *     div.md-el-right-4.bgc-grey-8.p-3
  *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
  *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		@for $i from 0 through ($grid-columns-number - 1) {
-			.el-left-#{$size}-#{$i} {
+			.#{$size}-el-left-#{$i} {
 				float: left;
 				margin-right: $half-spacing-unit;
 			}
 
-			.el-right-#{$size}-#{$i} {
+			.#{$size}-el-right-#{$i} {
 				float: right;
 				margin-left: $half-spacing-unit;
 			}
 
-			.el-left-#{$size}-#{$i},
-			.el-right-#{$size}-#{$i},
-			.content-indented .el-left-#{$size}-#{$i},
-			.content-indented .el-right-#{$size}-#{$i} {
+			.#{$size}-el-left-#{$i},
+			.#{$size}-el-right-#{$i},
+			.content-indented .#{$size}-el-left-#{$i},
+			.content-indented .#{$size}-el-right-#{$i} {
 				margin-top: 0.5rem;
 				margin-bottom: 0;
 				width: percentage($i / $grid-columns-number);
@@ -407,22 +407,22 @@
 
 /**
  * Responsive float:
- * `.flt-[size]-[position]`
+ * `.[size]-flt-[position]`
  *
  *     @example
- *     span.flt-md-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.flt-#{$size}-left {
+		.#{$size}-flt-left {
 			@include flt-left;
 		}
 
-		.flt-#{$size}-right {
+		.#{$size}-flt-right {
 			@include flt-right;
 		}
 
-		.flt-#{$size}-none {
+		.#{$size}-flt-none {
 			@include flt-none;
 		}
 	}
@@ -464,12 +464,12 @@
 
 /**
  * Italic text:
- * `.txt-italic`
+ * `.txt-i`
  *
  *     @example
  *     p.txt-italic Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-italic {
+.txt-i {
 	font-style: italic;
 }
 
@@ -492,89 +492,89 @@
 
 /**
  * Font weight extra-light:
- * `.txt-xlight` Font weight extra-light.
+ * `.txt-xlt` Font weight extra-light.
  *
  *     @example
- *     p.txt-xlight Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-xlt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-xlight {
+.txt-xlt {
 	font-weight: 200;
 }
 
 /**
  * Font weight light:
- * `.txt-light` Font weight light.
+ * `.txt-lt` Font weight light.
  *
  *     @example
- *     p.txt-light Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-lt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-light {
+.txt-lt {
 	font-weight: 300;
 }
 
 /**
  * Font weight regular:
- * `.txt-regular` Font weight regular.
+ * `.txt-rg` Font weight regular.
  *
  *     @example
- *     p.txt-regular Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-rg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-regular {
+.txt-rg {
 	font-weight: 400;
 }
 
 /**
  * Font weight medium:
- * `.txt-medium` Font weight medium.
+ * `.txt-md` Font weight medium.
  *
  *     @example
  *     p.txt-medium Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-medium {
+.txt-md {
 	font-weight: 500;
 }
 
 /**
  * Font weight semi-bold:
- * `.txt-semibold` Font weight semi-bold.
+ * `.txt-sb` Font weight semi-bold.
  *
  *     @example
- *     p.txt-semibold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-sb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-semibold {
+.txt-sb {
 	font-weight: 600;
 }
 
 /**
  * Font weight bold:
- * `.txt-bold` Font weight bold.
+ * `.txt-b` Font weight bold.
  *
  *     @example
- *     p.txt-bold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-b Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-bold {
+.txt-b {
 	font-weight: 700;
 }
 
 /**
  * Font weight extra-bold:
- * `.txt-xbold` Font weight extra-bold.
+ * `.txt-xb` Font weight extra-bold.
  *
  *     @example
- *     p.txt-xbold Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-xb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-xbold {
+.txt-xb {
 	font-weight: 800;
 }
 
 /**
  * Font weight black:
- * `.txt-black` Font weight black.
+ * `.txt-bk` Font weight black.
  *
  *     @example
- *     p.txt-black Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.txt-bk Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.txt-black {
+.txt-bk {
 	font-weight: 900;
 }
 
@@ -817,22 +817,22 @@
 
 /**
  * Responsive text alignment:
- * `.txt-[size]-[position]`
+ * `.[size]-txt-[position]`
  *
  *     @example
- *     p.txt-lg-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.lg-txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.txt-#{$size}-left {
+		.#{$size}-txt-left {
 			@include text-left;
 		}
 
-		.txt-#{$size}-center {
+		.#{$size}-txt-center {
 			@include text-center;
 		}
 
-		.txt-#{$size}-right {
+		.#{$size}-txt-right {
 			@include text-right;
 		}
 	}

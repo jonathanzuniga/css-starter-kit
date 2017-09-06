@@ -43,11 +43,7 @@ html, body {
 }
 
 .col,
-[class*="col-xs-"],
-[class*="col-sm-"],
-[class*="col-md-"],
-[class*="col-lg-"],
-[class*="col-xl-"] {
+[class*="col-"] {
 	@extend %column;
 }
 
@@ -70,7 +66,7 @@ html, body {
 
 /**
  * Rows and columns:
- * Remember, wrap any of the `.col*` classes inside of a `.row` class.
+ * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
  *
  *     @example
  *     div.row
@@ -110,25 +106,25 @@ html, body {
  *
  *     @example
  *     div.row
- *         div.col-xs-6
+ *         div.xs-col-6
  *             div.bgc-grey-2 &nbsp;
- *         div.col-xs-6
+ *         div.xs-col-6
  *             div.bgc-grey-3 &nbsp;
  *     div.row
- *         div.col-sm-6.col-md-8
+ *         div.sm-col-6.md-col-8
  *             div.bgc-grey-2 &nbsp;
- *         div.col-sm-6.col-md-4
+ *         div.sm-col-6.md-col-4
  *             div.bgc-grey-3 &nbsp;
  *     div.row
- *         div.col-xs-12.col-sm-3.col-md-5.col-lg-7.col-xl-9
+ *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
  *             div.bgc-grey-2 &nbsp;
- *         div.col-xs-12.col-sm-9.col-md-7.col-lg-5.col-xl-3
+ *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
  *             div.bgc-grey-3 &nbsp;
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		@for $i from 1 through $grid-columns-number {
-			.col-#{$size}-#{$i} {
+			.#{$size}-col-#{$i} {
 				$column-width: percentage($i / $grid-columns-number);
 				flex-basis: $column-width;
 				max-width: $column-width;
@@ -332,7 +328,7 @@ html, body {
 
 /**
  * Offsetting columns:
- * `.oset-[#]` `.oset-[size]-[#]`
+ * `.oset-[#]` `.[size]-oset-[#]`
  *
  *     @example
  *     div.row
@@ -341,16 +337,16 @@ html, body {
  *         div.col-4.oset-2
  *             div.bgc-grey-2 &nbsp;
  *     div.row
- *         div.col-md-5
+ *         div.md-col-5
  *             div.bgc-grey-2 &nbsp;
- *         div.col-md-3.oset-lg-3
+ *         div.md-col-3.lg-oset-3
  *             div.bgc-grey-2 &nbsp;
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		@for $i from 0 through ($grid-columns-number - 1) {
 			.oset-#{$i},
-			.oset-#{$size}-#{$i} {
+			.#{$size}-oset-#{$i} {
 				margin-left: percentage($i / $grid-columns-number);
 			}
 		}
@@ -363,6 +359,17 @@ html, body {
  * Gutters:
  */
 
+/**
+ * Double size gutters:
+ * `.gutters-double`
+ *
+ *     @example
+ *     div.row.gutters-double
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
 @mixin gutter-double {
 	&.row {
 		margin-left: -$grid-column-gutter;
@@ -380,6 +387,17 @@ html, body {
 	@include gutter-double;
 }
 
+/**
+ * Regular plus quarter size gutters:
+ * `.gutters-plusquarter`
+ *
+ *     @example
+ *     div.row.gutters-plusquarter
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ */
 @mixin gutter-plusquarter {
 	&.row {
 		margin-left: -$grid-column-gutter;
@@ -399,10 +417,10 @@ html, body {
 
 /**
  * Half size gutters:
- * `.gutters-half` `.gutters-[size]-half`
+ * `.gutters-half`
  *
  *     @example
- *     div.row.gutters-md-half
+ *     div.row.gutters-half
  *         div.col-8
  *             div.bgc-grey-2 &nbsp;
  *         div.col-4
@@ -427,10 +445,10 @@ html, body {
 
 /**
  * Remove gutters:
- * `.gutters-0` `.gutters-[size]-0`
+ * `.gutters-0`
  *
  *     @example
- *     div.row.gutters-md-0
+ *     div.row.gutters-0
  *         div.col-8
  *             div.bgc-grey-2 &nbsp;
  *         div.col-4
@@ -453,21 +471,32 @@ html, body {
 	@include gutter-0;
 }
 
+/**
+ * Responsive gutters:
+ * `.[size]-gutters-[gutters-size]`
+ *
+ *     @example
+ *     div.row.md-gutters-0
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-3 &nbsp;
+ */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.gutters-#{$size}-double {
+		.#{$size}-gutters-double {
 			@include gutter-double;
 		}
 
-		.gutters-#{$size}-plusquarter {
+		.#{$size}-gutters-plusquarter {
 			@include gutter-plusquarter;
 		}
 
-		.gutters-#{$size}-half {
+		.#{$size}-gutters-half {
 			@include gutter-half;
 		}
 
-		.gutters-#{$size}-0 {
+		.#{$size}-gutters-0 {
 			@include gutter-0;
 		}
 	}

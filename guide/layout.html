@@ -87,8 +87,8 @@
 
 <body class="sg">
   <div class="container-fluid">
-    <div class="row cols-around gutters-half-md">
-      <div class="col-xs-12 col-md-3 sidebar">
+    <div class="row cols-around md-gutters-half">
+      <div class="xs-col-12 md-col-3 xl-col-2 sidebar">
         <div class="sidebar__content">
           <h1>CSS Starter Kit</h1>
 
@@ -105,7 +105,7 @@
           </p>
 
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Elements</h3>
 
               <ul class="ls-unstyled">
@@ -213,7 +213,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Helpers</h3>
 
               <ul class="ls-unstyled">
@@ -418,7 +418,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Layout</h3>
 
               <ul class="ls-unstyled">
@@ -491,6 +491,12 @@
                   <a href="layout.html#offsets">Gutters</a>
                   <ul class="ls-unstyled">
                     <li>
+                      <a href="layout.html#double-size-gutters">Double size gutters</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#regular-plus-quarter-size-gutters">Regular plus quarter size gutters</a>
+                    </li>
+                    <li>
                       <a href="layout.html#half-size-gutters">Half size gutters</a>
                     </li>
                     <li>
@@ -503,42 +509,44 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-9 main">
-        <div class="sg-container">
-          <section class="sg-section sg-section-flex-grid">
-            <h2 id="flex-grid" class="sg">Flex grid</h2>
-            <section class="sg-block sg-section-rows-and-columns">
-              <div class="sg-text">
-                <h3 id="rows-and-columns" class="sg">Rows and columns</h3>
-                <p class="sg">Remember, wrap any of the
-                  <code class="sg">.col*</code>classes inside of a
-                  <code class="sg">.row</code>class.</p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row">
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
+      <div class="xs-col-12 md-col-9 xl-col-10 main">
+        <div class="row cols-center">
+          <div class="lg-col-10">
+            <div class="sg-container">
+              <section class="sg-section sg-section-flex-grid">
+                <h2 id="flex-grid" class="sg">Flex grid</h2>
+                <section class="sg-block sg-section-rows-and-columns">
+                  <div class="sg-text">
+                    <h3 id="rows-and-columns" class="sg">Rows and columns</h3>
+                    <p class="sg">Remember, wrap any of the
+                      <code class="sg">.*col*</code>classes inside of a
+                      <code class="sg">.row</code>class.</p>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                  </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -560,91 +568,91 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-responsive-classes">
-            <h2 id="responsive-classes" class="sg">Responsive classes</h2>
-            <section class="sg-block sg-section-columns">
-              <div class="sg-text">
-                <h3 id="columns" class="sg">Columns</h3>
-                <p class="sg">Resize the window to see how grid columns behave on the different breakpoints.</p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-xs-6">
-                      <div class="bgc-grey-3">&#xA0;</div>
-                    </div>
+              <section class="sg-section sg-section-responsive-classes">
+                <h2 id="responsive-classes" class="sg">Responsive classes</h2>
+                <section class="sg-block sg-section-columns">
+                  <div class="sg-text">
+                    <h3 id="columns" class="sg">Columns</h3>
+                    <p class="sg">Resize the window to see how grid columns behave on the different breakpoints.</p>
                   </div>
-                  <div class="row">
-                    <div class="col-sm-6 col-md-8">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                      <div class="bgc-grey-3">&#xA0;</div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-5 col-lg-7 col-xl-9">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-7 col-lg-5 col-xl-3">
-                      <div class="bgc-grey-3">&#xA0;</div>
-                    </div>
-                  </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-xs-6&quot;</span>&gt;</span>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="xs-col-6">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="xs-col-6">
+                          <div class="bgc-grey-3">&#xA0;</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="sm-col-6 md-col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="sm-col-6 md-col-4">
+                          <div class="bgc-grey-3">&#xA0;</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="xs-col-12 sm-col-3 md-col-5 lg-col-7 xl-col-9">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="xs-col-12 sm-col-9 md-col-7 lg-col-5 xl-col-3">
+                          <div class="bgc-grey-3">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-6&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-xs-6&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-6&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-3&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-6 col-md-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sm-col-6 md-col-8&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-sm-6 col-md-4&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sm-col-6 md-col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-3&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-xs-12 col-sm-3 col-md-5 col-lg-7 col-xl-9&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-12 sm-col-3 md-col-5 lg-col-7 xl-col-9&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-xs-12 col-sm-9 col-md-7 col-lg-5 col-xl-3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-12 sm-col-9 md-col-7 lg-col-5 xl-col-3&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-3&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-horizontal-modifiers">
-            <h2 id="horizontal-modifiers" class="sg">Horizontal modifiers</h2>
-            <section class="sg-block sg-section-aligns-columns-to-left">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-left" class="sg">Aligns columns to left</h3>
-                <p class="sg">
-                  <code class="sg">.cols-left</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-left">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
+              <section class="sg-section sg-section-horizontal-modifiers">
+                <h2 id="horizontal-modifiers" class="sg">Horizontal modifiers</h2>
+                <section class="sg-block sg-section-aligns-columns-to-left">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-left" class="sg">Aligns columns to left</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-left</code>
+                    </p>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-left&quot;</span>&gt;</span>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-left">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-left&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -652,26 +660,26 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-columns-to-center">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-center" class="sg">Aligns columns to center</h3>
-                <p class="sg">
-                  <code class="sg">.cols-center</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-center">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-center&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-columns-to-center">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-center" class="sg">Aligns columns to center</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-center</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-center">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-center&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -679,26 +687,26 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-columns-to-right">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-right" class="sg">Aligns columns to right</h3>
-                <p class="sg">
-                  <code class="sg">.cols-right</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-right">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-right&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-columns-to-right">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-right" class="sg">Aligns columns to right</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-right</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-right">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-right&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -706,26 +714,26 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-space-between-columns">
-              <div class="sg-text">
-                <h3 id="space-between-columns" class="sg">Space between columns</h3>
-                <p class="sg">
-                  <code class="sg">.cols-between</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-between">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-between&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-space-between-columns">
+                  <div class="sg-text">
+                    <h3 id="space-between-columns" class="sg">Space between columns</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-between</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-between">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-between&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -733,26 +741,26 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-space-around-columns">
-              <div class="sg-text">
-                <h3 id="space-around-columns" class="sg">Space around columns</h3>
-                <p class="sg">
-                  <code class="sg">.cols-around</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-around">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-around&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-space-around-columns">
+                  <div class="sg-text">
+                    <h3 id="space-around-columns" class="sg">Space around columns</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-around</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-around">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-around&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -760,33 +768,33 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-vertical-modifiers">
-            <h2 id="vertical-modifiers" class="sg">Vertical modifiers</h2>
-            <section class="sg-block sg-section-aligns-columns-to-top">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-top" class="sg">Aligns columns to top</h3>
-                <p class="sg">
-                  <code class="sg">.cols-top</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-top h-100px">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
+              <section class="sg-section sg-section-vertical-modifiers">
+                <h2 id="vertical-modifiers" class="sg">Vertical modifiers</h2>
+                <section class="sg-block sg-section-aligns-columns-to-top">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-top" class="sg">Aligns columns to top</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-top</code>
+                    </p>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-top h-100px&quot;</span>&gt;</span>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-top h-100px">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-top h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -797,29 +805,29 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-columns-to-middle">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-middle" class="sg">Aligns columns to middle</h3>
-                <p class="sg">
-                  <code class="sg">.cols-middle</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-middle h-100px">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-middle h-100px&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-columns-to-middle">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-middle" class="sg">Aligns columns to middle</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-middle</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-middle h-100px">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-middle h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -830,29 +838,29 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-columns-to-bottom">
-              <div class="sg-text">
-                <h3 id="aligns-columns-to-bottom" class="sg">Aligns columns to bottom</h3>
-                <p class="sg">
-                  <code class="sg">.cols-bottom</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-bottom h-100px">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-bottom h-100px&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-columns-to-bottom">
+                  <div class="sg-text">
+                    <h3 id="aligns-columns-to-bottom" class="sg">Aligns columns to bottom</h3>
+                    <p class="sg">
+                      <code class="sg">.cols-bottom</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-bottom h-100px">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-bottom h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -863,29 +871,29 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-column-to-top">
-              <div class="sg-text">
-                <h3 id="aligns-column-to-top" class="sg">Aligns column to top</h3>
-                <p class="sg">
-                  <code class="sg">.col-top</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row cols-bottom h-100px">
-                    <div class="col-4 col-top">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-bottom h-100px&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-column-to-top">
+                  <div class="sg-text">
+                    <h3 id="aligns-column-to-top" class="sg">Aligns column to top</h3>
+                    <p class="sg">
+                      <code class="sg">.col-top</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row cols-bottom h-100px">
+                        <div class="col-4 col-top">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row cols-bottom h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4 col-top&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -896,29 +904,29 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-column-to-middle">
-              <div class="sg-text">
-                <h3 id="aligns-column-to-middle" class="sg">Aligns column to middle</h3>
-                <p class="sg">
-                  <code class="sg">.col-middle</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row h-100px">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4 col-middle">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row h-100px&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-column-to-middle">
+                  <div class="sg-text">
+                    <h3 id="aligns-column-to-middle" class="sg">Aligns column to middle</h3>
+                    <p class="sg">
+                      <code class="sg">.col-middle</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row h-100px">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 col-middle">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -929,29 +937,29 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-aligns-column-to-bottom">
-              <div class="sg-text">
-                <h3 id="aligns-column-to-bottom" class="sg">Aligns column to bottom</h3>
-                <p class="sg">
-                  <code class="sg">.col-middle</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row h-100px">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4 col-bottom">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row h-100px&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-aligns-column-to-bottom">
+                  <div class="sg-text">
+                    <h3 id="aligns-column-to-bottom" class="sg">Aligns column to bottom</h3>
+                    <p class="sg">
+                      <code class="sg">.col-middle</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row h-100px">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 col-bottom">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row h-100px&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -962,39 +970,39 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-offsets">
-            <h2 id="offsets" class="sg">Offsets</h2>
-            <section class="sg-block sg-section-offsetting-columns">
-              <div class="sg-text">
-                <h3 id="offsetting-columns" class="sg">Offsetting columns</h3>
-                <p class="sg">
-                  <code class="sg">.oset-[#]</code>
-                  <code class="sg">.oset-[size]-[#]</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4 oset-2">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
+              <section class="sg-section sg-section-offsets">
+                <h2 id="offsets" class="sg">Offsets</h2>
+                <section class="sg-block sg-section-offsetting-columns">
+                  <div class="sg-text">
+                    <h3 id="offsetting-columns" class="sg">Offsetting columns</h3>
+                    <p class="sg">
+                      <code class="sg">.oset-[#]</code>
+                      <code class="sg">.[size]-oset-[#]</code>
+                    </p>
                   </div>
-                  <div class="row">
-                    <div class="col-md-5">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-md-3 oset-lg-3">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                  </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 oset-2">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="md-col-5">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="md-col-3 lg-oset-3">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -1003,38 +1011,37 @@
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-md-5&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-col-5&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-md-3 oset-lg-3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-col-3 lg-oset-3&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
-
-          <section class="sg-section sg-section-gutters">
-            <h2 id="gutters" class="sg">Gutters</h2>
-            <section class="sg-block sg-section-half-size-gutters">
-              <div class="sg-text">
-                <h3 id="half-size-gutters" class="sg">Half size gutters</h3>
-                <p class="sg">
-                  <code class="sg">.gutters-half</code>
-                  <code class="sg">.gutters-[size]-half</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row gutters-md-half">
-                    <div class="col-8">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-md-half&quot;</span>&gt;</span>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-gutters">
+                <h2 id="gutters" class="sg">Gutters</h2>
+                <section class="sg-block sg-section-double-size-gutters">
+                  <div class="sg-text">
+                    <h3 id="double-size-gutters" class="sg">Double size gutters</h3>
+                    <p class="sg">
+                      <code class="sg">.gutters-double</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row gutters-double">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-double&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -1042,27 +1049,80 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-remove-gutters">
-              <div class="sg-text">
-                <h3 id="remove-gutters" class="sg">Remove gutters</h3>
-                <p class="sg">
-                  <code class="sg">.gutters-0</code>
-                  <code class="sg">.gutters-[size]-0</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row gutters-md-0">
-                    <div class="col-8">
-                      <div class="bgc-grey-2">&#xA0;</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="bgc-grey-3">&#xA0;</div>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-md-0&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-regular-plus-quarter-size-gutters">
+                  <div class="sg-text">
+                    <h3 id="regular-plus-quarter-size-gutters" class="sg">Regular plus quarter size gutters</h3>
+                    <p class="sg">
+                      <code class="sg">.gutters-plusquarter</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row gutters-plusquarter">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-plusquarter&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-half-size-gutters">
+                  <div class="sg-text">
+                    <h3 id="half-size-gutters" class="sg">Half size gutters</h3>
+                    <p class="sg">
+                      <code class="sg">.gutters-half</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row gutters-half">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-half&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-remove-gutters">
+                  <div class="sg-text">
+                    <h3 id="remove-gutters" class="sg">Remove gutters</h3>
+                    <p class="sg">
+                      <code class="sg">.gutters-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row gutters-0">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-3">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row gutters-0&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -1070,10 +1130,39 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-3&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-responsive-gutters">
+                  <div class="sg-text">
+                    <h3 id="responsive-gutters" class="sg">Responsive gutters</h3>
+                    <p class="sg">
+                      <code class="sg">.[size]-gutters-[gutters-size]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row md-gutters-0">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="bgc-grey-3">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row md-gutters-0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-3&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
 
+            </div>
+          </div>
         </div>
       </div>
     </div>

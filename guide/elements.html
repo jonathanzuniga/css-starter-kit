@@ -87,8 +87,8 @@
 
 <body class="sg">
   <div class="container-fluid">
-    <div class="row cols-around gutters-half-md">
-      <div class="col-xs-12 col-md-3 sidebar">
+    <div class="row cols-around md-gutters-half">
+      <div class="xs-col-12 md-col-3 xl-col-2 sidebar">
         <div class="sidebar__content">
           <h1>CSS Starter Kit</h1>
 
@@ -105,7 +105,7 @@
           </p>
 
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Elements</h3>
 
               <ul class="ls-unstyled">
@@ -213,7 +213,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Helpers</h3>
 
               <ul class="ls-unstyled">
@@ -418,7 +418,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="xs-col-12 sm-col-6 md-col-12">
               <h3>Layout</h3>
 
               <ul class="ls-unstyled">
@@ -491,6 +491,12 @@
                   <a href="layout.html#offsets">Gutters</a>
                   <ul class="ls-unstyled">
                     <li>
+                      <a href="layout.html#double-size-gutters">Double size gutters</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#regular-plus-quarter-size-gutters">Regular plus quarter size gutters</a>
+                    </li>
+                    <li>
                       <a href="layout.html#half-size-gutters">Half size gutters</a>
                     </li>
                     <li>
@@ -503,30 +509,32 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-9 main">
-        <div class="sg-container">
-          <section class="sg-section sg-section-content">
-            <h2 id="content" class="sg">Content</h2>
-            <section class="sg-block sg-section-blockquote">
-              <div class="sg-text">
-                <h3 id="blockquote" class="sg">Blockquote</h3>
-                <p class="sg">
-                  <code class="sg">blockquote</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </blockquote>
-                  <blockquote>
-                    <p class="m-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <footer>A common form of
-                      <cite>lorem ipsum</cite>
-                    </footer>
-                  </blockquote>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+      <div class="xs-col-12 md-col-9 xl-col-10 main">
+        <div class="row cols-center">
+          <div class="lg-col-10">
+            <div class="sg-container">
+              <section class="sg-section sg-section-content">
+                <h2 id="content" class="sg">Content</h2>
+                <section class="sg-block sg-section-blockquote">
+                  <div class="sg-text">
+                    <h3 id="blockquote" class="sg">Blockquote</h3>
+                    <p class="sg">
+                      <code class="sg">blockquote</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+                      <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </blockquote>
+                      <blockquote>
+                        <p class="m-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <footer>A common form of
+                          <cite>lorem ipsum</cite>
+                        </footer>
+                      </blockquote>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
@@ -536,112 +544,112 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-bold-and-italic">
-              <div class="sg-text">
-                <h3 id="bold-and-italic" class="sg">Bold and italic</h3>
-                <p class="sg">
-                  <code class="sg">strong</code>
-                  <code class="sg">i</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
-                  <br>
-                  <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-bold-and-italic">
+                  <div class="sg-text">
+                    <h3 id="bold-and-italic" class="sg">Bold and italic</h3>
+                    <p class="sg">
+                      <code class="sg">strong</code>
+                      <code class="sg">i</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
+                      <br>
+                      <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">i</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-code">
-              <div class="sg-text">
-                <h3 id="code" class="sg">Code</h3>
-                <p class="sg">
-                  <code class="sg">code</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <p>Use
-                    <code>&lt;code&gt;</code>for inline code that can wrap.</p>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Use
+                  </div>
+                </section>
+                <section class="sg-block sg-section-code">
+                  <div class="sg-text">
+                    <h3 id="code" class="sg">Code</h3>
+                    <p class="sg">
+                      <code class="sg">code</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p>Use
+                        <code>&lt;code&gt;</code>for inline code that can wrap.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Use
   <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;code&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>for inline code that can wrap.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-code-block">
-              <div class="sg-text">
-                <h3 id="code-block" class="sg">Code block</h3>
-                <p class="sg">
-                  <code class="sg">pre</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas"><pre><code>body {
+                  </div>
+                </section>
+                <section class="sg-block sg-section-code-block">
+                  <div class="sg-text">
+                    <h3 id="code-block" class="sg">Code block</h3>
+                    <p class="sg">
+                      <code class="sg">pre</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas"><pre><code>body {
     font-size: 100%;
 }</code></pre>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>body {
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>body {
     font-size: 100%;
 }<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-heading">
-              <div class="sg-text">
-                <h3 id="heading" class="sg">Heading</h3>
-                <p class="sg">
-                  <code class="sg">h1</code>
-                  <code class="sg">h2</code>
-                  <code class="sg">h3</code>
-                  <code class="sg">h4</code>
-                  <code class="sg">h5</code>
-                  <code class="sg">h6</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <h1>Heading</h1>
-                  <h2>Heading</h2>
-                  <h3>Heading</h3>
-                  <h4>Heading</h4>
-                  <h5>Heading</h5>
-                  <h6>Heading</h6>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-heading">
+                  <div class="sg-text">
+                    <h3 id="heading" class="sg">Heading</h3>
+                    <p class="sg">
+                      <code class="sg">h1</code>
+                      <code class="sg">h2</code>
+                      <code class="sg">h3</code>
+                      <code class="sg">h4</code>
+                      <code class="sg">h5</code>
+                      <code class="sg">h6</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <h1>Heading</h1>
+                      <h2>Heading</h2>
+                      <h3>Heading</h3>
+                      <h4>Heading</h4>
+                      <h5>Heading</h5>
+                      <h6>Heading</h6>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-list">
-              <div class="sg-text">
-                <h3 id="list" class="sg">List</h3>
-                <p class="sg">
-                  <code class="sg">ol</code>
-                  <code class="sg">ul</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="row">
-                    <div class="col-6">
-                      <ol>
-                        <li>List item</li>
-                        <li>List item</li>
-                        <li>List item</li>
-                      </ol>
-                    </div>
-                    <div class="col-6">
-                      <ul>
-                        <li>List item</li>
-                        <li>List item</li>
-                        <li>List item</li>
-                      </ul>
-                    </div>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-list">
+                  <div class="sg-text">
+                    <h3 id="list" class="sg">List</h3>
+                    <p class="sg">
+                      <code class="sg">ol</code>
+                      <code class="sg">ul</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col-6">
+                          <ol>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                          </ol>
+                        </div>
+                        <div class="col-6">
+                          <ul>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -657,256 +665,256 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-small">
-              <div class="sg-text">
-                <h3 id="small" class="sg">Small</h3>
-                <p class="sg">
-                  <code class="sg">small</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <p>
-                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.</small>
-                  </p>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-small">
+                  <div class="sg-text">
+                    <h3 id="small" class="sg">Small</h3>
+                    <p class="sg">
+                      <code class="sg">small</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p>
+                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.</small>
+                      </p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat
     magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat
     a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
-
-          <section class="sg-section sg-section-buttons">
-            <h2 id="buttons" class="sg">Buttons</h2>
-            <section class="sg-block sg-section-button">
-              <div class="sg-text">
-                <h3 id="button" class="sg">Button</h3>
-                <p class="sg">
-                  <code class="sg">.btn</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn">Button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-primary-button">
-              <div class="sg-text">
-                <h3 id="primary-button" class="sg">Primary button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--primary</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--primary">Primary button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Primary button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-secondary-button">
-              <div class="sg-text">
-                <h3 id="secondary-button" class="sg">Secondary button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--secondary</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--secondary">Secondary button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Secondary button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-colored-buttons">
-              <div class="sg-text">
-                <h3 id="colored-buttons" class="sg">Colored buttons</h3>
-                <p class="sg">
-                  <code class="sg">.btn--success</code>
-                  <code class="sg">.btn--danger</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--success">Success button</a>
-                  <a class="btn btn--danger">Danger button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--success&quot;</span>&gt;</span>Success button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--danger&quot;</span>&gt;</span>Danger button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-outline-button">
-              <div class="sg-text">
-                <h3 id="outline-button" class="sg">Outline button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--outline</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--outline">Outline button</a>
-                  <a class="btn btn--primary btn--outline">Primary outline button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--outline&quot;</span>&gt;</span>Outline button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--outline&quot;</span>&gt;</span>Primary outline button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-link-button">
-              <div class="sg-text">
-                <h3 id="link-button" class="sg">Link button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--link</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <button class="btn btn--link">Link button</button>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>Link button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-pill-button">
-              <div class="sg-text">
-                <h3 id="pill-button" class="sg">Pill button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--pill</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--pill">Pill button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--pill&quot;</span>&gt;</span>Pill button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-gradient-button">
-              <div class="sg-text">
-                <h3 id="gradient-button" class="sg">Gradient button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--gradient</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--primary btn--gradient">Gradient button</a>
-                  <a class="btn btn--success btn--gradient">Gradient button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--gradient&quot;</span>&gt;</span>Gradient button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--success btn--gradient&quot;</span>&gt;</span>Gradient button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-expanded-button">
-              <div class="sg-text">
-                <h3 id="expanded-button" class="sg">Expanded button</h3>
-                <p class="sg">
-                  <code class="sg">.btn--expanded</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--primary btn--lg btn--expanded">Expanded button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--lg btn--expanded&quot;</span>&gt;</span>Expanded button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-button-size">
-              <div class="sg-text">
-                <h3 id="button-size" class="sg">Button size</h3>
-                <p class="sg">
-                  <code class="sg">.btn--sm</code>
-                  <code class="sg">.btn--lg</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <a class="btn btn--primary btn--sm">Small button</a>
-                  <a class="btn btn--primary btn--lg">Large button</a>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--sm&quot;</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--lg&quot;</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
-
-          <section class="sg-section sg-section-forms">
-            <h2 id="forms" class="sg">Forms</h2>
-            <section class="sg-block sg-section-input">
-              <div class="sg-text">
-                <h3 id="input" class="sg">Input</h3>
-                <p class="sg">
-                  <code class="sg">.input</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <input type="text" placeholder="Text input" class="input">
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span></pre>
-              </div>
-            </section>
-          </section>
-
-          <section class="sg-section sg-section-input-group">
-            <h2 id="input-group" class="sg">Input group</h2>
-            <section class="sg-block sg-section-button-addons">
-              <div class="sg-text">
-                <h3 id="button-addons" class="sg">Button addons</h3>
-                <p class="sg">
-                  <code class="sg">.fld--group</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="fld fld--group">
-                    <input type="search" placeholder="Search..." class="input">
-                    <a class="btn btn-secondary">Go</a>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld fld--group&quot;</span>&gt;</span>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-buttons">
+                <h2 id="buttons" class="sg">Buttons</h2>
+                <section class="sg-block sg-section-button">
+                  <div class="sg-text">
+                    <h3 id="button" class="sg">Button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn">Button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-primary-button">
+                  <div class="sg-text">
+                    <h3 id="primary-button" class="sg">Primary button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--primary</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--primary">Primary button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Primary button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-secondary-button">
+                  <div class="sg-text">
+                    <h3 id="secondary-button" class="sg">Secondary button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--secondary</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--secondary">Secondary button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Secondary button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-colored-buttons">
+                  <div class="sg-text">
+                    <h3 id="colored-buttons" class="sg">Colored buttons</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--success</code>
+                      <code class="sg">.btn--danger</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--success">Success button</a>
+                      <a class="btn btn--danger">Danger button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--success&quot;</span>&gt;</span>Success button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--danger&quot;</span>&gt;</span>Danger button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-outline-button">
+                  <div class="sg-text">
+                    <h3 id="outline-button" class="sg">Outline button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--outline</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--outline">Outline button</a>
+                      <a class="btn btn--primary btn--outline">Primary outline button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--outline&quot;</span>&gt;</span>Outline button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--outline&quot;</span>&gt;</span>Primary outline button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-link-button">
+                  <div class="sg-text">
+                    <h3 id="link-button" class="sg">Link button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--link</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <button class="btn btn--link">Link button</button>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>Link button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-pill-button">
+                  <div class="sg-text">
+                    <h3 id="pill-button" class="sg">Pill button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--pill</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--pill">Pill button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--pill&quot;</span>&gt;</span>Pill button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-gradient-button">
+                  <div class="sg-text">
+                    <h3 id="gradient-button" class="sg">Gradient button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--gradient</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--primary btn--gradient">Gradient button</a>
+                      <a class="btn btn--success btn--gradient">Gradient button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--gradient&quot;</span>&gt;</span>Gradient button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--success btn--gradient&quot;</span>&gt;</span>Gradient button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-expanded-button">
+                  <div class="sg-text">
+                    <h3 id="expanded-button" class="sg">Expanded button</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--expanded</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--primary btn--lg btn--expanded">Expanded button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--lg btn--expanded&quot;</span>&gt;</span>Expanded button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-button-size">
+                  <div class="sg-text">
+                    <h3 id="button-size" class="sg">Button size</h3>
+                    <p class="sg">
+                      <code class="sg">.btn--sm</code>
+                      <code class="sg">.btn--lg</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <a class="btn btn--primary btn--sm">Small button</a>
+                      <a class="btn btn--primary btn--lg">Large button</a>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--sm&quot;</span>&gt;</span>Small button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary btn--lg&quot;</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-forms">
+                <h2 id="forms" class="sg">Forms</h2>
+                <section class="sg-block sg-section-input">
+                  <div class="sg-text">
+                    <h3 id="input" class="sg">Input</h3>
+                    <p class="sg">
+                      <code class="sg">.input</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <input type="text" placeholder="Text input" class="input">
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-input-group">
+                <h2 id="input-group" class="sg">Input group</h2>
+                <section class="sg-block sg-section-button-addons">
+                  <div class="sg-text">
+                    <h3 id="button-addons" class="sg">Button addons</h3>
+                    <p class="sg">
+                      <code class="sg">.fld--group</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="fld fld--group">
+                        <input type="search" placeholder="Search..." class="input">
+                        <a class="btn btn-secondary">Go</a>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld fld--group&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-mixed-addons">
-              <div class="sg-text">
-                <h3 id="mixed-addons" class="sg">Mixed addons</h3>
-                <p class="sg">
-                  <code class="sg">.fld--group</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <div class="fld fld--group">
-                    <label class="lbl">Search:</label>
-                    <input type="search" class="input">
-                    <a class="btn btn-secondary">Go</a>
                   </div>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld fld--group&quot;</span>&gt;</span>
+                </section>
+                <section class="sg-block sg-section-mixed-addons">
+                  <div class="sg-text">
+                    <h3 id="mixed-addons" class="sg">Mixed addons</h3>
+                    <p class="sg">
+                      <code class="sg">.fld--group</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="fld fld--group">
+                        <label class="lbl">Search:</label>
+                        <input type="search" class="input">
+                        <a class="btn btn-secondary">Go</a>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld fld--group&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;lbl&quot;</span>&gt;</span>Search:<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-lists">
-            <h2 id="lists" class="sg">Lists</h2>
-            <section class="sg-block sg-section-unstyled-list">
-              <div class="sg-text">
-                <h3 id="unstyled-list" class="sg">Unstyled list</h3>
-                <p class="sg">
-                  <code class="sg">.ls-unstyled</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <ul class="ls-unstyled">
-                    <li>Apricot</li>
-                    <li>Banana</li>
-                    <li>Cherry
-                      <ul>
-                        <li>Caramel</li>
-                        <li>Ice cream</li>
+              <section class="sg-section sg-section-lists">
+                <h2 id="lists" class="sg">Lists</h2>
+                <section class="sg-block sg-section-unstyled-list">
+                  <div class="sg-text">
+                    <h3 id="unstyled-list" class="sg">Unstyled list</h3>
+                    <p class="sg">
+                      <code class="sg">.ls-unstyled</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <ul class="ls-unstyled">
+                        <li>Apricot</li>
+                        <li>Banana</li>
+                        <li>Cherry
+                          <ul>
+                            <li>Caramel</li>
+                            <li>Ice cream</li>
+                          </ul>
+                        </li>
                       </ul>
-                    </li>
-                  </ul>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-unstyled&quot;</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-unstyled&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Apricot<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Banana<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Cherry
@@ -916,68 +924,68 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-inline-list">
-              <div class="sg-text">
-                <h3 id="inline-list" class="sg">Inline list</h3>
-                <p class="sg">
-                  <code class="sg">.ls-inline</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <ul class="ls-inline">
-                    <li>Apricot</li>
-                    <li>Banana</li>
-                    <li>Cherry</li>
-                  </ul>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-inline&quot;</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-inline-list">
+                  <div class="sg-text">
+                    <h3 id="inline-list" class="sg">Inline list</h3>
+                    <p class="sg">
+                      <code class="sg">.ls-inline</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <ul class="ls-inline">
+                        <li>Apricot</li>
+                        <li>Banana</li>
+                        <li>Cherry</li>
+                      </ul>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-inline&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Apricot<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Banana<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Cherry<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
-          <section class="sg-section sg-section-tables">
-            <h2 id="tables" class="sg">Tables</h2>
-            <section class="sg-block sg-section-table">
-              <div class="sg-text">
-                <h3 id="table" class="sg">Table</h3>
-                <p class="sg">
-                  <code class="sg">.tbl</code>Tables are styled nicely for you.</p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <table class="tbl">
-                    <thead>
-                      <tr>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
+              <section class="sg-section sg-section-tables">
+                <h2 id="tables" class="sg">Tables</h2>
+                <section class="sg-block sg-section-table">
+                  <div class="sg-text">
+                    <h3 id="table" class="sg">Table</h3>
+                    <p class="sg">
+                      <code class="sg">.tbl</code>Tables are styled nicely for you.</p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl">
+                        <thead>
+                          <tr>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
@@ -1003,44 +1011,44 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-bordered-table">
-              <div class="sg-text">
-                <h3 id="bordered-table" class="sg">Bordered table</h3>
-                <p class="sg">
-                  <code class="sg">.tbl-bordered</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <table class="tbl tbl-bordered">
-                    <thead>
-                      <tr>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-bordered&quot;</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-bordered-table">
+                  <div class="sg-text">
+                    <h3 id="bordered-table" class="sg">Bordered table</h3>
+                    <p class="sg">
+                      <code class="sg">.tbl-bordered</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl tbl-bordered">
+                        <thead>
+                          <tr>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-bordered&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
@@ -1066,44 +1074,44 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-responsive-table">
-              <div class="sg-text">
-                <h3 id="responsive-table" class="sg">Responsive table</h3>
-                <p class="sg">
-                  <code class="sg">.tbl-responsive</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <table class="tbl tbl-responsive">
-                    <thead>
-                      <tr>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-responsive&quot;</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-responsive-table">
+                  <div class="sg-text">
+                    <h3 id="responsive-table" class="sg">Responsive table</h3>
+                    <p class="sg">
+                      <code class="sg">.tbl-responsive</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl tbl-responsive">
+                        <thead>
+                          <tr>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-responsive&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
@@ -1129,44 +1137,44 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-              </div>
-            </section>
-            <section class="sg-block sg-section-scrolling-table">
-              <div class="sg-text">
-                <h3 id="scrolling-table" class="sg">Scrolling table</h3>
-                <p class="sg">
-                  <code class="sg">.tbl-scroll</code>
-                </p>
-              </div>
-              <div class="sg-example">
-                <div class="sg-canvas">
-                  <table class="tbl tbl-scroll">
-                    <thead>
-                      <tr>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                        <th>Table heading</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                      <tr>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                        <td>Table data</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-scroll&quot;</span>&gt;</span>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-scrolling-table">
+                  <div class="sg-text">
+                    <h3 id="scrolling-table" class="sg">Scrolling table</h3>
+                    <p class="sg">
+                      <code class="sg">.tbl-scroll</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl tbl-scroll">
+                        <thead>
+                          <tr>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                            <th>Table heading</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                          <tr>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                            <td>Table data</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl tbl-scroll&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Table heading<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
@@ -1192,10 +1200,12 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-              </div>
-            </section>
-          </section>
+                  </div>
+                </section>
+              </section>
 
+            </div>
+          </div>
         </div>
       </div>
     </div>
