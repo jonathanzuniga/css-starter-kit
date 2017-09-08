@@ -23,11 +23,11 @@ $line-height-ratio:    $base-line-height / $base-font-size;
 // Colors
 
 $colors: (
-	'Blue'   #4183c4,
-	'Green'  #36b725,
-	'Grey'   #373737,
-	'Red'    #e65146,
-	'Yellow' #ffc439
+	'blue'   #4183c4,
+	'green'  #36b725,
+	'grey'   #373737,
+	'red'    #e65146,
+	'yellow' #ffc439
 );
 
 // Number of tints for each color.
@@ -35,12 +35,12 @@ $tints: 7;
 
 $color-palette: (get_colors_list($colors, $tints)) !default;
 
-$text-color: get_color('Black');
+$text-color: get_color('black');
 
 
 // Hyperlink
 
-$link-color:              get_color('Blue 1');
+$link-color:              get_color('blue 1');
 $link-decoration:         none;
 
 $link-visited-color:      $link-color;
@@ -60,11 +60,11 @@ $blockquote-right-quotation-mark: '»'; // '”';
 
 // Code
 
-$code-background-color: transparentize(get_color('Grey 1'), 0.92);
+$code-background-color: transparentize(get_color('grey 1'), 0.92);
 $code-border-radius:    $quarter-spacing-unit / 2;
 $code-font-size: 1em;
 
-$pre-background-color:  transparentize(get_color('Grey 1'), 0.95);
+$pre-background-color:  transparentize(get_color('grey 1'), 0.95);
 $pre-border-radius:     $quarter-spacing-unit / 2;
 
 
@@ -105,37 +105,37 @@ $button-text-color:    #fff;
 $button-hover-background-color-shade-amount: 12%;
 
 $buttons: (
-	'primary' get_color('Blue 1') $button-border-color $button-text-color,
-	'secondary' lighten(get_color('Grey 1'), 24%) $button-border-color $button-text-color,
-	'success' get_color('Green 1') $button-border-color $button-text-color,
-	'danger' get_color('Red 1') $button-border-color $button-text-color
+	'primary' get_color('blue 1') $button-border-color $button-text-color,
+	'secondary' lighten(get_color('grey 1'), 24%) $button-border-color $button-text-color,
+	'success' get_color('green 1') $button-border-color $button-text-color,
+	'danger' get_color('red 1') $button-border-color $button-text-color
 );
 
 
 // Primary button
 
-$button-primary-background-color:   get_color('Blue 1');
+$button-primary-background-color:   get_color('blue 1');
 $button-primary-border-color:       $button-border-color;
 $button-primary-text-color:         $button-text-color;
 
 
 // Secondary button
 
-$button-secondary-background-color: lighten(get_color('Grey 1'), 24%);
+$button-secondary-background-color: lighten(get_color('grey 1'), 24%);
 $button-secondary-border-color:     $button-border-color;
 $button-secondary-text-color:       $button-text-color;
 
 
 // Success button
 
-$button-success-background-color:   get_color('Green 1');
+$button-success-background-color:   get_color('green 1');
 $button-success-border-color:       $button-border-color;
 $button-success-text-color:         $button-text-color;
 
 
 // Danger button
 
-$button-danger-background-color:    get_color('Red 1');
+$button-danger-background-color:    get_color('red 1');
 $button-danger-border-color:        $button-border-color;
 $button-danger-text-color:          $button-text-color;
 
@@ -216,13 +216,13 @@ $label-padding: rem_to_em($quarter-spacing-unit / 2) 0;
 
 // Input
 
-$input-border:        $control-border-width solid transparentize(lighten(get_color('Grey 1'), 24%), $control-transparentize-amount);
+$input-border:        $control-border-width solid transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
 $input-border-radius: $quarter-spacing-unit / 2;
 $input-line-height:   $control-line-height;
 $input-padding:       $control-padding-y $control-padding-x;
 
-$input-active-border-color: get_color('Blue 2');
-$input-focus-border-color:  get_color('Blue 2');
+$input-active-border-color: get_color('blue 2');
+$input-focus-border-color:  get_color('blue 2');
 $input-hover-border-color:  $input-border;
 
 
@@ -239,7 +239,7 @@ $table-heading-text-align:  left;
 
 // Borders
 
-$border-color:  transparentize(get_color('Grey 1'), 0.83);
+$border-color:  transparentize(get_color('grey 1'), 0.83);
 $border-radius: $quarter-spacing-unit / 2;
 
 
@@ -252,7 +252,7 @@ $large-font-size: px_to_em($base-font-size + 4); // 1.25em (20px)
 // Highlighting text
 
 $hightlight-border-radius: rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
-$hightlight-background:    linear-gradient(-100deg, rgba(get_color('Yellow 4'), 0.3), rgba(get_color('Yellow 4'), 0.7) 95%, rgba(get_color('Yellow 4'), 0.1));
+$hightlight-background:    linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.3), rgba(get_color('yellow 4'), 0.7) 95%, rgba(get_color('yellow 4'), 0.1));
 
 
 // Drop cap

@@ -3,33 +3,34 @@
  */
 
 @each $name, $hex in $color-palette {
-	$lc-name: str_replace(to_lower_case($name), ' ', '-');
+	$name_ucf: str_ucfirst($name);
+	$name_r: str_replace(to_lower_case($name), ' ', '-');
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
 	/**
-	 * #{$name} color:
-	 * `.bgc-#{$lc-name}` `.txtc-#{$lc-name}` `.bdc-#{$lc-name}`
+	 * #{$name_ucf} color:
+	 * `.bgc-#{$name_r}` `.txtc-#{$name_r}` `.bdc-#{$name_r}`
 	 *
 	 *     @example
 	 *     table.tbl
 	 *         tr
 	 *             td.w-20
-	 *                div.color-swatch.bd-radius.bgc-#{$lc-name}
-	 *             td.w-20.txt-select.txtc-#{$lc-name} #{$name}
+	 *                div.color-swatch.bd-radius.bgc-#{$name_r}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$name_ucf}
 	 *             td.w-20.txt-select #{$hex}
 	 *             td.w-20.txt-select #{$rgb}
 	 */
-	.bgc-#{$lc-name} {
+	.bgc-#{$name_r} {
 		background-color: $hex;
 	}
 
-	.bdc-#{$lc-name} {
+	.bdc-#{$name_r} {
 		@extend .bd;
 
 		border-color: $hex;
 	}
 
-	.txtc-#{$lc-name} {
+	.txtc-#{$name_r} {
 		color: $hex;
 	}
 }
