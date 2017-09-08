@@ -2,24 +2,16 @@
  * Buttons:
  */
 
-/**
- * Button:
- * `.btn`
- *
- *     @example
- *     a.btn Button
- */
 .btn {
-	background-color: $button-background-color;
 	border: $button-border;
 	border-radius: $button-border-radius;
-	color: $button-text-color;
 	display: inline-block;
 	font-size: $base-font-size;
 	font-weight: $button-font-weight;
 	line-height: $button-line-height;
 	padding: $button-padding;
 	text-align: center;
+	transition: $base-transition;
 	vertical-align: middle;
 	white-space: nowrap;
 
@@ -30,21 +22,6 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
-	// &:focus {
-	// 	-webkit-box-shadow: $button-focus-shadow;
-	// 	-moz-box-shadow: $button-focus-shadow;
-	// 	box-shadow: $button-focus-shadow;
-	// }
-
-	&:hover {
-		background-color: 
-			shade(
-				$button-background-color, 
-				$button-hover-background-color-shade-amount
-			);
-		color: $button-text-color;
-	}
 }
 
 /**
@@ -56,6 +33,7 @@
  */
 .btn--primary {
 	background-color: $button-primary-background-color;
+	border-color: $button-primary-border-color;
 	color: $button-primary-text-color;
 
 	&:hover {
@@ -77,6 +55,7 @@
  */
 .btn--secondary {
 	background-color: $button-secondary-background-color;
+	border-color: $button-secondary-border-color;
 	color: $button-secondary-text-color;
 
 	&:hover {
@@ -132,36 +111,20 @@
  * `.btn--outline`
  *
  *     @example
- *     a.btn.btn--outline Outline button
- *     a.btn.btn--primary.btn--outline Primary outline button
+ *     a.btn.btn--secondary.btn--outline Outline button
+ *     a.btn.btn--primary.btn--outline Outline button
  */
 .btn--outline {
-	background-color: $button-outline-background-color;
-	border-color: $button-outline-border-color;
-	color: $button-outline-text-color;
-
-	&:hover {
-		background-color: 
-			transparentize(
-				$button-outline-text-color, 
-				$button-hover-background-color-transparentize-amount
-			);
-		border-color: $button-outline-border-color;
-		color: $button-outline-text-color;
-	}
+	background-color: transparent;
 
 	&.btn--primary {
 		border-color: $button-outline-primary-border-color;
 		color: $button-outline-primary-text-color;
 
 		&:hover {
-			background-color: 
-				transparentize(
-					$button-outline-primary-text-color, 
-					$button-hover-background-color-transparentize-amount
-				);
-			border-color: $button-outline-primary-border-color;
-			color: $button-outline-primary-text-color;
+			background-color: $button-outline-primary-hover-background-color;
+			border-color: $button-primary-background-color;
+			color: $button-outline-primary-hover-text-color;
 		}
 	}
 
@@ -170,13 +133,9 @@
 		color: $button-outline-secondary-text-color;
 
 		&:hover {
-			background-color: 
-				transparentize(
-					$button-outline-secondary-text-color, 
-					$button-hover-background-color-transparentize-amount
-				);
-			border-color: $button-outline-secondary-border-color;
-			color: $button-outline-secondary-text-color;
+			background-color: $button-outline-secondary-hover-background-color;
+			border-color: $button-secondary-background-color;
+			color: $button-outline-secondary-hover-text-color;
 		}
 	}
 
@@ -185,13 +144,9 @@
 		color: $button-outline-success-text-color;
 
 		&:hover {
-			background-color: 
-				transparentize(
-					$button-outline-success-text-color, 
-					$button-hover-background-color-transparentize-amount
-				);
-			border-color: $button-outline-success-border-color;
-			color: $button-outline-success-text-color;
+			background-color: $button-outline-success-hover-background-color;
+			border-color: $button-success-background-color;
+			color: $button-outline-success-hover-text-color;
 		}
 	}
 
@@ -200,13 +155,9 @@
 		color: $button-outline-danger-text-color;
 
 		&:hover {
-			background-color: 
-				transparentize(
-					$button-outline-danger-text-color, 
-					$button-hover-background-color-transparentize-amount
-				);
-			border-color: $button-outline-danger-border-color;
-			color: $button-outline-danger-text-color;
+			background-color: $button-outline-danger-hover-background-color;
+			border-color: $button-danger-background-color;
+			color: $button-outline-danger-hover-text-color;
 		}
 	}
 }
@@ -221,12 +172,13 @@
 .btn--link {
 	background-color: transparent;
 	border-color: transparent;
+
 	color: $link-color;
+	text-decoration: $link-decoration;
 
 	&:hover {
-		background-color: $button-link-hover-background-color;
-		border-color: $button-link-hover-border-color;
-		color: $button-secondary-text-color;
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
 	}
 }
 
@@ -235,7 +187,7 @@
  * `.btn--pill`
  *
  *     @example
- *     a.btn.btn--pill Pill button
+ *     a.btn.btn--secondary.btn--pill Pill button
  */
 .btn--pill {
 	border-radius: 2em;
@@ -252,40 +204,10 @@
  *
  *     @example
  *     a.btn.btn--primary.btn--gradient Gradient button
- *     a.btn.btn--success.btn--gradient Gradient button
  */
 .btn--gradient {
 	border: $button-gradient-border;
 	padding: $button-gradient-padding;
-
-	$button-gradient-background-color-top: 
-		tint(
-			$button-background-color, 
-			$button-gradient-background-color-top-tint-amount
-		);
-	$button-gradient-background-color-bottom: 
-		shade(
-			$button-background-color, 
-			$button-gradient-background-color-bottom-shade-amount
-		);
-
-	@include button_gradient_bg(
-		$button-gradient-background-color-top, 
-		$button-gradient-background-color-bottom
-	);
-
-	&:hover {
-		@include button_gradient_bg(
-			shade(
-				$button-gradient-background-color-top, 
-				$button-hover-background-color-shade-amount
-			), 
-			shade(
-				$button-gradient-background-color-bottom, 
-				$button-hover-background-color-shade-amount
-			)
-		);
-	}
 
 	&.btn--primary {
 		$button-gradient-primary-background-color-top: 
@@ -299,13 +221,13 @@
 				$button-gradient-background-color-bottom-shade-amount
 			);
 
-		$button-gradient-background-color-top-hsl: 
+		$button-gradient-primary-background-color-top-hsl: 
 			hsl(
 				hue($button-gradient-primary-background-color-top) + $button-gradient-background-color-top-hue, 
 				saturation($button-gradient-primary-background-color-top) + $button-gradient-background-color-top-saturation, 
 				lightness($button-gradient-primary-background-color-top) + $button-gradient-background-color-top-lightness
 			);
-		$button-gradient-background-color-bottom-hsl: 
+		$button-gradient-primary-background-color-bottom-hsl: 
 			hsl(
 				hue($button-gradient-primary-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
 				saturation($button-gradient-primary-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
@@ -313,18 +235,18 @@
 			);
 
 		@include button_gradient_bg(
-			$button-gradient-background-color-top-hsl, // #478ec9
-			$button-gradient-background-color-bottom-hsl // #3a76be
+			$button-gradient-primary-background-color-top-hsl, // #478ec9
+			$button-gradient-primary-background-color-bottom-hsl // #3a76be
 		);
 
 		&:hover {
 			@include button_gradient_bg(
 				shade(
-					$button-gradient-background-color-top-hsl, 
+					$button-gradient-primary-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
 				), 
 				shade(
-					$button-gradient-background-color-bottom-hsl, 
+					$button-gradient-primary-background-color-bottom-hsl, 
 					$button-hover-background-color-shade-amount
 				)
 			);
@@ -374,13 +296,13 @@
 				$button-gradient-background-color-bottom-shade-amount
 			);
 
-		$button-gradient-background-color-top-hsl: 
+		$button-gradient-success-background-color-top-hsl: 
 			hsl(
 				hue($button-gradient-success-background-color-top) + $button-gradient-background-color-top-hue, 
 				saturation($button-gradient-success-background-color-top) + $button-gradient-background-color-top-saturation, 
 				lightness($button-gradient-success-background-color-top) + $button-gradient-background-color-top-lightness
 			);
-		$button-gradient-background-color-bottom-hsl: 
+		$button-gradient-success-background-color-bottom-hsl: 
 			hsl(
 				hue($button-gradient-success-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
 				saturation($button-gradient-success-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
@@ -388,18 +310,18 @@
 			);
 
 		@include button_gradient_bg(
-			$button-gradient-background-color-top-hsl, 
-			$button-gradient-background-color-bottom-hsl
+			$button-gradient-success-background-color-top-hsl, 
+			$button-gradient-success-background-color-bottom-hsl
 		);
 
 		&:hover {
 			@include button_gradient_bg(
 				shade(
-					$button-gradient-background-color-top-hsl, 
+					$button-gradient-success-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
 				), 
 				shade(
-					$button-gradient-background-color-bottom-hsl, 
+					$button-gradient-success-background-color-bottom-hsl, 
 					$button-hover-background-color-shade-amount
 				)
 			);
@@ -418,13 +340,13 @@
 				$button-gradient-background-color-bottom-shade-amount
 			);
 
-		$button-gradient-background-color-top-hsl: 
+		$button-gradient-danger-background-color-top-hsl: 
 			hsl(
 				hue($button-gradient-danger-background-color-top) + $button-gradient-background-color-top-hue, 
 				saturation($button-gradient-danger-background-color-top) + $button-gradient-background-color-top-saturation, 
 				lightness($button-gradient-danger-background-color-top) + $button-gradient-background-color-top-lightness
 			);
-		$button-gradient-background-color-bottom-hsl: 
+		$button-gradient-danger-background-color-bottom-hsl: 
 			hsl(
 				hue($button-gradient-danger-background-color-bottom) + $button-gradient-background-color-bottom-hue,  
 				saturation($button-gradient-danger-background-color-bottom) + $button-gradient-background-color-bottom-saturation, 
@@ -432,18 +354,18 @@
 			);
 
 		@include button_gradient_bg(
-			$button-gradient-background-color-top-hsl, 
-			$button-gradient-background-color-bottom-hsl
+			$button-gradient-danger-background-color-top-hsl, 
+			$button-gradient-danger-background-color-bottom-hsl
 		);
 
 		&:hover {
 			@include button_gradient_bg(
 				shade(
-					$button-gradient-background-color-top-hsl, 
+					$button-gradient-danger-background-color-top-hsl, 
 					$button-hover-background-color-shade-amount
 				), 
 				shade(
-					$button-gradient-background-color-bottom-hsl, 
+					$button-gradient-danger-background-color-bottom-hsl, 
 					$button-hover-background-color-shade-amount
 				)
 			);

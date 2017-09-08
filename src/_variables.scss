@@ -1,197 +1,205 @@
+// Variables
+
+
 // ==========================================================================
 // Elements
 // ==========================================================================
 
-// Base font size and line-height
 
-$base-font-size: 16px !default;
-$base-line-height: 26px !default;
+// Content
 
-$base-spacing-unit: 2rem; // 32px
-$half-spacing-unit: $base-spacing-unit / 2;
+// Base font size and line-height.
+
+$base-font-size:       16px !default;
+$base-line-height:     26px !default;
+
+$base-spacing-unit:    2rem; // 32px
+$half-spacing-unit:    $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 
-$line-height-ratio: $base-line-height / $base-font-size;
+$line-height-ratio:    $base-line-height / $base-font-size;
 
 
 // Colors
 
-// Name color and hex color code.
 $colors: (
-	'Blue' #4183c4,
-	'Green' #36b725,
-	'Grey' #373737,
-	'Red' #e65146,
+	'Blue'   #4183c4,
+	'Green'  #36b725,
+	'Grey'   #373737,
+	'Red'    #e65146,
 	'Yellow' #ffc439
 );
 
 // Number of tints for each color.
 $tints: 7;
 
-// Color palette.
-$color-palette: (
-	get_colors_list($colors, $tints)
-) !default;
+$color-palette: (get_colors_list($colors, $tints)) !default;
 
 $text-color: get_color('Black');
 
 
-// Hyperlinks
+// Hyperlink
 
-$link-color: get_color('Blue 1');
-$link-decoration: none;
+$link-color:              get_color('Blue 1');
+$link-decoration:         none;
 
-$link-visited-color: $link-color;
+$link-visited-color:      $link-color;
 $link-visited-decoration: none;
 
-$link-hover-color: $text-color;
-$link-hover-decoration: none;
+$link-hover-color:        $text-color;
+$link-hover-decoration:   none;
+
+$base-transition:         background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, color 0.16s ease-in-out;
 
 
 // Blockquote
 
-$blockquote-left-quotation-mark: '«'; // '“';
+$blockquote-left-quotation-mark:  '«'; // '“';
 $blockquote-right-quotation-mark: '»'; // '”';
 
 
 // Code
 
-$mono-font-family: monospace;
-
-$code-border-radius: $quarter-spacing-unit / 2;
 $code-background-color: transparentize(get_color('Grey 1'), 0.92);
+$code-border-radius:    $quarter-spacing-unit / 2;
 $code-font-size: 1em;
 
-$pre-background-color: transparentize(get_color('Grey 1'), 0.95);
-$pre-border-radius: $quarter-spacing-unit / 2;
+$pre-background-color:  transparentize(get_color('Grey 1'), 0.95);
+$pre-border-radius:     $quarter-spacing-unit / 2;
 
 
-// Button
+// Heading
 
-$button-background-color: lighten(get_color('Grey 2'), 6%);
+$headings-sizes: (
+	'h1': 2.5em,  // 40px
+	'h2': 2em,    // 32px
+	'h3': 1.75em, // 28px
+	'h4': 1.5em,  // 24px
+	'h5': 1.25em, // 20px
+	'h6': 1em     // 16px
+) !default;
 
-$button-border-width: 1px;
-$button-border-color: transparent;
-$button-border: $button-border-width solid $button-border-color;
+$heading-line-height: 1.1;
 
+
+// Buttons
+
+// Se usan los mismo valores para los demas controles de las formas.
+$control-border-width: 1px;
+$control-border-color: transparent;
+$control-line-height:  $line-height-ratio - $quarter-spacing-unit;
+$control-padding-y:    rem_to_em($quarter-spacing-unit);
+$control-padding-x:    rem_to_em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
+
+$control-transparentize-amount: 0.6;
+
+$button-border-width:  $control-border-width;
+$button-border-color:  $control-border-color;
+$button-border:        $control-border-width solid $control-border-color;
 $button-border-radius: rem_to_em($quarter-spacing-unit / 2);
-$button-font-weight: 400;
-$button-line-height: $line-height-ratio - $quarter-spacing-unit;
-
-// Se usa el mismo padding para los demas controles de las formas.
-$control-padding-y: rem_to_em($quarter-spacing-unit);
-$control-padding-x: rem_to_em($quarter-spacing-unit + ($quarter-spacing-unit / 2));
-
-$button-padding: $control-padding-y $control-padding-x;
-$button-text-color: #fff;
+$button-font-weight:   400;
+$button-line-height:   $control-line-height;
+$button-padding:       $control-padding-y $control-padding-x;
+$button-text-color:    #fff;
 
 $button-hover-background-color-shade-amount: 12%;
 
 
 // Primary button
 
-$button-primary-background-color: get_color('Blue 1');
-$button-primary-text-color: #fff;
+$button-primary-background-color:   get_color('Blue 1');
+$button-primary-border-color:       $button-border-color;
+$button-primary-text-color:         $button-text-color;
 
 
 // Secondary button
 
-$button-secondary-background-color: lighten(get_color('Grey 7'), 6%);
-$button-secondary-text-color: transparentize(get_color('Grey 1'), 0.3);
+$button-secondary-background-color: lighten(get_color('Grey 1'), 24%);
+$button-secondary-border-color:     $button-border-color;
+$button-secondary-text-color:       $button-text-color;
 
 
 // Success button
 
-$button-success-background-color: get_color('Green 1');
-$button-success-border-color: transparent;
-$button-success-text-color: #fff;
+$button-success-background-color:   get_color('Green 1');
+$button-success-border-color:       $button-border-color;
+$button-success-text-color:         $button-text-color;
 
 
 // Danger button
 
-$button-danger-background-color: get_color('Red 1');
-$button-danger-border-color: transparent;
-$button-danger-text-color: #fff;
+$button-danger-background-color:    get_color('Red 1');
+$button-danger-border-color:        $button-border-color;
+$button-danger-text-color:          $button-text-color;
 
 
-// Outline button
-
-$button-outline-background-color: transparent;
-$button-outline-border-color: $button-background-color;
-$button-outline-text-color: $button-background-color;
-
-$button-hover-background-color-transparentize-amount: 0.9;
-
+// Outline buttons
 
 // Outline primary button
 
-$button-outline-primary-border-color: $button-primary-background-color;
-$button-outline-primary-text-color: $button-primary-background-color;
+$button-outline-primary-border-color:             transparentize($button-primary-background-color, $control-transparentize-amount);
+$button-outline-primary-text-color:               $button-primary-background-color;
+
+$button-outline-primary-hover-background-color:   $button-outline-primary-text-color;
+$button-outline-primary-hover-text-color:         $button-primary-text-color;
 
 
 // Outline secondary button
 
-$button-outline-secondary-border-color: $button-secondary-background-color;
-$button-outline-secondary-text-color: $button-secondary-background-color;
+$button-outline-secondary-border-color:           transparentize($button-secondary-background-color, $control-transparentize-amount);
+$button-outline-secondary-text-color:             $button-secondary-background-color;
+
+$button-outline-secondary-hover-background-color: $button-outline-secondary-text-color;
+$button-outline-secondary-hover-text-color:       $button-secondary-text-color;
 
 
 // Outline success button
 
-$button-outline-success-border-color: $button-success-background-color;
-$button-outline-success-text-color: $button-success-background-color;
+$button-outline-success-border-color:             transparentize($button-success-background-color, $control-transparentize-amount);
+$button-outline-success-text-color:               $button-success-background-color;
+
+$button-outline-success-hover-background-color:   $button-outline-success-text-color;
+$button-outline-success-hover-text-color:         $button-success-text-color;
 
 
 // Outline danger button
 
-$button-outline-danger-border-color: $button-danger-background-color;
-$button-outline-danger-text-color: $button-danger-background-color;
+$button-outline-danger-border-color:              transparentize($button-danger-background-color, $control-transparentize-amount);
+$button-outline-danger-text-color:                $button-danger-background-color;
 
-
-// Link button
-
-$button-link-hover-background-color: $button-secondary-background-color;
-$button-link-hover-border-color: transparent;
+$button-outline-danger-hover-background-color:    $button-outline-danger-text-color;
+$button-outline-danger-hover-text-color:          $button-danger-text-color;
 
 
 // Gradient button
 
-$button-gradient-background-color-top-tint-amount: 3%;
+$button-gradient-background-color-top-tint-amount:     3%;
 $button-gradient-background-color-bottom-shade-amount: 11%;
 
-$button-gradient-background-color-top-hue: -2.5;
-$button-gradient-background-color-top-saturation: 1.75;
-$button-gradient-background-color-top-lightness: 0.5;
+$button-gradient-background-color-top-hue:            -2.5;
+$button-gradient-background-color-top-saturation:      1.75;
+$button-gradient-background-color-top-lightness:       0.5;
 
-$button-gradient-background-color-bottom-hue: 3.25;
-$button-gradient-background-color-bottom-saturation: 3.25;
-$button-gradient-background-color-bottom-lightness: 3.25;
+$button-gradient-background-color-bottom-hue:          3.25;
+$button-gradient-background-color-bottom-saturation:   3.25;
+$button-gradient-background-color-bottom-lightness:    3.25;
 
-$button-gradient-border: none;
-$button-gradient-padding: 
-	($control-padding-y + 0.063) // + 1px
-	($control-padding-x + 0.063); // + 1px
+$button-gradient-border:  none;
+$button-gradient-padding: ($control-padding-y + 0.063) ($control-padding-x + 0.063);
 
 
 // Small button
 
-$button-small-border-radius: 
-	rem_to_em(($quarter-spacing-unit / 2) - 0.063);
-$button-small-font-size: 
-	px_to_em($base-font-size - 3);
-$button-small-padding: 
-	rem_to_em($quarter-spacing-unit / 2) 
-	rem_to_em($half-spacing-unit - 0.25);
+$button-small-border-radius: rem_to_em(($quarter-spacing-unit / 2) - 0.063);
+$button-small-font-size:     px_to_em($base-font-size - 3);
+$button-small-padding:       rem_to_em($quarter-spacing-unit / 2) rem_to_em($half-spacing-unit - 0.25);
 
 
 // Large button
 
-$button-large-border-radius: 
-	rem_to_em($quarter-spacing-unit / 2);
-$button-large-font-size: 
-	px_to_em($base-font-size + 4);
-$button-large-padding: 
-	rem_to_em($quarter-spacing-unit + 0.25) 
-	rem_to_em($half-spacing-unit + 0.5);
+$button-large-border-radius: rem_to_em($quarter-spacing-unit / 2);
+$button-large-font-size:     px_to_em($base-font-size + 4);
+$button-large-padding:       rem_to_em($quarter-spacing-unit + 0.25) rem_to_em($half-spacing-unit + 0.5);
 
 
 // Label
@@ -201,34 +209,20 @@ $label-padding: rem_to_em($quarter-spacing-unit / 2) 0;
 
 // Input
 
-$input-border: $button-border-width solid get_color('Grey 7');
+$input-border:        $control-border-width solid transparentize(lighten(get_color('Grey 1'), 24%), $control-transparentize-amount);
 $input-border-radius: $quarter-spacing-unit / 2;
-$input-line-height: $button-line-height;
-$input-padding: $control-padding-y $control-padding-x;
+$input-line-height:   $control-line-height;
+$input-padding:       $control-padding-y $control-padding-x;
 
 $input-active-border-color: get_color('Blue 2');
-$input-focus-border-color: get_color('Blue 2');
-$input-hover-border-color: get_color('Grey 4');
+$input-focus-border-color:  get_color('Blue 2');
+$input-hover-border-color:  $input-border;
 
 
-// Headings
-
-$headings-sizes: (
-	'h1': 2.5em, // 40px
-	'h2': 2em, // 32px
-	'h3': 1.75em, // 28px
-	'h4': 1.5em, // 24px
-	'h5': 1.25em, // 20px
-	'h6': 1em // 16px
-) !default;
-
-$heading-line-height: 1.1;
-
-
-// Table
+// Tables
 
 $table-heading-font-weight: bold;
-$table-heading-text-align: left;
+$table-heading-text-align:  left;
 
 
 // ==========================================================================
@@ -238,40 +232,8 @@ $table-heading-text-align: left;
 
 // Borders
 
-$border-color: transparentize(get_color('Grey 1'), 0.83);
+$border-color:  transparentize(get_color('Grey 1'), 0.83);
 $border-radius: $quarter-spacing-unit / 2;
-
-
-// Drop cap
-
-$dropcap-background-color: transparent;
-$dropcap-border: none;
-$dropcap-color: $text-color;
-
-$dropcap-font-size: px_to_em($base-font-size * 3.5);
-$dropcap-font-style: normal;
-$dropcap-font-weight: normal;
-
-$dropcap-letter-spacing: 0;
-$dropcap-line-height: 0.9;
-
-$dropcap-margin-top: $quarter-spacing-unit;
-$dropcap-margin-right: $quarter-spacing-unit / 2;
-$dropcap-padding: 0;
-
-$dropcap-text-shadow: none;
-
-$dropcap-width: auto;
-$dropcap-height: auto;
-
-$dropcap-text-align: left;
-$dropcap-vertical-align: bottom;
-
-
-// Small caps
-
-$smcaps-letter-spacing: 0.125em; // 2px
-$smcaps-margin-right: 0.188em; // 3px
 
 
 // Font size
@@ -283,13 +245,35 @@ $large-font-size: px_to_em($base-font-size + 4); // 1.25em (20px)
 // Highlighting text
 
 $hightlight-border-radius: rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
-$hightlight-background: 
-	linear-gradient(
-		-100deg, 
-		rgba(get_color('Yellow 4'), 0.3), 
-		rgba(get_color('Yellow 4'), 0.7) 95%, 
-		rgba(get_color('Yellow 4'), 0.1)
-	);
+$hightlight-background:    linear-gradient(-100deg, rgba(get_color('Yellow 4'), 0.3), rgba(get_color('Yellow 4'), 0.7) 95%, rgba(get_color('Yellow 4'), 0.1));
+
+
+// Drop cap
+
+$dropcap-background-color: transparent;
+$dropcap-border:           none;
+$dropcap-color:            $text-color;
+$dropcap-font-size:        px_to_em($base-font-size * 3.5);
+$dropcap-font-style:       normal;
+$dropcap-font-weight:      normal;
+$dropcap-letter-spacing:   0;
+$dropcap-line-height:      0.9;
+$dropcap-margin-top:       $quarter-spacing-unit;
+$dropcap-margin-right:     $quarter-spacing-unit / 2;
+$dropcap-padding:          0;
+$dropcap-text-shadow:      none;
+
+$dropcap-width:  auto;
+$dropcap-height: auto;
+
+$dropcap-text-align:     left;
+$dropcap-vertical-align: bottom;
+
+
+// Small caps
+
+$smcaps-letter-spacing: 0.125em; // 2px
+$smcaps-margin-right:   0.188em; // 3px
 
 
 // Cantidad de espacios para margins & paddings,
@@ -318,6 +302,7 @@ $sizes: (
 // Layout
 // ==========================================================================
 
+
 // Flex grid
 
 // Tamaño máximo de anchura del contenedor.
@@ -328,9 +313,9 @@ $grid-columns-number: 12;
 
 // Margen superior e inferior de cada renglón.
 $grid-row-margin-bottom: 0;
-$grid-row-margin-top: 0;
+$grid-row-margin-top:    0;
 
-// Margen del lado izquierdo y derecho de cada columna.
+// Gutter size.
 $grid-column-gutter: $half-spacing-unit;;
 
 // Grid breakpoints, minimum widths.
