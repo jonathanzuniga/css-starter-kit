@@ -100,7 +100,7 @@
 ### Body
 
 	<div class='container-fluid'>
-		<div class="row cols-around md-gutters-half">
+		<div class="row">
 			<div class="xs-col-12 md-col-3 xl-col-2 sidebar">
 				<div class="sidebar__content">
 					<h1>CSS Starter Kit</h1>
@@ -118,6 +118,91 @@
 					</p>
 
 					<div class="row">
+						<div class="xs-col-12 sm-col-6 md-col-12">
+							<h3>Layout</h3>
+
+							<ul class="ls-unstyled">
+								<li>
+									<a href="layout.html#flex-grid">Flex grid</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="layout.html#rows-and-columns">Rows and columns</a>
+										</li>
+										<li>
+											<a href="layout.html#responsive-columns">Responsive columns</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="layout.html#gutters">Gutters</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="layout.html#double-size-gutters">Double size gutters</a>
+										</li>
+										<li>
+											<a href="layout.html#regular-plus-half-size-gutters">Regular plus half size gutters</a>
+										</li>
+										<li>
+											<a href="layout.html#half-size-gutters">Half size gutters</a>
+										</li>
+										<li>
+											<a href="layout.html#remove-gutters">Remove gutters</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
+										</li>
+										<li>
+											<a href="layout.html#space-between-columns">Space between columns</a>
+										</li>
+										<li>
+											<a href="layout.html#space-around-columns">Space around columns</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-column-to-top">Aligns column to top</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
+										</li>
+										<li>
+											<a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="layout.html#offsets">Offsets</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="layout.html#offsetting-columns">Offsetting columns</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 						<div class="xs-col-12 sm-col-6 md-col-12">
 							<h3>Elements</h3>
 
@@ -415,85 +500,14 @@
 							</ul>
 						</div>
 						<div class="xs-col-12 sm-col-6 md-col-12">
-							<h3>Layout</h3>
+							<h3>Components</h3>
 
 							<ul class="ls-unstyled">
 								<li>
-									<a href="layout.html#flex-grid">Flex grid</a>
+									<a href="components.html#navbar">Navbar</a>
 									<ul class="ls-unstyled">
 										<li>
-											<a href="layout.html#rows-and-columns">Rows and columns</a>
-										</li>
-										<li>
-											<a href="layout.html#responsive-columns">Responsive columns</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="layout.html#offsets">Gutters</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="layout.html#double-size-gutters">Double size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#regular-plus-quarter-size-gutters">Regular plus quarter size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#half-size-gutters">Half size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#remove-gutters">Remove gutters</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="layout.html#aligns-columns-to-left">Aligns columns to left</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-columns-to-center">Aligns columns to center</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-columns-to-right">Aligns columns to right</a>
-										</li>
-										<li>
-											<a href="layout.html#space-between-columns">Space between columns</a>
-										</li>
-										<li>
-											<a href="layout.html#space-around-columns">Space around columns</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="layout.html#vertical-modifiers">Vertical modifiers</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="layout.html#aligns-columns-to-top">Aligns columns to top</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-columns-to-middle">Aligns columns to middle</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-columns-to-bottom">Aligns columns to bottom</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-column-to-top">Aligns column to top</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-column-to-middle">Aligns column to middle</a>
-										</li>
-										<li>
-											<a href="layout.html#aligns-column-to-bottom">Aligns column to bottom</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="layout.html#offsets">Offsets</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="layout.html#offsetting-columns">Offsetting columns</a>
+											<a href="components.html#navbar-brand">Navbar brand</a>
 										</li>
 									</ul>
 								</li>

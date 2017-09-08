@@ -4,16 +4,16 @@
 
 /**
  * Double size gutters:
- * `.gutters-double`
+ * `.gutters-x2`
  *
  *     @example
- *     div.row.gutters-double
+ *     div.row.gutters-x2
  *         div.col-8
  *             div.bgc-grey-2 &nbsp;
  *         div.col-4
  *             div.bgc-grey-2 &nbsp;
  */
-@mixin gutter-double {
+@mixin gutter-x2 {
 	&.row {
 		margin-left: -$grid-column-gutter;
 		margin-right: -$grid-column-gutter;
@@ -26,22 +26,22 @@
 	}
 }
 
-.gutters-double {
-	@include gutter-double;
+.gutters-x2 {
+	@include gutter-x2;
 }
 
 /**
- * Regular plus quarter size gutters:
- * `.gutters-plusquarter`
+ * Regular plus half size gutters:
+ * `.gutters-x15`
  *
  *     @example
- *     div.row.gutters-plusquarter
+ *     div.row.gutters-x15
  *         div.col-8
  *             div.bgc-grey-2 &nbsp;
  *         div.col-4
  *             div.bgc-grey-2 &nbsp;
  */
-@mixin gutter-plusquarter {
+@mixin gutter-x15 {
 	&.row {
 		margin-left: -$grid-column-gutter;
 		margin-right: -$grid-column-gutter;
@@ -54,22 +54,22 @@
 	}
 }
 
-.gutters-plusquarter {
-	@include gutter-plusquarter;
+.gutters-x15 {
+	@include gutter-x15;
 }
 
 /**
  * Half size gutters:
- * `.gutters-half`
+ * `.gutters-x05`
  *
  *     @example
- *     div.row.gutters-half
+ *     div.row.gutters-x05
  *         div.col-8
  *             div.bgc-grey-2 &nbsp;
  *         div.col-4
  *             div.bgc-grey-2 &nbsp;
  */
-@mixin gutter-half {
+@mixin gutter-x05 {
 	&.row {
 		margin-left: -($grid-column-gutter / 2);
 		margin-right: -($grid-column-gutter / 2);
@@ -82,8 +82,8 @@
 	}
 }
 
-.gutters-half {
-	@include gutter-half;
+.gutters-x05 {
+	@include gutter-x05;
 }
 
 /**
@@ -127,16 +127,16 @@
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.#{$size}-gutters-double {
-			@include gutter-double;
+		.#{$size}-gutters-x2 {
+			@include gutter-x2;
 		}
 
-		.#{$size}-gutters-plusquarter {
-			@include gutter-plusquarter;
+		.#{$size}-gutters-x15 {
+			@include gutter-x15;
 		}
 
-		.#{$size}-gutters-half {
-			@include gutter-half;
+		.#{$size}-gutters-x05 {
+			@include gutter-x05;
 		}
 
 		.#{$size}-gutters-0 {

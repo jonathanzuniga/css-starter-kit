@@ -26,6 +26,23 @@ gulp.task('styledown', function() {
 			filename: 'elements.html' // output.html
 		}))
 		.pipe(gulp.dest('guide')); // /path/to/
+	gulp.src('dist/components.css') // /path/to/styledown/*.md
+		.pipe(styledown({
+			config: 'config.md', // /path/to/config.md
+			template: [
+				'<!doctype html>',
+				'<html>',
+				'<head>',
+				'<meta charset="utf-8">',
+				'<title>CSS Starter Kit Guide</title>',
+				'</head>',
+				'<body>',
+				'</body>',
+				'</html>'
+			].join('\n'),
+			filename: 'components.html' // output.html
+		}))
+		.pipe(gulp.dest('guide')); // /path/to/
 	gulp.src('dist/helpers.css') // /path/to/styledown/*.md
 		.pipe(styledown({
 			config: 'config.md', // /path/to/config.md

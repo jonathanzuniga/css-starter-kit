@@ -30,17 +30,18 @@
   	$gradient-background-color-top-hue, $gradient-background-color-top-saturation, $gradient-background-color-top-lightness,
 	$gradient-background-color-bottom-hue, $gradient-background-color-bottom-saturation, $gradient-background-color-bottom-lightness in $buttons {
 	$name_ucf: str_ucfirst($name);
+	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
 	/**
 	 * #{$name_ucf} button:
-	 * `.btn--#{$name}`
+	 * `.btn--#{$name_r}`
 	 *
 	 *     @example
-	 *     a.btn.btn--#{$name} #{$name_ucf}
-	 *     a.btn.btn--#{$name}.btn--gradient Gradient
-     *     a.btn.btn--#{$name}.btn--outline Outline
+	 *     a.btn.btn--#{$name_r} Flat
+	 *     a.btn.btn--#{$name_r}.btn--gradient Gradient
+     *     a.btn.btn--#{$name_r}.btn--outline Outline
 	 */
-	.btn--#{$name} {
+	.btn--#{$name_r} {
 		background-color: $background-color;
 		border-color: $border-color;
 		color: $text-color;
@@ -67,7 +68,7 @@
 		border: $button-gradient-border;
 		padding: $button-gradient-padding;
 
-		&.btn--#{$name} {
+		&.btn--#{$name_r} {
 			$button-gradient-background-color-top: 
 				tint(
 					$background-color, 
@@ -115,7 +116,7 @@
 	.btn--outline {
 		background-color: transparent;
 
-		&.btn--#{$name} {
+		&.btn--#{$name_r} {
 			border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
 			color: $background-color;
 
