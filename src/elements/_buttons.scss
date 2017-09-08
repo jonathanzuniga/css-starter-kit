@@ -24,85 +24,29 @@
 	user-select: none;
 }
 
-/**
- * Primary button:
- * `.btn--primary`
- *
- *     @example
- *     a.btn.btn--primary Primary button
- */
-.btn--primary {
-	background-color: $button-primary-background-color;
-	border-color: $button-primary-border-color;
-	color: $button-primary-text-color;
+@each $name, $background-color, $border-color, $text-color in $buttons {
+	$name_ucf: str_ucfirst($name);
 
-	&:hover {
-		background-color: 
-			shade(
-				$button-primary-background-color, 
-				$button-hover-background-color-shade-amount
-			);
-		color: $button-primary-text-color;
-	}
-}
+	/**
+	 * #{$name_ucf} button:
+	 * `.btn--#{$name}`
+	 *
+	 *     @example
+	 *     a.btn.btn--#{$name} #{$name_ucf} button
+	 */
+	.btn--#{$name} {
+		background-color: $background-color;
+		border-color: $border-color;
+		color: $text-color;
 
-/**
- * Secondary button:
- * `.btn--secondary`
- *
- *     @example
- *     a.btn.btn--secondary Secondary button
- */
-.btn--secondary {
-	background-color: $button-secondary-background-color;
-	border-color: $button-secondary-border-color;
-	color: $button-secondary-text-color;
-
-	&:hover {
-		background-color: 
-			shade(
-				$button-secondary-background-color, 
-				$button-hover-background-color-shade-amount
-			);
-		color: $button-secondary-text-color;
-	}
-}
-
-/**
- * Colored buttons:
- * `.btn--success` `.btn--danger`
- *
- *     @example
- *     a.btn.btn--success Success button
- *     a.btn.btn--danger Danger button
- */
-.btn--success {
-	background-color: $button-success-background-color;
-	border-color: $button-success-border-color;
-	color: $button-success-text-color;
-
-	&:hover {
-		background-color: 
-			shade(
-				$button-success-background-color, 
-				$button-hover-background-color-shade-amount
-			);
-		color: $button-success-text-color;
-	}
-}
-
-.btn--danger {
-	background-color: $button-danger-background-color;
-	border-color: $button-danger-border-color;
-	color: $button-danger-text-color;
-
-	&:hover {
-		background-color: 
-			shade(
-				$button-danger-background-color, 
-				$button-hover-background-color-shade-amount
-			);
-		color: $button-danger-text-color;
+		&:hover {
+			background-color: 
+				shade(
+					$background-color, 
+					$button-hover-background-color-shade-amount
+				);
+			color: $text-color;
+		}
 	}
 }
 

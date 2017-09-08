@@ -148,3 +148,15 @@
 
 	@return $string;
 }
+
+// Capitalize string
+// @param [string] $string
+// @return [string]
+@function capitalize($string) {
+	@return to_upper_case(str_slice($string, 1, 1)) + str_slice($string, 2);
+}
+
+// Alias
+@function str_ucfirst($string) {
+	@return capitalize($string);
+}

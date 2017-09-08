@@ -70,7 +70,7 @@ $pre-border-radius:     $quarter-spacing-unit / 2;
 
 // Heading
 
-$headings-sizes: (
+$headings: (
 	'h1': 2.5em,  // 40px
 	'h2': 2em,    // 32px
 	'h3': 1.75em, // 28px
@@ -103,6 +103,13 @@ $button-padding:       $control-padding-y $control-padding-x;
 $button-text-color:    #fff;
 
 $button-hover-background-color-shade-amount: 12%;
+
+$buttons: (
+	'primary' get_color('Blue 1') $button-border-color $button-text-color,
+	'secondary' lighten(get_color('Grey 1'), 24%) $button-border-color $button-text-color,
+	'success' get_color('Green 1') $button-border-color $button-text-color,
+	'danger' get_color('Red 1') $button-border-color $button-text-color
+);
 
 
 // Primary button
