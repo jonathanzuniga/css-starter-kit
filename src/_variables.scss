@@ -49,7 +49,10 @@ $link-visited-decoration: none;
 $link-hover-color:        $text-color;
 $link-hover-decoration:   none;
 
-$base-transition:         background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, color 0.16s ease-in-out;
+$base-transition:         background-color 0.16s ease-in-out, 
+						  border-color 0.16s ease-in-out, 
+						  box-shadow 0.16s ease-in-out, 
+						  color 0.16s ease-in-out;
 
 
 // Blockquote
@@ -104,92 +107,29 @@ $button-text-color:    #fff;
 
 $button-hover-background-color-shade-amount: 12%;
 
+// Name, background-color, border-color, text color, 
+// gradient background-color top tint amount, 
+// gradient background-color bottom shade amount, 
+// gradient background-color top hue, 
+// gradient background-color top saturation, 
+// gradient background-color top lightness, 
+// gradient background-color bottom hue, 
+// gradient background-color bottom saturation, 
+// gradient background-color bottom lightness.
 $buttons: (
-	'primary' get_color('blue 1') $button-border-color $button-text-color,
-	'secondary' lighten(get_color('grey 1'), 24%) $button-border-color $button-text-color,
-	'success' get_color('green 1') $button-border-color $button-text-color,
-	'danger' get_color('red 1') $button-border-color $button-text-color
+	'primary'   get_color('blue 1')               $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' lighten(get_color('grey 1'), 32%) $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 1')              $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 1')                $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
 );
-
-
-// Primary button
-
-$button-primary-background-color:   get_color('blue 1');
-$button-primary-border-color:       $button-border-color;
-$button-primary-text-color:         $button-text-color;
-
-
-// Secondary button
-
-$button-secondary-background-color: lighten(get_color('grey 1'), 24%);
-$button-secondary-border-color:     $button-border-color;
-$button-secondary-text-color:       $button-text-color;
-
-
-// Success button
-
-$button-success-background-color:   get_color('green 1');
-$button-success-border-color:       $button-border-color;
-$button-success-text-color:         $button-text-color;
-
-
-// Danger button
-
-$button-danger-background-color:    get_color('red 1');
-$button-danger-border-color:        $button-border-color;
-$button-danger-text-color:          $button-text-color;
 
 
 // Outline buttons
 
-// Outline primary button
-
-$button-outline-primary-border-color:             transparentize($button-primary-background-color, $control-transparentize-amount);
-$button-outline-primary-text-color:               $button-primary-background-color;
-
-$button-outline-primary-hover-background-color:   $button-outline-primary-text-color;
-$button-outline-primary-hover-text-color:         $button-primary-text-color;
-
-
-// Outline secondary button
-
-$button-outline-secondary-border-color:           transparentize($button-secondary-background-color, $control-transparentize-amount);
-$button-outline-secondary-text-color:             $button-secondary-background-color;
-
-$button-outline-secondary-hover-background-color: $button-outline-secondary-text-color;
-$button-outline-secondary-hover-text-color:       $button-secondary-text-color;
-
-
-// Outline success button
-
-$button-outline-success-border-color:             transparentize($button-success-background-color, $control-transparentize-amount);
-$button-outline-success-text-color:               $button-success-background-color;
-
-$button-outline-success-hover-background-color:   $button-outline-success-text-color;
-$button-outline-success-hover-text-color:         $button-success-text-color;
-
-
-// Outline danger button
-
-$button-outline-danger-border-color:              transparentize($button-danger-background-color, $control-transparentize-amount);
-$button-outline-danger-text-color:                $button-danger-background-color;
-
-$button-outline-danger-hover-background-color:    $button-outline-danger-text-color;
-$button-outline-danger-hover-text-color:          $button-danger-text-color;
+$button-outline-border-transparentize-amount: 0.2;
 
 
 // Gradient button
-
-$button-gradient-background-color-top-tint-amount:     3%;
-$button-gradient-background-color-bottom-shade-amount: 11%;
-
-$button-gradient-background-color-top-hue:            -2.5;
-$button-gradient-background-color-top-saturation:      1.75;
-$button-gradient-background-color-top-lightness:       0.5;
-
-$button-gradient-background-color-bottom-hue:          3.25;
-$button-gradient-background-color-bottom-saturation:   3.25;
-$button-gradient-background-color-bottom-lightness:    3.25;
 
 $button-gradient-border:  none;
 $button-gradient-padding: ($control-padding-y + 0.063) ($control-padding-x + 0.063);
