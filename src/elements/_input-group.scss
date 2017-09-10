@@ -4,44 +4,39 @@
 
 /**
  * Button addons:
- * `.fld--group`
+ * `.input-group`
  *
  *     @example
- *     div.fld.fld--group
- *         input(type='search', placeholder='Search...').input
- *         a.btn.btn--secondary Go
+ *     div.fld.input-group
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             a.btn.btn--secondary Go
  */
 
 /**
  * Mixed addons:
- * `.fld--group`
+ * `.input-group`
  *
  *     @example
- *     div.fld.fld--group
+ *     div.fld.input-group
  *         label.lbl Search:
- *         input(type='search').input
- *         a.btn.btn--secondary Go
+ *         div.input-group-btn
+ *             input(type='search').input
+ *             a.btn.btn--secondary Go
  */
-.fld--group {
-	display: -ms-flexbox;
-	display: -webkit-box;
+.input-group {
 	display: flex;
-	-ms-flex-pack: start;
-	-webkit-box-pack: start;
+	flex-wrap: wrap;
 	justify-content: flex-start;
-
 	width: 100%;
-
-	> *:not(:last-child) {
-		margin-right: -1px;
-	}
 
 	.lbl {
 		&:first-child {
 			margin-right: $quarter-spacing-unit;
 
-			& + .input {
+			& + .input-group-btn {
 				flex-grow: 2;
+				width: auto;
 			}
 		}
 	}
@@ -50,10 +45,7 @@
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 
-		width: auto;
-
 		&:first-child {
-			-ms-flex: 1 1 auto;
 			flex: 1 1 auto;
 		}
 
@@ -74,4 +66,15 @@
 	// .btn {
 	// 	height: rem-to-em($base-spacing-unit + ($quarter-spacing-unit / 2));
 	// }
+}
+
+.input-group-btn {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	width: 100%;
+
+	> *:not(:last-child) {
+		margin-right: -1px;
+	}
 }
