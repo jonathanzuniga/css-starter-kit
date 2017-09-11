@@ -7,15 +7,128 @@
  * `.navbar`
  *
  *     @example
- *     div.navbar.bd.bd-radius
- *         a(href="").navbar__brand Brand
+ *     nav.navbar
+ *         div.navbar__brand
+ *             a(href="").navbar__link Brand
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href="").navbar__link Home
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href="").navbar__link About
+ *             form.navbar__form
+ *                 div.input-group
+ *                     div.input-group-btn
+ *                         input(type='search', placeholder='Search...').input
+ *                         a.btn.btn--secondary Go
  */
-.navbar {
+.navbar,
+.navbar__brand,
+.navbar__toggler,
+.navbar__menu,
+.navbar__item,
+.navbar__link,
+.navbar__form {
 	display: flex;
 }
 
+.navbar__toggler,
+.navbar__item,
+.navbar__link,
+.navbar__form {
+	align-items: center;
+}
+
+.navbar,
+.navbar__brand,
+.navbar__toggler,
+.navbar__menu,
+.navbar__form {
+	min-height: 3.5rem;
+}
+
+.navbar {
+	justify-content: space-between;
+}
+
+@media (min-width: $breakpoint-md-min-width) {
+	.navbar {
+		justify-content: flex-start;
+	}
+
+	.navbar__toggler {
+		display: none;
+	}
+}
+
 .navbar__brand {
-	display: flex;
 	font-size: $navbar-brand-font-size;
+
+	> * {
+		margin-right: $half-spacing-unit;
+	}
+}
+
+.navbar__brand,
+.navbar__item {
+	align-items: stretch;
+}
+
+.navbar__toggler,
+.navbar__link,
+.navbar__form {
 	padding: $quarter-spacing-unit $half-spacing-unit;
+}
+
+.navbar__collapse {
+	display: none;
+}
+
+@media (min-width: $breakpoint-md-min-width) {
+	.navbar__collapse {
+		display: flex;
+	}
+}
+
+.navbar__collapse,
+.navbar__menu {
+	flex-grow: 1;
+}
+
+.navbar__menu {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+ * Right align navbar menu:
+ * `.navbar__menu--right`
+ *
+ *     @example
+ *     nav.navbar
+ *         div.navbar__brand
+ *             a(href="").navbar__link Brand
+ *         a(href="").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu.navbar__menu--right
+ *                 li.navbar__item.active
+ *                     a(href="").navbar__link Home
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href="").navbar__link About
+ */
+.navbar__menu--right {
+	justify-content: flex-end;
+}
+
+.active {
+	a,
+	a:hover,
+	a:visited {
+		color: $text-color;
+	}
 }

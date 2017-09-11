@@ -20,6 +20,12 @@ $quarter-spacing-unit: $base-spacing-unit / 4;
 $line-height-ratio:    $base-line-height / $base-font-size;
 
 
+// Font size
+
+$small-font-size: px_to_em($base-font-size - 3); // 0.813em (13px)
+$large-font-size: px_to_em($base-font-size + 4); // 1.250em (20px)
+
+
 // Colors
 
 $colors: (
@@ -146,14 +152,14 @@ $button-gradient-padding: ($control-padding-y + 0.063) ($control-padding-x + 0.0
 // Small button
 
 $button-small-border-radius: rem_to_em(($quarter-spacing-unit / 2) - 0.063);
-$button-small-font-size:     px_to_em($base-font-size - 3);
+$button-small-font-size:     $small-font-size;
 $button-small-padding:       rem_to_em($quarter-spacing-unit / 2) rem_to_em($half-spacing-unit - 0.25);
 
 
 // Large button
 
 $button-large-border-radius: rem_to_em($quarter-spacing-unit / 2);
-$button-large-font-size:     px_to_em($base-font-size + 4);
+$button-large-font-size:     $large-font-size;
 $button-large-padding:       rem_to_em($quarter-spacing-unit + 0.25) rem_to_em($half-spacing-unit + 0.5);
 
 
@@ -191,12 +197,6 @@ $border-width:  1px;
 $border-style:  solid;
 $border-color:  transparentize(get_color('grey 1'), 0.87);
 $border-radius: $quarter-spacing-unit / 2;
-
-
-// Font size
-
-$small-font-size: px_to_em($base-font-size - 3); // 0.813em (13px)
-$large-font-size: px_to_em($base-font-size + 4); // 1.25em (20px)
 
 
 // Highlighting text
@@ -301,9 +301,10 @@ $grid-breakpoints: (
 $card-padding: $half-spacing-unit;
 $card-hover-box-shadow: 0 $quarter-spacing-unit $half-spacing-unit rgba(0, 0, 0, 0.1);
 
+
 // Navbar
 
 // Navbar brand
 
-$navbar-brand-font-size: px_to_em($base-font-size + 4); // 1.25em (20px)
+$navbar-brand-font-size: $large-font-size;
 

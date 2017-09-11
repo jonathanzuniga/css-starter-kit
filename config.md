@@ -95,6 +95,10 @@
 			padding-top: 2.5rem;
 			padding-bottom: 2.5rem;
 		}
+
+		.navbar {
+			background-color: #f7f9fa;
+		}
 	</style>
 
 ### Body
@@ -508,11 +512,11 @@
 								</li>
 								<li>
 									<a href="components.html#navbar">Navbar</a>
-									<!-- <ul class="ls-unstyled">
+									<ul class="ls-unstyled">
 										<li>
-											<a href="components.html#navbar-brand">Navbar brand</a>
+											<a href="components.html#right-align-navbar-menu">Right align navbar menu</a>
 										</li>
-									</ul> -->
+									</ul>
 								</li>
 							</ul>
 						</div>
