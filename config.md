@@ -504,12 +504,15 @@
 
 							<ul class="ls-unstyled">
 								<li>
+									<a href="components.html#cards">Cards</a>
+								</li>
+								<li>
 									<a href="components.html#navbar">Navbar</a>
-									<ul class="ls-unstyled">
+									<!-- <ul class="ls-unstyled">
 										<li>
 											<a href="components.html#navbar-brand">Navbar brand</a>
 										</li>
-									</ul>
+									</ul> -->
 								</li>
 							</ul>
 						</div>

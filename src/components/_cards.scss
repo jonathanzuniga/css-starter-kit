@@ -1,6 +1,7 @@
 /***
  * Cards:
  */
+
 /**
  * Card:
  * `.card`
@@ -18,30 +19,16 @@
  *                     a(href="") Second link
  */
 .card {
-  border: 1px solid rgba(61, 70, 77, 0.13);
-  border-radius: 0.25rem;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
-  .card:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+	border: $border-width $border-style $border-color;
+	border-radius: $border-radius;
+
+	transition: $base-transition;
+
+	&:hover {
+		box-shadow: $card-hover-box-shadow;
+	}
+}
 
 .card__body {
-  padding: 1rem; }
-
-/***
- * Navbar:
- */
-/**
- * Navbar:
- * `.navbar`
- *
- *     @example
- *     div.navbar.bd.bd-radius
- *         a(href="").navbar__brand Brand
- */
-.navbar {
-  display: flex; }
-
-.navbar__brand {
-  display: flex;
-  font-size: 1.25em;
-  padding: 0.5rem 1rem; }
+	padding: $card-padding;
+}

@@ -23,12 +23,20 @@ $line-height-ratio:    $base-line-height / $base-font-size;
 // Colors
 
 $colors: (
-	'blue'   #4183c4,
-	'green'  #36b725,
-	'grey'   #373737,
-	'red'    #e65146,
-	'yellow' #ffc439
+	'blue'   #0070e0,
+	'green'  #48ac68,
+	'grey'   #3d464d,
+	'red'    #dc4e41,
+	'yellow' #ffc107
 );
+
+// $colors: (
+// 	'blue'   #4183c4,
+// 	'green'  #36b725,
+// 	'grey'   #373737,
+// 	'red'    #e65146,
+// 	'yellow' #ffc439
+// );
 
 // Number of tints for each color.
 $tints: 7;
@@ -161,8 +169,8 @@ $input-border-radius: $quarter-spacing-unit / 2;
 $input-line-height:   $control-line-height;
 $input-padding:       $control-padding-y $control-padding-x;
 
-$input-active-border-color: get_color('blue 2');
-$input-focus-border-color:  get_color('blue 2');
+$input-active-border-color: get_color('blue 3');
+$input-focus-border-color:  get_color('blue 3');
 $input-hover-border-color:  $input-border;
 
 
@@ -179,7 +187,9 @@ $table-heading-text-align:  left;
 
 // Borders
 
-$border-color:  transparentize(get_color('grey 1'), 0.83);
+$border-width:  1px;
+$border-style:  solid;
+$border-color:  transparentize(get_color('grey 1'), 0.87);
 $border-radius: $quarter-spacing-unit / 2;
 
 
@@ -285,6 +295,11 @@ $grid-breakpoints: (
 // Components
 // ==========================================================================
 
+
+// Cards
+
+$card-padding: $half-spacing-unit;
+$card-hover-box-shadow: 0 $quarter-spacing-unit $half-spacing-unit rgba(0, 0, 0, 0.1);
 
 // Navbar
 
