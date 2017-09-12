@@ -7,7 +7,7 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar
+ *     nav.navbar.sm-mobile-navbar
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -87,7 +87,7 @@
  * `.navbar__menu--right`
  *
  *     @example
- *     nav.navbar
+ *     nav.navbar.sm-mobile-navbar
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -130,33 +130,42 @@
 	}
 }
 
-
-// Mobile menu
-
-@mixin collapse-focus {
+/**
+ * Mobile navbar menu:
+ * `.mobile-navbar` `.[max-size]-mobile-navbar`
+ *
+ *     @example
+ *     nav.navbar.mobile-navbar
+ *         div.navbar__brand
+ *             a(href="").navbar__link Brand
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href="").navbar__link Home
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href="").navbar__link About
+ */
+@mixin mobile-navbar-collapse-focus {
 	max-height: 600px;
 	opacity: 1;
 	transform: translateY(0);
 	z-index: 10;
 }
 
-@media (max-width: $navbar-collapse-breakpoint-min-width - 1) {
-	.navbar {
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
+@mixin mobile-navbar-collapse {
 	.navbar__toggler {
 		display: flex;
 
 		&:focus + .navbar__collapse {
-			@include collapse-focus;
+			@include mobile-navbar-collapse-focus;
 		}
 	}
 
 	.navbar__collapse {
 		flex-wrap: wrap;
-
 		max-height: 0;
 		opacity: 0;
 		padding: 0 $half-spacing-unit;
@@ -166,7 +175,7 @@
 		z-index: -1;
 
 		&:focus-within {
-			@include collapse-focus;
+			@include mobile-navbar-collapse-focus;
 		}
 	}
 
@@ -188,5 +197,30 @@
 
 	.navbar__form {
 		padding: 0;
+	}
+}
+
+@mixin mobile-navbar {
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@each $size, $length in $grid-breakpoints {
+	.mobile-navbar {
+		&.navbar {
+			@include mobile-navbar;
+		}
+
+		@include mobile-navbar-collapse;
+	}
+
+	@media (max-width: $length) {
+		.#{$size}-mobile-navbar {
+			&.navbar {
+				@include mobile-navbar;
+			}
+
+			@include mobile-navbar-collapse;
+		}
 	}
 }

@@ -97,7 +97,7 @@
 		}
 
 		.navbar {
-			background-color: #f7f9fa;
+			background-color: rgba(61, 70, 77, 0.1);
 		}
 	</style>
 
