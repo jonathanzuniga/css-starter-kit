@@ -7,16 +7,18 @@
  * `.card`
  *
  *     @example
- *     div.card.w-50
- *         div.card__body
- *             h4.card__title Card title
- *             div.card__content
- *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *             ul.ls-inline.m-0
- *                 li
- *                     a(href="") First link
- *                 li
- *                     a(href="") Second link
+ *     div.row
+ *         div.md-col-6
+ *             div.card
+ *                 div.card__body
+ *                     h4.card__title Card title
+ *                     div.card__content
+ *                         p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href="") First link
+ *                         li
+ *                             a(href="") Second link
  */
 .card {
   border: 1px solid rgba(61, 70, 77, 0.13);
@@ -56,15 +58,15 @@
  */
 .navbar,
 .navbar__brand,
-.navbar__toggler,
+.navbar__collapse,
 .navbar__menu,
 .navbar__item,
 .navbar__link,
 .navbar__form {
   display: flex; }
 
+.navbar__brand,
 .navbar__toggler,
-.navbar__item,
 .navbar__link,
 .navbar__form {
   align-items: center; }
@@ -77,34 +79,20 @@
   min-height: 3.5rem; }
 
 .navbar {
-  justify-content: space-between; }
-
-@media (min-width: 1024px) {
-  .navbar {
-    justify-content: flex-start; }
-  .navbar__toggler {
-    display: none; } }
+  justify-content: flex-start; }
 
 .navbar__brand {
   font-size: 1.25em; }
   .navbar__brand > * {
     margin-right: 1rem; }
 
-.navbar__brand,
-.navbar__item {
-  align-items: stretch; }
+.navbar__toggler {
+  display: none; }
 
 .navbar__toggler,
 .navbar__link,
 .navbar__form {
   padding: 0.5rem 1rem; }
-
-.navbar__collapse {
-  display: none; }
-
-@media (min-width: 1024px) {
-  .navbar__collapse {
-    display: flex; } }
 
 .navbar__collapse,
 .navbar__menu {
@@ -122,7 +110,7 @@
  *     nav.navbar
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
- *         a(href="").navbar__toggler Menu
+ *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.active
@@ -135,10 +123,58 @@
 .navbar__menu--right {
   justify-content: flex-end; }
 
-.active a,
-.active a:hover,
-.active a:visited {
+.navbar__item {
+  align-items: stretch; }
+
+.navbar__link:link, .navbar__link:visited,
+.navbar__toggler:link,
+.navbar__toggler:visited {
   color: #3d464d; }
+
+.navbar__link:hover,
+.navbar__toggler:hover {
+  color: #0070e0; }
+
+.active .navbar__link:link, .active .navbar__link:hover, .active .navbar__link:visited {
+  color: #0070e0; }
+
+@media (max-width: 1023px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .navbar__toggler {
+    display: flex; }
+    .navbar__toggler:focus + .navbar__collapse {
+      max-height: 600px;
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 10; }
+  .navbar__collapse {
+    flex-wrap: wrap;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 1rem;
+    transform: translateY(-1rem);
+    transition: max-height 0.16s ease-in-out, opacity 0.16s ease-in-out, transform 0.16s ease-in-out, z-index 0.16s ease-in-out;
+    width: 100%;
+    z-index: -1; }
+    .navbar__collapse:focus-within {
+      max-height: 600px;
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 10; }
+  .navbar__menu,
+  .navbar__item,
+  .navbar__link,
+  .navbar__form {
+    display: block;
+    width: 100%; }
+  .navbar__item {
+    text-align: center; }
+  .navbar__item {
+    border-top: 1px solid rgba(61, 70, 77, 0.13); }
+  .navbar__form {
+    padding: 0; } }
 
 /***
  * Content:

@@ -27,7 +27,7 @@
  */
 .navbar,
 .navbar__brand,
-.navbar__toggler,
+.navbar__collapse,
 .navbar__menu,
 .navbar__item,
 .navbar__link,
@@ -35,8 +35,8 @@
 	display: flex;
 }
 
+.navbar__brand,
 .navbar__toggler,
-.navbar__item,
 .navbar__link,
 .navbar__form {
 	align-items: center;
@@ -51,17 +51,7 @@
 }
 
 .navbar {
-	justify-content: space-between;
-}
-
-@media (min-width: $breakpoint-md-min-width) {
-	.navbar {
-		justify-content: flex-start;
-	}
-
-	.navbar__toggler {
-		display: none;
-	}
+	justify-content: flex-start;
 }
 
 .navbar__brand {
@@ -72,25 +62,14 @@
 	}
 }
 
-.navbar__brand,
-.navbar__item {
-	align-items: stretch;
+.navbar__toggler {
+	display: none;
 }
 
 .navbar__toggler,
 .navbar__link,
 .navbar__form {
 	padding: $quarter-spacing-unit $half-spacing-unit;
-}
-
-.navbar__collapse {
-	display: none;
-}
-
-@media (min-width: $breakpoint-md-min-width) {
-	.navbar__collapse {
-		display: flex;
-	}
 }
 
 .navbar__collapse,
@@ -111,7 +90,7 @@
  *     nav.navbar
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
- *         a(href="").navbar__toggler Menu
+ *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.active
@@ -125,10 +104,89 @@
 	justify-content: flex-end;
 }
 
-.active {
-	a,
-	a:hover,
-	a:visited {
+.navbar__item {
+	align-items: stretch;
+}
+
+.navbar__link,
+.navbar__toggler {
+	&:link,
+	&:visited {
 		color: $text-color;
+	}
+
+	&:hover {
+		color: $link-color;
+	}
+}
+
+.active {
+	.navbar__link {
+		&:link,
+		&:hover,
+		&:visited {
+			color: $link-color;
+		}
+	}
+}
+
+
+// Mobile menu
+
+@mixin collapse-focus {
+	max-height: 600px;
+	opacity: 1;
+	transform: translateY(0);
+	z-index: 10;
+}
+
+@media (max-width: $navbar-collapse-breakpoint-min-width - 1) {
+	.navbar {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar__toggler {
+		display: flex;
+
+		&:focus + .navbar__collapse {
+			@include collapse-focus;
+		}
+	}
+
+	.navbar__collapse {
+		flex-wrap: wrap;
+
+		max-height: 0;
+		opacity: 0;
+		padding: 0 $half-spacing-unit;
+		transform: translateY(-$half-spacing-unit);
+		transition: max-height 0.16s ease-in-out, opacity 0.16s ease-in-out, transform 0.16s ease-in-out, z-index 0.16s ease-in-out;
+		width: 100%;
+		z-index: -1;
+
+		&:focus-within {
+			@include collapse-focus;
+		}
+	}
+
+	.navbar__menu,
+	.navbar__item,
+	.navbar__link,
+	.navbar__form {
+		display: block;
+		width: 100%;
+	}
+
+	.navbar__item {
+		text-align: center;
+	}
+
+	.navbar__item {
+		border-top: $border-width $border-style $border-color;
+	}
+
+	.navbar__form {
+		padding: 0;
 	}
 }
