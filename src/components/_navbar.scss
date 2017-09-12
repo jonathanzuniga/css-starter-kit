@@ -7,7 +7,7 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.sm-mobile-navbar
+ *     nav.navbar.sm-navbar-responsive
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -87,7 +87,7 @@
  * `.navbar__menu--right`
  *
  *     @example
- *     nav.navbar.sm-mobile-navbar
+ *     nav.navbar.sm-navbar-responsive
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -131,11 +131,11 @@
 }
 
 /**
- * Mobile navbar menu:
- * `.mobile-navbar` `.[max-size]-mobile-navbar`
+ * Responsive navbar menu:
+ * `.navbar-responsive` `.[max-size]-navbar-responsive`
  *
  *     @example
- *     nav.navbar.mobile-navbar
+ *     nav.navbar.navbar-responsive
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -148,19 +148,19 @@
  *                 li.navbar__item
  *                     a(href="").navbar__link About
  */
-@mixin mobile-navbar-collapse-focus {
+@mixin navbar-responsive-collapse-focus {
 	max-height: 600px;
 	opacity: 1;
 	transform: translateY(0);
 	z-index: 10;
 }
 
-@mixin mobile-navbar-collapse {
+@mixin navbar-responsive-collapse {
 	.navbar__toggler {
 		display: flex;
 
 		&:focus + .navbar__collapse {
-			@include mobile-navbar-collapse-focus;
+			@include navbar-responsive-collapse-focus;
 		}
 	}
 
@@ -175,7 +175,7 @@
 		z-index: -1;
 
 		&:focus-within {
-			@include mobile-navbar-collapse-focus;
+			@include navbar-responsive-collapse-focus;
 		}
 	}
 
@@ -200,27 +200,27 @@
 	}
 }
 
-@mixin mobile-navbar {
+@mixin navbar-responsive {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 @each $size, $length in $grid-breakpoints {
-	.mobile-navbar {
+	.navbar-responsive {
 		&.navbar {
-			@include mobile-navbar;
+			@include navbar-responsive;
 		}
 
-		@include mobile-navbar-collapse;
+		@include navbar-responsive-collapse;
 	}
 
 	@media (max-width: $length) {
-		.#{$size}-mobile-navbar {
+		.#{$size}-navbar-responsive {
 			&.navbar {
-				@include mobile-navbar;
+				@include navbar-responsive;
 			}
 
-			@include mobile-navbar-collapse;
+			@include navbar-responsive-collapse;
 		}
 	}
 }

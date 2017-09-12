@@ -516,6 +516,9 @@
 										<li>
 											<a href="components.html#right-align-navbar-menu">Right align navbar menu</a>
 										</li>
+										<li>
+											<a href="components.html#responsive-navbar-menu">Responsive navbar menu</a>
+										</li>
 									</ul>
 								</li>
 							</ul>
