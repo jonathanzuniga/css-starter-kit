@@ -163,17 +163,28 @@ pre {
 /**
  * Heading:
  * `h1` `h2` `h3` `h4` `h5` `h6`
+ * `.h1` `.h2` `.h3` `.h4` `.h5` `.h6`
  *
  *     @example
- *     h1 Heading
- *     h2 Heading
- *     h3 Heading
- *     h4 Heading
- *     h5 Heading
- *     h6 Heading
+ *     div.row
+ *         div.col
+ *             h1 Heading
+ *             h2 Heading
+ *             h3 Heading
+ *             h4 Heading
+ *             h5 Heading
+ *             h6 Heading
+ *         div.col
+ *             p.h1 Heading
+ *             p.h2 Heading
+ *             p.h3 Heading
+ *             p.h4 Heading
+ *             p.h5 Heading
+ *             p.h6 Heading
  */
 @each $heading, $size in $headings {
-	#{$heading} {
+	#{$heading},
+	.#{$heading} {
 		font-size: $size;
 		line-height: $heading-line-height;
 

@@ -20,7 +20,13 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
       font-weight: 300;
     }
     .sg-canvas {
@@ -632,22 +638,52 @@
                       <code class="sg">h4</code>
                       <code class="sg">h5</code>
                       <code class="sg">h6</code>
+                      <code class="sg">.h1</code>
+                      <code class="sg">.h2</code>
+                      <code class="sg">.h3</code>
+                      <code class="sg">.h4</code>
+                      <code class="sg">.h5</code>
+                      <code class="sg">.h6</code>
                     </p>
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <h1>Heading</h1>
-                      <h2>Heading</h2>
-                      <h3>Heading</h3>
-                      <h4>Heading</h4>
-                      <h5>Heading</h5>
-                      <h6>Heading</h6>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
+                      <div class="row">
+                        <div class="col">
+                          <h1>Heading</h1>
+                          <h2>Heading</h2>
+                          <h3>Heading</h3>
+                          <h4>Heading</h4>
+                          <h5>Heading</h5>
+                          <h6>Heading</h6>
+                        </div>
+                        <div class="col">
+                          <p class="h1">Heading</p>
+                          <p class="h2">Heading</p>
+                          <p class="h3">Heading</p>
+                          <p class="h4">Heading</p>
+                          <p class="h5">Heading</p>
+                          <p class="h6">Heading</p>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h1&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h2&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h3&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h4&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h5&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h6&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
                 <section class="sg-block sg-section-list">
