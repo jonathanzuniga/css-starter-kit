@@ -298,7 +298,7 @@
  *     @example
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
-.dcap:first-letter {
+%drop-cap {
 	background-color: $dropcap-background-color;
 	border: $dropcap-border;
 	color: $dropcap-color;
@@ -326,18 +326,32 @@
 	vertical-align: $dropcap-vertical-align;
 }
 
+.dcap {
+	&:first-letter {
+		@extend %drop-cap;
+	}
+
+	span.smcaps:first-letter {
+		@extend %drop-cap;
+	}
+}
+
 /**
  * Small caps:
  * `.smcaps`
  *
  *     @example
- *     p
- *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     p.smcaps Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
-.smcaps {
+%small-caps {
 	font-variant: small-caps;
 	letter-spacing: $smcaps-letter-spacing;
 	margin-right: $smcaps-margin-right;
+}
+
+span.smcaps,
+.smcaps:first-line {
+	@extend %small-caps;
 }
 
 /**

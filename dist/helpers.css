@@ -3575,7 +3575,7 @@
  *     @example
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
-.dcap:first-letter {
+.dcap:first-letter, .dcap span.smcaps:first-letter {
   background-color: transparent;
   border: none;
   color: #3d464d;
@@ -3601,10 +3601,10 @@
  * `.smcaps`
  *
  *     @example
- *     p
- *         <span class="smcaps">Lorem ipsum dolor sit amet,</span> consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     p.smcaps Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
-.smcaps {
+span.smcaps,
+.smcaps:first-line {
   font-variant: small-caps;
   letter-spacing: 0.125em;
   margin-right: 0.188em; }

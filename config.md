@@ -511,7 +511,7 @@
 											<a href="helpers.html#text-strike">Text strike</a>
 										</li>
 										<li>
-											<a href="helpers.html#drop-caps">Drop caps</a>
+											<a href="helpers.html#drop-cap">Drop cap</a>
 										</li>
 										<li>
 											<a href="helpers.html#small-caps">Small caps</a>
