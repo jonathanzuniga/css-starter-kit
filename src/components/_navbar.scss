@@ -7,7 +7,7 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.sm-navbar-responsive
+ *     nav.navbar.maxsm-navbar-responsive
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -87,7 +87,7 @@
  * `.navbar__menu--right`
  *
  *     @example
- *     nav.navbar.sm-navbar-responsive
+ *     nav.navbar.maxsm-navbar-responsive
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
@@ -132,7 +132,7 @@
 
 /**
  * Responsive navbar menu:
- * `.navbar-responsive` `.[max-size]-navbar-responsive`
+ * `.navbar-responsive` `.max[size]-navbar-responsive`
  *
  *     @example
  *     nav.navbar.navbar-responsive
@@ -200,27 +200,62 @@
 	}
 }
 
-@mixin navbar-responsive {
+@mixin navbar {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-@each $size, $length in $grid-breakpoints {
-	.navbar-responsive {
-		&.navbar {
-			@include navbar-responsive;
-		}
-
-		@include navbar-responsive-collapse;
+@mixin navbar-responsive {
+	&.navbar {
+		@include navbar;
 	}
 
-	@media (max-width: $length) {
-		.#{$size}-navbar-responsive {
-			&.navbar {
-				@include navbar-responsive;
-			}
+	@include navbar-responsive-collapse;
+}
 
-			@include navbar-responsive-collapse;
+.navbar-responsive {
+	@include navbar-responsive;
+}
+
+@each $size, $length in $grid-breakpoints {
+	@media (max-width: $length - 1) {
+		.max#{$size}-navbar-responsive {
+			@include navbar-responsive;
+		}
+	}
+}
+
+/**
+ * Navbar brand in the center:
+ *
+ *     @example
+ *     nav.navbar.maxlg-navbar-responsive
+ *         ul.navbar__menu.maxlg-hide
+ *             li.navbar__item
+ *                 a(href="").navbar__link RSS feed
+ *             li.navbar__item
+ *                 a(href="").navbar__link Follow me
+ *         div.navbar__brand
+ *             a(href="").navbar__link Brand
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu.navbar__menu--right
+ *                 li.navbar__item.active
+ *                     a(href="").navbar__link Home
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href="").navbar__link About
+ */
+
+[class*="container"] {
+	> .row {
+		> .col,
+		> [class*="col-"] {
+			> .navbar {
+				margin-left: -$half-spacing-unit;
+				margin-right: -$half-spacing-unit;
+			}
 		}
 	}
 }

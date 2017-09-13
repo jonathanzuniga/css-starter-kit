@@ -120,6 +120,12 @@
                   <a href="layout.html#flex-grid">Flex grid</a>
                   <ul class="ls-unstyled">
                     <li>
+                      <a href="layout.html#container">Container</a>
+                    </li>
+                    <li>
+                      <a href="layout.html#fluid-container">Container fluid</a>
+                    </li>
+                    <li>
                       <a href="layout.html#rows-and-columns">Rows and columns</a>
                     </li>
                     <li>
@@ -387,6 +393,20 @@
                     </li>
                     <li>
                       <a href="helpers.html#element-to-the-right-side">Element to the right side</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="helpers.html#hiding">Hiding</a>
+                  <ul class="ls-unstyled">
+                    <li>
+                      <a href="helpers.html#hide">Hide</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#hide-at-maximum-size">Hide at maximum size</a>
+                    </li>
+                    <li>
+                      <a href="helpers.html#hide-at-minimum-size">Hide at minimum size</a>
                     </li>
                   </ul>
                 </li>
@@ -2268,6 +2288,91 @@
   viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur
   cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula,
   nec imperdiet urna porta.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-hiding">
+                <h2 id="hiding" class="sg">Hiding</h2>
+                <section class="sg-block sg-section-hide">
+                  <div class="sg-text">
+                    <h3 id="hide" class="sg">Hide</h3>
+                    <p class="sg">
+                      <code class="sg">.hide</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 hide">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4 hide&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-hide-at-maximum-size">
+                  <div class="sg-text">
+                    <h3 id="hide-at-maximum-size" class="sg">Hide at maximum size</h3>
+                    <p class="sg">
+                      <code class="sg">.max[size]-hide</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 maxlg-hide">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4 maxlg-hide&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-hide-at-minimum-size">
+                  <div class="sg-text">
+                    <h3 id="hide-at-minimum-size" class="sg">Hide at minimum size</h3>
+                    <p class="sg">
+                      <code class="sg">.[size]-hide</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                        <div class="col-4 lg-hide">
+                          <div class="bgc-grey-2">&#xA0;</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-4 lg-hide&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-grey-2&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
               </section>

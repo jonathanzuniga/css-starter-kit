@@ -1,0 +1,59 @@
+/***
+ * Hiding:
+ */
+
+/**
+ * Hide:
+ * `.hide`
+ *
+ *     @example
+ *     div.row
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.hide
+ *             div.bgc-grey-2 &nbsp;
+ */
+@mixin hide {
+	display: none !important;
+}
+
+.hide {
+	@include hide;
+}
+
+/**
+ * Hide at maximum size:
+ * `.max[size]-hide`
+ *
+ *     @example
+ *     div.row
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.maxlg-hide
+ *             div.bgc-grey-2 &nbsp;
+ */
+
+/**
+ * Hide at minimum size:
+ * `.[size]-hide`
+ *
+ *     @example
+ *     div.row
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.lg-hide
+ *             div.bgc-grey-2 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (max-width: $length - 1) {
+		.max#{$size}-hide {
+			@include hide;
+		}
+	}
+
+	@media (min-width: $length) {
+		.#{$size}-hide {
+			@include hide;
+		}
+	}
+}

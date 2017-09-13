@@ -43,11 +43,35 @@ html, body {
 	@extend %column;
 }
 
+/**
+ * Container:
+ * `.container`
+ *
+ *     @example
+ *     div.container
+ *         div.row
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ */
 .container {
 	@extend .container-fluid;
 	max-width: $container-max-width;
 }
 
+/**
+ * Fluid container:
+ * `.container-fluid`
+ *
+ *     @example
+ *     div.container-fluid
+ *         div.row
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ */
 .container-fluid {
 	@include gutter;
 
