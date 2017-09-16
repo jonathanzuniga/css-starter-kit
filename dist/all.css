@@ -44,7 +44,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -113,7 +113,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -135,7 +135,7 @@
 .navbar__toggler:hover {
   color: #3a8bbb; }
 
-.active .navbar__link:link, .active .navbar__link:hover, .active .navbar__link:visited {
+.navbar__item--active .navbar__link:link, .navbar__item--active .navbar__link:hover, .navbar__item--active .navbar__link:visited {
   color: #3a8bbb; }
 
 /**
@@ -149,7 +149,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -404,15 +404,15 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
  *                 li.navbar__item
  *                     a(href="").navbar__link About
  */
-[class*="container"] > .row > .col > .navbar,
-[class*="container"] > .row > [class*="col-"] > .navbar {
+[class*="container"] .row > .col > .navbar,
+[class*="container"] .row > [class*="col-"] > .navbar {
   margin-left: -1rem;
   margin-right: -1rem; }
 
@@ -2737,6 +2737,15 @@ th {
 
 .txtc-yellow-8 {
   color: #ffedd9; }
+
+a.ac-txtc:not(.btn):link, a.ac-txtc:not(.btn):visited,
+.ac-txtc a:not(.btn):link,
+.ac-txtc a:not(.btn):visited {
+  color: #333; }
+
+a.ac-txtc:not(.btn):hover,
+.ac-txtc a:not(.btn):hover {
+  color: #3a8bbb; }
 
 /***
  * Float:
@@ -5177,7 +5186,7 @@ th {
  *     @example
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
-.dcap:first-letter, .dcap span.smcaps:first-letter {
+.dcap:first-letter {
   background-color: transparent;
   border: none;
   color: #333;
@@ -5200,13 +5209,12 @@ th {
 
 /**
  * Small caps:
- * `.smcaps`
+ * `.smcaps` `.smcaps-1ln`
  *
  *     @example
- *     p.smcaps Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     p.smcaps-1ln Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
-span.smcaps,
-.smcaps:first-line {
+.smcaps, .smcaps-1ln:first-line {
   font-variant: small-caps;
   letter-spacing: 0.125em;
   margin-right: 0.188em; }

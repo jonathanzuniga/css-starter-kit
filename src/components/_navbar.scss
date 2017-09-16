@@ -13,7 +13,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -93,7 +93,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -120,7 +120,7 @@
 	}
 }
 
-.active {
+.navbar__item--active {
 	.navbar__link {
 		&:link,
 		&:hover,
@@ -141,7 +141,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -240,7 +240,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -249,7 +249,7 @@
  */
 
 [class*="container"] {
-	> .row {
+	.row {
 		> .col,
 		> [class*="col-"] {
 			> .navbar {

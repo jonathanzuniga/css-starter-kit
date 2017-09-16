@@ -1136,6 +1136,15 @@
 .txtc-yellow-8 {
   color: #ffedd9; }
 
+a.ac-txtc:not(.btn):link, a.ac-txtc:not(.btn):visited,
+.ac-txtc a:not(.btn):link,
+.ac-txtc a:not(.btn):visited {
+  color: #333; }
+
+a.ac-txtc:not(.btn):hover,
+.ac-txtc a:not(.btn):hover {
+  color: #3a8bbb; }
+
 /***
  * Float:
  */
@@ -3575,7 +3584,7 @@
  *     @example
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
-.dcap:first-letter, .dcap span.smcaps:first-letter {
+.dcap:first-letter {
   background-color: transparent;
   border: none;
   color: #333;
@@ -3598,13 +3607,12 @@
 
 /**
  * Small caps:
- * `.smcaps`
+ * `.smcaps` `.smcaps-1ln`
  *
  *     @example
- *     p.smcaps Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     p.smcaps-1ln Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
-span.smcaps,
-.smcaps:first-line {
+.smcaps, .smcaps-1ln:first-line {
   font-variant: small-caps;
   letter-spacing: 0.125em;
   margin-right: 0.188em; }

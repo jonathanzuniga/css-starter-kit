@@ -43,7 +43,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -112,7 +112,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -134,7 +134,7 @@
 .navbar__toggler:hover {
   color: #3a8bbb; }
 
-.active .navbar__link:link, .active .navbar__link:hover, .active .navbar__link:visited {
+.navbar__item--active .navbar__link:link, .navbar__item--active .navbar__link:hover, .navbar__item--active .navbar__link:visited {
   color: #3a8bbb; }
 
 /**
@@ -148,7 +148,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -403,14 +403,14 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
+ *                 li.navbar__item.navbar__item--active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
  *                 li.navbar__item
  *                     a(href="").navbar__link About
  */
-[class*="container"] > .row > .col > .navbar,
-[class*="container"] > .row > [class*="col-"] > .navbar {
+[class*="container"] .row > .col > .navbar,
+[class*="container"] .row > [class*="col-"] > .navbar {
   margin-left: -1rem;
   margin-right: -1rem; }

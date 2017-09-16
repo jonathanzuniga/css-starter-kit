@@ -549,7 +549,7 @@
 			</div>
 			<div class="xs-col-12 md-col-9 xl-col-10 main">
 				<div class="row cols-center">
-					<div class="lg-col-10">
+					<div class="xl-col-10">
 						<div class='sg-container' sg-content>
 						</div>
 					</div>
