@@ -140,18 +140,6 @@
  * Text alignment:
  */
 
-@mixin text-left {
-	text-align: left;
-}
-
-@mixin text-center {
-	text-align: center;
-}
-
-@mixin text-right {
-	text-align: right;
-}
-
 /**
  * Left aligned text:
  * `.txt-left`
@@ -160,7 +148,7 @@
  *     p.txt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-left {
-	@include text-left;
+	text-align: left;
 }
 
 /**
@@ -171,7 +159,7 @@
  *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-center {
-	@include text-center;
+	text-align: center;
 }
 
 /**
@@ -182,7 +170,7 @@
  *     p.txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-right {
-	@include text-right;
+	text-align: right;
 }
 
 /**
@@ -195,15 +183,15 @@
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		.#{$size}-txt-left {
-			@include text-left;
+			text-align: left;
 		}
 
 		.#{$size}-txt-center {
-			@include text-center;
+			text-align: center;
 		}
 
 		.#{$size}-txt-right {
-			@include text-right;
+			text-align: right;
 		}
 	}
 }
