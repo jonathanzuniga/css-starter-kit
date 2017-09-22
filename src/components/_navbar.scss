@@ -22,8 +22,8 @@
  *             form.navbar__form
  *                 div.input-group
  *                     div.input-group-btn
- *                         input(type='search', placeholder='Search...').input
- *                         a.btn.btn--secondary Go
+ *                         input(type='search', placeholder='Search...').input.input--line.maxsm-txt-center
+ *                         a.btn.btn--secondary.maxsm-hide Go
  */
 .navbar,
 .navbar__brand,
@@ -193,21 +193,26 @@
 
 	.navbar__item {
 		border-top: $border-width $border-style $border-color;
+
+		&:last-child {
+			border-bottom: $border-width $border-style $border-color;
+		}
 	}
 
 	.navbar__form {
 		padding: 0;
 	}
-}
 
-@mixin navbar {
-	flex-wrap: wrap;
-	justify-content: space-between;
+	.input,
+	.btn {
+		line-height: inherit;
+	}
 }
 
 @mixin navbar-responsive {
 	&.navbar {
-		@include navbar;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	@include navbar-responsive-collapse;

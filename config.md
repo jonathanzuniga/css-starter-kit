@@ -270,6 +270,9 @@
 										<li>
 											<a href="elements.html#input">Input</a>
 										</li>
+										<li>
+											<a href="elements.html#line-input">Line input</a>
+										</li>
 									</ul>
 								</li>
 								<li>

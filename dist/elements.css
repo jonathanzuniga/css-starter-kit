@@ -241,7 +241,7 @@ small {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.125rem;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.5em;
   text-align: center;
   transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
   vertical-align: middle;
@@ -272,7 +272,7 @@ small {
 
 .btn--gradient {
   border: none;
-  padding: 0.563em 0.813em; }
+  padding: 0.563em 0.563em; }
   .btn--gradient.btn--primary {
     background: #3f95c1;
     background: -moz-linear-gradient(top, #3f95c1 0%, #347fb6 100%);
@@ -321,7 +321,7 @@ small {
 
 .btn--gradient {
   border: none;
-  padding: 0.563em 0.813em; }
+  padding: 0.563em 0.563em; }
   .btn--gradient.btn--secondary {
     background: #8b8787;
     background: -moz-linear-gradient(top, #8b8787 0%, #827b7a 100%);
@@ -370,7 +370,7 @@ small {
 
 .btn--gradient {
   border: none;
-  padding: 0.563em 0.813em; }
+  padding: 0.563em 0.563em; }
   .btn--gradient.btn--success {
     background: #44c17d;
     background: -moz-linear-gradient(top, #44c17d 0%, #37b77e 100%);
@@ -419,7 +419,7 @@ small {
 
 .btn--gradient {
   border: none;
-  padding: 0.563em 0.813em; }
+  padding: 0.563em 0.563em; }
   .btn--gradient.btn--danger {
     background: #ea562e;
     background: -moz-linear-gradient(top, #ea562e 0%, #de5d25 100%);
@@ -527,7 +527,7 @@ small {
   border-radius: 0.25rem;
   font-size: 16px;
   line-height: 1.125rem;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.5em;
   transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
   width: 100%; }
   .input:active {
@@ -536,6 +536,21 @@ small {
     border-color: #98c3dc; }
   .input:hover {
     border-color: 1px solid rgba(112, 112, 112, 0.4); }
+
+/**
+ * Line input:
+ * `.input--line`
+ *
+ *     @example
+ *     input(type='text', placeholder='Text input').input.input--line
+ */
+.input--line {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.4);
+  border-left: none;
+  border-radius: 0; }
 
 /***
  * Input group:

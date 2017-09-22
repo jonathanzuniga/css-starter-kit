@@ -3455,17 +3455,33 @@ a.ac-txtc:not(.btn):hover,
 
 /**
  * Responsive text alignment:
- * `.[size]-txt-[position]`
+ * `.max[size]-txt-[position]` `.[size]-txt-[position]`
  *
  *     @example
  *     p.lg-txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
+@media (max-width: -1) {
+  .maxxs-txt-left {
+    text-align: left; }
+  .maxxs-txt-center {
+    text-align: center; }
+  .maxxs-txt-right {
+    text-align: right; } }
+
 @media (min-width: 0) {
   .xs-txt-left {
     text-align: left; }
   .xs-txt-center {
     text-align: center; }
   .xs-txt-right {
+    text-align: right; } }
+
+@media (max-width: 767px) {
+  .maxsm-txt-left {
+    text-align: left; }
+  .maxsm-txt-center {
+    text-align: center; }
+  .maxsm-txt-right {
     text-align: right; } }
 
 @media (min-width: 768px) {
@@ -3476,6 +3492,14 @@ a.ac-txtc:not(.btn):hover,
   .sm-txt-right {
     text-align: right; } }
 
+@media (max-width: 1023px) {
+  .maxmd-txt-left {
+    text-align: left; }
+  .maxmd-txt-center {
+    text-align: center; }
+  .maxmd-txt-right {
+    text-align: right; } }
+
 @media (min-width: 1024px) {
   .md-txt-left {
     text-align: left; }
@@ -3484,12 +3508,28 @@ a.ac-txtc:not(.btn):hover,
   .md-txt-right {
     text-align: right; } }
 
+@media (max-width: 1279px) {
+  .maxlg-txt-left {
+    text-align: left; }
+  .maxlg-txt-center {
+    text-align: center; }
+  .maxlg-txt-right {
+    text-align: right; } }
+
 @media (min-width: 1280px) {
   .lg-txt-left {
     text-align: left; }
   .lg-txt-center {
     text-align: center; }
   .lg-txt-right {
+    text-align: right; } }
+
+@media (max-width: 1679px) {
+  .maxxl-txt-left {
+    text-align: left; }
+  .maxxl-txt-center {
+    text-align: center; }
+  .maxxl-txt-right {
     text-align: right; } }
 
 @media (min-width: 1680px) {
