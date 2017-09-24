@@ -21,7 +21,7 @@ ul, ol, dl, figure,
 a {
   color: #3a8bbb;
   text-decoration: none;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
+  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
   a:visited {
     color: #3a8bbb; }
   a:hover {
@@ -243,7 +243,7 @@ small {
   line-height: 1.125rem;
   padding: 0.5em 0.5em;
   text-align: center;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
   vertical-align: middle;
   white-space: nowrap;
   -moz-appearance: none;
@@ -525,17 +525,23 @@ small {
 .input {
   border: 1px solid rgba(112, 112, 112, 0.4);
   border-radius: 0.25rem;
+  box-shadow: none;
   font-size: 16px;
   line-height: 1.125rem;
   padding: 0.5em 0.5em;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
   width: 100%; }
   .input:active {
-    border-color: #98c3dc; }
+    border-color: #65a4ca; }
+  .input:invalid {
+    border-color: #ec7d57; }
+  .input:valid {
+    border-color: rgba(112, 112, 112, 0.4); }
   .input:focus, .input:focus:hover {
-    border-color: #98c3dc; }
+    border-color: #65a4ca;
+    border-width: 1px; }
   .input:hover {
-    border-color: 1px solid rgba(112, 112, 112, 0.4); }
+    border-color: rgba(112, 112, 112, 0.4); }
 
 /**
  * Line input:
@@ -604,6 +610,8 @@ small {
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: 100%; }
+  .input-group-btn > *:not(:last-child) {
+    margin-right: -1px; }
 
 /***
  * Lists:

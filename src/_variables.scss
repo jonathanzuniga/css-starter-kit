@@ -64,6 +64,7 @@ $text-color: get_color('grey 1');
 
 $base-transition: background-color 0.16s ease-in-out, 
 				  border-color 0.16s ease-in-out, 
+				  border-width 0.16s ease-in-out, 
 				  box-shadow 0.16s ease-in-out, 
 				  color 0.16s ease-in-out;
 
@@ -114,6 +115,7 @@ $heading-line-height: 1.1;
 
 // Se usan los mismo valores para los demas controles de las formas.
 $control-border-width: 1px;
+$control-border-style: solid;
 $control-border-color: transparent;
 $control-line-height:  $line-height-ratio - $quarter-spacing-unit;
 $control-padding-y:    rem_to_em($quarter-spacing-unit);
@@ -121,9 +123,7 @@ $control-padding-x:    rem_to_em($quarter-spacing-unit);
 
 $control-transparentize-amount: 0.6;
 
-$button-border-width:  $control-border-width;
-$button-border-color:  $control-border-color;
-$button-border:        $control-border-width solid $control-border-color;
+$button-border:        $control-border-width $control-border-style $control-border-color;
 $button-border-radius: rem_to_em($quarter-spacing-unit / 2);
 $button-font-weight:   400;
 $button-line-height:   $control-line-height;
@@ -142,10 +142,10 @@ $button-hover-background-color-shade-amount: 12%;
 // gradient background-color bottom saturation, 
 // gradient background-color bottom lightness.
 $buttons: (
-	'primary'   get_color('blue 1')               $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' lighten(get_color('grey 1'), 32%) $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 1')              $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 1')                $button-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_color('blue 1')               $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' lighten(get_color('grey 1'), 32%) $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 1')              $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 1')                $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 
@@ -181,14 +181,20 @@ $label-padding: rem_to_em($quarter-spacing-unit / 2) 0;
 
 // Input
 
-$input-border:        $control-border-width solid transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
+$input-border-width:  $control-border-width;
+$input-border-color:  transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
+$input-border-style:  solid;
+$input-border:        $input-border-width $input-border-style $input-border-color;
 $input-border-radius: $quarter-spacing-unit / 2;
 $input-line-height:   $control-line-height;
 $input-padding:       $control-padding-y $control-padding-x;
 
-$input-active-border-color: get_color('blue 3');
-$input-focus-border-color:  get_color('blue 3');
-$input-hover-border-color:  $input-border;
+$input-active-border-color:  get_color('blue 2');
+$input-focus-border-color:   get_color('blue 2');
+$input-focus-border-width:   $control-border-width;
+$input-hover-border-color:   $input-border-color;
+$input-invalid-border-color: get_color('red 2');
+$input-valid-border-color:   $input-border-color;
 
 
 // Tables

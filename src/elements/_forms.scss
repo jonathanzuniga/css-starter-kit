@@ -22,6 +22,7 @@
 .input {
 	border: $input-border;
 	border-radius: $input-border-radius;
+	box-shadow: none;
 	font-size: $base-font-size;
 	line-height: $input-line-height;
 	padding: $input-padding;
@@ -33,9 +34,23 @@
 		border-color: $input-active-border-color;
 	}
 
+	&:invalid {
+		border-color: $input-invalid-border-color;
+	}
+
+	&:valid {
+		border-color: $input-valid-border-color;
+	}
+
+	// &:-moz-ui-invalid:-moz-focusring:not(output),
+	// &:-moz-ui-invalid:not(output) {
+	// 	border-color: $input-error-border-color;
+	// }
+
 	&:focus,
 	&:focus:hover {
 		border-color: $input-focus-border-color;
+		border-width: $input-focus-border-width;
 	}
 
 	&:hover {

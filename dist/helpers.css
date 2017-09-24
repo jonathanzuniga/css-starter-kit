@@ -3678,7 +3678,11 @@ a.ac-txtc:not(.btn):hover,
   margin-top: 0;
   margin-bottom: 0; }
 
-.content-indented p {
+.content-indented p:not([class*="cols-"]) {
   margin-bottom: 0; }
-  .content-indented p + p {
+  .content-indented p:not([class*="cols-"]) + p:not([class*="cols-"]) {
     text-indent: 1.5rem; }
+
+.cols-2 {
+  column-count: 2;
+  column-gap: 1rem; }
