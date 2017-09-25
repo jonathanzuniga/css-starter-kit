@@ -146,20 +146,6 @@
 								</li>
 								<li>
 									<a href="layout.html#gutters">Gutters</a>
-									<ul class="ls-unstyled">
-										<li>
-											<a href="layout.html#double-size-gutters">Double size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#regular-plus-half-size-gutters">Regular plus half size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#half-size-gutters">Half size gutters</a>
-										</li>
-										<li>
-											<a href="layout.html#remove-gutters">Remove gutters</a>
-										</li>
-									</ul>
 								</li>
 								<li>
 									<a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>

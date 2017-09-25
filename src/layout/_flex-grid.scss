@@ -16,9 +16,9 @@ html, body {
 	flex-wrap: wrap;
 
 	margin-top: $grid-row-margin-top;
-	margin-right: -$grid-column-gutter;
+	margin-right: -$gutter-width;
 	margin-bottom: $grid-row-margin-bottom;
-	margin-left: -$grid-column-gutter;
+	margin-left: -$gutter-width;
 }
 
 @mixin column {
@@ -29,8 +29,8 @@ html, body {
 }
 
 @mixin gutter {
-	padding-left: $grid-column-gutter;
-	padding-right: $grid-column-gutter;
+	padding-left: $gutter-width;
+	padding-right: $gutter-width;
 }
 
 %column {

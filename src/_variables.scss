@@ -289,9 +289,6 @@ $grid-columns-number: 12;
 $grid-row-margin-bottom: 0;
 $grid-row-margin-top:    0;
 
-// Gutter size.
-$grid-column-gutter: $half-spacing-unit;
-
 // Grid breakpoints, minimum widths.
 $breakpoint-xs-min-width: 0;
 $breakpoint-sm-min-width: 768px;
@@ -305,6 +302,17 @@ $grid-breakpoints: (
 	md: $breakpoint-md-min-width,
 	lg: $breakpoint-lg-min-width,
 	xl: $breakpoint-xl-min-width
+) !default;
+
+// Gutter normal width.
+$gutter-width: $half-spacing-unit !default;
+
+$gutters: (
+	0:  0,
+	05: 0.5,
+	1:  1,
+	15: 1.5,
+	2:  2
 ) !default;
 
 
