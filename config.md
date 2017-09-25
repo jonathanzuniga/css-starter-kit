@@ -521,7 +521,10 @@
 											<a href="helpers.html#small-caps">Small caps</a>
 										</li>
 										<li>
-											<a href="helpers.html#content-indented">Content indented</a>
+											<a href="helpers.html#txt-indent">Indent text</a>
+										</li>
+										<li>
+											<a href="helpers.html#divide-the-content-in-columns">Divide the content in columns</a>
 										</li>
 									</ul>
 								</li>

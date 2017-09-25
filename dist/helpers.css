@@ -3658,31 +3658,224 @@ a.ac-txtc:not(.btn):hover,
   margin-right: 0.188em; }
 
 /**
- * Content indented:
- * `.content-indented`
+ * Indent text:
+ * `.txt-indent`
  *
  *     @example
- *     div.content-indented
+ *     div.txt-indent
  *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
  *
  *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *
  *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
  */
-.content-indented blockquote, .content-indented pre,
-.content-indented ul, .content-indented ol, .content-indented dl, .content-indented figure, .content-indented img {
+.txt-indent blockquote, .txt-indent pre,
+.txt-indent ul, .txt-indent ol, .txt-indent dl, .txt-indent figure, .txt-indent img {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-.content-indented figure img {
+.txt-indent figure img {
   margin-top: 0;
   margin-bottom: 0; }
 
-.content-indented p:not([class*="cols-"]) {
+.txt-indent p:not([class*="cols-"]) {
   margin-bottom: 0; }
-  .content-indented p:not([class*="cols-"]) + p:not([class*="cols-"]) {
+  .txt-indent p:not([class*="cols-"]) + p:not([class*="cols-"]) {
     text-indent: 1.5rem; }
 
-.cols-2 {
-  column-count: 2;
-  column-gap: 1rem; }
+/**
+ * Divide the content in columns:
+ * `.[size]-cols-[#]`
+ *
+ *     @example
+ *     p.xs-cols-1.sm-cols-2.md-cols-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+@media (min-width: 0) {
+  .xs-cols-1 {
+    column-count: 1;
+    column-gap: 1rem; }
+  .xs-cols-2 {
+    column-count: 2;
+    column-gap: 1rem; }
+  .xs-cols-3 {
+    column-count: 3;
+    column-gap: 1rem; }
+  .xs-cols-4 {
+    column-count: 4;
+    column-gap: 1rem; }
+  .xs-cols-5 {
+    column-count: 5;
+    column-gap: 1rem; }
+  .xs-cols-6 {
+    column-count: 6;
+    column-gap: 1rem; }
+  .xs-cols-7 {
+    column-count: 7;
+    column-gap: 1rem; }
+  .xs-cols-8 {
+    column-count: 8;
+    column-gap: 1rem; }
+  .xs-cols-9 {
+    column-count: 9;
+    column-gap: 1rem; }
+  .xs-cols-10 {
+    column-count: 10;
+    column-gap: 1rem; }
+  .xs-cols-11 {
+    column-count: 11;
+    column-gap: 1rem; }
+  .xs-cols-12 {
+    column-count: 12;
+    column-gap: 1rem; } }
+
+@media (min-width: 768px) {
+  .sm-cols-1 {
+    column-count: 1;
+    column-gap: 1rem; }
+  .sm-cols-2 {
+    column-count: 2;
+    column-gap: 1rem; }
+  .sm-cols-3 {
+    column-count: 3;
+    column-gap: 1rem; }
+  .sm-cols-4 {
+    column-count: 4;
+    column-gap: 1rem; }
+  .sm-cols-5 {
+    column-count: 5;
+    column-gap: 1rem; }
+  .sm-cols-6 {
+    column-count: 6;
+    column-gap: 1rem; }
+  .sm-cols-7 {
+    column-count: 7;
+    column-gap: 1rem; }
+  .sm-cols-8 {
+    column-count: 8;
+    column-gap: 1rem; }
+  .sm-cols-9 {
+    column-count: 9;
+    column-gap: 1rem; }
+  .sm-cols-10 {
+    column-count: 10;
+    column-gap: 1rem; }
+  .sm-cols-11 {
+    column-count: 11;
+    column-gap: 1rem; }
+  .sm-cols-12 {
+    column-count: 12;
+    column-gap: 1rem; } }
+
+@media (min-width: 1024px) {
+  .md-cols-1 {
+    column-count: 1;
+    column-gap: 1rem; }
+  .md-cols-2 {
+    column-count: 2;
+    column-gap: 1rem; }
+  .md-cols-3 {
+    column-count: 3;
+    column-gap: 1rem; }
+  .md-cols-4 {
+    column-count: 4;
+    column-gap: 1rem; }
+  .md-cols-5 {
+    column-count: 5;
+    column-gap: 1rem; }
+  .md-cols-6 {
+    column-count: 6;
+    column-gap: 1rem; }
+  .md-cols-7 {
+    column-count: 7;
+    column-gap: 1rem; }
+  .md-cols-8 {
+    column-count: 8;
+    column-gap: 1rem; }
+  .md-cols-9 {
+    column-count: 9;
+    column-gap: 1rem; }
+  .md-cols-10 {
+    column-count: 10;
+    column-gap: 1rem; }
+  .md-cols-11 {
+    column-count: 11;
+    column-gap: 1rem; }
+  .md-cols-12 {
+    column-count: 12;
+    column-gap: 1rem; } }
+
+@media (min-width: 1280px) {
+  .lg-cols-1 {
+    column-count: 1;
+    column-gap: 1rem; }
+  .lg-cols-2 {
+    column-count: 2;
+    column-gap: 1rem; }
+  .lg-cols-3 {
+    column-count: 3;
+    column-gap: 1rem; }
+  .lg-cols-4 {
+    column-count: 4;
+    column-gap: 1rem; }
+  .lg-cols-5 {
+    column-count: 5;
+    column-gap: 1rem; }
+  .lg-cols-6 {
+    column-count: 6;
+    column-gap: 1rem; }
+  .lg-cols-7 {
+    column-count: 7;
+    column-gap: 1rem; }
+  .lg-cols-8 {
+    column-count: 8;
+    column-gap: 1rem; }
+  .lg-cols-9 {
+    column-count: 9;
+    column-gap: 1rem; }
+  .lg-cols-10 {
+    column-count: 10;
+    column-gap: 1rem; }
+  .lg-cols-11 {
+    column-count: 11;
+    column-gap: 1rem; }
+  .lg-cols-12 {
+    column-count: 12;
+    column-gap: 1rem; } }
+
+@media (min-width: 1680px) {
+  .xl-cols-1 {
+    column-count: 1;
+    column-gap: 1rem; }
+  .xl-cols-2 {
+    column-count: 2;
+    column-gap: 1rem; }
+  .xl-cols-3 {
+    column-count: 3;
+    column-gap: 1rem; }
+  .xl-cols-4 {
+    column-count: 4;
+    column-gap: 1rem; }
+  .xl-cols-5 {
+    column-count: 5;
+    column-gap: 1rem; }
+  .xl-cols-6 {
+    column-count: 6;
+    column-gap: 1rem; }
+  .xl-cols-7 {
+    column-count: 7;
+    column-gap: 1rem; }
+  .xl-cols-8 {
+    column-count: 8;
+    column-gap: 1rem; }
+  .xl-cols-9 {
+    column-count: 9;
+    column-gap: 1rem; }
+  .xl-cols-10 {
+    column-count: 10;
+    column-gap: 1rem; }
+  .xl-cols-11 {
+    column-count: 11;
+    column-gap: 1rem; }
+  .xl-cols-12 {
+    column-count: 12;
+    column-gap: 1rem; } }
