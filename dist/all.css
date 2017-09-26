@@ -929,15 +929,82 @@ small {
   padding: 0.75em 1.5em; }
 
 /**
- * Expanded button:
- * `.btn--expanded`
+ * Expand button:
+ * `.btn--expand`
  *
  *     @example
- *     a.btn.btn--primary.btn--lg.btn--expanded Expanded button
+ *     a.btn.btn--primary.btn--lg.btn--expand Expanded button
  */
-.btn--expanded {
+.btn--expand {
   display: block;
   width: 100%; }
+
+/***
+ * Button group:
+ */
+/**
+ * Normal button group:
+ * `.btn-group`
+ *
+ *     @example
+ *     div.btn-group
+ *         a.btn.btn--secondary First
+ *         a.btn.btn--secondary Second
+ *         a.btn.btn--secondary Third
+ */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .btn-group > .btn {
+    flex: 0 1 auto; }
+    .btn-group > .btn:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .btn-group > .btn:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+    .btn-group > .btn:not(:first-child):not(:last-child) {
+      border-radius: 0; }
+    .btn-group > .btn:not(:last-child) {
+      margin-right: -1px; }
+
+/**
+ * Expand button group:
+ * `.btn-group--expand`
+ *
+ *     @example
+ *     div.btn-group.btn-group--expand
+ *         a.btn.btn--secondary First
+ *         a.btn.btn--secondary Second
+ *         a.btn.btn--secondary Third
+ */
+.btn-group--expand > .btn {
+  flex-grow: 1; }
+
+/**
+ * Button group size:
+ * `.btn-group--[size]`
+ *
+ *     @example
+ *     div.fld.btn-group.btn-group--lg
+ *         a.btn.btn--secondary First
+ *         a.btn.btn--secondary Second
+ *         a.btn.btn--secondary Third
+ *     div.fld.btn-group.btn-group--sm
+ *         a.btn.btn--secondary First
+ *         a.btn.btn--secondary Second
+ *         a.btn.btn--secondary Third
+ */
+.btn-group--sm > .btn {
+  border-radius: 0.187em;
+  font-size: 0.8125em;
+  padding: 0.25em 0.75em; }
+
+.btn-group--lg > .btn {
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  padding: 0.75em 1.5em; }
 
 /***
  * Forms:
@@ -1001,7 +1068,7 @@ small {
  * `.input-group`
  *
  *     @example
- *     div.fld.input-group
+ *     div.input-group
  *         div.input-group-btn
  *             input(type='search', placeholder='Search...').input
  *             a.btn.btn--secondary Go
@@ -1011,7 +1078,7 @@ small {
  * `.input-group`
  *
  *     @example
- *     div.fld.input-group
+ *     div.input-group
  *         label.lbl Search:
  *         div.input-group-btn
  *             input(type='search').input

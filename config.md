@@ -246,7 +246,21 @@
 											<a href="elements.html#button-size">Button size</a>
 										</li>
 										<li>
-											<a href="elements.html#expanded-button">Expanded button</a>
+											<a href="elements.html#expand-button">Expand button</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="elements.html#button-group">Button group</a>
+									<ul class="ls-unstyled">
+										<li>
+											<a href="elements.html#normal-button-group">Normal button group</a>
+										</li>
+										<li>
+											<a href="elements.html#expand-button-group">Expand button group</a>
+										</li>
+										<li>
+											<a href="elements.html#button-group-size">Button group size</a>
 										</li>
 									</ul>
 								</li>

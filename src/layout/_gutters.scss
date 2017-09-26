@@ -34,12 +34,12 @@
 						padding-right: $gutter-width * $width;
 					}
 				}
-			}
 
-			// Para la división del contenido en cols.
-			@for $i from 1 through $grid-columns-number {
-				.#{$size}-gutters-#{$number}.#{$size}-cols-#{$i} {
-					column-gap: $gutter-width * $width;
+				// Para la división del contenido en cols.
+				@for $i from 1 through $grid-columns-number {
+					&.#{$size}-cols-#{$i} {
+						column-gap: $gutter-width * $width;
+					}
 				}
 			}
 		}
