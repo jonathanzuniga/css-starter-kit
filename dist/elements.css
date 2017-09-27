@@ -493,9 +493,9 @@ small {
 .btn--lg {
   border-radius: 0.25em;
   font-size: 1.25em;
-  padding: 0.75em 1em; }
+  padding: 0.75em 0.75em; }
   .btn--lg.btn--gradient {
-    padding: 0.813em 1.063em; }
+    padding: 0.813em 0.813em; }
 
 /**
  * Expand button:
@@ -576,9 +576,9 @@ small {
 .btn-group--lg > .btn {
   border-radius: 0.25em;
   font-size: 1.25em;
-  padding: 0.75em 1em; }
+  padding: 0.75em 0.75em; }
   .btn-group--lg > .btn.btn--gradient {
-    padding: 0.813em 1.063em; }
+    padding: 0.813em 0.813em; }
 
 /***
  * Forms:
@@ -624,7 +624,7 @@ small {
  * `.input--line`
  *
  *     @example
- *     input(type='text', placeholder='Text input').input.input--line
+ *     input(type='text', placeholder='Line input').input.input--line
  */
 .input--line {
   background-color: transparent;
@@ -633,6 +633,26 @@ small {
   border-bottom: 1px solid rgba(112, 112, 112, 0.4);
   border-left: none;
   border-radius: 0; }
+
+/**
+ * Input size:
+ * `.input--[size]`
+ *
+ *     @example
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--lg
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--sm
+ */
+.input--sm {
+  border-radius: 0.25em;
+  font-size: 0.8125em;
+  padding: 0.25em 0.5em; }
+
+.input--lg {
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  padding: 0.75em 0.75em; }
 
 /***
  * Input group:
@@ -675,8 +695,8 @@ small {
     .input-group .input:first-child {
       flex: 1 1 auto; }
     .input-group .input:last-child {
-      border-top-right-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem; }
+      border-top-right-radius: 0.25em;
+      border-bottom-right-radius: 0.25em; }
   .input-group .btn:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -688,6 +708,48 @@ small {
   width: 100%; }
   .input-group-btn > *:not(:last-child) {
     margin-right: -1px; }
+
+/**
+ * Input group size:
+ * `.input-group--[size]`
+ *
+ *     @example
+ *     div.fld.input-group.input-group--lg
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             a.btn.btn--secondary Go
+ *     div.fld.input-group.input-group--sm
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             a.btn.btn--secondary Go
+ */
+.input-group--sm .btn {
+  border-radius: 0.25em;
+  font-size: 0.8125em;
+  padding: 0.25em 0.5em; }
+  .input-group--sm .btn.btn--gradient {
+    padding: 0.313em 0.563em; }
+
+.input-group--sm .input {
+  font-size: 0.8125em;
+  padding: 0.25em 0.5em; }
+  .input-group--sm .input:last-child {
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; }
+
+.input-group--lg .btn {
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  padding: 0.75em 0.75em; }
+  .input-group--lg .btn.btn--gradient {
+    padding: 0.813em 0.813em; }
+
+.input-group--lg .input {
+  font-size: 1.25em;
+  padding: 0.75em 0.75em; }
+  .input-group--lg .input:last-child {
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; }
 
 /***
  * Lists:

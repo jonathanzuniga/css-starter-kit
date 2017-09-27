@@ -273,6 +273,9 @@
 										<li>
 											<a href="elements.html#line-input">Line input</a>
 										</li>
+										<li>
+											<a href="elements.html#input-size">Input size</a>
+										</li>
 									</ul>
 								</li>
 								<li>
@@ -283,6 +286,9 @@
 										</li>
 										<li>
 											<a href="elements.html#mixed-addons">Mixed addons</a>
+										</li>
+										<li>
+											<a href="elements.html#input-group-size">Input group size</a>
 										</li>
 									</ul>
 								</li>

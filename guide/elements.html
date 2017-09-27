@@ -268,6 +268,9 @@
                     <li>
                       <a href="elements.html#line-input">Line input</a>
                     </li>
+                    <li>
+                      <a href="elements.html#input-size">Input size</a>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -278,6 +281,9 @@
                     </li>
                     <li>
                       <a href="elements.html#mixed-addons">Mixed addons</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#input-group-size">Input group size</a>
                     </li>
                   </ul>
                 </li>
@@ -987,8 +993,31 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <input type="text" placeholder="Text input" class="input input--line">
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--line&quot;</span> /&gt;</span></pre>
+                      <input type="text" placeholder="Line input" class="input input--line">
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Line input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--line&quot;</span> /&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-input-size">
+                  <div class="sg-text">
+                    <h3 id="input-size" class="sg">Input size</h3>
+                    <p class="sg">
+                      <code class="sg">.input--[size]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="fld">
+                        <input type="text" placeholder="Text input" class="input input--lg">
+                      </div>
+                      <div class="fld">
+                        <input type="text" placeholder="Text input" class="input input--sm">
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--lg&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Text input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--sm&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
               </section>
@@ -1038,6 +1067,41 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;lbl&quot;</span>&gt;</span>Search:<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-input-group-size">
+                  <div class="sg-text">
+                    <h3 id="input-group-size" class="sg">Input group size</h3>
+                    <p class="sg">
+                      <code class="sg">.input-group--[size]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="fld input-group input-group--lg">
+                        <div class="input-group-btn">
+                          <input type="search" placeholder="Search..." class="input">
+                          <a class="btn btn--secondary">Go</a>
+                        </div>
+                      </div>
+                      <div class="fld input-group input-group--sm">
+                        <div class="input-group-btn">
+                          <input type="search" placeholder="Search..." class="input">
+                          <a class="btn btn--secondary">Go</a>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld input-group input-group--lg&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld input-group input-group--sm&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>

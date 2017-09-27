@@ -63,7 +63,7 @@
  * `.input--line`
  *
  *     @example
- *     input(type='text', placeholder='Text input').input.input--line
+ *     input(type='text', placeholder='Line input').input.input--line
  */
 .input--line {
 	background-color: transparent;
@@ -74,4 +74,26 @@
 	border-left: none;
 
 	border-radius: 0;
+}
+
+/**
+ * Input size:
+ * `.input--[size]`
+ *
+ *     @example
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--lg
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--sm
+ */
+.input--sm {
+	border-radius: $input-small-border-radius;
+	font-size: $input-small-font-size;
+	padding: $input-small-padding-y $input-small-padding-x;
+}
+
+.input--lg {
+	border-radius: $input-large-border-radius;
+	font-size: $input-large-font-size;
+	padding: $input-large-padding-y $input-large-padding-x;
 }
