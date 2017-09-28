@@ -217,9 +217,9 @@
 										li
 											a(href='elements.html#input') Input
 										li
-											a(href='elements.html#line-input') Line input
-										li
 											a(href='elements.html#input-size') Input size
+										li
+											a(href='elements.html#line-input') Line input
 								li
 									a(href='elements.html#input-group') Input group
 									ul.ls-unstyled
