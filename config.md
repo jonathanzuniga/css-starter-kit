@@ -97,6 +97,15 @@
 			padding-bottom: 2.5rem;
 		}
 
+		.sidebar .active {
+			background-color: rgba(51, 51, 51, 0.08);
+			border-top-left-radius: 0.25em;
+			border-bottom-left-radius: 0.25em;
+			padding-left: 1rem;
+
+			transition: all 0.16s ease-in-out;
+		}
+
 		.navbar {
 			background-color: rgba(61, 70, 77, 0.1);
 		}
@@ -435,4 +444,42 @@
 					scrollTop: $(window.location.hash).offset().top + 'px'
 				}, 300, 'swing');
 			}
+
+			scrollSpy();
+			$(window).scroll(function() {
+				scrollSpy();
+			});
 		});
+
+		function scrollSpy() {
+			var sections = ['container', 'fluid-container', 'offsets'];
+			var current;
+			for (var i = 0; i < sections.length; i++) {
+				if ($('#' + sections[i]).offset().top <= $(window).scrollTop()) {
+					current = sections[i];
+				}
+			}
+
+			$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
+			$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
+
+			//- $(window).on('scroll', function() {
+			//- 	$('.sidebar__content').animate({
+			//- 		scrollTop: $('.sidebar .active').offset().top + 'px'
+			//- 	}, 300, 'swing');
+			//- });
+
+			//- var $sidebar   = $('.sidebar'), 
+			//- 	$window    = $(window),
+			//- 	offset     = $sidebar.offset(),
+			//- 	topPadding = 15;
+			//- if ($window.scrollTop() > offset.top) {
+			//- 	$sidebar.stop().animate({
+			//- 		marginTop: $window.scrollTop() - offset.top + topPadding
+			//- 	});
+			//- } else {
+			//- 	$sidebar.stop().animate({
+			//- 		marginTop: 0
+			//- 	});
+			//- }
+		}
