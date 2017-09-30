@@ -97,13 +97,17 @@
 			padding-bottom: 2.5rem;
 		}
 
-		.sidebar .active {
-			background-color: rgba(51, 51, 51, 0.08);
-			border-top-left-radius: 0.25em;
-			border-bottom-left-radius: 0.25em;
-			padding-left: 1rem;
+		//- .sidebar .active {
+		//- 	background-color: rgba(51, 51, 51, 0.08);
+		//- 	border-top-left-radius: 0.25em;
+		//- 	border-bottom-left-radius: 0.25em;
+		//- 	padding-left: 1rem;
 
-			transition: all 0.16s ease-in-out;
+		//- 	transition: all 0.16s ease-in-out;
+		//- }
+
+		.sidebar .active a {
+			color: #333;
 		}
 
 		.navbar {
@@ -443,39 +447,40 @@
 				$('html, body').animate({
 					scrollTop: $(window.location.hash).offset().top + 'px'
 				}, 300, 'swing');
-
-				//- scrollSpy();
-				//- $(window).scroll(function() {
-				//- 	scrollSpy();
-				//- });
 			}
-		});
 
-		var a_texts;
-		var page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+			scrollSpy();
+			$(window).scroll(function() {
+				scrollSpy();
+			});
+		});
 		function scrollSpy() {
-			if (a_texts == null) {
+			var page, a_texts, first_time;
+			if (first_time == null) {
+				page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
 				a_texts = $('.sidebar').find('a[href*="' + page + '"]').map(function() {
 					return $(this)[0].hash.substr(1);
 				}).get();
+				first_time = 1;
 			}
 
 			var sections = a_texts;
-			var current;
+			var current = sections[0];
 			for (var i = 0; i < sections.length; i++) {
-				if ($('.main #' + sections[i]).offset().top <= $(window).scrollTop()) {
-					current = sections[i];
+				if ($('.main').find('#' + sections[i]).length) {
+					if ($('.main').find('#' + sections[i]).offset().top <= $(window).scrollTop())
+						current = sections[i];
 				}
 			}
 
 			$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
 			$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
 
-			if (current) {
-				$('.sidebar__content').animate({
-					scrollTop: $('.sidebar a[href*="#' + current + '"]').parent().offset().top + 'px'
-				}, 300, 'swing');
-			}
+			//- if (current) {
+			//- 	$('.sidebar__content').animate({
+			//- 		scrollTop: $('.sidebar a[href*="#' + current + '"]').parent().offset().top + 'px'
+			//- 	}, 300, 'swing');
+			//- }
 
 			//- var $sidebar   = $('.sidebar'), 
 			//- 	$window    = $(window),
