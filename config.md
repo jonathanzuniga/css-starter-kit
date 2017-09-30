@@ -434,7 +434,7 @@
 			$('a').on('click', function(e) {
 				var anchor = $(this).attr('href').split('#');
 				if (document.location.href.indexOf(anchor[0]) >= 0) {
-					e.preventDefault();
+					//- e.preventDefault();
 					$('html, body').animate({
 						scrollTop: $($('#' + anchor[1])).offset().top + 'px'
 					}, 300, 'swing');
@@ -447,6 +447,10 @@
 				$('html, body').animate({
 					scrollTop: $(window.location.hash).offset().top + 'px'
 				}, 300, 'swing');
+
+				$('.sidebar__content').animate({
+					scrollTop: $('.sidebar a[href*="' + window.location.hash + '"]').position().top
+				}, 300, 'swing');
 			}
 
 			scrollSpy();
@@ -454,6 +458,7 @@
 				scrollSpy();
 			});
 		});
+
 		function scrollSpy() {
 			var page, a_texts, first_time;
 			if (first_time == null) {
@@ -468,31 +473,11 @@
 			var current = sections[0];
 			for (var i = 0; i < sections.length; i++) {
 				if ($('.main').find('#' + sections[i]).length) {
-					if ($('.main').find('#' + sections[i]).offset().top <= $(window).scrollTop())
+					if ($('.main').find('#' + sections[i]).offset().top <= ($(window).scrollTop() + 32))
 						current = sections[i];
 				}
 			}
 
 			$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
 			$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
-
-			//- if (current) {
-			//- 	$('.sidebar__content').animate({
-			//- 		scrollTop: $('.sidebar a[href*="#' + current + '"]').parent().offset().top + 'px'
-			//- 	}, 300, 'swing');
-			//- }
-
-			//- var $sidebar   = $('.sidebar'), 
-			//- 	$window    = $(window),
-			//- 	offset     = $sidebar.offset(),
-			//- 	topPadding = 15;
-			//- if ($window.scrollTop() > offset.top) {
-			//- 	$sidebar.stop().animate({
-			//- 		marginTop: $window.scrollTop() - offset.top + topPadding
-			//- 	});
-			//- } else {
-			//- 	$sidebar.stop().animate({
-			//- 		marginTop: 0
-			//- 	});
-			//- }
 		}
