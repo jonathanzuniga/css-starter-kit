@@ -1307,13 +1307,27 @@
       $('a').on('click', function(e) {
         var page = $(this).attr('href');
         var anchor = page.split('#');
-        //- if (document.location.href.indexOf(anchor[0]) >= 0) {
-        e.preventDefault();
-        $('.main').load(page + ' .main > div');
-        $('html, body').animate({
-          scrollTop: $($('#' + anchor[1])).offset().top + 'px'
-        }, 300, 'swing');
-        //- }
+        if (document.location.href.indexOf(anchor[0]) >= 0) {
+          //- e.preventDefault();
+
+          //- loadMain(page, anchor[1]);
+
+          $('html, body').animate({
+            scrollTop: $($('#' + anchor[1])).offset().top + 'px'
+          }, 300, 'swing');
+        } else {
+          e.preventDefault();
+
+          $('.main').load(page + ' .main > div', function() {
+            window.history.pushState('data', 'CSS Starter Kit Guide', page);
+
+            if (document.location.href.indexOf(anchor[1]) >= 0) {
+              $('html, body').animate({
+                scrollTop: $($('.main #' + anchor[1])).offset().top + 'px'
+              }, 300, 'swing');
+            }
+          });
+        }
       });
 
       //- // *only* if we have anchor on the url
@@ -1328,11 +1342,29 @@
       //-     //- }, 300, 'swing');
       //- }
 
-      //- scrollSpy();
-      //- $(window).scroll(function() {
-      //-     scrollSpy();
-      //- });
+      scrollSpy();
+      $(window).scroll(function() {
+        scrollSpy();
+      });
     });
+
+     //- function loadMain(url, anchor) {
+     //-     $.ajax({
+     //-         type: 'post',
+     //-         url: url + ' .main > div',
+     //-         dataType: 'html',
+     //-         mimeType: 'text/html',
+     //-         success: function() {
+     //-             window.history.pushState('data', 'CSS Starter Kit Guide', url);
+
+     //-             //- if (document.location.href.indexOf(anchor) >= 0) {
+     //-             //-     $('html, body').animate({
+     //-             //-         scrollTop: $($('.main #' + anchor)).offset().top + 'px'
+     //-             //-     }, 300, 'swing');
+     //-             //- }
+     //-         }
+     //-     });
+     //- }
 
     function scrollSpy() {
       var page, a_texts, first_time;
