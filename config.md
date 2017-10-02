@@ -7,8 +7,6 @@
 	link(rel='stylesheet', href='css/styledown.css')
 	link(rel='stylesheet', href='../dist/all.css')
 
-	script(src='js/styledown.js')
-
 	style(type='text/css').
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -417,101 +415,10 @@
 											a(href='components.html#responsive-navbar-menu') Responsive navbar menu
 
 			div.xs-col-12.md-col-9.xl-col-10.main
-				div.row.cols-center
+				div.main__content.row.cols-center
 					div.xl-col-10
 						div(sg-content).sg-container
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-	script.
-		// To top right away
-		if (window.location.hash) scroll(0,0);
-
-		// void some browsers issue
-		setTimeout(function() { scroll(0,0); }, 1);
-
-		$(function() {
-			// your current click function
-			$('a').on('click', function(e) {
-				var page = $(this).attr('href');
-				var anchor = page.split('#');
-				if (document.location.href.indexOf(anchor[0]) >= 0) {
-					//- e.preventDefault();
-
-					//- loadMain(page, anchor[1]);
-
-					$('html, body').animate({
-						scrollTop: $($('#' + anchor[1])).offset().top + 'px'
-					}, 300, 'swing');
-				} else {
-					e.preventDefault();
-					
-					$('.main').load(page + ' .main > div', function() {
-						window.history.pushState('data', 'CSS Starter Kit Guide', page);
-
-						if (document.location.href.indexOf(anchor[1]) >= 0) {
-							$('html, body').animate({
-								scrollTop: $($('.main #' + anchor[1])).offset().top + 'px'
-							}, 300, 'swing');
-						}
-					});
-				}
-			});
-
-			//- // *only* if we have anchor on the url
-			//- if (window.location.hash) {
-			//- 	// smooth scroll to the anchor id
-			//- 	$('html, body').animate({
-			//- 		scrollTop: $(window.location.hash).offset().top + 'px'
-			//- 	}, 300, 'swing');
-
-			//- 	//- $('.sidebar__content').animate({
-			//- 	//- 	scrollTop: $('.sidebar a[href*="' + window.location.hash + '"]').position().top
-			//- 	//- }, 300, 'swing');
-			//- }
-
-			scrollSpy();
-			$(window).scroll(function() {
-				scrollSpy();
-			});
-		});
-
-		//- function loadMain(url, anchor) {
-		//- 	$.ajax({
-		//- 		type: 'post',
-		//- 		url: url + ' .main > div',
-		//- 		dataType: 'html',
-		//- 		mimeType: 'text/html',
-		//- 		success: function() {
-		//- 			window.history.pushState('data', 'CSS Starter Kit Guide', url);
-
-		//- 			//- if (document.location.href.indexOf(anchor) >= 0) {
-		//- 			//- 	$('html, body').animate({
-		//- 			//- 		scrollTop: $($('.main #' + anchor)).offset().top + 'px'
-		//- 			//- 	}, 300, 'swing');
-		//- 			//- }
-		//- 		}
-		//- 	});
-		//- }
-
-		function scrollSpy() {
-			var page, a_texts, first_time;
-			if (first_time == null) {
-				page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
-				a_texts = $('.sidebar').find('a[href*="' + page + '"]').map(function() {
-					return $(this)[0].hash.substr(1);
-				}).get();
-				first_time = 1;
-			}
-
-			var sections = a_texts;
-			var current = sections[0];
-			for (var i = 0; i < sections.length; i++) {
-				if ($('.main').find('#' + sections[i]).length) {
-					if ($('.main').find('#' + sections[i]).offset().top <= ($(window).scrollTop() + 32))
-						current = sections[i];
-				}
-			}
-
-			$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
-			$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
-		}
+	script(src='js/styledown.js')
+	script(src='js/scripts.js')
