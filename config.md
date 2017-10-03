@@ -226,6 +226,8 @@
 									a(href='elements.html#forms') Forms
 									ul.ls-unstyled
 										li
+											a(href='elements.html#label') Label
+										li
 											a(href='elements.html#input') Input
 										li
 											a(href='elements.html#input-size') Input size

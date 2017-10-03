@@ -83,15 +83,15 @@ $(function() {
 			});
 		}
 
-		$('.sidebar a[href*="#' + anchor[1] + '"]').parent().addClass('active');
-		$('.sidebar a').not('a[href*="#' + anchor[1] + '"]').parent().removeClass('active');
+		$('.sidebar a[href$="#' + anchor[1] + '"]').parent().addClass('active');
+		$('.sidebar a').not('a[href$="#' + anchor[1] + '"]').parent().removeClass('active');
 	});
 
 	var href = document.location.href;
 	var anchor = href.split('#');
 	if (anchor[1]) {
-		$('.sidebar a[href*="#' + anchor[1] + '"]').parent().addClass('active');
-		$('.sidebar a').not('a[href*="#' + anchor[1] + '"]').parent().removeClass('active');
+		$('.sidebar a[href$="#' + anchor[1] + '"]').parent().addClass('active');
+		$('.sidebar a').not('a[href$="#' + anchor[1] + '"]').parent().removeClass('active');
 	}
 
 	// *only* if we have anchor on the url
