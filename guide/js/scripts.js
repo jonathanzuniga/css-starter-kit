@@ -11,8 +11,8 @@ $(function() {
 
 	// your current click function
 	$('body').on('click', '.sidebar a', function(e) {
-		var page = $(this).attr('href');
-		var anchor = page.split('#');
+		var href = $(this).attr('href');
+		var anchor = href.split('#');
 		if (document.location.href.indexOf(anchor[0]) >= 0) {
 			//- e.preventDefault();
 
@@ -31,50 +31,48 @@ $(function() {
 			});
 			
 			$('.main').load(anchor[0] + ' .main__content', function() {
-				window.history.pushState('data', 'CSS Starter Kit Guide', page);
+				window.history.pushState('data', 'CSS Starter Kit Guide', href);
+
+				function ready(fn) {
+					fn();
+				}
+
+				// create expando buttons
+				ready(function () {
+					var codes = document.querySelectorAll('.sg-example .sg-code');
+
+					for (var i = codes.length-1; i >= 0; i--) {
+						var code = codes[i];
+						var parent = code.parentNode;
+						addButton(parent, code);
+					}
+				});
+
+				function addButton (parent, code) {
+					// hide the <pre>
+					code.className += ' sg-hidden';
+
+					// create the <button>
+					var btn = document.createElement('button');
+					btn.className = 'sg-expando sg-expando-reveal';
+					parent.appendChild(btn);
+
+					btn.addEventListener('click', function () {
+						if (~code.className.indexOf('sg-hidden')) {
+							code.className = code.className.replace('sg-hidden', 'sg-visible');
+							btn.className  = btn.className.replace('sg-expando-reveal', 'sg-expando-contract');
+						} else {
+							code.className = code.className.replace('sg-visible', 'sg-hidden');
+							btn.className  = btn.className.replace('sg-expando-contract', 'sg-expando-reveal');
+						}
+					});
+				}
 
 				if (document.location.href.indexOf(anchor[1]) >= 0) {
 					$('html, body').animate({
 						scrollTop: $($('.main #' + anchor[1])).offset().top + 'px'
 					}, 300, 'swing');
 				}
-
-  function ready(fn) {
-      document.attachEvent('onreadystatechange', function() {
-        if (document.readyState === 'interactive') fn();
-      });
-  }
-
-  // create expando buttons
-  ready(function () {
-    var codes = document.querySelectorAll('.sg-example .sg-code');
-
-    for (var i = codes.length-1; i >= 0; i--) {
-      var code = codes[i];
-      var parent = code.parentNode;
-      addButton(parent, code);
-    }
-  });
-
-  function addButton (parent, code) {
-    // hide the <pre>
-    code.className += ' sg-hidden';
-
-    // create the <button>
-    var btn = document.createElement('button');
-    btn.className = 'sg-expando sg-expando-reveal';
-    parent.appendChild(btn);
-
-    btn.addEventListener('click', function () {
-      if (~code.className.indexOf('sg-hidden')) {
-        code.className = code.className.replace('sg-hidden', 'sg-visible');
-        btn.className  = btn.className.replace('sg-expando-reveal', 'sg-expando-contract');
-      } else {
-        code.className = code.className.replace('sg-visible', 'sg-hidden');
-        btn.className  = btn.className.replace('sg-expando-contract', 'sg-expando-reveal');
-      }
-    });
-  }
 
 				// $.ajaxSetup({
 				// 	cache: true,
@@ -84,7 +82,17 @@ $(function() {
 				// $.getScript('js/styledown.js');
 			});
 		}
+
+		$('.sidebar a[href*="#' + anchor[1] + '"]').parent().addClass('active');
+		$('.sidebar a').not('a[href*="#' + anchor[1] + '"]').parent().removeClass('active');
 	});
+
+	var href = document.location.href;
+	var anchor = href.split('#');
+	if (anchor[1]) {
+		$('.sidebar a[href*="#' + anchor[1] + '"]').parent().addClass('active');
+		$('.sidebar a').not('a[href*="#' + anchor[1] + '"]').parent().removeClass('active');
+	}
 
 	// *only* if we have anchor on the url
 	// if (window.location.hash) {
