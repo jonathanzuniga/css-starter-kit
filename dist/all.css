@@ -933,13 +933,13 @@ small {
     padding: 0.813em 0.813em; }
 
 /**
- * Expand button:
- * `.btn--expand`
+ * Expanded button:
+ * `.btn--expanded`
  *
  *     @example
- *     a.btn.btn--primary.btn--lg.btn--expand Expanded button
+ *     a.btn.btn--primary.btn--lg.btn--expanded Expanded button
  */
-.btn--expand {
+.btn--expanded {
   display: block;
   width: 100%; }
 
@@ -974,17 +974,17 @@ small {
       margin-right: -1px; }
 
 /**
- * Expand button group:
- * `.btn-group--expand`
+ * Expanded button group:
+ * `.btn-group--expanded`
  *
  *     @example
- *     div.btn-group.btn-group--expand
+ *     div.btn-group.btn-group--expanded
  *         a.btn.btn--secondary First
  *         a.btn.btn--secondary Second
  *         a.btn.btn--secondary Third
  *         a.btn.btn--secondary Fourth
  */
-.btn-group--expand > .btn {
+.btn-group--expanded > .btn {
   flex-grow: 1; }
 
 /**
@@ -1671,10 +1671,10 @@ th {
 
 /**
  * Bordered table:
- * `.tbl-bordered`
+ * `.tbl--bordered`
  *
  *     @example
- *     table.tbl.tbl-bordered
+ *     table.tbl.tbl--bordered
  *         thead
  *             tr
  *                 th Table heading
@@ -1694,15 +1694,17 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-bordered {
+.tbl--bordered {
   border: 1px solid rgba(51, 51, 51, 0.13); }
+  .tbl--bordered td:not(:last-child), .tbl--bordered th:not(:last-child) {
+    border-right: 1px solid rgba(51, 51, 51, 0.13); }
 
 /**
  * Responsive table:
- * `.tbl-responsive`
+ * `.tbl--responsive`
  *
  *     @example
- *     table.tbl.tbl-responsive
+ *     table.tbl.tbl--responsive
  *         thead
  *             tr
  *                 th Table heading
@@ -1722,21 +1724,21 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-responsive {
+.tbl--responsive {
   overflow-x: auto; }
 
 @media screen and (max-width: 767px) {
-  .tbl-responsive {
+  .tbl--responsive {
     display: block;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-y: hidden; } }
 
 /**
  * Scrolling table:
- * `.tbl-scroll`
+ * `.tbl--scroll`
  *
  *     @example
- *     table.tbl.tbl-scroll
+ *     table.tbl.tbl--scroll
  *         thead
  *             tr
  *                 th Table heading
@@ -1756,11 +1758,39 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-scroll {
+.tbl--scroll {
   display: block;
   overflow-x: auto; }
-  .tbl-scroll th, .tbl-scroll td {
+  .tbl--scroll th, .tbl--scroll td {
     white-space: nowrap; }
+
+/**
+ * Striped table:
+ * `.tbl--striped`
+ *
+ *     @example
+ *     table.tbl.tbl--striped
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--striped tbody tr:nth-child(odd) td, .tbl--striped tbody tr:nth-child(odd) th {
+  background-color: rgba(51, 51, 51, 0.05); }
 
 /***
  * Borders:
@@ -1960,7 +1990,6 @@ th {
 /**
  * Clearfix:
  * `.cf` Clears floats using clearfix hack class.
- * http://nicolasgallagher.com/micro-clearfix-hack/
  *
  *     @example
  *     div.cf
@@ -3016,8 +3045,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-0,
   .xs-el-right-0,
-  .content-indented .xs-el-left-0,
-  .content-indented .xs-el-right-0 {
+  .txt-indent .xs-el-left-0,
+  .txt-indent .xs-el-right-0 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 0%; }
@@ -3029,8 +3058,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-1,
   .xs-el-right-1,
-  .content-indented .xs-el-left-1,
-  .content-indented .xs-el-right-1 {
+  .txt-indent .xs-el-left-1,
+  .txt-indent .xs-el-right-1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 8.33333%; }
@@ -3042,8 +3071,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-2,
   .xs-el-right-2,
-  .content-indented .xs-el-left-2,
-  .content-indented .xs-el-right-2 {
+  .txt-indent .xs-el-left-2,
+  .txt-indent .xs-el-right-2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 16.66667%; }
@@ -3055,8 +3084,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-3,
   .xs-el-right-3,
-  .content-indented .xs-el-left-3,
-  .content-indented .xs-el-right-3 {
+  .txt-indent .xs-el-left-3,
+  .txt-indent .xs-el-right-3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 25%; }
@@ -3068,8 +3097,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-4,
   .xs-el-right-4,
-  .content-indented .xs-el-left-4,
-  .content-indented .xs-el-right-4 {
+  .txt-indent .xs-el-left-4,
+  .txt-indent .xs-el-right-4 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 33.33333%; }
@@ -3081,8 +3110,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-5,
   .xs-el-right-5,
-  .content-indented .xs-el-left-5,
-  .content-indented .xs-el-right-5 {
+  .txt-indent .xs-el-left-5,
+  .txt-indent .xs-el-right-5 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 41.66667%; }
@@ -3094,8 +3123,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-6,
   .xs-el-right-6,
-  .content-indented .xs-el-left-6,
-  .content-indented .xs-el-right-6 {
+  .txt-indent .xs-el-left-6,
+  .txt-indent .xs-el-right-6 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 50%; }
@@ -3107,8 +3136,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-7,
   .xs-el-right-7,
-  .content-indented .xs-el-left-7,
-  .content-indented .xs-el-right-7 {
+  .txt-indent .xs-el-left-7,
+  .txt-indent .xs-el-right-7 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 58.33333%; }
@@ -3120,8 +3149,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-8,
   .xs-el-right-8,
-  .content-indented .xs-el-left-8,
-  .content-indented .xs-el-right-8 {
+  .txt-indent .xs-el-left-8,
+  .txt-indent .xs-el-right-8 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 66.66667%; }
@@ -3133,8 +3162,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-9,
   .xs-el-right-9,
-  .content-indented .xs-el-left-9,
-  .content-indented .xs-el-right-9 {
+  .txt-indent .xs-el-left-9,
+  .txt-indent .xs-el-right-9 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 75%; }
@@ -3146,8 +3175,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-10,
   .xs-el-right-10,
-  .content-indented .xs-el-left-10,
-  .content-indented .xs-el-right-10 {
+  .txt-indent .xs-el-left-10,
+  .txt-indent .xs-el-right-10 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 83.33333%; }
@@ -3159,8 +3188,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xs-el-left-11,
   .xs-el-right-11,
-  .content-indented .xs-el-left-11,
-  .content-indented .xs-el-right-11 {
+  .txt-indent .xs-el-left-11,
+  .txt-indent .xs-el-right-11 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 91.66667%; } }
@@ -3174,8 +3203,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-0,
   .sm-el-right-0,
-  .content-indented .sm-el-left-0,
-  .content-indented .sm-el-right-0 {
+  .txt-indent .sm-el-left-0,
+  .txt-indent .sm-el-right-0 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 0%; }
@@ -3187,8 +3216,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-1,
   .sm-el-right-1,
-  .content-indented .sm-el-left-1,
-  .content-indented .sm-el-right-1 {
+  .txt-indent .sm-el-left-1,
+  .txt-indent .sm-el-right-1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 8.33333%; }
@@ -3200,8 +3229,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-2,
   .sm-el-right-2,
-  .content-indented .sm-el-left-2,
-  .content-indented .sm-el-right-2 {
+  .txt-indent .sm-el-left-2,
+  .txt-indent .sm-el-right-2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 16.66667%; }
@@ -3213,8 +3242,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-3,
   .sm-el-right-3,
-  .content-indented .sm-el-left-3,
-  .content-indented .sm-el-right-3 {
+  .txt-indent .sm-el-left-3,
+  .txt-indent .sm-el-right-3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 25%; }
@@ -3226,8 +3255,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-4,
   .sm-el-right-4,
-  .content-indented .sm-el-left-4,
-  .content-indented .sm-el-right-4 {
+  .txt-indent .sm-el-left-4,
+  .txt-indent .sm-el-right-4 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 33.33333%; }
@@ -3239,8 +3268,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-5,
   .sm-el-right-5,
-  .content-indented .sm-el-left-5,
-  .content-indented .sm-el-right-5 {
+  .txt-indent .sm-el-left-5,
+  .txt-indent .sm-el-right-5 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 41.66667%; }
@@ -3252,8 +3281,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-6,
   .sm-el-right-6,
-  .content-indented .sm-el-left-6,
-  .content-indented .sm-el-right-6 {
+  .txt-indent .sm-el-left-6,
+  .txt-indent .sm-el-right-6 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 50%; }
@@ -3265,8 +3294,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-7,
   .sm-el-right-7,
-  .content-indented .sm-el-left-7,
-  .content-indented .sm-el-right-7 {
+  .txt-indent .sm-el-left-7,
+  .txt-indent .sm-el-right-7 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 58.33333%; }
@@ -3278,8 +3307,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-8,
   .sm-el-right-8,
-  .content-indented .sm-el-left-8,
-  .content-indented .sm-el-right-8 {
+  .txt-indent .sm-el-left-8,
+  .txt-indent .sm-el-right-8 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 66.66667%; }
@@ -3291,8 +3320,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-9,
   .sm-el-right-9,
-  .content-indented .sm-el-left-9,
-  .content-indented .sm-el-right-9 {
+  .txt-indent .sm-el-left-9,
+  .txt-indent .sm-el-right-9 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 75%; }
@@ -3304,8 +3333,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-10,
   .sm-el-right-10,
-  .content-indented .sm-el-left-10,
-  .content-indented .sm-el-right-10 {
+  .txt-indent .sm-el-left-10,
+  .txt-indent .sm-el-right-10 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 83.33333%; }
@@ -3317,8 +3346,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .sm-el-left-11,
   .sm-el-right-11,
-  .content-indented .sm-el-left-11,
-  .content-indented .sm-el-right-11 {
+  .txt-indent .sm-el-left-11,
+  .txt-indent .sm-el-right-11 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 91.66667%; } }
@@ -3332,8 +3361,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-0,
   .md-el-right-0,
-  .content-indented .md-el-left-0,
-  .content-indented .md-el-right-0 {
+  .txt-indent .md-el-left-0,
+  .txt-indent .md-el-right-0 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 0%; }
@@ -3345,8 +3374,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-1,
   .md-el-right-1,
-  .content-indented .md-el-left-1,
-  .content-indented .md-el-right-1 {
+  .txt-indent .md-el-left-1,
+  .txt-indent .md-el-right-1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 8.33333%; }
@@ -3358,8 +3387,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-2,
   .md-el-right-2,
-  .content-indented .md-el-left-2,
-  .content-indented .md-el-right-2 {
+  .txt-indent .md-el-left-2,
+  .txt-indent .md-el-right-2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 16.66667%; }
@@ -3371,8 +3400,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-3,
   .md-el-right-3,
-  .content-indented .md-el-left-3,
-  .content-indented .md-el-right-3 {
+  .txt-indent .md-el-left-3,
+  .txt-indent .md-el-right-3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 25%; }
@@ -3384,8 +3413,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-4,
   .md-el-right-4,
-  .content-indented .md-el-left-4,
-  .content-indented .md-el-right-4 {
+  .txt-indent .md-el-left-4,
+  .txt-indent .md-el-right-4 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 33.33333%; }
@@ -3397,8 +3426,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-5,
   .md-el-right-5,
-  .content-indented .md-el-left-5,
-  .content-indented .md-el-right-5 {
+  .txt-indent .md-el-left-5,
+  .txt-indent .md-el-right-5 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 41.66667%; }
@@ -3410,8 +3439,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-6,
   .md-el-right-6,
-  .content-indented .md-el-left-6,
-  .content-indented .md-el-right-6 {
+  .txt-indent .md-el-left-6,
+  .txt-indent .md-el-right-6 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 50%; }
@@ -3423,8 +3452,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-7,
   .md-el-right-7,
-  .content-indented .md-el-left-7,
-  .content-indented .md-el-right-7 {
+  .txt-indent .md-el-left-7,
+  .txt-indent .md-el-right-7 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 58.33333%; }
@@ -3436,8 +3465,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-8,
   .md-el-right-8,
-  .content-indented .md-el-left-8,
-  .content-indented .md-el-right-8 {
+  .txt-indent .md-el-left-8,
+  .txt-indent .md-el-right-8 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 66.66667%; }
@@ -3449,8 +3478,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-9,
   .md-el-right-9,
-  .content-indented .md-el-left-9,
-  .content-indented .md-el-right-9 {
+  .txt-indent .md-el-left-9,
+  .txt-indent .md-el-right-9 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 75%; }
@@ -3462,8 +3491,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-10,
   .md-el-right-10,
-  .content-indented .md-el-left-10,
-  .content-indented .md-el-right-10 {
+  .txt-indent .md-el-left-10,
+  .txt-indent .md-el-right-10 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 83.33333%; }
@@ -3475,8 +3504,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .md-el-left-11,
   .md-el-right-11,
-  .content-indented .md-el-left-11,
-  .content-indented .md-el-right-11 {
+  .txt-indent .md-el-left-11,
+  .txt-indent .md-el-right-11 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 91.66667%; } }
@@ -3490,8 +3519,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-0,
   .lg-el-right-0,
-  .content-indented .lg-el-left-0,
-  .content-indented .lg-el-right-0 {
+  .txt-indent .lg-el-left-0,
+  .txt-indent .lg-el-right-0 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 0%; }
@@ -3503,8 +3532,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-1,
   .lg-el-right-1,
-  .content-indented .lg-el-left-1,
-  .content-indented .lg-el-right-1 {
+  .txt-indent .lg-el-left-1,
+  .txt-indent .lg-el-right-1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 8.33333%; }
@@ -3516,8 +3545,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-2,
   .lg-el-right-2,
-  .content-indented .lg-el-left-2,
-  .content-indented .lg-el-right-2 {
+  .txt-indent .lg-el-left-2,
+  .txt-indent .lg-el-right-2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 16.66667%; }
@@ -3529,8 +3558,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-3,
   .lg-el-right-3,
-  .content-indented .lg-el-left-3,
-  .content-indented .lg-el-right-3 {
+  .txt-indent .lg-el-left-3,
+  .txt-indent .lg-el-right-3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 25%; }
@@ -3542,8 +3571,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-4,
   .lg-el-right-4,
-  .content-indented .lg-el-left-4,
-  .content-indented .lg-el-right-4 {
+  .txt-indent .lg-el-left-4,
+  .txt-indent .lg-el-right-4 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 33.33333%; }
@@ -3555,8 +3584,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-5,
   .lg-el-right-5,
-  .content-indented .lg-el-left-5,
-  .content-indented .lg-el-right-5 {
+  .txt-indent .lg-el-left-5,
+  .txt-indent .lg-el-right-5 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 41.66667%; }
@@ -3568,8 +3597,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-6,
   .lg-el-right-6,
-  .content-indented .lg-el-left-6,
-  .content-indented .lg-el-right-6 {
+  .txt-indent .lg-el-left-6,
+  .txt-indent .lg-el-right-6 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 50%; }
@@ -3581,8 +3610,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-7,
   .lg-el-right-7,
-  .content-indented .lg-el-left-7,
-  .content-indented .lg-el-right-7 {
+  .txt-indent .lg-el-left-7,
+  .txt-indent .lg-el-right-7 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 58.33333%; }
@@ -3594,8 +3623,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-8,
   .lg-el-right-8,
-  .content-indented .lg-el-left-8,
-  .content-indented .lg-el-right-8 {
+  .txt-indent .lg-el-left-8,
+  .txt-indent .lg-el-right-8 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 66.66667%; }
@@ -3607,8 +3636,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-9,
   .lg-el-right-9,
-  .content-indented .lg-el-left-9,
-  .content-indented .lg-el-right-9 {
+  .txt-indent .lg-el-left-9,
+  .txt-indent .lg-el-right-9 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 75%; }
@@ -3620,8 +3649,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-10,
   .lg-el-right-10,
-  .content-indented .lg-el-left-10,
-  .content-indented .lg-el-right-10 {
+  .txt-indent .lg-el-left-10,
+  .txt-indent .lg-el-right-10 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 83.33333%; }
@@ -3633,8 +3662,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .lg-el-left-11,
   .lg-el-right-11,
-  .content-indented .lg-el-left-11,
-  .content-indented .lg-el-right-11 {
+  .txt-indent .lg-el-left-11,
+  .txt-indent .lg-el-right-11 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 91.66667%; } }
@@ -3648,8 +3677,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-0,
   .xl-el-right-0,
-  .content-indented .xl-el-left-0,
-  .content-indented .xl-el-right-0 {
+  .txt-indent .xl-el-left-0,
+  .txt-indent .xl-el-right-0 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 0%; }
@@ -3661,8 +3690,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-1,
   .xl-el-right-1,
-  .content-indented .xl-el-left-1,
-  .content-indented .xl-el-right-1 {
+  .txt-indent .xl-el-left-1,
+  .txt-indent .xl-el-right-1 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 8.33333%; }
@@ -3674,8 +3703,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-2,
   .xl-el-right-2,
-  .content-indented .xl-el-left-2,
-  .content-indented .xl-el-right-2 {
+  .txt-indent .xl-el-left-2,
+  .txt-indent .xl-el-right-2 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 16.66667%; }
@@ -3687,8 +3716,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-3,
   .xl-el-right-3,
-  .content-indented .xl-el-left-3,
-  .content-indented .xl-el-right-3 {
+  .txt-indent .xl-el-left-3,
+  .txt-indent .xl-el-right-3 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 25%; }
@@ -3700,8 +3729,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-4,
   .xl-el-right-4,
-  .content-indented .xl-el-left-4,
-  .content-indented .xl-el-right-4 {
+  .txt-indent .xl-el-left-4,
+  .txt-indent .xl-el-right-4 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 33.33333%; }
@@ -3713,8 +3742,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-5,
   .xl-el-right-5,
-  .content-indented .xl-el-left-5,
-  .content-indented .xl-el-right-5 {
+  .txt-indent .xl-el-left-5,
+  .txt-indent .xl-el-right-5 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 41.66667%; }
@@ -3726,8 +3755,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-6,
   .xl-el-right-6,
-  .content-indented .xl-el-left-6,
-  .content-indented .xl-el-right-6 {
+  .txt-indent .xl-el-left-6,
+  .txt-indent .xl-el-right-6 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 50%; }
@@ -3739,8 +3768,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-7,
   .xl-el-right-7,
-  .content-indented .xl-el-left-7,
-  .content-indented .xl-el-right-7 {
+  .txt-indent .xl-el-left-7,
+  .txt-indent .xl-el-right-7 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 58.33333%; }
@@ -3752,8 +3781,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-8,
   .xl-el-right-8,
-  .content-indented .xl-el-left-8,
-  .content-indented .xl-el-right-8 {
+  .txt-indent .xl-el-left-8,
+  .txt-indent .xl-el-right-8 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 66.66667%; }
@@ -3765,8 +3794,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-9,
   .xl-el-right-9,
-  .content-indented .xl-el-left-9,
-  .content-indented .xl-el-right-9 {
+  .txt-indent .xl-el-left-9,
+  .txt-indent .xl-el-right-9 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 75%; }
@@ -3778,8 +3807,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-10,
   .xl-el-right-10,
-  .content-indented .xl-el-left-10,
-  .content-indented .xl-el-right-10 {
+  .txt-indent .xl-el-left-10,
+  .txt-indent .xl-el-right-10 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 83.33333%; }
@@ -3791,8 +3820,8 @@ a.ac-txtc:not(.btn):hover,
     margin-left: 1rem; }
   .xl-el-left-11,
   .xl-el-right-11,
-  .content-indented .xl-el-left-11,
-  .content-indented .xl-el-right-11 {
+  .txt-indent .xl-el-left-11,
+  .txt-indent .xl-el-right-11 {
     margin-top: 0.5rem;
     margin-bottom: 0;
     width: 91.66667%; } }

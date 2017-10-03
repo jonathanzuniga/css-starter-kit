@@ -212,14 +212,14 @@
 										li
 											a(href='elements.html#button-size') Button size
 										li
-											a(href='elements.html#expand-button') Expand button
+											a(href='elements.html#expand-button') Expanded button
 								li
 									a(href='elements.html#button-group') Button group
 									ul.ls-unstyled
 										li
 											a(href='elements.html#normal-button-group') Normal button group
 										li
-											a(href='elements.html#expand-button-group') Expand button group
+											a(href='elements.html#expand-button-group') Expanded button group
 										li
 											a(href='elements.html#button-group-size') Button group size
 								li
@@ -256,6 +256,8 @@
 											a(href='elements.html#responsive-table') Responsive table
 										li
 											a(href='elements.html#scrolling-table') Scrolling table
+										li
+											a(href='elements.html#striped-table') Striped table
 
 						div.xs-col-12.sm-col-6.md-col-12
 							h3 Helpers
@@ -359,9 +361,9 @@
 										li
 											a(href='helpers.html#italic-text') Italic text
 										li
-											a(href='helpers.html#font-small') Font small
+											a(href='helpers.html#small-font') Small font
 										li
-											a(href='helpers.html#font-large') Font large
+											a(href='helpers.html#large-font') Large font
 								li
 									a(href='helpers.html#text-alignment') Text alignment
 									ul.ls-unstyled
@@ -390,13 +392,13 @@
 										li
 											a(href='helpers.html#selecting-all-text-with-one-click') Selecting all text with one click
 										li
-											a(href='helpers.html#text-strike') Text strike
+											a(href='helpers.html#strikethrough-text') Strikethrough text
 										li
 											a(href='helpers.html#drop-cap') Drop cap
 										li
 											a(href='helpers.html#small-caps') Small caps
 										li
-											a(href='helpers.html#txt-indent') Indent text
+											a(href='helpers.html#indent-txt') Indent text
 										li
 											a(href='helpers.html#divide-the-content-in-columns') Divide the content in columns
 

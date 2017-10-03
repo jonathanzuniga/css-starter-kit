@@ -498,13 +498,13 @@ small {
     padding: 0.813em 0.813em; }
 
 /**
- * Expand button:
- * `.btn--expand`
+ * Expanded button:
+ * `.btn--expanded`
  *
  *     @example
- *     a.btn.btn--primary.btn--lg.btn--expand Expanded button
+ *     a.btn.btn--primary.btn--lg.btn--expanded Expanded button
  */
-.btn--expand {
+.btn--expanded {
   display: block;
   width: 100%; }
 
@@ -539,17 +539,17 @@ small {
       margin-right: -1px; }
 
 /**
- * Expand button group:
- * `.btn-group--expand`
+ * Expanded button group:
+ * `.btn-group--expanded`
  *
  *     @example
- *     div.btn-group.btn-group--expand
+ *     div.btn-group.btn-group--expanded
  *         a.btn.btn--secondary First
  *         a.btn.btn--secondary Second
  *         a.btn.btn--secondary Third
  *         a.btn.btn--secondary Fourth
  */
-.btn-group--expand > .btn {
+.btn-group--expanded > .btn {
   flex-grow: 1; }
 
 /**
@@ -1236,10 +1236,10 @@ th {
 
 /**
  * Bordered table:
- * `.tbl-bordered`
+ * `.tbl--bordered`
  *
  *     @example
- *     table.tbl.tbl-bordered
+ *     table.tbl.tbl--bordered
  *         thead
  *             tr
  *                 th Table heading
@@ -1259,15 +1259,17 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-bordered {
+.tbl--bordered {
   border: 1px solid rgba(51, 51, 51, 0.13); }
+  .tbl--bordered td:not(:last-child), .tbl--bordered th:not(:last-child) {
+    border-right: 1px solid rgba(51, 51, 51, 0.13); }
 
 /**
  * Responsive table:
- * `.tbl-responsive`
+ * `.tbl--responsive`
  *
  *     @example
- *     table.tbl.tbl-responsive
+ *     table.tbl.tbl--responsive
  *         thead
  *             tr
  *                 th Table heading
@@ -1287,21 +1289,21 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-responsive {
+.tbl--responsive {
   overflow-x: auto; }
 
 @media screen and (max-width: 767px) {
-  .tbl-responsive {
+  .tbl--responsive {
     display: block;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-y: hidden; } }
 
 /**
  * Scrolling table:
- * `.tbl-scroll`
+ * `.tbl--scroll`
  *
  *     @example
- *     table.tbl.tbl-scroll
+ *     table.tbl.tbl--scroll
  *         thead
  *             tr
  *                 th Table heading
@@ -1321,8 +1323,36 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl-scroll {
+.tbl--scroll {
   display: block;
   overflow-x: auto; }
-  .tbl-scroll th, .tbl-scroll td {
+  .tbl--scroll th, .tbl--scroll td {
     white-space: nowrap; }
+
+/**
+ * Striped table:
+ * `.tbl--striped`
+ *
+ *     @example
+ *     table.tbl.tbl--striped
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--striped tbody tr:nth-child(odd) td, .tbl--striped tbody tr:nth-child(odd) th {
+  background-color: rgba(51, 51, 51, 0.05); }
