@@ -1,10 +1,18 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var rename = require('gulp-rename');
 var styledown = require('gulp-styledown');
 
 gulp.task('sass', function() {
 	return gulp.src('src/*.scss') // Source files.
 		.pipe(sass()) // Using gulp-sass.
+		.pipe(gulp.dest('dist')) // Destination.
+});
+
+gulp.task('sass-compressed', function() {
+	return gulp.src('src/*.scss') // Source files.
+		.pipe(sass({outputStyle: 'compressed'})) // Using gulp-sass.
+		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist')) // Destination.
 });
 

@@ -23,9 +23,12 @@ ul, ol, dl, figure,
 }
 
 a {
-	color: $link-color;
 	text-decoration: $link-decoration;
 	transition: $base-transition;
+		
+	&:link {
+		color: $link-color;
+	}
 
 	&:visited {
 		color: $link-visited-color;
