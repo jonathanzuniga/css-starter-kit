@@ -9,7 +9,7 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('dist')) // Destination.
 });
 
-gulp.task('sass-compressed', function() {
+gulp.task('sass-min', function() {
 	return gulp.src('src/*.scss') // Source files.
 		.pipe(sass({outputStyle: 'compressed'})) // Using gulp-sass.
 		.pipe(rename({suffix: '.min'}))

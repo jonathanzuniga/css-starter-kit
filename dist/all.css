@@ -161,8 +161,9 @@
   justify-content: space-between; }
 
 .navbar-responsive .navbar__toggler {
-  display: flex; }
-  .navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+  display: flex;
+  order: 2; }
+  .navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
     max-height: 600px;
     opacity: 1;
     transform: translateY(0);
@@ -173,7 +174,7 @@
   max-height: 0;
   opacity: 0;
   padding: 0 1rem;
-  transform: translateY(-1rem);
+  transform: translateY(1rem);
   transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
   width: 100%;
   z-index: -1; }
@@ -182,9 +183,15 @@
     opacity: 1;
     transform: translateY(0);
     z-index: 10; }
+  .navbar-responsive .navbar__collapse:first-of-type {
+    order: 4; }
+  .navbar-responsive .navbar__collapse:last-of-type {
+    order: 3; }
 
 .navbar-responsive .navbar__menu,
-.navbar-responsive .navbar__item,
+.navbar-responsive .navbar__item {
+  flex-direction: column; }
+
 .navbar-responsive .navbar__link,
 .navbar-responsive .navbar__form {
   display: block;
@@ -207,8 +214,9 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .maxxs-navbar-responsive .navbar__toggler {
-    display: flex; }
-    .maxxs-navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+    display: flex;
+    order: 2; }
+    .maxxs-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -218,7 +226,7 @@
     max-height: 0;
     opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(1rem);
     transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
     width: 100%;
     z-index: -1; }
@@ -227,8 +235,13 @@
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
+    .maxxs-navbar-responsive .navbar__collapse:first-of-type {
+      order: 4; }
+    .maxxs-navbar-responsive .navbar__collapse:last-of-type {
+      order: 3; }
   .maxxs-navbar-responsive .navbar__menu,
-  .maxxs-navbar-responsive .navbar__item,
+  .maxxs-navbar-responsive .navbar__item {
+    flex-direction: column; }
   .maxxs-navbar-responsive .navbar__link,
   .maxxs-navbar-responsive .navbar__form {
     display: block;
@@ -248,8 +261,9 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .maxsm-navbar-responsive .navbar__toggler {
-    display: flex; }
-    .maxsm-navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+    display: flex;
+    order: 2; }
+    .maxsm-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -259,7 +273,7 @@
     max-height: 0;
     opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(1rem);
     transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
     width: 100%;
     z-index: -1; }
@@ -268,8 +282,13 @@
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
+    .maxsm-navbar-responsive .navbar__collapse:first-of-type {
+      order: 4; }
+    .maxsm-navbar-responsive .navbar__collapse:last-of-type {
+      order: 3; }
   .maxsm-navbar-responsive .navbar__menu,
-  .maxsm-navbar-responsive .navbar__item,
+  .maxsm-navbar-responsive .navbar__item {
+    flex-direction: column; }
   .maxsm-navbar-responsive .navbar__link,
   .maxsm-navbar-responsive .navbar__form {
     display: block;
@@ -289,8 +308,9 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .maxmd-navbar-responsive .navbar__toggler {
-    display: flex; }
-    .maxmd-navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+    display: flex;
+    order: 2; }
+    .maxmd-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -300,7 +320,7 @@
     max-height: 0;
     opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(1rem);
     transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
     width: 100%;
     z-index: -1; }
@@ -309,8 +329,13 @@
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
+    .maxmd-navbar-responsive .navbar__collapse:first-of-type {
+      order: 4; }
+    .maxmd-navbar-responsive .navbar__collapse:last-of-type {
+      order: 3; }
   .maxmd-navbar-responsive .navbar__menu,
-  .maxmd-navbar-responsive .navbar__item,
+  .maxmd-navbar-responsive .navbar__item {
+    flex-direction: column; }
   .maxmd-navbar-responsive .navbar__link,
   .maxmd-navbar-responsive .navbar__form {
     display: block;
@@ -330,8 +355,9 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .maxlg-navbar-responsive .navbar__toggler {
-    display: flex; }
-    .maxlg-navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+    display: flex;
+    order: 2; }
+    .maxlg-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -341,7 +367,7 @@
     max-height: 0;
     opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(1rem);
     transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
     width: 100%;
     z-index: -1; }
@@ -350,8 +376,13 @@
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
+    .maxlg-navbar-responsive .navbar__collapse:first-of-type {
+      order: 4; }
+    .maxlg-navbar-responsive .navbar__collapse:last-of-type {
+      order: 3; }
   .maxlg-navbar-responsive .navbar__menu,
-  .maxlg-navbar-responsive .navbar__item,
+  .maxlg-navbar-responsive .navbar__item {
+    flex-direction: column; }
   .maxlg-navbar-responsive .navbar__link,
   .maxlg-navbar-responsive .navbar__form {
     display: block;
@@ -371,8 +402,9 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .maxxl-navbar-responsive .navbar__toggler {
-    display: flex; }
-    .maxxl-navbar-responsive .navbar__toggler:focus + .navbar__collapse {
+    display: flex;
+    order: 2; }
+    .maxxl-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -382,7 +414,7 @@
     max-height: 0;
     opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
+    transform: translateY(1rem);
     transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
     width: 100%;
     z-index: -1; }
@@ -391,8 +423,13 @@
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
+    .maxxl-navbar-responsive .navbar__collapse:first-of-type {
+      order: 4; }
+    .maxxl-navbar-responsive .navbar__collapse:last-of-type {
+      order: 3; }
   .maxxl-navbar-responsive .navbar__menu,
-  .maxxl-navbar-responsive .navbar__item,
+  .maxxl-navbar-responsive .navbar__item {
+    flex-direction: column; }
   .maxxl-navbar-responsive .navbar__link,
   .maxxl-navbar-responsive .navbar__form {
     display: block;
@@ -412,14 +449,15 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive
- *         ul.navbar__menu.maxlg-hide
- *             li.navbar__item
- *                 a(href="").navbar__link RSS feed
- *             li.navbar__item
- *                 a(href="").navbar__link Follow me
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item
+ *                     a(href="").navbar__link RSS feed
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Follow me
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
- *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.navbar__item--active

@@ -159,8 +159,9 @@
 @mixin navbar-responsive-collapse {
 	.navbar__toggler {
 		display: flex;
+		order: 2;
 
-		&:focus + .navbar__collapse {
+		&:focus ~ .navbar__collapse {
 			@include navbar-responsive-collapse-focus;
 		}
 
@@ -175,7 +176,7 @@
 		max-height: 0;
 		opacity: 0;
 		padding: 0 $half-spacing-unit;
-		transform: translateY(-$half-spacing-unit);
+		transform: translateY($half-spacing-unit);
 		transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
 		width: 100%;
 		z-index: -1;
@@ -187,6 +188,14 @@
 		// &:not(:focus-within) {
 		// 	animation: fade-out-move-up 0.4s;
 		// }
+
+		&:first-of-type {
+			order: 4;
+		}
+
+		&:last-of-type {
+			order: 3;
+		}
 	}
 
 	// @keyframes fade-in-move-down {
@@ -218,7 +227,10 @@
 	// }
 
 	.navbar__menu,
-	.navbar__item,
+	.navbar__item {
+		flex-direction: column;
+	}
+
 	.navbar__link,
 	.navbar__form {
 		display: block;
@@ -267,14 +279,15 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive
- *         ul.navbar__menu.maxlg-hide
- *             li.navbar__item
- *                 a(href="").navbar__link RSS feed
- *             li.navbar__item
- *                 a(href="").navbar__link Follow me
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item
+ *                     a(href="").navbar__link RSS feed
+ *                 li.navbar__item
+ *                     a(href="").navbar__link Follow me
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
- *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.navbar__item--active
