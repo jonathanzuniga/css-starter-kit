@@ -3763,6 +3763,28 @@ a.ac-txtc:not(.btn):hover,
   font-style: italic; }
 
 /**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+  text-decoration: line-through; }
+
+/**
+ * Highlighting text:
+ * `.txt-hl`
+ *
+ *     @example
+ *     p 
+ *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-hl {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(-100deg, rgba(255, 220, 178, 0.3), rgba(255, 220, 178, 0.7) 95%, rgba(255, 220, 178, 0.1)); }
+
+/**
  * Small font:
  * `.txt-sm`
  *
@@ -3942,18 +3964,6 @@ a.ac-txtc:not(.btn):hover,
  * Other text helpers:
  */
 /**
- * Highlighting text:
- * `.txt-hl`
- *
- *     @example
- *     p 
- *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-hl {
-  border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(-100deg, rgba(255, 220, 178, 0.3), rgba(255, 220, 178, 0.7) 95%, rgba(255, 220, 178, 0.1)); }
-
-/**
  * Selecting all text with one click:
  * `.txt-select`
  *
@@ -3969,16 +3979,6 @@ a.ac-txtc:not(.btn):hover,
   /* IE 10+ */
   user-select: all;
   /* Standard syntax */ }
-
-/**
- * Strikethrough text:
- * `.txt-strike`
- *
- *     @example
- *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-strike {
-  text-decoration: line-through; }
 
 /**
  * Drop cap:

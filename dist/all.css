@@ -24,7 +24,7 @@
   border: 1px solid rgba(51, 51, 51, 0.13);
   border-radius: 0.25rem;
   box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; }
   .card:hover {
     box-shadow: 0 0.063em 1rem rgba(0, 0, 0, 0.15); }
 
@@ -507,7 +507,7 @@ ul, ol, dl, figure,
 
 a {
   text-decoration: none;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; }
   a:link {
     color: #3a8bbb; }
   a:visited {
@@ -731,7 +731,7 @@ small {
   line-height: 1.0625rem;
   padding: 0.5em 0.5em;
   text-align: center;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   vertical-align: middle;
   white-space: nowrap;
   -moz-appearance: none;
@@ -1096,7 +1096,7 @@ small {
   font-size: 16px;
   line-height: 1.0625rem;
   padding: 0.5em 0.5em;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, border-width 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%; }
   .input:active {
     border-color: #65a4ca; }
@@ -5613,6 +5613,28 @@ a.ac-txtc:not(.btn):hover,
   font-style: italic; }
 
 /**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+  text-decoration: line-through; }
+
+/**
+ * Highlighting text:
+ * `.txt-hl`
+ *
+ *     @example
+ *     p 
+ *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-hl {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(-100deg, rgba(255, 220, 178, 0.3), rgba(255, 220, 178, 0.7) 95%, rgba(255, 220, 178, 0.1)); }
+
+/**
  * Small font:
  * `.txt-sm`
  *
@@ -5792,18 +5814,6 @@ a.ac-txtc:not(.btn):hover,
  * Other text helpers:
  */
 /**
- * Highlighting text:
- * `.txt-hl`
- *
- *     @example
- *     p 
- *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-hl {
-  border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(-100deg, rgba(255, 220, 178, 0.3), rgba(255, 220, 178, 0.7) 95%, rgba(255, 220, 178, 0.1)); }
-
-/**
  * Selecting all text with one click:
  * `.txt-select`
  *
@@ -5819,16 +5829,6 @@ a.ac-txtc:not(.btn):hover,
   /* IE 10+ */
   user-select: all;
   /* Standard syntax */ }
-
-/**
- * Strikethrough text:
- * `.txt-strike`
- *
- *     @example
- *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-strike {
-  text-decoration: line-through; }
 
 /**
  * Drop cap:

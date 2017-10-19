@@ -371,6 +371,10 @@
 										li
 											a(href='helpers.html#italic-text') Italic text
 										li
+											a(href='helpers.html#strikethrough-text') Strikethrough text
+										li
+											a(href='helpers.html#highlighting-text') Highlighting text
+										li
 											a(href='helpers.html#small-font') Small font
 										li
 											a(href='helpers.html#large-font') Large font
@@ -398,11 +402,7 @@
 									a(href='helpers.html#other-text-helpers') Other text helpers
 									ul.ls-unstyled
 										li
-											a(href='helpers.html#highlighting-text') Highlighting text
-										li
 											a(href='helpers.html#selecting-all-text-with-one-click') Selecting all text with one click
-										li
-											a(href='helpers.html#strikethrough-text') Strikethrough text
 										li
 											a(href='helpers.html#drop-cap') Drop cap
 										li
