@@ -58,6 +58,16 @@
 				grid-gap: $gutter-width;
 				grid-template-columns: repeat($i, 1fr);
 			}
+
+			.#{$size}-gcol-#{$i} {
+				grid-column: #{$i};
+			}
+
+			.#{$size}-grid-0 {
+				.#{$size}-gcol-#{$i} {
+					grid-column: auto;
+				}
+			}
 		}
 	}
 	
@@ -68,6 +78,32 @@
 				grid-gap: $gutter-width;
 				grid-template-columns: repeat($i, 1fr);
 			}
+
+			.max#{$size}-gcol-#{$i} {
+				grid-column: #{$i};
+			}
+
+			.#{$size}-grid-0 {
+				.max#{$size}-gcol-#{$i} {
+					grid-column: auto;
+				}
+			}
 		}
 	}
 }
+
+/**
+ * Place items on the grid:
+ * `.[size]-gcol-[#]` `.max[size]-gcol-[#]`
+ *
+ *     @example
+ *     div.xs-grid-2.md-grid-3
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-3 &nbsp;
+ *         div.maxmd-gcol-2
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-gcol-2.maxmd-hide
+ *             div.bgc-grey-3 &nbsp;
+ */

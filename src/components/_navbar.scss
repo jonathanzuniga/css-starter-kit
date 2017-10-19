@@ -12,17 +12,17 @@
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
- *             ul.navbar__menu
- *                 li.navbar__item.navbar__item--active
+ *             ul.navbar__menu.maxsm-txt-center
+ *                 li.navbar__item.navbar__item--active.maxsm-bd-top
  *                     a(href="").navbar__link Home
- *                 li.navbar__item
+ *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link Archive
- *                 li.navbar__item
+ *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link About
- *             form.navbar__form
+ *             form.navbar__form.maxsm-txt-center.maxsm-bd-top
  *                 div.input-group
  *                     div.input-group-btn
- *                         input(type='search', placeholder='Search...').input.input--line.maxsm-txt-center
+ *                         input(type='search', placeholder='Search').input.input--line.maxsm-txt-center
  *                         a.btn.btn--secondary.maxsm-hide Go
  */
 .navbar,
@@ -92,12 +92,12 @@
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
- *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.navbar__item--active
+ *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
+ *                 li.navbar__item.navbar__item--active.maxsm-bd-top
  *                     a(href="").navbar__link Home
- *                 li.navbar__item
+ *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link Archive
- *                 li.navbar__item
+ *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link About
  */
 // .navbar__collapse:last-child {
@@ -243,10 +243,11 @@
 		width: 100%;
 	}
 
-	.navbar__item,
-	.navbar__form {
-		border-top: $border-width $border-style $border-color;
-		text-align: center;
+	.navbar__item {
+		.navbar__link {
+			padding-right: 0;
+			padding-left: 0;
+		}
 	}
 
 	.navbar__form {
@@ -289,17 +290,15 @@
  *             a(href="").navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
- *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-gutters-0
- *                 li.navbar__item.navbar__item--active
+ *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-gutters-0.maxlg-txt-center
+ *                 li.navbar__item.navbar__item--active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href="").navbar__link Home
- *                 li.navbar__item.xs-bd-left.lg-bd-left-0
+ *                 li.navbar__item.xs-bd-bottom.xs-bd-left.md-bd-x.lg-bd-0
  *                     a(href="").navbar__link Archive
- *                 li.navbar__item.md-bd-left.lg-bd-left-0
+ *                 li.navbar__item.md-bd-bottom.lg-bd-bottom-0
  *                     a(href="").navbar__link Contact
- *                 li.navbar__item.xs-bd-left.md-bd-left-0.maxmd-hide.lg-hide
- *                 li.navbar__item.xs-bd-left.lg-bd-left-0
+ *                 li.navbar__item.xs-bd-left.md-bd-x.lg-bd-x-0.md-gcol-2
  *                     a(href="").navbar__link About
- *                 li.navbar__item.xs-bd-left.maxmd-hide.lg-hide
  */
 
 /**
@@ -309,27 +308,27 @@
  *     nav.navbar.maxlg-navbar-responsive
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
- *             ul.navbar__menu
- *                 li.navbar__item
+ *             ul.navbar__menu.maxlg-txt-center
+ *                 li.navbar__item.maxlg-bd-top
  *                     a(href="").navbar__link RSS feed
- *                 li.navbar__item
+ *                 li.navbar__item.maxlg-bd-top
  *                     a(href="").navbar__link Follow me
  *         div.navbar__brand
  *             a(href="").navbar__link Brand
  *         div.navbar__collapse
- *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.navbar__item--active
+ *             ul.navbar__menu.navbar__menu--right.maxlg-txt-center
+ *                 li.navbar__item.navbar__item--active.maxlg-bd-top
  *                     a(href="").navbar__link Home
- *                 li.navbar__item
+ *                 li.navbar__item.maxlg-bd-top
  *                     a(href="").navbar__link Archive
- *                 li.navbar__item
+ *                 li.navbar__item.maxlg-bd-top
  *                     a(href="").navbar__link About
  */
 
 [class*="container"] {
 	.row {
 		> .col,
-		> [class*="col-"] {
+		> [class*="-col-"] {
 			> .navbar {
 				margin-left: -$half-spacing-unit;
 				margin-right: -$half-spacing-unit;
