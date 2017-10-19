@@ -100,6 +100,12 @@
  *                 li.navbar__item
  *                     a(href="").navbar__link About
  */
+// .navbar__collapse:last-child {
+// 	.navbar__menu {
+// 		justify-content: flex-end;
+// 	}
+// }
+
 .navbar__menu--right {
 	justify-content: flex-end;
 }
@@ -176,7 +182,7 @@
 		max-height: 0;
 		opacity: 0;
 		padding: 0 $half-spacing-unit;
-		transform: translateY($half-spacing-unit);
+		transform: translateY(-$half-spacing-unit);
 		transition: max-height 0.32s ease-in-out, opacity 0.32s ease-in-out, transform 0.32s ease-in-out, z-index 0.32s ease-in-out;
 		width: 100%;
 		z-index: -1;
@@ -273,6 +279,28 @@
 		}
 	}
 }
+
+/**
+ * Responsive navbar grid menu:
+ *
+ *     @example
+ *     nav.navbar.maxlg-navbar-responsive
+ *         div.navbar__brand
+ *             a(href="").navbar__link Brand
+ *         a(href="#!").navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-gutters-0
+ *                 li.navbar__item.navbar__item--active
+ *                     a(href="").navbar__link Home
+ *                 li.navbar__item.xs-bd-left.lg-bd-left-0
+ *                     a(href="").navbar__link Archive
+ *                 li.navbar__item.md-bd-left.lg-bd-left-0
+ *                     a(href="").navbar__link Contact
+ *                 li.navbar__item.xs-bd-left.md-bd-left-0.maxmd-hide.lg-hide
+ *                 li.navbar__item.xs-bd-left.lg-bd-left-0
+ *                     a(href="").navbar__link About
+ *                 li.navbar__item.xs-bd-left.maxmd-hide.lg-hide
+ */
 
 /**
  * Navbar brand in the center:
