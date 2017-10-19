@@ -175,26 +175,12 @@
 
 /**
  * Responsive text alignment:
- * `.max[size]-txt-[position]` `.[size]-txt-[position]`
+ * `.[size]-txt-[position]` `.max[size]-txt-[position]`
  *
  *     @example
  *     p.lg-txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 @each $size, $length in $grid-breakpoints {
-	@media (max-width: $length - 1) {
-		.max#{$size}-txt-left {
-			text-align: left;
-		}
-
-		.max#{$size}-txt-center {
-			text-align: center;
-		}
-
-		.max#{$size}-txt-right {
-			text-align: right;
-		}
-	}
-
 	@media (min-width: $length) {
 		.#{$size}-txt-left {
 			text-align: left;
@@ -205,6 +191,20 @@
 		}
 
 		.#{$size}-txt-right {
+			text-align: right;
+		}
+	}
+	
+	@media (max-width: $length - 1) {
+		.max#{$size}-txt-left {
+			text-align: left;
+		}
+
+		.max#{$size}-txt-center {
+			text-align: center;
+		}
+
+		.max#{$size}-txt-right {
 			text-align: right;
 		}
 	}

@@ -2,17 +2,49 @@
  * Grid:
  */
 
-@each $size, $length in $grid-breakpoints {
-	@media (max-width: $length - 1) {
-		@for $i from 1 through $grid-columns-number {
-			.max#{$size}-grid-#{$i} {
-				display: grid;
-				grid-gap: $gutter-width;
-				grid-template-columns: repeat($i, 1fr);
-			}
-		}
+/**
+ * Grid with flexible sizes:
+ * `.grid-[#]`
+ *
+ *     @example
+ *     div.grid-2
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ */
+@for $i from 1 through $grid-columns-number {
+	.grid-#{$i} {
+		display: grid;
+		grid-gap: $gutter-width;
+		grid-template-columns: repeat($i, 1fr);
 	}
+}
 
+/**
+ * Responsive grid:
+ * `.[size]-grid-[#]` `.max[size]-grid-[#]`
+ *
+ *     @example
+ *     div.xs-grid-2.md-grid-3
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-3 &nbsp;
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-3 &nbsp;
+ *         div
+ *             div.bgc-grey-2 &nbsp;
+ *         div
+ *             div.bgc-grey-3 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		.#{$size}-grid-0 {
 			display: inherit;
@@ -22,6 +54,16 @@
 
 		@for $i from 1 through $grid-columns-number {
 			.#{$size}-grid-#{$i} {
+				display: grid;
+				grid-gap: $gutter-width;
+				grid-template-columns: repeat($i, 1fr);
+			}
+		}
+	}
+	
+	@media (max-width: $length - 1) {
+		@for $i from 1 through $grid-columns-number {
+			.max#{$size}-grid-#{$i} {
 				display: grid;
 				grid-gap: $gutter-width;
 				grid-template-columns: repeat($i, 1fr);

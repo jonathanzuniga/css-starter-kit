@@ -109,7 +109,7 @@
 		}
 
 		.navbar {
-			background-color: rgba(61, 70, 77, 0.1);
+			background-color: rgba(0, 0, 0, 0.05);
 		}
 
 ### Body
@@ -143,6 +143,14 @@
 											a(href='layout.html#rows-and-columns') Rows and columns
 										li
 											a(href='layout.html#responsive-columns') Responsive columns
+								li
+									a(href='layout.html#grid') Grid
+									ul.ls-unstyled
+										li
+											a(href='layout.html#grid-with-flexible-sizes') Grid with flexible sizes
+										li
+											a(href='layout.html#responsive-grid') Responsive grid
+
 								li
 									a(href='layout.html#gutters') Gutters
 								li
@@ -332,9 +340,9 @@
 										li
 											a(href='helpers.html#hide') Hide
 										li
-											a(href='helpers.html#hide-at-maximum-size') Hide at maximum size
-										li
 											a(href='helpers.html#hide-at-minimum-size') Hide at minimum size
+										li
+											a(href='helpers.html#hide-at-maximum-size') Hide at maximum size
 								li
 									a(href='helpers.html#sizing') Sizing
 								li

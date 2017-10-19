@@ -30,15 +30,6 @@
 	}
 
 	@each $size, $length in $grid-breakpoints {
-		@media (max-width: $length - 1) {
-			.max#{$size}-gutters-#{$number} {
-				// Grid gap.
-				&[class*='-grid-'] {
-					grid-gap: $gutter-width * $width;
-				}
-			}
-		}
-
 		@media (min-width: $length) {
 			.#{$size}-gutters-#{$number} {
 				&.row {
@@ -57,12 +48,21 @@
 				}
 			}
 		}
+
+		@media (max-width: $length - 1) {
+			.max#{$size}-gutters-#{$number} {
+				// Grid gap.
+				&[class*='-grid-'] {
+					grid-gap: $gutter-width * $width;
+				}
+			}
+		}
 	}
 }
 
 /**
  * Responsive gutters:
- * `.[size]-gutters-[width]`
+ * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
  *
  *     @example
  *     div.row.md-gutters-0
