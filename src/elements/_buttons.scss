@@ -2,7 +2,17 @@
  * Buttons:
  */
 
+/**
+ * Standard button:
+ * `.btn`
+ *
+ *     @example
+ *     a.btn Button
+ */
 .btn {
+	background-color: $button-background-color;
+	color: $text-color;
+
 	border: $button-border;
 	border-radius: $button-border-radius;
 	box-shadow: none;
@@ -23,6 +33,14 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	&:hover {
+		background-color: 
+			shade(
+				$button-background-color, 
+				$button-hover-background-color-shade-amount
+			);
+	}
 }
 
 @each $name, $background-color, $border-color, $text-color, 
@@ -144,6 +162,7 @@
 	text-decoration: $link-decoration;
 
 	&:hover {
+		background-color: $button-background-color;
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
 	}

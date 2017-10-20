@@ -212,6 +212,8 @@
 									a(href='elements.html#buttons') Buttons
 									ul.ls-unstyled
 										li
+											a(href='elements.html#standard-button') Standard button
+										li
 											a(href='elements.html#link-button') Link button
 										li
 											a(href='elements.html#pill-button') Pill button

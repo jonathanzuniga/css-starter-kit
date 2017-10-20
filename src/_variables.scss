@@ -104,16 +104,17 @@ $control-border-color:  transparent;
 $control-border-radius: rem_to_em($quarter-spacing-unit / 2);
 $control-line-height:   $line-height-ratio - $quarter-spacing-unit;
 $control-padding-y:     rem_to_em($quarter-spacing-unit);
-$control-padding-x:     rem_to_em($quarter-spacing-unit);
+$control-padding-x:     rem_to_em($half-spacing-unit - 0.375);
 
 $control-transparentize-amount: 0.6;
 
-$button-border:        $control-border-width $control-border-style $control-border-color;
-$button-border-radius: $control-border-radius;
-$button-font-weight:   400;
-$button-line-height:   $control-line-height;
-$button-padding:       $control-padding-y $control-padding-x;
-$button-text-color:    #fff;
+$button-background-color: tint(get_color('grey 1'), 90%);
+$button-border:           $control-border-width $control-border-style $control-border-color;
+$button-border-radius:    $control-border-radius;
+$button-font-weight:      400;
+$button-line-height:      $control-line-height;
+$button-padding:          $control-padding-y $control-padding-x;
+$button-text-color:       #fff;
 
 $button-hover-background-color-shade-amount: 12%;
 
@@ -328,8 +329,8 @@ $gutters: (
 
 // Cards
 
-$card-padding: $half-spacing-unit;
-$card-box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
+$card-padding:          $half-spacing-unit;
+$card-box-shadow:       0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 $card-hover-box-shadow: 0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 
