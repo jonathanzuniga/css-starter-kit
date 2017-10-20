@@ -243,6 +243,8 @@
 											a(href='elements.html#input-size') Input size
 										li
 											a(href='elements.html#line-input') Line input
+										li
+											a(href='elements.html#checkboxes-and-radios') Checkboxes and radios
 								li
 									a(href='elements.html#input-group') Input group
 									ul.ls-unstyled

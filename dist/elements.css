@@ -672,6 +672,45 @@ small {
   padding-right: 0;
   padding-left: 0; }
 
+/**
+ * Checkboxes and radios:
+ * 
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio', type='radio', value='')
+ *                     | Radio
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(name='radio', type='radio', value='')
+ *                     | Radio
+ */
+.fld--check {
+  margin-bottom: 0.5rem; }
+
+.lbl--check {
+  padding-left: 1.25rem;
+  position: relative; }
+
+[type='checkbox'],
+[type='radio'] {
+  margin-top: 0.4rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 /***
  * Input group:
  */
