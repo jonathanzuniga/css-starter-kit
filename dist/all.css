@@ -1183,6 +1183,28 @@ small {
  *                 label.lbl.lbl--check
  *                     input(name='radio', type='radio', value='')
  *                     | Radio
+ *     div.row
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
  */
 .fld--check {
   margin-bottom: 0.5rem; }
@@ -1190,10 +1212,12 @@ small {
 .lbl--check {
   padding-left: 1.25rem;
   position: relative; }
+  .lbl--check:not(:last-child) {
+    margin-right: 1.25rem; }
 
 [type='checkbox'],
 [type='radio'] {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   position: absolute;
   top: 0;
   left: 0; }
