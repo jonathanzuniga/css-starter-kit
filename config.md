@@ -40,10 +40,6 @@
 			height: 100px;
 		}
 
-		.sg-example .row + .row {
-			margin-top: 1rem;
-		}
-
 		.sg-block:last-of-type {
 			border-bottom: none;
 		}
@@ -429,6 +425,10 @@
 											a(href='components.html#right-align-navbar-menu') Right align navbar menu
 										li
 											a(href='components.html#responsive-navbar-menu') Responsive navbar menu
+										li
+											a(href='components.html#responsive-navbar-grid-menu') Responsive navbar grid menu
+										li
+											a(href='components.html#navbar-brand-in-the-center') Navbar brand in the center
 
 			div.xs-col-12.md-col-9.xl-col-10.main
 				div.main__content.row.cols-center

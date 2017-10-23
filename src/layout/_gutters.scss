@@ -17,14 +17,14 @@
 	.gutters-#{$number} {
 		&.row {
 			> .col,
-			> [class*="-col-"] {
+			> [class*="col-"] {
 				padding-left: $gutter-width * $width;
 				padding-right: $gutter-width * $width;
 			}
 		}
 
 		// Grid gap.
-		&[class*='-grid-'] {
+		&[class*='grid-'] {
 			grid-gap: $gutter-width * $width;
 		}
 	}
@@ -34,7 +34,7 @@
 			.#{$size}-gutters-#{$number} {
 				&.row {
 					> .col,
-					> [class*="-col-"] {
+					> [class*="col-"] {
 						padding-left: $gutter-width * $width;
 						padding-right: $gutter-width * $width;
 					}
@@ -52,7 +52,7 @@
 		@media (max-width: $length - 1) {
 			.max#{$size}-gutters-#{$number} {
 				// Grid gap.
-				&[class*='-grid-'] {
+				&[class*='grid-'] {
 					grid-gap: $gutter-width * $width;
 				}
 			}

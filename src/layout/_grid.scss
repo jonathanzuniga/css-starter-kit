@@ -59,12 +59,12 @@
 				grid-template-columns: repeat($i, 1fr);
 			}
 
-			.#{$size}-gcol-#{$i} {
+			.#{$size}-cell-x-#{$i} {
 				grid-column: #{$i};
 			}
 
 			.#{$size}-grid-0 {
-				.#{$size}-gcol-#{$i} {
+				.#{$size}-cell-x-#{$i} {
 					grid-column: auto;
 				}
 			}
@@ -79,12 +79,12 @@
 				grid-template-columns: repeat($i, 1fr);
 			}
 
-			.max#{$size}-gcol-#{$i} {
+			.max#{$size}-cell-x-#{$i} {
 				grid-column: #{$i};
 			}
 
 			.#{$size}-grid-0 {
-				.max#{$size}-gcol-#{$i} {
+				.max#{$size}-cell-x-#{$i} {
 					grid-column: auto;
 				}
 			}
@@ -94,7 +94,7 @@
 
 /**
  * Place items on the grid:
- * `.[size]-gcol-[#]` `.max[size]-gcol-[#]`
+ * `.[size]-cell-x-[#]` `.max[size]-cell-x-[#]`
  *
  *     @example
  *     div.xs-grid-2.md-grid-3
@@ -102,8 +102,8 @@
  *             div.bgc-grey-2 &nbsp;
  *         div
  *             div.bgc-grey-3 &nbsp;
- *         div.maxmd-gcol-2
+ *         div.maxmd-cell-x-2
  *             div.bgc-grey-2 &nbsp;
- *         div.md-gcol-2.maxmd-hide
+ *         div.md-cell-x-2.maxmd-hide
  *             div.bgc-grey-3 &nbsp;
  */
