@@ -180,6 +180,20 @@
 }
 
 /**
+ * Select menu:
+ * `.select`
+ *
+ *     @example
+ *     select.select
+ *         option option
+ *         option option
+ *         option option
+ */
+.select {
+	width: 100%;
+}
+
+/**
  * Switch:
  * `.switch`
  *
@@ -202,7 +216,7 @@
 	& + label {
 		background-color: $switch-background-color;
 		border: $switch-border;
-		border-radius: $switch-height * 2;
+		border-radius: $switch-border-radius;
 		box-shadow: $switch-box-shadow;
 		display: inline-block;
 		position: relative;
@@ -274,6 +288,90 @@
 
 			&:after {
 				left: $switch-checked-toggle-left;
+			}
+		}
+	}
+}
+
+/**
+ * Switch size:
+ * `.switch--[size]`
+ *
+ *     @example
+ *     input(id='example-switch-small', type='checkbox').switch.switch--sm
+ *     label(for='example-switch-small')
+ *     input(id='example-switch-large', type='checkbox').switch.switch--lg
+ *     label(for='example-switch-large')
+ */
+.switch--sm {
+	& + label {
+		border-radius: $switch-small-border-radius;
+
+		width: $switch-small-width;
+		height: $switch-small-height;
+
+		&:before {
+			border-radius: $switch-small-border-radius;
+
+			width: $switch-small-height;
+			height: $switch-small-height;
+		}
+
+		// Toggle.
+		&:after {
+			border-radius: $switch-small-toggle-border-radius;
+			margin-top: -($switch-small-toggle-height / 2);
+
+			width: $switch-small-toggle-width;
+			height: $switch-small-toggle-height;
+		}
+	}
+
+	&:checked {
+		& + label {
+			&:before {
+				width: $switch-small-width;
+			}
+
+			&:after {
+				left: $switch-small-checked-toggle-left;
+			}
+		}
+	}
+}
+
+.switch--lg {
+	& + label {
+		border-radius: $switch-large-border-radius;
+
+		width: $switch-large-width;
+		height: $switch-large-height;
+
+		&:before {
+			border-radius: $switch-large-border-radius;
+
+			width: $switch-large-height;
+			height: $switch-large-height;
+		}
+
+		// Toggle.
+		&:after {
+			border-radius: $switch-large-toggle-border-radius;
+			margin-top: -($switch-large-toggle-height / 2);
+
+			width: $switch-large-toggle-width;
+			height: $switch-large-toggle-height;
+		}
+	}
+
+	&:checked {
+		& + label {
+			&:before {
+				width: $switch-large-width;
+			}
+
+			&:after {
+				left: $switch-large-checked-toggle-left;
 			}
 		}
 	}

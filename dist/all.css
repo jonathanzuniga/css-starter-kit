@@ -1223,6 +1223,19 @@ small {
   left: 0; }
 
 /**
+ * Select menu:
+ * `.select`
+ *
+ *     @example
+ *     select.select
+ *         option option
+ *         option option
+ *         option option
+ */
+.select {
+  width: 100%; }
+
+/**
  * Switch:
  * `.switch`
  *
@@ -1253,7 +1266,7 @@ small {
     height: 2em; }
     .switch + label:before {
       background-color: transparent;
-      border-radius: 1em;
+      border-radius: 4em;
       content: '';
       display: block;
       position: absolute;
@@ -1289,6 +1302,56 @@ small {
     transition: width 0.2s cubic-bezier(0, 0, 0, 0.1); }
   .switch:checked + label:after {
     left: 2.063em; }
+
+/**
+ * Switch size:
+ * `.switch--[size]`
+ *
+ *     @example
+ *     input(id='example-switch-small', type='checkbox').switch.switch--sm
+ *     label(for='example-switch-small')
+ *     input(id='example-switch-large', type='checkbox').switch.switch--lg
+ *     label(for='example-switch-large')
+ */
+.switch--sm + label {
+  border-radius: 3.125em;
+  width: 3.125em;
+  height: 1.5625em; }
+  .switch--sm + label:before {
+    border-radius: 3.125em;
+    width: 1.5625em;
+    height: 1.5625em; }
+  .switch--sm + label:after {
+    border-radius: 3.125em;
+    margin-top: -0.71875em;
+    width: 1.4375em;
+    height: 1.4375em; }
+
+.switch--sm:checked + label:before {
+  width: 3.125em; }
+
+.switch--sm:checked + label:after {
+  left: 1.6255em; }
+
+.switch--lg + label {
+  border-radius: 6.5em;
+  width: 6.5em;
+  height: 3.25em; }
+  .switch--lg + label:before {
+    border-radius: 6.5em;
+    width: 3.25em;
+    height: 3.25em; }
+  .switch--lg + label:after {
+    border-radius: 6.5em;
+    margin-top: -1.5625em;
+    width: 3.125em;
+    height: 3.125em; }
+
+.switch--lg:checked + label:before {
+  width: 6.5em; }
+
+.switch--lg:checked + label:after {
+  left: 3.313em; }
 
 /***
  * Input group:

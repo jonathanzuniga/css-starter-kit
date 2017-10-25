@@ -242,7 +242,11 @@
 										li
 											a(href='elements.html#checkbox-and-radio') Checkbox and radio
 										li
+											a(href='elements.html#select-menu') Select menu
+										li
 											a(href='elements.html#switch') Switch
+										li
+											a(href='elements.html#switch-size') Switch size
 								li
 									a(href='elements.html#input-group') Input group
 									ul.ls-unstyled
