@@ -110,7 +110,7 @@
 }
 
 /**
- * Checkboxes and radios:
+ * Checkbox and radio:
  * 
  *
  *     @example
@@ -177,4 +177,104 @@
 
 	top: 0;
 	left: 0;
+}
+
+/**
+ * Switch:
+ * `.switch`
+ *
+ *     @example
+ *     div.row
+ *         div.xs-col-12.md-col-6
+ *             input(id='example-switch', type='checkbox').switch
+ *             label(for='example-switch')
+ *             input(id='example-switch-checked', type='checkbox' checked).switch
+ *             label(for='example-switch-checked')
+ *         div.xs-col-12.md-col-6
+ *             input(id='example-switch-with-label', type='checkbox').switch
+ *             label(for='example-switch-with-label')
+ *                 span Switch with label
+ */
+.switch {
+	opacity: 0;
+	position: absolute;
+
+	& + label {
+		background-color: $switch-background-color;
+		border: $switch-border;
+		border-radius: $switch-height * 2;
+		box-shadow: $switch-box-shadow;
+		display: inline-block;
+		position: relative;
+		user-select: none;
+
+		width: $switch-width;
+		height: $switch-height;
+
+		&:before {
+			background-color: transparent;
+			border-radius: $switch-border-radius;
+			content: '';
+			display: block;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: $switch-height;
+			height: $switch-height;
+
+			transition: $switch-transition;
+		}
+
+		// Toggle.
+		&:after {
+			background-color: $switch-toggle-background-color;
+			box-shadow: $switch-toggle-box-shadow;
+			border-radius: $switch-toggle-border-radius;
+			content: '';
+			display: block;
+			margin-top: -($switch-toggle-height / 2);
+
+			position: absolute;
+			top: $switch-toggle-top;
+			left: $switch-toggle-left;
+
+			width: $switch-toggle-width;
+			height: $switch-toggle-height;
+
+			transition: $switch-toggle-transition;
+		}
+
+		span {
+			height: $switch-height;
+			line-height: $switch-height;
+			margin-left: $switch-width;
+			padding-left: $quarter-spacing-unit;
+			white-space: nowrap;
+		}
+	}
+
+	&:checked {
+		& + label {
+			// transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.9, 0.95);
+
+			&:before {
+				background-color: $switch-checked-background-color;
+				box-shadow: $switch-box-shadow;
+
+				@if $switch-border != none {
+					top: -$control-border-width;
+				}
+
+				width: $switch-width;
+
+				transition: $switch-checked-transition;
+			}
+
+			&:after {
+				left: $switch-checked-toggle-left;
+			}
+		}
+	}
 }

@@ -282,7 +282,10 @@
                       <a href="elements.html#line-input">Line input</a>
                     </li>
                     <li>
-                      <a href="elements.html#checkboxes-and-radios">Checkboxes and radios</a>
+                      <a href="elements.html#checkbox-and-radio">Checkbox and radio</a>
+                    </li>
+                    <li>
+                      <a href="elements.html#switch">Switch</a>
                     </li>
                   </ul>
                 </li>
@@ -1070,9 +1073,9 @@
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Line input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--line&quot;</span> /&gt;</span></pre>
                   </div>
                 </section>
-                <section class="sg-block sg-section-checkboxes-and-radios">
+                <section class="sg-block sg-section-checkbox-and-radio">
                   <div class="sg-text">
-                    <h3 id="checkboxes-and-radios" class="sg">Checkboxes and radios</h3>
+                    <h3 id="checkbox-and-radio" class="sg">Checkbox and radio</h3>
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
@@ -1158,6 +1161,45 @@
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;lbl lbl--check&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;radio-inline&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span> /&gt;</span>Radio<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-switch">
+                  <div class="sg-text">
+                    <h3 id="switch" class="sg">Switch</h3>
+                    <p class="sg">
+                      <code class="sg">.switch</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="xs-col-12 md-col-6">
+                          <input id="example-switch" type="checkbox" class="switch">
+                          <label for="example-switch"></label>
+                          <input id="example-switch-checked" type="checkbox" checked="checked" class="switch">
+                          <label for="example-switch-checked"></label>
+                        </div>
+                        <div class="xs-col-12 md-col-6">
+                          <input id="example-switch-with-label" type="checkbox" class="switch">
+                          <label for="example-switch-with-label">
+                            <span>Switch with label</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-12 md-col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;example-switch&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;switch&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;example-switch&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;example-switch-checked&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">&quot;checked&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;switch&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;example-switch-checked&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-col-12 md-col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;example-switch-with-label&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;switch&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;example-switch-with-label&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Switch with label<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>

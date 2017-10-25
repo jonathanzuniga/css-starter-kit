@@ -240,7 +240,9 @@
 										li
 											a(href='elements.html#line-input') Line input
 										li
-											a(href='elements.html#checkboxes-and-radios') Checkboxes and radios
+											a(href='elements.html#checkbox-and-radio') Checkbox and radio
+										li
+											a(href='elements.html#switch') Switch
 								li
 									a(href='elements.html#input-group') Input group
 									ul.ls-unstyled
