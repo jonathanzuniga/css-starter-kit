@@ -1182,15 +1182,40 @@
                   <div class="sg-example">
                     <div class="sg-canvas">
                       <select class="select">
-                        <option>Option</option>
-                        <option>Option</option>
-                        <option>Option</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
                       </select>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-pure-css-select-menu-icon">
+                  <div class="sg-text">
+                    <h3 id="pure-css-select-menu-icon" class="sg">Pure CSS select menu icon</h3>
+                    <p class="sg">
+                      <code class="sg">.select-icn</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="select-icn">
+                        <select class="select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </select>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select-icn&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
                 <section class="sg-block sg-section-select-menu-size">
@@ -1198,37 +1223,86 @@
                     <h3 id="select-menu-size" class="sg">Select menu size</h3>
                     <p class="sg">
                       <code class="sg">.select--[size]</code>
+                      <code class="sg">.select-icn--[size]</code>
                     </p>
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <div class="fld">
-                        <select class="select select--sm">
-                          <option>Option</option>
-                          <option>Option</option>
-                          <option>Option</option>
-                        </select>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="fld">
+                            <select class="select select--sm">
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+                          </div>
+                          <div class="fld">
+                            <select class="select select--lg">
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="fld">
+                            <div class="select-icn select-icn--sm">
+                              <select class="select">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="fld">
+                            <div class="select-icn select-icn--lg">
+                              <select class="select">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="fld">
-                        <select class="select select--lg">
-                          <option>Option</option>
-                          <option>Option</option>
-                          <option>Option</option>
-                        </select>
-                      </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select select--sm&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select select--lg&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select select--sm&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select select--lg&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select-icn select-icn--sm&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select-icn select-icn--lg&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;select&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>

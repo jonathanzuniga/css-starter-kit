@@ -190,9 +190,9 @@
  *
  *     @example
  *     select.select
- *         option Option
- *         option Option
- *         option Option
+ *         option Option 1
+ *         option Option 2
+ *         option Option 3
  */
 .select {
 	background-color: $select-background-color;
@@ -203,23 +203,103 @@
 	line-height: $select-line-height;
 	padding: $select-padding;
 	width: 100%;
+
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+
+	// Arrow icon.
+	@if $select-background-image != none {
+		background-image: url($select-background-image);
+		background-position: $select-background-position;
+		background-size: $select-background-size;
+		background-repeat: no-repeat;
+		margin-right: $select-margin-right;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		@if $select-focus-background-image != none {
+			&:focus {
+				background-image: url($select-focus-background-image);
+			}
+		}
+	}
+}
+
+/**
+ * Pure CSS select menu icon:
+ * `.select-icn`
+ *
+ *     @example
+ *     div.select-icn
+ *         select.select
+ *             option Option 1
+ *             option Option 2
+ *             option Option 3
+ */
+.select-icn {
+	position: relative;
+
+	.select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		padding-right: $select-icon-padding-right;
+	}
+	
+	&:after {
+		border: $select-icon-border;
+		border-right: 0;
+		border-top: 0;
+		
+		content: '';
+		display: block;
+
+		width: $select-icon-width;
+		height: $select-icon-height;
+
+		margin-top: $select-icon-margin-top;
+		position: absolute;
+		top: $select-icon-top;
+		right: $select-icon-right;
+
+		pointer-events: none;
+		transform: $select-icon-transform;
+
+		// z-index: 4;
+	}
 }
 
 /**
  * Select menu size:
- * `.select--[size]`
+ * `.select--[size]` `.select-icn--[size]`
  *
  *     @example
- *     div.fld
- *         select.select.select--sm
- *             option Option
- *             option Option
- *             option Option
- *     div.fld
- *         select.select.select--lg
- *             option Option
- *             option Option
- *             option Option
+ *     div.row
+ *         div.col-6
+ *             div.fld
+ *                 select.select.select--sm
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *             div.fld
+ *                 select.select.select--lg
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.col-6
+ *             div.fld
+ *                 div.select-icn.select-icn--sm
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ *             div.fld
+ *                 div.select-icn.select-icn--lg
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
  */
 .select--sm {
 	border-radius: $select-small-border-radius;
@@ -231,6 +311,38 @@
 	border-radius: $select-large-border-radius;
 	font-size: $select-large-font-size;
 	padding: $select-large-padding-y $select-large-padding-x;
+}
+
+.select-icn--sm {
+	.select {
+		@extend .select--sm;
+
+		padding-right: $select-icon-small-padding-right;
+	}
+
+	&:after {
+		width: $select-icon-small-width;
+		height: $select-icon-small-height;
+
+		margin-top: $select-icon-small-margin-top;
+		right: $select-icon-small-right;
+	}
+}
+
+.select-icn--lg {
+	.select {
+		@extend .select--lg;
+
+		padding-right: $select-icon-large-padding-right;
+	}
+
+	&:after {
+		width: $select-icon-large-width;
+		height: $select-icon-large-height;
+
+		margin-top: $select-icon-large-margin-top;
+		right: $select-icon-large-right;
+	}
 }
 
 /**

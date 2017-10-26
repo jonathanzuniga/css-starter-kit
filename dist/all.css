@@ -1233,9 +1233,9 @@ small {
  *
  *     @example
  *     select.select
- *         option Option
- *         option Option
- *         option Option
+ *         option Option 1
+ *         option Option 2
+ *         option Option 3
  */
 .select {
   background-color: transparent;
@@ -1245,33 +1245,100 @@ small {
   font-size: 16px;
   line-height: 1.0625rem;
   padding: 0.5em 0.625em;
-  width: 100%; }
+  width: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation; }
+
+/**
+ * Pure CSS select menu icon:
+ * `.select-icn`
+ *
+ *     @example
+ *     div.select-icn
+ *         select.select
+ *             option Option 1
+ *             option Option 2
+ *             option Option 3
+ */
+.select-icn {
+  position: relative; }
+  .select-icn .select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2.3em; }
+  .select-icn:after {
+    border: 2px solid #333;
+    border-right: 0;
+    border-top: 0;
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-top: -0.438em;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    pointer-events: none;
+    transform: rotate(-45deg); }
 
 /**
  * Select menu size:
- * `.select--[size]`
+ * `.select--[size]` `.select-icn--[size]`
  *
  *     @example
- *     div.fld
- *         select.select.select--sm
- *             option Option
- *             option Option
- *             option Option
- *     div.fld
- *         select.select.select--lg
- *             option Option
- *             option Option
- *             option Option
+ *     div.row
+ *         div.col-6
+ *             div.fld
+ *                 select.select.select--sm
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *             div.fld
+ *                 select.select.select--lg
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.col-6
+ *             div.fld
+ *                 div.select-icn.select-icn--sm
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ *             div.fld
+ *                 div.select-icn.select-icn--lg
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
  */
-.select--sm {
+.select--sm, .select-icn--sm .select {
   border-radius: 0.25em;
   font-size: 0.75em;
   padding: 0.25em 0.625em; }
 
-.select--lg {
+.select--lg, .select-icn--lg .select {
   border-radius: 0.25em;
   font-size: 1.25em;
   padding: 0.575em 0.875em; }
+
+.select-icn--sm .select {
+  padding-right: 2.52083em; }
+
+.select-icn--sm:after {
+  width: 0.33333em;
+  height: 0.33333em;
+  margin-top: -0.292em;
+  right: 0.875em; }
+
+.select-icn--lg .select {
+  padding-right: 2.15em; }
+
+.select-icn--lg:after {
+  width: 0.75em;
+  height: 0.75em;
+  margin-top: -0.657em;
+  right: 1em; }
 
 /**
  * Switch:
