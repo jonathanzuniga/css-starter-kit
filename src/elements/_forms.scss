@@ -214,6 +214,7 @@
 		background-size: $select-background-size;
 		background-repeat: no-repeat;
 		margin-right: $select-margin-right;
+		padding-right: $select-icon-padding-right;
 
 		-webkit-appearance: none;
 		-moz-appearance: none;
@@ -241,6 +242,8 @@
 	position: relative;
 
 	.select {
+		background: none;
+
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
@@ -276,7 +279,7 @@
  *
  *     @example
  *     div.row
- *         div.col-6
+ *         div.sm-col-6
  *             div.fld
  *                 select.select.select--sm
  *                     option Option 1
@@ -287,7 +290,7 @@
  *                     option Option 1
  *                     option Option 2
  *                     option Option 3
- *         div.col-6
+ *         div.sm-col-6
  *             div.fld
  *                 div.select-icn.select-icn--sm
  *                     select.select
@@ -305,12 +308,22 @@
 	border-radius: $select-small-border-radius;
 	font-size: $select-small-font-size;
 	padding: $select-small-padding-y $select-small-padding-x;
+
+	// Arrow icon.
+	@if $select-background-image != none {
+		padding-right: $select-icon-small-padding-right;
+	}
 }
 
 .select--lg {
 	border-radius: $select-large-border-radius;
 	font-size: $select-large-font-size;
 	padding: $select-large-padding-y $select-large-padding-x;
+
+	// Arrow icon.
+	@if $select-background-image != none {
+		padding-right: $select-icon-large-padding-right;
+	}
 }
 
 .select-icn--sm {
