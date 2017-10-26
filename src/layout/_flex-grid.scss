@@ -22,7 +22,6 @@ html, body {
 @mixin column {
 	flex-basis: 0;
 	flex-grow: 1;
-	max-width: 100%;
 	width: 100%;
 }
 
@@ -129,6 +128,12 @@ html, body {
  *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
  *             div.bgc-grey-3 &nbsp;
  */
+// Si no se escriben los primeros tamaños de una clase [size]-col-[#], que entonces sean 100% de ancho.
+[class*="-col-"] {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		@for $i from 1 through $grid-columns-number {

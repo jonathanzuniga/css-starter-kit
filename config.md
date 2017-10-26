@@ -244,6 +244,8 @@
 										li
 											a(href='elements.html#select-menu') Select menu
 										li
+											a(href='elements.html#select-menu-size') Select menu size
+										li
 											a(href='elements.html#switch') Switch
 										li
 											a(href='elements.html#switch-size') Switch size

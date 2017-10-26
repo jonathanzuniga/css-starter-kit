@@ -95,22 +95,25 @@ $headings: (
 $heading-line-height: 1.1;
 
 
-// Buttons
-
 // Se usan los mismo valores para los demas controles de las formas.
+
+$control-transparentize-amount: 0.6;
+
 $control-border-width:  1px;
 $control-border-style:  solid;
-$control-border-color:  transparent;
+$control-border-color:  transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
 $control-border-radius: rem_to_em($quarter-spacing-unit / 2);
 $control-line-height:   $line-height-ratio - $quarter-spacing-unit;
 $control-padding-y:     rem_to_em($quarter-spacing-unit);
 $control-padding-x:     rem_to_em($half-spacing-unit - 0.375);
 
-$control-transparentize-amount: 0.6;
+
+// Buttons
 
 $button-background-color: tint(get_color('grey 1'), 90%);
-$button-border:           $control-border-width $control-border-style $control-border-color;
+$button-border:           $control-border-width $control-border-style transparent;
 $button-border-radius:    $control-border-radius;
+$button-font-size:        $base-font-size;
 $button-font-weight:      400;
 $button-line-height:      $control-line-height;
 $button-padding:          $control-padding-y $control-padding-x;
@@ -170,18 +173,21 @@ $button-large-gradient-padding: ($button-large-padding-y + 0.063) ($button-large
 
 // Label
 
-$label-padding: ($control-padding-y / 2) 0;
+$label-font-size: $base-font-size;
+$label-padding:   ($control-padding-y / 2) 0;
 
 
 // Input
 
-$input-border-width:  $control-border-width;
-$input-border-style:  $control-border-style;
-$input-border-color:  transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
-$input-border:        $input-border-width $input-border-style $input-border-color;
-$input-border-radius: $control-border-radius;
-$input-line-height:   $control-line-height;
-$input-padding:       $control-padding-y $control-padding-x;
+$input-background-color: transparent;
+$input-border-width:     $control-border-width;
+$input-border-style:     $control-border-style;
+$input-border-color:     $control-border-color;
+$input-border:           $input-border-width $input-border-style $input-border-color;
+$input-border-radius:    $control-border-radius;
+$input-font-size:        $base-font-size;
+$input-line-height:      $control-line-height;
+$input-padding:          $control-padding-y $control-padding-x;
 
 $input-active-border-color:  get_color('blue 2');
 $input-focus-border-color:   get_color('blue 2');
@@ -201,13 +207,33 @@ $input-large-padding-y:     $control-padding-y + 0.25;
 $input-large-padding-x:     $control-padding-x + 0.25;
 
 
+// Select menu
+
+$select-background-color: transparent;
+$select-border:           $control-border-width $control-border-style $control-border-color;
+$select-border-radius:    $control-border-radius;
+$select-font-size:        $base-font-size;
+$select-line-height:      $control-line-height;
+$select-padding:          $control-padding-y $control-padding-x;
+
+$select-small-border-radius: $control-border-radius;
+$select-small-font-size:     $small-font-size;
+$select-small-padding-y:     $control-padding-y / 2;
+$select-small-padding-x:     $control-padding-x;
+
+$select-large-border-radius: $control-border-radius;
+$select-large-font-size:     $large-font-size;
+$select-large-padding-y:     0.575em;
+$select-large-padding-x:     $control-padding-x + 0.25;
+
+
 // Switch
 
 $switch-height:           px_to_em($base-font-size) + ($control-padding-y * 2);
 $switch-width:            $switch-height * 2;
 
-$switch-background-color: #fff;
-$switch-border:           $control-border-width $control-border-style transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
+$switch-background-color: transparent;
+$switch-border:           $control-border-width $control-border-style $control-border-color;
 $switch-border-radius:    $switch-width;
 $switch-box-shadow:       inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
