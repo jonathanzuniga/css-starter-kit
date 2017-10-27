@@ -807,6 +807,27 @@ small {
   opacity: 1;
   position: initial; }
 
+/**
+ * Button toolbar:
+ * `.btn-tbar`
+ *
+ *     @example
+ *     div.btn-tbar
+ *         div.btn-group.m-bottom-2
+ *             button.btn.btn--secondary First
+ *             button.btn.btn--secondary Second
+ *             button.btn.btn--secondary Third
+ *         button.btn.btn--secondary.m-bottom-2 Forth
+ *         input(id='eg-btn-tbar-switch', type='checkbox').switch
+ *         label(for='eg-btn-tbar-switch').m-bottom-2
+ */
+.btn-tbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .btn-tbar > *:not(:last-child) {
+    margin-right: 0.5rem; }
+
 /***
  * Forms:
  */
