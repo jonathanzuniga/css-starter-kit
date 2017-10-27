@@ -219,6 +219,10 @@
 											a(href='elements.html#button-size') Button size
 										li
 											a(href='elements.html#expand-button') Expanded button
+										li
+											a(href='elements.html#active-button') Active button
+										li
+											a(href='elements.html#disabled-button') Disabled button
 								li
 									a(href='elements.html#button-group') Button group
 									ul.ls-unstyled

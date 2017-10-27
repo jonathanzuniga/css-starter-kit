@@ -7,7 +7,7 @@
  * `.btn`
  *
  *     @example
- *     a.btn Button
+ *     a(href='#').btn Button
  */
 .btn {
 	background-color: $button-background-color;
@@ -33,12 +33,19 @@
 	-ms-user-select: none;
 	user-select: none;
 
-	&:hover {
+	&:link,
+	&:visited {
+		color: $text-color;
+	}
+
+	&:hover,
+	&.active {
 		background-color: 
 			shade(
 				$button-background-color, 
 				$button-hover-background-color-shade-amount
 			);
+		color: $text-color;
 	}
 }
 
@@ -54,24 +61,22 @@
 	 * `.btn--#{$name_r}`
 	 *
 	 *     @example
-	 *     a.btn.btn--#{$name_r} Flat
-	 *     a.btn.btn--#{$name_r}.btn--gradient Gradient
-     *     a.btn.btn--#{$name_r}.btn--outline Outline
+	 *     a(href='#').btn.btn--#{$name_r} Flat
+	 *     a(href='#').btn.btn--#{$name_r}.btn--gradient Gradient
+     *     a(href='#').btn.btn--#{$name_r}.btn--outline Outline
 	 */
 	.btn--#{$name_r} {
 		background-color: $background-color;
 		border-color: $border-color;
 		color: $text-color;
 
-		// &:active {
-		// 	box-shadow: 0 0 0 3px transparentize($background-color, 0.6);
-		// }
+		&:link,
+		&:visited {
+			color: $text-color;
+		}
 
-		// &:focus {
-		// 	box-shadow: 0 0 0 3px transparentize($background-color, 0.8);
-		// }
-
-		&:hover {
+		&:hover,
+		&.active {
 			background-color: 
 				shade(
 					$background-color, 
@@ -115,7 +120,13 @@
 				$button-gradient-background-color-bottom-hsl
 			);
 
-			&:hover {
+			&:link,
+			&:visited {
+				color: $text-color;
+			}
+
+			&:hover,
+			&.active {
 				@include button_gradient_bg(
 					shade(
 						$button-gradient-background-color-top-hsl, 
@@ -137,7 +148,13 @@
 			border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
 			color: $background-color;
 
-			&:hover {
+			&:link,
+			&:visited {
+				color: $background-color;
+			}
+
+			&:hover,
+			&.active {
 				background-color: $background-color;
 				border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
 				color: $text-color;
@@ -151,7 +168,7 @@
  * `.btn--link`
  *
  *     @example
- *     button.btn.btn--link Link button
+ *     a(href='#').btn.btn--link Link button
  */
 .btn--link {
 	background-color: transparent;
@@ -160,7 +177,13 @@
 	color: $link-color;
 	text-decoration: $link-decoration;
 
-	&:hover {
+	&:link,
+	&:visited {
+		color: $link-color;
+	}
+
+	&:hover,
+	&.active {
 		background-color: $button-background-color;
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
@@ -172,7 +195,7 @@
  * `.btn--pill`
  *
  *     @example
- *     a.btn.btn--secondary.btn--pill Pill button
+ *     a(href='#').btn.btn--secondary.btn--pill Pill button
  */
 .btn--pill {
 	border-radius: 2em;
@@ -188,8 +211,8 @@
  * `.btn--sm` `.btn--lg`
  *
  *     @example
- *     a.btn.btn--primary.btn--sm Small button
- *     a.btn.btn--primary.btn--lg Large button
+ *     a(href='#').btn.btn--primary.btn--sm Small button
+ *     a(href='#').btn.btn--primary.btn--lg Large button
  */
 .btn--sm {
 	border-radius: $button-small-border-radius;
@@ -213,12 +236,43 @@
 
 /**
  * Expanded button:
- * `.btn--expanded`
+ * `.expanded`
  *
  *     @example
- *     a.btn.btn--primary.btn--lg.btn--expanded Expanded button
+ *     a(href='#').btn.btn--primary.btn--lg.expanded Expanded button
  */
-.btn--expanded {
-	display: block;
-	width: 100%;
+.btn {
+	&.expanded {
+		display: block;
+		width: 100%;
+	}
+}
+
+/**
+ * Active button:
+ * `.active`
+ *
+ *     @example
+ *     a(href='#').btn.btn--primary.active Active button
+ */
+
+/**
+ * Disabled button:
+ * `.disabled`
+ *
+ *     @example
+ *     a(href='#').btn.btn--primary.disabled Disabled button
+ *     button(disabled).btn.btn--primary Disabled button
+ */
+.btn {
+	&[disabled],
+	&.disabled {
+		opacity: $button-disabled-opacity;
+		pointer-events: none;
+
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 }

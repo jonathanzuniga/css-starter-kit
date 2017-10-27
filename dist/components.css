@@ -44,7 +44,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.maxsm-txt-center
- *                 li.navbar__item.navbar__item--active.maxsm-bd-top
+ *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href="").navbar__link Home
  *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link Archive
@@ -113,7 +113,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
- *                 li.navbar__item.navbar__item--active.maxsm-bd-top
+ *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href="").navbar__link Home
  *                 li.navbar__item.maxsm-bd-top
  *                     a(href="").navbar__link Archive
@@ -125,6 +125,8 @@
 
 .navbar__item {
   align-items: stretch; }
+  .navbar__item.active .navbar__link:link, .navbar__item.active .navbar__link:hover, .navbar__item.active .navbar__link:visited {
+    color: #3a8bbb; }
 
 .navbar__link:link, .navbar__link:visited,
 .navbar__toggler:link,
@@ -133,9 +135,6 @@
 
 .navbar__link:hover,
 .navbar__toggler:hover {
-  color: #3a8bbb; }
-
-.navbar__item--active .navbar__link:link, .navbar__item--active .navbar__link:hover, .navbar__item--active .navbar__link:visited {
   color: #3a8bbb; }
 
 /**
@@ -149,7 +148,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
- *                 li.navbar__item.navbar__item--active
+ *                 li.navbar__item.active
  *                     a(href="").navbar__link Home
  *                 li.navbar__item
  *                     a(href="").navbar__link Archive
@@ -448,7 +447,7 @@
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-gutters-0.maxlg-txt-center
- *                 li.navbar__item.navbar__item--active.xs-bd-bottom.lg-bd-bottom-0
+ *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href="").navbar__link Home
  *                 li.navbar__item.xs-bd-bottom.xs-bd-left.md-bd-x.lg-bd-0
  *                     a(href="").navbar__link Archive
@@ -473,7 +472,7 @@
  *             a(href="").navbar__link Brand
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right.maxlg-txt-center
- *                 li.navbar__item.navbar__item--active.maxlg-bd-top
+ *                 li.navbar__item.active.maxlg-bd-top
  *                     a(href="").navbar__link Home
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href="").navbar__link Archive

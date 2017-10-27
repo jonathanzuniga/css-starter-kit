@@ -101,7 +101,7 @@ $control-transparentize-amount: 0.6;
 
 $control-border-width:  1px;
 $control-border-style:  solid;
-$control-border-color:  transparentize(lighten(get_color('grey 1'), 24%), $control-transparentize-amount);
+$control-border-color:  transparentize(tint(get_color('grey 1'), 24%), $control-transparentize-amount);
 $control-border-radius: rem_to_em($quarter-spacing-unit / 2);
 $control-line-height:   $line-height-ratio - $quarter-spacing-unit;
 $control-padding-y:     rem_to_em($quarter-spacing-unit);
@@ -133,16 +133,21 @@ $button-hover-background-color-shade-amount: 12%;
 // 11. gradient background-color bottom saturation, 
 // 12. gradient background-color bottom lightness.
 $buttons: (
-	'primary'   get_color('blue 1')               $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' lighten(get_color('grey 1'), 32%) $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 1')              $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 1')                $control-border-color $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_color('blue 1')            transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' tint(get_color('grey 1'), 40%) transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 1')           transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 1')             transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 
-// Outline buttons
+// Outline button
 
 $button-outline-border-transparentize-amount: 0.2;
+
+
+// Disabled button
+
+$button-disabled-opacity: 0.6;
 
 
 // Gradient button
@@ -265,11 +270,11 @@ $switch-width:                      $switch-height * 2;
 
 $switch-background-color:           transparent;
 $switch-border:                     $control-border-width $control-border-style $control-border-color;
-$switch-border-radius:              $switch-width;
+$switch-border-radius:              $switch-height / 2;
 $switch-box-shadow:                 inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
 $switch-toggle-background-color:    #fff;
-$switch-toggle-border-radius:       $switch-height * 2;
+$switch-toggle-border-radius:       $switch-height / 2;
 $switch-toggle-box-shadow:          0 0 0 0.063em rgba(0, 0, 0, 0.1), 
                                     0 0.063em 0 0 rgba(0, 0, 0, 0.1), 
                                     0 0.25em 0.25em rgba(0, 0, 0, 0.1), 
@@ -288,7 +293,7 @@ $switch-checked-transition:         width 0.2s cubic-bezier(0, 0, 0, 0.1);
 
 $switch-small-height:               $switch-height / 1.28;
 $switch-small-width:                $switch-small-height * 2;
-$switch-small-border-radius:        $switch-small-width;
+$switch-small-border-radius:        $switch-small-height / 2;
 $switch-small-toggle-width:         $switch-small-height - 0.125;
 $switch-small-toggle-height:        $switch-small-height - 0.125;
 $switch-small-checked-toggle-left:  $switch-small-width - $switch-small-height + 0.063;
@@ -296,7 +301,7 @@ $switch-small-toggle-border-radius: $switch-small-height * 2;
 
 $switch-large-height:               $switch-height * 1.625;
 $switch-large-width:                $switch-large-height * 2;
-$switch-large-border-radius:        $switch-large-width;
+$switch-large-border-radius:        $switch-large-height / 2;
 $switch-large-toggle-width:         $switch-large-height - 0.125;
 $switch-large-toggle-height:        $switch-large-height - 0.125;
 $switch-large-checked-toggle-left:  $switch-large-width - $switch-large-height + 0.063;
@@ -327,7 +332,9 @@ $border-radius: $quarter-spacing-unit / 2;
 // Highlighting text
 
 $hightlight-border-radius: rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
-$hightlight-background:    linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.3), rgba(get_color('yellow 4'), 0.7) 95%, rgba(get_color('yellow 4'), 0.1));
+$hightlight-background:    linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.3), 
+                                                    rgba(get_color('yellow 4'), 0.7) 95%, 
+                                                    rgba(get_color('yellow 4'), 0.1));
 
 
 // Drop cap
