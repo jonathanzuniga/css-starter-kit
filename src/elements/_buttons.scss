@@ -38,8 +38,7 @@
 		color: $text-color;
 	}
 
-	&:hover,
-	&.active {
+	&:hover {
 		background-color: 
 			shade(
 				$button-background-color, 
@@ -47,11 +46,21 @@
 			);
 		color: $text-color;
 	}
+
+	&:active,
+	&.active {
+		background-color: 
+			shade(
+				$button-background-color, 
+				$button-active-background-color-shade-amount
+			);
+		color: $text-color;
+	}
 }
 
 @each $name, $background-color, $border-color, $text-color, 
 	$gradient-background-color-top-tint-amount, $gradient-background-color-bottom-shade-amount,
-  	$gradient-background-color-top-hue, $gradient-background-color-top-saturation, $gradient-background-color-top-lightness,
+	$gradient-background-color-top-hue, $gradient-background-color-top-saturation, $gradient-background-color-top-lightness,
 	$gradient-background-color-bottom-hue, $gradient-background-color-bottom-saturation, $gradient-background-color-bottom-lightness in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
@@ -75,12 +84,21 @@
 			color: $text-color;
 		}
 
-		&:hover,
-		&.active {
+		&:hover {
 			background-color: 
 				shade(
 					$background-color, 
 					$button-hover-background-color-shade-amount
+				);
+			color: $text-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: 
+				shade(
+					$background-color, 
+					$button-active-background-color-shade-amount
 				);
 			color: $text-color;
 		}
@@ -125,8 +143,7 @@
 				color: $text-color;
 			}
 
-			&:hover,
-			&.active {
+			&:hover {
 				@include button_gradient_bg(
 					shade(
 						$button-gradient-background-color-top-hsl, 
@@ -135,6 +152,20 @@
 					shade(
 						$button-gradient-background-color-bottom-hsl, 
 						$button-hover-background-color-shade-amount
+					)
+				);
+			}
+
+			&:active,
+			&.active {
+				@include button_gradient_bg(
+					shade(
+						$button-gradient-background-color-top-hsl, 
+						$button-active-background-color-shade-amount
+					), 
+					shade(
+						$button-gradient-background-color-bottom-hsl, 
+						$button-active-background-color-shade-amount
 					)
 				);
 			}
@@ -153,11 +184,40 @@
 				color: $background-color;
 			}
 
-			&:hover,
-			&.active {
+			&:hover {
 				background-color: $background-color;
 				border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
 				color: $text-color;
+			}
+
+			&:active,
+			&.active {
+				background-color: 
+					shade(
+						$background-color, 
+						$button-active-background-color-shade-amount
+					);
+				border-color: transparentize(
+					shade(
+						$background-color, 
+						$button-active-background-color-shade-amount
+					), 
+					$button-outline-border-transparentize-amount
+				);
+				color: $text-color;
+			}
+		}
+	}
+
+	.toggle,
+	.toggle [type='checkbox'],
+	.toggle [type='radio'] {
+		opacity: 0;
+		position: absolute;
+
+		&:checked {
+			& + .btn--#{$name_r} {
+				@extend .btn--#{$name_r}.active;
 			}
 		}
 	}
@@ -182,9 +242,19 @@
 		color: $link-color;
 	}
 
-	&:hover,
-	&.active {
+	&:hover {
 		background-color: $button-background-color;
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+
+	&:active,
+	&.active {
+		background-color: 
+			shade(
+				$button-background-color,
+				$button-active-background-color-shade-amount
+			);
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
 	}
@@ -258,7 +328,7 @@
 
 /**
  * Disabled button:
- * `.disabled`
+ * `.disabled` `disabled`
  *
  *     @example
  *     a(href='#').btn.btn--primary.disabled Disabled button
@@ -274,5 +344,26 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+	}
+}
+
+/**
+ * Toggle button:
+ * `.toggle`
+ *
+ *     @example
+ *     input(id='eg-toggle-btn', type='checkbox').toggle
+ *     label(for='eg-toggle-btn').btn.btn--primary Toggle button
+ */
+.toggle,
+.toggle [type='checkbox'],
+.toggle [type='radio'] {
+	opacity: 0;
+	position: absolute;
+
+	&:checked {
+		& + .btn {
+			@extend .btn.active;
+		}
 	}
 }

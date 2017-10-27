@@ -8,9 +8,9 @@
  *
  *     @example
  *     div.btn-group
- *         a.btn.btn--secondary First
- *         a.btn.btn--secondary Second
- *         a.btn.btn--secondary Third
+ *         button.btn.btn--secondary First
+ *         button.btn.btn--secondary Second
+ *         button.btn.btn--secondary Third
  */
 .btn-group {
 	display: flex;
@@ -22,21 +22,21 @@
 	> .btn {
 		flex: 0 1 auto;
 
-		&:first-child {
+		&:first-of-type {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
 
-		&:last-child {
+		&:last-of-type {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}
 
-		&:not(:first-child):not(:last-child) {
+		&:not(:first-of-type):not(:last-of-type) {
 			border-radius: 0;
 		}
 
-		&:not(:last-child) {
+		&:not(:last-of-type) {
 			margin-right: -1px;
 		}
 	}
@@ -48,10 +48,10 @@
  *
  *     @example
  *     div.btn-group.expanded
- *         a.btn.btn--secondary First
- *         a.btn.btn--secondary Second
- *         a.btn.btn--secondary Third
- *         a.btn.btn--secondary Fourth
+ *         button.btn.btn--secondary First
+ *         button.btn.btn--secondary Second
+ *         button.btn.btn--secondary Third
+ *         button.btn.btn--secondary Fourth
  */
 .expanded {
 	> .btn {
@@ -65,13 +65,13 @@
  *
  *     @example
  *     div.fld.btn-group.btn-group--lg
- *         a.btn.btn--secondary First
- *         a.btn.btn--secondary Second
- *         a.btn.btn--secondary Third
+ *         button.btn.btn--secondary First
+ *         button.btn.btn--secondary Second
+ *         button.btn.btn--secondary Third
  *     div.fld.btn-group.btn-group--sm
- *         a.btn.btn--secondary First
- *         a.btn.btn--secondary Second
- *         a.btn.btn--secondary Third
+ *         button.btn.btn--secondary First
+ *         button.btn.btn--secondary Second
+ *         button.btn.btn--secondary Third
  */
 .btn-group--sm {
 	> .btn {
@@ -94,5 +94,35 @@
 		&.btn--gradient {
 			padding: $button-large-gradient-padding;
 		}
+	}
+}
+
+/**
+ * Toggle state:
+ * `.toggle`
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld.btn-group.toggle
+ *                 input(id='eg-toggle-btn-group-1', type='checkbox')
+ *                 label(for='eg-toggle-btn-group-1').btn.btn--secondary First
+ *                 input(id='eg-toggle-btn-group-2', type='checkbox')
+ *                 label(for='eg-toggle-btn-group-2').btn.btn--secondary Second
+ *                 input(id='eg-toggle-btn-group-3', type='checkbox')
+ *                 label(for='eg-toggle-btn-group-3').btn.btn--secondary Third
+ *         div.sm-col-6
+ *             div.fld.btn-group.toggle
+ *                 input(id='eg-toggle-btn-group-4', name='toggle-btn-group', type='radio', checked)
+ *                 label(for='eg-toggle-btn-group-4').btn.btn--secondary First
+ *                 input(id='eg-toggle-btn-group-5', name='toggle-btn-group', type='radio')
+ *                 label(for='eg-toggle-btn-group-5').btn.btn--secondary Second
+ *                 input(id='eg-toggle-btn-group-6', name='toggle-btn-group', type='radio')
+ *                 label(for='eg-toggle-btn-group-6').btn.btn--secondary Third
+ */
+.btn-group {
+	&.toggle {
+		opacity: 1;
+		position: initial;
 	}
 }
