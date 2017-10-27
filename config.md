@@ -232,6 +232,8 @@
 											a(href='elements.html#expand-button-group') Expanded button group
 										li
 											a(href='elements.html#button-group-size') Button group size
+										li
+											a(href='elements.html#toggle-state') Toggle state
 								li
 									a(href='elements.html#forms') Forms
 									ul.ls-unstyled
@@ -262,6 +264,8 @@
 											a(href='elements.html#mixed-addons') Mixed addons
 										li
 											a(href='elements.html#input-group-size') Input group size
+								li
+									a(href='elements.html#toolbar') Toolbar
 								li
 									a(href='elements.html#lists') Lists
 									ul.ls-unstyled
