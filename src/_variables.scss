@@ -179,7 +179,7 @@ $button-large-gradient-padding: ($button-large-padding-y + 0.063) ($button-large
 
 // Label
 
-$label-font-size: $base-font-size;
+$label-font-size: px_to_em($base-font-size);
 $label-padding:   ($control-padding-y / 2) 0;
 
 
@@ -269,24 +269,24 @@ $select-icon-large-padding-right: $select-icon-large-width + ($select-icon-large
 $switch-height:                     px_to_em($base-font-size) + ($control-padding-y * 2) + 0.188;
 $switch-width:                      $switch-height * 2;
 
-$switch-background-color:           transparent;
-$switch-border:                     $control-border-width $control-border-style $control-border-color;
+$switch-background-color:           $control-border-color;
+$switch-border:                     none;
 $switch-border-radius:              $switch-height / 2;
 $switch-box-shadow:                 inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
 $switch-toggle-background-color:    #fff;
 $switch-toggle-border-radius:       $switch-height / 2;
-$switch-toggle-box-shadow:          0 0 0 0.063em rgba(0, 0, 0, 0.1), 
-                                    0 0.063em 0 0 rgba(0, 0, 0, 0.1), 
-                                    0 0.25em 0.25em rgba(0, 0, 0, 0.1), 
-                                    0 0.063em 0 0 rgba(0, 0, 0, 0.1);
-$switch-toggle-width:               $switch-height - 0.125;
-$switch-toggle-height:              $switch-height - 0.125;
+$switch-toggle-box-shadow:          0 0.063em 0.063em rgba(0, 0, 0, 0.1), 
+                                    0 0.063em 0.063em rgba(0, 0, 0, 0.1), 
+                                    0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
+                                    0 0.063em 0.063em rgba(0, 0, 0, 0.1);
+$switch-toggle-width:               $switch-height - rem_to_em($quarter-spacing-unit + 0.25);
+$switch-toggle-height:              $switch-height - rem_to_em($quarter-spacing-unit + 0.25);
 $switch-toggle-top:                 50%;
-$switch-toggle-left:                0.063em;
+$switch-toggle-left:                rem_to_em($quarter-spacing-unit);
 
-$switch-checked-background-color:   get_color('green 1');
-$switch-checked-toggle-left:        $switch-width - $switch-height + 0.063;
+$switch-checked-background-color:   get_color('blue 1');
+$switch-checked-toggle-left:        $switch-width - $switch-height + 0.25;
 
 $switch-transition:                 0.20s cubic-bezier(0.25, 0, 0.5, 1);
 $switch-toggle-transition:          0.35s cubic-bezier(0.55, 1.5, 0.5, 1);
@@ -295,18 +295,24 @@ $switch-checked-transition:         width 0.2s cubic-bezier(0, 0, 0, 0.1);
 $switch-small-height:               $switch-height / 1.4;
 $switch-small-width:                $switch-small-height * 2;
 $switch-small-border-radius:        $switch-small-height / 2;
-$switch-small-toggle-width:         $switch-small-height - 0.125;
-$switch-small-toggle-height:        $switch-small-height - 0.125;
-$switch-small-checked-toggle-left:  $switch-small-width - $switch-small-height + 0.063;
 $switch-small-toggle-border-radius: $switch-small-height * 2;
+
+$switch-small-toggle-width:         $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
+$switch-small-toggle-height:        $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
+$switch-small-toggle-left:          rem_to_em($quarter-spacing-unit - 0.063);
+
+$switch-small-checked-toggle-left:  $switch-small-width - $switch-small-height + 0.25;
 
 $switch-large-height:               $switch-height * 1.4856;
 $switch-large-width:                $switch-large-height * 2;
 $switch-large-border-radius:        $switch-large-height / 2;
-$switch-large-toggle-width:         $switch-large-height - 0.125;
-$switch-large-toggle-height:        $switch-large-height - 0.125;
-$switch-large-checked-toggle-left:  $switch-large-width - $switch-large-height + 0.063;
+
 $switch-large-toggle-border-radius: $switch-large-height * 2;
+$switch-large-toggle-width:         $switch-large-height - rem_to_em($quarter-spacing-unit + 0.25);
+$switch-large-toggle-height:        $switch-large-height - rem_to_em($quarter-spacing-unit + 0.25);
+$switch-large-toggle-left:          rem_to_em($quarter-spacing-unit);
+
+$switch-large-checked-toggle-left:  $switch-large-width - $switch-large-height + 0.25;
 
 
 // Tables
