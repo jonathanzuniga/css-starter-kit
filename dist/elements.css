@@ -9,6 +9,7 @@
 
 body {
   color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5625; }
 
@@ -830,27 +831,35 @@ small {
  *     @example
  *     input(type='text', placeholder='Text input').input
  */
-.input {
+.input,
+.txtarea {
   background-color: transparent;
   border: 1px solid rgba(100, 100, 100, 0.4);
   border-radius: 0.25em;
   box-shadow: none;
   display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.0625rem;
   padding: 0.5em 0.625em;
   transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
   width: 100%; }
-  .input:active {
+  .input:active,
+  .txtarea:active {
     border-color: #65a4ca; }
-  .input:invalid {
+  .input:invalid,
+  .txtarea:invalid {
     border-color: #ec7d57; }
-  .input:valid {
+  .input:valid,
+  .txtarea:valid {
     border-color: rgba(100, 100, 100, 0.4); }
-  .input:focus, .input:focus:hover {
+  .input:focus, .input:focus:hover,
+  .txtarea:focus,
+  .txtarea:focus:hover {
     border-color: #65a4ca;
     border-width: 1px; }
-  .input:hover {
+  .input:hover,
+  .txtarea:hover {
     border-color: rgba(100, 100, 100, 0.4); }
 
 /**
@@ -890,6 +899,13 @@ small {
   padding-right: 0;
   padding-left: 0; }
 
+/**
+ * Textarea:
+ * `.txtarea`
+ *
+ *     @example
+ *     textarea(placeholder='Textarea', rows='5').txtarea
+ */
 /**
  * Checkbox and radio:
  * 
@@ -973,6 +989,9 @@ small {
   line-height: 1.0625rem;
   padding: 0.5em 0.625em;
   width: 100%; }
+  .select:focus, .select:focus:hover {
+    border-color: #65a4ca;
+    border-width: 1px; }
 
 /**
  * Pure CSS select menu icon:

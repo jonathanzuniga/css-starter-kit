@@ -29,12 +29,14 @@
  *     @example
  *     input(type='text', placeholder='Text input').input
  */
-.input {
+.input,
+.txtarea {
 	background-color: $input-background-color;
 	border: $input-border;
 	border-radius: $input-border-radius;
 	box-shadow: none;
 	display: block;
+	font-family: $base-font-family;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
 	padding: $input-padding;
@@ -112,6 +114,14 @@
 	padding-right: 0;
 	padding-left: 0;
 }
+
+/**
+ * Textarea:
+ * `.txtarea`
+ *
+ *     @example
+ *     textarea(placeholder='Textarea', rows='5').txtarea
+ */
 
 /**
  * Checkbox and radio:
@@ -207,7 +217,7 @@
 	// -ms-touch-action: manipulation;
 	// touch-action: manipulation;
 
-	// Arrow icon.
+	// Add background image.
 	@if $select-background-image != none {
 		background-image: url($select-background-image);
 		background-position: $select-background-position;
@@ -224,6 +234,12 @@
 				background-image: url($select-focus-background-image);
 			}
 		}
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $select-focus-border-color;
+		border-width: $select-focus-border-width;
 	}
 }
 

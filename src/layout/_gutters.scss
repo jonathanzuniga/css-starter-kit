@@ -16,10 +16,13 @@
 	 */
 	.gutters-#{$number} {
 		&.row {
+			margin-right: -($gutter-width * $width);
+			margin-left: -($gutter-width * $width);
+
 			> .col,
 			> [class*="col-"] {
-				padding-left: $gutter-width * $width;
 				padding-right: $gutter-width * $width;
+				padding-left: $gutter-width * $width;
 			}
 		}
 
@@ -33,10 +36,13 @@
 		@media (min-width: $length) {
 			.#{$size}-gutters-#{$number} {
 				&.row {
+					margin-right: -($gutter-width * $width);
+					margin-left: -($gutter-width * $width);
+			
 					> .col,
 					> [class*="col-"] {
-						padding-left: $gutter-width * $width;
 						padding-right: $gutter-width * $width;
+						padding-left: $gutter-width * $width;
 					}
 				}
 
