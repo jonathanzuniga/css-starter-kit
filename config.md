@@ -87,6 +87,11 @@
 			padding-bottom: 2.5rem;
 		}
 
+		.sidebar h3 ~ ul > li,
+		.sidebar ul {
+			margin-bottom: 0.5rem;
+		}
+
 		.sidebar .active a {
 			color: #333;
 		}
@@ -239,6 +244,8 @@
 												a(href='elements.html#textarea') Textarea
 											li
 												a(href='elements.html#checkbox-and-radio') Checkbox and radio
+											li
+												a(href='elements.html#file-area') File area
 											li
 												a(href='elements.html#select-menu') Select menu
 											li

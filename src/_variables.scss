@@ -19,20 +19,18 @@ $base-font-family:     -apple-system,
                        Cantarell, 
                        'Helvetica Neue', 
                        sans-serif;
+
 $base-font-size:       16px !default;
+$small-font-size:      px_to_em($base-font-size - 4); // 0.750em (12px)
+$large-font-size:      px_to_em($base-font-size + 4); // 1.250em (20px)
+
 $base-line-height:     25px !default;
 
 $base-spacing-unit:    2rem; // 32px
-$half-spacing-unit:    $base-spacing-unit / 2; // 16px
-$quarter-spacing-unit: $base-spacing-unit / 4; //  8px
+$half-spacing-unit:    $base-spacing-unit / 2; // 1.0rem (16px)
+$quarter-spacing-unit: $base-spacing-unit / 4; // 0.5rem  (8px)
 
 $line-height-ratio:    $base-line-height / $base-font-size;
-
-
-// Font size
-
-$small-font-size: px_to_em($base-font-size - 4); // 0.750em (12px)
-$large-font-size: px_to_em($base-font-size + 4); // 1.250em (20px)
 
 
 // Colors
@@ -220,6 +218,15 @@ $input-large-border-radius:  $control-border-radius;
 $input-large-font-size:      $large-font-size;
 $input-large-padding-y:      $control-padding-y + 0.25;
 $input-large-padding-x:      $control-padding-x + 0.25;
+
+
+// File area
+
+$file-area-background-color:       transparentize(get_color('grey 1'), 0.95);
+$file-area-padding:                6.25em rem_to_em($half-spacing-unit);
+
+$file-area-focus-background-color: transparentize(get_color('grey 1'), 0.92);
+$file-area-valid-background-color: transparentize(get_color('blue 1'), 0.95);
 
 
 // Select menu
