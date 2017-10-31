@@ -211,6 +211,8 @@
 												a(href='elements.html#active-button') Active button
 											li
 												a(href='elements.html#disabled-button') Disabled button
+											li
+												a(href='elements.html#toggle-button') Toggle button
 									li
 										a(href='elements.html#button-group') Button group
 										ul.ls-unstyled
@@ -325,6 +327,9 @@
 										a(href='helpers.html#clearfix') Clearfix
 									li
 										a(href='helpers.html#colors') Colors
+										ul.ls-unstyled
+											li
+												a(href='helpers.html#link-color-to-text-color') Link color to text color
 									li
 										a(href='helpers.html#float') Float
 										ul.ls-unstyled
@@ -431,6 +436,8 @@
 												a(href='components.html#right-align-navbar-menu') Right align navbar menu
 											li
 												a(href='components.html#responsive-navbar-menu') Responsive navbar menu
+											li
+												a(href='components.html#open-responsive-navbar-menu') Open responsive navbar menu
 											li
 												a(href='components.html#responsive-navbar-grid-menu') Responsive navbar grid menu
 											li

@@ -34,6 +34,11 @@
 /***
  * Navbar:
  */
+[class*="container"] .row > .col > .navbar,
+[class*="container"] .row > [class*="-col-"] > .navbar {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
 /**
  * Navbar:
  * `.navbar`
@@ -178,7 +183,7 @@
   transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
   width: 100%;
   z-index: -1; }
-  .navbar-responsive .navbar__collapse:focus-within {
+  .navbar-responsive .navbar__collapse:focus-within, .navbar-responsive .navbar__collapse.open {
     max-height: 600px;
     opacity: 1;
     transform: translateY(0);
@@ -229,7 +234,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxxs-navbar-responsive .navbar__collapse:focus-within {
+    .maxxs-navbar-responsive .navbar__collapse:focus-within, .maxxs-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -275,7 +280,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxsm-navbar-responsive .navbar__collapse:focus-within {
+    .maxsm-navbar-responsive .navbar__collapse:focus-within, .maxsm-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -321,7 +326,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxmd-navbar-responsive .navbar__collapse:focus-within {
+    .maxmd-navbar-responsive .navbar__collapse:focus-within, .maxmd-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -367,7 +372,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxlg-navbar-responsive .navbar__collapse:focus-within {
+    .maxlg-navbar-responsive .navbar__collapse:focus-within, .maxlg-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -413,7 +418,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxxl-navbar-responsive .navbar__collapse:focus-within {
+    .maxxl-navbar-responsive .navbar__collapse:focus-within, .maxxl-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -438,6 +443,24 @@
   .maxxl-navbar-responsive .btn {
     line-height: inherit; } }
 
+/**
+ * Open responsive navbar menu:
+ * `.open`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive
+ *         div.navbar__brand
+ *             a(href='').navbar__link Brand
+ *         a(href='#!').navbar__toggler Menu
+ *         div.navbar__collapse.open
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__link About
+ */
 /**
  * Responsive navbar grid menu:
  *
@@ -480,11 +503,6 @@
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
  */
-[class*="container"] .row > .col > .navbar,
-[class*="container"] .row > [class*="-col-"] > .navbar {
-  margin-left: -1rem;
-  margin-right: -1rem; }
-
 /***
  * Content:
  */
@@ -3924,12 +3942,18 @@ th {
 .txtc-yellow-8 {
   color: #ffedd9; }
 
-a.ac-txtc:not(.btn):link, a.ac-txtc:not(.btn):visited,
+/**
+ * Link color to text color:
+ *
+ *     @example
+ *     a(href='').ac-txtc Link with text color
+ */
+.ac-txtc:not(.btn):link, .ac-txtc:not(.btn):visited,
 .ac-txtc a:not(.btn):link,
 .ac-txtc a:not(.btn):visited {
   color: #333; }
 
-a.ac-txtc:not(.btn):hover,
+.ac-txtc:not(.btn):hover,
 .ac-txtc a:not(.btn):hover {
   color: #3a8bbb; }
 
@@ -5137,952 +5161,952 @@ a.ac-txtc:not(.btn):hover,
  * Spacing:
  */
 /**
-	 * Margin 0px:
-	 * `.m-0` Applies `margin: 0px;` to element.
+	 * Margin 0em:
+	 * `.m-0` Applies `margin: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-0.bgc-blue-8 &nbsp;
 	 */
 .m-0 {
-  margin: 0px; }
+  margin: 0em; }
 
 /**
-	 * Margin top 0px:
-	 * `.m-top-0` Applies `margin-top: 0px;` to element.
+	 * Margin top 0em:
+	 * `.m-top-0` Applies `margin-top: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-0.bgc-blue-8 &nbsp;
 	 */
 .m-top-0 {
-  margin-top: 0px; }
+  margin-top: 0em; }
 
 /**
-	 * Margin right 0px:
-	 * `.m-right-0` Applies `margin-right: 0px;` to element.
+	 * Margin right 0em:
+	 * `.m-right-0` Applies `margin-right: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-0.bgc-blue-8 &nbsp;
 	 */
 .m-right-0 {
-  margin-right: 0px; }
+  margin-right: 0em; }
 
 /**
-	 * Margin bottom 0px:
-	 * `.m-bottom-0` Applies `margin-bottom: 0px;` to element.
+	 * Margin bottom 0em:
+	 * `.m-bottom-0` Applies `margin-bottom: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-0.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-0 {
-  margin-bottom: 0px; }
+  margin-bottom: 0em; }
 
 /**
-	 * Margin left 0px:
-	 * `.m-left-0` Applies `margin-left: 0px;` to element.
+	 * Margin left 0em:
+	 * `.m-left-0` Applies `margin-left: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-0.bgc-blue-8 &nbsp;
 	 */
 .m-left-0 {
-  margin-left: 0px; }
+  margin-left: 0em; }
 
 /**
-	 * Margin right and left 0px:
-	 * `.m-x-0` Applies `margin-right: 0px;  margin-left: 0px;` to element.
+	 * Margin right and left 0em:
+	 * `.m-x-0` Applies `margin-right: 0em;  margin-left: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-0.bgc-blue-8 &nbsp;
 	 */
 .m-x-0 {
-  margin-left: 0px;
-  margin-right: 0px; }
+  margin-left: 0em;
+  margin-right: 0em; }
 
 /**
-	 * Margin top and bottom 0px:
-	 * `.m-y-0` Applies `margin-top: 0px;  margin-bottom: 0px;` to element.
+	 * Margin top and bottom 0em:
+	 * `.m-y-0` Applies `margin-top: 0em;  margin-bottom: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-0.bgc-blue-8 &nbsp;
 	 */
 .m-y-0 {
-  margin-top: 0px;
-  margin-bottom: 0px; }
+  margin-top: 0em;
+  margin-bottom: 0em; }
 
 /**
-	 * Margin 4px:
-	 * `.m-1` Applies `margin: 4px;` to element.
+	 * Margin 0.25em:
+	 * `.m-1` Applies `margin: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-1.bgc-blue-8 &nbsp;
 	 */
 .m-1 {
-  margin: 4px; }
+  margin: 0.25em; }
 
 /**
-	 * Margin top 4px:
-	 * `.m-top-1` Applies `margin-top: 4px;` to element.
+	 * Margin top 0.25em:
+	 * `.m-top-1` Applies `margin-top: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-1.bgc-blue-8 &nbsp;
 	 */
 .m-top-1 {
-  margin-top: 4px; }
+  margin-top: 0.25em; }
 
 /**
-	 * Margin right 4px:
-	 * `.m-right-1` Applies `margin-right: 4px;` to element.
+	 * Margin right 0.25em:
+	 * `.m-right-1` Applies `margin-right: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-1.bgc-blue-8 &nbsp;
 	 */
 .m-right-1 {
-  margin-right: 4px; }
+  margin-right: 0.25em; }
 
 /**
-	 * Margin bottom 4px:
-	 * `.m-bottom-1` Applies `margin-bottom: 4px;` to element.
+	 * Margin bottom 0.25em:
+	 * `.m-bottom-1` Applies `margin-bottom: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-1.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-1 {
-  margin-bottom: 4px; }
+  margin-bottom: 0.25em; }
 
 /**
-	 * Margin left 4px:
-	 * `.m-left-1` Applies `margin-left: 4px;` to element.
+	 * Margin left 0.25em:
+	 * `.m-left-1` Applies `margin-left: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-1.bgc-blue-8 &nbsp;
 	 */
 .m-left-1 {
-  margin-left: 4px; }
+  margin-left: 0.25em; }
 
 /**
-	 * Margin right and left 4px:
-	 * `.m-x-1` Applies `margin-right: 4px;  margin-left: 4px;` to element.
+	 * Margin right and left 0.25em:
+	 * `.m-x-1` Applies `margin-right: 0.25em;  margin-left: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-1.bgc-blue-8 &nbsp;
 	 */
 .m-x-1 {
-  margin-left: 4px;
-  margin-right: 4px; }
+  margin-left: 0.25em;
+  margin-right: 0.25em; }
 
 /**
-	 * Margin top and bottom 4px:
-	 * `.m-y-1` Applies `margin-top: 4px;  margin-bottom: 4px;` to element.
+	 * Margin top and bottom 0.25em:
+	 * `.m-y-1` Applies `margin-top: 0.25em;  margin-bottom: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-1.bgc-blue-8 &nbsp;
 	 */
 .m-y-1 {
-  margin-top: 4px;
-  margin-bottom: 4px; }
+  margin-top: 0.25em;
+  margin-bottom: 0.25em; }
 
 /**
-	 * Margin 8px:
-	 * `.m-2` Applies `margin: 8px;` to element.
+	 * Margin 0.5em:
+	 * `.m-2` Applies `margin: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-2.bgc-blue-8 &nbsp;
 	 */
 .m-2 {
-  margin: 8px; }
+  margin: 0.5em; }
 
 /**
-	 * Margin top 8px:
-	 * `.m-top-2` Applies `margin-top: 8px;` to element.
+	 * Margin top 0.5em:
+	 * `.m-top-2` Applies `margin-top: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-2.bgc-blue-8 &nbsp;
 	 */
 .m-top-2 {
-  margin-top: 8px; }
+  margin-top: 0.5em; }
 
 /**
-	 * Margin right 8px:
-	 * `.m-right-2` Applies `margin-right: 8px;` to element.
+	 * Margin right 0.5em:
+	 * `.m-right-2` Applies `margin-right: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-2.bgc-blue-8 &nbsp;
 	 */
 .m-right-2 {
-  margin-right: 8px; }
+  margin-right: 0.5em; }
 
 /**
-	 * Margin bottom 8px:
-	 * `.m-bottom-2` Applies `margin-bottom: 8px;` to element.
+	 * Margin bottom 0.5em:
+	 * `.m-bottom-2` Applies `margin-bottom: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-2.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-2 {
-  margin-bottom: 8px; }
+  margin-bottom: 0.5em; }
 
 /**
-	 * Margin left 8px:
-	 * `.m-left-2` Applies `margin-left: 8px;` to element.
+	 * Margin left 0.5em:
+	 * `.m-left-2` Applies `margin-left: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-2.bgc-blue-8 &nbsp;
 	 */
 .m-left-2 {
-  margin-left: 8px; }
+  margin-left: 0.5em; }
 
 /**
-	 * Margin right and left 8px:
-	 * `.m-x-2` Applies `margin-right: 8px;  margin-left: 8px;` to element.
+	 * Margin right and left 0.5em:
+	 * `.m-x-2` Applies `margin-right: 0.5em;  margin-left: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-2.bgc-blue-8 &nbsp;
 	 */
 .m-x-2 {
-  margin-left: 8px;
-  margin-right: 8px; }
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
 
 /**
-	 * Margin top and bottom 8px:
-	 * `.m-y-2` Applies `margin-top: 8px;  margin-bottom: 8px;` to element.
+	 * Margin top and bottom 0.5em:
+	 * `.m-y-2` Applies `margin-top: 0.5em;  margin-bottom: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-2.bgc-blue-8 &nbsp;
 	 */
 .m-y-2 {
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
 
 /**
-	 * Margin 12px:
-	 * `.m-3` Applies `margin: 12px;` to element.
+	 * Margin 0.75em:
+	 * `.m-3` Applies `margin: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-3.bgc-blue-8 &nbsp;
 	 */
 .m-3 {
-  margin: 12px; }
+  margin: 0.75em; }
 
 /**
-	 * Margin top 12px:
-	 * `.m-top-3` Applies `margin-top: 12px;` to element.
+	 * Margin top 0.75em:
+	 * `.m-top-3` Applies `margin-top: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-3.bgc-blue-8 &nbsp;
 	 */
 .m-top-3 {
-  margin-top: 12px; }
+  margin-top: 0.75em; }
 
 /**
-	 * Margin right 12px:
-	 * `.m-right-3` Applies `margin-right: 12px;` to element.
+	 * Margin right 0.75em:
+	 * `.m-right-3` Applies `margin-right: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-3.bgc-blue-8 &nbsp;
 	 */
 .m-right-3 {
-  margin-right: 12px; }
+  margin-right: 0.75em; }
 
 /**
-	 * Margin bottom 12px:
-	 * `.m-bottom-3` Applies `margin-bottom: 12px;` to element.
+	 * Margin bottom 0.75em:
+	 * `.m-bottom-3` Applies `margin-bottom: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-3.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-3 {
-  margin-bottom: 12px; }
+  margin-bottom: 0.75em; }
 
 /**
-	 * Margin left 12px:
-	 * `.m-left-3` Applies `margin-left: 12px;` to element.
+	 * Margin left 0.75em:
+	 * `.m-left-3` Applies `margin-left: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-3.bgc-blue-8 &nbsp;
 	 */
 .m-left-3 {
-  margin-left: 12px; }
+  margin-left: 0.75em; }
 
 /**
-	 * Margin right and left 12px:
-	 * `.m-x-3` Applies `margin-right: 12px;  margin-left: 12px;` to element.
+	 * Margin right and left 0.75em:
+	 * `.m-x-3` Applies `margin-right: 0.75em;  margin-left: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-3.bgc-blue-8 &nbsp;
 	 */
 .m-x-3 {
-  margin-left: 12px;
-  margin-right: 12px; }
+  margin-left: 0.75em;
+  margin-right: 0.75em; }
 
 /**
-	 * Margin top and bottom 12px:
-	 * `.m-y-3` Applies `margin-top: 12px;  margin-bottom: 12px;` to element.
+	 * Margin top and bottom 0.75em:
+	 * `.m-y-3` Applies `margin-top: 0.75em;  margin-bottom: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-3.bgc-blue-8 &nbsp;
 	 */
 .m-y-3 {
-  margin-top: 12px;
-  margin-bottom: 12px; }
+  margin-top: 0.75em;
+  margin-bottom: 0.75em; }
 
 /**
-	 * Margin 16px:
-	 * `.m-4` Applies `margin: 16px;` to element.
+	 * Margin 1em:
+	 * `.m-4` Applies `margin: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-4.bgc-blue-8 &nbsp;
 	 */
 .m-4 {
-  margin: 16px; }
+  margin: 1em; }
 
 /**
-	 * Margin top 16px:
-	 * `.m-top-4` Applies `margin-top: 16px;` to element.
+	 * Margin top 1em:
+	 * `.m-top-4` Applies `margin-top: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-4.bgc-blue-8 &nbsp;
 	 */
 .m-top-4 {
-  margin-top: 16px; }
+  margin-top: 1em; }
 
 /**
-	 * Margin right 16px:
-	 * `.m-right-4` Applies `margin-right: 16px;` to element.
+	 * Margin right 1em:
+	 * `.m-right-4` Applies `margin-right: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-4.bgc-blue-8 &nbsp;
 	 */
 .m-right-4 {
-  margin-right: 16px; }
+  margin-right: 1em; }
 
 /**
-	 * Margin bottom 16px:
-	 * `.m-bottom-4` Applies `margin-bottom: 16px;` to element.
+	 * Margin bottom 1em:
+	 * `.m-bottom-4` Applies `margin-bottom: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-4.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-4 {
-  margin-bottom: 16px; }
+  margin-bottom: 1em; }
 
 /**
-	 * Margin left 16px:
-	 * `.m-left-4` Applies `margin-left: 16px;` to element.
+	 * Margin left 1em:
+	 * `.m-left-4` Applies `margin-left: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-4.bgc-blue-8 &nbsp;
 	 */
 .m-left-4 {
-  margin-left: 16px; }
+  margin-left: 1em; }
 
 /**
-	 * Margin right and left 16px:
-	 * `.m-x-4` Applies `margin-right: 16px;  margin-left: 16px;` to element.
+	 * Margin right and left 1em:
+	 * `.m-x-4` Applies `margin-right: 1em;  margin-left: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-4.bgc-blue-8 &nbsp;
 	 */
 .m-x-4 {
-  margin-left: 16px;
-  margin-right: 16px; }
+  margin-left: 1em;
+  margin-right: 1em; }
 
 /**
-	 * Margin top and bottom 16px:
-	 * `.m-y-4` Applies `margin-top: 16px;  margin-bottom: 16px;` to element.
+	 * Margin top and bottom 1em:
+	 * `.m-y-4` Applies `margin-top: 1em;  margin-bottom: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-4.bgc-blue-8 &nbsp;
 	 */
 .m-y-4 {
-  margin-top: 16px;
-  margin-bottom: 16px; }
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 /**
-	 * Margin 20px:
-	 * `.m-5` Applies `margin: 20px;` to element.
+	 * Margin 1.25em:
+	 * `.m-5` Applies `margin: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-5.bgc-blue-8 &nbsp;
 	 */
 .m-5 {
-  margin: 20px; }
+  margin: 1.25em; }
 
 /**
-	 * Margin top 20px:
-	 * `.m-top-5` Applies `margin-top: 20px;` to element.
+	 * Margin top 1.25em:
+	 * `.m-top-5` Applies `margin-top: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-top-5.bgc-blue-8 &nbsp;
 	 */
 .m-top-5 {
-  margin-top: 20px; }
+  margin-top: 1.25em; }
 
 /**
-	 * Margin right 20px:
-	 * `.m-right-5` Applies `margin-right: 20px;` to element.
+	 * Margin right 1.25em:
+	 * `.m-right-5` Applies `margin-right: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-right-5.bgc-blue-8 &nbsp;
 	 */
 .m-right-5 {
-  margin-right: 20px; }
+  margin-right: 1.25em; }
 
 /**
-	 * Margin bottom 20px:
-	 * `.m-bottom-5` Applies `margin-bottom: 20px;` to element.
+	 * Margin bottom 1.25em:
+	 * `.m-bottom-5` Applies `margin-bottom: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-bottom-5.bgc-blue-8 &nbsp;
 	 */
 .m-bottom-5 {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 /**
-	 * Margin left 20px:
-	 * `.m-left-5` Applies `margin-left: 20px;` to element.
+	 * Margin left 1.25em:
+	 * `.m-left-5` Applies `margin-left: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-left-5.bgc-blue-8 &nbsp;
 	 */
 .m-left-5 {
-  margin-left: 20px; }
+  margin-left: 1.25em; }
 
 /**
-	 * Margin right and left 20px:
-	 * `.m-x-5` Applies `margin-right: 20px;  margin-left: 20px;` to element.
+	 * Margin right and left 1.25em:
+	 * `.m-x-5` Applies `margin-right: 1.25em;  margin-left: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-x-5.bgc-blue-8 &nbsp;
 	 */
 .m-x-5 {
-  margin-left: 20px;
-  margin-right: 20px; }
+  margin-left: 1.25em;
+  margin-right: 1.25em; }
 
 /**
-	 * Margin top and bottom 20px:
-	 * `.m-y-5` Applies `margin-top: 20px;  margin-bottom: 20px;` to element.
+	 * Margin top and bottom 1.25em:
+	 * `.m-y-5` Applies `margin-top: 1.25em;  margin-bottom: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.bgc-blue-4.cf
 	 *         div.m-y-5.bgc-blue-8 &nbsp;
 	 */
 .m-y-5 {
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-top: 1.25em;
+  margin-bottom: 1.25em; }
 
 /**
-	 * Padding 0px:
-	 * `.p-0` Applies `padding: 0px;` to element.
+	 * Padding 0em:
+	 * `.p-0` Applies `padding: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-0 {
-  padding: 0px; }
+  padding: 0em; }
 
 /**
-	 * Padding top 0px:
-	 * `.p-top-0` Applies `padding-top: 0px;` to element.
+	 * Padding top 0em:
+	 * `.p-top-0` Applies `padding-top: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-0 {
-  padding-top: 0px; }
+  padding-top: 0em; }
 
 /**
-	 * Padding right 0px:
-	 * `.p-right-0` Applies `padding-right: 0px;` to element.
+	 * Padding right 0em:
+	 * `.p-right-0` Applies `padding-right: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-0 {
-  padding-right: 0px; }
+  padding-right: 0em; }
 
 /**
-	 * Padding bottom 0px:
-	 * `.p-bottom-0` Applies `padding-bottom: 0px;` to element.
+	 * Padding bottom 0em:
+	 * `.p-bottom-0` Applies `padding-bottom: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-0 {
-  padding-bottom: 0px; }
+  padding-bottom: 0em; }
 
 /**
-	 * Padding left 0px:
-	 * `.p-left-0` Applies `padding-left: 0px;` to element.
+	 * Padding left 0em:
+	 * `.p-left-0` Applies `padding-left: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-0 {
-  padding-left: 0px; }
+  padding-left: 0em; }
 
 /**
-	 * Padding right and left 0px:
-	 * `.p-x-0` Applies `padding-right: 0px; padding-left: 0px;` to element.
+	 * Padding right and left 0em:
+	 * `.p-x-0` Applies `padding-right: 0em; padding-left: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-0 {
-  padding-left: 0px;
-  padding-right: 0px; }
+  padding-left: 0em;
+  padding-right: 0em; }
 
 /**
-	 * Padding top and bottom 0px:
-	 * `.p-y-0` Applies `padding-top: 0px; padding-bottom: 0px;` to element.
+	 * Padding top and bottom 0em:
+	 * `.p-y-0` Applies `padding-top: 0em; padding-bottom: 0em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-0.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-0 {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 0em;
+  padding-bottom: 0em; }
 
 /**
-	 * Padding 4px:
-	 * `.p-1` Applies `padding: 4px;` to element.
+	 * Padding 0.25em:
+	 * `.p-1` Applies `padding: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-1 {
-  padding: 4px; }
+  padding: 0.25em; }
 
 /**
-	 * Padding top 4px:
-	 * `.p-top-1` Applies `padding-top: 4px;` to element.
+	 * Padding top 0.25em:
+	 * `.p-top-1` Applies `padding-top: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-1 {
-  padding-top: 4px; }
+  padding-top: 0.25em; }
 
 /**
-	 * Padding right 4px:
-	 * `.p-right-1` Applies `padding-right: 4px;` to element.
+	 * Padding right 0.25em:
+	 * `.p-right-1` Applies `padding-right: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-1 {
-  padding-right: 4px; }
+  padding-right: 0.25em; }
 
 /**
-	 * Padding bottom 4px:
-	 * `.p-bottom-1` Applies `padding-bottom: 4px;` to element.
+	 * Padding bottom 0.25em:
+	 * `.p-bottom-1` Applies `padding-bottom: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-1 {
-  padding-bottom: 4px; }
+  padding-bottom: 0.25em; }
 
 /**
-	 * Padding left 4px:
-	 * `.p-left-1` Applies `padding-left: 4px;` to element.
+	 * Padding left 0.25em:
+	 * `.p-left-1` Applies `padding-left: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-1 {
-  padding-left: 4px; }
+  padding-left: 0.25em; }
 
 /**
-	 * Padding right and left 4px:
-	 * `.p-x-1` Applies `padding-right: 4px; padding-left: 4px;` to element.
+	 * Padding right and left 0.25em:
+	 * `.p-x-1` Applies `padding-right: 0.25em; padding-left: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-1 {
-  padding-left: 4px;
-  padding-right: 4px; }
+  padding-left: 0.25em;
+  padding-right: 0.25em; }
 
 /**
-	 * Padding top and bottom 4px:
-	 * `.p-y-1` Applies `padding-top: 4px; padding-bottom: 4px;` to element.
+	 * Padding top and bottom 0.25em:
+	 * `.p-y-1` Applies `padding-top: 0.25em; padding-bottom: 0.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-1.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-1 {
-  padding-top: 4px;
-  padding-bottom: 4px; }
+  padding-top: 0.25em;
+  padding-bottom: 0.25em; }
 
 /**
-	 * Padding 8px:
-	 * `.p-2` Applies `padding: 8px;` to element.
+	 * Padding 0.5em:
+	 * `.p-2` Applies `padding: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-2 {
-  padding: 8px; }
+  padding: 0.5em; }
 
 /**
-	 * Padding top 8px:
-	 * `.p-top-2` Applies `padding-top: 8px;` to element.
+	 * Padding top 0.5em:
+	 * `.p-top-2` Applies `padding-top: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-2 {
-  padding-top: 8px; }
+  padding-top: 0.5em; }
 
 /**
-	 * Padding right 8px:
-	 * `.p-right-2` Applies `padding-right: 8px;` to element.
+	 * Padding right 0.5em:
+	 * `.p-right-2` Applies `padding-right: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-2 {
-  padding-right: 8px; }
+  padding-right: 0.5em; }
 
 /**
-	 * Padding bottom 8px:
-	 * `.p-bottom-2` Applies `padding-bottom: 8px;` to element.
+	 * Padding bottom 0.5em:
+	 * `.p-bottom-2` Applies `padding-bottom: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-2 {
-  padding-bottom: 8px; }
+  padding-bottom: 0.5em; }
 
 /**
-	 * Padding left 8px:
-	 * `.p-left-2` Applies `padding-left: 8px;` to element.
+	 * Padding left 0.5em:
+	 * `.p-left-2` Applies `padding-left: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-2 {
-  padding-left: 8px; }
+  padding-left: 0.5em; }
 
 /**
-	 * Padding right and left 8px:
-	 * `.p-x-2` Applies `padding-right: 8px; padding-left: 8px;` to element.
+	 * Padding right and left 0.5em:
+	 * `.p-x-2` Applies `padding-right: 0.5em; padding-left: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-2 {
-  padding-left: 8px;
-  padding-right: 8px; }
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
 
 /**
-	 * Padding top and bottom 8px:
-	 * `.p-y-2` Applies `padding-top: 8px; padding-bottom: 8px;` to element.
+	 * Padding top and bottom 0.5em:
+	 * `.p-y-2` Applies `padding-top: 0.5em; padding-bottom: 0.5em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-2.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-2 {
-  padding-top: 8px;
-  padding-bottom: 8px; }
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
 
 /**
-	 * Padding 12px:
-	 * `.p-3` Applies `padding: 12px;` to element.
+	 * Padding 0.75em:
+	 * `.p-3` Applies `padding: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-3 {
-  padding: 12px; }
+  padding: 0.75em; }
 
 /**
-	 * Padding top 12px:
-	 * `.p-top-3` Applies `padding-top: 12px;` to element.
+	 * Padding top 0.75em:
+	 * `.p-top-3` Applies `padding-top: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-3 {
-  padding-top: 12px; }
+  padding-top: 0.75em; }
 
 /**
-	 * Padding right 12px:
-	 * `.p-right-3` Applies `padding-right: 12px;` to element.
+	 * Padding right 0.75em:
+	 * `.p-right-3` Applies `padding-right: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-3 {
-  padding-right: 12px; }
+  padding-right: 0.75em; }
 
 /**
-	 * Padding bottom 12px:
-	 * `.p-bottom-3` Applies `padding-bottom: 12px;` to element.
+	 * Padding bottom 0.75em:
+	 * `.p-bottom-3` Applies `padding-bottom: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-3 {
-  padding-bottom: 12px; }
+  padding-bottom: 0.75em; }
 
 /**
-	 * Padding left 12px:
-	 * `.p-left-3` Applies `padding-left: 12px;` to element.
+	 * Padding left 0.75em:
+	 * `.p-left-3` Applies `padding-left: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-3 {
-  padding-left: 12px; }
+  padding-left: 0.75em; }
 
 /**
-	 * Padding right and left 12px:
-	 * `.p-x-3` Applies `padding-right: 12px; padding-left: 12px;` to element.
+	 * Padding right and left 0.75em:
+	 * `.p-x-3` Applies `padding-right: 0.75em; padding-left: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-3 {
-  padding-left: 12px;
-  padding-right: 12px; }
+  padding-left: 0.75em;
+  padding-right: 0.75em; }
 
 /**
-	 * Padding top and bottom 12px:
-	 * `.p-y-3` Applies `padding-top: 12px; padding-bottom: 12px;` to element.
+	 * Padding top and bottom 0.75em:
+	 * `.p-y-3` Applies `padding-top: 0.75em; padding-bottom: 0.75em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-3.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-3 {
-  padding-top: 12px;
-  padding-bottom: 12px; }
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; }
 
 /**
-	 * Padding 16px:
-	 * `.p-4` Applies `padding: 16px;` to element.
+	 * Padding 1em:
+	 * `.p-4` Applies `padding: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-4 {
-  padding: 16px; }
+  padding: 1em; }
 
 /**
-	 * Padding top 16px:
-	 * `.p-top-4` Applies `padding-top: 16px;` to element.
+	 * Padding top 1em:
+	 * `.p-top-4` Applies `padding-top: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-4 {
-  padding-top: 16px; }
+  padding-top: 1em; }
 
 /**
-	 * Padding right 16px:
-	 * `.p-right-4` Applies `padding-right: 16px;` to element.
+	 * Padding right 1em:
+	 * `.p-right-4` Applies `padding-right: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-4 {
-  padding-right: 16px; }
+  padding-right: 1em; }
 
 /**
-	 * Padding bottom 16px:
-	 * `.p-bottom-4` Applies `padding-bottom: 16px;` to element.
+	 * Padding bottom 1em:
+	 * `.p-bottom-4` Applies `padding-bottom: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-4 {
-  padding-bottom: 16px; }
+  padding-bottom: 1em; }
 
 /**
-	 * Padding left 16px:
-	 * `.p-left-4` Applies `padding-left: 16px;` to element.
+	 * Padding left 1em:
+	 * `.p-left-4` Applies `padding-left: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-4 {
-  padding-left: 16px; }
+  padding-left: 1em; }
 
 /**
-	 * Padding right and left 16px:
-	 * `.p-x-4` Applies `padding-right: 16px; padding-left: 16px;` to element.
+	 * Padding right and left 1em:
+	 * `.p-x-4` Applies `padding-right: 1em; padding-left: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-4 {
-  padding-left: 16px;
-  padding-right: 16px; }
+  padding-left: 1em;
+  padding-right: 1em; }
 
 /**
-	 * Padding top and bottom 16px:
-	 * `.p-y-4` Applies `padding-top: 16px; padding-bottom: 16px;` to element.
+	 * Padding top and bottom 1em:
+	 * `.p-y-4` Applies `padding-top: 1em; padding-bottom: 1em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-4.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-4 {
-  padding-top: 16px;
-  padding-bottom: 16px; }
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 /**
-	 * Padding 20px:
-	 * `.p-5` Applies `padding: 20px;` to element.
+	 * Padding 1.25em:
+	 * `.p-5` Applies `padding: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-5 {
-  padding: 20px; }
+  padding: 1.25em; }
 
 /**
-	 * Padding top 20px:
-	 * `.p-top-5` Applies `padding-top: 20px;` to element.
+	 * Padding top 1.25em:
+	 * `.p-top-5` Applies `padding-top: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-top-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-top-5 {
-  padding-top: 20px; }
+  padding-top: 1.25em; }
 
 /**
-	 * Padding right 20px:
-	 * `.p-right-5` Applies `padding-right: 20px;` to element.
+	 * Padding right 1.25em:
+	 * `.p-right-5` Applies `padding-right: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-right-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-right-5 {
-  padding-right: 20px; }
+  padding-right: 1.25em; }
 
 /**
-	 * Padding bottom 20px:
-	 * `.p-bottom-5` Applies `padding-bottom: 20px;` to element.
+	 * Padding bottom 1.25em:
+	 * `.p-bottom-5` Applies `padding-bottom: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-bottom-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-bottom-5 {
-  padding-bottom: 20px; }
+  padding-bottom: 1.25em; }
 
 /**
-	 * Padding left 20px:
-	 * `.p-left-5` Applies `padding-left: 20px;` to element.
+	 * Padding left 1.25em:
+	 * `.p-left-5` Applies `padding-left: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-left-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-left-5 {
-  padding-left: 20px; }
+  padding-left: 1.25em; }
 
 /**
-	 * Padding right and left 20px:
-	 * `.p-x-5` Applies `padding-right: 20px; padding-left: 20px;` to element.
+	 * Padding right and left 1.25em:
+	 * `.p-x-5` Applies `padding-right: 1.25em; padding-left: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-x-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-x-5 {
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-left: 1.25em;
+  padding-right: 1.25em; }
 
 /**
-	 * Padding top and bottom 20px:
-	 * `.p-y-5` Applies `padding-top: 20px; padding-bottom: 20px;` to element.
+	 * Padding top and bottom 1.25em:
+	 * `.p-y-5` Applies `padding-top: 1.25em; padding-bottom: 1.25em;` to element.
 	 *
 	 *     @example
 	 *     div.p-y-5.bgc-green-4
 	 *         div.bgc-green-8 &nbsp;
 	 */
 .p-y-5 {
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; }
 
 /***
  * Text:

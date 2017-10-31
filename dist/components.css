@@ -33,6 +33,11 @@
 /***
  * Navbar:
  */
+[class*="container"] .row > .col > .navbar,
+[class*="container"] .row > [class*="-col-"] > .navbar {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
 /**
  * Navbar:
  * `.navbar`
@@ -177,7 +182,7 @@
   transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
   width: 100%;
   z-index: -1; }
-  .navbar-responsive .navbar__collapse:focus-within {
+  .navbar-responsive .navbar__collapse:focus-within, .navbar-responsive .navbar__collapse.open {
     max-height: 600px;
     opacity: 1;
     transform: translateY(0);
@@ -228,7 +233,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxxs-navbar-responsive .navbar__collapse:focus-within {
+    .maxxs-navbar-responsive .navbar__collapse:focus-within, .maxxs-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -274,7 +279,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxsm-navbar-responsive .navbar__collapse:focus-within {
+    .maxsm-navbar-responsive .navbar__collapse:focus-within, .maxsm-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -320,7 +325,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxmd-navbar-responsive .navbar__collapse:focus-within {
+    .maxmd-navbar-responsive .navbar__collapse:focus-within, .maxmd-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -366,7 +371,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxlg-navbar-responsive .navbar__collapse:focus-within {
+    .maxlg-navbar-responsive .navbar__collapse:focus-within, .maxlg-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -412,7 +417,7 @@
     transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.2s ease-in-out;
     width: 100%;
     z-index: -1; }
-    .maxxl-navbar-responsive .navbar__collapse:focus-within {
+    .maxxl-navbar-responsive .navbar__collapse:focus-within, .maxxl-navbar-responsive .navbar__collapse.open {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -437,6 +442,24 @@
   .maxxl-navbar-responsive .btn {
     line-height: inherit; } }
 
+/**
+ * Open responsive navbar menu:
+ * `.open`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive
+ *         div.navbar__brand
+ *             a(href='').navbar__link Brand
+ *         a(href='#!').navbar__toggler Menu
+ *         div.navbar__collapse.open
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__link About
+ */
 /**
  * Responsive navbar grid menu:
  *
@@ -479,7 +502,3 @@
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
  */
-[class*="container"] .row > .col > .navbar,
-[class*="container"] .row > [class*="-col-"] > .navbar {
-  margin-left: -1rem;
-  margin-right: -1rem; }

@@ -2,6 +2,18 @@
  * Navbar:
  */
 
+[class*="container"] {
+	.row {
+		> .col,
+		> [class*="-col-"] {
+			> .navbar {
+				margin-left: -$half-spacing-unit;
+				margin-right: -$half-spacing-unit;
+			}
+		}
+	}
+}
+
 /**
  * Navbar:
  * `.navbar`
@@ -187,7 +199,8 @@
 		width: 100%;
 		z-index: -1;
 
-		&:focus-within {
+		&:focus-within,
+		&.open {
 			@include navbar-responsive-collapse-focus;
 		}
 
@@ -282,6 +295,25 @@
 }
 
 /**
+ * Open responsive navbar menu:
+ * `.open`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive
+ *         div.navbar__brand
+ *             a(href='').navbar__link Brand
+ *         a(href='#!').navbar__toggler Menu
+ *         div.navbar__collapse.open
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__link About
+ */
+
+/**
  * Responsive navbar grid menu:
  *
  *     @example
@@ -324,15 +356,3 @@
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
  */
-
-[class*="container"] {
-	.row {
-		> .col,
-		> [class*="-col-"] {
-			> .navbar {
-				margin-left: -$half-spacing-unit;
-				margin-right: -$half-spacing-unit;
-			}
-		}
-	}
-}
