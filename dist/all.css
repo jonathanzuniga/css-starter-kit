@@ -736,6 +736,286 @@ small {
   font-size: 0.75em; }
 
 /***
+ * Forms:
+ */
+.fld {
+  margin-bottom: 1rem; }
+
+/**
+ * Label:
+ * `.lbl`
+ *
+ *     @example
+ *     label(for='eg-input').lbl Label
+ *     input(id='eg-input', placeholder='Text input', type='text').input
+ */
+.lbl {
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 0.5rem; }
+
+/**
+ * Input:
+ * `.input`
+ *
+ *     @example
+ *     input(type='text', placeholder='Text input').input
+ */
+.input,
+.txtarea {
+  background-color: transparent;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  border-radius: 0.25em;
+  box-shadow: none;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.0625rem;
+  padding: 0.5em 0.625em;
+  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+  width: 100%; }
+  .input:active,
+  .txtarea:active {
+    border-color: #65a4ca; }
+  .input:invalid,
+  .txtarea:invalid {
+    border-color: #ec7d57; }
+  .input:valid,
+  .txtarea:valid {
+    border-color: rgba(100, 100, 100, 0.4); }
+  .input:focus, .input:focus:hover,
+  .txtarea:focus,
+  .txtarea:focus:hover {
+    border-color: #65a4ca;
+    border-width: 1px; }
+  .input:hover,
+  .txtarea:hover {
+    border-color: rgba(100, 100, 100, 0.4); }
+
+/**
+ * Input size:
+ * `.input--[size]`
+ *
+ *     @example
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--lg
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--sm
+ */
+.input--sm {
+  border-radius: 0.25em;
+  font-size: 0.75em;
+  padding: 0.25em 0.625em; }
+
+.input--lg {
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  padding: 0.75em 0.875em; }
+
+/**
+ * Line input:
+ * `.input--line`
+ *
+ *     @example
+ *     input(type='text', placeholder='Line input').input.input--line
+ */
+.input--line {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.4);
+  border-left: none;
+  border-radius: 0;
+  padding-right: 0;
+  padding-left: 0; }
+
+/**
+ * Textarea:
+ * `.txtarea`
+ *
+ *     @example
+ *     textarea(placeholder='Textarea', rows='5').txtarea
+ */
+/**
+ * Checkbox and radio:
+ * 
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio', type='radio', value='')
+ *                     | Radio
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(name='radio', type='radio', value='')
+ *                     | Radio
+ *     div.row
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ */
+.fld--check:not(:last-child) {
+  margin-bottom: 0.5rem; }
+
+.lbl--check {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  position: relative; }
+  .lbl--check:not(:last-child) {
+    margin-right: 1.25rem; }
+
+[type='checkbox'],
+[type='radio'] {
+  margin-top: 0.375rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/**
+ * Select menu:
+ * `.select`
+ *
+ *     @example
+ *     select.select
+ *         option Option 1
+ *         option Option 2
+ *         option Option 3
+ */
+.select {
+  background-color: transparent;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  border-radius: 0.25em;
+  display: block;
+  font-size: 16px;
+  line-height: 1.0625rem;
+  padding: 0.5em 0.625em;
+  width: 100%; }
+  .select:focus, .select:focus:hover {
+    border-color: #65a4ca;
+    border-width: 1px; }
+
+/**
+ * Pure CSS select menu icon:
+ * `.select-icn`
+ *
+ *     @example
+ *     div.select-icn
+ *         select.select
+ *             option Option 1
+ *             option Option 2
+ *             option Option 3
+ */
+.select-icn {
+  position: relative; }
+  .select-icn .select {
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2.3em; }
+  .select-icn:after {
+    border: 0.125em solid #333;
+    border-right: 0;
+    border-top: 0;
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-top: -0.438em;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    pointer-events: none;
+    transform: rotate(-45deg); }
+
+/**
+ * Select menu size:
+ * `.select--[size]` `.select-icn--[size]`
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.select.select--sm
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *             div.fld
+ *                 select.select.select--lg
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.select-icn.select-icn--sm
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ *             div.fld
+ *                 div.select-icn.select-icn--lg
+ *                     select.select
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.select--sm, .select-icn--sm .select {
+  border-radius: 0.25em;
+  font-size: 0.75em;
+  padding: 0.25em 0.625em; }
+
+.select--lg, .select-icn--lg .select {
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  padding: 0.575em 0.875em; }
+
+.select-icn--sm .select {
+  padding-right: 2.20833em; }
+
+.select-icn--sm:after {
+  width: 0.33333em;
+  height: 0.33333em;
+  margin-top: -0.292em;
+  right: 0.75em; }
+
+.select-icn--lg .select {
+  padding-right: 2.5em; }
+
+.select-icn--lg:after {
+  width: 0.75em;
+  height: 0.75em;
+  margin-top: -0.657em;
+  right: 1.25em; }
+
+/***
  * Buttons:
  */
 /**
@@ -1312,169 +1592,104 @@ small {
   position: initial; }
 
 /***
- * Forms:
+ * Input group:
  */
-.fld {
-  margin-bottom: 1rem; }
-
 /**
- * Label:
- * `.lbl`
+ * Button addons:
+ * `.input-group`
  *
  *     @example
- *     label(for='eg-input').lbl Label
- *     input(id='eg-input', placeholder='Text input', type='text').input
+ *     div.input-group
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
  */
-.lbl {
-  display: inline-block;
-  font-size: 1em;
-  margin-bottom: 0.5rem; }
-
 /**
- * Input:
- * `.input`
+ * Mixed addons:
+ * `.input-group`
  *
  *     @example
- *     input(type='text', placeholder='Text input').input
+ *     div.input-group
+ *         label.lbl Search:
+ *         div.input-group-btn
+ *             input(type='search').input
+ *             button.btn.btn--secondary Go
  */
-.input,
-.txtarea {
-  background-color: transparent;
-  border: 1px solid rgba(100, 100, 100, 0.4);
-  border-radius: 0.25em;
-  box-shadow: none;
-  display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  line-height: 1.0625rem;
-  padding: 0.5em 0.625em;
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out;
+.input-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%; }
-  .input:active,
-  .txtarea:active {
-    border-color: #65a4ca; }
-  .input:invalid,
-  .txtarea:invalid {
-    border-color: #ec7d57; }
-  .input:valid,
-  .txtarea:valid {
-    border-color: rgba(100, 100, 100, 0.4); }
-  .input:focus, .input:focus:hover,
-  .txtarea:focus,
-  .txtarea:focus:hover {
-    border-color: #65a4ca;
-    border-width: 1px; }
-  .input:hover,
-  .txtarea:hover {
-    border-color: rgba(100, 100, 100, 0.4); }
+  .input-group .lbl {
+    margin-bottom: 0; }
+    .input-group .lbl:first-child {
+      margin-right: 0.5rem; }
+      .input-group .lbl:first-child + .input-group-btn {
+        flex-grow: 2;
+        width: auto; }
+  .input-group .input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 6rem; }
+    .input-group .input:first-child {
+      flex: 1 1 auto; }
+    .input-group .input:last-child {
+      border-top-right-radius: 0.25em;
+      border-bottom-right-radius: 0.25em; }
+  .input-group .btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+
+.input-group-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%; }
+  .input-group-btn > *:not(:last-child) {
+    margin-right: -1px; }
 
 /**
- * Input size:
- * `.input--[size]`
+ * Input group size:
+ * `.input-group--[size]`
  *
  *     @example
- *     div.fld
- *         input(type='text', placeholder='Text input').input.input--lg
- *     div.fld
- *         input(type='text', placeholder='Text input').input.input--sm
+ *     div.fld.input-group.input-group--lg
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
+ *     div.fld.input-group.input-group--sm
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
  */
-.input--sm {
+.input-group--sm .btn {
   border-radius: 0.25em;
   font-size: 0.75em;
   padding: 0.25em 0.625em; }
+  .input-group--sm .btn.btn--gradient {
+    padding: 0.313em 0.688em; }
 
-.input--lg {
+.input-group--sm .input {
+  font-size: 0.75em;
+  padding: 0.25em 0.625em; }
+  .input-group--sm .input:last-child {
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; }
+
+.input-group--lg .btn {
   border-radius: 0.25em;
   font-size: 1.25em;
   padding: 0.75em 0.875em; }
+  .input-group--lg .btn.btn--gradient {
+    padding: 0.813em 0.938em; }
 
-/**
- * Line input:
- * `.input--line`
- *
- *     @example
- *     input(type='text', placeholder='Line input').input.input--line
- */
-.input--line {
-  background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-bottom: 1px solid rgba(100, 100, 100, 0.4);
-  border-left: none;
-  border-radius: 0;
-  padding-right: 0;
-  padding-left: 0; }
-
-/**
- * Textarea:
- * `.txtarea`
- *
- *     @example
- *     textarea(placeholder='Textarea', rows='5').txtarea
- */
-/**
- * Checkbox and radio:
- * 
- *
- *     @example
- *     div.row
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(checked, name='radio', type='radio', value='')
- *                     | Radio
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(name='radio', type='radio', value='')
- *                     | Radio
- *     div.row
- *         div.sm-col-12
- *             div.fld
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *             div.fld
- *                 label.lbl.lbl--check
- *                     input(checked, name='radio-inline', type='radio', value='')
- *                     | Radio
- *                 label.lbl.lbl--check
- *                     input(name='radio-inline', type='radio', value='')
- *                     | Radio
- *                 label.lbl.lbl--check
- *                     input(name='radio-inline', type='radio', value='')
- *                     | Radio
- */
-.fld--check:not(:last-child) {
-  margin-bottom: 0.5rem; }
-
-.lbl--check {
-  margin-bottom: 0;
-  padding-left: 1.25rem;
-  position: relative; }
-  .lbl--check:not(:last-child) {
-    margin-right: 1.25rem; }
-
-[type='checkbox'],
-[type='radio'] {
-  margin-top: 0.375rem;
-  position: absolute;
-  top: 0;
-  left: 0; }
+.input-group--lg .input {
+  font-size: 1.25em;
+  padding: 0.75em 0.875em; }
+  .input-group--lg .input:last-child {
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em; }
 
 /**
  * File area:
@@ -1525,121 +1740,6 @@ small {
   .file-area label {
     position: relative;
     z-index: 12; }
-
-/**
- * Select menu:
- * `.select`
- *
- *     @example
- *     select.select
- *         option Option 1
- *         option Option 2
- *         option Option 3
- */
-.select {
-  background-color: transparent;
-  border: 1px solid rgba(100, 100, 100, 0.4);
-  border-radius: 0.25em;
-  display: block;
-  font-size: 16px;
-  line-height: 1.0625rem;
-  padding: 0.5em 0.625em;
-  width: 100%; }
-  .select:focus, .select:focus:hover {
-    border-color: #65a4ca;
-    border-width: 1px; }
-
-/**
- * Pure CSS select menu icon:
- * `.select-icn`
- *
- *     @example
- *     div.select-icn
- *         select.select
- *             option Option 1
- *             option Option 2
- *             option Option 3
- */
-.select-icn {
-  position: relative; }
-  .select-icn .select {
-    background: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 2.3em; }
-  .select-icn:after {
-    border: 0.125em solid #333;
-    border-right: 0;
-    border-top: 0;
-    content: '';
-    display: block;
-    width: 0.5em;
-    height: 0.5em;
-    margin-top: -0.438em;
-    position: absolute;
-    top: 50%;
-    right: 1em;
-    pointer-events: none;
-    transform: rotate(-45deg); }
-
-/**
- * Select menu size:
- * `.select--[size]` `.select-icn--[size]`
- *
- *     @example
- *     div.row
- *         div.sm-col-6
- *             div.fld
- *                 select.select.select--sm
- *                     option Option 1
- *                     option Option 2
- *                     option Option 3
- *             div.fld
- *                 select.select.select--lg
- *                     option Option 1
- *                     option Option 2
- *                     option Option 3
- *         div.sm-col-6
- *             div.fld
- *                 div.select-icn.select-icn--sm
- *                     select.select
- *                         option Option 1
- *                         option Option 2
- *                         option Option 3
- *             div.fld
- *                 div.select-icn.select-icn--lg
- *                     select.select
- *                         option Option 1
- *                         option Option 2
- *                         option Option 3
- */
-.select--sm, .select-icn--sm .select {
-  border-radius: 0.25em;
-  font-size: 0.75em;
-  padding: 0.25em 0.625em; }
-
-.select--lg, .select-icn--lg .select {
-  border-radius: 0.25em;
-  font-size: 1.25em;
-  padding: 0.575em 0.875em; }
-
-.select-icn--sm .select {
-  padding-right: 2.20833em; }
-
-.select-icn--sm:after {
-  width: 0.33333em;
-  height: 0.33333em;
-  margin-top: -0.292em;
-  right: 0.75em; }
-
-.select-icn--lg .select {
-  padding-right: 2.5em; }
-
-.select-icn--lg:after {
-  width: 0.75em;
-  height: 0.75em;
-  margin-top: -0.657em;
-  right: 1.25em; }
 
 /**
  * Switch:
@@ -1760,106 +1860,6 @@ small {
 .switch--lg:checked + label:after {
   left: 3.62549em; }
 
-/***
- * Input group:
- */
-/**
- * Button addons:
- * `.input-group`
- *
- *     @example
- *     div.input-group
- *         div.input-group-btn
- *             input(type='search', placeholder='Search...').input
- *             button.btn.btn--secondary Go
- */
-/**
- * Mixed addons:
- * `.input-group`
- *
- *     @example
- *     div.input-group
- *         label.lbl Search:
- *         div.input-group-btn
- *             input(type='search').input
- *             button.btn.btn--secondary Go
- */
-.input-group {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%; }
-  .input-group .lbl {
-    margin-bottom: 0; }
-    .input-group .lbl:first-child {
-      margin-right: 0.5rem; }
-      .input-group .lbl:first-child + .input-group-btn {
-        flex-grow: 2;
-        width: auto; }
-  .input-group .input {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    min-width: 6rem; }
-    .input-group .input:first-child {
-      flex: 1 1 auto; }
-    .input-group .input:last-child {
-      border-top-right-radius: 0.25em;
-      border-bottom-right-radius: 0.25em; }
-  .input-group .btn:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
-
-.input-group-btn {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  width: 100%; }
-  .input-group-btn > *:not(:last-child) {
-    margin-right: -1px; }
-
-/**
- * Input group size:
- * `.input-group--[size]`
- *
- *     @example
- *     div.fld.input-group.input-group--lg
- *         div.input-group-btn
- *             input(type='search', placeholder='Search...').input
- *             button.btn.btn--secondary Go
- *     div.fld.input-group.input-group--sm
- *         div.input-group-btn
- *             input(type='search', placeholder='Search...').input
- *             button.btn.btn--secondary Go
- */
-.input-group--sm .btn {
-  border-radius: 0.25em;
-  font-size: 0.75em;
-  padding: 0.25em 0.625em; }
-  .input-group--sm .btn.btn--gradient {
-    padding: 0.313em 0.688em; }
-
-.input-group--sm .input {
-  font-size: 0.75em;
-  padding: 0.25em 0.625em; }
-  .input-group--sm .input:last-child {
-    border-top-right-radius: 0.25em;
-    border-bottom-right-radius: 0.25em; }
-
-.input-group--lg .btn {
-  border-radius: 0.25em;
-  font-size: 1.25em;
-  padding: 0.75em 0.875em; }
-  .input-group--lg .btn.btn--gradient {
-    padding: 0.813em 0.938em; }
-
-.input-group--lg .input {
-  font-size: 1.25em;
-  padding: 0.75em 0.875em; }
-  .input-group--lg .input:last-child {
-    border-top-right-radius: 0.25em;
-    border-bottom-right-radius: 0.25em; }
-
 /**
  * Toolbar:
  * `.tbar`
@@ -1875,8 +1875,6 @@ small {
  *             div.input-group-btn
  *                 input(type='search', placeholder='Search...').input
  *                 button.btn.btn--secondary Go
- *         input(id='eg-btn-tbar-switch', type='checkbox').switch
- *         label(for='eg-btn-tbar-switch').m-bottom-2
  */
 .tbar {
   display: flex;
@@ -5213,276 +5211,336 @@ th {
  * Spacing:
  */
 .m-0 {
+  margin: 0em;
   margin: 0em; }
 
+.m-1 {
+  margin: 0.25em;
+  margin: 0.25em; }
+
+.m-2 {
+  margin: 0.5em;
+  margin: 0.5em; }
+
+.m-3 {
+  margin: 0.75em;
+  margin: 0.75em; }
+
+.m-4 {
+  margin: 1em;
+  margin: 1em; }
+
+.m-5 {
+  margin: 1.25em;
+  margin: 1.25em; }
+
 .m-top-0 {
-  margin-top: 0em; }
+  margin-top: 0em;
+  margin: 0em; }
+
+.m-top-1 {
+  margin-top: 0.25em;
+  margin: 0.25em; }
+
+.m-top-2 {
+  margin-top: 0.5em;
+  margin: 0.5em; }
+
+.m-top-3 {
+  margin-top: 0.75em;
+  margin: 0.75em; }
+
+.m-top-4 {
+  margin-top: 1em;
+  margin: 1em; }
+
+.m-top-5 {
+  margin-top: 1.25em;
+  margin: 1.25em; }
 
 .m-right-0 {
-  margin-right: 0em; }
+  margin-right: 0em;
+  margin: 0em; }
+
+.m-right-1 {
+  margin-right: 0.25em;
+  margin: 0.25em; }
+
+.m-right-2 {
+  margin-right: 0.5em;
+  margin: 0.5em; }
+
+.m-right-3 {
+  margin-right: 0.75em;
+  margin: 0.75em; }
+
+.m-right-4 {
+  margin-right: 1em;
+  margin: 1em; }
+
+.m-right-5 {
+  margin-right: 1.25em;
+  margin: 1.25em; }
 
 .m-bottom-0 {
-  margin-bottom: 0em; }
+  margin-bottom: 0em;
+  margin: 0em; }
+
+.m-bottom-1 {
+  margin-bottom: 0.25em;
+  margin: 0.25em; }
+
+.m-bottom-2 {
+  margin-bottom: 0.5em;
+  margin: 0.5em; }
+
+.m-bottom-3 {
+  margin-bottom: 0.75em;
+  margin: 0.75em; }
+
+.m-bottom-4 {
+  margin-bottom: 1em;
+  margin: 1em; }
+
+.m-bottom-5 {
+  margin-bottom: 1.25em;
+  margin: 1.25em; }
 
 .m-left-0 {
-  margin-left: 0em; }
+  margin-left: 0em;
+  margin: 0em; }
+
+.m-left-1 {
+  margin-left: 0.25em;
+  margin: 0.25em; }
+
+.m-left-2 {
+  margin-left: 0.5em;
+  margin: 0.5em; }
+
+.m-left-3 {
+  margin-left: 0.75em;
+  margin: 0.75em; }
+
+.m-left-4 {
+  margin-left: 1em;
+  margin: 1em; }
+
+.m-left-5 {
+  margin-left: 1.25em;
+  margin: 1.25em; }
 
 .m-x-0 {
-  margin-left: 0em;
-  margin-right: 0em; }
+  margin-right: 0em;
+  margin-left: 0em; }
+
+.m-x-1 {
+  margin-right: 0.25em;
+  margin-left: 0.25em; }
+
+.m-x-2 {
+  margin-right: 0.5em;
+  margin-left: 0.5em; }
+
+.m-x-3 {
+  margin-right: 0.75em;
+  margin-left: 0.75em; }
+
+.m-x-4 {
+  margin-right: 1em;
+  margin-left: 1em; }
+
+.m-x-5 {
+  margin-right: 1.25em;
+  margin-left: 1.25em; }
 
 .m-y-0 {
   margin-top: 0em;
   margin-bottom: 0em; }
 
-.m-1 {
-  margin: 0.25em; }
-
-.m-top-1 {
-  margin-top: 0.25em; }
-
-.m-right-1 {
-  margin-right: 0.25em; }
-
-.m-bottom-1 {
-  margin-bottom: 0.25em; }
-
-.m-left-1 {
-  margin-left: 0.25em; }
-
-.m-x-1 {
-  margin-left: 0.25em;
-  margin-right: 0.25em; }
-
 .m-y-1 {
   margin-top: 0.25em;
   margin-bottom: 0.25em; }
-
-.m-2 {
-  margin: 0.5em; }
-
-.m-top-2 {
-  margin-top: 0.5em; }
-
-.m-right-2 {
-  margin-right: 0.5em; }
-
-.m-bottom-2 {
-  margin-bottom: 0.5em; }
-
-.m-left-2 {
-  margin-left: 0.5em; }
-
-.m-x-2 {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
 
 .m-y-2 {
   margin-top: 0.5em;
   margin-bottom: 0.5em; }
 
-.m-3 {
-  margin: 0.75em; }
-
-.m-top-3 {
-  margin-top: 0.75em; }
-
-.m-right-3 {
-  margin-right: 0.75em; }
-
-.m-bottom-3 {
-  margin-bottom: 0.75em; }
-
-.m-left-3 {
-  margin-left: 0.75em; }
-
-.m-x-3 {
-  margin-left: 0.75em;
-  margin-right: 0.75em; }
-
 .m-y-3 {
   margin-top: 0.75em;
   margin-bottom: 0.75em; }
 
-.m-4 {
-  margin: 1em; }
-
-.m-top-4 {
-  margin-top: 1em; }
-
-.m-right-4 {
-  margin-right: 1em; }
-
-.m-bottom-4 {
-  margin-bottom: 1em; }
-
-.m-left-4 {
-  margin-left: 1em; }
-
-.m-x-4 {
-  margin-left: 1em;
-  margin-right: 1em; }
-
 .m-y-4 {
   margin-top: 1em;
   margin-bottom: 1em; }
-
-.m-5 {
-  margin: 1.25em; }
-
-.m-top-5 {
-  margin-top: 1.25em; }
-
-.m-right-5 {
-  margin-right: 1.25em; }
-
-.m-bottom-5 {
-  margin-bottom: 1.25em; }
-
-.m-left-5 {
-  margin-left: 1.25em; }
-
-.m-x-5 {
-  margin-left: 1.25em;
-  margin-right: 1.25em; }
 
 .m-y-5 {
   margin-top: 1.25em;
   margin-bottom: 1.25em; }
 
 .p-0 {
+  padding: 0em;
   padding: 0em; }
 
+.p-1 {
+  padding: 0.25em;
+  padding: 0.25em; }
+
+.p-2 {
+  padding: 0.5em;
+  padding: 0.5em; }
+
+.p-3 {
+  padding: 0.75em;
+  padding: 0.75em; }
+
+.p-4 {
+  padding: 1em;
+  padding: 1em; }
+
+.p-5 {
+  padding: 1.25em;
+  padding: 1.25em; }
+
 .p-top-0 {
-  padding-top: 0em; }
+  padding-top: 0em;
+  padding: 0em; }
+
+.p-top-1 {
+  padding-top: 0.25em;
+  padding: 0.25em; }
+
+.p-top-2 {
+  padding-top: 0.5em;
+  padding: 0.5em; }
+
+.p-top-3 {
+  padding-top: 0.75em;
+  padding: 0.75em; }
+
+.p-top-4 {
+  padding-top: 1em;
+  padding: 1em; }
+
+.p-top-5 {
+  padding-top: 1.25em;
+  padding: 1.25em; }
 
 .p-right-0 {
-  padding-right: 0em; }
+  padding-right: 0em;
+  padding: 0em; }
+
+.p-right-1 {
+  padding-right: 0.25em;
+  padding: 0.25em; }
+
+.p-right-2 {
+  padding-right: 0.5em;
+  padding: 0.5em; }
+
+.p-right-3 {
+  padding-right: 0.75em;
+  padding: 0.75em; }
+
+.p-right-4 {
+  padding-right: 1em;
+  padding: 1em; }
+
+.p-right-5 {
+  padding-right: 1.25em;
+  padding: 1.25em; }
 
 .p-bottom-0 {
-  padding-bottom: 0em; }
+  padding-bottom: 0em;
+  padding: 0em; }
+
+.p-bottom-1 {
+  padding-bottom: 0.25em;
+  padding: 0.25em; }
+
+.p-bottom-2 {
+  padding-bottom: 0.5em;
+  padding: 0.5em; }
+
+.p-bottom-3 {
+  padding-bottom: 0.75em;
+  padding: 0.75em; }
+
+.p-bottom-4 {
+  padding-bottom: 1em;
+  padding: 1em; }
+
+.p-bottom-5 {
+  padding-bottom: 1.25em;
+  padding: 1.25em; }
 
 .p-left-0 {
-  padding-left: 0em; }
+  padding-left: 0em;
+  padding: 0em; }
+
+.p-left-1 {
+  padding-left: 0.25em;
+  padding: 0.25em; }
+
+.p-left-2 {
+  padding-left: 0.5em;
+  padding: 0.5em; }
+
+.p-left-3 {
+  padding-left: 0.75em;
+  padding: 0.75em; }
+
+.p-left-4 {
+  padding-left: 1em;
+  padding: 1em; }
+
+.p-left-5 {
+  padding-left: 1.25em;
+  padding: 1.25em; }
 
 .p-x-0 {
-  padding-left: 0em;
-  padding-right: 0em; }
+  padding-right: 0em;
+  padding-left: 0em; }
+
+.p-x-1 {
+  padding-right: 0.25em;
+  padding-left: 0.25em; }
+
+.p-x-2 {
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+.p-x-3 {
+  padding-right: 0.75em;
+  padding-left: 0.75em; }
+
+.p-x-4 {
+  padding-right: 1em;
+  padding-left: 1em; }
+
+.p-x-5 {
+  padding-right: 1.25em;
+  padding-left: 1.25em; }
 
 .p-y-0 {
   padding-top: 0em;
   padding-bottom: 0em; }
 
-.p-1 {
-  padding: 0.25em; }
-
-.p-top-1 {
-  padding-top: 0.25em; }
-
-.p-right-1 {
-  padding-right: 0.25em; }
-
-.p-bottom-1 {
-  padding-bottom: 0.25em; }
-
-.p-left-1 {
-  padding-left: 0.25em; }
-
-.p-x-1 {
-  padding-left: 0.25em;
-  padding-right: 0.25em; }
-
 .p-y-1 {
   padding-top: 0.25em;
   padding-bottom: 0.25em; }
-
-.p-2 {
-  padding: 0.5em; }
-
-.p-top-2 {
-  padding-top: 0.5em; }
-
-.p-right-2 {
-  padding-right: 0.5em; }
-
-.p-bottom-2 {
-  padding-bottom: 0.5em; }
-
-.p-left-2 {
-  padding-left: 0.5em; }
-
-.p-x-2 {
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
 
 .p-y-2 {
   padding-top: 0.5em;
   padding-bottom: 0.5em; }
 
-.p-3 {
-  padding: 0.75em; }
-
-.p-top-3 {
-  padding-top: 0.75em; }
-
-.p-right-3 {
-  padding-right: 0.75em; }
-
-.p-bottom-3 {
-  padding-bottom: 0.75em; }
-
-.p-left-3 {
-  padding-left: 0.75em; }
-
-.p-x-3 {
-  padding-left: 0.75em;
-  padding-right: 0.75em; }
-
 .p-y-3 {
   padding-top: 0.75em;
   padding-bottom: 0.75em; }
 
-.p-4 {
-  padding: 1em; }
-
-.p-top-4 {
-  padding-top: 1em; }
-
-.p-right-4 {
-  padding-right: 1em; }
-
-.p-bottom-4 {
-  padding-bottom: 1em; }
-
-.p-left-4 {
-  padding-left: 1em; }
-
-.p-x-4 {
-  padding-left: 1em;
-  padding-right: 1em; }
-
 .p-y-4 {
   padding-top: 1em;
   padding-bottom: 1em; }
-
-.p-5 {
-  padding: 1.25em; }
-
-.p-top-5 {
-  padding-top: 1.25em; }
-
-.p-right-5 {
-  padding-right: 1.25em; }
-
-.p-bottom-5 {
-  padding-bottom: 1.25em; }
-
-.p-left-5 {
-  padding-left: 1.25em; }
-
-.p-x-5 {
-  padding-left: 1.25em;
-  padding-right: 1.25em; }
 
 .p-y-5 {
   padding-top: 1.25em;

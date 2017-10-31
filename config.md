@@ -198,6 +198,33 @@
 											li
 												a(href='elements.html#small') Small
 									li
+										a(href='elements.html#forms') Forms
+										ul.ls-unstyled
+											li
+												a(href='elements.html#label') Label
+											li
+												a(href='elements.html#input') Input
+											li
+												a(href='elements.html#input-size') Input size
+											li
+												a(href='elements.html#line-input') Line input
+											li
+												a(href='elements.html#textarea') Textarea
+											li
+												a(href='elements.html#checkbox-and-radio') Checkbox and radio
+											li
+												a(href='elements.html#select-menu') Select menu
+											li
+												a(href='elements.html#select-menu-size') Select menu size
+											li
+												a(href='elements.html#file-area') File area
+											li
+												a(href='elements.html#switch') Switch
+											li
+												a(href='elements.html#switch-size') Switch size
+											li
+												a(href='elements.html#toolbar') Toolbar
+									li
 										a(href='elements.html#buttons') Buttons
 										ul.ls-unstyled
 											li
@@ -230,31 +257,6 @@
 											li
 												a(href='elements.html#toggle-state') Toggle state
 									li
-										a(href='elements.html#forms') Forms
-										ul.ls-unstyled
-											li
-												a(href='elements.html#label') Label
-											li
-												a(href='elements.html#input') Input
-											li
-												a(href='elements.html#input-size') Input size
-											li
-												a(href='elements.html#line-input') Line input
-											li
-												a(href='elements.html#textarea') Textarea
-											li
-												a(href='elements.html#checkbox-and-radio') Checkbox and radio
-											li
-												a(href='elements.html#file-area') File area
-											li
-												a(href='elements.html#select-menu') Select menu
-											li
-												a(href='elements.html#select-menu-size') Select menu size
-											li
-												a(href='elements.html#switch') Switch
-											li
-												a(href='elements.html#switch-size') Switch size
-									li
 										a(href='elements.html#input-group') Input group
 										ul.ls-unstyled
 											li
@@ -263,8 +265,6 @@
 												a(href='elements.html#mixed-addons') Mixed addons
 											li
 												a(href='elements.html#input-group-size') Input group size
-									li
-										a(href='elements.html#toolbar') Toolbar
 									li
 										a(href='elements.html#lists') Lists
 										ul.ls-unstyled

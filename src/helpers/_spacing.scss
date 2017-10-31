@@ -3,35 +3,14 @@
  */
 
 @each $prop, $abbr in (margin m, padding p) {
-	@for $i from 0 through $spacings {
-		.#{$abbr}-#{$i} {
-			#{$prop}: $spacing * $i;
-		}
-
-		.#{$abbr}-top-#{$i} {
-			#{$prop}-top: $spacing * $i;
-		}
-
-		.#{$abbr}-right-#{$i} {
-			#{$prop}-right: $spacing * $i;
-		}
-
-		.#{$abbr}-bottom-#{$i} {
-			#{$prop}-bottom: $spacing * $i;
-		}
-
-		.#{$abbr}-left-#{$i} {
-			#{$prop}-left: $spacing * $i;
-		}
-
-		.#{$abbr}-x-#{$i} {
-			#{$prop}-left: $spacing * $i;
-			#{$prop}-right: $spacing * $i;
-		}
-
-		.#{$abbr}-y-#{$i} {
-			#{$prop}-top: $spacing * $i;
-			#{$prop}-bottom: $spacing * $i;
+	@each $name, $prop1, $prop2 in $sides {
+		@for $i from 0 through $spacings {
+			.#{$abbr}#{$name}-#{$i} {
+				#{$prop}#{$prop1}: $spacing * $i;
+				@if $prop2 {
+					#{$prop}#{$prop2}: $spacing * $i;
+				}
+			}
 		}
 	}
 }
@@ -44,7 +23,6 @@
  *     div.bgc-blue-4.cf
  *         div.m-4.bgc-blue-8 &nbsp;
  */
-
 
 /**
  * Padding:
