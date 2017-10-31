@@ -2,121 +2,38 @@
  * Borders:
  */
 
-/**
- * Four borders:
- * `.bd`
- *
- *     @example
- *     div.bd.p-5
- */
-.bd {
-	border: $border-width $border-style $border-color;
-}
+@each $name, $prop1, $prop2 in $sides {
+	$name_r: str_replace(to_lower_case($name), '-', '');
 
-/**
- * Top border:
- * `.bd-top`
- *
- *     @example
- *     div.bd-top.p-5
- */
-.bd-top {
-	border-top: $border-width $border-style $border-color;
-}
+	/**
+	 * Border #{$name_r}:
+	 * `.bd#{$name}`
+	 *
+	 *     @example
+	 *     div.bd#{$name}.p-5
+	 */
+	.bd#{$name} {
+		border#{$prop1}: $border-width $border-style $border-color;
+		@if $prop2 != '' {
+			border#{$prop2}: $border-width $border-style $border-color;
+		}
+	}
 
-/**
- * Right border:
- * `.bd-right`
- *
- *     @example
- *     div.bd-right.p-5
- */
-.bd-right {
-	border-right: $border-width $border-style $border-color;
-}
-
-/**
- * Bottom border:
- * `.bd-bottom`
- *
- *     @example
- *     div.bd-bottom.p-5
- */
-.bd-bottom {
-	border-bottom: $border-width $border-style $border-color;
-}
-
-/**
- * Left border:
- * `.bd-left`
- *
- *     @example
- *     div.bd-left.p-5
- */
-.bd-left {
-	border-left: $border-width $border-style $border-color;
-}
-
-/**
- * Right and left border:
- * `.bd-x`
- *
- *     @example
- *     div.bd-x.p-5
- */
-.bd-x {
-	border-right: $border-width $border-style $border-color;
-	border-left: $border-width $border-style $border-color;
-}
-
-/**
- * Top and bottom border:
- * `.bd-y`
- *
- *     @example
- *     div.bd-y.p-5
- */
-.bd-y {
-	border-top: $border-width $border-style $border-color;
-	border-bottom: $border-width $border-style $border-color;
+	.bd#{$name}-0 {
+		border#{$prop1}: none;
+		@if $prop2 != '' {
+			border#{$prop2}: none;
+		}
+	}
 }
 
 /**
  * Remove borders:
- * `.bd-0`
+ * `.bd-0` `.bd-[side]-0`
  *
  *     @example
  *     div.bd.bd-0.p-5
  */
-.bd-0 {
-	border: none;
-}
-
-.bd-top-0 {
-	border-top: none;
-}
-
-.bd-right-0 {
-	border-right: none;
-}
-
-.bd-bottom-0 {
-	border-bottom: none;
-}
-
-.bd-left-0 {
-	border-left: none;
-}
-
-.bd-x-0 {
-	border-right: none;
-	border-left: none;
-}
-
-.bd-y-0 {
-	border-top: none;
-	border-bottom: none;
-}
 
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {

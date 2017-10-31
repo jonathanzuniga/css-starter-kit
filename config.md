@@ -292,20 +292,6 @@
 										a(href='helpers.html#borders') Borders
 										ul.ls-unstyled
 											li
-												a(href='helpers.html#four-borders') Four borders
-											li
-												a(href='helpers.html#top-border') Top border
-											li
-												a(href='helpers.html#right-border') Right border
-											li
-												a(href='helpers.html#bottom-border') Bottom border
-											li
-												a(href='helpers.html#left-border') Left border
-											li
-												a(href='helpers.html#right-and-left-border') Right and left border
-											li
-												a(href='helpers.html#top-and-bottom-border') Top and bottom border
-											li
 												a(href='helpers.html#remove-borders') Remove borders
 									li
 										a(href='helpers.html#border-radius') Border radius

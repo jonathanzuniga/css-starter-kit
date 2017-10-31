@@ -6,9 +6,9 @@
 	@each $name, $prop1, $prop2 in $sides {
 		@for $i from 0 through $spacings {
 			.#{$abbr}#{$name}-#{$i} {
-				#{$prop}#{$prop1}: $spacing * $i;
-				@if $prop2 {
-					#{$prop}#{$prop2}: $spacing * $i;
+				#{$prop}#{$prop1}: $spacing * $i !important;
+				@if $prop2 != '' {
+					#{$prop}#{$prop2}: $spacing * $i !important;
 				}
 			}
 		}
