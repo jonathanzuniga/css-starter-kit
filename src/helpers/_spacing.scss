@@ -2,178 +2,55 @@
  * Spacing:
  */
 
-@for $i from 0 through $spacings {
-	/**
-	 * Margin #{$spacing * $i}:
-	 * `.m-#{$i}` Applies `margin: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-#{$i} {
-		margin: $spacing * $i;
-	}
+@each $prop, $abbr in (margin m, padding p) {
+	@for $i from 0 through $spacings {
+		.#{$abbr}-#{$i} {
+			#{$prop}: $spacing * $i;
+		}
 
-	/**
-	 * Margin top #{$spacing * $i}:
-	 * `.m-top-#{$i}` Applies `margin-top: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-top-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-top-#{$i} {
-		margin-top: $spacing * $i;
-	}
+		.#{$abbr}-top-#{$i} {
+			#{$prop}-top: $spacing * $i;
+		}
 
-	/**
-	 * Margin right #{$spacing * $i}:
-	 * `.m-right-#{$i}` Applies `margin-right: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-right-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-right-#{$i} {
-		margin-right: $spacing * $i;
-	}
+		.#{$abbr}-right-#{$i} {
+			#{$prop}-right: $spacing * $i;
+		}
 
-	/**
-	 * Margin bottom #{$spacing * $i}:
-	 * `.m-bottom-#{$i}` Applies `margin-bottom: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-bottom-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-bottom-#{$i} {
-		margin-bottom: $spacing * $i;
-	}
+		.#{$abbr}-bottom-#{$i} {
+			#{$prop}-bottom: $spacing * $i;
+		}
 
-	/**
-	 * Margin left #{$spacing * $i}:
-	 * `.m-left-#{$i}` Applies `margin-left: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-left-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-left-#{$i} {
-		margin-left: $spacing * $i;
-	}
+		.#{$abbr}-left-#{$i} {
+			#{$prop}-left: $spacing * $i;
+		}
 
-	/**
-	 * Margin right and left #{$spacing * $i}:
-	 * `.m-x-#{$i}` Applies `margin-right: #{$spacing * $i};  margin-left: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-x-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-x-#{$i} {
-		margin-left: $spacing * $i;
-		margin-right: $spacing * $i;
-	}
+		.#{$abbr}-x-#{$i} {
+			#{$prop}-left: $spacing * $i;
+			#{$prop}-right: $spacing * $i;
+		}
 
-	/**
-	 * Margin top and bottom #{$spacing * $i}:
-	 * `.m-y-#{$i}` Applies `margin-top: #{$spacing * $i};  margin-bottom: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.bgc-blue-4.cf
-	 *         div.m-y-#{$i}.bgc-blue-8 &nbsp;
-	 */
-	.m-y-#{$i} {
-		margin-top: $spacing * $i;
-		margin-bottom: $spacing * $i;
+		.#{$abbr}-y-#{$i} {
+			#{$prop}-top: $spacing * $i;
+			#{$prop}-bottom: $spacing * $i;
+		}
 	}
 }
 
-@for $i from 0 through $spacings {
-	/**
-	 * Padding #{$spacing * $i}:
-	 * `.p-#{$i}` Applies `padding: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-#{$i} {
-		padding: $spacing * $i;
-	}
+/**
+ * Margin:
+ * `.m-[#]` `.m-[side]-[#]`
+ *
+ *     @example
+ *     div.bgc-blue-4.cf
+ *         div.m-4.bgc-blue-8 &nbsp;
+ */
 
-	/**
-	 * Padding top #{$spacing * $i}:
-	 * `.p-top-#{$i}` Applies `padding-top: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-top-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-top-#{$i} {
-		padding-top: $spacing * $i;
-	}
 
-	/**
-	 * Padding right #{$spacing * $i}:
-	 * `.p-right-#{$i}` Applies `padding-right: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-right-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-right-#{$i} {
-		padding-right: $spacing * $i;
-	}
-
-	/**
-	 * Padding bottom #{$spacing * $i}:
-	 * `.p-bottom-#{$i}` Applies `padding-bottom: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-bottom-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-bottom-#{$i} {
-		padding-bottom: $spacing * $i;
-	}
-
-	/**
-	 * Padding left #{$spacing * $i}:
-	 * `.p-left-#{$i}` Applies `padding-left: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-left-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-left-#{$i} {
-		padding-left: $spacing * $i;
-	}
-
-	/**
-	 * Padding right and left #{$spacing * $i}:
-	 * `.p-x-#{$i}` Applies `padding-right: #{$spacing * $i}; padding-left: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-x-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-x-#{$i} {
-		padding-left: $spacing * $i;
-		padding-right: $spacing * $i;
-	}
-
-	/**
-	 * Padding top and bottom #{$spacing * $i}:
-	 * `.p-y-#{$i}` Applies `padding-top: #{$spacing * $i}; padding-bottom: #{$spacing * $i};` to element.
-	 *
-	 *     @example
-	 *     div.p-y-#{$i}.bgc-green-4
-	 *         div.bgc-green-8 &nbsp;
-	 */
-	.p-y-#{$i} {
-		padding-top: $spacing * $i;
-		padding-bottom: $spacing * $i;
-	}
-}
+/**
+ * Padding:
+ * `.p-[#]` `.p-[side]-[#]`
+ *
+ *     @example
+ *     div.p-4.bgc-green-4
+ *         div.bgc-green-8 &nbsp;
+ */
