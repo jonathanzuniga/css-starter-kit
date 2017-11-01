@@ -170,6 +170,50 @@
 		#{$prop}: $border-radius;
 	}
 
+	/**
+	 * Rounded top right corner:
+	 * `.#{$abbr}-1`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}-1.p-5
+	 */
+	.#{$abbr}-1 {
+		border-top-right-radius: $border-radius;
+	}
+
+	/**
+	 * Rounded bottom right corner:
+	 * `.#{$abbr}-2`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}-2.p-5
+	 */
+	.#{$abbr}-2 {
+		border-bottom-right-radius: $border-radius;
+	}
+
+	/**
+	 * Rounded bottom left corner:
+	 * `.#{$abbr}-3`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}-3.p-5
+	 */
+	.#{$abbr}-3 {
+		border-bottom-left-radius: $border-radius;
+	}
+
+	/**
+	 * Rounded top left corner:
+	 * `.#{$abbr}-4`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}-4.p-5
+	 */
+	.#{$abbr}-4 {
+		border-top-left-radius: $border-radius;
+	}
+
 	@each $side, $corner1, $corner2 in $sides {
 		/**
 		 * Rounded #{$side} corners:
@@ -194,48 +238,4 @@
 	.#{$abbr}-0 {
 		#{$prop}: 0;
 	}
-}
-
-/**
- * Rounded top right corner:
- * `.bd-radius-1`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-1.p-5
- */
-.bd-radius-1 {
-	border-top-right-radius: $border-radius;
-}
-
-/**
- * Rounded bottom right corner:
- * `.bd-radius-2`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-2.p-5
- */
-.bd-radius-2 {
-	border-bottom-right-radius: $border-radius;
-}
-
-/**
- * Rounded bottom left corner:
- * `.bd-radius-3`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-3.p-5
- */
-.bd-radius-3 {
-	border-bottom-left-radius: $border-radius;
-}
-
-/**
- * Rounded top left corner:
- * `.bd-radius-4`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-4.p-5
- */
-.bd-radius-4 {
-	border-top-left-radius: $border-radius;
 }
