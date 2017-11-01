@@ -355,15 +355,13 @@ $border-style:  solid;
 $border-color:  transparentize(get_color('grey 1'), 0.87);
 $border-radius: $quarter-spacing-unit / 2;
 
-// Sides: Name, first property, second property.
+// Sides:
+// Side name, first corner, second corner.
 $sides: (
-	''        ''        '',
-	'-top'    '-top'    '',
-	'-right'  '-right'  '',
-	'-bottom' '-bottom' '',
-	'-left'   '-left'   '',
-	'-x'      '-right'  '-left',
-	'-y'      '-top'    '-bottom'
+	'top'    'top-right'    'top-left',
+	'right'  'top-right'    'bottom-right',
+	'bottom' 'bottom-right' 'bottom-left',
+	'left'   'top-left'     'bottom-left'
 );
 
 

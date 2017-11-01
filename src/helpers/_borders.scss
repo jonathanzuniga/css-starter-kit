@@ -2,161 +2,155 @@
  * Borders:
  */
 
-@each $name, $prop1, $prop2 in $sides {
-	$name_r: str_replace(to_lower_case($name), '-', '');
-
+@each $prop, $abbr in (border: bd) {
 	/**
-	 * Border #{$name_r}:
-	 * `.bd#{$name}`
+	 * Border:
+	 * `.#{$abbr}` `.#{$abbr}-[side]`
 	 *
 	 *     @example
-	 *     div.bd#{$name}.p-5
+	 *     div.bd.p-5
 	 */
-	.bd#{$name} {
-		border#{$prop1}: $border-width $border-style $border-color;
-		@if $prop2 != '' {
-			border#{$prop2}: $border-width $border-style $border-color;
+	.#{$abbr} {
+		#{$prop}: $border-width $border-style $border-color;
+	}
+
+	.#{$abbr}-x {
+		#{$prop}-left: $border-width $border-style $border-color;
+		#{$prop}-right: $border-width $border-style $border-color;
+	}
+
+	.#{$abbr}-y {
+		#{$prop}-top: $border-width $border-style $border-color;
+		#{$prop}-bottom: $border-width $border-style $border-color;
+	}
+
+	/**
+	 * Remove border:
+	 * `.#{$abbr}-0` `.#{$abbr}-[side]-0`
+	 *
+	 *     @example
+	 *     div.#{$abbr}.#{$abbr}-0.p-5
+	 */
+	.#{$abbr}-0 {
+		#{$prop}: none;
+	}
+
+	.#{$abbr}-x-0 {
+		#{$prop}-left: none;
+		#{$prop}-right: none;
+	}
+
+	.#{$abbr}-y-0 {
+		#{$prop}-top: none;
+		#{$prop}-bottom: none;
+	}
+
+	/**
+	 * Responsive border:
+	 * `.[size]-#{$abbr}` `.max[size]-#{$abbr}` `.[size]-#{$abbr}-[side]` `.max[size]-#{$abbr}-[side]`
+	 *
+	 *     @example
+	 *     div.md-#{$abbr}-x.p-5
+	 */
+
+	/**
+	 * Responsive remove border:
+	 * `.[size]-#{$abbr}-0` `.max[size]-#{$abbr}-0` `.[size]-#{$abbr}-[side]-0` `.max[size]-#{$abbr}-[side]-0`
+	 *
+	 *     @example
+	 *     div.#{$abbr}.sm-#{$abbr}-y-0.md-#{$abbr}-y.md-#{$abbr}-x-0.p-5
+	 */
+	@each $side in $sides {
+		.#{$abbr}-#{$side} {
+			#{$prop}-#{$side}: $border-width $border-style $border-color;
+		}
+
+		.#{$abbr}-#{$side}-0 {
+			#{$prop}-#{$side}: none;
+		}
+
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				.#{$size}-#{$abbr}-#{$side} {
+					#{$prop}-#{$side}: $border-width $border-style $border-color;
+				}
+
+				.#{$size}-#{$abbr}-#{$side}-0 {
+					#{$prop}-#{$side}: none;
+				}
+			}
+
+			@media (max-width: $length - 1) {
+				.max#{$size}-#{$abbr}-#{$side} {
+					#{$prop}-#{$side}: $border-width $border-style $border-color;
+				}
+
+				.max#{$size}-#{$abbr}-#{$side}-0 {
+					#{$prop}-#{$side}: none;
+				}
+			}
 		}
 	}
 
-	.bd#{$name}-0 {
-		border#{$prop1}: none;
-		@if $prop2 != '' {
-			border#{$prop2}: none;
-		}
-	}
-}
+	@each $size, $length in $grid-breakpoints {
+		@media (min-width: $length) {
+			.#{$size}-#{$abbr} {
+				#{$prop}: $border-width $border-style $border-color;
+			}
 
-/**
- * Remove borders:
- * `.bd-0` `.bd-[side]-0`
- *
- *     @example
- *     div.bd.bd-0.p-5
- */
+			.#{$size}-#{$abbr}-x {
+				#{$prop}-right: $border-width $border-style $border-color;
+				#{$prop}-left: $border-width $border-style $border-color;
+			}
 
-@each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
-		.#{$size}-bd {
-			border: $border-width $border-style $border-color;
-		}
+			.#{$size}-#{$abbr}-y {
+				#{$prop}-top: $border-width $border-style $border-color;
+				#{$prop}-bottom: $border-width $border-style $border-color;
+			}
 
-		.#{$size}-bd-top {
-			border-top: $border-width $border-style $border-color;
-		}
+			.#{$size}-#{$abbr}-0 {
+				#{$prop}: none;
+			}
 
-		.#{$size}-bd-right {
-			border-right: $border-width $border-style $border-color;
-		}
+			.#{$size}-#{$abbr}-x-0 {
+				#{$prop}-right: none;
+				#{$prop}-left: none;
+			}
 
-		.#{$size}-bd-bottom {
-			border-bottom: $border-width $border-style $border-color;
+			.#{$size}-#{$abbr}-y-0 {
+				#{$prop}-top: none;
+				#{$prop}-bottom: none;
+			}
 		}
 
-		.#{$size}-bd-left {
-			border-left: $border-width $border-style $border-color;
-		}
+		@media (max-width: $length - 1) {
+			.max#{$size}-#{$abbr} {
+				#{$prop}: $border-width $border-style $border-color;
+			}
 
-		.#{$size}-bd-x {
-			border-right: $border-width $border-style $border-color;
-			border-left: $border-width $border-style $border-color;
-		}
+			.max#{$size}-#{$abbr}-x {
+				#{$prop}-right: $border-width $border-style $border-color;
+				#{$prop}-left: $border-width $border-style $border-color;
+			}
 
-		.#{$size}-bd-y {
-			border-top: $border-width $border-style $border-color;
-			border-bottom: $border-width $border-style $border-color;
-		}
+			.max#{$size}-#{$abbr}-y {
+				#{$prop}-top: $border-width $border-style $border-color;
+				#{$prop}-bottom: $border-width $border-style $border-color;
+			}
 
-		.#{$size}-bd-0 {
-			border: none;
-		}
+			.max#{$size}-#{$abbr}-0 {
+				#{$prop}: none;
+			}
 
-		.#{$size}-bd-top-0 {
-			border-top: none;
-		}
+			.max#{$size}-#{$abbr}-x-0 {
+				#{$prop}-right: none;
+				#{$prop}-left: none;
+			}
 
-		.#{$size}-bd-right-0 {
-			border-right: none;
-		}
-
-		.#{$size}-bd-bottom-0 {
-			border-bottom: none;
-		}
-
-		.#{$size}-bd-left-0 {
-			border-left: none;
-		}
-
-		.#{$size}-bd-x-0 {
-			border-right: none;
-			border-left: none;
-		}
-
-		.#{$size}-bd-y-0 {
-			border-top: none;
-			border-bottom: none;
-		}
-	}
-	
-	@media (max-width: $length - 1) {
-		.max#{$size}-bd {
-			border: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-top {
-			border-top: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-right {
-			border-right: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-bottom {
-			border-bottom: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-left {
-			border-left: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-x {
-			border-right: $border-width $border-style $border-color;
-			border-left: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-y {
-			border-top: $border-width $border-style $border-color;
-			border-bottom: $border-width $border-style $border-color;
-		}
-
-		.max#{$size}-bd-0 {
-			border: none;
-		}
-
-		.max#{$size}-bd-top-0 {
-			border-top: none;
-		}
-
-		.max#{$size}-bd-right-0 {
-			border-right: none;
-		}
-
-		.max#{$size}-bd-bottom-0 {
-			border-bottom: none;
-		}
-
-		.max#{$size}-bd-left-0 {
-			border-left: none;
-		}
-
-		.max#{$size}-bd-x-0 {
-			border-right: none;
-			border-left: none;
-		}
-
-		.max#{$size}-bd-y-0 {
-			border-top: none;
-			border-bottom: none;
+			.max#{$size}-#{$abbr}-y-0 {
+				#{$prop}-top: none;
+				#{$prop}-bottom: none;
+			}
 		}
 	}
 }
@@ -164,16 +158,42 @@
 /***
  * Border radius:
  */
+@each $prop, $abbr in (border-radius: bd-radius) {
+	/**
+	 * Rounded corners:
+	 * `.#{$abbr}`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}.p-5
+	 */
+	.#{$abbr} {
+		#{$prop}: $border-radius;
+	}
 
-/**
- * Rounded four corners:
- * `.bd-radius`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius.p-5
- */
-.bd-radius {
-	border-radius: $border-radius;
+	@each $side, $corner1, $corner2 in $sides {
+		/**
+		 * Rounded #{$side} corners:
+		 * `.#{$abbr}-#{$side}`
+		 *
+		 *     @example
+		 *     div.bgc-grey-2.#{$abbr}-#{$side}.p-5
+		 */
+		.#{$abbr}-#{$side} {
+			border-#{$corner1}-radius: $border-radius;
+			border-#{$corner2}-radius: $border-radius;
+		}
+	}
+
+	/**
+	 * Remove rounded corners:
+	 * `.#{$abbr}-0`
+	 *
+	 *     @example
+	 *     div.bgc-grey-2.#{$abbr}.#{$abbr}-0.p-5
+	 */
+	.#{$abbr}-0 {
+		#{$prop}: 0;
+	}
 }
 
 /**
@@ -218,63 +238,4 @@
  */
 .bd-radius-4 {
 	border-top-left-radius: $border-radius;
-}
-
-/**
- * Rounded top corners:
- * `.bd-radius-top`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-top.p-5
- */
-.bd-radius-top {
-	border-top-right-radius: $border-radius;
-	border-top-left-radius: $border-radius;
-}
-
-/**
- * Rounded right corners:
- * `.bd-radius-right`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-right.p-5
- */
-.bd-radius-right {
-	border-top-right-radius: $border-radius;
-	border-bottom-right-radius: $border-radius;
-}
-
-/**
- * Rounded bottom corners:
- * `.bd-radius-bottom`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-bottom.p-5
- */
-.bd-radius-bottom {
-	border-bottom-right-radius: $border-radius;
-	border-bottom-left-radius: $border-radius;
-}
-
-/**
- * Rounded left corners:
- * `.bd-radius-left`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius-left.p-5
- */
-.bd-radius-left {
-	border-top-left-radius: $border-radius;
-	border-bottom-left-radius: $border-radius;
-}
-
-/**
- * Remove rounded corners:
- * `.bd-radius-0`
- *
- *     @example
- *     div.bgc-grey-2.bd-radius.bd-radius-0.p-5
- */
-.bd-radius-0 {
-	border-radius: 0;
 }

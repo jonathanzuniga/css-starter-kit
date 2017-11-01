@@ -292,12 +292,20 @@
 										a(href='helpers.html#borders') Borders
 										ul.ls-unstyled
 											li
-												a(href='helpers.html#remove-borders') Remove borders
+												a(href='helpers.html#border') Border
+											li
+												a(href='helpers.html#remove-border') Remove border
+											li
+												a(href='helpers.html#responsive-border') Responsive border
+											li
+												a(href='helpers.html#responsive-remove-border') Responsive remove border
 									li
 										a(href='helpers.html#border-radius') Border radius
 										ul.ls-unstyled
 											li
-												a(href='helpers.html#rounded-four-corners') Rounded four corners
+												a(href='helpers.html#rounded-four-corners') Rounded corners
+											li
+												a(href='helpers.html#remove-rounded-corners') Remove rounded corners
 											li
 												a(href='helpers.html#rounded-top-right-corner') Rounded top right corner
 											li
@@ -306,16 +314,6 @@
 												a(href='helpers.html#rounded-bottom-left-corner') Rounded bottom left corner
 											li
 												a(href='helpers.html#rounded-top-left-corner') Rounded top left corner
-											li
-												a(href='helpers.html#rounded-top-corners') Rounded top corners
-											li
-												a(href='helpers.html#rounded-right-corners') Rounded right corners
-											li
-												a(href='helpers.html#rounded-bottom-corners') Rounded bottom corners
-											li
-												a(href='helpers.html#rounded-left-corners') Rounded left corners
-											li
-												a(href='helpers.html#remove-rounded-corners') Remove rounded corners
 									li
 										a(href='helpers.html#clearfix') Clearfix
 									li

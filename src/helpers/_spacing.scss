@@ -2,14 +2,37 @@
  * Spacing:
  */
 
-@each $prop, $abbr in (margin m, padding p) {
-	@each $name, $prop1, $prop2 in $sides {
+@each $prop, $abbr in (margin: m, padding: p) {
+	@each $side in $sides {
 		@for $i from 0 through $spacings {
-			.#{$abbr}#{$name}-#{$i} {
-				#{$prop}#{$prop1}: $spacing * $i !important;
-				@if $prop2 != '' {
-					#{$prop}#{$prop2}: $spacing * $i !important;
-				}
+			.#{$abbr}-#{$i} {
+				#{$prop}: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-top: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-right: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-bottom: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-left: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-left: $spacing * $i;
+				#{$prop}-right: $spacing * $i;
+			}
+
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-top: $spacing * $i;
+				#{$prop}-bottom: $spacing * $i;
 			}
 		}
 	}
