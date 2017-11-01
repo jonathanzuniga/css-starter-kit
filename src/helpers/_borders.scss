@@ -60,7 +60,7 @@
 	 *     @example
 	 *     div.#{$abbr}.sm-#{$abbr}-y-0.md-#{$abbr}-y.md-#{$abbr}-x-0.p-5
 	 */
-	@each $side in $sides {
+	@each $side, $corner1, $corner2 in $sides {
 		.#{$abbr}-#{$side} {
 			#{$prop}-#{$side}: $border-width $border-style $border-color;
 		}
