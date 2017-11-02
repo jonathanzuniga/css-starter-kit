@@ -3,36 +3,72 @@
  */
 
 @each $prop, $abbr in (margin: m, padding: p) {
-	@each $side in $sides {
-		@for $i from 0 through $spacings {
-			.#{$abbr}-#{$i} {
-				#{$prop}: $spacing * $i;
+	@for $i from 0 through $spacings {
+		.#{$abbr}-#{$i} {
+			#{$prop}: $spacing * $i $spacing-important;
+		}
+
+		.#{$abbr}-x-#{$i} {
+			#{$prop}-right: $spacing * $i $spacing-important;
+			#{$prop}-left: $spacing * $i $spacing-important;
+		}
+
+		.#{$abbr}-y-#{$i} {
+			#{$prop}-top: $spacing * $i $spacing-important;
+			#{$prop}-bottom: $spacing * $i $spacing-important;
+		}
+
+		@each $side, $corner1, $corner2 in $sides {
+			.#{$abbr}-#{$side}-#{$i} {
+				#{$prop}-#{$side}: $spacing * $i $spacing-important;
 			}
 
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-top: $spacing * $i;
+			@each $size, $length in $grid-breakpoints {
+				@media (min-width: $length) {
+					.#{$size}-#{$abbr}-#{$side}-#{$i} {
+						#{$prop}-#{$side}: $spacing * $i $spacing-important;
+					}
+				}
+
+				@media (max-width: $length - 1) {
+					.max#{$size}-#{$abbr}-#{$side}-#{$i} {
+						#{$prop}-#{$side}: $spacing * $i $spacing-important;
+					}
+				}
+			}
+		}
+
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				.#{$size}-#{$abbr}-#{$i} {
+					#{$prop}: $spacing * $i $spacing-important;
+				}
+
+				.#{$size}-#{$abbr}-x-#{$i} {
+					#{$prop}-left: $spacing * $i $spacing-important;
+					#{$prop}-right: $spacing * $i $spacing-important;
+				}
+
+				.#{$size}-#{$abbr}-y-#{$i} {
+					#{$prop}-top: $spacing * $i $spacing-important;
+					#{$prop}-bottom: $spacing * $i $spacing-important;
+				}
 			}
 
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-right: $spacing * $i;
-			}
+			@media (max-width: $length - 1) {
+				.max#{$size}-#{$abbr}-#{$i} {
+					#{$prop}: $spacing * $i $spacing-important;
+				}
 
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-bottom: $spacing * $i;
-			}
+				.max#{$size}-#{$abbr}-x-#{$i} {
+					#{$prop}-left: $spacing * $i $spacing-important;
+					#{$prop}-right: $spacing * $i $spacing-important;
+				}
 
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-left: $spacing * $i;
-			}
-
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-left: $spacing * $i;
-				#{$prop}-right: $spacing * $i;
-			}
-
-			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-top: $spacing * $i;
-				#{$prop}-bottom: $spacing * $i;
+				.max#{$size}-#{$abbr}-y-#{$i} {
+					#{$prop}-top: $spacing * $i $spacing-important;
+					#{$prop}-bottom: $spacing * $i $spacing-important;
+				}
 			}
 		}
 	}
@@ -48,10 +84,29 @@
  */
 
 /**
+ * Responsive margin:
+ * `.[size]-m-[#]` `.max[size]-m-[#]` `.[size]-m-[side]-[#]` `.max[size]-m-[side]-[#]`
+ *
+ *     @example
+ *     div.bgc-blue-4.cf
+ *         div.md-m-4.bgc-blue-8 &nbsp;
+ */
+
+/**
  * Padding:
  * `.p-[#]` `.p-[side]-[#]`
  *
  *     @example
  *     div.p-4.bgc-green-4
+ *         div.bgc-green-8 &nbsp;
+ */
+
+
+/**
+ * Responsive padding:
+ * `.[size]-p-[#]` `.max[size]-p-[#]` `.[size]-p-[side]-[#]` `.max[size]-p-[side]-[#]`
+ *
+ *     @example
+ *     div.md-p-4.bgc-green-4
  *         div.bgc-green-8 &nbsp;
  */

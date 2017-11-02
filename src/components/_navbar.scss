@@ -63,6 +63,7 @@
 }
 
 .navbar {
+	background-color: $navbar-background-color;
 	justify-content: flex-start;
 }
 
@@ -356,3 +357,48 @@
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
  */
+
+.navbar {
+	transition: $base-transition;
+
+	&.fixed {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	&.scrolled {
+		box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+					0 4px 5px 0 rgba(0, 0, 0, 0.06),
+					0 1px 10px 0 rgba(0, 0, 0, 0.08);
+	}
+}
+
+@each $size, $length in $grid-breakpoints {
+	@media (max-width: $length - 1) {
+		.max#{$size}-fsmenu {
+			background-color: #fff;
+
+			opacity: 0;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			max-height: 0;
+
+			z-index: -1;
+
+			&.open {
+				opacity: 1;
+
+				max-height: 100vh;
+				overflow-y: auto;
+
+				z-index: 1001;
+			}
+		}
+	}
+}

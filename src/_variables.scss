@@ -356,7 +356,7 @@ $border-color:  transparentize(get_color('grey 1'), 0.87);
 $border-radius: $quarter-spacing-unit / 2;
 
 // Sides:
-// Side name, first corner, second corner.
+// Side, first corner, second corner.
 $sides: (
 	'top'    'top-right'    'top-left',
 	'right'  'top-right'    'bottom-right',
@@ -401,12 +401,12 @@ $smcaps-letter-spacing: 0.125em; // 2px
 $smcaps-margin-right:   0.188em; // 3px
 
 
-// Cantidad de espacios para margins & paddings,
-$spacings: 5 !default;
+// Hiding
 
-// incrementando cada espacio por...
-$spacing: 0.25em !default;
+$hiding-important: !important;
 
+
+// Sizing
 
 // Porcentajes para widths & heights.
 $sizes: (
@@ -421,6 +421,17 @@ $sizes: (
 	90:  90%,
 	100: 100%
 ) !default;
+
+
+// Spacing
+
+// Cantidad de espacios para margins & paddings,
+$spacings:          20 !default;
+
+// incrementando cada espacio por...
+$spacing:           0.25em !default;
+
+$spacing-important: !important;
 
 
 // ==========================================================================
@@ -479,7 +490,8 @@ $card-hover-box-shadow: 0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 // Navbar brand
 
-$navbar-brand-font-size: $large-font-size;
+$navbar-background-color:    #fff;
+$navbar-brand-font-size:     $large-font-size;
 
 $navbar-collapse-transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), 
                              opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), 

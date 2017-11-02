@@ -96,17 +96,26 @@
 			color: #333;
 		}
 
-		.navbar {
-			background-color: rgba(0, 0, 0, 0.05);
-		}
+		//- .navbar {
+		//- 	background-color: rgba(0, 0, 0, 0.05);
+		//- }
 
 ### Body
 
 	div.container-fluid
+		div.row.sm-hide
+			div.col
+				nav.navbar.navbar-responsive.bd-bottom.fixed
+					div.navbar__brand
+						a(href='/').navbar__link CSS Starter Kit
+					a(href='#').navbar__toggler Menu
+
 		div.row
-			div.sidebar.xs-col-12.md-col-3.xl-col-2
+			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu
 				div.sidebar__content.row
 					div.col
+						button(id='close-fsmenu').btn.btn--link.sm-hide.flt-right Close
+
 						h1 CSS Starter Kit
 
 						p
@@ -342,13 +351,20 @@
 											li
 												a(href='helpers.html#hide') Hide
 											li
-												a(href='helpers.html#hide-at-minimum-size') Hide at minimum size
-											li
-												a(href='helpers.html#hide-at-maximum-size') Hide at maximum size
+												a(href='helpers.html#hide-at-size') Hide at size
 									li
 										a(href='helpers.html#sizing') Sizing
 									li
 										a(href='helpers.html#spacing') Spacing
+										ul.ls-unstyled
+											li
+												a(href='helpers.html#margin') Margin
+											li
+												a(href='helpers.html#responsive-margin') Responsive margin
+											li
+												a(href='helpers.html#padding') Padding
+											li
+												a(href='helpers.html#responsive-padding') Responsive padding
 									li
 										a(href='helpers.html#text') Text
 										ul.ls-unstyled
@@ -434,7 +450,7 @@
 											li
 												a(href='components.html#navbar-brand-in-the-center') Navbar brand in the center
 
-			div.main.xs-col-12.md-col-9.xl-col-10
+			div.main.xs-col-12.md-col-9.xl-col-10.maxsm-p-top-20
 				div.main__content.row.cols-center
 					div.md-col-9.xl-col-10
 						div(sg-content).sg-container

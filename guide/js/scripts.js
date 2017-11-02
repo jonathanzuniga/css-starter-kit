@@ -85,6 +85,8 @@ $(function() {
 
 		$('.sidebar a[href$="#' + anchor[1] + '"]').parent().addClass('active');
 		$('.sidebar a').not('a[href$="#' + anchor[1] + '"]').parent().removeClass('active');
+
+		navbarMenuClose();
 	});
 
 	var href = document.location.href;
@@ -116,6 +118,9 @@ $(function() {
 	// $(window).scroll(function() {
 	// 	scrollSpy();
 	// });
+
+	navbarScrolled();
+	navbarMenu();
 });
 
 //- function loadMain(url, anchor) {
@@ -159,4 +164,34 @@ function scrollSpy() {
 
 	$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
 	$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
+}
+
+function navbarScrolled() {
+	// Caches a jQuery object containing the navbar element.
+	var navbar = $('.navbar.fixed');
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll >= 2) {
+			navbar.addClass('scrolled');
+		} else {
+			navbar.removeClass('scrolled');
+		}
+	});
+}
+
+function navbarMenu() {
+	$('.navbar__toggler').click(function() {
+		$('body').css('overflow', 'hidden');
+		$('[class*="-fsmenu"]').addClass('open');
+	});
+
+	$('#close-fsmenu').click(function() {
+		$('body').css('overflow', 'initial');
+		$('[class*="-fsmenu"]').removeClass('open');
+	});
+}
+
+function navbarMenuClose() {
+	$('body').css('overflow', 'initial');
+	$('[class*="-fsmenu"]').removeClass('open');
 }

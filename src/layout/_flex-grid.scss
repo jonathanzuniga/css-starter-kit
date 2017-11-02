@@ -82,20 +82,21 @@ html, body {
  * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
  *
  *     @example
- *     div.row
- *         div.col
- *             div.bgc-grey-2 &nbsp;
- *         div.col
- *             div.bgc-grey-2 &nbsp;
- *     div.row.m-top-4
- *         div.col
- *             div.bgc-grey-2 &nbsp;
- *         div.col
- *             div.bgc-grey-2 &nbsp;
- *         div.col
- *             div.bgc-grey-2 &nbsp;
- *         div.col
- *             div.bgc-grey-2 &nbsp;
+ *     div.container
+ *         div.row
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *         div.row.m-top-4
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col
+ *                 div.bgc-grey-2 &nbsp;
  */
 @for $i from 1 through $grid-columns-number {
 	.col-#{$i} {
@@ -112,21 +113,22 @@ html, body {
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.row
- *         div.xs-col-6
- *             div.bgc-grey-2 &nbsp;
- *         div.xs-col-6
- *             div.bgc-grey-3 &nbsp;
- *     div.row.m-top-4
- *         div.sm-col-6.md-col-8
- *             div.bgc-grey-2 &nbsp;
- *         div.sm-col-6.md-col-4
- *             div.bgc-grey-3 &nbsp;
- *     div.row.m-top-4
- *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
- *             div.bgc-grey-2 &nbsp;
- *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
- *             div.bgc-grey-3 &nbsp;
+ *     div.container
+ *         div.row
+ *             div.xs-col-6
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.xs-col-6
+ *                 div.bgc-grey-3 &nbsp;
+ *         div.row.m-top-4
+ *             div.sm-col-6.md-col-8
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.sm-col-6.md-col-4
+ *                 div.bgc-grey-3 &nbsp;
+ *         div.row.m-top-4
+ *             div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
+ *                 div.bgc-grey-3 &nbsp;
  */
 // Si no se escriben los primeros tamaños de una clase [size]-col-[#], que entonces sean 100% de ancho.
 [class*="-col-"] {

@@ -13,17 +13,13 @@
  *         div.col-4.hide
  *             div.bgc-grey-2 &nbsp;
  */
-@mixin hide {
-	display: none !important;
-}
-
 .hide {
-	@include hide;
+	display: none $hiding-important;
 }
 
 /**
- * Hide at minimum size:
- * `.[size]-hide`
+ * Hide at size:
+ * `.[size]-hide` `.max[size]-hide`
  *
  *     @example
  *     div.row
@@ -32,28 +28,30 @@
  *         div.col-4.lg-hide
  *             div.bgc-grey-2 &nbsp;
  */
-
-/**
- * Hide at maximum size:
- * `.max[size]-hide`
- *
- *     @example
- *     div.row
- *         div.col-8
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4.maxlg-hide
- *             div.bgc-grey-2 &nbsp;
- */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		.#{$size}-hide {
-			@include hide;
+			display: none $hiding-important;
 		}
 	}
 
 	@media (max-width: $length - 1) {
 		.max#{$size}-hide {
-			@include hide;
+			display: none $hiding-important;
+		}
+	}
+
+	@for $i from 0 through 1 {
+		@media (min-width: $length) {
+			.#{$size}-opacity-#{$i} {
+				opacity: #{$i};
+			}
+		}
+
+		@media (max-width: $length - 1) {
+			.max#{$size}-opacity-#{$i} {
+				opacity: #{$i};
+			}
 		}
 	}
 }

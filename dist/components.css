@@ -84,6 +84,7 @@
   min-height: 3.5rem; }
 
 .navbar {
+  background-color: #fff;
   justify-content: flex-start; }
 
 .navbar__brand {
@@ -502,3 +503,96 @@
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
  */
+.navbar {
+  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
+  .navbar.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; }
+  .navbar.scrolled {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
+
+@media (max-width: -1) {
+  .maxxs-fsmenu {
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    z-index: -1; }
+    .maxxs-fsmenu.open {
+      opacity: 1;
+      max-height: 100vh;
+      overflow-y: auto;
+      z-index: 1001; } }
+
+@media (max-width: 767px) {
+  .maxsm-fsmenu {
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    z-index: -1; }
+    .maxsm-fsmenu.open {
+      opacity: 1;
+      max-height: 100vh;
+      overflow-y: auto;
+      z-index: 1001; } }
+
+@media (max-width: 1023px) {
+  .maxmd-fsmenu {
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    z-index: -1; }
+    .maxmd-fsmenu.open {
+      opacity: 1;
+      max-height: 100vh;
+      overflow-y: auto;
+      z-index: 1001; } }
+
+@media (max-width: 1279px) {
+  .maxlg-fsmenu {
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    z-index: -1; }
+    .maxlg-fsmenu.open {
+      opacity: 1;
+      max-height: 100vh;
+      overflow-y: auto;
+      z-index: 1001; } }
+
+@media (max-width: 1679px) {
+  .maxxl-fsmenu {
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    z-index: -1; }
+    .maxxl-fsmenu.open {
+      opacity: 1;
+      max-height: 100vh;
+      overflow-y: auto;
+      z-index: 1001; } }

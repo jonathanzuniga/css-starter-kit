@@ -8,16 +8,17 @@
 	 * `.gutters-#{$number}`
 	 *
 	 *     @example
-	 *     div.row.gutters-#{$number}
-	 *         div.col-8
-	 *             div.bgc-grey-2 &nbsp;
-	 *         div.col-4
-	 *             div.bgc-grey-2 &nbsp;
+	 *     div.container
+	 *         div.row.gutters-#{$number}
+	 *             div.col-8
+	 *                 div.bgc-grey-2 &nbsp;
+	 *             div.col-4
+	 *                 div.bgc-grey-2 &nbsp;
 	 */
 	.gutters-#{$number} {
 		&.row {
-			margin-right: -($gutter-width * $width);
-			margin-left: -($gutter-width * $width);
+			// margin-right: -($gutter-width * $width);
+			// margin-left: -($gutter-width * $width);
 
 			> .col,
 			> [class*="col-"] {
@@ -36,8 +37,8 @@
 		@media (min-width: $length) {
 			.#{$size}-gutters-#{$number} {
 				&.row {
-					margin-right: -($gutter-width * $width);
-					margin-left: -($gutter-width * $width);
+					// margin-right: -($gutter-width * $width);
+					// margin-left: -($gutter-width * $width);
 			
 					> .col,
 					> [class*="col-"] {
@@ -71,9 +72,10 @@
  * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
  *
  *     @example
- *     div.row.md-gutters-0
- *         div.col-8
- *             div.bgc-grey-2 &nbsp;
- *         div.col-4
- *             div.bgc-grey-3 &nbsp;
+ *     div.container
+ *         div.row.md-gutters-0
+ *             div.col-8
+ *                 div.bgc-grey-2 &nbsp;
+ *             div.col-4
+ *                 div.bgc-grey-3 &nbsp;
  */
