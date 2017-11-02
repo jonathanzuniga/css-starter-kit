@@ -120,7 +120,7 @@ $(function() {
 	// });
 
 	navbarScrolled();
-	navbarMenu();
+	navbarMenuToggle();
 });
 
 //- function loadMain(url, anchor) {
@@ -179,8 +179,8 @@ function navbarScrolled() {
 	});
 }
 
-function navbarMenu() {
-	$('.navbar__toggler').click(function() {
+function navbarMenuToggle() {
+	$('#open-fsmenu').click(function() {
 		if (!$('[class*="-fsmenu"]').hasClass('open')) {
 			$('body').css('overflow', 'hidden');
 			$('[class*="-fsmenu"]').addClass('open');

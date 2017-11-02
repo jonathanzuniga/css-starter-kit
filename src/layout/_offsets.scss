@@ -7,17 +7,16 @@
  * `.oset-[#]` `.[size]-oset-[#]`
  *
  *     @example
- *     div.container
- *         div.row
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4.oset-4
- *                 div.bgc-grey-2 &nbsp;
- *         div.row.m-top-4
- *             div.md-col-5
- *                 div.bgc-grey-2 &nbsp;
- *             div.md-col-3.lg-oset-3
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.oset-4
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row.m-top-4
+ *         div.md-col-5
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-col-3.lg-oset-3
+ *             div.bgc-grey-2 &nbsp;
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {

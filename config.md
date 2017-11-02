@@ -108,7 +108,7 @@
 				nav.navbar.navbar-responsive.bd-bottom.fixed
 					div.navbar__brand
 						a(href='/').navbar__link CSS Starter Kit
-					a(href='#!').navbar__toggler Menu
+					a(href='#!', id='open-fsmenu').navbar__toggler Menu
 
 		div.row
 			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12
@@ -447,6 +447,13 @@
 												a(href='components.html#responsive-navbar-grid-menu') Responsive navbar grid menu
 											li
 												a(href='components.html#navbar-brand-in-the-center') Navbar brand in the center
+											li
+												a(href='components.html#navbar-optional-classes') Navbar optional classes
+									li
+										a(href='components.html#navmenu') Navmenu
+										ul.ls-unstyled
+											li
+												a(href='components.html#full-screen-menu') Full screen menu
 
 			div.main.xs-col-12.md-col-9.xl-col-10.maxsm-p-top-20
 				div.main__content.row.cols-center

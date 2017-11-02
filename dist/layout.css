@@ -24,7 +24,7 @@ html, body {
 
 /**
  * Container:
- * `.container`
+ * `.container` have a max. width of 1100px.
  *
  *     @example
  *     div.container
@@ -61,21 +61,20 @@ html, body {
  * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
  *
  *     @example
- *     div.container
- *         div.row
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
- *         div.row.m-top-4
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
- *             div.col
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row.m-top-4
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col
+ *             div.bgc-grey-2 &nbsp;
  */
 .col-1 {
   flex-basis: 8.33333%;
@@ -130,22 +129,21 @@ html, body {
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.container
- *         div.row
- *             div.xs-col-6
- *                 div.bgc-grey-2 &nbsp;
- *             div.xs-col-6
- *                 div.bgc-grey-3 &nbsp;
- *         div.row.m-top-4
- *             div.sm-col-6.md-col-8
- *                 div.bgc-grey-2 &nbsp;
- *             div.sm-col-6.md-col-4
- *                 div.bgc-grey-3 &nbsp;
- *         div.row.m-top-4
- *             div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
- *                 div.bgc-grey-2 &nbsp;
- *             div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
- *                 div.bgc-grey-3 &nbsp;
+ *     div.row
+ *         div.xs-col-6
+ *             div.bgc-grey-2 &nbsp;
+ *         div.xs-col-6
+ *             div.bgc-grey-3 &nbsp;
+ *     div.row.m-top-4
+ *         div.sm-col-6.md-col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.sm-col-6.md-col-4
+ *             div.bgc-grey-3 &nbsp;
+ *     div.row.m-top-4
+ *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
+ *             div.bgc-grey-2 &nbsp;
+ *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
+ *             div.bgc-grey-3 &nbsp;
  */
 [class*="-col-"] {
   flex-basis: 100%;
@@ -1461,12 +1459,11 @@ html, body {
 	 * `.gutters-0`
 	 *
 	 *     @example
-	 *     div.container
-	 *         div.row.gutters-0
-	 *             div.col-8
-	 *                 div.bgc-grey-2 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-grey-2 &nbsp;
+	 *     div.row.gutters-0
+	 *         div.col-8
+	 *             div.bgc-grey-2 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-grey-2 &nbsp;
 	 */
 .gutters-0.row > .col,
 .gutters-0.row > [class*="col-"] {
@@ -1651,12 +1648,11 @@ html, body {
 	 * `.gutters-5`
 	 *
 	 *     @example
-	 *     div.container
-	 *         div.row.gutters-5
-	 *             div.col-8
-	 *                 div.bgc-grey-2 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-grey-2 &nbsp;
+	 *     div.row.gutters-5
+	 *         div.col-8
+	 *             div.bgc-grey-2 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-grey-2 &nbsp;
 	 */
 .gutters-5.row > .col,
 .gutters-5.row > [class*="col-"] {
@@ -1841,12 +1837,11 @@ html, body {
 	 * `.gutters-1`
 	 *
 	 *     @example
-	 *     div.container
-	 *         div.row.gutters-1
-	 *             div.col-8
-	 *                 div.bgc-grey-2 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-grey-2 &nbsp;
+	 *     div.row.gutters-1
+	 *         div.col-8
+	 *             div.bgc-grey-2 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-grey-2 &nbsp;
 	 */
 .gutters-1.row > .col,
 .gutters-1.row > [class*="col-"] {
@@ -2031,12 +2026,11 @@ html, body {
 	 * `.gutters-15`
 	 *
 	 *     @example
-	 *     div.container
-	 *         div.row.gutters-15
-	 *             div.col-8
-	 *                 div.bgc-grey-2 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-grey-2 &nbsp;
+	 *     div.row.gutters-15
+	 *         div.col-8
+	 *             div.bgc-grey-2 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-grey-2 &nbsp;
 	 */
 .gutters-15.row > .col,
 .gutters-15.row > [class*="col-"] {
@@ -2221,12 +2215,11 @@ html, body {
 	 * `.gutters-2`
 	 *
 	 *     @example
-	 *     div.container
-	 *         div.row.gutters-2
-	 *             div.col-8
-	 *                 div.bgc-grey-2 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-grey-2 &nbsp;
+	 *     div.row.gutters-2
+	 *         div.col-8
+	 *             div.bgc-grey-2 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-grey-2 &nbsp;
 	 */
 .gutters-2.row > .col,
 .gutters-2.row > [class*="col-"] {
@@ -2411,12 +2404,11 @@ html, body {
  * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
  *
  *     @example
- *     div.container
- *         div.row.md-gutters-0
- *             div.col-8
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-3 &nbsp;
+ *     div.row.md-gutters-0
+ *         div.col-8
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-3 &nbsp;
  */
 /***
  * Horizontal modifiers:
@@ -2426,12 +2418,11 @@ html, body {
  * `.cols-left`
  *
  *     @example
- *     div.container
- *         div.row.cols-left
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-left
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-left {
   justify-content: flex-start; }
@@ -2441,12 +2432,11 @@ html, body {
  * `.cols-center`
  *
  *     @example
- *     div.container
- *         div.row.cols-center
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-center
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-center {
   justify-content: center; }
@@ -2456,12 +2446,11 @@ html, body {
  * `.cols-right`
  *
  *     @example
- *     div.container
- *         div.row.cols-right
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-right
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-right {
   justify-content: flex-end; }
@@ -2471,12 +2460,11 @@ html, body {
  * `.cols-between`
  *
  *     @example
- *     div.container
- *         div.row.cols-between
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-between
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-between {
   justify-content: space-between; }
@@ -2486,12 +2474,11 @@ html, body {
  * `.cols-around`
  *
  *     @example
- *     div.container
- *         div.row.cols-around
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-around
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-around {
   justify-content: space-around; }
@@ -2504,14 +2491,13 @@ html, body {
  * `.cols-top`
  *
  *     @example
- *     div.container
- *         div.row.cols-top.h-100px
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-top.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-top {
   align-items: flex-start; }
@@ -2521,14 +2507,13 @@ html, body {
  * `.cols-middle`
  *
  *     @example
- *     div.container
- *         div.row.cols-middle.h-100px
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-middle.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-middle {
   align-items: center; }
@@ -2538,14 +2523,13 @@ html, body {
  * `.cols-bottom`
  *
  *     @example
- *     div.container
- *         div.row.cols-bottom.h-100px
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .cols-bottom {
   align-items: flex-end; }
@@ -2555,14 +2539,13 @@ html, body {
  * `.col-top`
  *
  *     @example
- *     div.container
- *         div.row.cols-bottom.h-100px
- *             div.col-4.col-top
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.cols-bottom.h-100px
+ *         div.col-4.col-top
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .col-top {
   align-self: flex-start; }
@@ -2572,14 +2555,13 @@ html, body {
  * `.col-middle`
  *
  *     @example
- *     div.container
- *         div.row.h-100px
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4.col-middle
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-middle
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
  */
 .col-middle {
   align-self: center; }
@@ -2589,14 +2571,13 @@ html, body {
  * `.col-middle`
  *
  *     @example
- *     div.container
- *         div.row.h-100px
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4.col-bottom
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row.h-100px
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.col-bottom
+ *             div.bgc-grey-2 &nbsp;
  */
 .col-bottom {
   align-self: flex-end; }
@@ -2609,17 +2590,16 @@ html, body {
  * `.oset-[#]` `.[size]-oset-[#]`
  *
  *     @example
- *     div.container
- *         div.row
- *             div.col-4
- *                 div.bgc-grey-2 &nbsp;
- *             div.col-4.oset-4
- *                 div.bgc-grey-2 &nbsp;
- *         div.row.m-top-4
- *             div.md-col-5
- *                 div.bgc-grey-2 &nbsp;
- *             div.md-col-3.lg-oset-3
- *                 div.bgc-grey-2 &nbsp;
+ *     div.row
+ *         div.col-4
+ *             div.bgc-grey-2 &nbsp;
+ *         div.col-4.oset-4
+ *             div.bgc-grey-2 &nbsp;
+ *     div.row.m-top-4
+ *         div.md-col-5
+ *             div.bgc-grey-2 &nbsp;
+ *         div.md-col-3.lg-oset-3
+ *             div.bgc-grey-2 &nbsp;
  */
 @media (min-width: 0) {
   .oset-0,
