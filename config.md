@@ -108,15 +108,13 @@
 				nav.navbar.navbar-responsive.bd-bottom.fixed
 					div.navbar__brand
 						a(href='/').navbar__link CSS Starter Kit
-					a(href='#').navbar__toggler Menu
+					a(href='#!').navbar__toggler Menu
 
 		div.row
-			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu
+			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12
 				div.sidebar__content.row
 					div.col
-						button(id='close-fsmenu').btn.btn--link.sm-hide.flt-right Close
-
-						h1 CSS Starter Kit
+						h1.maxsm-hide CSS Starter Kit
 
 						p
 							b DISCLAIMER - This is a very early stage work in progress project

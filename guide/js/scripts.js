@@ -169,8 +169,8 @@ function scrollSpy() {
 function navbarScrolled() {
 	// Caches a jQuery object containing the navbar element.
 	var navbar = $('.navbar.fixed');
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
+	$('.sidebar').add(window).scroll(function() {
+		var scroll = $(this).scrollTop();
 		if (scroll >= 2) {
 			navbar.addClass('scrolled');
 		} else {
@@ -181,17 +181,19 @@ function navbarScrolled() {
 
 function navbarMenu() {
 	$('.navbar__toggler').click(function() {
-		$('body').css('overflow', 'hidden');
-		$('[class*="-fsmenu"]').addClass('open');
-	});
-
-	$('#close-fsmenu').click(function() {
-		$('body').css('overflow', 'initial');
-		$('[class*="-fsmenu"]').removeClass('open');
+		if (!$('[class*="-fsmenu"]').hasClass('open')) {
+			$('body').css('overflow', 'hidden');
+			$('[class*="-fsmenu"]').addClass('open');
+			$(this).text('Close');
+		}
+		else {
+			navbarMenuClose();
+		}
 	});
 }
 
 function navbarMenuClose() {
 	$('body').css('overflow', 'initial');
 	$('[class*="-fsmenu"]').removeClass('open');
+	$('.navbar__toggler').text('Menu');
 }
