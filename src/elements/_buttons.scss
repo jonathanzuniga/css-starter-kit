@@ -58,10 +58,19 @@
 	}
 }
 
-@each $name, $background-color, $border-color, $text-color, 
-	$gradient-background-color-top-tint-amount, $gradient-background-color-bottom-shade-amount,
-	$gradient-background-color-top-hue, $gradient-background-color-top-saturation, $gradient-background-color-top-lightness,
-	$gradient-background-color-bottom-hue, $gradient-background-color-bottom-saturation, $gradient-background-color-bottom-lightness in $buttons {
+@each 
+	$name, 
+	$background-color, 
+	$border-color, 
+	$text-color, 
+	$gradient-background-color-top-tint-amount, 
+	$gradient-background-color-bottom-shade-amount,
+	$gradient-background-color-top-hue, 
+	$gradient-background-color-top-saturation, 
+	$gradient-background-color-top-lightness,
+	$gradient-background-color-bottom-hue, 
+	$gradient-background-color-bottom-saturation, 
+	$gradient-background-color-bottom-lightness in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -111,6 +120,7 @@
 		&.btn--#{$name_r} {
 			$button-gradient-background-color-top: 
 				tint(
+					$base-background-color, 
 					$background-color, 
 					$gradient-background-color-top-tint-amount
 				);

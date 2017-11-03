@@ -2,8 +2,8 @@
 
 
 // Slightly lighten a color.
-@function tint($color, $percentage) {
-	@return mix(white, $color, $percentage);
+@function tint($background-color, $color, $percentage) {
+	@return mix($background-color, $color, $percentage);
 }
 
 // Slightly darken a color.
@@ -12,26 +12,20 @@
 }
 
 // Generar la lista completa de colores.
-@function get_colors_list($colors, $tints) {
+@function get_colors($background-color, $colors) {
+	$tints: 8;
 	$colors-list: 'black' #000, 'white' #fff;
 	@each $name, $hex in $colors {
-		@for $tint from 1 to $tints + 2 {
-			@if $tint == 1 {
-				$colors-list: append(
-					$colors-list, 
-					'#{$name} #{$tint}' $hex, 
-					comma
-				);
-			} @else {
-				$colors-list: append(
-					$colors-list, 
-					'#{$name} #{$tint}' tint(
-						$hex, 
-						percentage(1 - ((100 / $tint) / 64))
-					), 
-					comma
-				);
-			}
+		@for $tint from 0 to $tints {
+			$colors-list: append(
+				$colors-list, 
+				'#{$name} #{$tint + 1}' tint(
+					$background-color, 
+					$hex, 
+					percentage($tint / $tints)
+				), 
+				comma
+			);
 		}
 	}
 	@return $colors-list;
