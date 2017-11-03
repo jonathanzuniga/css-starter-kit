@@ -531,6 +531,24 @@
   .navbar.scrolled {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
 
+.night-mode .navbar {
+  background-color: #1a1a1a; }
+
+.night-mode .navbar__item.active .navbar__link:link, .night-mode .navbar__item.active .navbar__link:hover, .night-mode .navbar__item.active .navbar__link:visited {
+  color: #3a8bbb; }
+
+.night-mode .navbar__link:link, .night-mode .navbar__link:visited,
+.night-mode .navbar__toggler:link,
+.night-mode .navbar__toggler:visited {
+  color: #fff; }
+
+.night-mode .navbar__link:hover,
+.night-mode .navbar__toggler:hover {
+  color: #3a8bbb; }
+
+.night-mode .navbar.scrolled {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
+
 /***
  * Navmenu:
  */
@@ -568,7 +586,9 @@
       transition: opacity 700ms step-start, transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), visibility 700ms step-start, background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94); }
       .maxxs-fsmenu.open > * {
         opacity: 1;
-        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; } }
+        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
+  .night-mode .maxxs-fsmenu.open {
+    background-color: #1a1a1a; } }
 
 @media (max-width: 767px) {
   .maxsm-fsmenu {
@@ -597,7 +617,9 @@
       transition: opacity 700ms step-start, transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), visibility 700ms step-start, background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94); }
       .maxsm-fsmenu.open > * {
         opacity: 1;
-        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; } }
+        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
+  .night-mode .maxsm-fsmenu.open {
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1023px) {
   .maxmd-fsmenu {
@@ -626,7 +648,9 @@
       transition: opacity 700ms step-start, transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), visibility 700ms step-start, background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94); }
       .maxmd-fsmenu.open > * {
         opacity: 1;
-        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; } }
+        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
+  .night-mode .maxmd-fsmenu.open {
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1279px) {
   .maxlg-fsmenu {
@@ -655,7 +679,9 @@
       transition: opacity 700ms step-start, transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), visibility 700ms step-start, background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94); }
       .maxlg-fsmenu.open > * {
         opacity: 1;
-        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; } }
+        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
+  .night-mode .maxlg-fsmenu.open {
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1679px) {
   .maxxl-fsmenu {
@@ -684,4 +710,6 @@
       transition: opacity 700ms step-start, transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), visibility 700ms step-start, background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94); }
       .maxxl-fsmenu.open > * {
         opacity: 1;
-        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; } }
+        transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
+  .night-mode .maxxl-fsmenu.open {
+    background-color: #1a1a1a; } }

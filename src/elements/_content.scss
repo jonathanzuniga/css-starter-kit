@@ -17,8 +17,8 @@ body {
 	line-height: $line-height-ratio;
 
 	&.night-mode {
-		background-color: $night-mode-base-background-color;
-		color: $night-mode-text-color;
+		background-color: $night-base-background-color;
+		color: $night-text-color;
 	}
 }
 
@@ -43,6 +43,23 @@ a {
 	&:hover {
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
+	}
+}
+
+.night-mode {
+	a {
+		
+		&:link {
+			color: $night-link-color;
+		}
+
+		&:visited {
+			color: $night-link-visited-color;
+		}
+
+		&:hover {
+			color: $night-link-hover-color;
+		}
 	}
 }
 
@@ -127,23 +144,9 @@ code {
 	padding: $quarter-spacing-unit / 2;
 }
 
-figure {
-	margin-left: 0;
-	margin-right: 0;
-
-	figcaption {
-		font-size: $small-font-size;
-		font-style: italic;
-		text-align: center;
-	}
-
+.night-mode {
 	code {
-		background-color: none;
-		padding: 0;
-	}
-
-	img {
-		margin: 0;
+		background-color: $night-code-background-color;
 	}
 }
 
@@ -166,6 +169,36 @@ pre {
 
 	code {
 		background-color: transparent;
+	}
+}
+
+.night-mode {
+	pre {
+		background-color: $night-pre-background-color;
+
+		code {
+			background-color: transparent;
+		}
+	}
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+
+	figcaption {
+		font-size: $small-font-size;
+		font-style: italic;
+		text-align: center;
+	}
+
+	code {
+		background-color: none;
+		padding: 0;
+	}
+
+	img {
+		margin: 0;
 	}
 }
 

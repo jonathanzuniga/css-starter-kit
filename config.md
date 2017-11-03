@@ -60,13 +60,13 @@
 			}
 		}
 
-		.sidebar h1, 
-		.sidebar h2,
-		.sidebar h3 {
-			border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-			margin-bottom: 1.25rem;
-			padding-bottom: 1.25rem;
-		}
+		//- .sidebar h1, 
+		//- .sidebar h2,
+		//- .sidebar h3 {
+		//- 	border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+		//- 	margin-bottom: 1.25rem;
+		//- 	padding-bottom: 1.25rem;
+		//- }
 
 		.sidebar h1 {
 			margin-top: -0.25rem;
@@ -96,6 +96,41 @@
 			color: #333;
 		}
 
+		.night-mode .sidebar .active a {
+			color: #fff;
+		}
+
+		.night-mode .sg-block {
+			border-top-color: rgba(255, 255, 255, 0.13);
+		}
+
+		.night-mode code.sg {
+			color: #579;
+		}
+
+		.night-mode code.sg:not(:first-child) {
+			background: rgba(250, 250, 250, 0.025);
+			color: #357;
+		}
+
+		.night-mode .sg-expando::before {
+			background-color: rgba(255, 255, 255, 0.13);
+		}
+
+		.night-mode .sg-expando:hover::before, 
+		.night-mode .sg-expando:focus::before {
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+
+		.night-mode .sg-expando:active::before {
+			background: #111;
+			color: #fff;
+		}
+
+		.night-mode .sg-code {
+			background: #fafaff !important;
+		}
+
 		//- .navbar {
 		//- 	background-color: rgba(0, 0, 0, 0.05);
 		//- }
@@ -114,7 +149,7 @@
 			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12
 				div.sidebar__content.row
 					div.col
-						h1.maxsm-hide CSS Starter Kit
+						h1.bd-bottom.m-bottom-5.p-bottom-5.maxsm-hide CSS Starter Kit
 
 						p
 							b DISCLAIMER - This is a very early stage work in progress project
@@ -125,7 +160,7 @@
 
 						div.row
 							div.xs-col-12.sm-col-6.md-col-12
-								h3 Layout
+								h3.bd-bottom.m-bottom-5.p-bottom-5 Layout
 
 								ul.ls-unstyled
 									li
@@ -184,7 +219,7 @@
 												a(href='layout.html#offsetting-columns') Offsetting columns
 
 							div.xs-col-12.sm-col-6.md-col-12
-								h3 Elements
+								h3.bd-bottom.m-bottom-5.p-bottom-5 Elements
 
 								ul.ls-unstyled
 									li
@@ -292,7 +327,7 @@
 												a(href='elements.html#striped-table') Striped table
 
 							div.xs-col-12.sm-col-6.md-col-12
-								h3 Helpers
+								h3.bd-bottom.m-bottom-5.p-bottom-5 Helpers
 
 								ul.ls-unstyled
 									li
@@ -429,7 +464,7 @@
 												a(href='helpers.html#divide-the-content-in-columns') Divide the content in columns
 
 							div.xs-col-12.sm-col-6.md-col-12
-								h3 Components
+								h3.bd-bottom.m-bottom-5.p-bottom-5 Components
 
 								ul.ls-unstyled
 									li

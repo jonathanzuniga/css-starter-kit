@@ -35,24 +35,22 @@ $line-height-ratio:    $base-line-height / $base-font-size;
 
 // Colors
 
-$base-background-color:            #fff;
-$night-mode-base-background-color: #1a1a1a;
+$base-background-color:       #fff;
+$night-base-background-color: #1a1a1a;
 
 $colors: (
 	'blue'   #3a8bbb,
 	'green'  #3ebc7d,
-	'grey'   #333,
+	'grey'   #333333,
 	'red'    #e75828,
 	'yellow' #ffa53a
 );
 
-$color-palette: (get_colors($base-background-color, $colors)) !default;
-// $color-palette: (get_colors_list($colors, $tints)) !default;
+$color-palette:       (get_colors($base-background-color, $colors)) !default;
+$night-color-palette: (get_colors($night-base-background-color, $colors)) !default;
 
-// $night-mode-color-palette: ;
-
-$text-color:            get_color('grey 1');
-$night-mode-text-color: #fff;
+$text-color:           get_color('grey 1');
+$night-text-color:     #fff;
 
 
 // Transition
@@ -75,6 +73,11 @@ $link-visited-decoration: none;
 $link-hover-color:        $text-color;
 $link-hover-decoration:   none;
 
+$night-link-color:         get_night_color('blue 1'); // yellow: #fded62
+
+$night-link-visited-color: $night-link-color;
+$night-link-hover-color:   $night-text-color;
+
 
 // Blockquote
 
@@ -90,6 +93,9 @@ $code-font-size: 1em;
 
 $pre-background-color:  transparentize(get_color('grey 1'), 0.95);
 $pre-border-radius:     $quarter-spacing-unit / 2;
+
+$night-code-background-color: transparentize(get_color('grey 3'), 0.92);
+$night-pre-background-color:  transparentize(get_color('grey 3'), 0.95);
 
 
 // Heading
@@ -362,6 +368,8 @@ $border-style:  solid;
 $border-color:  transparentize(get_color('grey 1'), 0.87);
 $border-radius: $quarter-spacing-unit / 2;
 
+$night-border-color:  transparentize(get_night_color('white'), 0.87);
+
 // Sides:
 // Side, first corner, second corner.
 $sides: (
@@ -401,6 +409,8 @@ $dropcap-height: auto;
 $dropcap-text-align:     left;
 $dropcap-vertical-align: bottom;
 
+$night-dropcap-color:    $night-text-color;
+
 
 // Small caps
 
@@ -436,7 +446,7 @@ $sizes: (
 $spacings:          20 !default;
 
 // incrementando cada espacio por...
-$spacing:           0.25em !default;
+$spacing:           0.25rem !default;
 
 $spacing-important: !important;
 
@@ -508,6 +518,8 @@ $full-screen-menu-open-transition:         opacity 700ms step-start,
                                            background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-open-content-transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms;
 
+$night-full-screen-menu-open-background-color: $night-base-background-color;
+
 
 // Navbar
 
@@ -520,4 +532,6 @@ $navbar-collapse-transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1),
                              opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), 
                              transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), 
                              z-index 0.2s ease-in-out;
+
+$night-navbar-background-color: $night-base-background-color;
 

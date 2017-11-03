@@ -24,6 +24,22 @@
 		#{$prop}-bottom: $border-width $border-style $border-color;
 	}
 
+	.night-mode {
+		.#{$abbr} {
+			#{$prop}-color: $night-border-color;
+		}
+
+		.#{$abbr}-x {
+			#{$prop}-left-color: $night-border-color;
+			#{$prop}-right-color: $night-border-color;
+		}
+
+		.#{$abbr}-y {
+			#{$prop}-top-color: $night-border-color;
+			#{$prop}-bottom-color: $night-border-color;
+		}
+	}
+
 	/**
 	 * Remove border:
 	 * `.#{$abbr}-0` `.#{$abbr}-[side]-0`
@@ -65,6 +81,12 @@
 			#{$prop}-#{$side}: $border-width $border-style $border-color;
 		}
 
+		.night-mode {
+			.#{$abbr}-#{$side} {
+				#{$prop}-#{$side}-color: $night-border-color;
+			}
+		}
+
 		.#{$abbr}-#{$side}-0 {
 			#{$prop}-#{$side}: none;
 		}
@@ -75,6 +97,12 @@
 					#{$prop}-#{$side}: $border-width $border-style $border-color;
 				}
 
+				.night-mode {
+					.#{$size}-#{$abbr}-#{$side} {
+						#{$prop}-#{$side}-color: $night-border-color;
+					}
+				}
+
 				.#{$size}-#{$abbr}-#{$side}-0 {
 					#{$prop}-#{$side}: none;
 				}
@@ -83,6 +111,12 @@
 			@media (max-width: $length - 1) {
 				.max#{$size}-#{$abbr}-#{$side} {
 					#{$prop}-#{$side}: $border-width $border-style $border-color;
+				}
+
+				.night-mode {
+					.max#{$size}-#{$abbr}-#{$side} {
+						#{$prop}-#{$side}-color: $night-border-color;
+					}
 				}
 
 				.max#{$size}-#{$abbr}-#{$side}-0 {

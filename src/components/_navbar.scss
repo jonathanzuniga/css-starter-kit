@@ -391,3 +391,41 @@
 					0 1px 10px 0 rgba(0, 0, 0, 0.08);
 	}
 }
+
+.night-mode {
+	.navbar {
+		background-color: $night-navbar-background-color;
+	}
+
+	.navbar__item {
+		&.active {
+			.navbar__link {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $night-link-color;
+				}
+			}
+		}
+	}
+
+	.navbar__link,
+	.navbar__toggler {
+		&:link,
+		&:visited {
+			color: $night-text-color;
+		}
+
+		&:hover {
+			color: $night-link-color;
+		}
+	}
+
+	.navbar {
+		&.scrolled {
+			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 
+						0 4px 5px 0 rgba(0, 0, 0, 0.14), 
+						0 1px 10px 0 rgba(0, 0, 0, 0.12);
+		}
+	}
+}

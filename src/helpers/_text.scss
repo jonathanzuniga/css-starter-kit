@@ -328,6 +328,12 @@
 	vertical-align: $dropcap-vertical-align;
 }
 
+.night-mode {
+	.dcap:first-letter {
+		color: $night-dropcap-color;
+	}
+}
+
 /**
  * Small caps:
  * `.smcaps` `.smcaps-1ln`
@@ -396,4 +402,10 @@
 			}
 		}
 	}
+}
+
+.txt-smooth {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }

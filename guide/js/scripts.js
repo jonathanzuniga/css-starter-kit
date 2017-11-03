@@ -9,6 +9,9 @@ $(function() {
 	// 	sessionStorage.scrollTop = $(this).scrollTop();
 	// });
 
+	// Night mode.
+	// $('body').addClass('night-mode txt-smooth');
+
 	// your current click function
 	$('body').on('click', '.sidebar a', function(e) {
 		var href = $(this).attr('href');
