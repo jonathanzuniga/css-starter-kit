@@ -38,15 +38,18 @@ $base-border-radius:   rem_to_em($quarter-spacing-unit / 2);
 // Colors
 
 $base-background-color:       #fff;
-$night-base-background-color: #222;
-// $night-base-background-color: #1a1a1a;
+// $night-base-background-color: #222;
+$night-base-background-color: #1a1a1a;
 // $night-base-background-color: #141c21;
 
 $colors: (
-	'blue'   #3a8bbb,
-	'green'  #3ebc7d,
-	'grey'   #333333,
-	'red'    #e75828,
+	'black'  #000000, 
+	'blue'   #3a8bbb, 
+	'green'  #3ebc7d, 
+	'grey'   #333333, 
+	'red'    #ff5555, 
+	// 'red'    #e75828,
+	'white'  #ffffff, 
 	'yellow' #ffa53a
 );
 
@@ -69,7 +72,7 @@ $base-transition: background-color 0.16s ease-in-out,
 // Hyperlink
 
 $link-color:               get_color('blue 1');
-$night-link-color:         get_night_color('blue 1');
+$night-link-color:         get_night_color('red 1');
 $link-decoration:          none;
 
 $link-visited-color:       $link-color;
@@ -338,7 +341,7 @@ $switch-border-radius:                  $switch-height / 2;
 $switch-box-shadow:                     inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
 $switch-toggle-background-color:        $base-background-color;
-$night-switch-toggle-background-color:  $base-background-color;
+$night-switch-toggle-background-color:  $night-base-background-color;
 $switch-toggle-border-radius:           $switch-height / 2;
 $switch-toggle-box-shadow:              0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
                                         0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
@@ -350,7 +353,7 @@ $switch-toggle-top:                     50%;
 $switch-toggle-left:                    rem_to_em($quarter-spacing-unit);
 
 $switch-checked-background-color:       get_color('blue 1');
-$night-switch-checked-background-color: get_night_color('blue 1');
+$night-switch-checked-background-color: get_night_color('red 1');
 $switch-checked-toggle-left:            $switch-width - $switch-height + 0.313;
 
 $switch-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
@@ -385,7 +388,10 @@ $switch-large-checked-toggle-left:      $switch-large-width - $switch-large-heig
 $table-heading-font-weight: bold;
 $table-heading-text-align:  left;
 
-$table-striped-background-color: transparentize(get_color('grey 1'), 0.95);
+$table-border-color:                   transparentize(#000, 0.86);
+$night-table-border-color:             transparentize(#fff, 0.86);
+$table-striped-background-color:       transparentize(#000, 0.96);
+$night-table-striped-background-color: transparentize(#fff, 0.96);
 
 
 // ==========================================================================
@@ -418,9 +424,9 @@ $hightlight-border-radius:    rem_to_em($half-spacing-unit) 0 rem_to_em($half-sp
 $hightlight-background:       linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.2), 
                                                        rgba(get_color('yellow 4'), 0.4) 95%, 
                                                        rgba(get_color('yellow 4'), 0.1));
-$night-hightlight-background: linear-gradient(-100deg, rgba(get_night_color('white'), 0.1), 
-                                                       rgba(get_night_color('white'), 0.2) 95%, 
-                                                       rgba(get_night_color('white'), 0.05));
+$night-hightlight-background: linear-gradient(-100deg, rgba(get_night_color('white 7'), 0.2), 
+                                                       rgba(get_night_color('white 7'), 0.4) 95%, 
+                                                       rgba(get_night_color('white 7'), 0.1));
 
 // Drop cap
 

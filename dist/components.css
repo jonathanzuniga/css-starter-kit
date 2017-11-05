@@ -23,8 +23,7 @@
 .card {
   border: 0.063rem solid rgba(0, 0, 0, 0.14);
   border-radius: 0.25em;
-  box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
+  box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.1); }
   .card:hover {
     box-shadow: 0 0.063em 1rem rgba(0, 0, 0, 0.15); }
 
@@ -522,20 +521,19 @@
  *                 td <code>.scrolled</code>
  *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
  */
-.navbar {
-  transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
-  .navbar.fixed {
-    position: fixed;
-    width: 100%;
-    z-index: 1000; }
-  .navbar.scrolled {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
+.navbar.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+
+.navbar.scrolled {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
 
 .night .navbar {
-  background-color: #222; }
+  background-color: #1a1a1a; }
 
 .night .navbar__item.active .navbar__link:link, .night .navbar__item.active .navbar__link:hover, .night .navbar__item.active .navbar__link:visited {
-  color: #3a8bbb; }
+  color: #ff5555; }
 
 .night .navbar__link:link, .night .navbar__link:visited,
 .night .navbar__toggler:link,
@@ -544,7 +542,7 @@
 
 .night .navbar__link:hover,
 .night .navbar__toggler:hover {
-  color: #3a8bbb; }
+  color: #ff5555; }
 
 .night .navbar.scrolled {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -588,7 +586,7 @@
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
   .night .maxxs-fsmenu.open {
-    background-color: #222; } }
+    background-color: #1a1a1a; } }
 
 @media (max-width: 767px) {
   .maxsm-fsmenu {
@@ -619,7 +617,7 @@
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
   .night .maxsm-fsmenu.open {
-    background-color: #222; } }
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1023px) {
   .maxmd-fsmenu {
@@ -650,7 +648,7 @@
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
   .night .maxmd-fsmenu.open {
-    background-color: #222; } }
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1279px) {
   .maxlg-fsmenu {
@@ -681,7 +679,7 @@
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
   .night .maxlg-fsmenu.open {
-    background-color: #222; } }
+    background-color: #1a1a1a; } }
 
 @media (max-width: 1679px) {
   .maxxl-fsmenu {
@@ -712,4 +710,4 @@
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
   .night .maxxl-fsmenu.open {
-    background-color: #222; } }
+    background-color: #1a1a1a; } }

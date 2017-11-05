@@ -43,18 +43,32 @@ th {
 
 	tr + tr {
 		th, td {
-			border-top: 1px solid $border-color;
+			border-top: 1px solid $table-border-color;
 		}
 	}
 
 	th {
-		border-bottom: 2px solid $border-color;
+		border-bottom: 2px solid $table-border-color;
 		font-weight: $table-heading-font-weight;
 	}
 
 	th, td {
 		padding: $quarter-spacing-unit;
 		vertical-align: top;
+	}
+}
+
+.night {
+	.tbl {
+		tr + tr {
+			th, td {
+				border-top-color: $night-table-border-color;
+			}
+		}
+
+		th {
+			border-bottom-color: $night-table-border-color;
+		}
 	}
 }
 
@@ -98,11 +112,23 @@ th {
  *                 td Table data
  */
 .tbl--bordered {
-	border: 1px solid $border-color;
+	border: 1px solid $table-border-color;
 
 	td, th {
 		&:not(:last-child) {
-			border-right: 1px solid $border-color;
+			border-right: 1px solid $table-border-color;
+		}
+	}
+}
+
+.night {
+	.tbl--bordered {
+		border-color: $night-table-border-color;
+
+		td, th {
+			&:not(:last-child) {
+				border-right-color: $night-table-border-color;
+			}
 		}
 	}
 }
@@ -208,6 +234,18 @@ th {
 		tr:nth-child(odd) {
 			td, th {
 				background-color: $table-striped-background-color;
+			}
+		}
+	}
+}
+
+.night {
+	.tbl--striped {
+		tbody {
+			tr:nth-child(odd) {
+				td, th {
+					background-color: $night-table-striped-background-color;
+				}
 			}
 		}
 	}
