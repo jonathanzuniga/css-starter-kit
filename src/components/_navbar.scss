@@ -180,7 +180,7 @@
 		display: flex;
 		order: 2;
 
-		&:focus ~ .navbar__collapse {
+		&:focus ~ .navbar__collapse:not(.close) {
 			@include navbar-responsive-collapse-focus;
 		}
 
@@ -392,7 +392,7 @@
 	}
 }
 
-.night-mode {
+.night {
 	.navbar {
 		background-color: $night-navbar-background-color;
 	}

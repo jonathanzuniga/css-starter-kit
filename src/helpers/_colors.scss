@@ -17,8 +17,8 @@
 	 *             td.w-20
 	 *                div.color-swatch.bd-radius.bgc-#{$name_r}
 	 *             td.w-20.txt-select.txtc-#{$name_r} #{$name_ucf}
-	 *             td.w-20.txt-select #{$hex}
-	 *             td.w-20.txt-select #{$rgb}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$hex}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$rgb}
 	 */
 	.bgc-#{$name_r} {
 		background-color: $hex;
@@ -33,6 +33,12 @@
 	.txtc-#{$name_r} {
 		color: $hex;
 	}
+}
+
+[class^='bgc-'],
+[class^='bdc-'],
+[class^='txtc-'] {
+	transition: $base-transition;
 }
 
 /**
@@ -53,12 +59,12 @@
 	}
 }
 
-@each $name, $hex in $night-color-palette {
-	$name_ucf: str_ucfirst($name);
-	$name_r: str_replace(to_lower_case($name), ' ', '-');
-	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
+.night {
+	@each $name, $hex in $night-color-palette {
+		$name_ucf: str_ucfirst($name);
+		$name_r: str_replace(to_lower_case($name), ' ', '-');
+		$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
-	.night-mode {
 		.bgc-#{$name_r} {
 			background-color: $hex;
 		}
@@ -93,7 +99,7 @@
 	}
 }
 
-.night-mode {
+.night {
 	.ac-txtc:not(.btn),
 	.ac-txtc a:not(.btn) {
 		&:link,

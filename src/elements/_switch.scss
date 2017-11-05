@@ -25,6 +25,7 @@
 		box-shadow: $switch-box-shadow;
 		display: inline-block;
 		position: relative;
+		transition: $base-transition;
 		user-select: none;
 
 		width: $switch-width;
@@ -98,6 +99,27 @@
 	}
 }
 
+.night {
+	.switch {
+		& + label {
+			background-color: $night-switch-background-color;
+
+			// Toggle.
+			&:after {
+				background-color: $night-switch-toggle-background-color;
+			}
+		}
+
+		&:checked {
+			& + label {
+				&:before {
+					background-color: $night-switch-checked-background-color;
+				}
+			}
+		}
+	}	
+}
+
 /**
  * Switch size:
  * `.switch--[size]`
@@ -131,6 +153,12 @@
 			height: $switch-small-toggle-height;
 
 			left: $switch-small-toggle-left;
+		}
+
+		span {
+			height: $switch-small-height;
+			line-height: $switch-small-height;
+			margin-left: $switch-small-width;
 		}
 	}
 
@@ -170,6 +198,12 @@
 			height: $switch-large-toggle-height;
 
 			left: $switch-large-toggle-left;
+		}
+
+		span {
+			height: $switch-large-height;
+			line-height: $switch-large-height;
+			margin-left: $switch-large-width;
 		}
 	}
 

@@ -41,6 +41,7 @@
 	&:hover {
 		background-color: 
 			shade(
+				#000, 
 				$button-background-color, 
 				$button-hover-background-color-shade-amount
 			);
@@ -51,6 +52,7 @@
 	&.active {
 		background-color: 
 			shade(
+				#000, 
 				$button-background-color, 
 				$button-active-background-color-shade-amount
 			);
@@ -58,9 +60,36 @@
 	}
 }
 
-.night-mode {
+.night {
 	.btn {
-		
+		background-color: $night-button-background-color;
+		color: $night-text-color;
+
+		&:link,
+		&:visited {
+			color: $night-text-color;
+		}
+
+		&:hover {
+			background-color: 
+				shade(
+					#fff, 
+					$night-button-background-color, 
+					$button-hover-background-color-shade-amount
+				);
+			color: $night-text-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: 
+				shade(
+					#fff, 
+					$night-button-background-color, 
+					$button-active-background-color-shade-amount
+				);
+			color: $night-text-color;
+		}
 	}
 }
 
@@ -102,6 +131,7 @@
 		&:hover {
 			background-color: 
 				shade(
+					#000, 
 					$background-color, 
 					$button-hover-background-color-shade-amount
 				);
@@ -112,6 +142,7 @@
 		&.active {
 			background-color: 
 				shade(
+					#000, 
 					$background-color, 
 					$button-active-background-color-shade-amount
 				);
@@ -132,6 +163,7 @@
 				);
 			$button-gradient-background-color-bottom: 
 				shade(
+					#000, 
 					$background-color, 
 					$gradient-background-color-bottom-shade-amount
 				);
@@ -162,10 +194,12 @@
 			&:hover {
 				@include button_gradient_bg(
 					shade(
+						#000, 
 						$button-gradient-background-color-top-hsl, 
 						$button-hover-background-color-shade-amount
 					), 
 					shade(
+						#000, 
 						$button-gradient-background-color-bottom-hsl, 
 						$button-hover-background-color-shade-amount
 					)
@@ -176,10 +210,12 @@
 			&.active {
 				@include button_gradient_bg(
 					shade(
+						#000, 
 						$button-gradient-background-color-top-hsl, 
 						$button-active-background-color-shade-amount
 					), 
 					shade(
+						#000, 
 						$button-gradient-background-color-bottom-hsl, 
 						$button-active-background-color-shade-amount
 					)
@@ -210,11 +246,13 @@
 			&.active {
 				background-color: 
 					shade(
+						#000, 
 						$background-color, 
 						$button-active-background-color-shade-amount
 					);
 				border-color: transparentize(
 					shade(
+						#000, 
 						$background-color, 
 						$button-active-background-color-shade-amount
 					), 
@@ -234,6 +272,177 @@
 		&:checked {
 			& + .btn--#{$name_r} {
 				@extend .btn--#{$name_r}.active;
+			}
+		}
+	}
+}
+
+.night {
+	@each 
+		$name, 
+		$background-color, 
+		$border-color, 
+		$text-color, 
+		$gradient-background-color-top-tint-amount, 
+		$gradient-background-color-bottom-shade-amount,
+		$gradient-background-color-top-hue, 
+		$gradient-background-color-top-saturation, 
+		$gradient-background-color-top-lightness,
+		$gradient-background-color-bottom-hue, 
+		$gradient-background-color-bottom-saturation, 
+		$gradient-background-color-bottom-lightness in $night-buttons {
+		$name_ucf: str_ucfirst($name);
+		$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+		.btn--#{$name_r} {
+			background-color: $background-color;
+			border-color: $border-color;
+			color: $text-color;
+
+			&:link,
+			&:visited {
+				color: $text-color;
+			}
+
+			&:hover {
+				background-color: 
+					shade(
+						#000, 
+						$background-color, 
+						$button-hover-background-color-shade-amount
+					);
+				color: $text-color;
+			}
+
+			&:active,
+			&.active {
+				background-color: 
+					shade(
+						#000, 
+						$background-color, 
+						$button-active-background-color-shade-amount
+					);
+				color: $text-color;
+			}
+		}
+
+		.btn--gradient {
+			&.btn--#{$name_r} {
+				$button-gradient-background-color-top: 
+					tint(
+						$base-background-color, 
+						$background-color, 
+						$gradient-background-color-top-tint-amount
+					);
+				$button-gradient-background-color-bottom: 
+					shade(
+						#000, 
+						$background-color, 
+						$gradient-background-color-bottom-shade-amount
+					);
+
+				$button-gradient-background-color-top-hsl: 
+					hsl(
+						hue($button-gradient-background-color-top) + $gradient-background-color-top-hue, 
+						saturation($button-gradient-background-color-top) + $gradient-background-color-top-saturation, 
+						lightness($button-gradient-background-color-top) + $gradient-background-color-top-lightness
+					);
+				$button-gradient-background-color-bottom-hsl: 
+					hsl(
+						hue($button-gradient-background-color-bottom) + $gradient-background-color-bottom-hue, 
+						saturation($button-gradient-background-color-bottom) + $gradient-background-color-bottom-saturation, 
+						lightness($button-gradient-background-color-bottom) + $gradient-background-color-bottom-lightness
+					);
+
+				@include button_gradient_bg(
+					$button-gradient-background-color-top-hsl, 
+					$button-gradient-background-color-bottom-hsl
+				);
+
+				&:link,
+				&:visited {
+					color: $text-color;
+				}
+
+				&:hover {
+					@include button_gradient_bg(
+						shade(
+							#000, 
+							$button-gradient-background-color-top-hsl, 
+							$button-hover-background-color-shade-amount
+						), 
+						shade(
+							#000, 
+							$button-gradient-background-color-bottom-hsl, 
+							$button-hover-background-color-shade-amount
+						)
+					);
+				}
+
+				&:active,
+				&.active {
+					@include button_gradient_bg(
+						shade(
+							#000, 
+							$button-gradient-background-color-top-hsl, 
+							$button-active-background-color-shade-amount
+						), 
+						shade(
+							#000, 
+							$button-gradient-background-color-bottom-hsl, 
+							$button-active-background-color-shade-amount
+						)
+					);
+				}
+			}
+		}
+
+		.btn--outline {
+			background-color: transparent;
+
+			&.btn--#{$name_r} {
+				border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+				color: $background-color;
+
+				&:link,
+				&:visited {
+					color: $background-color;
+				}
+
+				&:hover {
+					background-color: $background-color;
+					border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+					color: $text-color;
+				}
+
+				&:active,
+				&.active {
+					background-color: 
+						shade(
+							#000, 
+							$background-color, 
+							$button-active-background-color-shade-amount
+						);
+					border-color: transparentize(
+						shade(
+							#000, 
+							$background-color, 
+							$button-active-background-color-shade-amount
+						), 
+						$button-outline-border-transparentize-amount
+					);
+					color: $text-color;
+				}
+			}
+		}
+
+		.toggle,
+		.toggle [type='checkbox'],
+		.toggle [type='radio'] {
+			&:checked {
+				& + .btn--#{$name_r} {
+					@extend .btn--#{$name_r}.active;
+				}
 			}
 		}
 	}
@@ -268,11 +477,40 @@
 	&.active {
 		background-color: 
 			shade(
-				$button-background-color,
+				#000, 
+				$button-background-color, 
 				$button-active-background-color-shade-amount
 			);
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
+	}
+}
+
+.night {
+	.btn--link {
+		background-color: transparent;
+		color: $night-link-color;
+
+		&:link,
+		&:visited {
+			color: $night-link-color;
+		}
+
+		&:hover {
+			background-color: $night-button-background-color;
+			color: $night-link-hover-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: 
+				shade(
+					#fff, 
+					$night-button-background-color, 
+					$button-active-background-color-shade-amount
+				);
+			color: $night-link-hover-color;
+		}
 	}
 }
 

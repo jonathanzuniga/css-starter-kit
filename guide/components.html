@@ -89,31 +89,34 @@
     .sidebar .active a {
       color: #333;
     }
-    .night-mode .sidebar .active a {
+    .night .sidebar .active a {
       color: #fff;
     }
-    .night-mode .sg-block {
-      border-top-color: rgba(255, 255, 255, 0.13);
+    .sg-block {
+      border-top-color: rgba(0, 0, 0, 0.14);
     }
-    .night-mode code.sg {
+    .night .sg-block {
+      border-top-color: rgba(255, 255, 255, 0.28);
+    }
+    .night code.sg {
       color: #579;
     }
-    .night-mode code.sg:not(:first-child) {
+    .night code.sg:not(:first-child) {
       background: rgba(250, 250, 250, 0.025);
       color: #357;
     }
-    .night-mode .sg-expando::before {
-      background-color: rgba(255, 255, 255, 0.13);
+    .night .sg-expando::before {
+      background-color: rgba(255, 255, 255, 0.14);
     }
-    .night-mode .sg-expando:hover::before,
-    .night-mode .sg-expando:focus::before {
+    .night .sg-expando:hover::before,
+    .night .sg-expando:focus::before {
       background-color: rgba(255, 255, 255, 0.7);
     }
-    .night-mode .sg-expando:active::before {
+    .night .sg-expando:active::before {
       background: #111;
       color: #fff;
     }
-    .night-mode .sg-code {
+    .night .sg-code {
       background: #fafaff !important;
     }
     //- .navbar {
@@ -135,6 +138,484 @@
       </div>
     </div>
     <div class="row">
+      <div class="main xs-col-12 md-col-9 xl-col-10 maxsm-p-top-20">
+        <div class="main__content row cols-center">
+          <div class="md-col-12 xl-col-10">
+            <div class="sg-container">
+              <section class="sg-section sg-section-cards">
+                <h2 id="cards" class="sg">Cards</h2>
+                <section class="sg-block sg-section-card">
+                  <div class="sg-text">
+                    <h3 id="card" class="sg">Card</h3>
+                    <p class="sg">
+                      <code class="sg">.card</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="row">
+                        <div class="md-col-6">
+                          <div class="card">
+                            <div class="card__body">
+                              <h4 class="card__title">Card title</h4>
+                              <div class="card__content">
+                                <p>Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.</p>
+                              </div>
+                              <ul class="ls-inline m-0">
+                                <li>
+                                  <a href="">First link</a>
+                                </li>
+                                <li>
+                                  <a href="">Second link</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__body&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__title&quot;</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__content&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio
+            sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-inline m-0&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>First link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>Second link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-navbar">
+                <h2 id="navbar" class="sg">Navbar</h2>
+                <section class="sg-block sg-section-navbar">
+                  <div class="sg-text">
+                    <h3 id="navbar" class="sg">Navbar</h3>
+                    <p class="sg">
+                      <code class="sg">.navbar</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar maxsm-navbar-responsive">
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu maxsm-txt-center">
+                            <li class="navbar__item active maxsm-bd-top">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item maxsm-bd-top">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item maxsm-bd-top">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                          <form class="navbar__form maxsm-txt-center maxsm-bd-top">
+                            <div class="input-group">
+                              <div class="input-group-btn">
+                                <input type="search" placeholder="Search" class="input input--line maxsm-txt-center">
+                                <a href="" class="btn btn--secondary maxsm-hide">Go</a>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxsm-navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu maxsm-txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__form maxsm-txt-center maxsm-bd-top&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--line maxsm-txt-center&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary maxsm-hide&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-right-align-navbar-menu">
+                  <div class="sg-text">
+                    <h3 id="right-align-navbar-menu" class="sg">Right align navbar menu</h3>
+                    <p class="sg">
+                      <code class="sg">.navbar__menu--right</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar maxsm-navbar-responsive">
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu navbar__menu--right maxsm-txt-center">
+                            <li class="navbar__item active maxsm-bd-top">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item maxsm-bd-top">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item maxsm-bd-top">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxsm-navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right maxsm-txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-responsive-navbar-menu">
+                  <div class="sg-text">
+                    <h3 id="responsive-navbar-menu" class="sg">Responsive navbar menu</h3>
+                    <p class="sg">
+                      <code class="sg">.navbar-responsive</code>
+                      <code class="sg">.max[size]-navbar-responsive</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar navbar-responsive">
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu">
+                            <li class="navbar__item active">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-open-responsive-navbar-menu">
+                  <div class="sg-text">
+                    <h3 id="open-responsive-navbar-menu" class="sg">Open responsive navbar menu</h3>
+                    <p class="sg">
+                      <code class="sg">.open</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar navbar-responsive">
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse open">
+                          <ul class="navbar__menu">
+                            <li class="navbar__item active">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse open&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-responsive-navbar-grid-menu">
+                  <div class="sg-text">
+                    <h3 id="responsive-navbar-grid-menu" class="sg">Responsive navbar grid menu</h3>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar maxlg-navbar-responsive">
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu navbar__menu--right xs-grid-2 md-grid-3 lg-grid-0 maxlg-gutters-0 maxlg-txt-center">
+                            <li class="navbar__item active xs-bd-bottom lg-bd-bottom-0">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item xs-bd-bottom xs-bd-left md-bd-x lg-bd-0">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item md-bd-bottom lg-bd-bottom-0">
+                              <a href="" class="navbar__link">Contact</a>
+                            </li>
+                            <li class="navbar__item xs-bd-left md-bd-x lg-bd-x-0 md-cell-x-2">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxlg-navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right xs-grid-2 md-grid-3 lg-grid-0 maxlg-gutters-0 maxlg-txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active xs-bd-bottom lg-bd-bottom-0&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item xs-bd-bottom xs-bd-left md-bd-x lg-bd-0&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item md-bd-bottom lg-bd-bottom-0&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item xs-bd-left md-bd-x lg-bd-x-0 md-cell-x-2&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-navbar-brand-in-the-center">
+                  <div class="sg-text">
+                    <h3 id="navbar-brand-in-the-center" class="sg">Navbar brand in the center</h3>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <nav class="navbar maxlg-navbar-responsive">
+                        <a href="#!" class="navbar__toggler">Menu</a>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu maxlg-txt-center">
+                            <li class="navbar__item maxlg-bd-top">
+                              <a href="" class="navbar__link">RSS feed</a>
+                            </li>
+                            <li class="navbar__item maxlg-bd-top">
+                              <a href="" class="navbar__link">Follow me</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="navbar__brand">
+                          <a href="" class="navbar__link">Brand</a>
+                        </div>
+                        <div class="navbar__collapse">
+                          <ul class="navbar__menu navbar__menu--right maxlg-txt-center">
+                            <li class="navbar__item active maxlg-bd-top">
+                              <a href="" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item maxlg-bd-top">
+                              <a href="" class="navbar__link">Archive</a>
+                            </li>
+                            <li class="navbar__item maxlg-bd-top">
+                              <a href="" class="navbar__link">About</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxlg-navbar-responsive&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu maxlg-txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>RSS feed<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Follow me<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right maxlg-txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxlg-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-navbar-optional-classes">
+                  <div class="sg-text">
+                    <h3 id="navbar-optional-classes" class="sg">Navbar optional classes</h3>
+                    <p class="sg">
+                      <code class="sg">.fixed</code>
+                      <code class="sg">.scrolled</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl">
+                        <thead>
+                          <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <code>.fixed</code>
+                            </td>
+                            <td>Fija el
+                              <code>.navbar</code>en la parte superior de la p&#xE1;gina.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <code>.scrolled</code>
+                            </td>
+                            <td>Agrega una sombra al
+                              <code>.navbar</code>cuando se desplaza la scrollbar vertical.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Class<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.fixed<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Fija el
+        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.navbar<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>en la parte superior de la p&#xE1;gina.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.scrolled<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Agrega una sombra al
+        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.navbar<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>cuando se desplaza la scrollbar vertical.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+              <section class="sg-section sg-section-navmenu">
+                <h2 id="navmenu" class="sg">Navmenu</h2>
+                <section class="sg-block sg-section-full-screen-menu">
+                  <div class="sg-text">
+                    <h3 id="full-screen-menu" class="sg">Full screen menu</h3>
+                    <p class="sg">
+                      <code class="sg">.max[size]-fsmenu</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p>Es el men&#xFA; que ves en esta gu&#xED;a al consultarla desde tu tel&#xE9;fono m&#xF3;vil. Usa la clase
+                        <code>.open</code>para que este visible.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Es el men&#xFA; que ves en esta gu&#xED;a al consultarla desde tu tel&#xE9;fono m&#xF3;vil. Usa la clase
+  <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.open<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>para que este visible.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxsm-fsmenu maxsm-p-top-12">
         <div class="sidebar__content row">
           <div class="col">
@@ -144,6 +625,12 @@
             </p>
             <p>CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.</p>
             <p>CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it&apos;s progressing.</p>
+            <p>
+              <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+              <label for="switch-night-mode" id="lbl-night-mode">
+                <span>Night mode</span>
+              </label>
+            </p>
             <div class="row">
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h3 class="bd-bottom m-bottom-5 p-bottom-5">Layout</h3>
@@ -642,484 +1129,6 @@
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main xs-col-12 md-col-9 xl-col-10 maxsm-p-top-20">
-        <div class="main__content row cols-center">
-          <div class="md-col-9 xl-col-10">
-            <div class="sg-container">
-              <section class="sg-section sg-section-cards">
-                <h2 id="cards" class="sg">Cards</h2>
-                <section class="sg-block sg-section-card">
-                  <div class="sg-text">
-                    <h3 id="card" class="sg">Card</h3>
-                    <p class="sg">
-                      <code class="sg">.card</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <div class="row">
-                        <div class="md-col-6">
-                          <div class="card">
-                            <div class="card__body">
-                              <h4 class="card__title">Card title</h4>
-                              <div class="card__content">
-                                <p>Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.</p>
-                              </div>
-                              <ul class="ls-inline m-0">
-                                <li>
-                                  <a href="">First link</a>
-                                </li>
-                                <li>
-                                  <a href="">Second link</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-col-6&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__body&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__title&quot;</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__content&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio
-            sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ls-inline m-0&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>First link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>Second link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-                  </div>
-                </section>
-              </section>
-
-              <section class="sg-section sg-section-navbar">
-                <h2 id="navbar" class="sg">Navbar</h2>
-                <section class="sg-block sg-section-navbar">
-                  <div class="sg-text">
-                    <h3 id="navbar" class="sg">Navbar</h3>
-                    <p class="sg">
-                      <code class="sg">.navbar</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar maxsm-navbar-responsive">
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu maxsm-txt-center">
-                            <li class="navbar__item active maxsm-bd-top">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item maxsm-bd-top">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item maxsm-bd-top">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                          <form class="navbar__form maxsm-txt-center maxsm-bd-top">
-                            <div class="input-group">
-                              <div class="input-group-btn">
-                                <input type="search" placeholder="Search" class="input input--line maxsm-txt-center">
-                                <a href="" class="btn btn--secondary maxsm-hide">Go</a>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxsm-navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu maxsm-txt-center&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__form maxsm-txt-center maxsm-bd-top&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--line maxsm-txt-center&quot;</span> /&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary maxsm-hide&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-right-align-navbar-menu">
-                  <div class="sg-text">
-                    <h3 id="right-align-navbar-menu" class="sg">Right align navbar menu</h3>
-                    <p class="sg">
-                      <code class="sg">.navbar__menu--right</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar maxsm-navbar-responsive">
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu navbar__menu--right maxsm-txt-center">
-                            <li class="navbar__item active maxsm-bd-top">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item maxsm-bd-top">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item maxsm-bd-top">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxsm-navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right maxsm-txt-center&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxsm-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-responsive-navbar-menu">
-                  <div class="sg-text">
-                    <h3 id="responsive-navbar-menu" class="sg">Responsive navbar menu</h3>
-                    <p class="sg">
-                      <code class="sg">.navbar-responsive</code>
-                      <code class="sg">.max[size]-navbar-responsive</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar navbar-responsive">
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu">
-                            <li class="navbar__item active">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-open-responsive-navbar-menu">
-                  <div class="sg-text">
-                    <h3 id="open-responsive-navbar-menu" class="sg">Open responsive navbar menu</h3>
-                    <p class="sg">
-                      <code class="sg">.open</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar navbar-responsive">
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse open">
-                          <ul class="navbar__menu">
-                            <li class="navbar__item active">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse open&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-responsive-navbar-grid-menu">
-                  <div class="sg-text">
-                    <h3 id="responsive-navbar-grid-menu" class="sg">Responsive navbar grid menu</h3>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar maxlg-navbar-responsive">
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu navbar__menu--right xs-grid-2 md-grid-3 lg-grid-0 maxlg-gutters-0 maxlg-txt-center">
-                            <li class="navbar__item active xs-bd-bottom lg-bd-bottom-0">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item xs-bd-bottom xs-bd-left md-bd-x lg-bd-0">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item md-bd-bottom lg-bd-bottom-0">
-                              <a href="" class="navbar__link">Contact</a>
-                            </li>
-                            <li class="navbar__item xs-bd-left md-bd-x lg-bd-x-0 md-cell-x-2">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxlg-navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right xs-grid-2 md-grid-3 lg-grid-0 maxlg-gutters-0 maxlg-txt-center&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active xs-bd-bottom lg-bd-bottom-0&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item xs-bd-bottom xs-bd-left md-bd-x lg-bd-0&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item md-bd-bottom lg-bd-bottom-0&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item xs-bd-left md-bd-x lg-bd-x-0 md-cell-x-2&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-navbar-brand-in-the-center">
-                  <div class="sg-text">
-                    <h3 id="navbar-brand-in-the-center" class="sg">Navbar brand in the center</h3>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <nav class="navbar maxlg-navbar-responsive">
-                        <a href="#!" class="navbar__toggler">Menu</a>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu maxlg-txt-center">
-                            <li class="navbar__item maxlg-bd-top">
-                              <a href="" class="navbar__link">RSS feed</a>
-                            </li>
-                            <li class="navbar__item maxlg-bd-top">
-                              <a href="" class="navbar__link">Follow me</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="navbar__brand">
-                          <a href="" class="navbar__link">Brand</a>
-                        </div>
-                        <div class="navbar__collapse">
-                          <ul class="navbar__menu navbar__menu--right maxlg-txt-center">
-                            <li class="navbar__item active maxlg-bd-top">
-                              <a href="" class="navbar__link">Home</a>
-                            </li>
-                            <li class="navbar__item maxlg-bd-top">
-                              <a href="" class="navbar__link">Archive</a>
-                            </li>
-                            <li class="navbar__item maxlg-bd-top">
-                              <a href="" class="navbar__link">About</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxlg-navbar-responsive&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu maxlg-txt-center&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>RSS feed<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Follow me<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__menu navbar__menu--right maxlg-txt-center&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active maxlg-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item maxlg-bd-top&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__link&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-navbar-optional-classes">
-                  <div class="sg-text">
-                    <h3 id="navbar-optional-classes" class="sg">Navbar optional classes</h3>
-                    <p class="sg">
-                      <code class="sg">.fixed</code>
-                      <code class="sg">.scrolled</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <thead>
-                          <tr>
-                            <th>Class</th>
-                            <th>Description</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <code>.fixed</code>
-                            </td>
-                            <td>Fija el
-                              <code>.navbar</code>en la parte superior de la p&#xE1;gina.</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <code>.scrolled</code>
-                            </td>
-                            <td>Agrega una sombra al
-                              <code>.navbar</code>cuando se desplaza la scrollbar vertical.</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Class<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Description<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.fixed<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Fija el
-        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.navbar<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>en la parte superior de la p&#xE1;gina.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.scrolled<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>Agrega una sombra al
-        <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.navbar<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>cuando se desplaza la scrollbar vertical.<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-              </section>
-
-              <section class="sg-section sg-section-navmenu">
-                <h2 id="navmenu" class="sg">Navmenu</h2>
-                <section class="sg-block sg-section-full-screen-menu">
-                  <div class="sg-text">
-                    <h3 id="full-screen-menu" class="sg">Full screen menu</h3>
-                    <p class="sg">
-                      <code class="sg">.max[size]-fsmenu</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <p>Es el men&#xFA; que ves en esta gu&#xED;a al consultarla desde tu tel&#xE9;fono m&#xF3;vil. Usa la clase
-                        <code>.open</code>para que este visible.</p>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Es el men&#xFA; que ves en esta gu&#xED;a al consultarla desde tu tel&#xE9;fono m&#xF3;vil. Usa la clase
-  <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>.open<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>para que este visible.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-                  </div>
-                </section>
-              </section>
-
             </div>
           </div>
         </div>

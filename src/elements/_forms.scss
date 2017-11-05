@@ -33,6 +33,7 @@
 	border: $input-border;
 	border-radius: $input-border-radius;
 	box-shadow: none;
+	color: $input-text-color;
 	display: block;
 	font-family: $base-font-family;
 	font-size: $input-font-size;
@@ -67,6 +68,35 @@
 
 	&:hover {
 		border-color: $input-hover-border-color;
+	}
+}
+
+.night {
+	.input,
+	.txtarea {
+		border-color: $night-input-border-color;
+		color: $night-text-color;
+
+		&:active {
+			border-color: $night-input-active-border-color;
+		}
+
+		&:invalid {
+			border-color: $night-input-invalid-border-color;
+		}
+
+		&:valid {
+			border-color: $night-input-valid-border-color;
+		}
+
+		&:focus,
+		&:focus:hover {
+			border-color: $night-input-focus-border-color;
+		}
+
+		&:hover {
+			border-color: $night-input-hover-border-color;
+		}
 	}
 }
 
@@ -210,6 +240,7 @@
 	font-size: $select-font-size;
 	line-height: $select-line-height;
 	padding: $select-padding;
+	transition: $base-transition;
 	width: 100%;
 
 	// -ms-touch-action: manipulation;
@@ -238,6 +269,17 @@
 	&:focus:hover {
 		border-color: $select-focus-border-color;
 		border-width: $select-focus-border-width;
+	}
+}
+
+.night {
+	.select {
+		border-color: $night-select-border-color;
+		color: $night-select-text-color;
+
+		option {
+			color: $text-color;
+		}
 	}
 }
 
@@ -282,8 +324,17 @@
 
 		pointer-events: none;
 		transform: $select-icon-transform;
+		transition: $base-transition;
 
 		// z-index: 4;
+	}
+}
+
+.night {
+	.select-icn {
+		&:after {
+			border-color: $night-select-icon-border-color;
+		}
 	}
 }
 

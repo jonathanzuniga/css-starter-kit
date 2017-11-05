@@ -8,10 +8,7 @@ $(function() {
 	// $('.sidebar__content').scroll(function() {
 	// 	sessionStorage.scrollTop = $(this).scrollTop();
 	// });
-
-	// Night mode.
-	// $('body').addClass('night-mode txt-smooth');
-
+	
 	// your current click function
 	$('body').on('click', '.sidebar a', function(e) {
 		var href = $(this).attr('href');
@@ -124,6 +121,7 @@ $(function() {
 
 	navbarScrolled();
 	navbarMenuToggle();
+	switchNightMode();
 });
 
 //- function loadMain(url, anchor) {
@@ -199,4 +197,18 @@ function navbarMenuClose() {
 	$('body').css('overflow', 'initial');
 	$('[class*="-fsmenu"]').removeClass('open');
 	$('.navbar__toggler').text('Menu');
+}
+
+function switchNightMode() {
+	switchNightModeStart('#switch-night-mode');
+	$('#switch-night-mode').change(function() {
+		switchNightModeStart($(this));
+	});
+}
+
+function switchNightModeStart(element) {
+	if ($(element).is(':checked'))
+		$('body').addClass('night txt-smooth');
+	else
+		$('body').removeClass('night txt-smooth');
 }

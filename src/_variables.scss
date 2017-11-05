@@ -8,7 +8,7 @@
 
 // Content
 
-// Base font size and line-height.
+// Base font size, line-height, etc.
 
 $base-font-family:     -apple-system, 
                        BlinkMacSystemFont, 
@@ -32,11 +32,15 @@ $quarter-spacing-unit: $base-spacing-unit / 4; // 0.5rem  (8px)
 
 $line-height-ratio:    $base-line-height / $base-font-size;
 
+$base-border-radius:   rem_to_em($quarter-spacing-unit / 2);
+
 
 // Colors
 
 $base-background-color:       #fff;
-$night-base-background-color: #1a1a1a;
+$night-base-background-color: #222;
+// $night-base-background-color: #1a1a1a;
+// $night-base-background-color: #141c21;
 
 $colors: (
 	'blue'   #3a8bbb,
@@ -49,8 +53,8 @@ $colors: (
 $color-palette:       (get_colors($base-background-color, $colors)) !default;
 $night-color-palette: (get_colors($night-base-background-color, $colors)) !default;
 
-$text-color:           get_color('grey 1');
-$night-text-color:     #fff;
+$text-color:           rgba(0, 0, 0, 0.92);
+$night-text-color:     rgba(255, 255, 255, 0.92);
 
 
 // Transition
@@ -64,38 +68,41 @@ $base-transition: background-color 0.16s ease-in-out,
 
 // Hyperlink
 
-$link-color:              get_color('blue 1');
-$link-decoration:         none;
+$link-color:               get_color('blue 1');
+$night-link-color:         get_night_color('blue 1');
+$link-decoration:          none;
 
-$link-visited-color:      $link-color;
-$link-visited-decoration: none;
-
-$link-hover-color:        $text-color;
-$link-hover-decoration:   none;
-
-$night-link-color:         get_night_color('blue 1'); // yellow: #fded62
-
+$link-visited-color:       $link-color;
 $night-link-visited-color: $night-link-color;
+$link-visited-decoration:  none;
+
+$link-hover-color:         $text-color;
 $night-link-hover-color:   $night-text-color;
+$link-hover-decoration:    none;
 
 
 // Blockquote
 
+$blockquote-border-width:         0.313rem;
+$blockquote-border-style:         solid;
+$blockquote-border-color:         transparentize(#000, 0.92);
+$night-blockquote-border-color:   transparentize(#fff, 0.92);
 $blockquote-left-quotation-mark:  '«'; // '“';
 $blockquote-right-quotation-mark: '»'; // '”';
 
 
 // Code
 
-$code-background-color: transparentize(get_color('grey 1'), 0.92);
-$code-border-radius:    $quarter-spacing-unit / 2;
-$code-font-size: 1em;
+$code-background-color:       transparentize(#000, 0.92);
+$night-code-background-color: transparentize(#fff, 0.92);
+// $night-code-background-color: transparentize(tint(#fff, $night-link-color, 24%), 0.9);
+$code-border-radius:          $base-border-radius;
+$code-font-size:              1em;
 
-$pre-background-color:  transparentize(get_color('grey 1'), 0.95);
-$pre-border-radius:     $quarter-spacing-unit / 2;
-
-$night-code-background-color: transparentize(get_color('grey 3'), 0.92);
-$night-pre-background-color:  transparentize(get_color('grey 3'), 0.95);
+$pre-background-color:        transparentize(#000, 0.96);
+$night-pre-background-color:  transparentize(#fff, 0.96);
+// $night-pre-background-color:  transparentize(tint(#fff, $night-link-color, 24%), 0.93);
+$pre-border-radius:           $base-border-radius;
 
 
 // Heading
@@ -114,30 +121,34 @@ $heading-line-height: 1.1;
 
 // Se usan los mismo valores para los demas controles de las formas.
 
-$control-transparentize-amount: 0.6;
-
-$control-border-width:  1px;
-$control-border-style:  solid;
-$control-border-color:  transparentize(tint($base-background-color, get_color('grey 1'), 24%), $control-transparentize-amount);
-$control-border-radius: rem_to_em($quarter-spacing-unit / 2);
-$control-line-height:   $line-height-ratio - $quarter-spacing-unit;
-$control-padding-y:     rem_to_em($quarter-spacing-unit);
-$control-padding-x:     rem_to_em($half-spacing-unit - 0.375);
+$control-border-width:       1px;
+$control-border-style:       solid;
+$control-border-color:       transparentize(#000, 0.86);
+$night-control-border-color: transparentize(#fff, 0.72);
+// $control-border-color:       transparentize(#000, 0.78);
+// $night-control-border-color: transparentize(#fff, 0.78);
+$control-border-radius:      $base-border-radius;
+$control-line-height:        $line-height-ratio - $quarter-spacing-unit;
+$control-padding-y:          rem_to_em($quarter-spacing-unit);
+$control-padding-x:          rem_to_em($half-spacing-unit - 0.375);
 
 
 // Buttons
 
-$button-background-color: tint($base-background-color, get_color('grey 1'), 90%);
-$button-border:           $control-border-width $control-border-style transparent;
-$button-border-radius:    $control-border-radius;
-$button-font-size:        $base-font-size;
-$button-font-weight:      400;
-$button-line-height:      $control-line-height;
-$button-padding:          $control-padding-y $control-padding-x;
-$button-text-color:       $base-background-color;
+$button-background-color:       tint($base-background-color, #000, 92%);
+$night-button-background-color: tint($night-base-background-color, #fff, 92%);
+$button-border:                 $control-border-width $control-border-style transparent;
+$button-border-radius:          $control-border-radius;
+$button-font-size:              $base-font-size;
+$button-font-weight:            400;
+$button-line-height:            $control-line-height;
+$button-padding:                $control-padding-y $control-padding-x;
+$button-text-color:             $base-background-color;
+$night-button-text-color:       $night-text-color;
 
 $button-hover-background-color-shade-amount:  12%;
 $button-active-background-color-shade-amount: 20%;
+
 
 // Estilos de los botones:
 // - Name, 
@@ -154,16 +165,22 @@ $button-active-background-color-shade-amount: 20%;
 // - gradient background-color bottom saturation, 
 // - gradient background-color bottom lightness.
 $buttons: (
-	'primary'   get_color('blue 1')                                    transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' tint($base-background-color, get_color('grey 1'), 40%) transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 1')                                   transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 1')                                     transparent $button-text-color 3% 11% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_color('blue 1')                           transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' tint($base-background-color, #000, 52%)       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 1')                          transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 1')                            transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+);
+$night-buttons: (
+	'primary'   get_night_color('blue 1')                     transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' tint($night-base-background-color, #fff, 72%) transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_night_color('green 1')                    transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_night_color('red 1')                      transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 
 // Outline button
 
-$button-outline-border-transparentize-amount: 0.2;
+$button-outline-border-transparentize-amount: 0;
 
 
 // Disabled button
@@ -205,32 +222,40 @@ $label-padding:   ($control-padding-y / 2) 0;
 
 // Input
 
-$input-background-color:     transparent;
-$input-border-width:         $control-border-width;
-$input-border-style:         $control-border-style;
-$input-border-color:         $control-border-color;
-$input-border:               $input-border-width $input-border-style $input-border-color;
-$input-border-radius:        $control-border-radius;
-$input-font-size:            $base-font-size;
-$input-line-height:          $control-line-height;
-$input-padding:              $control-padding-y $control-padding-x;
+$input-background-color:           transparent;
+$input-border-width:               $control-border-width;
+$input-border-style:               $control-border-style;
+$input-border-color:               $control-border-color;
+$night-input-border-color:         $night-control-border-color;
+$input-border:                     $input-border-width $input-border-style $input-border-color;
+$input-border-radius:              $control-border-radius;
+$input-text-color:                 $text-color;
+$night-input-text-color:           $night-text-color;
+$input-font-size:                  $base-font-size;
+$input-line-height:                $control-line-height;
+$input-padding:                    $control-padding-y $control-padding-x;
 
-$input-active-border-color:  get_color('blue 2');
-$input-focus-border-color:   get_color('blue 2');
-$input-focus-border-width:   $control-border-width;
-$input-hover-border-color:   $input-border-color;
-$input-invalid-border-color: get_color('red 2');
-$input-valid-border-color:   $input-border-color;
+$input-active-border-color:        get_color('blue 2');
+$night-input-active-border-color:  get_night_color('blue 2');
+$input-focus-border-color:         get_color('blue 2');
+$night-input-focus-border-color:   get_night_color('blue 2');
+$input-focus-border-width:         $control-border-width;
+$input-hover-border-color:         $input-border-color;
+$night-input-hover-border-color:   $night-input-border-color;
+$input-invalid-border-color:       get_color('red 2');
+$night-input-invalid-border-color: get_night_color('red 2');
+$input-valid-border-color:         $input-border-color;
+$night-input-valid-border-color:   $night-input-border-color;
 
-$input-small-border-radius:  $control-border-radius;
-$input-small-font-size:      $small-font-size;
-$input-small-padding-y:      $control-padding-y / 2;
-$input-small-padding-x:      $control-padding-x;
+$input-small-border-radius:        $control-border-radius;
+$input-small-font-size:            $small-font-size;
+$input-small-padding-y:            $control-padding-y / 2;
+$input-small-padding-x:            $control-padding-x;
  
-$input-large-border-radius:  $control-border-radius;
-$input-large-font-size:      $large-font-size;
-$input-large-padding-y:      $control-padding-y + 0.25;
-$input-large-padding-x:      $control-padding-x + 0.25;
+$input-large-border-radius:        $control-border-radius;
+$input-large-font-size:            $large-font-size;
+$input-large-padding-y:            $control-padding-y + 0.25;
+$input-large-padding-x:            $control-padding-x + 0.25;
 
 
 // File area
@@ -247,7 +272,10 @@ $file-area-valid-background-color: transparentize(get_color('blue 1'), 0.92);
 
 $select-background-color:         transparent;
 $select-border:                   $control-border-width $control-border-style $control-border-color;
+$night-select-border-color:       $night-control-border-color;
 $select-border-radius:            $control-border-radius;
+$select-text-color:               $text-color;
+$night-select-text-color:         $night-text-color;
 $select-font-size:                $base-font-size;
 $select-line-height:              $control-line-height;
 $select-padding:                  $control-padding-y $control-padding-x;
@@ -275,7 +303,8 @@ $select-background-size:          rem_to_em($base-spacing-unit);
 $select-margin-right:             rem_to_em($half-spacing-unit);
 
 // Pure CSS select menu icon.
-$select-icon-border:              0.125em solid get_color('grey 1');
+$select-icon-border:              0.125em solid $text-color;
+$night-select-icon-border-color:  $night-text-color;
 $select-icon-margin-top:         -0.438em;
 $select-icon-width:               rem_to_em($quarter-spacing-unit);
 $select-icon-height:              rem_to_em($quarter-spacing-unit);
@@ -299,53 +328,56 @@ $select-icon-large-padding-right: $select-icon-large-width + ($select-icon-large
 
 // Switch
 
-$switch-height:                     px_to_em($base-font-size) + ($control-padding-y * 2) + 0.188;
-$switch-width:                      $switch-height * 2;
+$switch-height:                         px_to_em($base-font-size) + ($control-padding-y * 2) + 0.188;
+$switch-width:                          $switch-height * 2;
 
-$switch-background-color:           $control-border-color;
-$switch-border:                     none;
-$switch-border-radius:              $switch-height / 2;
-$switch-box-shadow:                 inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
+$switch-background-color:               $control-border-color;
+$night-switch-background-color:         transparentize(#fff, 0.86);
+$switch-border:                         none;
+$switch-border-radius:                  $switch-height / 2;
+$switch-box-shadow:                     inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
-$switch-toggle-background-color:    $base-background-color;
-$switch-toggle-border-radius:       $switch-height / 2;
-$switch-toggle-box-shadow:          0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
-                                    0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
-                                    0 0.063em 0.250em rgba(0, 0, 0, 0.1), 
-                                    0 0.063em 0.125em rgba(0, 0, 0, 0.1);
-$switch-toggle-width:               $switch-height - rem_to_em($quarter-spacing-unit + 0.313);
-$switch-toggle-height:              $switch-height - rem_to_em($quarter-spacing-unit + 0.313);
-$switch-toggle-top:                 50%;
-$switch-toggle-left:                rem_to_em($quarter-spacing-unit);
+$switch-toggle-background-color:        $base-background-color;
+$night-switch-toggle-background-color:  $base-background-color;
+$switch-toggle-border-radius:           $switch-height / 2;
+$switch-toggle-box-shadow:              0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
+                                        0 0.063em 0.125em rgba(0, 0, 0, 0.1), 
+                                        0 0.063em 0.250em rgba(0, 0, 0, 0.1), 
+                                        0 0.063em 0.125em rgba(0, 0, 0, 0.1);
+$switch-toggle-width:                   $switch-height - rem_to_em($quarter-spacing-unit + 0.313);
+$switch-toggle-height:                  $switch-height - rem_to_em($quarter-spacing-unit + 0.313);
+$switch-toggle-top:                     50%;
+$switch-toggle-left:                    rem_to_em($quarter-spacing-unit);
 
-$switch-checked-background-color:   get_color('blue 1');
-$switch-checked-toggle-left:        $switch-width - $switch-height + 0.313;
+$switch-checked-background-color:       get_color('blue 1');
+$night-switch-checked-background-color: get_night_color('blue 1');
+$switch-checked-toggle-left:            $switch-width - $switch-height + 0.313;
 
-$switch-transition:                 0.20s cubic-bezier(0.25, 0, 0.5, 1);
-$switch-toggle-transition:          0.32s cubic-bezier(0.55, 1.5, 0.5, 1);
-$switch-checked-transition:         width 0.2s cubic-bezier(0, 0, 0, 0.1);
+$switch-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
+$switch-toggle-transition:              0.32s cubic-bezier(0.55, 1.5, 0.5, 1);
+$switch-checked-transition:             width 0.2s cubic-bezier(0, 0, 0, 0.1);
 
-$switch-small-height:               $switch-height / 1.4;
-$switch-small-width:                $switch-small-height * 2;
-$switch-small-border-radius:        $switch-small-height / 2;
-$switch-small-toggle-border-radius: $switch-small-height * 2;
+$switch-small-height:                   $switch-height / 1.4;
+$switch-small-width:                    $switch-small-height * 2;
+$switch-small-border-radius:            $switch-small-height / 2;
+$switch-small-toggle-border-radius:     $switch-small-height * 2;
 
-$switch-small-toggle-width:         $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
-$switch-small-toggle-height:        $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
-$switch-small-toggle-left:          rem_to_em($quarter-spacing-unit - 0.063);
+$switch-small-toggle-width:             $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
+$switch-small-toggle-height:            $switch-small-height - rem_to_em($quarter-spacing-unit + 0.188);
+$switch-small-toggle-left:              rem_to_em($quarter-spacing-unit - 0.063);
 
-$switch-small-checked-toggle-left:  $switch-small-width - $switch-small-height + 0.25;
+$switch-small-checked-toggle-left:      $switch-small-width - $switch-small-height + 0.25;
 
-$switch-large-height:               $switch-height * 1.4856;
-$switch-large-width:                $switch-large-height * 2;
-$switch-large-border-radius:        $switch-large-height / 2;
+$switch-large-height:                   $switch-height * 1.4856;
+$switch-large-width:                    $switch-large-height * 2;
+$switch-large-border-radius:            $switch-large-height / 2;
 
-$switch-large-toggle-border-radius: $switch-large-height * 2;
-$switch-large-toggle-width:         $switch-large-height - rem_to_em($quarter-spacing-unit + 0.375);
-$switch-large-toggle-height:        $switch-large-height - rem_to_em($quarter-spacing-unit + 0.375);
-$switch-large-toggle-left:          rem_to_em($quarter-spacing-unit + 0.063);
+$switch-large-toggle-border-radius:     $switch-large-height * 2;
+$switch-large-toggle-width:             $switch-large-height - rem_to_em($quarter-spacing-unit + 0.375);
+$switch-large-toggle-height:            $switch-large-height - rem_to_em($quarter-spacing-unit + 0.375);
+$switch-large-toggle-left:              rem_to_em($quarter-spacing-unit + 0.063);
 
-$switch-large-checked-toggle-left:  $switch-large-width - $switch-large-height + 0.375;
+$switch-large-checked-toggle-left:      $switch-large-width - $switch-large-height + 0.375;
 
 
 // Tables
@@ -363,12 +395,12 @@ $table-striped-background-color: transparentize(get_color('grey 1'), 0.95);
 
 // Borders
 
-$border-width:  1px;
-$border-style:  solid;
-$border-color:  transparentize(get_color('grey 1'), 0.87);
-$border-radius: $quarter-spacing-unit / 2;
+$border-width:       0.063rem;
+$border-style:       solid;
+$border-color:       transparentize(#000, 0.86);
+$night-border-color: transparentize(#fff, 0.72);
+$border-radius:      $base-border-radius;
 
-$night-border-color:  transparentize(get_night_color('white'), 0.87);
 
 // Sides:
 // Side, first corner, second corner.
@@ -382,17 +414,20 @@ $sides: (
 
 // Highlighting text
 
-$hightlight-border-radius: rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
-$hightlight-background:    linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.2), 
-                                                    rgba(get_color('yellow 4'), 0.4) 95%, 
-                                                    rgba(get_color('yellow 4'), 0.1));
-
+$hightlight-border-radius:    rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
+$hightlight-background:       linear-gradient(-100deg, rgba(get_color('yellow 4'), 0.2), 
+                                                       rgba(get_color('yellow 4'), 0.4) 95%, 
+                                                       rgba(get_color('yellow 4'), 0.1));
+$night-hightlight-background: linear-gradient(-100deg, rgba(get_night_color('white'), 0.1), 
+                                                       rgba(get_night_color('white'), 0.2) 95%, 
+                                                       rgba(get_night_color('white'), 0.05));
 
 // Drop cap
 
 $dropcap-background-color: transparent;
 $dropcap-border:           none;
 $dropcap-color:            $text-color;
+$night-dropcap-color:      $night-text-color;
 $dropcap-font-size:        px_to_em($base-font-size * 3.5);
 $dropcap-font-style:       normal;
 $dropcap-font-weight:      normal;
@@ -408,8 +443,6 @@ $dropcap-height: auto;
 
 $dropcap-text-align:     left;
 $dropcap-vertical-align: bottom;
-
-$night-dropcap-color:    $night-text-color;
 
 
 // Small caps
@@ -505,33 +538,31 @@ $card-hover-box-shadow: 0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 // Full screen menu
 
-$full-screen-menu-transition:              opacity 700ms step-end, 
-                                           transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                           visibility 700ms step-end, 
-                                           background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-content-transition:      opacity 400ms cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-transition:                  opacity 700ms step-end, 
+                                               transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility 700ms step-end, 
+                                               background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-content-transition:          opacity 400ms cubic-bezier(0.8, 0, 0.55, 0.94);
 
-$full-screen-menu-open-background-color:   $base-background-color;
-$full-screen-menu-open-transition:         opacity 700ms step-start, 
-                                           transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                           visibility 700ms step-start, 
-                                           background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-open-content-transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms;
-
+$full-screen-menu-open-background-color:       $base-background-color;
 $night-full-screen-menu-open-background-color: $night-base-background-color;
+$full-screen-menu-open-transition:             opacity 700ms step-start, 
+                                               transform 700ms cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility 700ms step-start, 
+                                               background-color 700ms cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-open-content-transition:     opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms;
 
 
 // Navbar
 
 // Navbar brand
 
-$navbar-background-color:    $base-background-color;
-$navbar-brand-font-size:     $large-font-size;
-
-$navbar-collapse-transition: max-height 0.2s cubic-bezier(0, 0, 0, 0.1), 
-                             opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), 
-                             transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), 
-                             z-index 0.2s ease-in-out;
-
+$navbar-background-color:       $base-background-color;
 $night-navbar-background-color: $night-base-background-color;
+$navbar-brand-font-size:        $large-font-size;
+
+$navbar-collapse-transition:    max-height 0.2s cubic-bezier(0, 0, 0, 0.1), 
+                                opacity 0.2s cubic-bezier(0.25, 0, 0.5, 1), 
+                                transform 0.32s cubic-bezier(0.55, 1.75, 0.5, 1.25), 
+                                z-index 0.2s ease-in-out;
 

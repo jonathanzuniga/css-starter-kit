@@ -24,7 +24,7 @@
 		#{$prop}-bottom: $border-width $border-style $border-color;
 	}
 
-	.night-mode {
+	.night {
 		.#{$abbr} {
 			#{$prop}-color: $night-border-color;
 		}
@@ -81,7 +81,7 @@
 			#{$prop}-#{$side}: $border-width $border-style $border-color;
 		}
 
-		.night-mode {
+		.night {
 			.#{$abbr}-#{$side} {
 				#{$prop}-#{$side}-color: $night-border-color;
 			}
@@ -97,7 +97,7 @@
 					#{$prop}-#{$side}: $border-width $border-style $border-color;
 				}
 
-				.night-mode {
+				.night {
 					.#{$size}-#{$abbr}-#{$side} {
 						#{$prop}-#{$side}-color: $night-border-color;
 					}
@@ -113,7 +113,7 @@
 					#{$prop}-#{$side}: $border-width $border-style $border-color;
 				}
 
-				.night-mode {
+				.night {
 					.max#{$size}-#{$abbr}-#{$side} {
 						#{$prop}-#{$side}-color: $night-border-color;
 					}
@@ -140,6 +140,22 @@
 			.#{$size}-#{$abbr}-y {
 				#{$prop}-top: $border-width $border-style $border-color;
 				#{$prop}-bottom: $border-width $border-style $border-color;
+			}
+
+			.night {
+				.#{$size}-#{$abbr} {
+					#{$prop}-color: $night-border-color;
+				}
+
+				.#{$size}-#{$abbr}-x {
+					#{$prop}-right-color: $night-border-color;
+					#{$prop}-left-color: $night-border-color;
+				}
+
+				.#{$size}-#{$abbr}-y {
+					#{$prop}-top-color: $night-border-color;
+					#{$prop}-bottom-color: $night-border-color;
+				}
 			}
 
 			.#{$size}-#{$abbr}-0 {
@@ -170,6 +186,22 @@
 			.max#{$size}-#{$abbr}-y {
 				#{$prop}-top: $border-width $border-style $border-color;
 				#{$prop}-bottom: $border-width $border-style $border-color;
+			}
+
+			.night {
+				.max#{$size}-#{$abbr} {
+					#{$prop}-color: $night-border-color;
+				}
+
+				.max#{$size}-#{$abbr}-x {
+					#{$prop}-right-color: $night-border-color;
+					#{$prop}-left-color: $night-border-color;
+				}
+
+				.max#{$size}-#{$abbr}-y {
+					#{$prop}-top-color: $night-border-color;
+					#{$prop}-bottom-color: $night-border-color;
+				}
 			}
 
 			.max#{$size}-#{$abbr}-0 {
@@ -272,4 +304,8 @@
 	.#{$abbr}-0 {
 		#{$prop}: 0;
 	}
+}
+
+[class^='bd-'] {
+	transition: $base-transition;
 }

@@ -15,8 +15,9 @@ body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	line-height: $line-height-ratio;
+	transition: $base-transition;
 
-	&.night-mode {
+	&.night {
 		background-color: $night-base-background-color;
 		color: $night-text-color;
 	}
@@ -46,7 +47,7 @@ a {
 	}
 }
 
-.night-mode {
+.night {
 	a {
 		
 		&:link {
@@ -81,8 +82,9 @@ img {
  *             cite lorem ipsum
  */
 blockquote {
-	border-left: 0.313rem solid $border-color;
+	border-left: $blockquote-border-width $blockquote-border-style $blockquote-border-color;
 	padding: 0 0 0 ($base-spacing-unit - 0.5) - 0.313;
+	transition: $base-transition;
 
 	p {
 		font-size: 1.125em;
@@ -109,6 +111,12 @@ blockquote {
 		&:before {
 			content: '— ';
 		}
+	}
+}
+
+.night {
+	blockquote {
+		border-left-color: $night-blockquote-border-color;
 	}
 }
 
@@ -142,9 +150,10 @@ code {
 	border-radius: $code-border-radius;
 	font-size: $code-font-size;
 	padding: $quarter-spacing-unit / 2;
+	transition: $base-transition;
 }
 
-.night-mode {
+.night {
 	code {
 		background-color: $night-code-background-color;
 	}
@@ -166,13 +175,14 @@ pre {
 	border-radius: $pre-border-radius;
 	overflow-x: auto;
 	padding: $quarter-spacing-unit $half-spacing-unit;
+	transition: $base-transition;
 
 	code {
 		background-color: transparent;
 	}
 }
 
-.night-mode {
+.night {
 	pre {
 		background-color: $night-pre-background-color;
 

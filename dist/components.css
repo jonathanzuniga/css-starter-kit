@@ -21,8 +21,8 @@
  *                             a(href='') Second link
  */
 .card {
-  border: 1px solid rgba(51, 51, 51, 0.13);
-  border-radius: 0.25rem;
+  border: 0.063rem solid rgba(0, 0, 0, 0.14);
+  border-radius: 0.25em;
   box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.1);
   transition: background-color 0.16s ease-in-out, border-color 0.16s ease-in-out, border-width 0.16s ease-in-out, box-shadow 0.16s ease-in-out, color 0.16s ease-in-out; }
   .card:hover {
@@ -138,7 +138,7 @@
 .navbar__link:link, .navbar__link:visited,
 .navbar__toggler:link,
 .navbar__toggler:visited {
-  color: #333333; }
+  color: rgba(0, 0, 0, 0.92); }
 
 .navbar__link:hover,
 .navbar__toggler:hover {
@@ -169,7 +169,7 @@
 .navbar-responsive .navbar__toggler {
   display: flex;
   order: 2; }
-  .navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+  .navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
     max-height: 600px;
     opacity: 1;
     transform: translateY(0);
@@ -221,7 +221,7 @@
   .maxxs-navbar-responsive .navbar__toggler {
     display: flex;
     order: 2; }
-    .maxxs-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+    .maxxs-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -267,7 +267,7 @@
   .maxsm-navbar-responsive .navbar__toggler {
     display: flex;
     order: 2; }
-    .maxsm-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+    .maxsm-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -313,7 +313,7 @@
   .maxmd-navbar-responsive .navbar__toggler {
     display: flex;
     order: 2; }
-    .maxmd-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+    .maxmd-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -359,7 +359,7 @@
   .maxlg-navbar-responsive .navbar__toggler {
     display: flex;
     order: 2; }
-    .maxlg-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+    .maxlg-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -405,7 +405,7 @@
   .maxxl-navbar-responsive .navbar__toggler {
     display: flex;
     order: 2; }
-    .maxxl-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse {
+    .maxxl-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
       max-height: 600px;
       opacity: 1;
       transform: translateY(0);
@@ -531,22 +531,22 @@
   .navbar.scrolled {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
 
-.night-mode .navbar {
-  background-color: #1a1a1a; }
+.night .navbar {
+  background-color: #222; }
 
-.night-mode .navbar__item.active .navbar__link:link, .night-mode .navbar__item.active .navbar__link:hover, .night-mode .navbar__item.active .navbar__link:visited {
+.night .navbar__item.active .navbar__link:link, .night .navbar__item.active .navbar__link:hover, .night .navbar__item.active .navbar__link:visited {
   color: #3a8bbb; }
 
-.night-mode .navbar__link:link, .night-mode .navbar__link:visited,
-.night-mode .navbar__toggler:link,
-.night-mode .navbar__toggler:visited {
-  color: #fff; }
+.night .navbar__link:link, .night .navbar__link:visited,
+.night .navbar__toggler:link,
+.night .navbar__toggler:visited {
+  color: rgba(255, 255, 255, 0.92); }
 
-.night-mode .navbar__link:hover,
-.night-mode .navbar__toggler:hover {
+.night .navbar__link:hover,
+.night .navbar__toggler:hover {
   color: #3a8bbb; }
 
-.night-mode .navbar.scrolled {
+.night .navbar.scrolled {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
 
 /***
@@ -587,8 +587,8 @@
       .maxxs-fsmenu.open > * {
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
-  .night-mode .maxxs-fsmenu.open {
-    background-color: #1a1a1a; } }
+  .night .maxxs-fsmenu.open {
+    background-color: #222; } }
 
 @media (max-width: 767px) {
   .maxsm-fsmenu {
@@ -618,8 +618,8 @@
       .maxsm-fsmenu.open > * {
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
-  .night-mode .maxsm-fsmenu.open {
-    background-color: #1a1a1a; } }
+  .night .maxsm-fsmenu.open {
+    background-color: #222; } }
 
 @media (max-width: 1023px) {
   .maxmd-fsmenu {
@@ -649,8 +649,8 @@
       .maxmd-fsmenu.open > * {
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
-  .night-mode .maxmd-fsmenu.open {
-    background-color: #1a1a1a; } }
+  .night .maxmd-fsmenu.open {
+    background-color: #222; } }
 
 @media (max-width: 1279px) {
   .maxlg-fsmenu {
@@ -680,8 +680,8 @@
       .maxlg-fsmenu.open > * {
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
-  .night-mode .maxlg-fsmenu.open {
-    background-color: #1a1a1a; } }
+  .night .maxlg-fsmenu.open {
+    background-color: #222; } }
 
 @media (max-width: 1679px) {
   .maxxl-fsmenu {
@@ -711,5 +711,5 @@
       .maxxl-fsmenu.open > * {
         opacity: 1;
         transition: opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms; }
-  .night-mode .maxxl-fsmenu.open {
-    background-color: #1a1a1a; } }
+  .night .maxxl-fsmenu.open {
+    background-color: #222; } }

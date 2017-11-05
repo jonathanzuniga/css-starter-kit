@@ -96,38 +96,42 @@
 			color: #333;
 		}
 
-		.night-mode .sidebar .active a {
+		.night .sidebar .active a {
 			color: #fff;
 		}
 
-		.night-mode .sg-block {
-			border-top-color: rgba(255, 255, 255, 0.13);
+		.sg-block {
+			border-top-color: rgba(0, 0, 0, 0.14);
 		}
 
-		.night-mode code.sg {
+		.night .sg-block {
+			border-top-color: rgba(255, 255, 255, 0.28);
+		}
+
+		.night code.sg {
 			color: #579;
 		}
 
-		.night-mode code.sg:not(:first-child) {
+		.night code.sg:not(:first-child) {
 			background: rgba(250, 250, 250, 0.025);
 			color: #357;
 		}
 
-		.night-mode .sg-expando::before {
-			background-color: rgba(255, 255, 255, 0.13);
+		.night .sg-expando::before {
+			background-color: rgba(255, 255, 255, 0.14);
 		}
 
-		.night-mode .sg-expando:hover::before, 
-		.night-mode .sg-expando:focus::before {
+		.night .sg-expando:hover::before, 
+		.night .sg-expando:focus::before {
 			background-color: rgba(255, 255, 255, 0.7);
 		}
 
-		.night-mode .sg-expando:active::before {
+		.night .sg-expando:active::before {
 			background: #111;
 			color: #fff;
 		}
 
-		.night-mode .sg-code {
+		.night .sg-code {
 			background: #fafaff !important;
 		}
 
@@ -146,6 +150,11 @@
 					a(href='#!', id='open-fsmenu').navbar__toggler Menu
 
 		div.row
+			div.main.xs-col-12.md-col-9.xl-col-10.maxsm-p-top-20
+				div.main__content.row.cols-center
+					div.md-col-12.xl-col-10
+						div(sg-content).sg-container
+
 			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12
 				div.sidebar__content.row
 					div.col
@@ -157,6 +166,11 @@
 						p CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
 
 						p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
+
+						p 
+							input(id='switch-night-mode', type='checkbox').switch.switch--sm
+							label(for='switch-night-mode', id='lbl-night-mode')
+								span Night mode
 
 						div.row
 							div.xs-col-12.sm-col-6.md-col-12
@@ -490,10 +504,6 @@
 											li
 												a(href='components.html#full-screen-menu') Full screen menu
 
-			div.main.xs-col-12.md-col-9.xl-col-10.maxsm-p-top-20
-				div.main__content.row.cols-center
-					div.md-col-9.xl-col-10
-						div(sg-content).sg-container
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='js/styledown.js')
