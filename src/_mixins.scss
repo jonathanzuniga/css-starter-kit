@@ -4,13 +4,13 @@
 // Button background gradient.
 @mixin button_gradient_bg($color-top, $color-bottom) {
 	background: #{$color-top};
-	background: -moz-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, #{$color-top}), color-stop(100%, #{$color-bottom}));
 	background: -webkit-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: -o-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: -ms-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background: linear-gradient(to bottom, #{$color-top} 0%, #{$color-bottom} 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-top}', endColorstr='#{$color-bottom}', GradientType=0);
+	background:    -moz-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
+	background:     -ms-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
+	background:      -o-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
+	background:         linear-gradient(to bottom, #{$color-top} 0%, #{$color-bottom} 100%);
+	filter:      progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-top}', endColorstr='#{$color-bottom}', GradientType=0);
 }
 
 // Output vendor properties.
