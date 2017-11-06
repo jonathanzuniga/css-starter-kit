@@ -50,9 +50,9 @@ $colors: (
 	'grey'   #333333, 
 	'light blue' #00a8d2, 
 	// 'red'    #ff5a40, 
-	// 'red'    #ff5555,
+	// 'red'    #ff5555, 
 	'red'    #f4693a, 
-	// 'red'    #e75828,
+	// 'red'    #e75828, 
 	'white'  #ffffff, 
 	'yellow' #ffa53a
 );
@@ -128,16 +128,28 @@ $heading-line-height: 1.1;
 
 // Se usan los mismo valores para los demas controles de las formas.
 
-$control-border-width:       1px;
-$control-border-style:       solid;
-$control-border-color:       transparentize(#000, 0.86);
-$night-control-border-color: transparentize(#fff, 0.72);
-// $control-border-color:       transparentize(#000, 0.78);
-// $night-control-border-color: transparentize(#fff, 0.78);
-$control-border-radius:      $base-border-radius;
-$control-line-height:        $line-height-ratio - $quarter-spacing-unit;
-$control-padding-y:          rem_to_em($quarter-spacing-unit);
-$control-padding-x:          rem_to_em($half-spacing-unit - 0.375);
+$control-border-width:               1px;
+$control-border-style:               solid;
+$control-border-color:               transparentize(#000, 0.72);
+$night-control-border-color:         transparentize(#fff, 0.72);
+// $control-border-color:               transparentize(#000, 0.78);
+// $night-control-border-color:         transparentize(#fff, 0.78);
+$control-border-radius:              $base-border-radius;
+$control-line-height:                $line-height-ratio - $quarter-spacing-unit;
+$control-padding-y:                  rem_to_em($quarter-spacing-unit);
+$control-padding-x:                  rem_to_em($half-spacing-unit - 0.375);
+
+$control-active-border-color:        get_color('blue 2');
+$night-control-active-border-color:  get_night_color('white 2');
+
+$control-focus-border-color:         get_color('blue 2');
+$night-control-focus-border-color:   get_night_color('white 2');
+
+$control-focus-box-shadow:           inset 0 0 0 0.063rem $control-focus-border-color;
+$night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
+
+$control-invalid-border-color:       get_color('red 2');
+$night-control-invalid-border-color: get_night_color('red 2');
 
 
 // Buttons
@@ -224,45 +236,56 @@ $button-large-gradient-padding: ($button-large-padding-y + 0.063) ($button-large
 // Label
 
 $label-font-size: px_to_em($base-font-size);
-$label-padding:   ($control-padding-y / 2) 0;
+$label-padding:  ($control-padding-y / 2) 0;
 
 
 // Input
 
-$input-background-color:           transparent;
-$input-border-width:               $control-border-width;
-$input-border-style:               $control-border-style;
-$input-border-color:               $control-border-color;
-$night-input-border-color:         $night-control-border-color;
-$input-border:                     $input-border-width $input-border-style $input-border-color;
-$input-border-radius:              $control-border-radius;
-$input-text-color:                 $text-color;
-$night-input-text-color:           $night-text-color;
-$input-font-size:                  $base-font-size;
-$input-line-height:                $control-line-height;
-$input-padding:                    $control-padding-y $control-padding-x;
+$input-background-color:            transparent;
+$input-border-width:                $control-border-width;
+$input-border-style:                $control-border-style;
+$input-border-color:                $control-border-color;
+$input-box-shadow:                  inset 0 0 0 0.063rem transparent;
+$night-input-border-color:          $night-control-border-color;
+$input-border:                      $input-border-width $input-border-style $input-border-color;
+$input-border-radius:               $control-border-radius;
+$input-text-color:                  $text-color;
+$night-input-text-color:            $night-text-color;
+$input-font-size:                   $base-font-size;
+$input-line-height:                 $control-line-height;
+$input-padding:                     $control-padding-y $control-padding-x;
 
-$input-active-border-color:        get_color('blue 2');
-$night-input-active-border-color:  get_night_color('blue 2');
-$input-focus-border-color:         get_color('blue 2');
-$night-input-focus-border-color:   get_night_color('blue 2');
-$input-focus-border-width:         $control-border-width;
-$input-hover-border-color:         $input-border-color;
-$night-input-hover-border-color:   $night-input-border-color;
-$input-invalid-border-color:       get_color('red 2');
-$night-input-invalid-border-color: get_night_color('red 2');
-$input-valid-border-color:         $input-border-color;
-$night-input-valid-border-color:   $night-input-border-color;
+$input-active-border-color:         $control-active-border-color;
+$night-input-active-border-color:   $night-control-active-border-color;
 
-$input-small-border-radius:        $control-border-radius;
-$input-small-font-size:            $small-font-size;
-$input-small-padding-y:            $control-padding-y / 2;
-$input-small-padding-x:            $control-padding-x;
+$input-focus-border-color:          $control-focus-border-color;
+$night-input-focus-border-color:    $night-control-focus-border-color;
+$input-focus-border-width:          $control-border-width;
+
+$input-hover-border-color:          $input-border-color;
+$night-input-hover-border-color:    $night-input-border-color;
+
+$input-invalid-border-color:        $control-invalid-border-color;
+$night-input-invalid-border-color:  $night-control-invalid-border-color;
+
+$input-valid-border-color:          $input-border-color;
+$night-input-valid-border-color:    $night-input-border-color;
+
+$input-small-border-radius:         $control-border-radius;
+$input-small-font-size:             $small-font-size;
+$input-small-padding-y:             $control-padding-y / 2;
+$input-small-padding-x:             $control-padding-x;
  
-$input-large-border-radius:        $control-border-radius;
-$input-large-font-size:            $large-font-size;
-$input-large-padding-y:            $control-padding-y + 0.25;
-$input-large-padding-x:            $control-padding-x + 0.25;
+$input-large-border-radius:         $control-border-radius;
+$input-large-font-size:             $large-font-size;
+$input-large-padding-y:             $control-padding-y + 0.25;
+$input-large-padding-x:             $control-padding-x + 0.25;
+
+
+// Input line
+
+$input-line-focus-box-shadow:       inset 0 -0.125rem 0 -0.063rem $control-focus-border-color;
+$night-input-line-focus-box-shadow: inset 0 -0.125rem 0 -0.063rem $night-control-focus-border-color;
 
 
 // File area
@@ -287,7 +310,7 @@ $select-font-size:                $base-font-size;
 $select-line-height:              $control-line-height;
 $select-padding:                  $control-padding-y $control-padding-x;
 
-$select-focus-border-color:       get_color('blue 2');
+$select-focus-border-color:       $control-focus-border-color;
 $select-focus-border-width:       $control-border-width;
 
 $select-small-border-radius:      $control-border-radius;

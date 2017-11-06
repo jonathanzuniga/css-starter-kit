@@ -32,7 +32,7 @@
 	background-color: $input-background-color;
 	border: $input-border;
 	border-radius: $input-border-radius;
-	box-shadow: none;
+	box-shadow: $input-box-shadow;
 	color: $input-text-color;
 	display: block;
 	font-family: $base-font-family;
@@ -64,6 +64,10 @@
 	&:focus:hover {
 		border-color: $input-focus-border-color;
 		border-width: $input-focus-border-width;
+
+		box-shadow: $control-focus-box-shadow;
+
+		z-index: 10;
 	}
 
 	&:hover {
@@ -92,6 +96,7 @@
 		&:focus,
 		&:focus:hover {
 			border-color: $night-input-focus-border-color;
+			box-shadow: $night-control-focus-box-shadow;
 		}
 
 		&:hover {
@@ -141,6 +146,20 @@
 
 	padding-right: 0;
 	padding-left: 0;
+
+	&:focus,
+	&:focus:hover {
+		box-shadow: $input-line-focus-box-shadow;
+	}
+}
+
+.night {
+	.input--line {
+		&:focus,
+		&:focus:hover {
+			box-shadow: $night-input-line-focus-box-shadow;
+		}
+	}
 }
 
 /**

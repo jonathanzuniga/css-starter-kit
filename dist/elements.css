@@ -284,9 +284,9 @@ small {
 .input,
 .txtarea {
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.28);
   border-radius: 0.25em;
-  box-shadow: none;
+  box-shadow: inset 0 0 0 0.063rem transparent;
   color: rgba(0, 0, 0, 0.92);
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -302,15 +302,17 @@ small {
     border-color: #f57c53; }
   .input:valid,
   .txtarea:valid {
-    border-color: rgba(0, 0, 0, 0.14); }
+    border-color: rgba(0, 0, 0, 0.28); }
   .input:focus, .input:focus:hover,
   .txtarea:focus,
   .txtarea:focus:hover {
     border-color: #539ac4;
-    border-width: 1px; }
+    border-width: 1px;
+    box-shadow: inset 0 0 0 0.063rem #539ac4;
+    z-index: 10; }
   .input:hover,
   .txtarea:hover {
-    border-color: rgba(0, 0, 0, 0.14); }
+    border-color: rgba(0, 0, 0, 0.28); }
 
 .night .input,
 .night .txtarea {
@@ -318,7 +320,7 @@ small {
   color: rgba(255, 255, 255, 0.92); }
   .night .input:active,
   .night .txtarea:active {
-    border-color: #367da7; }
+    border-color: #e2e2e2; }
   .night .input:invalid,
   .night .txtarea:invalid {
     border-color: #d95f36; }
@@ -328,7 +330,8 @@ small {
   .night .input:focus, .night .input:focus:hover,
   .night .txtarea:focus,
   .night .txtarea:focus:hover {
-    border-color: #367da7; }
+    border-color: #e2e2e2;
+    box-shadow: inset 0 0 0 0.063rem #e2e2e2; }
   .night .input:hover,
   .night .txtarea:hover {
     border-color: rgba(255, 255, 255, 0.28); }
@@ -364,11 +367,16 @@ small {
   background-color: transparent;
   border-top: none;
   border-right: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
   border-left: none;
   border-radius: 0;
   padding-right: 0;
   padding-left: 0; }
+  .input--line:focus, .input--line:focus:hover {
+    box-shadow: inset 0 -0.125rem 0 -0.063rem #539ac4; }
+
+.night .input--line:focus, .night .input--line:focus:hover {
+  box-shadow: inset 0 -0.125rem 0 -0.063rem #e2e2e2; }
 
 /**
  * Textarea:
@@ -453,7 +461,7 @@ small {
  */
 .select {
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.28);
   border-radius: 0.25em;
   display: block;
   font-size: 16px;
@@ -1605,7 +1613,7 @@ small {
   opacity: 0;
   position: absolute; }
   .switch + label {
-    background-color: rgba(0, 0, 0, 0.14);
+    background-color: rgba(0, 0, 0, 0.28);
     border: none;
     border-radius: 1.094em;
     box-shadow: inset 0 0.063em 0.063em rgba(0, 0, 0, 0.1);

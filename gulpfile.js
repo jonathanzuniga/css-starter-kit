@@ -4,13 +4,13 @@ var rename = require('gulp-rename');
 var styledown = require('gulp-styledown');
 
 gulp.task('sass', function() {
-	return gulp.src('src/*.scss') // Source files.
+	return gulp.src('src/**/*.scss') // Source files.
 		.pipe(sass()) // Using gulp-sass.
 		.pipe(gulp.dest('dist')) // Destination.
 });
 
 gulp.task('sass-min', function() {
-	return gulp.src('src/*.scss') // Source files.
+	return gulp.src('src/**/*.scss') // Source files.
 		.pipe(sass({outputStyle: 'compressed'})) // Using gulp-sass.
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('dist')) // Destination.
@@ -85,4 +85,10 @@ gulp.task('styledown', function() {
 			filename: 'layout.html' // output.html
 		}))
 		.pipe(gulp.dest('guide')); // /path/to/
+});
+
+// Watch task.
+gulp.task('default', function() {
+    gulp.watch('src/**/*.scss', ['sass', 'sass-min', 'styledown']);
+    gulp.watch('config.md', ['styledown']);
 });
