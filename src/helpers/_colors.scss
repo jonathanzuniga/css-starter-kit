@@ -7,22 +7,19 @@
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
-	// Para no mostrar el mismo color 2 veces, se quita el -1.
-	@if not (str-index($name, '-1')) {
-		/**
-		 * #{$name_ucf} color:
-		 * `.bgc-#{$name_r}` `.txtc-#{$name_r}` `.bdc-#{$name_r}`
-		 *
-		 *     @example
-		 *     table.tbl
-		 *         tr
-		 *             td.w-20
-		 *                div.color-swatch.bd-radius.bgc-#{$name_r}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$name_ucf}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$hex}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$rgb}
-		 */
-	}
+	/**
+	 * #{$name_ucf} color:
+	 * `.bgc-#{$name_r}` `.txtc-#{$name_r}` `.bdc-#{$name_r}`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                div.color-swatch.bd-radius.bgc-#{$name_r}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$name_ucf}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$hex}
+	 *             td.w-20.txt-select.txtc-#{$name_r} #{$rgb}
+	 */
 	.bgc-#{$name_r} {
 		background-color: $hex;
 	}
@@ -35,30 +32,6 @@
 
 	.txtc-#{$name_r} {
 		color: $hex;
-	}
-}
-
-// [class^='bgc-'],
-// [class^='bdc-'],
-// [class^='txtc-'] {
-// 	transition: $base-transition;
-// }
-
-/**
- * Link color to text color:
- *
- *     @example
- *     a(href='').ac-txtc Link with text color
- */
-.ac-txtc:not(.btn),
-.ac-txtc a:not(.btn) {
-	&:link,
-	&:visited {
-		color: $text-color;
-	}
-
-	&:hover {
-		color: $link-color;
 	}
 }
 

@@ -13,33 +13,33 @@
 
 // Generar la lista completa de colores.
 @function get_colors($dark-background-color, $light-background-color, $colors) {
-	$shades: 8;
-	$shades-90-perc: 1 - (1 / $shades);
-	$tints: 8;
+	$tints: 6;
+	$shades: 4;
 	$colors-list: ();
-	// $colors-list: 'black' #000, 'white' #fff;
 	@each $name, $hex in $colors {
-		@for $shade from 0 to $shades {
+		@for $tint from 1 to $tints + 1 {
 			$colors-list: append(
 				$colors-list, 
-				'#{$name} -#{8 - $shade}' shade(
-					$dark-background-color, 
+				'#{$name} #{$tint}' tint(
+					$light-background-color, 
 					$hex, 
-					percentage($shades-90-perc - ($shade / $shades))
+					percentage(1 - ($tint / $tints))
 				), 
 				comma
 			);
 		}
-		@for $tint from 0 to $tints {
-			$colors-list: append(
-				$colors-list, 
-				'#{$name} #{$tint + 1}' tint(
-					$light-background-color, 
-					$hex, 
-					percentage($tint / $tints)
-				), 
-				comma
-			);
+		@for $shade from 0 to $shades + 1 {
+			@if not ($shade == 0) {
+				$colors-list: append(
+					$colors-list, 
+					'#{$name} #{$shade + $tints}' shade(
+						$dark-background-color, 
+						$hex, 
+						percentage($shade / ($shades + 1))
+					), 
+					comma
+				);
+			}
 		}
 	}
 	@return $colors-list;
