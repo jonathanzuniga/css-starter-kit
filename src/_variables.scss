@@ -42,6 +42,20 @@ $base-background-color:       #fff;
 $night-base-background-color: #1a1a1a;
 // $night-base-background-color: #141c21;
 
+// $colors: (
+// 	'black'  #000000, 
+// 	'blue'   #1badf8, 
+// 	'brown'  #a2845e, 
+// 	'green'  #63da38, 
+// 	'grey'   #8e8e91, 
+// 	'orange' #ff9500, 
+// 	'pink'   #ff2968, 
+// 	'purple' #cc73e1, 
+// 	'red'    #ff3b30, 
+// 	'white'  #ffffff, 
+// 	'yellow' #ffcc00
+// );
+
 $colors: (
 	'black'  #000000, 
 	'blue'   #3a8bbb, 
@@ -57,8 +71,8 @@ $colors: (
 	'yellow' #ffa53a
 );
 
-$color-palette:       (get_colors($base-background-color, $colors)) !default;
-$night-color-palette: (get_colors($night-base-background-color, $colors)) !default;
+$color-palette:       (get_colors(#000, $base-background-color, $colors)) !default;
+$night-color-palette: (get_colors($night-base-background-color, #fff, $colors)) !default;
 
 $text-color:           rgba(0, 0, 0, 0.92);
 $night-text-color:     rgba(255, 255, 255, 0.92);
@@ -76,7 +90,7 @@ $base-transition: background-color 0.16s ease-in-out,
 // Hyperlink
 
 $link-color:               get_color('blue 1');
-$night-link-color:         get_night_color('red 1');
+$night-link-color:         get_night_color('blue 2');
 $link-decoration:          none;
 
 $link-visited-color:       $link-color;
@@ -137,14 +151,16 @@ $control-line-height:                $line-height-ratio - $quarter-spacing-unit;
 $control-padding-y:                  rem_to_em($quarter-spacing-unit);
 $control-padding-x:                  rem_to_em($half-spacing-unit - 0.375);
 
-$control-active-border-color:        get_color('blue 2');
-$night-control-active-border-color:  get_night_color('white 2');
+$control-active-border-color:        get_color('blue 1');
+$night-control-active-border-color:  get_night_color('blue 2');
 
-$control-focus-border-color:         get_color('blue 2');
-$night-control-focus-border-color:   get_night_color('white 2');
+$control-focus-border-color:         get_color('blue 1');
+$night-control-focus-border-color:   get_night_color('blue 2');
 
-$control-focus-box-shadow:           inset 0 0 0 0.063rem $control-focus-border-color;
-$night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
+$control-focus-box-shadow:           none;
+$night-control-focus-box-shadow:     none;
+// $control-focus-box-shadow:           inset 0 0 0 0.063rem $control-focus-border-color;
+// $night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
 
 $control-invalid-border-color:       get_color('red 2');
 $night-control-invalid-border-color: get_night_color('red 2');
@@ -282,8 +298,10 @@ $input-large-padding-x:             $control-padding-x + 0.25;
 
 // Input line
 
-$input-line-focus-box-shadow:       inset 0 -0.125rem 0 -0.063rem $control-focus-border-color;
-$night-input-line-focus-box-shadow: inset 0 -0.125rem 0 -0.063rem $night-control-focus-border-color;
+$input-line-focus-box-shadow:       none;
+$night-input-line-focus-box-shadow: none;
+// $input-line-focus-box-shadow:       inset 0 -0.125rem 0 -0.063rem $control-focus-border-color;
+// $night-input-line-focus-box-shadow: inset 0 -0.125rem 0 -0.063rem $night-control-focus-border-color;
 
 
 // File area
@@ -379,7 +397,7 @@ $switch-toggle-top:                     50%;
 $switch-toggle-left:                    rem_to_em($quarter-spacing-unit);
 
 $switch-checked-background-color:       get_color('blue 1');
-$night-switch-checked-background-color: get_night_color('red 1');
+$night-switch-checked-background-color: get_night_color('blue 2');
 $switch-checked-toggle-left:            $switch-width - $switch-height + 0.313;
 
 $switch-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);

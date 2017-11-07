@@ -5,7 +5,7 @@
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
 	link(rel='stylesheet', href='css/styledown.css')
-	link(rel='stylesheet', href='../dist/all.min.css')
+	link(rel='stylesheet', href='../dist/all.css')
 
 	style(type='text/css').
 		h1, h2, h3, h4, h5, h6,
