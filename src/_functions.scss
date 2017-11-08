@@ -12,10 +12,10 @@
 }
 
 // Generar la lista completa de colores.
-@function get_colors($dark-background-color, $light-background-color, $colors) {
+@function get_colors($light-background-color, $dark-background-color, $colors) {
 	$tints: 6;
 	$shades: 4;
-	$colors-list: ();
+	$colors-list: ('black' #000000, 'white' #ffffff);
 	@each $name, $hex in $colors {
 		@for $tint from 1 to $tints + 1 {
 			$colors-list: append(

@@ -57,7 +57,7 @@ $night-base-background-color: #1a1a1a;
 // );
 
 $colors: (
-	'black'  #000000, 
+	// 'black'  #000000, 
 	'blue'   #3a8bbb, 
 	'cyan'   #44acac, 
 	'green'  #3ebc7d, 
@@ -67,12 +67,12 @@ $colors: (
 	// 'red'    #ff5555, 
 	'red'    #f4693a, 
 	// 'red'    #e75828, 
-	'white'  #ffffff, 
+	// 'white'  #ffffff, 
 	'yellow' #ffa53a
 );
 
-$color-palette:       (get_colors(#000, $base-background-color, $colors)) !default;
-$night-color-palette: (get_colors($night-base-background-color, #fff, $colors)) !default;
+$color-palette:       (get_colors($base-background-color, #000, $colors)) !default;
+$night-color-palette: (get_colors($base-background-color, $night-base-background-color, $colors)) !default;
 
 $text-color:           rgba(0, 0, 0, 0.92);
 $night-text-color:     rgba(255, 255, 255, 0.92);
