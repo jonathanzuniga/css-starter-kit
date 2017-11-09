@@ -76,51 +76,51 @@
 	 *     @example
 	 *     div.#{$abbr}.sm-#{$abbr}-y-0.md-#{$abbr}-y.md-#{$abbr}-x-0.p-5
 	 */
-	@each $side, $corner1, $corner2 in $sides {
+	@each $side, $sprop, $scorner1, $scorner2 in $sides {
 		.#{$abbr}-#{$side} {
-			#{$prop}-#{$side}: $border-width $border-style $border-color;
+			#{$prop}-#{$sprop}: $border-width $border-style $border-color;
 		}
 
 		.night {
 			.#{$abbr}-#{$side} {
-				#{$prop}-#{$side}-color: $night-border-color;
+				#{$prop}-#{$sprop}-color: $night-border-color;
 			}
 		}
 
 		.#{$abbr}-#{$side}-0 {
-			#{$prop}-#{$side}: none;
+			#{$prop}-#{$sprop}: none;
 		}
 
 		@each $size, $length in $grid-breakpoints {
 			@media (min-width: $length) {
 				.#{$size}-#{$abbr}-#{$side} {
-					#{$prop}-#{$side}: $border-width $border-style $border-color;
+					#{$prop}-#{$sprop}: $border-width $border-style $border-color;
 				}
 
 				.night {
 					.#{$size}-#{$abbr}-#{$side} {
-						#{$prop}-#{$side}-color: $night-border-color;
+						#{$prop}-#{$sprop}-color: $night-border-color;
 					}
 				}
 
 				.#{$size}-#{$abbr}-#{$side}-0 {
-					#{$prop}-#{$side}: none;
+					#{$prop}-#{$sprop}: none;
 				}
 			}
 
 			@media (max-width: $length - 1) {
 				.max#{$size}-#{$abbr}-#{$side} {
-					#{$prop}-#{$side}: $border-width $border-style $border-color;
+					#{$prop}-#{$sprop}: $border-width $border-style $border-color;
 				}
 
 				.night {
 					.max#{$size}-#{$abbr}-#{$side} {
-						#{$prop}-#{$side}-color: $night-border-color;
+						#{$prop}-#{$sprop}-color: $night-border-color;
 					}
 				}
 
 				.max#{$size}-#{$abbr}-#{$side}-0 {
-					#{$prop}-#{$side}: none;
+					#{$prop}-#{$sprop}: none;
 				}
 			}
 		}
@@ -280,7 +280,7 @@
 		border-top-left-radius: $border-radius;
 	}
 
-	@each $side, $corner1, $corner2 in $sides {
+	@each $side, $sprop, $scorner1, $scorner2 in $sides {
 		/**
 		 * Rounded #{$side} corners:
 		 * `.#{$abbr}-#{$side}`
@@ -289,8 +289,8 @@
 		 *     div.bgc-grey-5.#{$abbr}-#{$side}.p-5
 		 */
 		.#{$abbr}-#{$side} {
-			border-#{$corner1}-radius: $border-radius;
-			border-#{$corner2}-radius: $border-radius;
+			border-#{$scorner1}-radius: $border-radius;
+			border-#{$scorner2}-radius: $border-radius;
 		}
 	}
 

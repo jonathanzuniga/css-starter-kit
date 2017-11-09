@@ -62,7 +62,7 @@ $colors: (
 	'cyan'   #44acac, 
 	'green'  #3ebc7d, 
 	'grey'   #333333, 
-	'light blue' #00a8d2, 
+	// 'light blue' #00a8d2, 
 	// 'red'    #ff5a40, 
 	// 'red'    #ff5555, 
 	'red'    #f4693a, 
@@ -72,7 +72,7 @@ $colors: (
 );
 
 $color-palette:       (get_colors($base-background-color, #000, $colors)) !default;
-$night-color-palette: (get_colors($base-background-color, $night-base-background-color, $colors)) !default;
+$night-color-palette: (get_colors(#fff, $night-base-background-color, $colors)) !default;
 
 $text-color:           rgba(0, 0, 0, 0.92);
 $night-text-color:     rgba(255, 255, 255, 0.92);
@@ -89,8 +89,8 @@ $base-transition: background-color 0.16s ease-in-out,
 
 // Hyperlink
 
-$link-color:               get_color('blue 6');
-$night-link-color:         get_night_color('blue 5');
+$link-color:               get_color('blue 18');
+$night-link-color:         get_night_color('blue 14');
 $link-decoration:          none;
 
 $link-visited-color:       $link-color;
@@ -306,12 +306,18 @@ $night-input-line-focus-box-shadow: none;
 
 // File area
 
-$file-area-padding:                6.25em rem_to_em($half-spacing-unit);
-$file-area-background-color:       transparentize(get_color('grey 6'), 0.95);
+$file-area-padding:                      6.25em rem_to_em($half-spacing-unit);
+$file-area-background-color:             tint($base-background-color, get_color('grey 6'), 96%);
+$night-file-area-background-color:       shade($night-base-background-color, get_night_color('grey 6'), 24%);
 
-$file-area-focus-background-color: transparentize(get_color('grey 6'), 0.92);
-$file-area-hover-background-color: transparentize(get_color('grey 6'), 0.92);
-$file-area-valid-background-color: transparentize(get_color('blue 6'), 0.92);
+$file-area-focus-background-color:       none;
+$night-file-area-focus-background-color: none;
+
+$file-area-hover-background-color:       tint($base-background-color, get_color('grey 6'), 86%);
+$night-file-area-hover-background-color: shade($night-base-background-color, get_night_color('grey 6'), 86%);
+
+$file-area-valid-background-color:       tint($base-background-color, get_color('blue 6'), 86%);
+$night-file-area-valid-background-color: shade($night-base-background-color, get_night_color('blue 6'), 86%);
 
 
 // Select menu
@@ -396,8 +402,8 @@ $switch-toggle-height:                  $switch-height - rem_to_em($quarter-spac
 $switch-toggle-top:                     50%;
 $switch-toggle-left:                    rem_to_em($quarter-spacing-unit);
 
-$switch-checked-background-color:       get_color('blue 6');
-$night-switch-checked-background-color: get_night_color('blue 5');
+$switch-checked-background-color:       get_color('blue 18');
+$night-switch-checked-background-color: get_night_color('blue 14');
 $switch-checked-toggle-left:            $switch-width - $switch-height + 0.313;
 
 $switch-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
@@ -453,12 +459,12 @@ $border-radius:      $base-border-radius;
 
 
 // Sides:
-// Side, first corner, second corner.
+// Side, property, property corner 1, property corner 2.
 $sides: (
-	'top'    'top-right'    'top-left',
-	'right'  'top-right'    'bottom-right',
-	'bottom' 'bottom-right' 'bottom-left',
-	'left'   'top-left'     'bottom-left'
+	'top'    'top'    'top-right'    'top-left',
+	'right'  'right'  'top-right'    'bottom-right',
+	'bottom' 'bottom' 'bottom-right' 'bottom-left',
+	'left'   'left'   'top-left'     'bottom-left'
 );
 
 

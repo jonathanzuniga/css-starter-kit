@@ -18,21 +18,21 @@
 			#{$prop}-bottom: $spacing * $i $spacing-important;
 		}
 
-		@each $side, $corner1, $corner2 in $sides {
+		@each $side, $sprop, $scorner1, $scorner2 in $sides {
 			.#{$abbr}-#{$side}-#{$i} {
-				#{$prop}-#{$side}: $spacing * $i $spacing-important;
+				#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 			}
 
 			@each $size, $length in $grid-breakpoints {
 				@media (min-width: $length) {
 					.#{$size}-#{$abbr}-#{$side}-#{$i} {
-						#{$prop}-#{$side}: $spacing * $i $spacing-important;
+						#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 					}
 				}
 
 				@media (max-width: $length - 1) {
 					.max#{$size}-#{$abbr}-#{$side}-#{$i} {
-						#{$prop}-#{$side}: $spacing * $i $spacing-important;
+						#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 					}
 				}
 			}
