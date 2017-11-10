@@ -12,36 +12,46 @@
 }
 
 // Generar la lista completa de colores.
+$color-spectrum-range: 50;
 @function get_colors($light-background-color, $dark-background-color, $colors) {
-	$number: 50;
-	$half: $number / 2;
-	$colors-list: ('black' #000000, 'white' #ffffff);
-	@each $name, $hex in $colors {
-		@for $n from 1 to $number {
-			@if ($n <= $half) {
-				$colors-list: 
-					append(
-						$colors-list, 
-						'#{$name} #{$n}' tint(
-							$light-background-color, 
-							$hex, 
-							percentage(1 - ($n / $half))
-						), 
-						comma
-					);
+	$half: $color-spectrum-range / 2;
+	$colors-list: ();
+	@each $name, $hex, $gen in $colors {
+		@if ($gen == '') {
+			@for $csr from 1 to $color-spectrum-range {
+				@if ($csr <= $half) {
+					$colors-list: 
+						append(
+							$colors-list, 
+							'#{$name} #{$csr}' tint(
+								$light-background-color, 
+								$hex, 
+								percentage(1 - ($csr / $half))
+							), 
+							comma
+						);
+				}
+				@else {
+					$colors-list: 
+						append(
+							$colors-list, 
+							'#{$name} #{$csr}' shade(
+								$dark-background-color, 
+								$hex, 
+								percentage(($csr / $half) - 1)
+							), 
+							comma
+						);
+				}
 			}
-			@else {
-				$colors-list: 
-					append(
-						$colors-list, 
-						'#{$name} #{$n}' shade(
-							$dark-background-color, 
-							$hex, 
-							percentage(($n / $half) - 1)
-						), 
-						comma
-					);
-			}
+		}
+		@else {
+			$colors-list: 
+				append(
+					$colors-list, 
+					'#{$name}' $hex, 
+					comma
+				);
 		}
 	}
 	@return $colors-list;
