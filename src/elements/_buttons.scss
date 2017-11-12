@@ -7,7 +7,7 @@
  * `.btn`
  *
  *     @example
- *     a(href='#').btn Button
+ *     button.btn Button
  */
 .btn {
 	background-color: $button-background-color;
@@ -33,6 +33,10 @@
 	-ms-user-select: none;
 	user-select: none;
 
+	&:link {
+		text-decoration: none;
+	}
+
 	&:link,
 	&:visited {
 		color: $text-color;
@@ -43,9 +47,10 @@
 			shade(
 				#000, 
 				$button-background-color, 
-				$button-hover-background-color-shade-amount
+				$button-hover-background-color-shade-amount / 2.8
 			);
 		color: $text-color;
+		text-decoration: none;
 	}
 
 	&:active,
@@ -54,7 +59,7 @@
 			shade(
 				#000, 
 				$button-background-color, 
-				$button-active-background-color-shade-amount
+				$button-active-background-color-shade-amount / 2.8
 			);
 		color: $text-color;
 	}
@@ -75,7 +80,7 @@
 				shade(
 					#fff, 
 					$night-button-background-color, 
-					$button-hover-background-color-shade-amount
+					$button-hover-background-color-shade-amount / 2.8
 				);
 			color: $night-text-color;
 		}
@@ -86,7 +91,7 @@
 				shade(
 					#fff, 
 					$night-button-background-color, 
-					$button-active-background-color-shade-amount
+					$button-active-background-color-shade-amount / 2.8
 				);
 			color: $night-text-color;
 		}
@@ -114,9 +119,9 @@
 	 * `.btn--#{$name_r}`
 	 *
 	 *     @example
-	 *     a(href='#').btn.btn--#{$name_r} Flat
-	 *     a(href='#').btn.btn--#{$name_r}.btn--gradient Gradient
-     *     a(href='#').btn.btn--#{$name_r}.btn--outline Outline
+	 *     button.btn.btn--#{$name_r} Flat
+	 *     button.btn.btn--#{$name_r}.btn--gradient Gradient
+     *     button.btn.btn--#{$name_r}.btn--outline Outline
 	 */
 	.btn--#{$name_r} {
 		background-color: $background-color;
@@ -453,14 +458,19 @@
  * `.btn--link`
  *
  *     @example
- *     a(href='#').btn.btn--link Link button
+ *     button.btn.btn--link Link button
  */
 .btn--link {
 	background-color: transparent;
 	border-color: transparent;
 
 	color: $link-color;
-	text-decoration: $link-decoration;
+
+	cursor: pointer;
+
+	&:link {
+		text-decoration: $link-decoration;
+	}
 
 	&:link,
 	&:visited {
@@ -468,21 +478,15 @@
 	}
 
 	&:hover {
-		background-color: $button-background-color;
+		background-color: transparent;
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
 	}
 
 	&:active,
 	&.active {
-		background-color: 
-			shade(
-				#000, 
-				$button-background-color, 
-				$button-active-background-color-shade-amount
-			);
+		background-color: transparent;
 		color: $link-hover-color;
-		text-decoration: $link-hover-decoration;
 	}
 }
 
@@ -497,18 +501,13 @@
 		}
 
 		&:hover {
-			background-color: $night-button-background-color;
+			background-color: transparent;
 			color: $night-link-hover-color;
 		}
 
 		&:active,
 		&.active {
-			background-color: 
-				shade(
-					#fff, 
-					$night-button-background-color, 
-					$button-active-background-color-shade-amount
-				);
+			background-color: transparent;
 			color: $night-link-hover-color;
 		}
 	}
@@ -519,7 +518,7 @@
  * `.btn--pill`
  *
  *     @example
- *     a(href='#').btn.btn--secondary.btn--pill Pill button
+ *     button.btn.btn--secondary.btn--pill Pill button
  */
 .btn--pill {
 	border-radius: 2em;
@@ -535,8 +534,8 @@
  * `.btn--sm` `.btn--lg`
  *
  *     @example
- *     a(href='#').btn.btn--primary.btn--sm Small button
- *     a(href='#').btn.btn--primary.btn--lg Large button
+ *     button.btn.btn--primary.btn--sm Small button
+ *     button.btn.btn--primary.btn--lg Large button
  */
 .btn--sm {
 	border-radius: $button-small-border-radius;
@@ -563,7 +562,7 @@
  * `.expanded`
  *
  *     @example
- *     a(href='#').btn.btn--primary.btn--lg.expanded Expanded button
+ *     button.btn.btn--primary.btn--lg.expanded Expanded button
  */
 .btn {
 	&.expanded {
@@ -577,7 +576,7 @@
  * `.active`
  *
  *     @example
- *     a(href='#').btn.btn--primary.active Active button
+ *     button.btn.btn--primary.active Active button
  */
 
 /**
@@ -585,7 +584,7 @@
  * `.disabled` `disabled`
  *
  *     @example
- *     a(href='#').btn.btn--primary.disabled Disabled button
+ *     button.btn.btn--primary.disabled Disabled button
  *     button(disabled).btn.btn--primary Disabled button
  */
 .btn {

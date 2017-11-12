@@ -91,7 +91,7 @@ $base-transition: background-color 0.16s ease-in-out,
 
 // Hyperlink
 
-$link-color:               get_color('blue 25');
+$link-color:               get_color('blue 24');
 $night-link-color:         get_night_color('blue 15');
 $link-decoration:          none;
 
@@ -588,9 +588,14 @@ $gutters: (
 
 // Cards
 
-$card-padding:          $half-spacing-unit;
-$card-box-shadow:       0 0.063em 0.063em rgba(0, 0, 0, 0.1);
-$card-hover-box-shadow: 0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
+$card-background-color:       #fff;
+$night-card-background-color: get_night_color('gray 48');
+$card-padding:                $half-spacing-unit;
+$card-border:                 $border-width $border-style get_color('gray 6');
+$night-card-border-color:     get_night_color('gray 48');
+$card-border-radius:          $border-radius;
+$card-box-shadow:             0 0.063em 0.063em rgba(0, 0, 0, 0.1);
+$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 
 // Navbar

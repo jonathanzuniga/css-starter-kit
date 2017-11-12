@@ -29,9 +29,9 @@ ul, ol, dl, figure {
 a {
   text-decoration: none; }
   a:link {
-    color: #007aff; }
+    color: #0a7fff; }
   a:visited {
-    color: #007aff; }
+    color: #0a7fff; }
   a:hover {
     color: rgba(0, 0, 0, 0.92);
     text-decoration: none; }
@@ -584,7 +584,7 @@ small {
  * `.btn`
  *
  *     @example
- *     a(href='#').btn Button
+ *     button.btn Button
  */
 .btn {
   background-color: #ededed;
@@ -606,15 +606,18 @@ small {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  .btn:link {
+    text-decoration: none; }
   .btn:link, .btn:visited {
     color: rgba(0, 0, 0, 0.92); }
   .btn:hover {
-    background-color: #d1d1d1;
-    color: rgba(0, 0, 0, 0.92); }
+    background-color: #e3e3e3;
+    color: rgba(0, 0, 0, 0.92);
+    text-decoration: none; }
   .btn:active, .btn.active, .toggle:checked + .btn,
   .toggle [type='checkbox']:checked + .btn,
   .toggle [type='radio']:checked + .btn {
-    background-color: #bebebe;
+    background-color: gainsboro;
     color: rgba(0, 0, 0, 0.92); }
 
 .night .btn {
@@ -623,14 +626,14 @@ small {
   .night .btn:link, .night .btn:visited {
     color: rgba(255, 255, 255, 0.92); }
   .night .btn:hover {
-    background-color: #434344;
+    background-color: #323233;
     color: rgba(255, 255, 255, 0.92); }
   .night .btn:active, .night .btn.active, .night .toggle:checked + .btn, .night
   .toggle [type='checkbox']:checked + .btn,
   .toggle .night [type='checkbox']:checked + .btn, .night
   .toggle [type='radio']:checked + .btn,
   .toggle .night [type='radio']:checked + .btn {
-    background-color: #545455;
+    background-color: #383839;
     color: rgba(255, 255, 255, 0.92); }
 
 /**
@@ -638,9 +641,9 @@ small {
 	 * `.btn--primary`
 	 *
 	 *     @example
-	 *     a(href='#').btn.btn--primary Flat
-	 *     a(href='#').btn.btn--primary.btn--gradient Gradient
-     *     a(href='#').btn.btn--primary.btn--outline Outline
+	 *     button.btn.btn--primary Flat
+	 *     button.btn.btn--primary.btn--gradient Gradient
+     *     button.btn.btn--primary.btn--outline Outline
 	 */
 .btn--primary {
   background-color: #0a7fff;
@@ -723,9 +726,9 @@ small {
 	 * `.btn--secondary`
 	 *
 	 *     @example
-	 *     a(href='#').btn.btn--secondary Flat
-	 *     a(href='#').btn.btn--secondary.btn--gradient Gradient
-     *     a(href='#').btn.btn--secondary.btn--outline Outline
+	 *     button.btn.btn--secondary Flat
+	 *     button.btn.btn--secondary.btn--gradient Gradient
+     *     button.btn.btn--secondary.btn--outline Outline
 	 */
 .btn--secondary {
   background-color: #8e8e91;
@@ -808,9 +811,9 @@ small {
 	 * `.btn--success`
 	 *
 	 *     @example
-	 *     a(href='#').btn.btn--success Flat
-	 *     a(href='#').btn.btn--success.btn--gradient Gradient
-     *     a(href='#').btn.btn--success.btn--outline Outline
+	 *     button.btn.btn--success Flat
+	 *     button.btn.btn--success.btn--gradient Gradient
+     *     button.btn.btn--success.btn--outline Outline
 	 */
 .btn--success {
   background-color: #3dae50;
@@ -893,9 +896,9 @@ small {
 	 * `.btn--danger`
 	 *
 	 *     @example
-	 *     a(href='#').btn.btn--danger Flat
-	 *     a(href='#').btn.btn--danger.btn--gradient Gradient
-     *     a(href='#').btn.btn--danger.btn--outline Outline
+	 *     button.btn.btn--danger Flat
+	 *     button.btn.btn--danger.btn--gradient Gradient
+     *     button.btn.btn--danger.btn--outline Outline
 	 */
 .btn--danger {
   background-color: #d63228;
@@ -1238,23 +1241,24 @@ small {
  * `.btn--link`
  *
  *     @example
- *     a(href='#').btn.btn--link Link button
+ *     button.btn.btn--link Link button
  */
 .btn--link {
   background-color: transparent;
   border-color: transparent;
-  color: #007aff;
-  text-decoration: none; }
+  color: #0a7fff;
+  cursor: pointer; }
+  .btn--link:link {
+    text-decoration: none; }
   .btn--link:link, .btn--link:visited {
-    color: #007aff; }
+    color: #0a7fff; }
   .btn--link:hover {
-    background-color: #ededed;
+    background-color: transparent;
     color: rgba(0, 0, 0, 0.92);
     text-decoration: none; }
   .btn--link:active, .btn--link.active {
-    background-color: #bebebe;
-    color: rgba(0, 0, 0, 0.92);
-    text-decoration: none; }
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.92); }
 
 .night .btn--link {
   background-color: transparent;
@@ -1262,10 +1266,10 @@ small {
   .night .btn--link:link, .night .btn--link:visited {
     color: #66afff; }
   .night .btn--link:hover {
-    background-color: #29292a;
+    background-color: transparent;
     color: rgba(255, 255, 255, 0.92); }
   .night .btn--link:active, .night .btn--link.active {
-    background-color: #545455;
+    background-color: transparent;
     color: rgba(255, 255, 255, 0.92); }
 
 /**
@@ -1273,7 +1277,7 @@ small {
  * `.btn--pill`
  *
  *     @example
- *     a(href='#').btn.btn--secondary.btn--pill Pill button
+ *     button.btn.btn--secondary.btn--pill Pill button
  */
 .btn--pill, .btn--pill.btn--sm, .btn--pill.btn--lg {
   border-radius: 2em; }
@@ -1283,8 +1287,8 @@ small {
  * `.btn--sm` `.btn--lg`
  *
  *     @example
- *     a(href='#').btn.btn--primary.btn--sm Small button
- *     a(href='#').btn.btn--primary.btn--lg Large button
+ *     button.btn.btn--primary.btn--sm Small button
+ *     button.btn.btn--primary.btn--lg Large button
  */
 .btn--sm {
   border-radius: 0.25em;
@@ -1305,7 +1309,7 @@ small {
  * `.expanded`
  *
  *     @example
- *     a(href='#').btn.btn--primary.btn--lg.expanded Expanded button
+ *     button.btn.btn--primary.btn--lg.expanded Expanded button
  */
 .btn.expanded {
   display: block;
@@ -1316,14 +1320,14 @@ small {
  * `.active`
  *
  *     @example
- *     a(href='#').btn.btn--primary.active Active button
+ *     button.btn.btn--primary.active Active button
  */
 /**
  * Disabled button:
  * `.disabled` `disabled`
  *
  *     @example
- *     a(href='#').btn.btn--primary.disabled Disabled button
+ *     button.btn.btn--primary.disabled Disabled button
  *     button(disabled).btn.btn--primary Disabled button
  */
 .btn[disabled], .btn.disabled {
@@ -1555,8 +1559,8 @@ small {
  *     div.file-area
  *         input(id='eg-file', title='Add a file', type='file', required)
  *         div.file-area__bg
- *         p.h2.m-top-0.txtc-grey-3 Drag file here
- *         p.txtc-grey-3 – or –
+ *         p.h2.m-top-0.txtc-gray-25 Drag file here
+ *         p.txtc-gray-25 – or –
  *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
  */
 .file-area {

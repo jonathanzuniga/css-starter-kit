@@ -21,8 +21,9 @@
  *                             a(href='') Second link
  */
 .card {
-	border: $border-width $border-style $border-color;
-	border-radius: $border-radius;
+	background-color: $card-background-color;
+	border: $card-border;
+	border-radius: $card-border-radius;
 	
 	box-shadow: $card-box-shadow;
 
@@ -30,6 +31,13 @@
 
 	&:hover {
 		box-shadow: $card-hover-box-shadow;
+	}
+}
+
+.night {
+	.card {
+		background-color: $night-card-background-color;
+		border-color: $night-card-border-color;
 	}
 }
 
