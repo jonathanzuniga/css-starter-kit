@@ -39,29 +39,41 @@ $base-border-radius:   rem_to_em($quarter-spacing-unit / 2);
 
 // Name color, hex., generate list of tints and shades?
 $colors: (
-	'black'       #000000 'no', 
-	'blue'        #007aff '', 
-	'light blue'  #5ac8fa '', 
-	'brown'       #a2845e '', 
-	'gray'        #8e8e91 '', 
-	'green'       #4cd964 '', 
-	// 'green'       #63da38, 
-	'orange'      #ff9500 '', 
-	'pink'        #ff2968 '', 
-	'purple'      #cc73e1 '', 
-	'deep purple' #5856d6 '', 
-	'red'         #ff3b30 '', 
-	'white'       #ffffff 'no', 
-	'yellow'      #ffcc00 ''
+	'black'       #000000 '', 
+	'blue'        #0366d6 'yes', 
+	'gray'        #6a737d 'yes', 
+	'green'       #28a745 'yes', 
+	'orange'      #f66a0a 'yes', 
+	'purple'      #6f42c1 'yes', 
+	'red'         #d73a49 'yes', 
+	'white'       #ffffff '', 
+	'yellow'      #ffd33d 'yes'
 );
+
+// $colors: (
+// 	'black'       #000000 'no', 
+// 	'blue'        #007aff '', 
+// 	'light blue'  #5ac8fa '', 
+// 	'brown'       #a2845e '', 
+// 	'gray'        #8e8e91 '', 
+// 	'green'       #4cd964 '', 
+// 	// 'green'       #63da38, 
+// 	'orange'      #ff9500 '', 
+// 	'pink'        #ff2968 '', 
+// 	'purple'      #cc73e1 '', 
+// 	'deep purple' #5856d6 '', 
+// 	'red'         #ff3b30 '', 
+// 	'white'       #ffffff 'no', 
+// 	'yellow'      #ffcc00 ''
+// );
 
 // $colors: (
 // 	'black'  #000000 'no', 
 // 	'blue'   #3a8bbb '', 
+// 	'light blue' #00a8d2 '', 
 // 	'cyan'   #44acac '', 
 // 	'green'  #3ebc7d '', 
-// 	'gray'   #333333 '', 
-// 	// 'light blue' #00a8d2 '', 
+// 	'gray'   #8e8e8e '', 
 // 	// 'red'    #ff5a40 '', 
 // 	// 'red'    #ff5555 '', 
 // 	'red'    #f4693a '', 
@@ -200,14 +212,14 @@ $button-active-background-color-shade-amount: 20%;
 $buttons: (
 	'primary'   get_color('blue 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
 	'secondary' get_color('gray 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 30')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 29')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'success'   get_color('green 25')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 25')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 $night-buttons: (
 	'primary'   get_night_color('blue 25')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
 	'secondary' get_night_color('gray 32')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_night_color('green 30') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_night_color('red 29')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'success'   get_night_color('green 25') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_night_color('red 25')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 

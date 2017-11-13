@@ -7,7 +7,7 @@
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
-	@if ($gen == '') {
+	@if not ($gen == '') {
 		$range: '1...#{$color-spectrum-range}';
 
 		/**
@@ -19,9 +19,9 @@
 		 *         tr
 		 *             td.w-20
 		 *                 div.color-swatch.bd-radius.bgc-#{$name_r}-#{$color-spectrum-range / 2}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$name_r}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$hex}
-		 *             td.w-20.txt-select.txtc-#{$name_r} #{$rgb}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2} #{$name_r}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2} #{$hex}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2} #{$rgb}
 		 */
 	}
 	@else {
