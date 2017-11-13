@@ -2,7 +2,7 @@
  * Colors:
  */
 
-@each $name, $hex, $gen in $colors {
+@each $name, $hex, $gen in $color-palette {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
@@ -41,7 +41,7 @@
 	}
 }
 
-@each $name, $hex in $color-palette {
+@each $name, $hex in $colors {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -61,7 +61,7 @@
 }
 
 .night {
-	@each $name, $hex in $night-color-palette {
+	@each $name, $hex in $night-colors {
 		$name_r: str_replace(to_lower_case($name), ' ', '-');
 
 		.bgc-#{$name_r} {

@@ -13,17 +13,17 @@
 
 // Generar la lista completa de colores.
 $color-spectrum-range: 50;
-@function get_colors($light-background-color, $dark-background-color, $colors) {
+@function gen_colors($light-background-color, $dark-background-color) {
 	$half: $color-spectrum-range / 2;
 	$colors-list: ();
-	@each $name, $hex, $gen in $colors {
+	@each $name, $hex, $gen in $color-palette {
 		@if not ($gen == '') {
 			@for $csr from 1 to $color-spectrum-range {
 				@if ($csr <= $half) {
 					$colors-list: 
 						append(
 							$colors-list, 
-							'#{$name} #{$csr}' tint(
+							'#{$name} #{$csr}g' tint(
 								$light-background-color, 
 								$hex, 
 								percentage(1 - ($csr / $half))
@@ -35,7 +35,7 @@ $color-spectrum-range: 50;
 					$colors-list: 
 						append(
 							$colors-list, 
-							'#{$name} #{$csr}' shade(
+							'#{$name} #{$csr}g' shade(
 								$dark-background-color, 
 								$hex, 
 								percentage(($csr / $half) - 1)
@@ -59,7 +59,7 @@ $color-spectrum-range: 50;
 
 // Get one color from the list.
 @function get_color($color) {
-	@each $cp in $color-palette {
+	@each $cp in $colors {
 		@if nth($cp, 1) == $color {
 			@return nth($cp, 2);
 		}
@@ -69,7 +69,7 @@ $color-spectrum-range: 50;
 
 // Get one night color from the list.
 @function get_night_color($color) {
-	@each $cp in $night-color-palette {
+	@each $cp in $night-colors {
 		@if nth($cp, 1) == $color {
 			@return nth($cp, 2);
 		}
