@@ -23,7 +23,7 @@ $color-spectrum-range: 50;
 					$colors-list: 
 						append(
 							$colors-list, 
-							'#{$name} #{$csr}g' tint(
+							'#{$name} #{$csr}' tint(
 								$light-background-color, 
 								$hex, 
 								percentage(1 - ($csr / $half))
@@ -35,7 +35,7 @@ $color-spectrum-range: 50;
 					$colors-list: 
 						append(
 							$colors-list, 
-							'#{$name} #{$csr}g' shade(
+							'#{$name} #{$csr}' shade(
 								$dark-background-color, 
 								$hex, 
 								percentage(($csr / $half) - 1)
