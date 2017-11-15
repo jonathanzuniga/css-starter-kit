@@ -62,12 +62,13 @@
 
 	&:focus,
 	&:focus:hover {
+		@include animation($control-focus-animation);
+
+		background-color: $input-focus-background-color;
 		border-color: $input-focus-border-color;
 		border-width: $input-focus-border-width;
 
 		box-shadow: $control-focus-box-shadow;
-
-		z-index: 10;
 	}
 
 	&:hover {
@@ -104,6 +105,8 @@
 		}
 	}
 }
+
+@include keyframes-control-focus($control-focus-animation-name);
 
 /**
  * Input size:
@@ -149,6 +152,7 @@
 
 	&:focus,
 	&:focus:hover {
+		@include animation($input-line-focus-animation);
 		box-shadow: $input-line-focus-box-shadow;
 	}
 }
@@ -161,6 +165,8 @@
 		}
 	}
 }
+
+@include keyframes-control-line-focus($input-line-focus-animation-name);
 
 /**
  * Textarea:
