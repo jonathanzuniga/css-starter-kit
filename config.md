@@ -144,7 +144,7 @@
 	div.container-fluid
 		div.row.sm-hide
 			div.col
-				nav.navbar.navbar-responsive.bd-bottom.fixed
+				nav.navbar.navbar-responsive.bd-bottom.fixed.ac-txtc
 					div.navbar__brand
 						a(href='/').navbar__link CSS Starter Kit
 					a(href='#!', id='open-fsmenu').navbar__toggler Menu
