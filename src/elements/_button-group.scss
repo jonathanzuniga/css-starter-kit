@@ -13,7 +13,7 @@
  *         button.btn.btn--secondary Third
  */
 .btn-group {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 
@@ -39,6 +39,17 @@
 		&:not(:last-of-type) {
 			margin-right: -1px;
 		}
+
+		&:active,
+		&.active,
+		&:focus {
+			animation: none;
+		}
+	}
+
+	&.active {
+		@include animation($control-focus-animation);
+		border-radius: $control-border-radius;
 	}
 }
 
@@ -54,6 +65,8 @@
  *         button.btn.btn--secondary Fourth
  */
 .expanded {
+	display: flex;
+
 	> .btn {
 		flex-grow: 1;
 	}
@@ -124,5 +137,13 @@
 	&.toggle {
 		opacity: 1;
 		position: initial;
+
+		> .btn {
+			&:active,
+			&.active,
+			&:focus {
+				animation: none;
+			}
+		}
 	}
 }

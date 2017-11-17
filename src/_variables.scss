@@ -121,13 +121,6 @@ $control-padding-x:                  rem_to_em($half-spacing-unit - 0.375);
 $control-active-border-color:        get_color('blue 25');;
 $night-control-active-border-color:  transparent;
 
-$control-focus-animation-name:       expand-shadow;
-$control-focus-animation-duration:   0.16s;
-$control-focus-animation-fill-mode:  forwards;
-$control-focus-animation:            $control-focus-animation-name 
-                                     $control-focus-animation-duration 
-                                     $control-focus-animation-fill-mode;
-
 $control-focus-border-color:         get_color('blue 15');
 $night-control-focus-border-color:   get_night_color('blue 15');
 
@@ -135,6 +128,16 @@ $control-focus-box-shadow:           none;
 $night-control-focus-box-shadow:     none;
 // $control-focus-box-shadow:           inset 0 0 0 0.063rem $control-focus-border-color;
 // $night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
+
+$control-focus-box-shadow-spread:    0.2rem;
+$control-focus-box-shadow-color:     get_color('blue 8');
+
+$control-focus-animation-name:       expand-shadow;
+$control-focus-animation-duration:   0.32s;
+$control-focus-animation-fill-mode:  forwards;
+$control-focus-animation:            $control-focus-animation-name 
+                                     $control-focus-animation-duration 
+                                     $control-focus-animation-fill-mode;
 
 $control-invalid-border-color:       get_color('red 25');
 $night-control-invalid-border-color: get_night_color('red 25');
@@ -154,7 +157,7 @@ $button-text-color:             $base-background-color;
 $night-button-text-color:       $night-text-color;
 
 $button-hover-background-color-shade-amount:  12%;
-$button-active-background-color-shade-amount: 20%;
+$button-active-background-color-shade-amount: 24%;
 
 
 // Estilo de los botones:

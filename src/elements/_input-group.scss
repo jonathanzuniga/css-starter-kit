@@ -66,6 +66,21 @@
 			border-bottom-left-radius: 0;
 		}
 	}
+
+	.input,
+	.btn {
+		&:active,
+		&.active,
+		&:focus,
+		&:focus:hover {
+			animation: none;
+		}
+	}
+
+	&.focus {
+		@include animation($control-focus-animation);
+		border-radius: $control-border-radius;
+	}
 }
 
 .input-group-btn {
@@ -74,9 +89,9 @@
 	justify-content: flex-start;
 	width: 100%;
 
-	// > *:not(:last-child) {
-	// 	margin-right: -$control-border-width;
-	// }
+	> *:not(:last-child) {
+		margin-right: -$control-border-width;
+	}
 }
 
 /**
