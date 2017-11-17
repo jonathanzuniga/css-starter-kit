@@ -78,8 +78,24 @@
 	}
 
 	&.focus {
-		@include animation($control-focus-animation);
+		@include animation(
+			$control-focus-animation-name 
+			$control-focus-animation-duration 
+			$control-focus-animation-fill-mode
+		);
 		border-radius: $control-border-radius;
+	}
+}
+
+.night {
+	.input-group {
+		&.focus {
+			@include animation(
+				$night-control-focus-animation-name 
+				$control-focus-animation-duration 
+				$control-focus-animation-fill-mode
+			);
+		}
 	}
 }
 

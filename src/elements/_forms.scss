@@ -62,7 +62,11 @@
 
 	&:focus,
 	&:focus:hover {
-		@include animation($control-focus-animation);
+		@include animation(
+			$control-focus-animation-name 
+			$control-focus-animation-duration 
+			$control-focus-animation-fill-mode
+		);
 
 		background-color: $input-focus-background-color;
 		border-color: $input-focus-border-color;
@@ -96,6 +100,12 @@
 
 		&:focus,
 		&:focus:hover {
+			@include animation(
+				$night-control-focus-animation-name 
+				$control-focus-animation-duration 
+				$control-focus-animation-fill-mode
+			);
+
 			border-color: $night-input-focus-border-color;
 			box-shadow: $night-control-focus-box-shadow;
 		}
@@ -155,7 +165,11 @@
 
 	&:focus,
 	&:focus:hover {
-		@include animation($input-line-focus-animation);
+		@include animation(
+			$input-line-focus-animation-name 
+			$control-focus-animation-duration 
+			$control-focus-animation-fill-mode
+		);
 		box-shadow: $input-line-focus-box-shadow;
 	}
 }
@@ -164,6 +178,11 @@
 	.input--line {
 		&:focus,
 		&:focus:hover {
+			@include animation(
+				$night-input-line-focus-animation-name 
+				$control-focus-animation-duration 
+				$control-focus-animation-fill-mode
+			);
 			box-shadow: $night-input-line-focus-box-shadow;
 		}
 	}
@@ -172,6 +191,11 @@
 @include keyframes($input-line-focus-animation-name) {
 	  0% { box-shadow: 0 0 0 0 rgba($control-focus-border-color, 0) }
 	100% { box-shadow: 0 ($control-border-width * 2) 0 (-$control-border-width) $control-focus-border-color }
+}
+
+@include keyframes($night-input-line-focus-animation-name) {
+	  0% { box-shadow: 0 0 0 0 rgba($night-control-focus-border-color, 0) }
+	100% { box-shadow: 0 ($control-border-width * 2) 0 (-$control-border-width) $night-control-focus-border-color }
 }
 
 /**
