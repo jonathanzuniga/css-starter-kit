@@ -183,6 +183,21 @@
 				);
 			color: $text-color;
 		}
+
+		&:active,
+		&.active,
+		&:focus {
+			@include animation(
+				'expand-shadow-#{$name}'
+				$control-focus-animation-duration 
+				$control-focus-animation-fill-mode
+			);
+		}
+	}
+
+	@include keyframes('expand-shadow-#{$name}') {
+		  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
+		100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, 0.3) }
 	}
 
 	.btn--gradient {
@@ -359,6 +374,21 @@
 					);
 				color: $text-color;
 			}
+
+			&:active,
+			&.active,
+			&:focus {
+				@include animation(
+					'night-expand-shadow-#{$name}'
+					$control-focus-animation-duration 
+					$control-focus-animation-fill-mode
+				);
+			}
+		}
+
+		@include keyframes('night-expand-shadow-#{$name}') {
+			  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
+			100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, 0.3) }
 		}
 
 		.btn--gradient {
