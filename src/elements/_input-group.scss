@@ -76,6 +76,17 @@
 			animation: none;
 		}
 	}
+}
+
+.input-group-btn {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	width: 100%;
+
+	> *:not(:last-child) {
+		margin-right: -$control-border-width;
+	}
 
 	&.focus {
 		@include animation(
@@ -88,7 +99,7 @@
 }
 
 .night {
-	.input-group {
+	.input-group-btn {
 		&.focus {
 			@include animation(
 				$night-control-focus-animation-name 
@@ -96,17 +107,6 @@
 				$control-focus-animation-fill-mode
 			);
 		}
-	}
-}
-
-.input-group-btn {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	width: 100%;
-
-	> *:not(:last-child) {
-		margin-right: -$control-border-width;
 	}
 }
 

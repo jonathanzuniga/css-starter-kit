@@ -45,6 +45,9 @@ a {
 .night a:hover {
   color: #cfe8f8; }
 
+p > a:not(.btn) {
+  border-bottom: 0.063rem solid; }
+
 img {
   max-width: 100%; }
 
@@ -1943,18 +1946,6 @@ small {
   .input-group .btn:focus,
   .input-group .btn:focus:hover {
     animation: none; }
-  .input-group.focus {
-    -webkit-animation: expand-shadow 0.2s forwards;
-    -moz-animation: expand-shadow 0.2s forwards;
-    -o-animation: expand-shadow 0.2s forwards;
-    animation: expand-shadow 0.2s forwards;
-    border-radius: 0.25em; }
-
-.night .input-group.focus {
-  -webkit-animation: night-expand-shadow 0.2s forwards;
-  -moz-animation: night-expand-shadow 0.2s forwards;
-  -o-animation: night-expand-shadow 0.2s forwards;
-  animation: night-expand-shadow 0.2s forwards; }
 
 .input-group-btn {
   display: flex;
@@ -1963,6 +1954,18 @@ small {
   width: 100%; }
   .input-group-btn > *:not(:last-child) {
     margin-right: -0.063rem; }
+  .input-group-btn.focus {
+    -webkit-animation: expand-shadow 0.2s forwards;
+    -moz-animation: expand-shadow 0.2s forwards;
+    -o-animation: expand-shadow 0.2s forwards;
+    animation: expand-shadow 0.2s forwards;
+    border-radius: 0.25em; }
+
+.night .input-group-btn.focus {
+  -webkit-animation: night-expand-shadow 0.2s forwards;
+  -moz-animation: night-expand-shadow 0.2s forwards;
+  -o-animation: night-expand-shadow 0.2s forwards;
+  animation: night-expand-shadow 0.2s forwards; }
 
 /**
  * Input group size:
