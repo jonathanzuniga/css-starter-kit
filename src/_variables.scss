@@ -62,15 +62,15 @@ $link-border-bottom-width: 0.063rem;
 $link-border-bottom-style: solid;
 
 $link-color:               get_color('blue 400');
-$night-link-color:         get_night_color('blue 300 15');
+$night-link-color:         get_night_color('blue 300 12');
 $link-decoration:          none;
 
 $link-visited-color:       $link-color;
 $night-link-visited-color: $night-link-color;
 $link-visited-decoration:  none;
 
-$link-hover-color:         get_color('blue 300 20');
-$night-link-hover-color:   get_night_color('blue 300 5');
+$link-hover-color:         $text-color;
+$night-link-hover-color:   $night-text-color;
 $link-hover-decoration:    none;
 
 
@@ -124,8 +124,8 @@ $control-padding-x:                    rem_to_em($half-spacing-unit - 0.375);
 $control-active-border-color:          get_color('blue 300 25');;
 $night-control-active-border-color:    transparent;
 
-$control-focus-border-color:           get_color('blue 300 15');
-$night-control-focus-border-color:     get_night_color('blue 300 15');
+$control-focus-border-color:           get_color('blue 300 12');
+$night-control-focus-border-color:     get_night_color('blue 300 12');
 
 $control-focus-box-shadow:             none;
 $night-control-focus-box-shadow:       none;
@@ -133,8 +133,8 @@ $night-control-focus-box-shadow:       none;
 // $night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
 
 $control-focus-box-shadow-spread:      0.2rem;
-$control-focus-box-shadow-color:       rgba(get_color('blue 300 15'), 0.3);
-$night-control-focus-box-shadow-color: rgba(get_night_color('blue 300 15'), 0.3);
+$control-focus-box-shadow-color:       rgba(get_color('blue 300 12'), 0.3);
+$night-control-focus-box-shadow-color: rgba(get_night_color('blue 300 12'), 0.3);
 
 $control-focus-animation-name:         expand-shadow;
 $night-control-focus-animation-name:   night-expand-shadow;
@@ -177,16 +177,16 @@ $button-active-background-color-shade-amount: 22%;
 // - gradient background-color bottom saturation, 
 // - gradient background-color bottom lightness.
 $buttons: (
-	'primary'   get_color('blue 400')          transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' get_color('gray 300 25')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 300 25')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 300 25')           transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_color('blue 400')           transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' get_color('gray 300 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 300 25')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 300 25')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 $night-buttons: (
-	'primary'   get_night_color('blue 400')    transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' get_night_color('gray 300 25') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_night_color('green 300 25')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_night_color('red 300 25')     transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_night_color('blue 400')     transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' get_night_color('gray 300 35')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_night_color('green 300 25') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_night_color('red 300 25')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 
