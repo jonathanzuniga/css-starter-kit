@@ -491,6 +491,8 @@
 											li
 												a(href='components.html#responsive-navbar-menu') Responsive navbar menu
 											li
+												a(href='components.html#responsive-navbar-menu-at-top') Responsive navbar menu at top
+											li
 												a(href='components.html#open-responsive-navbar-menu') Open responsive navbar menu
 											li
 												a(href='components.html#responsive-navbar-grid-menu') Responsive navbar grid menu

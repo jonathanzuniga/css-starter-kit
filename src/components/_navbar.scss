@@ -64,6 +64,12 @@
 	justify-content: flex-start;
 }
 
+.night {
+	.navbar {
+		background-color: $night-navbar-background-color;
+	}
+}
+
 .navbar__brand {
 	font-size: $navbar-brand-font-size;
 
@@ -145,6 +151,32 @@
 // 		color: $link-color;
 // 	}
 // }
+
+.night {
+	.navbar__item {
+		&.active {
+			.navbar__link {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $night-link-color;
+				}
+			}
+		}
+	}
+
+	.navbar__link,
+	.navbar__toggler {
+		&:link,
+		&:visited {
+			color: $night-text-color;
+		}
+
+		&:hover {
+			color: $night-link-color;
+		}
+	}
+}
 
 /**
  * Responsive navbar menu:
@@ -277,6 +309,26 @@
 		justify-content: space-between;
 	}
 
+	&.navbar-responsive--top {
+		.navbar__collapse {
+			&:first-of-type {
+				order: 2;
+			}
+
+			&:last-of-type {
+				order: 1;
+			}
+		}
+
+		.navbar__brand {
+			order: 3;
+		}
+
+		.navbar__toggler {
+			order: 4;
+		}
+	}
+
 	@include navbar-responsive-collapse;
 }
 
@@ -291,6 +343,25 @@
 		}
 	}
 }
+
+/**
+ * Responsive navbar menu at top:
+ * `.navbar-responsive--top`
+ *
+  *     @example
+ *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
+ *         div.navbar__brand
+ *             a(href='').navbar__link Brand
+ *         a(href='#!').navbar__toggler Menu
+ *         div.navbar__collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__link About
+ */
 
 /**
  * Open responsive navbar menu:
@@ -390,34 +461,6 @@
 }
 
 .night {
-	.navbar {
-		background-color: $night-navbar-background-color;
-	}
-
-	.navbar__item {
-		&.active {
-			.navbar__link {
-				&:link,
-				&:hover,
-				&:visited {
-					color: $night-link-color;
-				}
-			}
-		}
-	}
-
-	.navbar__link,
-	.navbar__toggler {
-		&:link,
-		&:visited {
-			color: $night-text-color;
-		}
-
-		&:hover {
-			color: $night-link-color;
-		}
-	}
-
 	.navbar {
 		&.scrolled {
 			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 
