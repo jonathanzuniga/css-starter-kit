@@ -52,6 +52,11 @@ a {
 		color: $link-hover-color;
 		text-decoration: $link-hover-decoration;
 	}
+
+	&:hover,
+	&:active {
+		transition-duration: 0s;
+	}
 }
 
 .night {
@@ -71,9 +76,23 @@ a {
 	}
 }
 
-// p > a:not(.btn) {
-// 	border-bottom: $link-border-bottom-width $link-border-bottom-style;
-// }
+p > a:not(.btn) {
+	border-bottom: $link-border-bottom-width $link-border-bottom-style $link-border-bottom-color;
+
+	&:hover {
+		border-bottom-color: $link-hover-border-bottom-color;
+	}
+}
+
+.night {
+	p > a:not(.btn) {
+		border-bottom-color: $night-link-border-bottom-color;
+
+		&:hover {
+			border-bottom-color: $night-link-hover-border-bottom-color;
+		}
+	}
+}
 
 img {
 	max-width: 100%;

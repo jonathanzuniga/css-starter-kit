@@ -10,7 +10,7 @@ table {
 }
 
 th {
-	text-align: $table-heading-text-align;
+	text-align: $table-header-text-align;
 }
 
 /**
@@ -48,12 +48,14 @@ th {
 	}
 
 	th {
-		border-bottom: 2px solid $table-border-color;
-		font-weight: $table-heading-font-weight;
+		background-color: $table-header-background-color;
+		border-top: 1px solid $table-border-color;
+		border-bottom: 1px solid $table-border-color;
+		font-weight: $table-header-font-weight;
 	}
 
 	th, td {
-		padding: $quarter-spacing-unit;
+		padding: ($quarter-spacing-unit + ($quarter-spacing-unit / 2)) $half-spacing-unit;
 		vertical-align: top;
 	}
 }
@@ -67,6 +69,8 @@ th {
 		}
 
 		th {
+			background-color: $night-table-header-background-color;
+			border-top-color: $night-table-border-color;
 			border-bottom-color: $night-table-border-color;
 		}
 	}
@@ -231,7 +235,7 @@ th {
  */
 .tbl--striped {
 	tbody {
-		tr:nth-child(odd) {
+		tr:nth-child(#{$table-striped-index}) {
 			td, th {
 				background-color: $table-striped-background-color;
 			}
@@ -242,7 +246,7 @@ th {
 .night {
 	.tbl--striped {
 		tbody {
-			tr:nth-child(odd) {
+			tr:nth-child(#{$table-striped-index}) {
 				td, th {
 					background-color: $night-table-striped-background-color;
 				}
