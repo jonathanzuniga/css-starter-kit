@@ -19,6 +19,13 @@ $base-font-family:    -apple-system,
                        'Droid Sans', 
                        'Helvetica Neue', 
                        sans-serif;
+$mono-font-family:     'SF Mono', 
+                       'Segoe UI Mono', 
+                       'Roboto Mono', 
+                       'Ubuntu Mono', 
+                       Menlo, 
+                       Courier, 
+                       monospace;
 
 $base-font-size:       16px !default;
 $small-font-size:      px_to_em($base-font-size - 4); // 0.750em (12px)
@@ -424,21 +431,34 @@ $switch-large-checked-toggle-left:      $switch-large-width - $switch-large-heig
 
 // Tables
 
-$table-header-font-weight: 600;
-$table-header-text-align:  left;
+$table-header-font-weight:             600;
+$table-header-text-align:              left;
 
 $table-border-style:                   dotted;
-
 $table-border-color:                   get_color('gray 300 5');
 $night-table-border-color:             get_night_color('gray 300 45');
 
 $table-header-background-color:        get_color('gray 300 2');
 $night-table-header-background-color:  get_night_color('gray 300 48');
 
+$table-cell-padding:                   $quarter-spacing-unit $half-spacing-unit;
+
 $table-striped-index:                  even; // 'odd' or 'even'
 
 $table-striped-background-color:       get_color('gray 300 1');
 $night-table-striped-background-color: get_night_color('gray 300 49');
+
+
+// Nav
+
+$nav-item-margin:                        0 0 0.25rem 0;
+$nav-link-padding:                       $quarter-spacing-unit $half-spacing-unit;
+
+$nav-link-hover-background-color:        get_color('gray 300 2');
+$night-nav-link-hover-background-color:  get_night_color('gray 300 48');
+
+$nav-item-active-background-color:       get_color('gray 300 2');
+$night-nav-item-active-background-color: get_night_color('gray 300 48');
 
 
 // ==========================================================================

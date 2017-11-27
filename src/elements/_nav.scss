@@ -1,0 +1,83 @@
+/***
+ * Nav:
+ */
+
+/**
+ * Vertical nav:
+ * `.nav`
+ *
+ *     @example
+ *     ul.nav.flex-col
+ *         li.active
+ *             a(href='#') Link 1
+ *         li
+ *             a(href='#') Link 2
+ *         li
+ *             a(href='#') Link 3
+ */
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+
+	li {
+		display: block;
+		margin: $nav-item-margin;
+
+		&.active {
+			a,
+			a:hover {
+				background-color: $nav-item-active-background-color;
+			}
+		}
+
+		a {
+			border-radius: $border-radius;
+			color: $text-color;
+			display: block;
+			padding: $nav-link-padding;
+			text-decoration: none;
+
+			&:link,
+			&:visited,
+			&:hover,
+			&:active {
+				color: $text-color;
+			}
+
+			&:hover {
+				background-color: $nav-link-hover-background-color;
+			}
+		}
+	}
+}
+
+.night {
+	.nav {
+		li {
+			&.active {
+				a,
+				a:hover {
+					background-color: $night-nav-item-active-background-color;
+				}
+			}
+		}
+
+		a {
+			color: $night-text-color;
+
+			&:link,
+			&:visited,
+			&:hover,
+			&:active {
+				color: $night-text-color;
+			}
+
+			&:hover {
+				background-color: $night-nav-link-hover-background-color;
+			}
+		}
+	}
+}

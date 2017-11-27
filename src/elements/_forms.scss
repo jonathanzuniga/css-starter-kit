@@ -284,15 +284,15 @@
 
 /**
  * Select menu:
- * `.select`
+ * `.sel`
  *
  *     @example
- *     select.select
+ *     select.sel
  *         option Option 1
  *         option Option 2
  *         option Option 3
  */
-.select {
+.sel {
 	background-color: $select-background-color;
 	border: $select-border;
 	border-radius: $select-border-radius;
@@ -333,7 +333,7 @@
 }
 
 .night {
-	.select {
+	.sel {
 		border-color: $night-select-border-color;
 		color: $night-select-text-color;
 
@@ -345,19 +345,19 @@
 
 /**
  * Pure CSS select menu icon:
- * `.select-icn`
+ * `.sel-icn`
  *
  *     @example
- *     div.select-icn
- *         select.select
+ *     div.sel-icn
+ *         select.sel
  *             option Option 1
  *             option Option 2
  *             option Option 3
  */
-.select-icn {
+.sel-icn {
 	position: relative;
 
-	.select {
+	.sel {
 		background: none;
 
 		-webkit-appearance: none;
@@ -391,7 +391,7 @@
 }
 
 .night {
-	.select-icn {
+	.sel-icn {
 		&:after {
 			border-color: $night-select-icon-border-color;
 		}
@@ -400,36 +400,36 @@
 
 /**
  * Select menu size:
- * `.select--[size]` `.select-icn--[size]`
+ * `.sel--[size]` `.sel-icn--[size]`
  *
  *     @example
  *     div.row
  *         div.sm-col-6
  *             div.fld
- *                 select.select.select--sm
+ *                 select.sel.sel--sm
  *                     option Option 1
  *                     option Option 2
  *                     option Option 3
  *             div.fld
- *                 select.select.select--lg
+ *                 select.sel.sel--lg
  *                     option Option 1
  *                     option Option 2
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.select-icn.select-icn--sm
- *                     select.select
+ *                 div.sel-icn.sel-icn--sm
+ *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  *             div.fld
- *                 div.select-icn.select-icn--lg
- *                     select.select
+ *                 div.sel-icn.sel-icn--lg
+ *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  */
-.select--sm {
+.sel--sm {
 	border-radius: $select-small-border-radius;
 	font-size: $select-small-font-size;
 	padding: $select-small-padding-y $select-small-padding-x;
@@ -440,7 +440,7 @@
 	}
 }
 
-.select--lg {
+.sel--lg {
 	border-radius: $select-large-border-radius;
 	font-size: $select-large-font-size;
 	padding: $select-large-padding-y $select-large-padding-x;
@@ -451,9 +451,9 @@
 	}
 }
 
-.select-icn--sm {
-	.select {
-		@extend .select--sm;
+.sel-icn--sm {
+	.sel {
+		@extend .sel--sm;
 
 		padding-right: $select-icon-small-padding-right;
 	}
@@ -467,9 +467,9 @@
 	}
 }
 
-.select-icn--lg {
-	.select {
-		@extend .select--lg;
+.sel-icn--lg {
+	.sel {
+		@extend .sel--lg;
 
 		padding-right: $select-icon-large-padding-right;
 	}

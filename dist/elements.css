@@ -120,6 +120,7 @@ i {
 code {
   background-color: #e5e7eb;
   border-radius: 0.25em;
+  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
   font-size: 1em;
   padding: 0.25rem; }
 
@@ -578,15 +579,15 @@ small {
 
 /**
  * Select menu:
- * `.select`
+ * `.sel`
  *
  *     @example
- *     select.select
+ *     select.sel
  *         option Option 1
  *         option Option 2
  *         option Option 3
  */
-.select {
+.sel {
   background-color: transparent;
   border: 0.063rem solid #cbd0d8;
   border-radius: 0.25em;
@@ -595,35 +596,35 @@ small {
   line-height: 1.0625rem;
   padding: 0.5em 0.625em;
   width: 100%; }
-  .select:focus, .select:focus:hover {
+  .sel:focus, .sel:focus:hover {
     border-color: #85b5ff;
     border-width: 0.063rem; }
 
-.night .select {
+.night .sel {
   border-color: #30343c;
   color: rgba(255, 255, 255, 0.92); }
-  .night .select option {
+  .night .sel option {
     color: #2d343f; }
 
 /**
  * Pure CSS select menu icon:
- * `.select-icn`
+ * `.sel-icn`
  *
  *     @example
- *     div.select-icn
- *         select.select
+ *     div.sel-icn
+ *         select.sel
  *             option Option 1
  *             option Option 2
  *             option Option 3
  */
-.select-icn {
+.sel-icn {
   position: relative; }
-  .select-icn .select {
+  .sel-icn .sel {
     background: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     padding-right: 2.3em; }
-  .select-icn:after {
+  .sel-icn:after {
     border: 0.125em solid #2d343f;
     border-right: 0;
     border-top: 0;
@@ -638,63 +639,63 @@ small {
     pointer-events: none;
     transform: rotate(-45deg); }
 
-.night .select-icn:after {
+.night .sel-icn:after {
   border-color: rgba(255, 255, 255, 0.92); }
 
 /**
  * Select menu size:
- * `.select--[size]` `.select-icn--[size]`
+ * `.sel--[size]` `.sel-icn--[size]`
  *
  *     @example
  *     div.row
  *         div.sm-col-6
  *             div.fld
- *                 select.select.select--sm
+ *                 select.sel.sel--sm
  *                     option Option 1
  *                     option Option 2
  *                     option Option 3
  *             div.fld
- *                 select.select.select--lg
+ *                 select.sel.sel--lg
  *                     option Option 1
  *                     option Option 2
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.select-icn.select-icn--sm
- *                     select.select
+ *                 div.sel-icn.sel-icn--sm
+ *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  *             div.fld
- *                 div.select-icn.select-icn--lg
- *                     select.select
+ *                 div.sel-icn.sel-icn--lg
+ *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  */
-.select--sm, .select-icn--sm .select {
+.sel--sm, .sel-icn--sm .sel {
   border-radius: 0.25em;
   font-size: 0.75em;
   padding: 0.25em 0.625em; }
 
-.select--lg, .select-icn--lg .select {
+.sel--lg, .sel-icn--lg .sel {
   border-radius: 0.25em;
   font-size: 1.25em;
   padding: 0.575em 0.875em; }
 
-.select-icn--sm .select {
+.sel-icn--sm .sel {
   padding-right: 2.20833em; }
 
-.select-icn--sm:after {
+.sel-icn--sm:after {
   width: 0.33333em;
   height: 0.33333em;
   margin-top: -0.292em;
   right: 0.75em; }
 
-.select-icn--lg .select {
+.sel-icn--lg .sel {
   padding-right: 2.5em; }
 
-.select-icn--lg:after {
+.sel-icn--lg:after {
   width: 0.75em;
   height: 0.75em;
   margin-top: -0.657em;
@@ -2254,6 +2255,56 @@ small {
     margin-right: 1rem; }
 
 /***
+ * Nav:
+ */
+/**
+ * Vertical nav:
+ * `.nav`
+ *
+ *     @example
+ *     ul.nav.flex-col
+ *         li.active
+ *             a(href='#') Link 1
+ *         li
+ *             a(href='#') Link 2
+ *         li
+ *             a(href='#') Link 3
+ */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  .nav li {
+    display: block;
+    margin: 0 0 0.25rem 0; }
+    .nav li.active a,
+    .nav li.active a:hover {
+      background-color: #f2f3f5; }
+    .nav li a {
+      border-radius: 0.25em;
+      color: #2d343f;
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none; }
+      .nav li a:link, .nav li a:visited, .nav li a:hover, .nav li a:active {
+        color: #2d343f; }
+      .nav li a:hover {
+        background-color: #f2f3f5; }
+
+.night .nav li.active a,
+.night .nav li.active a:hover {
+  background-color: #1f2122; }
+
+.night .nav a {
+  color: rgba(255, 255, 255, 0.92); }
+  .night .nav a:link, .night .nav a:visited, .night .nav a:hover, .night .nav a:active {
+    color: rgba(255, 255, 255, 0.92); }
+  .night .nav a:hover {
+    background-color: #1f2122; }
+
+/***
  * Tables:
  */
 table {
@@ -2300,7 +2351,7 @@ th {
   font-weight: 600; }
 
 .tbl th, .tbl td {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   vertical-align: top; }
 
 .night .tbl tr + tr th, .night .tbl tr + tr td {
