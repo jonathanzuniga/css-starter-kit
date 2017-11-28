@@ -50,8 +50,8 @@ $night-base-background-color: #1a1a1a;
 $colors:                      (gen_colors($base-background-color, #000)) !default;
 $night-colors:                (gen_colors(#fff, $night-base-background-color)) !default;
 
-$text-color:                  get_color('gray 300 38');
-$night-text-color:            rgba(255, 255, 255, 0.92);
+$text-color:                  get_color('gray 300 40');
+$night-text-color:            get_night_color('gray 300 5');
 
 
 // Transition
@@ -449,18 +449,6 @@ $table-striped-background-color:       get_color('gray 300 1');
 $night-table-striped-background-color: get_night_color('gray 300 49');
 
 
-// Nav
-
-$nav-item-margin:                        0 0 0.25rem 0;
-$nav-link-padding:                       $quarter-spacing-unit $half-spacing-unit;
-
-$nav-link-hover-background-color:        get_color('gray 300 2');
-$night-nav-link-hover-background-color:  get_night_color('gray 300 48');
-
-$nav-item-active-background-color:       get_color('gray 300 2');
-$night-nav-item-active-background-color: get_night_color('gray 300 48');
-
-
 // ==========================================================================
 // Helpers
 // ==========================================================================
@@ -617,6 +605,18 @@ $night-card-border-color:     get_night_color('gray 300 46');
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
+
+
+// Menu
+
+$menu-item-margin:                        0 0 0.25rem 0;
+$menu-link-padding:                       $quarter-spacing-unit $half-spacing-unit;
+
+$menu-link-hover-background-color:        get_color('gray 300 2');
+$night-menu-link-hover-background-color:  get_night_color('gray 300 48');
+
+$menu-item-active-background-color:       get_color('gray 300 2');
+$night-menu-item-active-background-color: get_night_color('gray 300 48');
 
 
 // Mobile nav

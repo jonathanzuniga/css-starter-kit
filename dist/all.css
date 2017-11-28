@@ -35,6 +35,55 @@
 .card__body {
   padding: 1rem; }
 
+/***
+ * Menu:
+ */
+/**
+ * Vertical menu:
+ * `.menu`
+ *
+ *     @example
+ *     ul.menu.flex-col
+ *         li.active
+ *             a(href='#') Link 1
+ *         li
+ *             a(href='#') Link 2
+ *         li
+ *             a(href='#') Link 3
+ */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0; }
+  .menu li {
+    display: block;
+    margin: 0 0 0.25rem 0; }
+    .menu li.active a,
+    .menu li.active a:hover {
+      background-color: #f2f3f5; }
+    .menu li a {
+      border-radius: 0.25em;
+      color: #262b35;
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none; }
+      .menu li a:link, .menu li a:visited, .menu li a:hover, .menu li a:active {
+        color: #262b35; }
+      .menu li a:hover {
+        background-color: #f2f3f5; }
+
+.night .menu li.active a,
+.night .menu li.active a:hover {
+  background-color: #1f2122; }
+
+.night .menu a {
+  color: #dfe2e6; }
+  .night .menu a:link, .night .menu a:visited, .night .menu a:hover, .night .menu a:active {
+    color: #dfe2e6; }
+  .night .menu a:hover {
+    background-color: #1f2122; }
+
 .mobile-nav {
   background-color: #f2f3f5;
   width: 100%; }
@@ -53,7 +102,7 @@
   color: #85b5ff; }
 
 .night .mobile-nav__link:link, .night .mobile-nav__link:visited {
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
 
 .night .mobile-nav__link:hover {
   color: #85b5ff; }
@@ -168,7 +217,7 @@
 .night .navbar__link:link, .night .navbar__link:visited,
 .night .navbar__toggler:link,
 .night .navbar__toggler:visited {
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
 
 .night .navbar__link:hover,
 .night .navbar__toggler:hover {
@@ -212,7 +261,7 @@
   display: flex;
   order: 2; }
   .navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-    max-height: 600px;
+    max-height: 100vh;
     opacity: 1;
     transform: translateY(0);
     z-index: 10; }
@@ -227,7 +276,7 @@
   width: 100%;
   z-index: -1; }
   .navbar-responsive .navbar__collapse:focus-within, .navbar-responsive .navbar__collapse.open {
-    max-height: 600px;
+    max-height: 100vh;
     opacity: 1;
     transform: translateY(0);
     z-index: 10; }
@@ -272,7 +321,7 @@
     display: flex;
     order: 2; }
     .maxxs-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -286,7 +335,7 @@
     width: 100%;
     z-index: -1; }
     .maxxs-navbar-responsive .navbar__collapse:focus-within, .maxxs-navbar-responsive .navbar__collapse.open {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -326,7 +375,7 @@
     display: flex;
     order: 2; }
     .maxsm-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -340,7 +389,7 @@
     width: 100%;
     z-index: -1; }
     .maxsm-navbar-responsive .navbar__collapse:focus-within, .maxsm-navbar-responsive .navbar__collapse.open {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -380,7 +429,7 @@
     display: flex;
     order: 2; }
     .maxmd-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -394,7 +443,7 @@
     width: 100%;
     z-index: -1; }
     .maxmd-navbar-responsive .navbar__collapse:focus-within, .maxmd-navbar-responsive .navbar__collapse.open {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -434,7 +483,7 @@
     display: flex;
     order: 2; }
     .maxlg-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -448,7 +497,7 @@
     width: 100%;
     z-index: -1; }
     .maxlg-navbar-responsive .navbar__collapse:focus-within, .maxlg-navbar-responsive .navbar__collapse.open {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -488,7 +537,7 @@
     display: flex;
     order: 2; }
     .maxxl-navbar-responsive .navbar__toggler:focus ~ .navbar__collapse:not(.close) {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -502,7 +551,7 @@
     width: 100%;
     z-index: -1; }
     .maxxl-navbar-responsive .navbar__collapse:focus-within, .maxxl-navbar-responsive .navbar__collapse.open {
-      max-height: 600px;
+      max-height: 100vh;
       opacity: 1;
       transform: translateY(0);
       z-index: 10; }
@@ -809,7 +858,7 @@
 
 body {
   background-color: #fff;
-  color: #2d343f;
+  color: #262b35;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5625;
@@ -818,7 +867,7 @@ body {
   text-rendering: optimizeLegibility; }
   body.night {
     background-color: #1a1a1a;
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -832,7 +881,7 @@ a {
   a:visited {
     color: #0065ff; }
   a:hover {
-    color: #2d343f;
+    color: #262b35;
     text-decoration: none; }
   a:hover, a:active {
     transition-duration: 0s; }
@@ -844,17 +893,17 @@ a {
   color: #85b5ff; }
 
 .night a:hover {
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
 
 p > a:not(.btn) {
   border-bottom: 0.063rem solid #d6e6ff; }
   p > a:not(.btn):hover {
-    border-bottom-color: #2d343f; }
+    border-bottom-color: #262b35; }
 
 .night p > a:not(.btn) {
   border-bottom-color: #16263f; }
   .night p > a:not(.btn):hover {
-    border-bottom-color: rgba(255, 255, 255, 0.92); }
+    border-bottom-color: #dfe2e6; }
 
 img {
   max-width: 100%; }
@@ -1102,7 +1151,7 @@ small {
   border: 0.063rem solid #cbd0d8;
   border-radius: 0.25em;
   box-shadow: inset 0 0 0 0.063rem transparent;
-  color: #2d343f;
+  color: #262b35;
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -1136,7 +1185,7 @@ small {
 .night .input,
 .night .txtarea {
   border-color: #30343c;
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
   .night .input:active,
   .night .txtarea:active {
     border-color: transparent; }
@@ -1401,9 +1450,9 @@ small {
 
 .night .sel {
   border-color: #30343c;
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
   .night .sel option {
-    color: #2d343f; }
+    color: #262b35; }
 
 /**
  * Pure CSS select menu icon:
@@ -1424,7 +1473,7 @@ small {
     -moz-appearance: none;
     padding-right: 2.3em; }
   .sel-icn:after {
-    border: 0.125em solid #2d343f;
+    border: 0.125em solid #262b35;
     border-right: 0;
     border-top: 0;
     content: '';
@@ -1439,7 +1488,7 @@ small {
     transform: rotate(-45deg); }
 
 .night .sel-icn:after {
-  border-color: rgba(255, 255, 255, 0.92); }
+  border-color: #dfe2e6; }
 
 /**
  * Select menu size:
@@ -1512,7 +1561,7 @@ small {
  */
 .btn {
   background-color: #e5e7eb;
-  color: #2d343f;
+  color: #262b35;
   border: 0.063rem solid transparent;
   border-radius: 0.25em;
   box-shadow: none;
@@ -1533,16 +1582,16 @@ small {
   .btn:link {
     text-decoration: none; }
   .btn:link, .btn:visited {
-    color: #2d343f; }
+    color: #262b35; }
   .btn:hover {
     background-color: #dbdde1;
-    color: #2d343f;
+    color: #262b35;
     text-decoration: none; }
   .btn:active, .btn.active, .toggle:checked + .btn,
   .toggle [type='checkbox']:checked + .btn,
   .toggle [type='radio']:checked + .btn {
     background-color: #d3d5d9;
-    color: #2d343f; }
+    color: #262b35; }
   .btn:active, .btn.active, .toggle:checked + .btn,
   .toggle [type='checkbox']:checked + .btn,
   .toggle [type='radio']:checked + .btn, .btn:focus {
@@ -1553,19 +1602,19 @@ small {
 
 .night .btn {
   background-color: #25272b;
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
   .night .btn:link, .night .btn:visited {
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
   .night .btn:hover {
     background-color: #2e3034;
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
   .night .btn:active, .night .btn.active, .night .toggle:checked + .btn, .night
   .toggle [type='checkbox']:checked + .btn,
   .toggle .night [type='checkbox']:checked + .btn, .night
   .toggle [type='radio']:checked + .btn,
   .toggle .night [type='radio']:checked + .btn {
     background-color: #36383c;
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
   .night .btn:active, .night .btn.active, .night .toggle:checked + .btn, .night
   .toggle [type='checkbox']:checked + .btn,
   .toggle .night [type='checkbox']:checked + .btn, .night
@@ -2450,11 +2499,11 @@ small {
     color: #0065ff; }
   .btn--link:hover {
     background-color: transparent;
-    color: #2d343f;
+    color: #262b35;
     text-decoration: none; }
   .btn--link:active, .btn--link.active {
     background-color: transparent;
-    color: #2d343f; }
+    color: #262b35; }
 
 .night .btn--link {
   background-color: transparent;
@@ -2463,10 +2512,10 @@ small {
     color: #85b5ff; }
   .night .btn--link:hover {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
   .night .btn--link:active, .night .btn--link.active {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.92); }
+    color: #dfe2e6; }
 
 /**
  * Pill button:
@@ -3052,56 +3101,6 @@ small {
   display: inline-block; }
   .ls-inline li:not(:last-child) {
     margin-right: 1rem; }
-
-/***
- * Nav:
- */
-/**
- * Vertical nav:
- * `.nav`
- *
- *     @example
- *     ul.nav.flex-col
- *         li.active
- *             a(href='#') Link 1
- *         li
- *             a(href='#') Link 2
- *         li
- *             a(href='#') Link 3
- */
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  .nav li {
-    display: block;
-    margin: 0 0 0.25rem 0; }
-    .nav li.active a,
-    .nav li.active a:hover {
-      background-color: #f2f3f5; }
-    .nav li a {
-      border-radius: 0.25em;
-      color: #2d343f;
-      display: block;
-      padding: 0.5rem 1rem;
-      text-decoration: none; }
-      .nav li a:link, .nav li a:visited, .nav li a:hover, .nav li a:active {
-        color: #2d343f; }
-      .nav li a:hover {
-        background-color: #f2f3f5; }
-
-.night .nav li.active a,
-.night .nav li.active a:hover {
-  background-color: #1f2122; }
-
-.night .nav a {
-  color: rgba(255, 255, 255, 0.92); }
-  .night .nav a:link, .night .nav a:visited, .night .nav a:hover, .night .nav a:active {
-    color: rgba(255, 255, 255, 0.92); }
-  .night .nav a:hover {
-    background-color: #1f2122; }
 
 /***
  * Tables:
@@ -4372,15 +4371,12 @@ th {
     border-top: none;
     border-bottom: none; } }
 
-/***
- * Border radius:
- */
 /**
 	 * Rounded corners:
 	 * `.bd-radius`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius.p-5
+	 *     div.bgc-gray-80.bd-radius.p-5
 	 */
 .bd-radius {
   border-radius: 0.25em; }
@@ -4390,7 +4386,7 @@ th {
 	 * `.bd-radius-1`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius-1.p-5
+	 *     div.bgc-gray-80.bd-radius-1.p-5
 	 */
 .bd-radius-1 {
   border-top-right-radius: 0.25em; }
@@ -4400,7 +4396,7 @@ th {
 	 * `.bd-radius-2`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius-2.p-5
+	 *     div.bgc-gray-80.bd-radius-2.p-5
 	 */
 .bd-radius-2 {
   border-bottom-right-radius: 0.25em; }
@@ -4410,7 +4406,7 @@ th {
 	 * `.bd-radius-3`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius-3.p-5
+	 *     div.bgc-gray-80.bd-radius-3.p-5
 	 */
 .bd-radius-3 {
   border-bottom-left-radius: 0.25em; }
@@ -4420,7 +4416,7 @@ th {
 	 * `.bd-radius-4`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius-4.p-5
+	 *     div.bgc-gray-80.bd-radius-4.p-5
 	 */
 .bd-radius-4 {
   border-top-left-radius: 0.25em; }
@@ -4430,7 +4426,7 @@ th {
 		 * `.bd-radius-top`
 		 *
 		 *     @example
-		 *     div.bgc-grey-5.bd-radius-top.p-5
+		 *     div.bgc-gray-80.bd-radius-top.p-5
 		 */
 .bd-radius-top {
   border-top-right-radius: 0.25em;
@@ -4441,7 +4437,7 @@ th {
 		 * `.bd-radius-right`
 		 *
 		 *     @example
-		 *     div.bgc-grey-5.bd-radius-right.p-5
+		 *     div.bgc-gray-80.bd-radius-right.p-5
 		 */
 .bd-radius-right {
   border-top-right-radius: 0.25em;
@@ -4452,7 +4448,7 @@ th {
 		 * `.bd-radius-bottom`
 		 *
 		 *     @example
-		 *     div.bgc-grey-5.bd-radius-bottom.p-5
+		 *     div.bgc-gray-80.bd-radius-bottom.p-5
 		 */
 .bd-radius-bottom {
   border-bottom-right-radius: 0.25em;
@@ -4463,7 +4459,7 @@ th {
 		 * `.bd-radius-left`
 		 *
 		 *     @example
-		 *     div.bgc-grey-5.bd-radius-left.p-5
+		 *     div.bgc-gray-80.bd-radius-left.p-5
 		 */
 .bd-radius-left {
   border-top-left-radius: 0.25em;
@@ -4474,7 +4470,7 @@ th {
 	 * `.bd-radius-0`
 	 *
 	 *     @example
-	 *     div.bgc-grey-5.bd-radius.bd-radius-0.p-5
+	 *     div.bgc-gray-80.bd-radius.bd-radius-0.p-5
 	 */
 .bd-radius-0 {
   border-radius: 0; }
@@ -4488,10 +4484,10 @@ th {
  *
  *     @example
  *     div
- *         div.bgc-light-blue-24.p-5.w-50.flt-left
- *         div.bgc-green-24.p-5.w-50.flt-right
+ *         div.bgc-blue-200.p-5.w-50.flt-left
+ *         div.bgc-green-200.p-5.w-50.flt-right
  *     div.cf
- *     div.bgc-yellow-24.p-5
+ *     div.bgc-yellow-200.p-5
  */
 .cf {
   *zoom: 1; }
@@ -12451,13 +12447,13 @@ th {
  *         a(href='') Link with text color
  */
 .ac-txtc a:not(.btn):link, .ac-txtc a:not(.btn):visited {
-  color: #2d343f; }
+  color: #262b35; }
 
 .ac-txtc a:not(.btn):hover {
   color: #0065ff; }
 
 .night .ac-txtc a:not(.btn):link, .night .ac-txtc a:not(.btn):visited {
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
 
 .night .ac-txtc a:not(.btn):hover {
   color: #85b5ff; }
@@ -12562,7 +12558,7 @@ th {
  * `.[size]-el-left-[#]`
  *
  *     @example
- *     div.xs-el-left-4.bdc-gray-16.p-3
+ *     div.xs-el-left-4.bd.bdc-gray-300-25.p-3
  *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
  *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
@@ -12571,7 +12567,7 @@ th {
  * `.[size]-el-right-[#]`
  *
  *     @example
- *     div.md-el-right-4.bdc-gray-16.p-3
+ *     div.md-el-right-4.bd.bdc-gray-300-25.p-3
  *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
  *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
  */
@@ -13375,9 +13371,9 @@ th {
  *     @example
  *     div.row
  *         div.col-8
- *             div.bgc-grey-5 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4.hide
- *             div.bgc-grey-5 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .hide {
   display: none !important; }
@@ -13389,9 +13385,9 @@ th {
  *     @example
  *     div.row
  *         div.col-8
- *             div.bgc-grey-5 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4.lg-hide
- *             div.bgc-grey-5 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 @media (min-width: 0) {
   .xs-hide {
@@ -13534,213 +13530,78 @@ th {
 /***
  * Sizing:
  */
-/**
-			 * Width 10%:
-			 * `.w-10` Applies `width: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.w-10.bgc-red-4 &nbsp;
-			 */
 .w-10 {
   width: 10%; }
 
-/**
-			 * Width 20%:
-			 * `.w-20` Applies `width: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.w-20.bgc-red-4 &nbsp;
-			 */
 .w-20 {
   width: 20%; }
 
-/**
-			 * Width 30%:
-			 * `.w-30` Applies `width: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.w-30.bgc-red-4 &nbsp;
-			 */
 .w-30 {
   width: 30%; }
 
-/**
-			 * Width 40%:
-			 * `.w-40` Applies `width: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.w-40.bgc-red-4 &nbsp;
-			 */
 .w-40 {
   width: 40%; }
 
 /**
-			 * Width 50%:
-			 * `.w-50` Applies `width: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.w-50.bgc-red-4 &nbsp;
-			 */
+				 * Width 50%:
+				 * `.w-50` Applies `width: 50%;` to element.
+				 *
+				 *     @example
+				 *     div.w-50.bgc-red-100 &nbsp;
+				 */
 .w-50 {
   width: 50%; }
 
-/**
-			 * Width 60%:
-			 * `.w-60` Applies `width: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.w-60.bgc-red-4 &nbsp;
-			 */
 .w-60 {
   width: 60%; }
 
-/**
-			 * Width 70%:
-			 * `.w-70` Applies `width: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.w-70.bgc-red-4 &nbsp;
-			 */
 .w-70 {
   width: 70%; }
 
-/**
-			 * Width 80%:
-			 * `.w-80` Applies `width: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.w-80.bgc-red-4 &nbsp;
-			 */
 .w-80 {
   width: 80%; }
 
-/**
-			 * Width 90%:
-			 * `.w-90` Applies `width: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.w-90.bgc-red-4 &nbsp;
-			 */
 .w-90 {
   width: 90%; }
 
-/**
-			 * Width 100%:
-			 * `.w-100` Applies `width: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.w-100.bgc-red-4 &nbsp;
-			 */
 .w-100 {
   width: 100%; }
 
-/**
-			 * Height 10%:
-			 * `.h-10` Applies `height: 10%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-10.bgc-red-4 &nbsp;
-			 */
 .h-10 {
   height: 10%; }
 
-/**
-			 * Height 20%:
-			 * `.h-20` Applies `height: 20%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-20.bgc-red-4 &nbsp;
-			 */
 .h-20 {
   height: 20%; }
 
-/**
-			 * Height 30%:
-			 * `.h-30` Applies `height: 30%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-30.bgc-red-4 &nbsp;
-			 */
 .h-30 {
   height: 30%; }
 
-/**
-			 * Height 40%:
-			 * `.h-40` Applies `height: 40%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-40.bgc-red-4 &nbsp;
-			 */
 .h-40 {
   height: 40%; }
 
 /**
-			 * Height 50%:
-			 * `.h-50` Applies `height: 50%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-50.bgc-red-4 &nbsp;
-			 */
+				 * Height 50%:
+				 * `.h-50` Applies `height: 50%;` to element.
+				 *
+				 *     @example
+				 *     div.h-100px
+				 *         div.h-50.bgc-red-100 &nbsp;
+				 */
 .h-50 {
   height: 50%; }
 
-/**
-			 * Height 60%:
-			 * `.h-60` Applies `height: 60%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-60.bgc-red-4 &nbsp;
-			 */
 .h-60 {
   height: 60%; }
 
-/**
-			 * Height 70%:
-			 * `.h-70` Applies `height: 70%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-70.bgc-red-4 &nbsp;
-			 */
 .h-70 {
   height: 70%; }
 
-/**
-			 * Height 80%:
-			 * `.h-80` Applies `height: 80%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-80.bgc-red-4 &nbsp;
-			 */
 .h-80 {
   height: 80%; }
 
-/**
-			 * Height 90%:
-			 * `.h-90` Applies `height: 90%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-90.bgc-red-4 &nbsp;
-			 */
 .h-90 {
   height: 90%; }
 
-/**
-			 * Height 100%:
-			 * `.h-100` Applies `height: 100%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.h-100.bgc-red-4 &nbsp;
-			 */
 .h-100 {
   height: 100%; }
 
@@ -13749,7 +13610,8 @@ th {
  * `.maxw-100` Applies `max-width: 100%;` to element.
  *
  *     @example
- *     div.maxw-100
+ *     div.h-100px
+ *         div.maxw-100.bgc-red-100 &nbsp;
  */
 .maxw-100 {
   max-width: 100%; }
@@ -13759,7 +13621,8 @@ th {
  * `.maxh-100` Applies `max-height: 100%;` to element.
  *
  *     @example
- *     div.maxh-100
+ *     div.h-100px
+ *         div.maxh-100.bgc-red-100 &nbsp;
  */
 .maxh-100 {
   max-height: 100%; }
@@ -25658,32 +25521,32 @@ th {
  * `.m-[#]` `.m-[side]-[#]`
  *
  *     @example
- *     div.bgc-blue-4.cf
- *         div.m-4.bgc-blue-6 &nbsp;
+ *     div.bgc-blue-50.cf
+ *         div.m-4.bgc-blue-75 &nbsp;
  */
 /**
  * Responsive margin:
  * `.[size]-m-[#]` `.max[size]-m-[#]` `.[size]-m-[side]-[#]` `.max[size]-m-[side]-[#]`
  *
  *     @example
- *     div.bgc-blue-4.cf
- *         div.md-m-4.bgc-blue-6 &nbsp;
+ *     div.bgc-blue-50.cf
+ *         div.md-m-4.bgc-blue-75 &nbsp;
  */
 /**
  * Padding:
  * `.p-[#]` `.p-[side]-[#]`
  *
  *     @example
- *     div.p-4.bgc-green-4
- *         div.bgc-green-6 &nbsp;
+ *     div.p-4.bgc-green-75
+ *         div.bgc-green-50 &nbsp;
  */
 /**
  * Responsive padding:
  * `.[size]-p-[#]` `.max[size]-p-[#]` `.[size]-p-[side]-[#]` `.max[size]-p-[side]-[#]`
  *
  *     @example
- *     div.md-p-4.bgc-green-4
- *         div.bgc-green-6 &nbsp;
+ *     div.md-p-4.bgc-green-75
+ *         div.bgc-green-50 &nbsp;
  */
 /***
  * Text:
@@ -26021,7 +25884,7 @@ th {
 .dcap:first-letter {
   background-color: transparent;
   border: none;
-  color: #2d343f;
+  color: #262b35;
   display: block;
   float: left;
   font-size: 3.5em;
@@ -26040,7 +25903,7 @@ th {
   vertical-align: bottom; }
 
 .night .dcap:first-letter {
-  color: rgba(255, 255, 255, 0.92); }
+  color: #dfe2e6; }
 
 /**
  * Small caps:
@@ -26292,8 +26155,8 @@ th {
   background-position: 0 90%;
   text-shadow: 0.063rem 0 #fff, 0.125rem 0 #fff, -0.063rem 0 #fff, -0.125rem 0 #fff; }
   .a-underline-alt a:hover {
-    background-image: -webkit-linear-gradient(top, transparent 50%, #2d343f 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #2d343f 50%); }
+    background-image: -webkit-linear-gradient(top, transparent 50%, #262b35 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #262b35 50%); }
 
 .night .a-underline-alt a {
   background-image: -webkit-linear-gradient(top, transparent 50%, #85b5ff 50%);
@@ -26303,8 +26166,8 @@ th {
   background-position: 0 90%;
   text-shadow: 0.063rem 0 #1a1a1a, 0.125rem 0 #1a1a1a, -0.063rem 0 #1a1a1a, -0.125rem 0 #1a1a1a; }
   .night .a-underline-alt a:hover {
-    background-image: -webkit-linear-gradient(top, transparent 50%, rgba(255, 255, 255, 0.92) 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.92) 50%); }
+    background-image: -webkit-linear-gradient(top, transparent 50%, #dfe2e6 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #dfe2e6 50%); }
 
 /***
  * Flex grid:
@@ -26338,9 +26201,9 @@ html, body {
  *     div.container
  *         div.row
  *             div.col
- *                 div.bgc-gray-25 &nbsp;
+ *                 div.bgc-gray-80 &nbsp;
  *             div.col
- *                 div.bgc-gray-25 &nbsp;
+ *                 div.bgc-gray-80 &nbsp;
  */
 .container {
   max-width: 1100px; }
@@ -26353,9 +26216,9 @@ html, body {
  *     div.container-fluid
  *         div.row
  *             div.col
- *                 div.bgc-gray-25 &nbsp;
+ *                 div.bgc-gray-80 &nbsp;
  *             div.col
- *                 div.bgc-gray-25 &nbsp;
+ *                 div.bgc-gray-80 &nbsp;
  */
 .container-fluid, .container {
   padding-right: 1rem;
@@ -26371,18 +26234,18 @@ html, body {
  *     @example
  *     div.row
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *     div.row.m-top-4
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .col-1 {
   flex-basis: 8.33333%;
@@ -26439,19 +26302,19 @@ html, body {
  *     @example
  *     div.row
  *         div.xs-col-6
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.xs-col-6
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *     div.row.m-top-4
  *         div.sm-col-6.md-col-8
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.sm-col-6.md-col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *     div.row.m-top-4
  *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 [class*="-col-"] {
   flex-basis: 100%;
@@ -26660,13 +26523,13 @@ html, body {
  *     @example
  *     div.grid-2
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .grid-1 {
   display: grid;
@@ -26735,17 +26598,17 @@ html, body {
  *     @example
  *     div.xs-grid-2.md-grid-3
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  */
 @media (min-width: 0) {
   .xs-grid-0 {
@@ -27754,13 +27617,13 @@ html, body {
  *     @example
  *     div.xs-grid-2.md-grid-3
  *         div
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  *         div.maxmd-cell-x-2
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.md-cell-x-2.maxmd-hide
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  */
 /***
  * Gutters:
@@ -27772,9 +27635,9 @@ html, body {
 	 *     @example
 	 *     div.row.gutters-0
 	 *         div.col-8
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 *         div.col-4
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 */
 .gutters-0.row > .col,
 .gutters-0.row > [class*="col-"] {
@@ -27961,9 +27824,9 @@ html, body {
 	 *     @example
 	 *     div.row.gutters-5
 	 *         div.col-8
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 *         div.col-4
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 */
 .gutters-5.row > .col,
 .gutters-5.row > [class*="col-"] {
@@ -28150,9 +28013,9 @@ html, body {
 	 *     @example
 	 *     div.row.gutters-1
 	 *         div.col-8
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 *         div.col-4
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 */
 .gutters-1.row > .col,
 .gutters-1.row > [class*="col-"] {
@@ -28339,9 +28202,9 @@ html, body {
 	 *     @example
 	 *     div.row.gutters-15
 	 *         div.col-8
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 *         div.col-4
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 */
 .gutters-15.row > .col,
 .gutters-15.row > [class*="col-"] {
@@ -28528,9 +28391,9 @@ html, body {
 	 *     @example
 	 *     div.row.gutters-2
 	 *         div.col-8
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 *         div.col-4
-	 *             div.bgc-gray-25 &nbsp;
+	 *             div.bgc-gray-80 &nbsp;
 	 */
 .gutters-2.row > .col,
 .gutters-2.row > [class*="col-"] {
@@ -28717,9 +28580,9 @@ html, body {
  *     @example
  *     div.row.md-gutters-0
  *         div.col-8
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-30 &nbsp;
+ *             div.bgc-gray-100 &nbsp;
  */
 /***
  * Horizontal modifiers:
@@ -28731,9 +28594,9 @@ html, body {
  *     @example
  *     div.row.cols-left
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-left {
   justify-content: flex-start; }
@@ -28745,9 +28608,9 @@ html, body {
  *     @example
  *     div.row.cols-center
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-center {
   justify-content: center; }
@@ -28759,9 +28622,9 @@ html, body {
  *     @example
  *     div.row.cols-right
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-right {
   justify-content: flex-end; }
@@ -28773,9 +28636,9 @@ html, body {
  *     @example
  *     div.row.cols-between
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-between {
   justify-content: space-between; }
@@ -28787,9 +28650,9 @@ html, body {
  *     @example
  *     div.row.cols-around
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-around {
   justify-content: space-around; }
@@ -28804,11 +28667,11 @@ html, body {
  *     @example
  *     div.row.cols-top.h-100px
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-top {
   align-items: flex-start; }
@@ -28820,11 +28683,11 @@ html, body {
  *     @example
  *     div.row.cols-middle.h-100px
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-middle {
   align-items: center; }
@@ -28836,11 +28699,11 @@ html, body {
  *     @example
  *     div.row.cols-bottom.h-100px
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .cols-bottom {
   align-items: flex-end; }
@@ -28852,11 +28715,11 @@ html, body {
  *     @example
  *     div.row.cols-bottom.h-100px
  *         div.col-4.col-top
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .col-top {
   align-self: flex-start; }
@@ -28868,11 +28731,11 @@ html, body {
  *     @example
  *     div.row.h-100px
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4.col-middle
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .col-middle {
   align-self: center; }
@@ -28884,11 +28747,11 @@ html, body {
  *     @example
  *     div.row.h-100px
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4.col-bottom
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 .col-bottom {
   align-self: flex-end; }
@@ -28903,14 +28766,14 @@ html, body {
  *     @example
  *     div.row
  *         div.col-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.col-4.oset-4
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *     div.row.m-top-4
  *         div.md-col-5
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  *         div.md-col-3.lg-oset-3
- *             div.bgc-gray-25 &nbsp;
+ *             div.bgc-gray-80 &nbsp;
  */
 @media (min-width: 0) {
   .oset-0,

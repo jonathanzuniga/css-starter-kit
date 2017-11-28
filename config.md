@@ -60,84 +60,31 @@
 			}
 		}
 
-		//- .sidebar h1, 
-		//- .sidebar h2,
-		//- .sidebar h3 {
-		//- 	border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-		//- 	margin-bottom: 1.25rem;
-		//- 	padding-bottom: 1.25rem;
-		//- }
-
-		//- .sidebar h1 {
-		//- 	margin-top: -0.25rem;
-		//- }
-
-		.sidebar h2,
-		.sidebar h3 {
-			margin-top: 1.25rem;
-		}
-
-		.sidebar__content div[class*="col-"] > .ls-unstyled > li > a {
-			font-weight: bold;
-		}
-
 		.sidebar__content,
 		.main {
 			padding-top: 2.5rem;
 			padding-bottom: 2.5rem;
 		}
 
-		.sidebar h3 ~ ul > li,
-		.sidebar ul {
-			margin-bottom: 0.5rem;
-		}
-
-		.sidebar .active a {
-			color: #333;
-		}
-
-		.night .sidebar .active a {
-			color: #fff;
-		}
-
 		.sg-block {
-			border-top-color: #dbdbdc;
+			border-top-color: #dfe2e6;
 		}
 
 		.night .sg-block {
-			border-top-color: #3c3c3d;
+			border-top-color: #282a2f;
 		}
-
-		//- .night code.sg {
-		//- 	color: #579;
-		//- }
-
-		//- .night code.sg:not(:first-child) {
-		//- 	background: rgba(250, 250, 250, 0.025);
-		//- 	color: #357;
-		//- }
 
 		.night .sg-expando::before {
-			background-color: rgba(255, 255, 255, 0.14);
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 
-		.night .sg-expando:hover::before, 
-		.night .sg-expando:focus::before {
-			background-color: rgba(255, 255, 255, 0.7);
-		}
-
-		.night .sg-expando:active::before {
-			background: #111;
-			color: #fff;
+		.night .sg-expando:hover::before {
+			background-color: rgba(255, 255, 255, 0.4);
 		}
 
 		.night .sg-code {
 			background: #fafaff !important;
 		}
-
-		//- .navbar {
-		//- 	background-color: rgba(0, 0, 0, 0.05);
-		//- }
 
 ### Body
 
@@ -155,7 +102,7 @@
 					div.md-col-12.xl-col-10
 						div(sg-content).sg-container
 
-			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12
+			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12.bd-left
 				div.sidebar__content.row
 					div.col
 						h1.h2.bd-bottom.m-bottom-5.p-bottom-5.maxsm-hide CSS Starter Kit
@@ -167,11 +114,13 @@
 
 						p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
 
+						br
+
 						div.row
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Layout
 
-								ul.nav.flex-col
+								ul.menu.flex-col
 									li
 										a(href='layout.html#flex-grid') Flex grid
 									li
@@ -188,7 +137,7 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Elements
 
-								ul.nav.flex-col
+								ul.menu.flex-col
 									li
 										a(href='elements.html#content') Content
 									li
@@ -207,11 +156,9 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Helpers
 
-								ul.nav.flex-col
+								ul.menu.flex-col
 									li
 										a(href='helpers.html#borders') Borders
-									li
-										a(href='helpers.html#border-radius') Border radius
 									li
 										a(href='helpers.html#clearfix') Clearfix
 									li
@@ -236,15 +183,17 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Components
 
-								ul.nav.flex-col
+								ul.menu.flex-col
 									li
 										a(href='components.html#cards') Cards
+									li
+										a(href='components.html#menu') Menu
 									li
 										a(href='components.html#navbar') Navbar
 									li
 										a(href='components.html#navmenu') Navmenu
 						
-						p.m-top-4.m-bottom-4 
+						p.m-top-4.m-bottom-4
 							input(id='switch-night-mode', type='checkbox').switch.switch--sm
 							label(for='switch-night-mode', id='lbl-night-mode')
 								span Night mode

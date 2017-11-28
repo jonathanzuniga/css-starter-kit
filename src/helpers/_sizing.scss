@@ -4,23 +4,26 @@
 
 @each $prop, $abbr in (width: w, height: h) {
 	@each $size, $length in $sizes {
-		@if $abbr == w {
-			/**
-			 * Width #{$size}%:
-			 * `.#{$abbr}-#{$size}` Applies `width: #{$size}%;` to element.
-			 *
-			 *     @example
-			 *     div.#{$abbr}-#{$size}.bgc-red-4 &nbsp;
-			 */
-		} @else {
-			/**
-			 * Height #{$size}%:
-			 * `.#{$abbr}-#{$size}` Applies `height: #{$size}%;` to element.
-			 *
-			 *     @example
-			 *     div.h-100px
-			 *         div.#{$abbr}-#{$size}.bgc-red-4 &nbsp;
-			 */
+		@if $size == 50 {
+			@if $abbr == w {
+				/**
+				 * Width #{$size}%:
+				 * `.#{$abbr}-#{$size}` Applies `#{$prop}: #{$size}%;` to element.
+				 *
+				 *     @example
+				 *     div.#{$abbr}-#{$size}.bgc-red-100 &nbsp;
+				 */
+			}
+			@else {
+				/**
+				 * Height #{$size}%:
+				 * `.#{$abbr}-#{$size}` Applies `#{$prop}: #{$size}%;` to element.
+				 *
+				 *     @example
+				 *     div.h-100px
+				 *         div.#{$abbr}-#{$size}.bgc-red-100 &nbsp;
+				 */
+			}
 		}
 		.#{$abbr}-#{$size} {
 			#{$prop}: $length;
@@ -33,7 +36,8 @@
  * `.maxw-100` Applies `max-width: 100%;` to element.
  *
  *     @example
- *     div.maxw-100
+ *     div.h-100px
+ *         div.maxw-100.bgc-red-100 &nbsp;
  */
 .maxw-100 {
 	max-width: 100%;
@@ -44,7 +48,8 @@
  * `.maxh-100` Applies `max-height: 100%;` to element.
  *
  *     @example
- *     div.maxh-100
+ *     div.h-100px
+ *         div.maxh-100.bgc-red-100 &nbsp;
  */
 .maxh-100 {
 	max-height: 100%;
