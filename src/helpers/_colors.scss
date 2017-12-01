@@ -85,7 +85,6 @@
  *     p.ac-txtc
  *         a(href='') Link with text color
  */
-// .ac-txtc:not(.btn),
 .ac-txtc a:not(.btn) {
 	&:link,
 	&:visited {
@@ -97,8 +96,15 @@
 	}
 }
 
+p.ac-txtc a:not(.btn) {
+	border-bottom-color: rgba($text-color, 0.2);
+
+	&:hover {
+		border-bottom-color: $link-color;
+	}
+}
+
 .night {
-	// .ac-txtc:not(.btn),
 	.ac-txtc a:not(.btn) {
 		&:link,
 		&:visited {
@@ -109,4 +115,12 @@
 			color: $night-link-color;
 		}
 	}	
+
+	p.ac-txtc a:not(.btn) {
+		border-bottom-color: rgba($night-text-color, 0.2);
+
+		&:hover {
+			border-bottom-color: $night-link-color;
+		}
+	}
 }

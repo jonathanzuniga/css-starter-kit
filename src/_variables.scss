@@ -50,8 +50,8 @@ $night-base-background-color: #1a1a1a;
 $colors:                      (gen_colors($base-background-color, #000)) !default;
 $night-colors:                (gen_colors(#fff, $night-base-background-color)) !default;
 
-$text-color:                  get_color('gray 300 40');
-$night-text-color:            get_night_color('gray 300 5');
+$text-color:                  get_color('gray 43');
+$night-text-color:            get_night_color('gray 5');
 
 
 // Transition
@@ -66,8 +66,8 @@ $base-transition: all 0.16s ease-in-out;
 
 // Hyperlink
 
-$link-color:                           get_color('blue 300 25');
-$night-link-color:                     get_night_color('blue 300 12');
+$link-color:                           get_color('blue 25');
+$night-link-color:                     get_night_color('blue 12');
 $link-decoration:                      none;
 
 $link-visited-color:                   $link-color;
@@ -80,8 +80,8 @@ $link-hover-decoration:                none;
 
 $link-border-bottom-width:             0.063rem;
 $link-border-bottom-style:             solid;
-$link-border-bottom-color:             get_color('blue 300 4');
-$night-link-border-bottom-color:       get_night_color('blue 300 46');
+$link-border-bottom-color:             get_color('blue 4');
+$night-link-border-bottom-color:       get_night_color('blue 46');
 
 $link-hover-border-bottom-color:       $link-hover-color;
 $night-link-hover-border-bottom-color: $night-link-hover-color;
@@ -91,21 +91,21 @@ $night-link-hover-border-bottom-color: $night-link-hover-color;
 
 $blockquote-border-width:         0.313rem;
 $blockquote-border-style:         solid;
-$blockquote-border-color:         get_color('gray 300 4');
-$night-blockquote-border-color:   get_night_color('gray 300 46');
+$blockquote-border-color:         get_color('gray 4');
+$night-blockquote-border-color:   get_night_color('gray 46');
 $blockquote-left-quotation-mark:  '«'; // '“';
 $blockquote-right-quotation-mark: '»'; // '”';
 
 
 // Code
 
-$code-background-color:       get_color('gray 300 4');
-$night-code-background-color: get_night_color('gray 300 46');
+$code-background-color:       get_color('gray 4');
+$night-code-background-color: get_night_color('gray 46');
 $code-border-radius:          $base-border-radius;
 $code-font-size:              1em;
 
-$pre-background-color:        get_color('gray 300 2');
-$night-pre-background-color:  get_night_color('gray 300 48');
+$pre-background-color:        get_color('gray 2');
+$night-pre-background-color:  get_night_color('gray 48');
 $pre-border-radius:           $base-border-radius;
 
 
@@ -125,51 +125,58 @@ $heading-line-height: 1.1;
 
 // Se usan los mismo valores para los demas controles de las formas.
 
-$control-border-width:                 0.063rem; // 1px
-$control-border-style:                 solid;
-$control-border-color:                 get_color('gray 300 8');
-$night-control-border-color:           get_night_color('gray 300 42');
-$control-border-radius:                $base-border-radius;
-$control-line-height:                  $line-height-ratio - $quarter-spacing-unit;
-$control-padding-y:                    rem_to_em($quarter-spacing-unit);
-$control-padding-x:                    rem_to_em($half-spacing-unit - 0.375);
+$control-border-width:                   0.125rem; // 2px
+$control-border-style:                   solid;
+$control-border-color:                   get_color('gray 8');
+$night-control-border-color:             get_night_color('gray 42');
+$control-border-radius:                  $base-border-radius;
+$control-line-height:                    $line-height-ratio - $quarter-spacing-unit;
+$control-padding-y:                      rem_to_em($quarter-spacing-unit);
+$control-padding-x:                      rem_to_em($half-spacing-unit - 0.375);
 
-$control-active-border-color:          get_color('blue 300 25');;
-$night-control-active-border-color:    transparent;
+$control-active-border-color:            get_color('blue 25');;
+$night-control-active-border-color:      transparent;
 
-$control-focus-border-color:           get_color('blue 300 12');
-$night-control-focus-border-color:     get_night_color('blue 300 12');
+$control-focus-border-color:             get_color('blue 12');
+$night-control-focus-border-color:       get_night_color('blue 12');
 
-$control-focus-box-shadow:             none;
-$night-control-focus-box-shadow:       none;
-// $control-focus-box-shadow:           inset 0 0 0 0.063rem $control-focus-border-color;
-// $night-control-focus-box-shadow:     inset 0 0 0 0.063rem $night-control-focus-border-color;
+$control-focus-box-shadow:               none;
+$night-control-focus-box-shadow:         none;
+// $control-focus-box-shadow:             inset 0 0 0 0.063rem $control-focus-border-color;
+// $night-control-focus-box-shadow:       inset 0 0 0 0.063rem $night-control-focus-border-color;
 
-$control-focus-box-shadow-spread:      0.2rem;
-$control-focus-box-shadow-color:       rgba(get_color('blue 300 12'), 0.2);
-$night-control-focus-box-shadow-color: rgba(get_night_color('blue 300 12'), 0.2);
+$control-focus-animation-name:           control-focus-expand-shadow;
+$night-control-focus-animation-name:     night-control-focus-expand-shadow;
+$control-focus-animation-duration:       0.2s;
+$control-focus-animation-fill-mode:      forwards;
 
-$control-focus-animation-name:         expand-shadow;
-$night-control-focus-animation-name:   night-expand-shadow;
-$control-focus-animation-duration:     0.2s;
-$control-focus-animation-fill-mode:    forwards;
+$control-focus-box-shadow-spread:        0.2rem;
+$control-focus-box-shadow-color:         get_color('blue 12');
+$night-control-focus-box-shadow-color:   get_night_color('blue 12');
+$control-focus-box-shadow-color-opacity: 0.2;
 
-$control-invalid-border-color:         get_color('red 300 25');
-$night-control-invalid-border-color:   get_night_color('red 300 25');
+$control-invalid-border-color:           get_color('red 25');
+$night-control-invalid-border-color:     get_night_color('red 25');
 
 
 // Buttons
 
-$button-background-color:       get_color('gray 300 4');
-$night-button-background-color: get_night_color('gray 300 46');
-$button-border:                 $control-border-width $control-border-style transparent;
-$button-border-radius:          $control-border-radius;
-$button-font-size:              $base-font-size;
-$button-font-weight:            400;
-$button-line-height:            $control-line-height;
-$button-padding:                $control-padding-y $control-padding-x;
-$button-text-color:             #fff;
-$night-button-text-color:       #fff;
+$button-background-color:              get_color('gray 3');
+$night-button-background-color:        get_night_color('gray 47');
+$button-border:                        $control-border-width $control-border-style transparent;
+$button-border-radius:                 $control-border-radius;
+$button-font-size:                     $base-font-size;
+$button-font-weight:                   400;
+$button-line-height:                   $control-line-height;
+$button-padding:                       $control-padding-y $control-padding-x;
+$button-text-color:                    #fff;
+$night-button-text-color:              #fff;
+
+$button-active-animation-name:         button-active-expand-shadow;
+$night-button-active-animation-name:   night-button-active-expand-shadow;
+
+$button-active-box-shadow-color:       $base-background-color;
+$night-button-active-box-shadow-color: $night-base-background-color;
 
 $button-hover-background-color-shade-amount:  12%;
 $button-active-background-color-shade-amount: 22%;
@@ -190,16 +197,16 @@ $button-active-background-color-shade-amount: 22%;
 // - gradient background-color bottom saturation, 
 // - gradient background-color bottom lightness.
 $buttons: (
-	'primary'   get_color('blue 300 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' get_color('gray 300 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_color('green 300 25')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_color('red 300 25')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_color('blue 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' get_color('gray 25')        transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_color('green 25')       transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_color('red 25')         transparent $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 $night-buttons: (
-	'primary'   get_night_color('blue 300 25')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'secondary' get_night_color('gray 300 35')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'success'   get_night_color('green 300 25') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
-	'danger'    get_night_color('red 300 25')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
+	'primary'   get_night_color('blue 25')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'secondary' get_night_color('gray 40')  transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'success'   get_night_color('green 25') transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25,
+	'danger'    get_night_color('red 25')   transparent $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25
 );
 
 
@@ -210,13 +217,13 @@ $button-outline-border-transparentize-amount: 0;
 
 // Disabled button
 
-$button-disabled-opacity: 0.6;
+$button-disabled-opacity:        0.6;
 
 
 // Gradient button
 
-$button-gradient-border:   none;
-$button-gradient-padding: ($control-padding-y + 0.063) ($control-padding-x + 0.063);
+$button-gradient-border:         none;
+$button-gradient-padding:       ($control-padding-y + 0.063) ($control-padding-x + 0.063);
 
 
 // Small button
@@ -247,55 +254,59 @@ $label-padding:  ($control-padding-y / 2) 0;
 
 // Input
 
-$input-background-color:                transparent;
-$input-border-width:                    $control-border-width;
-$input-border-style:                    $control-border-style;
-$input-border-color:                    $control-border-color;
-$input-box-shadow:                      inset 0 0 0 0.063rem transparent;
-$night-input-border-color:              $night-control-border-color;
-$input-border:                          $input-border-width $input-border-style $input-border-color;
-$input-border-radius:                   $control-border-radius;
-$input-text-color:                      $text-color;
-$night-input-text-color:                $night-text-color;
-$input-font-size:                       $base-font-size;
-$input-line-height:                     $control-line-height;
-$input-padding:                         $control-padding-y $control-padding-x;
+$input-background-color:                  transparent;
+$night-input-background-color:            transparent;
+$input-border-width:                      $control-border-width;
+$input-border-style:                      $control-border-style;
+$input-border-color:                      $control-border-color;
+$input-box-shadow:                        inset 0 0 0 0.063rem transparent;
+$night-input-border-color:                $night-control-border-color;
+$input-border:                            $input-border-width $input-border-style $input-border-color;
+$input-border-radius:                     $control-border-radius;
+$input-text-color:                        $text-color;
+$night-input-text-color:                  $night-text-color;
+$input-font-size:                         $base-font-size;
+$input-line-height:                       $control-line-height;
+$input-padding:                           $control-padding-y $control-padding-x;
 
-$input-active-border-color:             $control-active-border-color;
-$night-input-active-border-color:       $night-control-active-border-color;
+$input-active-border-color:               $control-active-border-color;
+$night-input-active-border-color:         $night-control-active-border-color;
 
-$input-focus-background-color:          transparent;
-$input-focus-border-color:              $control-focus-border-color;
-$night-input-focus-border-color:        $night-control-focus-border-color;
-$input-focus-border-width:              $control-border-width;
+$input-focus-background-color:            transparent;
+$input-focus-border-color:                $control-focus-border-color;
+$night-input-focus-border-color:          $night-control-focus-border-color;
+$input-focus-border-width:                $control-border-width;
 
-$input-hover-border-color:              $input-border-color;
-$night-input-hover-border-color:        $night-input-border-color;
+$input-hover-border-color:                $input-border-color;
+$night-input-hover-border-color:          $night-input-border-color;
 
-$input-invalid-border-color:            $control-invalid-border-color;
-$night-input-invalid-border-color:      $night-control-invalid-border-color;
+$input-invalid-border-color:              $control-invalid-border-color;
+$night-input-invalid-border-color:        $night-control-invalid-border-color;
 
-$input-valid-border-color:              $input-border-color;
-$night-input-valid-border-color:        $night-input-border-color;
+$input-valid-border-color:                $input-border-color;
+$night-input-valid-border-color:          $night-input-border-color;
 
-$input-small-border-radius:             $control-border-radius;
-$input-small-font-size:                 $small-font-size;
-$input-small-padding-y:                 $control-padding-y / 2;
-$input-small-padding-x:                 $control-padding-x;
+$input-small-border-radius:               $control-border-radius;
+$input-small-font-size:                   $small-font-size;
+$input-small-padding-y:                   $control-padding-y / 2;
+$input-small-padding-x:                   $control-padding-x;
  
-$input-large-border-radius:             $control-border-radius;
-$input-large-font-size:                 $large-font-size;
-$input-large-padding-y:                 $control-padding-y + 0.25;
-$input-large-padding-x:                 $control-padding-x + 0.25;
+$input-large-border-radius:               $control-border-radius;
+$input-large-font-size:                   $large-font-size;
+$input-large-padding-y:                   $control-padding-y + 0.25;
+$input-large-padding-x:                   $control-padding-x + 0.25;
 
 
 // Input line
 
-$input-line-focus-animation-name:       expand-shadow-bottom;
-$night-input-line-focus-animation-name: night-expand-shadow-bottom;
+$input-line-focus-animation-name:         input-line-focus-expand-shadow;
+$night-input-line-focus-animation-name:   night-input-line-focus-expand-shadow;
 
-$input-line-focus-box-shadow:           none;
-$night-input-line-focus-box-shadow:     none;
+$input-line-focus-box-shadow-color:       $base-background-color;
+$night-input-line-focus-box-shadow-color: $night-base-background-color;
+
+$input-line-focus-box-shadow:             none;
+$night-input-line-focus-box-shadow:       none;
 // $input-line-focus-box-shadow:       inset 0 -0.125rem 0 -0.063rem $control-focus-border-color;
 // $night-input-line-focus-box-shadow: inset 0 -0.125rem 0 -0.063rem $night-control-focus-border-color;
 
@@ -303,17 +314,17 @@ $night-input-line-focus-box-shadow:     none;
 // File area
 
 $file-area-padding:                      6.25em rem_to_em($half-spacing-unit);
-$file-area-background-color:             get_color('gray 300 2');
-$night-file-area-background-color:       get_night_color('gray 300 48');
+$file-area-background-color:             get_color('gray 2');
+$night-file-area-background-color:       get_night_color('gray 48');
 
 $file-area-focus-background-color:       none;
 $night-file-area-focus-background-color: none;
 
-$file-area-hover-background-color:       get_color('gray 300 4');
-$night-file-area-hover-background-color: get_night_color('gray 300 46');
+$file-area-hover-background-color:       get_color('gray 4');
+$night-file-area-hover-background-color: get_night_color('gray 46');
 
-$file-area-valid-background-color:       get_color('blue 300 4');
-$night-file-area-valid-background-color: get_night_color('blue 300 46');
+$file-area-valid-background-color:       get_color('blue 4');
+$night-file-area-valid-background-color: get_night_color('blue 46');
 
 
 // Select menu
@@ -435,18 +446,18 @@ $table-header-font-weight:             600;
 $table-header-text-align:              left;
 
 $table-border-style:                   dotted;
-$table-border-color:                   get_color('gray 300 5');
-$night-table-border-color:             get_night_color('gray 300 45');
+$table-border-color:                   get_color('gray 5');
+$night-table-border-color:             get_night_color('gray 45');
 
-$table-header-background-color:        get_color('gray 300 2');
-$night-table-header-background-color:  get_night_color('gray 300 48');
+$table-header-background-color:        get_color('gray 2');
+$night-table-header-background-color:  get_night_color('gray 48');
 
 $table-cell-padding:                   $quarter-spacing-unit $half-spacing-unit;
 
 $table-striped-index:                  even; // 'odd' or 'even'
 
-$table-striped-background-color:       get_color('gray 300 1');
-$night-table-striped-background-color: get_night_color('gray 300 49');
+$table-striped-background-color:       get_color('gray 1');
+$night-table-striped-background-color: get_night_color('gray 49');
 
 
 // ==========================================================================
@@ -458,8 +469,8 @@ $night-table-striped-background-color: get_night_color('gray 300 49');
 
 $border-width:       0.063rem;
 $border-style:       solid;
-$border-color:       get_color('gray 300 5');
-$night-border-color: get_night_color('gray 300 45');
+$border-color:       get_color('gray 5');
+$night-border-color: get_night_color('gray 45');
 $border-radius:      $base-border-radius;
 
 
@@ -477,16 +488,16 @@ $sides: (
 
 $hightlight-border-radius:          0;
 // $hightlight-border-radius:          rem_to_em($half-spacing-unit) 0 rem_to_em($half-spacing-unit) 0;
-$hightlight-background-color:       get_color('yellow 300 3');
-$night-hightlight-background-color: get_night_color('gray 300 47');
+$hightlight-background-color:       get_color('yellow 7');
+$night-hightlight-background-color: get_night_color('gray 45');
 $hightlight-background:             none;
 $night-hightlight-background:       none;
-// $hightlight-background:       linear-gradient(-100deg, get_color('yellow 300 3'), 
-//                                                        get_color('yellow 300 6') 95%, 
-//                                                        get_color('yellow 300 3'));
-// $night-hightlight-background: linear-gradient(-100deg, get_night_color('gray 300 47'), 
-//                                                        get_night_color('gray 300 44') 95%, 
-//                                                        get_night_color('gray 300 47'));
+// $hightlight-background:       linear-gradient(-100deg, get_color('yellow 3'), 
+//                                                        get_color('yellow 6') 95%, 
+//                                                        get_color('yellow 3'));
+// $night-hightlight-background: linear-gradient(-100deg, get_night_color('gray 47'), 
+//                                                        get_night_color('gray 44') 95%, 
+//                                                        get_night_color('gray 47'));
 
 // Drop cap
 
@@ -600,8 +611,8 @@ $gutters: (
 $card-background-color:       $base-background-color;
 $night-card-background-color: $night-base-background-color;
 $card-padding:                $half-spacing-unit;
-$card-border:                 $border-width $border-style get_color('gray 300 4');
-$night-card-border-color:     get_night_color('gray 300 46');
+$card-border:                 $border-width $border-style get_color('gray 4');
+$night-card-border-color:     get_night_color('gray 46');
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
@@ -612,17 +623,17 @@ $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 $menu-item-margin:                        0 0 0.25rem 0;
 $menu-link-padding:                       $quarter-spacing-unit $half-spacing-unit;
 
-$menu-link-hover-background-color:        get_color('gray 300 2');
-$night-menu-link-hover-background-color:  get_night_color('gray 300 48');
+$menu-link-hover-background-color:        get_color('gray 2');
+$night-menu-link-hover-background-color:  get_night_color('gray 48');
 
-$menu-item-active-background-color:       get_color('gray 300 2');
-$night-menu-item-active-background-color: get_night_color('gray 300 48');
+$menu-item-active-background-color:       get_color('gray 2');
+$night-menu-item-active-background-color: get_night_color('gray 48');
 
 
 // Mobile nav
 
-$mobile-nav-background-color:       get_color('gray 300 2');
-$night-mobile-nav-background-color: get_night_color('gray 300 48');
+$mobile-nav-background-color:       get_color('gray 2');
+$night-mobile-nav-background-color: get_night_color('gray 48');
 
 
 // Navbar

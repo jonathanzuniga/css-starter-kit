@@ -68,11 +68,16 @@
 	&.active,
 	&:focus {
 		@include animation(
-			$control-focus-animation-name 
+			$button-active-animation-name 
 			$control-focus-animation-duration 
 			$control-focus-animation-fill-mode
 		);
 	}
+}
+
+@include keyframes($button-active-animation-name) {
+	  0% { box-shadow: 0 0 0 0 rgba($button-active-box-shadow-color, 0) }
+	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($button-active-box-shadow-color, $control-focus-box-shadow-color-opacity) }
 }
 
 .night {
@@ -110,7 +115,7 @@
 		&.active,
 		&:focus {
 			@include animation(
-				$night-control-focus-animation-name 
+				$night-button-active-animation-name 
 				$control-focus-animation-duration 
 				$control-focus-animation-fill-mode
 			);
@@ -118,15 +123,10 @@
 	}
 }
 
-// @include keyframes($control-focus-animation-name) {
-// 	  0% { box-shadow: 0 0 0 0 rgba($button-background-color, 0) }
-// 	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($button-background-color, 0.2) }
-// }
-
-// @include keyframes($night-control-focus-animation-name) {
-// 	  0% { box-shadow: 0 0 0 0 rgba($night-button-background-color, 0) }
-// 	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($night-button-background-color, 0.2) }
-// }
+@include keyframes($night-button-active-animation-name) {
+	  0% { box-shadow: 0 0 0 0 rgba($night-button-active-box-shadow-color, 0) }
+	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($night-button-active-box-shadow-color, $control-focus-box-shadow-color-opacity) }
+}
 
 @each 
 	$name, 
@@ -149,9 +149,8 @@
 	 * `.btn--#{$name_r}`
 	 *
 	 *     @example
-	 *     button.btn.btn--#{$name_r} Flat
-	 *     button.btn.btn--#{$name_r}.btn--gradient Gradient
-     *     button.btn.btn--#{$name_r}.btn--outline Outline
+	 *     button.btn.btn--#{$name_r} Button
+     *     button.btn.btn--#{$name_r}.btn--outline Outline button
 	 */
 	.btn--#{$name_r} {
 		background-color: $background-color;
@@ -188,16 +187,16 @@
 		&.active,
 		&:focus {
 			@include animation(
-				'expand-shadow-#{$name}'
+				'#{$control-focus-animation-name}-#{$name}'
 				$control-focus-animation-duration 
 				$control-focus-animation-fill-mode
 			);
 		}
 	}
 
-	@include keyframes('expand-shadow-#{$name}') {
+	@include keyframes('#{$control-focus-animation-name}-#{$name}') {
 		  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
-		100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, 0.2) }
+		100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, $control-focus-box-shadow-color-opacity) }
 	}
 
 	.btn--gradient {
@@ -379,16 +378,16 @@
 			&.active,
 			&:focus {
 				@include animation(
-					'night-expand-shadow-#{$name}'
+					'#{$night-control-focus-animation-name}-#{$name}'
 					$control-focus-animation-duration 
 					$control-focus-animation-fill-mode
 				);
 			}
 		}
 
-		@include keyframes('night-expand-shadow-#{$name}') {
+		@include keyframes('#{$night-control-focus-animation-name}-#{$name}') {
 			  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
-			100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, 0.2) }
+			100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, $control-focus-box-shadow-color-opacity) }
 		}
 
 		.btn--gradient {
