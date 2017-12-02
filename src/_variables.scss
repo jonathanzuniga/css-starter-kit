@@ -28,8 +28,8 @@ $mono-font-family:     'SF Mono',
                        monospace;
 
 $base-font-size:       16px !default;
-$small-font-size:      px_to_em($base-font-size - 4); // 0.750em (12px)
-$large-font-size:      px_to_em($base-font-size + 4); // 1.250em (20px)
+$small-font-size:      0.75em; // 12px
+$large-font-size:      1.50em; // 24px
 
 $base-line-height:     25px !default;
 
@@ -67,7 +67,7 @@ $base-transition: all 0.16s ease-in-out;
 // Hyperlink
 
 $link-color:                           get_color('blue 25');
-$night-link-color:                     get_night_color('blue 12');
+$night-link-color:                     get_night_color('blue 13');
 $link-decoration:                      none;
 
 $link-visited-color:                   $link-color;
@@ -103,6 +103,7 @@ $code-background-color:       get_color('gray 4');
 $night-code-background-color: get_night_color('gray 46');
 $code-border-radius:          $base-border-radius;
 $code-font-size:              1em;
+$code-padding:                0 0.188em;
 
 $pre-background-color:        get_color('gray 2');
 $night-pre-background-color:  get_night_color('gray 48');
@@ -157,6 +158,8 @@ $control-focus-box-shadow-color-opacity: 0.2;
 
 $control-invalid-border-color:           get_color('red 25');
 $night-control-invalid-border-color:     get_night_color('red 25');
+
+$control-large-font-size:                1.25em;
 
 
 // Buttons
@@ -239,7 +242,7 @@ $button-small-gradient-padding: ($button-small-padding-y + 0.063) ($button-small
 // Large button
 
 $button-large-border-radius:     $control-border-radius;
-$button-large-font-size:         $large-font-size;
+$button-large-font-size:         $control-large-font-size;
 $button-large-padding-y:         $control-padding-y + 0.25;
 $button-large-padding-x:         $control-padding-x + 0.25;
 
@@ -292,7 +295,7 @@ $input-small-padding-y:                   $control-padding-y / 2;
 $input-small-padding-x:                   $control-padding-x;
  
 $input-large-border-radius:               $control-border-radius;
-$input-large-font-size:                   $large-font-size;
+$input-large-font-size:                   $control-large-font-size;
 $input-large-padding-y:                   $control-padding-y + 0.25;
 $input-large-padding-x:                   $control-padding-x + 0.25;
 
@@ -348,7 +351,7 @@ $select-small-padding-y:          $control-padding-y / 2;
 $select-small-padding-x:          $control-padding-x;
 
 $select-large-border-radius:      $control-border-radius;
-$select-large-font-size:          $large-font-size;
+$select-large-font-size:          $control-large-font-size;
 $select-large-padding-y:          0.575em;
 $select-large-padding-x:          $control-padding-x + 0.25;
 
@@ -446,18 +449,18 @@ $table-header-font-weight:             600;
 $table-header-text-align:              left;
 
 $table-border-style:                   dotted;
-$table-border-color:                   get_color('gray 5');
-$night-table-border-color:             get_night_color('gray 45');
+$table-border-color:                   get_color('gray 7');
+$night-table-border-color:             get_night_color('gray 43');
 
-$table-header-background-color:        get_color('gray 2');
-$night-table-header-background-color:  get_night_color('gray 48');
+$table-header-background-color:        get_color('gray 3');
+$night-table-header-background-color:  get_night_color('gray 47');
 
 $table-cell-padding:                   $quarter-spacing-unit $half-spacing-unit;
 
 $table-striped-index:                  even; // 'odd' or 'even'
 
-$table-striped-background-color:       get_color('gray 1');
-$night-table-striped-background-color: get_night_color('gray 49');
+$table-striped-background-color:       get_color('gray 2');
+$night-table-striped-background-color: get_night_color('gray 48');
 
 
 // ==========================================================================
@@ -469,8 +472,8 @@ $night-table-striped-background-color: get_night_color('gray 49');
 
 $border-width:       0.063rem;
 $border-style:       solid;
-$border-color:       get_color('gray 5');
-$night-border-color: get_night_color('gray 45');
+$border-color:       get_color('gray 7');
+$night-border-color: get_night_color('gray 43');
 $border-radius:      $base-border-radius;
 
 
@@ -620,14 +623,15 @@ $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 // Menu
 
-$menu-item-margin:                        0 0 0.25rem 0;
+$menu-item-margin:                        0;
+$menu-item-padding:                      ($quarter-spacing-unit / 4) 0;
 $menu-link-padding:                       $quarter-spacing-unit $half-spacing-unit;
 
-$menu-link-hover-background-color:        get_color('gray 2');
-$night-menu-link-hover-background-color:  get_night_color('gray 48');
+$menu-link-hover-background-color:        get_color('gray 4');
+$night-menu-link-hover-background-color:  get_night_color('gray 46');
 
-$menu-item-active-background-color:       get_color('gray 2');
-$night-menu-item-active-background-color: get_night_color('gray 48');
+$menu-item-active-background-color:       get_color('gray 4');
+$night-menu-item-active-background-color: get_night_color('gray 46');
 
 
 // Mobile nav
@@ -642,7 +646,7 @@ $night-mobile-nav-background-color: get_night_color('gray 48');
 
 $navbar-background-color:       $base-background-color;
 $night-navbar-background-color: $night-base-background-color;
-$navbar-brand-font-size:        $large-font-size;
+$navbar-brand-font-size:        1.25em;
 
 $navbar-collapse-transition:    max-height 0.4s cubic-bezier(0, 0, 0, 0.1), 
                                 opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), 
