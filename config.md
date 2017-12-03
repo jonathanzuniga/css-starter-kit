@@ -68,6 +68,7 @@
 
 		.sg-block {
 			border-top-color: #e0e0e0;
+			margin: 0;
 		}
 
 		.night .sg-block {

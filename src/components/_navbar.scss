@@ -469,3 +469,33 @@
 		}
 	}
 }
+
+.navbar--dark {
+	// background-color: ;
+
+	.navbar__item {
+		color: $night-text-color;
+
+		&.active {
+			.navbar__link {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $night-link-color;
+				}
+			}
+		}
+	}
+
+	.navbar__link,
+	.navbar__toggler {
+		&:link,
+		&:visited {
+			color: $night-text-color;
+		}
+
+		&:hover {
+			color: $night-link-color;
+		}
+	}
+}
