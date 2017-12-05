@@ -62,6 +62,7 @@
 .navbar {
 	background-color: $navbar-background-color;
 	justify-content: flex-start;
+	// transition: $base-transition;
 }
 
 .night {
@@ -391,7 +392,7 @@
  *             a(href='').navbar__link Brand
  *         a(href="#!").navbar__toggler Menu
  *         div.navbar__collapse
- *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-gutters-0.maxlg-txt-center
+ *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-grid-gap-0.maxlg-txt-center
  *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.xs-bd-bottom.xs-bd-left.md-bd-x.lg-bd-0
@@ -445,8 +446,6 @@
  *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
  */
 .navbar {
-	// transition: $base-transition;
-
 	&.fixed {
 		position: fixed;
 		width: 100%;

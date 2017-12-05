@@ -9,18 +9,18 @@
  *     @example
  *     div.grid-2
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  */
 @for $i from 1 through $grid-columns-number {
 	.grid-#{$i} {
 		display: grid;
-		grid-gap: $gutter-width;
+		grid-gap: $grid-gap;
 		grid-template-columns: repeat($i, 1fr);
 	}
 }
@@ -32,17 +32,17 @@
  *     @example
  *     div.xs-grid-2.md-grid-3
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-100 &nbsp;
+ *             div.bgc-green-20 &nbsp;
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-100 &nbsp;
+ *             div.bgc-green-20 &nbsp;
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-100 &nbsp;
+ *             div.bgc-green-20 &nbsp;
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
@@ -99,11 +99,11 @@
  *     @example
  *     div.xs-grid-2.md-grid-3
  *         div
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div
- *             div.bgc-gray-100 &nbsp;
+ *             div.bgc-green-20 &nbsp;
  *         div.maxmd-cell-x-2
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-green-10 &nbsp;
  *         div.md-cell-x-2.maxmd-hide
- *             div.bgc-gray-100 &nbsp;
+ *             div.bgc-green-20 &nbsp;
  */
