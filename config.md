@@ -87,6 +87,10 @@
 			background: #fafaff !important;
 		}
 
+		.drawer {
+			position: absolute;
+		}
+
 ### Body
 
 	div.container-fluid
@@ -187,6 +191,8 @@
 								ul.menu.flex-col
 									li
 										a(href='components.html#cards') Cards
+									li
+										a(href='components.html#drawer') Drawer
 									li
 										a(href='components.html#menu') Menu
 									li
