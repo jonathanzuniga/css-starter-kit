@@ -7,13 +7,22 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-open-drawer-right').drawer-toggle-right
+ *         input(type='checkbox', id='eg-open-drawer-left').drawer-toggle-left
  *         div.drawer.drawer--right
- *             div.p-4 Drawer content
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-right').btn Close
+ *         div.drawer.drawer--left
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-left').btn Close
  *         div.drawer-outside
  *             div.p-4
  *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 label(for='eg-open-drawer-right').btn Open right drawer
+ *                 div.txt-center
+ *                     label(for='eg-open-drawer-left').btn Open left drawer
+ *                     label(for='eg-open-drawer-right').btn Open right drawer
  */
 .drawer-wrapper {
 	overflow: hidden;
@@ -72,7 +81,11 @@
 	}
 }
 
-.drawer-toggle--right:checked {
+[class*='drawer-toggle-'] {
+	@extend .drawer-toggle;
+}
+
+.drawer-toggle-right:checked {
 	~ .drawer--right {
 		margin-right: 0;
 		
@@ -82,7 +95,7 @@
 	}
 }
 
-.drawer-toggle--left:checked {
+.drawer-toggle-left:checked {
 	~ .drawer--left {
 		margin-left: 0;
 		
@@ -98,8 +111,8 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right-push').drawer-toggle.drawer-toggle--right
- *         input(type='checkbox', id='eg-open-drawer-left-push').drawer-toggle.drawer-toggle--left
+ *         input(type='checkbox', id='eg-open-drawer-right-push').drawer-toggle-right
+ *         input(type='checkbox', id='eg-open-drawer-left-push').drawer-toggle-left
  *         div.drawer.drawer--right.drawer--push
  *             div.p-4
  *                 p Drawer content
@@ -131,13 +144,13 @@
 			   visibility $transition-duration $transition-timing-function;
 }
 
-.drawer-toggle:checked {
+[class*='drawer-toggle-']:checked {
 	~ .drawer--push ~ .drawer-outside {
 		margin: 0;
 	}
 }
 
-.drawer-toggle--right:checked {
+.drawer-toggle-right:checked {
 	~ .drawer--push.drawer--right {
 		transform: translate(0, 0);
 		
@@ -151,7 +164,7 @@
 	}
 }
 
-.drawer-toggle--left:checked {
+.drawer-toggle-left:checked {
 	~ .drawer--push.drawer--left {
 		transform: translate(0, 0);
 		
@@ -171,15 +184,24 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right-overlap').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-open-drawer-right-overlap').drawer-toggle-right
+ *         input(type='checkbox', id='eg-open-drawer-left-overlap').drawer-toggle-left
  *         div.drawer.drawer--right.drawer--overlap
- *             div.p-4 Drawer content
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-right-overlap').btn Close
+ *         div.drawer.drawer--left.drawer--overlap
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-left-overlap').btn Close
  *         div.drawer-outside
  *             div.p-4
  *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 label(for='eg-open-drawer-right-overlap').btn Open right drawer with overlap
+ *                 div.txt-center
+ *                     label(for='eg-open-drawer-left-overlap').btn Open left drawer
+ *                     label(for='eg-open-drawer-right-overlap').btn Open right drawer
  */
-.drawer-toggle:checked {
+[class*='drawer-toggle-']:checked {
 	~ .drawer--overlap ~ .drawer-outside {
 		margin: 0;
 	}
