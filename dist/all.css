@@ -110,6 +110,19 @@
   .drawer-toggle-left:checked ~ .drawer--left ~ .drawer-outside {
     margin-left: 300px; }
 
+.open.drawer {
+  visibility: visible; }
+
+.open.drawer--right {
+  margin-right: 0; }
+  .open.drawer--right ~ .drawer-outside {
+    margin-right: 300px; }
+
+.open.drawer--left {
+  margin-left: 0; }
+  .open.drawer--left ~ .drawer-outside {
+    margin-left: 300px; }
+
 /**
  * Drawer with push:
  * `.drawer--push`
@@ -164,6 +177,25 @@
 .drawer-toggle-left:checked ~ .drawer--push.drawer--right {
   transform: translateX(300px); }
 
+.open.drawer--push ~ .drawer-outside {
+  margin: 0; }
+
+.open.drawer--push.drawer--right {
+  transform: translate(0, 0); }
+  .open.drawer--push.drawer--right ~ .drawer-outside {
+    transform: translateX(-300px); }
+
+.open.drawer--push.drawer--left {
+  transform: translate(0, 0); }
+  .open.drawer--push.drawer--left ~ .drawer-outside {
+    transform: translateX(300px); }
+
+.close.drawer--push.drawer--right {
+  transform: translateX(300px); }
+
+.close.drawer--push.drawer--left {
+  transform: translateX(-300px); }
+
 /**
  * Drawer with overlap:
  * `.drawer--overlap`
@@ -188,6 +220,9 @@
  *                     label(for='eg-open-drawer-right-overlap').btn Open right drawer
  */
 [class*='drawer-toggle-']:checked ~ .drawer--overlap ~ .drawer-outside {
+  margin: 0; }
+
+.open.drawer--overlap ~ .drawer-outside {
   margin: 0; }
 
 /***

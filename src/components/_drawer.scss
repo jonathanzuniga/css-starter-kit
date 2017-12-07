@@ -62,7 +62,7 @@
 .drawer--left,
 .drawer--left ~ .drawer-outside {
 	transition: margin-left $transition-duration $transition-timing-function, 
-				  visibility $transition-duration $transition-timing-function;
+				 visibility $transition-duration $transition-timing-function;
 }
 
 .drawer-outside {
@@ -97,6 +97,28 @@
 
 .drawer-toggle-left:checked {
 	~ .drawer--left {
+		margin-left: 0;
+		
+		& ~ .drawer-outside {
+			margin-left: $drawer-width;
+		}
+	}
+}
+
+.open {
+	&.drawer {
+		visibility: visible;
+	}
+
+	&.drawer--right {
+		margin-right: 0;
+		
+		& ~ .drawer-outside {
+			margin-right: $drawer-width;
+		}
+	}
+
+	&.drawer--left {
 		margin-left: 0;
 		
 		& ~ .drawer-outside {
@@ -178,6 +200,38 @@
 	}
 }
 
+.open {
+	&.drawer--push ~ .drawer-outside {
+		margin: 0;
+	}
+
+	&.drawer--push.drawer--right {
+		transform: translate(0, 0);
+		
+		& ~ .drawer-outside {
+			transform: translateX(-$drawer-width);
+		}
+	}
+
+	&.drawer--push.drawer--left {
+		transform: translate(0, 0);
+		
+		& ~ .drawer-outside {
+			transform: translateX($drawer-width);
+		}
+	}
+}
+
+.close {
+	&.drawer--push.drawer--right {
+		transform: translateX($drawer-width);
+	}
+
+	&.drawer--push.drawer--left {
+		transform: translateX(-$drawer-width);
+	}
+}
+
 /**
  * Drawer with overlap:
  * `.drawer--overlap`
@@ -203,6 +257,12 @@
  */
 [class*='drawer-toggle-']:checked {
 	~ .drawer--overlap ~ .drawer-outside {
+		margin: 0;
+	}
+}
+
+.open {
+	&.drawer--overlap ~ .drawer-outside {
 		margin: 0;
 	}
 }
