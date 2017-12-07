@@ -7,7 +7,7 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right').drawer-toggle
+ *         input(type='checkbox', id='eg-open-drawer-right').drawer-toggle.drawer-toggle--right
  *         div.drawer.drawer--right
  *             div.p-4 Drawer content
  *         div.drawer-outside
@@ -32,13 +32,27 @@
 	margin-right: -$drawer-width;
 	
 	top: 0;
-	bottom: 0;
 	right: 0;
+	bottom: 0;
+}
+
+.drawer--left {
+	margin-left: -$drawer-width;
+	
+	top: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .drawer--right,
 .drawer--right ~ .drawer-outside {
 	transition: margin-right $transition-duration $transition-timing-function, 
+				  visibility $transition-duration $transition-timing-function;
+}
+
+.drawer--left,
+.drawer--left ~ .drawer-outside {
+	transition: margin-left $transition-duration $transition-timing-function, 
 				  visibility $transition-duration $transition-timing-function;
 }
 
@@ -55,13 +69,25 @@
 		~ .drawer {
 			visibility: visible;
 		}
+	}
+}
 
-		~ .drawer--right {
-			margin-right: 0;
-		}
-
-		~ .drawer--right ~ .drawer-outside {
+.drawer-toggle--right:checked {
+	~ .drawer--right {
+		margin-right: 0;
+		
+		& ~ .drawer-outside {
 			margin-right: $drawer-width;
+		}
+	}
+}
+
+.drawer-toggle--left:checked {
+	~ .drawer--left {
+		margin-left: 0;
+		
+		& ~ .drawer-outside {
+			margin-left: $drawer-width;
 		}
 	}
 }
@@ -72,17 +98,31 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right-push').drawer-toggle
+ *         input(type='checkbox', id='eg-open-drawer-right-push').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-open-drawer-left-push').drawer-toggle.drawer-toggle--left
  *         div.drawer.drawer--right.drawer--push
- *             div.p-4 Drawer content
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-right-push').btn Close
+ *         div.drawer.drawer--left.drawer--push
+ *             div.p-4
+ *                 p Drawer content
+ *                 label(for='eg-open-drawer-left-push').btn Close
  *         div.drawer-outside
  *             div.p-4
  *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 label(for='eg-open-drawer-right-push').btn Open right drawer with push
+ *                 div.txt-center
+ *                     label(for='eg-open-drawer-left-push').btn Open left drawer
+ *                     label(for='eg-open-drawer-right-push').btn Open right drawer
  */
 .drawer--push.drawer--right {
 	margin-right: 0;
 	transform: translateX($drawer-width);
+}
+
+.drawer--push.drawer--left {
+	margin-left: 0;
+	transform: translateX(-$drawer-width);
 }
 
 .drawer--push,
@@ -92,13 +132,36 @@
 }
 
 .drawer-toggle:checked {
-	~ .drawer--push {
-		transform: translate(0, 0);
-	}
-
 	~ .drawer--push ~ .drawer-outside {
 		margin: 0;
+	}
+}
+
+.drawer-toggle--right:checked {
+	~ .drawer--push.drawer--right {
+		transform: translate(0, 0);
+		
+		& ~ .drawer-outside {
+			transform: translateX(-$drawer-width);
+		}
+	}
+
+	~ .drawer--push.drawer--left {
 		transform: translateX(-$drawer-width);
+	}
+}
+
+.drawer-toggle--left:checked {
+	~ .drawer--push.drawer--left {
+		transform: translate(0, 0);
+		
+		& ~ .drawer-outside {
+			transform: translateX($drawer-width);
+		}
+	}
+
+	~ .drawer--push.drawer--right {
+		transform: translateX($drawer-width);
 	}
 }
 
@@ -108,7 +171,7 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-open-drawer-right-overlap').drawer-toggle
+ *         input(type='checkbox', id='eg-open-drawer-right-overlap').drawer-toggle.drawer-toggle--right
  *         div.drawer.drawer--right.drawer--overlap
  *             div.p-4 Drawer content
  *         div.drawer-outside
