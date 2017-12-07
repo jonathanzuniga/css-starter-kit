@@ -1,0 +1,89 @@
+/***
+ * Tabs:
+ */
+
+/**
+ * Standard tabs:
+ * `.menu`
+ *
+ *     @example
+ *     div.tabs
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs {
+	align-items: stretch;
+	display: flex;
+
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+	ul, a {
+		border-bottom-color: $tabs-border-bottom-color;
+		border-bottom-style: $tabs-border-bottom-style;
+		border-bottom-width: $tabs-border-bottom-width;
+	}
+
+	ul {
+		display: flex;
+		flex-grow: 1;
+		// flex-shrink: 0;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	li {
+		display: block;
+		margin: $tab-margin;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		a {
+			display: flex;
+			margin-bottom: -$tabs-border-bottom-width;
+
+			&:link,
+			&:visited {
+				color: $text-color;
+			}
+
+			&:hover {
+				border-bottom-color: $tab-link-hover-border-bottom-color;
+				color: $text-color;
+			}
+
+			padding: $tab-link-padding;
+		}
+
+		&.active {
+			a {
+				border-bottom-color: $tab-active-link-border-bottom-color;
+
+				&:link,
+				&:visited {
+					color: $link-color;
+				}
+
+				&:hover {
+					color: $link-color;
+				}
+			}
+		}
+	}
+}
+
+.tabs-details {
+	> div:not(.active) {
+		display: none;
+	}
+}

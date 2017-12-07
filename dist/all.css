@@ -1056,6 +1056,64 @@
   color: #8ba2e9; }
 
 /***
+ * Tabs:
+ */
+/**
+ * Standard tabs:
+ * `.menu`
+ *
+ *     @example
+ *     div.tabs
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs {
+  align-items: stretch;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .tabs ul, .tabs a {
+    border-bottom-color: #e0e0e0;
+    border-bottom-style: solid;
+    border-bottom-width: 0.063rem; }
+  .tabs ul {
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    padding-left: 0; }
+  .tabs li {
+    display: block;
+    margin: 0 1rem; }
+    .tabs li:first-child {
+      margin-left: 0; }
+    .tabs li a {
+      display: flex;
+      margin-bottom: -0.063rem;
+      padding: 0.5rem 0; }
+      .tabs li a:link, .tabs li a:visited {
+        color: #292928; }
+      .tabs li a:hover {
+        border-bottom-color: #292928;
+        color: #292928; }
+    .tabs li.active a {
+      border-bottom-color: #204dd5; }
+      .tabs li.active a:link, .tabs li.active a:visited {
+        color: #204dd5; }
+      .tabs li.active a:hover {
+        color: #204dd5; }
+
+.tabs-details > div:not(.active) {
+  display: none; }
+
+/***
  * Content:
  */
 * {
@@ -1310,7 +1368,7 @@ h6,
 ol, ul {
   list-style-position: outside;
   padding-left: 2.5rem; }
-  ol:not(last-child), ul:not(last-child) {
+  ol:not(:last-child), ul:not(:last-child) {
     margin-bottom: 1rem; }
 
 ul {

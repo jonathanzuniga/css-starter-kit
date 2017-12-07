@@ -200,6 +200,8 @@
 										a(href='components.html#navbar') Navbar
 									li
 										a(href='components.html#navmenu') Navmenu
+									li
+										a(href='components.html#tabs') Tabs
 						
 						p.m-top-4.m-bottom-4
 							input(id='switch-night-mode', type='checkbox').switch.switch--sm

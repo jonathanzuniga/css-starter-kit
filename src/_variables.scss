@@ -471,10 +471,11 @@ $night-table-striped-background-color: get_night_color('gray 48');
 
 // Borders
 
-$border-width:       0.063rem;
-$border-style:       solid;
 $border-color:       get_color('gray 7');
 $night-border-color: get_night_color('gray 43');
+$border-style:       solid;
+$border-width:       0.063rem;
+
 $border-radius:      $base-border-radius;
 
 
@@ -628,6 +629,13 @@ $card-box-shadow:             0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(0, 0, 0, 0.15);
 
 
+// Drawer
+
+$drawer-background-color:       get_color('gray 2');
+$night-drawer-background-color: get_night_color('gray 48');
+$drawer-width:                  300px;
+
+
 // Menu
 
 $menu-item-margin:                        0;
@@ -680,8 +688,14 @@ $full-screen-menu-open-transition:             opacity 700ms step-start,
 $full-screen-menu-open-content-transition:     opacity 700ms cubic-bezier(0.8, 0, 0.55, 0.94) 700ms;
 
 
-// Drawer
+// Tabs
 
-$drawer-background-color:       get_color('gray 2');
-$night-drawer-background-color: get_night_color('gray 48');
-$drawer-width:                  300px;
+$tabs-border-bottom-color:            $border-color;
+$tabs-border-bottom-style:            $border-style;
+$tabs-border-bottom-width:            $border-width;
+
+$tab-margin:                          0 $half-spacing-unit;
+
+$tab-link-padding:                    $quarter-spacing-unit 0;
+$tab-link-hover-border-bottom-color:  $text-color;
+$tab-active-link-border-bottom-color: $link-color;
