@@ -1060,7 +1060,7 @@
  */
 /**
  * Standard tabs:
- * `.menu`
+ * `.tabs`
  *
  *     @example
  *     div.tabs
@@ -1109,6 +1109,25 @@
         color: #204dd5; }
       .tabs li.active a:hover {
         color: #204dd5; }
+
+/**
+ * Center tabs:
+ * `.tabs--center`
+ *
+ *     @example
+ *     div.tabs.tabs--center
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs--center ul {
+  justify-content: center; }
 
 .tabs-details > div:not(.active) {
   display: none; }
