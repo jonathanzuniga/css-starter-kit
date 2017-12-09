@@ -61,14 +61,14 @@
 
 .drawer--right,
 .drawer--right ~ .drawer-outside {
-	transition: margin-right $transition-duration $transition-timing-function, 
-				  visibility $transition-duration $transition-timing-function;
+	transition: margin-right $base-transition-duration $base-transition-timing-function, 
+				  visibility $base-transition-duration $base-transition-timing-function;
 }
 
 .drawer--left,
 .drawer--left ~ .drawer-outside {
-	transition: margin-left $transition-duration $transition-timing-function, 
-				 visibility $transition-duration $transition-timing-function;
+	transition: margin-left $base-transition-duration $base-transition-timing-function, 
+				 visibility $base-transition-duration $base-transition-timing-function;
 }
 
 .drawer-outside {
@@ -168,8 +168,8 @@
 
 .drawer--push,
 .drawer--push ~ .drawer-outside {
-	transition: transform $transition-duration $transition-timing-function, 
-			   visibility $transition-duration $transition-timing-function;
+	transition: transform $base-transition-duration $base-transition-timing-function, 
+			   visibility $base-transition-duration $base-transition-timing-function;
 }
 
 [class*='drawer-toggle-']:checked {
