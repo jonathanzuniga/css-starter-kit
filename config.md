@@ -132,13 +132,13 @@
 									li
 										a(href='layout.html#grid') Grid
 									li
-										a(href='layout.html#gutters') Gutters
+										a(href='layout.html#gutter') Gutter
 									li
 										a(href='layout.html#horizontal-modifiers') Horizontal modifiers
 									li
 										a(href='layout.html#vertical-modifiers') Vertical modifiers
 									li
-										a(href='layout.html#offsets') Offsets
+										a(href='layout.html#offset') Offset
 
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Elements
@@ -147,28 +147,30 @@
 									li
 										a(href='elements.html#content') Content
 									li
-										a(href='elements.html#forms') Forms
+										a(href='elements.html#form') Form
 									li
-										a(href='elements.html#buttons') Buttons
+										a(href='elements.html#button') Button
 									li
 										a(href='elements.html#button-group') Button group
 									li
 										a(href='elements.html#input-group') Input group
 									li
-										a(href='elements.html#lists') Lists
+										a(href='elements.html#switch') Switch
 									li
-										a(href='elements.html#tables') Tables
+										a(href='elements.html#list') List
+									li
+										a(href='elements.html#table') Table
 
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Helpers
 
 								ul.menu.flex-col
 									li
-										a(href='helpers.html#borders') Borders
+										a(href='helpers.html#border') Border
 									li
 										a(href='helpers.html#clearfix') Clearfix
 									li
-										a(href='helpers.html#colors') Colors
+										a(href='helpers.html#colors') Color
 									li
 										a(href='helpers.html#float') Float
 									li
@@ -191,7 +193,7 @@
 
 								ul.menu.flex-col
 									li
-										a(href='components.html#cards') Cards
+										a(href='components.html#card') Card
 									li
 										a(href='components.html#drawer') Drawer
 									li

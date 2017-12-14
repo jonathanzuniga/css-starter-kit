@@ -1,5 +1,5 @@
 /***
- * Forms:
+ * Form:
  */
 
 .fld {
@@ -7,8 +7,8 @@
 }
 
 /**
- * Label:
- * `.lbl`
+ * Label and input:
+ * `.lbl` `.input`
  *
  *     @example
  *     label(for='eg-input').lbl Label
@@ -20,13 +20,6 @@
 	margin-bottom: $quarter-spacing-unit;
 }
 
-/**
- * Input:
- * `.input`
- *
- *     @example
- *     input(type='text', placeholder='Text input').input
- */
 .input,
 .txtarea {
 	background-color: $input-background-color;
@@ -368,23 +361,23 @@
 	}
 	
 	&:after {
-		border: $select-icon-border;
+		border: $select-icon-after-border;
 		border-right: 0;
 		border-top: 0;
 		
 		content: '';
 		display: block;
 
-		width: $select-icon-width;
-		height: $select-icon-height;
+		width: $select-icon-after-width;
+		height: $select-icon-after-height;
 
-		margin-top: $select-icon-margin-top;
+		margin-top: $select-icon-after-margin-top;
 		position: absolute;
-		top: $select-icon-top;
-		right: $select-icon-right;
+		top: $select-icon-after-top;
+		right: $select-icon-after-right;
 
 		pointer-events: none;
-		transform: $select-icon-transform;
+		transform: $select-icon-after-transform;
 		// transition: $base-transition;
 
 		// z-index: 4;
@@ -394,7 +387,7 @@
 .night {
 	.sel-icn {
 		&:after {
-			border-color: $night-select-icon-border-color;
+			border-color: $night-select-icon-after-border-color;
 		}
 	}
 }
@@ -460,11 +453,11 @@
 	}
 
 	&:after {
-		width: $select-icon-small-width;
-		height: $select-icon-small-height;
+		width: $select-icon-small-after-width;
+		height: $select-icon-small-after-height;
 
-		margin-top: $select-icon-small-margin-top;
-		right: $select-icon-small-right;
+		margin-top: $select-icon-small-after-margin-top;
+		right: $select-icon-small-after-right;
 	}
 }
 
@@ -476,10 +469,10 @@
 	}
 
 	&:after {
-		width: $select-icon-large-width;
-		height: $select-icon-large-height;
+		width: $select-icon-large-after-width;
+		height: $select-icon-large-after-height;
 
-		margin-top: $select-icon-large-margin-top;
-		right: $select-icon-large-right;
+		margin-top: $select-icon-large-after-margin-top;
+		right: $select-icon-large-after-right;
 	}
 }
