@@ -130,8 +130,6 @@
 									li
 										a(href='layout.html#flex-grid') Flex grid
 									li
-										a(href='layout.html#grid') Grid
-									li
 										a(href='layout.html#gutter') Gutter
 									li
 										a(href='layout.html#horizontal-modifiers') Horizontal modifiers
@@ -139,6 +137,8 @@
 										a(href='layout.html#vertical-modifiers') Vertical modifiers
 									li
 										a(href='layout.html#offset') Offset
+									li
+										a(href='layout.html#grid') Grid
 
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Elements
