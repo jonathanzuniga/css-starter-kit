@@ -8,10 +8,9 @@
 	link(rel='stylesheet', href='../dist/all.css')
 
 	style(type='text/css').
-		//- h1, h2, h3, h4, h5, h6,
-		//- .h1, .h2, .h3, .h4, .h5, .h6 {
-		//- 	font-weight: 300;
-		//- }
+		.sidebar {
+			font-size: 14px;
+		}
 
 		.sg-canvas {
 			*zoom: 1;
@@ -28,8 +27,9 @@
 		}
 
 		.color-swatch {
-			width: 50px;
-			height: 25px;
+			border-radius: 50%;
+			width: 48px;
+			height: 48px;
 		}
 
 		.h-100px {
@@ -38,10 +38,6 @@
 
 		.sg-block:last-of-type {
 			border-bottom: none;
-		}
-
-		.sidebar {
-			font-size: 14px;
 		}
 
 		@media (min-width: 1024px) {
@@ -68,12 +64,12 @@
 		}
 
 		.sg-block {
-			border-top-color: #e0e0e0;
+			border-top-color: #e8e9ec;
 			margin: 0;
 		}
 
 		.night .sg-block {
-			border-top-color: #3b3b3b;
+			border-top-color: #3a3b3e;
 		}
 
 		.night .sg-expando::before {
@@ -95,7 +91,7 @@
 ### Body
 
 	div.container-fluid
-		div.row.sm-hide
+		div.row.md-hide
 			div.col
 				nav.navbar.navbar-responsive.bd-bottom.fixed.ac-txtc
 					div.navbar__brand
@@ -103,15 +99,15 @@
 					a(href='#!', id='open-fsmenu').navbar__toggler Menu
 
 		div.row
-			div.main.xs-col-12.md-col-9.xl-col-10.maxsm-p-top-20
+			div.main.xs-col-12.md-col-9.xl-col-10.maxmd-p-top-20
 				div.main__content.row.cols-center
 					div.md-col-12.xl-col-10
 						div(sg-content).sg-container
 
-			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxsm-fsmenu.maxsm-p-top-12.bd-left
+			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu.maxmd-p-top-12
 				div.sidebar__content.row
 					div.col
-						h1.h2.bd-bottom.m-bottom-5.p-bottom-5.maxsm-hide CSS Starter Kit
+						h1.h2.maxmd-hide CSS Starter Kit
 
 						p
 							b DISCLAIMER - This is a very early stage work in progress project
@@ -126,7 +122,7 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Layout
 
-								ul.menu.flex-col
+								ul.menu.menu--pills.flex-col
 									li
 										a(href='layout.html#flex-grid') Flex grid
 									li
@@ -143,7 +139,7 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Elements
 
-								ul.menu.flex-col
+								ul.menu.menu--pills.flex-col
 									li
 										a(href='elements.html#content') Content
 									li
@@ -164,13 +160,13 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Helpers
 
-								ul.menu.flex-col
+								ul.menu.menu--pills.flex-col
 									li
 										a(href='helpers.html#border') Border
 									li
 										a(href='helpers.html#clearfix') Clearfix
 									li
-										a(href='helpers.html#colors') Color
+										a(href='helpers.html#color') Color
 									li
 										a(href='helpers.html#float') Float
 									li
@@ -191,7 +187,7 @@
 							div.xs-col-12.sm-col-6.md-col-12
 								h6.txt-uc Components
 
-								ul.menu.flex-col
+								ul.menu.menu--pills.flex-col
 									li
 										a(href='components.html#card') Card
 									li

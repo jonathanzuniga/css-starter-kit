@@ -47,7 +47,7 @@
 			shade(
 				#000, 
 				$button-background-color, 
-				$button-hover-background-color-shade-amount / 2.8
+				$button-hover-background-color-shade-amount
 			);
 		color: $text-color;
 		text-decoration: none;
@@ -59,7 +59,7 @@
 			shade(
 				#000, 
 				$button-background-color, 
-				$button-active-background-color-shade-amount / 2.8
+				$button-active-background-color-shade-amount
 			);
 		color: $text-color;
 	}
@@ -67,65 +67,45 @@
 	&:active,
 	&.active,
 	&:focus {
-		@include animation(
-			$button-active-animation-name 
-			$control-focus-animation-duration 
-			$control-focus-animation-fill-mode
-		);
+		box-shadow: $button-active-box-shadow;
 	}
 }
 
-@include keyframes($button-active-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($button-active-box-shadow-color, 0) }
-	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($button-active-box-shadow-color, $control-focus-box-shadow-color-opacity) }
-}
+.night .btn {
+	background-color: $night-button-background-color;
+	color: $night-text-color;
 
-.night {
-	.btn {
-		background-color: $night-button-background-color;
+	&:link,
+	&:visited {
 		color: $night-text-color;
-
-		&:link,
-		&:visited {
-			color: $night-text-color;
-		}
-
-		&:hover {
-			background-color: 
-				shade(
-					#fff, 
-					$night-button-background-color, 
-					$button-hover-background-color-shade-amount / 2.8
-				);
-			color: $night-text-color;
-		}
-
-		&:active,
-		&.active {
-			background-color: 
-				shade(
-					#fff, 
-					$night-button-background-color, 
-					$button-active-background-color-shade-amount / 2.8
-				);
-			color: $night-text-color;
-		}
-
-		&:active,
-		&.active,
-		&:focus {
-			@include animation(
-				$night-button-active-animation-name 
-				$control-focus-animation-duration 
-				$control-focus-animation-fill-mode
-			);
-		}
 	}
-}
 
-@include keyframes($night-button-active-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($night-button-active-box-shadow-color, 0) }
-	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($night-button-active-box-shadow-color, $control-focus-box-shadow-color-opacity) }
+	&:hover {
+		background-color: 
+			shade(
+				#fff, 
+				$night-button-background-color, 
+				$button-hover-background-color-shade-amount
+			);
+		color: $night-text-color;
+	}
+
+	&:active,
+	&.active {
+		background-color: 
+			shade(
+				#fff, 
+				$night-button-background-color, 
+				$button-active-background-color-shade-amount
+			);
+		color: $night-text-color;
+	}
+
+	&:active,
+	&.active,
+	&:focus {
+		box-shadow: $night-button-active-box-shadow;
+	}
 }
 
 @each 
@@ -140,7 +120,8 @@
 	$gradient-background-color-top-lightness,
 	$gradient-background-color-bottom-hue, 
 	$gradient-background-color-bottom-saturation, 
-	$gradient-background-color-bottom-lightness in $buttons {
+	$gradient-background-color-bottom-lightness,
+	$active-box-shadow in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -183,20 +164,14 @@
 			color: $text-color;
 		}
 
-		&:active,
-		&.active,
-		&:focus {
-			@include animation(
-				'#{$control-focus-animation-name}-#{$name}'
-				$control-focus-animation-duration 
-				$control-focus-animation-fill-mode
-			);
+		@if not ($active-box-shadow == '') {
+			&:active,
+			&.active,
+			&:focus {
+				box-shadow: 0 0 0 $control-focus-box-shadow-spread 
+				            rgba($background-color, $control-focus-box-shadow-color-opacity);
+			}
 		}
-	}
-
-	@include keyframes('#{$control-focus-animation-name}-#{$name}') {
-		  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
-		100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, $control-focus-box-shadow-color-opacity) }
 	}
 
 	.btn--gradient {
@@ -339,7 +314,8 @@
 		$gradient-background-color-top-lightness,
 		$gradient-background-color-bottom-hue, 
 		$gradient-background-color-bottom-saturation, 
-		$gradient-background-color-bottom-lightness in $night-buttons {
+		$gradient-background-color-bottom-lightness,
+		$active-box-shadow in $night-buttons {
 		$name_ucf: str_ucfirst($name);
 		$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -374,20 +350,14 @@
 				color: $text-color;
 			}
 
-			&:active,
-			&.active,
-			&:focus {
-				@include animation(
-					'#{$night-control-focus-animation-name}-#{$name}'
-					$control-focus-animation-duration 
-					$control-focus-animation-fill-mode
-				);
+			@if not ($active-box-shadow == '') {
+				&:active,
+				&.active,
+				&:focus {
+					box-shadow: 0 0 0 $control-focus-box-shadow-spread 
+					            rgba($background-color, $control-focus-box-shadow-color-opacity);
+				}
 			}
-		}
-
-		@include keyframes('#{$night-control-focus-animation-name}-#{$name}') {
-			  0% { box-shadow: 0 0 0 0 rgba($background-color, 0) }
-			100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($background-color, $control-focus-box-shadow-color-opacity) }
 		}
 
 		.btn--gradient {

@@ -41,38 +41,43 @@ th {
 .tbl {
 	// border-spacing: 0;
 
+	th, td {
+		&:not(:last-child) {
+			border-right-width: $table-border-width;
+			border-right-style: $table-border-right-style;
+		}
+	}
+
 	tr + tr {
 		th, td {
-			border-top: 1px $table-border-style $table-border-color;
+			border-top-width: $table-border-width;
+			border-top-style: $table-border-style;
 		}
 	}
 
 	th {
 		background-color: $table-header-background-color;
-		border-top: 1px solid $table-border-color;
-		border-bottom: 1px solid $table-border-color;
+		border-top-width: $table-border-width ;
+		border-top-style: $table-border-style;
+		border-bottom-width: $table-border-width;
+		border-bottom-style: $table-border-style;
 		font-weight: $table-header-font-weight;
 	}
 
 	th, td {
+		border-color: $table-border-color;
 		padding: $table-cell-padding;
 		vertical-align: top;
 	}
 }
 
-.night {
-	.tbl {
-		tr + tr {
-			th, td {
-				border-top-color: $night-table-border-color;
-			}
-		}
+.night .tbl {
+	th {
+		background-color: $night-table-header-background-color;
+	}
 
-		th {
-			background-color: $night-table-header-background-color;
-			border-top-color: $night-table-border-color;
-			border-bottom-color: $night-table-border-color;
-		}
+	th, td {
+		border-color: $night-table-border-color;
 	}
 }
 
@@ -116,25 +121,19 @@ th {
  *                 td Table data
  */
 .tbl--bordered {
-	border: 1px solid $table-border-color;
+	border-width: $table-border-width;
+	border-style: $table-border-style;
+	border-color: $table-border-color;
 
 	td, th {
 		&:not(:last-child) {
-			border-right: 1px solid $table-border-color;
+			border-right-style: $table-border-style;
 		}
 	}
 }
 
-.night {
-	.tbl--bordered {
-		border-color: $night-table-border-color;
-
-		td, th {
-			&:not(:last-child) {
-				border-right-color: $night-table-border-color;
-			}
-		}
-	}
+.night .tbl--bordered {
+	border-color: $night-table-border-color;
 }
 
 /**

@@ -43,28 +43,19 @@
 		&:active,
 		&.active,
 		&:focus {
-			animation: none;
+			box-shadow: none;
 		}
 	}
 
 	&.active {
-		@include animation(
-			$control-focus-animation-name 
-			$control-focus-animation-duration 
-			$control-focus-animation-fill-mode
-		);
-		border-radius: $control-border-radius;
+		box-shadow: $input-focus-box-shadow;
 	}
 }
 
 .night {
 	.btn-group {
 		&.active {
-			@include animation(
-				$night-control-focus-animation-name 
-				$control-focus-animation-duration 
-				$control-focus-animation-fill-mode
-			);
+			box-shadow: $night-input-focus-box-shadow;
 		}
 	}
 }
@@ -158,7 +149,7 @@
 			&:active,
 			&.active,
 			&:focus {
-				animation: none;
+				box-shadow: none;
 			}
 		}
 	}

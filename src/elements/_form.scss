@@ -25,7 +25,7 @@
 	background-color: $input-background-color;
 	border: $input-border;
 	border-radius: $input-border-radius;
-	box-shadow: $input-box-shadow;
+	box-shadow: none;
 	color: $input-text-color;
 	display: block;
 	font-family: $base-font-family;
@@ -36,8 +36,12 @@
 
 	width: 100%;
 
-	&:active {
-		border-color: $input-active-border-color;
+	// &::-moz-placeholder {
+	// 	opacity: 1;
+	// }
+
+	&::placeholder {
+		color: $input-placeholder;
 	}
 
 	&:invalid {
@@ -55,69 +59,61 @@
 
 	&:focus,
 	&:focus:hover {
-		@include animation(
-			$control-focus-animation-name 
-			$control-focus-animation-duration 
-			$control-focus-animation-fill-mode
-		);
-
 		background-color: $input-focus-background-color;
 		border-color: $input-focus-border-color;
 		border-width: $input-focus-border-width;
 
-		box-shadow: $control-focus-box-shadow;
+		box-shadow: $input-focus-box-shadow;
+
+		&::placeholder {
+			color: $input-focus-placeholder;
+		}
 	}
 
 	&:hover {
 		border-color: $input-hover-border-color;
 	}
-}
 
-@include keyframes($control-focus-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($control-focus-box-shadow-color, 0) }
-	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($control-focus-box-shadow-color, $control-focus-box-shadow-color-opacity) }
-}
-
-.night {
-	.input,
-	.txtarea {
-		background-color: $night-input-background-color;
-		border-color: $night-input-border-color;
-		color: $night-text-color;
-
-		&:active {
-			border-color: $night-input-active-border-color;
-		}
-
-		&:invalid {
-			border-color: $night-input-invalid-border-color;
-		}
-
-		&:valid {
-			border-color: $night-input-valid-border-color;
-		}
-
-		&:focus,
-		&:focus:hover {
-			@include animation(
-				$night-control-focus-animation-name 
-				$control-focus-animation-duration 
-				$control-focus-animation-fill-mode
-			);
-
-			border-color: $night-input-focus-border-color;
-			box-shadow: $night-control-focus-box-shadow;
-		}
-
-		&:hover {
-			border-color: $night-input-hover-border-color;
-		}
+	&:active {
+		border-color: $input-active-border-color;
 	}
 }
 
-@include keyframes($night-control-focus-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($night-control-focus-box-shadow-color, 0) }
-	100% { box-shadow: 0 0 0 $control-focus-box-shadow-spread rgba($night-control-focus-box-shadow-color, $control-focus-box-shadow-color-opacity) }
+.night .input,
+.night .txtarea {
+	background-color: $night-input-background-color;
+	border-color: $night-input-border-color;
+	color: $night-text-color;
+
+	&::placeholder {
+		color: $night-input-placeholder;
+	}
+
+	&:invalid {
+		border-color: $night-input-invalid-border-color;
+	}
+
+	&:valid {
+		border-color: $night-input-valid-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $night-input-focus-border-color;
+		box-shadow: $night-input-focus-box-shadow;
+
+		&::placeholder {
+			color: $night-input-focus-placeholder;
+		}
+	}
+
+	&:hover {
+		border-color: $night-input-hover-border-color;
+	}
+
+	&:active {
+		border-color: $night-input-active-border-color;
+	}
 }
 
 /**
@@ -164,37 +160,15 @@
 
 	&:focus,
 	&:focus:hover {
-		@include animation(
-			$input-line-focus-animation-name 
-			$control-focus-animation-duration 
-			$control-focus-animation-fill-mode
-		);
 		box-shadow: $input-line-focus-box-shadow;
 	}
 }
 
-@include keyframes($input-line-focus-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($input-line-focus-box-shadow-color, 0) }
-	100% { box-shadow: 0 ($control-border-width * 2) 0 (-$control-border-width) rgba($input-line-focus-box-shadow-color, $control-focus-box-shadow-color-opacity) }
-}
-
-.night {
-	.input--line {
-		&:focus,
-		&:focus:hover {
-			@include animation(
-				$night-input-line-focus-animation-name 
-				$control-focus-animation-duration 
-				$control-focus-animation-fill-mode
-			);
-			box-shadow: $night-input-line-focus-box-shadow;
-		}
+.night .input--line {
+	&:focus,
+	&:focus:hover {
+		box-shadow: $night-input-line-focus-box-shadow;
 	}
-}
-
-@include keyframes($night-input-line-focus-animation-name) {
-	  0% { box-shadow: 0 0 0 0 rgba($night-input-line-focus-box-shadow-color, 0) }
-	100% { box-shadow: 0 ($control-border-width * 2) 0 (-$control-border-width) rgba($night-input-line-focus-box-shadow-color, $control-focus-box-shadow-color-opacity) }
 }
 
 /**
@@ -267,7 +241,7 @@
 
 	[type='checkbox'],
 	[type='radio'] {
-		margin-top: $quarter-spacing-unit - 0.125;
+		margin-top: $quarter-spacing-unit;
 
 		position: absolute;
 

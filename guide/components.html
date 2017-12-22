@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="../dist/all.css">
   <style type="text/css">
-    //- h1, h2, h3, h4, h5, h6,
-    //- .h1, .h2, .h3, .h4, .h5, .h6 {
-    //-     font-weight: 300;
-    //- }
+    .sidebar {
+      font-size: 14px;
+    }
     .sg-canvas {
       *zoom: 1;
     }
@@ -24,17 +23,15 @@
       clear: both;
     }
     .color-swatch {
-      width: 50px;
-      height: 25px;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
     }
     .h-100px {
       height: 100px;
     }
     .sg-block:last-of-type {
       border-bottom: none;
-    }
-    .sidebar {
-      font-size: 14px;
     }
     @media (min-width: 1024px) {
       .sidebar {
@@ -57,11 +54,11 @@
       padding-bottom: 2.5rem;
     }
     .sg-block {
-      border-top-color: #e0e0e0;
+      border-top-color: #e8e9ec;
       margin: 0;
     }
     .night .sg-block {
-      border-top-color: #3b3b3b;
+      border-top-color: #3a3b3e;
     }
     .night .sg-expando::before {
       background-color: rgba(255, 255, 255, 0.1);
@@ -80,7 +77,7 @@
 
 <body class="sg">
   <div class="container-fluid">
-    <div class="row sm-hide">
+    <div class="row md-hide">
       <div class="col">
         <nav class="navbar navbar-responsive bd-bottom fixed ac-txtc">
           <div class="navbar__brand">
@@ -91,7 +88,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="main xs-col-12 md-col-9 xl-col-10 maxsm-p-top-20">
+      <div class="main xs-col-12 md-col-9 xl-col-10 maxmd-p-top-20">
         <div class="main__content row cols-center">
           <div class="md-col-12 xl-col-10">
             <div class="sg-container">
@@ -922,10 +919,10 @@
           </div>
         </div>
       </div>
-      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxsm-fsmenu maxsm-p-top-12 bd-left">
+      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu maxmd-p-top-12">
         <div class="sidebar__content row">
           <div class="col">
-            <h1 class="h2 bd-bottom m-bottom-5 p-bottom-5 maxsm-hide">CSS Starter Kit</h1>
+            <h1 class="h2 maxmd-hide">CSS Starter Kit</h1>
             <p>
               <b>DISCLAIMER - This is a very early stage work in progress project</b>
             </p>
@@ -935,7 +932,7 @@
             <div class="row">
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Layout</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="layout.html#flex-grid">Flex grid</a>
                   </li>
@@ -958,7 +955,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Elements</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="elements.html#content">Content</a>
                   </li>
@@ -987,7 +984,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Helpers</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="helpers.html#border">Border</a>
                   </li>
@@ -995,7 +992,7 @@
                     <a href="helpers.html#clearfix">Clearfix</a>
                   </li>
                   <li>
-                    <a href="helpers.html#colors">Color</a>
+                    <a href="helpers.html#color">Color</a>
                   </li>
                   <li>
                     <a href="helpers.html#float">Float</a>
@@ -1025,7 +1022,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Components</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="components.html#card">Card</a>
                   </li>

@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="../dist/all.css">
   <style type="text/css">
-    //- h1, h2, h3, h4, h5, h6,
-    //- .h1, .h2, .h3, .h4, .h5, .h6 {
-    //-     font-weight: 300;
-    //- }
+    .sidebar {
+      font-size: 14px;
+    }
     .sg-canvas {
       *zoom: 1;
     }
@@ -24,17 +23,15 @@
       clear: both;
     }
     .color-swatch {
-      width: 50px;
-      height: 25px;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
     }
     .h-100px {
       height: 100px;
     }
     .sg-block:last-of-type {
       border-bottom: none;
-    }
-    .sidebar {
-      font-size: 14px;
     }
     @media (min-width: 1024px) {
       .sidebar {
@@ -57,11 +54,11 @@
       padding-bottom: 2.5rem;
     }
     .sg-block {
-      border-top-color: #e0e0e0;
+      border-top-color: #e8e9ec;
       margin: 0;
     }
     .night .sg-block {
-      border-top-color: #3b3b3b;
+      border-top-color: #3a3b3e;
     }
     .night .sg-expando::before {
       background-color: rgba(255, 255, 255, 0.1);
@@ -80,7 +77,7 @@
 
 <body class="sg">
   <div class="container-fluid">
-    <div class="row sm-hide">
+    <div class="row md-hide">
       <div class="col">
         <nav class="navbar navbar-responsive bd-bottom fixed ac-txtc">
           <div class="navbar__brand">
@@ -91,7 +88,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="main xs-col-12 md-col-9 xl-col-10 maxsm-p-top-20">
+      <div class="main xs-col-12 md-col-9 xl-col-10 maxmd-p-top-20">
         <div class="main__content row cols-center">
           <div class="md-col-12 xl-col-10">
             <div class="sg-container">
@@ -300,14 +297,14 @@
                   <div class="sg-example">
                     <div class="sg-canvas">
                       <div>
-                        <div class="bgc-sky-blue-25 p-5 w-50 flt-left"></div>
-                        <div class="bgc-light-green-25 p-5 w-50 flt-right"></div>
+                        <div class="bgc-blue-25 p-5 w-50 flt-left"></div>
+                        <div class="bgc-green-25 p-5 w-50 flt-right"></div>
                       </div>
                       <div class="cf"></div>
                       <div class="bgc-yellow-25 p-5"></div>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-sky-blue-25 p-5 w-50 flt-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-light-green-25 p-5 w-50 flt-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-blue-25 p-5 w-50 flt-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-green-25 p-5 w-50 flt-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;cf&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-yellow-25 p-5&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
@@ -331,7 +328,7 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-black"></div>
+                            <div class="color-swatch bgc-black"></div>
                           </td>
                           <td class="w-20 txt-select txtc-black maxsm-hide">black</td>
                           <td class="w-20 txt-select txtc-black">#000000</td>
@@ -341,7 +338,7 @@
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-black&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-black&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-black maxsm-hide&quot;</span>&gt;</span>black<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-black&quot;</span>&gt;</span>#000000<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
@@ -364,7 +361,7 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-white"></div>
+                            <div class="color-swatch bgc-white"></div>
                           </td>
                           <td class="w-20 txt-select txtc-white maxsm-hide">white</td>
                           <td class="w-20 txt-select txtc-white">#ffffff</td>
@@ -374,7 +371,7 @@
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-white&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-white&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-white maxsm-hide&quot;</span>&gt;</span>white<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-white&quot;</span>&gt;</span>#ffffff<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
@@ -397,32 +394,32 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-blue-25"></div>
+                            <div class="color-swatch bgc-blue-25"></div>
                           </td>
                           <td class="w-20 txt-select txtc-blue-25 maxsm-hide">blue</td>
-                          <td class="w-20 txt-select txtc-blue-25">#204dd5</td>
-                          <td class="w-20 txt-select txtc-blue-25">rgb(32, 77, 213)</td>
+                          <td class="w-20 txt-select txtc-blue-25">#259af4</td>
+                          <td class="w-20 txt-select txtc-blue-25">rgb(37, 154, 244)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-blue-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-blue-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-blue-25 maxsm-hide&quot;</span>&gt;</span>blue<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-blue-25&quot;</span>&gt;</span>#204dd5<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-blue-25&quot;</span>&gt;</span>rgb(32, 77, 213)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-blue-25&quot;</span>&gt;</span>#259af4<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-blue-25&quot;</span>&gt;</span>rgb(37, 154, 244)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
                 </section>
-                <section class="sg-block sg-section-sky-blue-color">
+                <section class="sg-block sg-section-dark-blue-color">
                   <div class="sg-text">
-                    <h3 id="sky-blue-color" class="sg">Sky blue color</h3>
+                    <h3 id="dark-blue-color" class="sg">Dark blue color</h3>
                     <p class="sg">
-                      <code class="sg">.bgc-sky-blue-[1...50]</code>
-                      <code class="sg">.txtc-sky-blue-[1...50]</code>
-                      <code class="sg">.bdc-sky-blue-[1...50]</code>
+                      <code class="sg">.bgc-dark-blue</code>
+                      <code class="sg">.txtc-dark-blue</code>
+                      <code class="sg">.bdc-dark-blue</code>
                     </p>
                   </div>
                   <div class="sg-example">
@@ -430,87 +427,21 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-sky-blue-25"></div>
+                            <div class="color-swatch bgc-dark-blue"></div>
                           </td>
-                          <td class="w-20 txt-select txtc-sky-blue-25 maxsm-hide">sky-blue</td>
-                          <td class="w-20 txt-select txtc-sky-blue-25">#1a9ee6</td>
-                          <td class="w-20 txt-select txtc-sky-blue-25">rgb(26, 158, 230)</td>
+                          <td class="w-20 txt-select txtc-dark-blue maxsm-hide">dark-blue</td>
+                          <td class="w-20 txt-select txtc-dark-blue">#1174d9</td>
+                          <td class="w-20 txt-select txtc-dark-blue">rgb(17, 116, 217)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-sky-blue-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-dark-blue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-sky-blue-25 maxsm-hide&quot;</span>&gt;</span>sky-blue<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-sky-blue-25&quot;</span>&gt;</span>#1a9ee6<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-sky-blue-25&quot;</span>&gt;</span>rgb(26, 158, 230)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-green-color">
-                  <div class="sg-text">
-                    <h3 id="green-color" class="sg">Green color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-green-[1...50]</code>
-                      <code class="sg">.txtc-green-[1...50]</code>
-                      <code class="sg">.bdc-green-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-green-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-green-25 maxsm-hide">green</td>
-                          <td class="w-20 txt-select txtc-green-25">#00a06f</td>
-                          <td class="w-20 txt-select txtc-green-25">rgb(0, 160, 111)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-green-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25 maxsm-hide&quot;</span>&gt;</span>green<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25&quot;</span>&gt;</span>#00a06f<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25&quot;</span>&gt;</span>rgb(0, 160, 111)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-light-green-color">
-                  <div class="sg-text">
-                    <h3 id="light-green-color" class="sg">Light green color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-light-green-[1...50]</code>
-                      <code class="sg">.txtc-light-green-[1...50]</code>
-                      <code class="sg">.bdc-light-green-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-light-green-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-light-green-25 maxsm-hide">light-green</td>
-                          <td class="w-20 txt-select txtc-light-green-25">#59c068</td>
-                          <td class="w-20 txt-select txtc-light-green-25">rgb(89, 192, 104)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-light-green-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-light-green-25 maxsm-hide&quot;</span>&gt;</span>light-green<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-light-green-25&quot;</span>&gt;</span>#59c068<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-light-green-25&quot;</span>&gt;</span>rgb(89, 192, 104)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-dark-blue maxsm-hide&quot;</span>&gt;</span>dark-blue<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-dark-blue&quot;</span>&gt;</span>#1174d9<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-dark-blue&quot;</span>&gt;</span>rgb(17, 116, 217)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
@@ -529,21 +460,87 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-gray-25"></div>
+                            <div class="color-swatch bgc-gray-25"></div>
                           </td>
                           <td class="w-20 txt-select txtc-gray-25 maxsm-hide">gray</td>
-                          <td class="w-20 txt-select txtc-gray-25">#919190</td>
-                          <td class="w-20 txt-select txtc-gray-25">rgb(145, 145, 144)</td>
+                          <td class="w-20 txt-select txtc-gray-25">#9e9e9f</td>
+                          <td class="w-20 txt-select txtc-gray-25">rgb(158, 158, 159)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-gray-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-gray-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-gray-25 maxsm-hide&quot;</span>&gt;</span>gray<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-gray-25&quot;</span>&gt;</span>#919190<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-gray-25&quot;</span>&gt;</span>rgb(145, 145, 144)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-gray-25&quot;</span>&gt;</span>#9e9e9f<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-gray-25&quot;</span>&gt;</span>rgb(158, 158, 159)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-cool-gray-color">
+                  <div class="sg-text">
+                    <h3 id="cool-gray-color" class="sg">Cool gray color</h3>
+                    <p class="sg">
+                      <code class="sg">.bgc-cool-gray-[1...50]</code>
+                      <code class="sg">.txtc-cool-gray-[1...50]</code>
+                      <code class="sg">.bdc-cool-gray-[1...50]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl">
+                        <tr>
+                          <td class="w-20">
+                            <div class="color-swatch bgc-cool-gray-25"></div>
+                          </td>
+                          <td class="w-20 txt-select txtc-cool-gray-25 maxsm-hide">cool-gray</td>
+                          <td class="w-20 txt-select txtc-cool-gray-25">#9ea3af</td>
+                          <td class="w-20 txt-select txtc-cool-gray-25">rgb(158, 163, 175)</td>
+                        </tr>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-cool-gray-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-cool-gray-25 maxsm-hide&quot;</span>&gt;</span>cool-gray<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-cool-gray-25&quot;</span>&gt;</span>#9ea3af<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-cool-gray-25&quot;</span>&gt;</span>rgb(158, 163, 175)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-green-color">
+                  <div class="sg-text">
+                    <h3 id="green-color" class="sg">Green color</h3>
+                    <p class="sg">
+                      <code class="sg">.bgc-green-[1...50]</code>
+                      <code class="sg">.txtc-green-[1...50]</code>
+                      <code class="sg">.bdc-green-[1...50]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <table class="tbl">
+                        <tr>
+                          <td class="w-20">
+                            <div class="color-swatch bgc-green-25"></div>
+                          </td>
+                          <td class="w-20 txt-select txtc-green-25 maxsm-hide">green</td>
+                          <td class="w-20 txt-select txtc-green-25">#15ca6e</td>
+                          <td class="w-20 txt-select txtc-green-25">rgb(21, 202, 110)</td>
+                        </tr>
+                      </table>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-green-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25 maxsm-hide&quot;</span>&gt;</span>green<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25&quot;</span>&gt;</span>#15ca6e<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-green-25&quot;</span>&gt;</span>rgb(21, 202, 110)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
@@ -552,9 +549,9 @@
                   <div class="sg-text">
                     <h3 id="orange-color" class="sg">Orange color</h3>
                     <p class="sg">
-                      <code class="sg">.bgc-orange-[1...50]</code>
-                      <code class="sg">.txtc-orange-[1...50]</code>
-                      <code class="sg">.bdc-orange-[1...50]</code>
+                      <code class="sg">.bgc-orange</code>
+                      <code class="sg">.txtc-orange</code>
+                      <code class="sg">.bdc-orange</code>
                     </p>
                   </div>
                   <div class="sg-example">
@@ -562,120 +559,21 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-orange-25"></div>
+                            <div class="color-swatch bgc-orange"></div>
                           </td>
-                          <td class="w-20 txt-select txtc-orange-25 maxsm-hide">orange</td>
-                          <td class="w-20 txt-select txtc-orange-25">#e07924</td>
-                          <td class="w-20 txt-select txtc-orange-25">rgb(224, 121, 36)</td>
+                          <td class="w-20 txt-select txtc-orange maxsm-hide">orange</td>
+                          <td class="w-20 txt-select txtc-orange">#ff9f5f</td>
+                          <td class="w-20 txt-select txtc-orange">rgb(255, 159, 95)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-orange-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-orange&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange-25 maxsm-hide&quot;</span>&gt;</span>orange<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange-25&quot;</span>&gt;</span>#e07924<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange-25&quot;</span>&gt;</span>rgb(224, 121, 36)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-soft-orange-color">
-                  <div class="sg-text">
-                    <h3 id="soft-orange-color" class="sg">Soft orange color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-soft-orange-[1...50]</code>
-                      <code class="sg">.txtc-soft-orange-[1...50]</code>
-                      <code class="sg">.bdc-soft-orange-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-soft-orange-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-soft-orange-25 maxsm-hide">soft-orange</td>
-                          <td class="w-20 txt-select txtc-soft-orange-25">#e69b58</td>
-                          <td class="w-20 txt-select txtc-soft-orange-25">rgb(230, 155, 88)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-soft-orange-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-soft-orange-25 maxsm-hide&quot;</span>&gt;</span>soft-orange<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-soft-orange-25&quot;</span>&gt;</span>#e69b58<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-soft-orange-25&quot;</span>&gt;</span>rgb(230, 155, 88)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-purple-color">
-                  <div class="sg-text">
-                    <h3 id="purple-color" class="sg">Purple color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-purple-[1...50]</code>
-                      <code class="sg">.txtc-purple-[1...50]</code>
-                      <code class="sg">.bdc-purple-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-purple-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-purple-25 maxsm-hide">purple</td>
-                          <td class="w-20 txt-select txtc-purple-25">#a55cd5</td>
-                          <td class="w-20 txt-select txtc-purple-25">rgb(165, 92, 213)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-purple-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-purple-25 maxsm-hide&quot;</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-purple-25&quot;</span>&gt;</span>#a55cd5<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-purple-25&quot;</span>&gt;</span>rgb(165, 92, 213)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-deep-purple-color">
-                  <div class="sg-text">
-                    <h3 id="deep-purple-color" class="sg">Deep purple color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-deep-purple-[1...50]</code>
-                      <code class="sg">.txtc-deep-purple-[1...50]</code>
-                      <code class="sg">.bdc-deep-purple-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-deep-purple-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-deep-purple-25 maxsm-hide">deep-purple</td>
-                          <td class="w-20 txt-select txtc-deep-purple-25">#7756c3</td>
-                          <td class="w-20 txt-select txtc-deep-purple-25">rgb(119, 86, 195)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-deep-purple-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-deep-purple-25 maxsm-hide&quot;</span>&gt;</span>deep-purple<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-deep-purple-25&quot;</span>&gt;</span>#7756c3<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-deep-purple-25&quot;</span>&gt;</span>rgb(119, 86, 195)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange maxsm-hide&quot;</span>&gt;</span>orange<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange&quot;</span>&gt;</span>#ff9f5f<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-orange&quot;</span>&gt;</span>rgb(255, 159, 95)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
@@ -694,21 +592,21 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-red-25"></div>
+                            <div class="color-swatch bgc-red-25"></div>
                           </td>
                           <td class="w-20 txt-select txtc-red-25 maxsm-hide">red</td>
-                          <td class="w-20 txt-select txtc-red-25">#ed5353</td>
-                          <td class="w-20 txt-select txtc-red-25">rgb(237, 83, 83)</td>
+                          <td class="w-20 txt-select txtc-red-25">#ff635f</td>
+                          <td class="w-20 txt-select txtc-red-25">rgb(255, 99, 95)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-red-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-red-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-red-25 maxsm-hide&quot;</span>&gt;</span>red<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-red-25&quot;</span>&gt;</span>#ed5353<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-red-25&quot;</span>&gt;</span>rgb(237, 83, 83)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-red-25&quot;</span>&gt;</span>#ff635f<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-red-25&quot;</span>&gt;</span>rgb(255, 99, 95)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
@@ -727,54 +625,21 @@
                       <table class="tbl">
                         <tr>
                           <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-yellow-25"></div>
+                            <div class="color-swatch bgc-yellow-25"></div>
                           </td>
                           <td class="w-20 txt-select txtc-yellow-25 maxsm-hide">yellow</td>
-                          <td class="w-20 txt-select txtc-yellow-25">#fff200</td>
-                          <td class="w-20 txt-select txtc-yellow-25">rgb(255, 242, 0)</td>
+                          <td class="w-20 txt-select txtc-yellow-25">#fcd45c</td>
+                          <td class="w-20 txt-select txtc-yellow-25">rgb(252, 212, 92)</td>
                         </tr>
                       </table>
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-yellow-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bgc-yellow-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-yellow-25 maxsm-hide&quot;</span>&gt;</span>yellow<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-yellow-25&quot;</span>&gt;</span>#fff200<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-yellow-25&quot;</span>&gt;</span>rgb(255, 242, 0)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-lime-yellow-color">
-                  <div class="sg-text">
-                    <h3 id="lime-yellow-color" class="sg">Lime yellow color</h3>
-                    <p class="sg">
-                      <code class="sg">.bgc-lime-yellow-[1...50]</code>
-                      <code class="sg">.txtc-lime-yellow-[1...50]</code>
-                      <code class="sg">.bdc-lime-yellow-[1...50]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <table class="tbl">
-                        <tr>
-                          <td class="w-20">
-                            <div class="color-swatch bd-radius bgc-lime-yellow-25"></div>
-                          </td>
-                          <td class="w-20 txt-select txtc-lime-yellow-25 maxsm-hide">lime-yellow</td>
-                          <td class="w-20 txt-select txtc-lime-yellow-25">#e4c100</td>
-                          <td class="w-20 txt-select txtc-lime-yellow-25">rgb(228, 193, 0)</td>
-                        </tr>
-                      </table>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tbl&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color-swatch bd-radius bgc-lime-yellow-25&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-lime-yellow-25 maxsm-hide&quot;</span>&gt;</span>lime-yellow<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-lime-yellow-25&quot;</span>&gt;</span>#e4c100<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-lime-yellow-25&quot;</span>&gt;</span>rgb(228, 193, 0)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-yellow-25&quot;</span>&gt;</span>#fcd45c<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">td</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w-20 txt-select txtc-yellow-25&quot;</span>&gt;</span>rgb(252, 212, 92)<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
                   </div>
@@ -1036,11 +901,11 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <div class="bgc-sky-blue-10 cf">
-                        <div class="m-4 bgc-sky-blue-15">&#xA0;</div>
+                      <div class="bgc-blue-10 cf">
+                        <div class="m-4 bgc-blue-15">&#xA0;</div>
                       </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-sky-blue-10 cf&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;m-4 bgc-sky-blue-15&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-blue-10 cf&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;m-4 bgc-blue-15&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
@@ -1056,11 +921,11 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <div class="bgc-sky-blue-10 cf">
-                        <div class="md-m-4 bgc-sky-blue-15">&#xA0;</div>
+                      <div class="bgc-blue-10 cf">
+                        <div class="md-m-4 bgc-blue-15">&#xA0;</div>
                       </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-sky-blue-10 cf&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-m-4 bgc-sky-blue-15&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-blue-10 cf&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-m-4 bgc-blue-15&quot;</span>&gt;</span>&amp;nbsp;<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
@@ -1496,10 +1361,10 @@
           </div>
         </div>
       </div>
-      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxsm-fsmenu maxsm-p-top-12 bd-left">
+      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu maxmd-p-top-12">
         <div class="sidebar__content row">
           <div class="col">
-            <h1 class="h2 bd-bottom m-bottom-5 p-bottom-5 maxsm-hide">CSS Starter Kit</h1>
+            <h1 class="h2 maxmd-hide">CSS Starter Kit</h1>
             <p>
               <b>DISCLAIMER - This is a very early stage work in progress project</b>
             </p>
@@ -1509,7 +1374,7 @@
             <div class="row">
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Layout</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="layout.html#flex-grid">Flex grid</a>
                   </li>
@@ -1532,7 +1397,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Elements</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="elements.html#content">Content</a>
                   </li>
@@ -1561,7 +1426,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Helpers</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="helpers.html#border">Border</a>
                   </li>
@@ -1569,7 +1434,7 @@
                     <a href="helpers.html#clearfix">Clearfix</a>
                   </li>
                   <li>
-                    <a href="helpers.html#colors">Color</a>
+                    <a href="helpers.html#color">Color</a>
                   </li>
                   <li>
                     <a href="helpers.html#float">Float</a>
@@ -1599,7 +1464,7 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <h6 class="txt-uc">Components</h6>
-                <ul class="menu flex-col">
+                <ul class="menu menu--pills flex-col">
                   <li>
                     <a href="components.html#card">Card</a>
                   </li>
