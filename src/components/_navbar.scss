@@ -20,9 +20,10 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *         input(type='checkbox', id='eg-navbar-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href="#!").navbar__toggler Menu
+ *         label(for='eg-navbar-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
@@ -51,13 +52,13 @@
 	align-items: center;
 }
 
-.navbar,
-.navbar__brand,
-.navbar__toggler,
-.navbar__menu,
-.navbar__form {
-	min-height: 3.5rem;
-}
+// .navbar,
+// .navbar__brand,
+// .navbar__toggler,
+// .navbar__menu,
+// .navbar__form {
+// 	min-height: 3.5rem;
+// }
 
 .navbar {
 	background-color: $navbar-background-color;
@@ -69,6 +70,12 @@
 	.navbar {
 		background-color: $night-navbar-background-color;
 	}
+}
+
+.navbar-toggle {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 .navbar__brand {
@@ -86,7 +93,7 @@
 .navbar__toggler,
 .navbar__link,
 .navbar__form {
-	padding: $quarter-spacing-unit $half-spacing-unit;
+	padding: $navbar-padding-y $navbar-padding-x;
 }
 
 .navbar__collapse,
@@ -105,9 +112,10 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *         input(type='checkbox', id='eg-right-align-navbar-menu-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href='#!').navbar__toggler Menu
+ *         label(for='eg-right-align-navbar-menu-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
@@ -185,9 +193,10 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href='#!').navbar__toggler Menu
+ *         label(for='eg-responsive-navbar-menu-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
@@ -197,47 +206,21 @@
  *                 li.navbar__item
  *                     a(href='').navbar__link About
  */
-@mixin navbar-responsive-collapse-focus {
-	// animation: fade-in-move-down 0.8s;
-	max-height: 100vh;
-	opacity: 1;
-	transform: translateY(0);
-	z-index: 10;
-}
-
 @mixin navbar-responsive-collapse {
 	.navbar__toggler {
 		display: flex;
 		order: 2;
-
-		&:focus ~ .navbar__collapse:not(.close) {
-			@include navbar-responsive-collapse-focus;
-		}
-
-		// &:not(:focus) + .navbar__collapse,
-		// *:not(.input:focus-within) {
-		// 	animation: fade-out-move-up 0.4s;
-		// }
 	}
 
 	.navbar__collapse {
 		flex-wrap: wrap;
 		max-height: 0;
 		opacity: 0;
-		padding: 0 $half-spacing-unit;
-		transform: translateY(-$half-spacing-unit);
+		padding: 0 $navbar-padding-x;
+		transform: translateY(-$navbar-padding-x);
 		transition: $navbar-collapse-transition;
 		width: 100%;
 		z-index: -1;
-
-		&:focus-within,
-		&.open {
-			@include navbar-responsive-collapse-focus;
-		}
-
-		// &:not(:focus-within) {
-		// 	animation: fade-out-move-up 0.4s;
-		// }
 
 		&:first-of-type {
 			order: 4;
@@ -246,35 +229,61 @@
 		&:last-of-type {
 			order: 3;
 		}
+
+		&.open {
+			animation: fade-in-move-down 0.8s;
+			max-height: 100vh;
+			opacity: 1;
+			transform: translateY(0);
+			z-index: 10;
+		}
 	}
 
-	// @keyframes fade-in-move-down {
-	// 	0% {
-	// 		max-height: 0;
-	// 		opacity: 0;
-	// 		transform: translateY(-$base-spacing-unit);
-	// 	}
+	.navbar-toggle {
+		&:checked {
+			~ .navbar__collapse {
+				animation: fade-in-move-down 0.8s;
+				max-height: 100vh;
+				opacity: 1;
+				transform: translateY(0);
+				z-index: 10;
+			}
+		}
 
-	// 	100% {
-	// 		max-height: 600px;
-	// 		opacity: 1;
-	// 		transform: translateY(0);
-	// 	}
-	// }
+		&:not(:checked) {
+			~ .navbar__collapse {
+				animation: fade-out-move-up 0.4s;
+			}
+		}
+	}
 
-	// @keyframes fade-out-move-up {
-	// 	100% {
-	// 		max-height: 0;
-	// 		opacity: 0;
-	// 		transform: translateY(-$base-spacing-unit);
-	// 	}
+	@keyframes fade-in-move-down {
+		0% {
+			max-height: 0;
+			opacity: 0;
+			transform: translateY(-$base-spacing-unit);
+		}
 
-	// 	0% {
-	// 		max-height: 600px;
-	// 		opacity: 1;
-	// 		transform: translateY(0);
-	// 	}
-	// }
+		100% {
+			max-height: 100vh;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fade-out-move-up {
+		100% {
+			max-height: 0;
+			opacity: 0;
+			transform: translateY(-$base-spacing-unit);
+		}
+
+		0% {
+			max-height: 100vh;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
 	.navbar__menu,
 	.navbar__item {
@@ -352,9 +361,10 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href='#!').navbar__toggler Menu
+ *         label(for='eg-responsive-navbar-menu-at-top-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
@@ -371,9 +381,10 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
+ *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href='#!').navbar__toggler Menu
+ *         label(for='eg-open-responsive-navbar-menu-toggler').navbar__toggler Menu
  *         div.navbar__collapse.open
  *             ul.navbar__menu
  *                 li.navbar__item.active
@@ -389,9 +400,10 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
+ *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggler').navbar-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         a(href="#!").navbar__toggler Menu
+ *         label(for='eg-responsive-navbar-grid-menu-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-grid-gap-0.maxlg-txt-center
  *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
@@ -409,7 +421,8 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
- *         a(href="#!").navbar__toggler Menu
+ *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggler').navbar-toggle
+ *         label(for='eg-navbar-brand-in-the-center-toggler').navbar__toggler Menu
  *         div.navbar__collapse
  *             ul.navbar__menu.maxlg-txt-center
  *                 li.navbar__item.maxlg-bd-top

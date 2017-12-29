@@ -8,7 +8,7 @@
 
 // Content
 
-// Base font size, line-height, etc.
+// Base
 
 $base-font-family:    -apple-system, 
                        BlinkMacSystemFont, 
@@ -39,7 +39,7 @@ $quarter-spacing-unit: $base-spacing-unit / 4; // 0.5em  (8px)
 
 $line-height-ratio:    $base-line-height / $base-font-size;
 
-$base-border-radius:   em_to_rem($quarter-spacing-unit / 2);
+$base-border-radius:   0.25rem;
 
 
 // Color
@@ -602,7 +602,7 @@ $grid-breakpoints: (
 ) !default;
 
 // Gutter normal width.
-$gutter-width: $half-spacing-unit !default;
+$gutter-width: em_to_rem($half-spacing-unit) !default;
 
 // Gutters and grid gap.
 $gutters: (
@@ -665,6 +665,10 @@ $night-menu-pills-item-active-background-color: get_night_color('blue 48');
 
 $navbar-background-color:       $base-background-color;
 $night-navbar-background-color: $night-base-background-color;
+
+$navbar-padding-y:              em_to_rem($quarter-spacing-unit);
+$navbar-padding-x:              em_to_rem($half-spacing-unit);
+
 $navbar-brand-font-size:        1.25em;
 
 $navbar-collapse-transition:    max-height 0.4s cubic-bezier(0, 0, 0, 0.1), 
