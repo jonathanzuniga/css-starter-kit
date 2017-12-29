@@ -1,14 +1,4 @@
-// // To top right away
-// if (window.location.hash) scroll(0,0);
-
-// // void some browsers issue
-// setTimeout(function() { scroll(0,0); }, 1);
-
 $(function() {
-	// $('.sidebar__content').scroll(function() {
-	// 	sessionStorage.scrollTop = $(this).scrollTop();
-	// });
-	
 	// your current click function
 	$('body').on('click', '.sidebar a', function(e) {
 		var href = $(this).attr('href');
@@ -21,8 +11,6 @@ $(function() {
 			}, 300, 'swing');
 		} else {
 			e.preventDefault();
-
-		// 	//- loadMain(anchor[0], anchor[1]);
 
 			$.ajaxSetup({
 				cache: true,
@@ -73,13 +61,6 @@ $(function() {
 						scrollTop: $($('.main #' + anchor[1])).offset().top + 'px'
 					}, 300, 'swing');
 				}
-
-				// $.ajaxSetup({
-				// 	cache: true,
-				// 	dataType: 'script'
-				// });
-
-				// $.getScript('js/styledown.js');
 			});
 		}
 
@@ -96,76 +77,10 @@ $(function() {
 		$('.sidebar a').not('a[href$="#' + anchor[1] + '"]').parent().removeClass('active');
 	}
 
-	// *only* if we have anchor on the url
-	// if (window.location.hash) {
-	// 	$('.sidebar__content').animate({
-	// 		scrollTop: sessionStorage.scrollTop + 'px'
-	// 	}, 300, 'swing');
-
-	// 	// $('html, body').scrollTop($(window.location.hash).offset().top);
-
-	// 	// smooth scroll to the anchor id
-	// 	$('html, body').animate({
-	// 		scrollTop: $(window.location.hash).offset().top + 'px'
-	// 	}, 300, 'swing');
-
-	// 	// $('.sidebar__content').animate({
-	// 	// 	scrollTop: $('.sidebar a[href*="' + window.location.hash + '"]').offset().top + 'px'
-	// 	// }, 300, 'swing');
-	// }
-
-	// scrollSpy();
-	// $(window).scroll(function() {
-	// 	scrollSpy();
-	// });
-
 	navbarScrolled();
 	navbarMenuToggle();
 	switchNightMode();
 });
-
-//- function loadMain(url, anchor) {
-//- 	$.ajax({
-//- 		type: 'post',
-//- 		url: url + ' .main > div',
-//- 		dataType: 'html',
-//- 		mimeType: 'text/html',
-//- 		success: function(html) {
-//- 			window.history.pushState('data', 'CSS Starter Kit Guide', url);
-
-//- 			$('.main').html(html + ' .main > div');
-
-//- 			if (document.location.href.indexOf(anchor) >= 0) {
-//- 				$('html, body').animate({
-//- 					scrollTop: $($('.main #' + anchor)).offset().top + 'px'
-//- 				}, 300, 'swing');
-//- 			}
-//- 		}
-//- 	});
-//- }
-
-function scrollSpy() {
-	var page, a_texts, first_time;
-	if (first_time == null) {
-		page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
-		a_texts = $('.sidebar').find('a[href*="' + page + '"]').map(function() {
-			return $(this)[0].hash.substr(1);
-		}).get();
-		first_time = 1;
-	}
-
-	var sections = a_texts;
-	var current = sections[0];
-	for (var i = 0; i < sections.length; i++) {
-		if ($('.main').find('#' + sections[i]).length) {
-			if ($('.main').find('#' + sections[i]).offset().top <= ($(window).scrollTop() + 32))
-				current = sections[i];
-		}
-	}
-
-	$('.sidebar a[href*="#' + current + '"]').parent().addClass('active');
-	$('.sidebar a').not('a[href*="#' + current + '"]').parent().removeClass('active');
-}
 
 function navbarScrolled() {
 	// Caches a jQuery object containing the navbar element.
