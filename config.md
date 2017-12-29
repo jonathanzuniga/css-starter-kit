@@ -12,6 +12,10 @@
 			font-size: 14px;
 		}
 
+		h2 {
+			margin-bottom: 1.25rem;
+		}
+
 		.sg-canvas {
 			*zoom: 1;
 		}
@@ -107,16 +111,16 @@
 			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu.maxmd-p-top-12
 				div.sidebar__content.row
 					div.col
-						h1.h2.maxmd-hide CSS Starter Kit
+						h1.h2.maxmd-hide.bd-bottom.p-bottom-5.m-top-1.m-bottom-5 CSS Starter Kit
 
-						p
-							b DISCLAIMER - This is a very early stage work in progress project
+						//- p
+						//- 	b DISCLAIMER - This is a very early stage work in progress project
 
-						p CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
+						//- p CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
 
-						p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
+						//- p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
 
-						br
+						//- br
 
 						div.row
 							div.xs-col-12.sm-col-6.md-col-12

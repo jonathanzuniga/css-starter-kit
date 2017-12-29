@@ -38,6 +38,7 @@
 		// flex-shrink: 0;
 		list-style: none;
 		padding-left: 0;
+		position: relative;
 	}
 
 	li {
@@ -144,6 +145,61 @@
 		justify-content: center;
 	}
 }
+
+/**
+ * Right tabs:
+ * `.tabs--right`
+ *
+ *     @example
+ *     div.tabs.tabs--right
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs--right {
+	ul {
+		justify-content: right;
+	}
+}
+
+/**
+ * Active item underline:
+ * `.active-item-underline`
+ *
+ *     @example
+ *     div.tabs
+ *         ul
+ *             li
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ *             li(style='transform: translateX(71px); width: 73px;').active-underline
+ */
+.active-underline {
+	background-color: $tabs-item-active-link-border-bottom-color;
+	height: $tabs-item-active-link-border-bottom-width;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	transition: $tabs-item-active-underline-transition;
+	will-change: transform, width;
+
+	// Modify with js:
+	transform: translateX(0); // x position
+	width: 71px; // item size
+}
+
 
 .tabs-details {
 	> div:not(.active) {
