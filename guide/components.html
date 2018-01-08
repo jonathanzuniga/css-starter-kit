@@ -153,25 +153,82 @@
 
               <section class="sg-section sg-section-collapse">
                 <h2 id="collapse" class="sg">Collapse</h2>
-                <section class="sg-block sg-section-accordion">
+                <section class="sg-block sg-section-open-one">
                   <div class="sg-text">
-                    <h3 id="accordion" class="sg">Accordion</h3>
+                    <h3 id="open-one" class="sg">Open one</h3>
                     <p class="sg">
                       <code class="sg">.collapse</code>
                     </p>
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <input type="checkbox" id="eg-accordion-toggler" class="collapse-toggle">
-                      <label for="eg-accordion-toggler" class="collapse__toggler">Open/Close accordion</label>
-                      <div class="collapse">
-                        <lorem>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</lorem>
+                      <div>
+                        <input checked="checked" id="eg-open-one-toggler-1" name="open-one" type="radio" class="collapse-toggle">
+                        <label for="eg-open-one-toggler-1" class="collapse__toggler btn btn--link">Open accordion</label>
+                        <div class="collapse">
+                          <lorem>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</lorem>
+                        </div>
                       </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-accordion-toggler&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse-toggle&quot;</span> /&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-accordion-toggler&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse__toggler&quot;</span>&gt;</span>Open/Close accordion<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Lorem</span>&gt;</span>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
-    nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">Lorem</span>&gt;</span>
+                      <div>
+                        <input id="eg-open-one-toggler-2" name="open-one" type="radio" class="collapse-toggle">
+                        <label for="eg-open-one-toggler-2" class="collapse__toggler btn btn--link">Open accordion</label>
+                        <div class="collapse">
+                          <lorem>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</lorem>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">checked</span>=<span class="hljs-value">&quot;checked&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-open-one-toggler-1&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;open-one&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse-toggle&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-open-one-toggler-1&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse__toggler btn btn--link&quot;</span>&gt;</span>Open accordion<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Lorem</span>&gt;</span>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+      nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">Lorem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-open-one-toggler-2&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;open-one&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse-toggle&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-open-one-toggler-2&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse__toggler btn btn--link&quot;</span>&gt;</span>Open accordion<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Lorem</span>&gt;</span>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+      nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">Lorem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-open-multiple">
+                  <div class="sg-text">
+                    <h3 id="open-multiple" class="sg">Open multiple</h3>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div>
+                        <input id="eg-open-multiple-toggler-1" type="checkbox" class="collapse-toggle">
+                        <label for="eg-open-multiple-toggler-1" class="collapse__toggler btn btn--link">Open accordion</label>
+                        <div class="collapse">
+                          <lorem>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</lorem>
+                        </div>
+                      </div>
+                      <div>
+                        <input id="eg-open-multiple-toggler-2" type="checkbox" class="collapse-toggle">
+                        <label for="eg-open-multiple-toggler-2" class="collapse__toggler btn btn--link">Open accordion</label>
+                        <div class="collapse">
+                          <lorem>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</lorem>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-open-multiple-toggler-1&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse-toggle&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-open-multiple-toggler-1&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse__toggler btn btn--link&quot;</span>&gt;</span>Open accordion<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Lorem</span>&gt;</span>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+      nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">Lorem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-open-multiple-toggler-2&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;checkbox&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse-toggle&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-open-multiple-toggler-2&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse__toggler btn btn--link&quot;</span>&gt;</span>Open accordion<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;collapse&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Lorem</span>&gt;</span>ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+      nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">Lorem</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>

@@ -3,26 +3,33 @@
  */
 
 /**
- * Accordion:
+ * Open one:
  * `.collapse`
  *
  *     @example
- *     input(type='checkbox', id='eg-accordion-toggler').collapse-toggle
- *     label(for='eg-accordion-toggler').collapse__toggler Open/Close accordion
- *     div.collapse
- *         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(checked, id='eg-open-one-toggler-1', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggler-1').collapse__toggler.btn.btn--link Open accordion
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-one-toggler-2', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggler-2').collapse__toggler.btn.btn--link Open accordion
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
 .collapse {
-	// display: none;
 	max-height: 0;
-	overflow: hidden;
 	opacity: 0;
+	overflow: hidden;
 	position: relative;
 	transform: translateY(-$quarter-spacing-unit);
 	transition: $collapse-transition;
 	
 	&.open {
-		display: block;
+		max-height: 100vh;
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -33,10 +40,23 @@
 
 	&:checked {
 		~ .collapse {
-			// display: block;
-			max-height: 100vh;
-			opacity: 1;
-			transform: translateY(0);
+			@extend .collapse.open;
 		}
 	}
 }
+
+/**
+ * Open multiple:
+ *
+ *     @example
+ *     div
+ *         input(id='eg-open-multiple-toggler-1', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggler-1').collapse__toggler.btn.btn--link Open accordion
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-multiple-toggler-2', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggler-2').collapse__toggler.btn.btn--link Open accordion
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
