@@ -1,0 +1,42 @@
+/***
+ * Collapse:
+ */
+
+/**
+ * Accordion:
+ * `.collapse`
+ *
+ *     @example
+ *     input(type='checkbox', id='eg-accordion-toggler').collapse-toggle
+ *     label(for='eg-accordion-toggler').collapse__toggler Open/Close accordion
+ *     div.collapse
+ *         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+.collapse {
+	// display: none;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	position: relative;
+	transform: translateY(-$quarter-spacing-unit);
+	transition: $collapse-transition;
+	
+	&.open {
+		display: block;
+	}
+}
+
+.collapse-toggle {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+
+	&:checked {
+		~ .collapse {
+			// display: block;
+			max-height: 100vh;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

@@ -57,7 +57,7 @@ $night-text-color:            get_night_color('gray 5');
 // Transition
 
 $base-transition-duration:        0.16s;
-$base-transition-timing-function: ease-in-out;
+$base-transition-timing-function: ease;
 $base-transition:                 background-color $base-transition-duration $base-transition-timing-function, 
                                   border-color $base-transition-duration $base-transition-timing-function, 
                                   border-width $base-transition-duration $base-transition-timing-function, 
@@ -634,6 +634,13 @@ $night-card-border-color:     get_night_color('gray 44');
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.1);
 $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.12);
+
+
+// Collapse
+
+$collapse-transition: max-height 0.3s $base-transition-timing-function, 
+                      opacity 0.3s $base-transition-timing-function, 
+                      transform 0.3s $base-transition-timing-function;
 
 
 // Drawer

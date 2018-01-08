@@ -195,6 +195,8 @@
 									li
 										a(href='components.html#card') Card
 									li
+										a(href='components.html#collapse') Collapse
+									li
 										a(href='components.html#drawer') Drawer
 									li
 										a(href='components.html#menu') Menu
