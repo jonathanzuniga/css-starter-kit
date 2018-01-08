@@ -59,10 +59,10 @@ $night-text-color:            get_night_color('gray 5');
 $base-transition-duration:        0.16s;
 $base-transition-timing-function: ease;
 $base-transition:                 background-color $base-transition-duration $base-transition-timing-function, 
-                                  border-color $base-transition-duration $base-transition-timing-function, 
-                                  border-width $base-transition-duration $base-transition-timing-function, 
-                                  box-shadow $base-transition-duration $base-transition-timing-function, 
-                                  color $base-transition-duration $base-transition-timing-function;
+                                  border-color     $base-transition-duration $base-transition-timing-function, 
+                                  border-width     $base-transition-duration $base-transition-timing-function, 
+                                  box-shadow       $base-transition-duration $base-transition-timing-function, 
+                                  color            $base-transition-duration $base-transition-timing-function;
 
 
 // Hyperlink
@@ -203,16 +203,16 @@ $button-active-background-color-shade-amount: 24%;
 // - gradient background-color bottom lightness, 
 // - add box shadow?
 $buttons: (
-	'primary'   get_color('blue 25')        $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'secondary' get_color('cool gray 25')        $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'success'   get_color('green 25')       $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'danger'    get_color('red 25')         $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'primary'   get_color('blue 25')            $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'secondary' get_color('cool gray 25')       $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'success'   get_color('green 25')           $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'danger'    get_color('red 25')             $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
 );
 $night-buttons: (
-	'primary'   get_night_color('blue 25')  $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'secondary' get_night_color('cool gray 35')  $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'success'   get_night_color('green 25') $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'danger'    get_night_color('red 25')   $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 ''
+	'primary'   get_night_color('blue 25')      $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'secondary' get_night_color('cool gray 35') $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'success'   get_night_color('green 25')     $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'danger'    get_night_color('red 25')       $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 ''
 );
 
 
@@ -639,8 +639,8 @@ $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.12);
 // Collapse
 
 $collapse-transition: max-height 0.3s $base-transition-timing-function, 
-                      opacity 0.3s $base-transition-timing-function, 
-                      transform 0.3s $base-transition-timing-function;
+                      opacity    0.3s $base-transition-timing-function, 
+                      transform  0.3s $base-transition-timing-function;
 
 
 // Drawer
@@ -652,9 +652,9 @@ $drawer-width:                  300px;
 
 // Menu
 
-$menu-item-margin:                              0 0 ($quarter-spacing-unit / 2);
-$menu-item-padding:                             0;
-$menu-link-padding:                             $quarter-spacing-unit $half-spacing-unit;
+$menu-item-margin:  0 0 ($quarter-spacing-unit / 2);
+$menu-item-padding: 0;
+$menu-link-padding: $quarter-spacing-unit $half-spacing-unit;
 
 
 // Menu pills
@@ -679,28 +679,28 @@ $navbar-padding-x:              em_to_rem($half-spacing-unit);
 $navbar-brand-font-size:        1.25em;
 
 $navbar-collapse-transition:    max-height 0.4s cubic-bezier(0, 0, 0, 0.1), 
-                                opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), 
-                                transform 0.52s cubic-bezier(0.55, 1.75, 0.5, 1.25), 
-                                z-index 0.4s $base-transition-timing-function;
+                                opacity    0.4s cubic-bezier(0.25, 0, 0.5, 1), 
+                                transform  0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), 
+                                z-index    0.4s $base-transition-timing-function;
 
 
 // Navmenu
 
 // Full screen menu
 
-$full-screen-menu-transition:                  opacity 0.52s step-end, 
-                                               transform 0.52s cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                               visibility 0.52s step-end, 
-                                               background-color 0.52s cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-content-transition:          opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-transition:                  opacity          0.5s step-end, 
+                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility       0.5s step-end, 
+                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
 $full-screen-menu-open-background-color:       $base-background-color;
 $night-full-screen-menu-open-background-color: $night-base-background-color;
-$full-screen-menu-open-transition:             opacity 0.52s step-start, 
-                                               transform 0.52s cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                               visibility 0.52s step-start, 
-                                               background-color 0.52s cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-open-content-transition:     opacity 0.52s cubic-bezier(0.8, 0, 0.55, 0.94) 0.52s;
+$full-screen-menu-open-transition:             opacity          0.5s step-start, 
+                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility       0.5s step-start, 
+                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+$full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
 // Mobile nav
