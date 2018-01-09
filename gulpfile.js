@@ -17,6 +17,23 @@ gulp.task('sass-min', function() {
 });
 
 gulp.task('styledown', function() {
+	gulp.src('index.md') // /path/to/styledown/*.md
+		.pipe(styledown({
+			config: 'config.md', // /path/to/config.md
+			template: [
+				'<!doctype html>',
+				'<html>',
+				'<head>',
+				'<meta charset="utf-8">',
+				'<title>CSS Starter Kit Guide</title>',
+				'</head>',
+				'<body>',
+				'</body>',
+				'</html>'
+			].join('\n'),
+			filename: 'index.html' // output.html
+		}))
+		.pipe(gulp.dest('guide')); // /path/to/
 	gulp.src('dist/elements.css') // /path/to/styledown/*.md
 		.pipe(styledown({
 			config: 'config.md', // /path/to/config.md

@@ -8,6 +8,14 @@
 	link(rel='stylesheet', href='../dist/all.css')
 
 	style(type='text/css').
+		.navbar {
+			background-color: #f3f3f3;
+		}
+
+		.night .navbar {
+			background-color: #0a0a0b;
+		}
+
 		.sidebar {
 			font-size: 14px;
 		}
@@ -61,12 +69,6 @@
 			}
 		}
 
-		.sidebar__content,
-		.main {
-			padding-top: 5rem;
-			padding-bottom: 5rem;
-		}
-
 		.sg-block {
 			border-top-color: #e8e9ec;
 			margin: 0;
@@ -107,29 +109,26 @@
 	div.container-fluid
 		div.row
 			div.col
-				nav.navbar.navbar-responsive.bgc-gray-3.fixed.ac-txtc
+				nav.navbar.maxmd-navbar-responsive.fixed.ac-txtc
 					div.navbar__brand
-						a(href='/').navbar__link CSS Starter Kit
+						a(href='layout.html').navbar__link CSS Starter Kit
 					a(href='#!', id='open-fsmenu').navbar__toggler.md-hide Menu
+					div.navbar__collapse
+						ul.navbar__menu
+							li.navbar__item
+								a(href='layout.html').navbar__link Documentation
+							li.navbar__item
+								a(href='index.html').navbar__link About
 
 		div.row
-			div.main.xs-col-12.md-col-9.xl-col-10.maxmd-p-top-20
+			div.main.xs-col-12.md-col-9.xl-col-10.p-top-20
 				div.main__content.row.cols-center
 					div.md-col-12.xl-col-10
 						div(sg-content).sg-container
 
-			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu.maxmd-p-top-12
+			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu.p-top-20
 				div.sidebar__content.row
 					div.col
-						//- p
-						//- 	b DISCLAIMER - This is a very early stage work in progress project
-
-						//- p CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.
-
-						//- p CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it's progressing.
-
-						//- br
-
 						div.row.ac-txtc
 							div.xs-col-12.sm-col-6.md-col-12
 								div
@@ -223,7 +222,7 @@
 											li
 												a(href='components.html#tabs') Tabs
 
-						p.m-top-4.m-bottom-4
+						p.m-top-12
 							input(id='switch-night-mode', type='checkbox').switch.switch--sm
 							label(for='switch-night-mode', id='lbl-night-mode')
 								span Night mode

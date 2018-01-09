@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Starter Kit Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styledown.css">
+  <link rel="stylesheet" href="../dist/all.css">
+  <style type="text/css">
+    .navbar {
+      background-color: #f3f3f3;
+    }
+    .night .navbar {
+      background-color: #0a0a0b;
+    }
+    .sidebar {
+      font-size: 14px;
+    }
+    h2 {
+      margin-bottom: 1.25rem;
+    }
+    .sg-canvas {
+      *zoom: 1;
+    }
+    .sg-canvas:before,
+    .sg-canvas:after {
+      content: ' ';
+      display: table;
+    }
+    .sg-canvas:after {
+      clear: both;
+    }
+    .color-swatch {
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+    }
+    .h-100px {
+      height: 100px;
+    }
+    .sg-block:last-of-type {
+      border-bottom: none;
+    }
+    @media (min-width: 1024px) {
+      .sidebar {
+        /* Make it sticky. */
+        max-height: 100vh;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+      .sidebar__content {
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+      }
+    }
+    .sg-block {
+      border-top-color: #e8e9ec;
+      margin: 0;
+    }
+    .night .sg-block {
+      border-top-color: #3a3b3e;
+    }
+    .night .sg-expando::before {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .night .sg-expando:hover::before {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    .night .sg-code {
+      background: #fafaff !important;
+    }
+    .drawer {
+      position: absolute;
+    }
+    .sidebar .collapse__toggler:hover {
+      cursor: pointer;
+    }
+    .sidebar .collapse__toggler,
+    .sidebar .ls-unstyled a {
+      display: block;
+      padding: 0.25rem 0;
+    }
+  </style>
+</head>
+
+<body class="sg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar maxmd-navbar-responsive fixed ac-txtc">
+          <div class="navbar__brand">
+            <a href="layout.html" class="navbar__link">CSS Starter Kit</a>
+          </div>
+          <a href="#!" id="open-fsmenu" class="navbar__toggler md-hide">Menu</a>
+          <div class="navbar__collapse">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="main xs-col-12 md-col-9 xl-col-10 p-top-20">
+        <div class="main__content row cols-center">
+          <div class="md-col-12 xl-col-10">
+            <div class="sg-container">
+              <p class="sg">
+                <strong class="sg">DISCLAIMER - This is a very early stage work in progress project</strong>
+              </p>
+              <p class="sg">CSS Starter Kit is a collection of css classes to help you create and deploy web projects quickly.</p>
+              <p class="sg">CSS Starter Kit is currently under development and in its very early stages. Check back often to see how it&apos;s progressing.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu p-top-20">
+        <div class="sidebar__content row">
+          <div class="col">
+            <div class="row ac-txtc">
+              <div class="xs-col-12 sm-col-6 md-col-12">
+                <div>
+                  <input id="sidebar-collapse-toggle-1" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout.html#flex-grid">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#gutter">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#offset">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#grid">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="xs-col-12 sm-col-6 md-col-12">
+                <div>
+                  <input id="sidebar-collapse-toggle-2" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements.html#content">Content</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#form">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#button">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#button-group">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#input-group">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#switch">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#list">List</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#table">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="xs-col-12 sm-col-6 md-col-12">
+                <div>
+                  <input id="sidebar-collapse-toggle-3" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers.html#border">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#clearfix">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#color">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#float">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#hiding">Hiding</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#sizing">Sizing</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#spacing">Spacing</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text-alignment">Text alignment</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text-transform">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#other-text-helpers">Other text helpers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="xs-col-12 sm-col-6 md-col-12">
+                <div>
+                  <input id="sidebar-collapse-toggle-4" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components.html#card">Card</a>
+                      </li>
+                      <li>
+                        <a href="components.html#collapse">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components.html#drawer">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components.html#menu">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components.html#navbar">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components.html#navmenu">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components.html#tabs">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="m-top-12">
+              <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+              <label for="switch-night-mode" id="lbl-night-mode">
+                <span>Night mode</span>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/styledown.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

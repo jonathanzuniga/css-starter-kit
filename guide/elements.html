@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="../dist/all.css">
   <style type="text/css">
+    .navbar {
+      background-color: #f3f3f3;
+    }
+    .night .navbar {
+      background-color: #0a0a0b;
+    }
     .sidebar {
       font-size: 14px;
     }
@@ -51,11 +57,6 @@
         position: relative;
       }
     }
-    .sidebar__content,
-    .main {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
     .sg-block {
       border-top-color: #e8e9ec;
       margin: 0;
@@ -90,16 +91,26 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <nav class="navbar navbar-responsive bgc-gray-3 fixed ac-txtc">
+        <nav class="navbar maxmd-navbar-responsive fixed ac-txtc">
           <div class="navbar__brand">
-            <a href="/" class="navbar__link">CSS Starter Kit</a>
+            <a href="layout.html" class="navbar__link">CSS Starter Kit</a>
           </div>
           <a href="#!" id="open-fsmenu" class="navbar__toggler md-hide">Menu</a>
+          <div class="navbar__collapse">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">About</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
     <div class="row">
-      <div class="main xs-col-12 md-col-9 xl-col-10 maxmd-p-top-20">
+      <div class="main xs-col-12 md-col-9 xl-col-10 p-top-20">
         <div class="main__content row cols-center">
           <div class="md-col-12 xl-col-10">
             <div class="sg-container">
@@ -1504,7 +1515,7 @@
           </div>
         </div>
       </div>
-      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu maxmd-p-top-12">
+      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu p-top-20">
         <div class="sidebar__content row">
           <div class="col">
             <div class="row ac-txtc">
@@ -1645,7 +1656,7 @@
                 </div>
               </div>
             </div>
-            <p class="m-top-4 m-bottom-4">
+            <p class="m-top-12">
               <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
               <label for="switch-night-mode" id="lbl-night-mode">
                 <span>Night mode</span>
