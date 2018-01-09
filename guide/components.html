@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="../dist/all.css">
   <style type="text/css">
-    .navbar {
+    .doc-navbar {
       background-color: #f3f3f3;
     }
-    .night .navbar {
+    .night .doc-navbar {
       background-color: #0a0a0b;
     }
-    .sidebar {
+    .doc-sidebar {
       font-size: 14px;
     }
     h2 {
@@ -31,26 +31,26 @@
     .sg-canvas:after {
       clear: both;
     }
-    .color-swatch {
+    .doc-color-swatch {
       border-radius: 50%;
       width: 48px;
       height: 48px;
     }
-    .h-100px {
+    .doc-h-100px {
       height: 100px;
     }
     .sg-block:last-of-type {
       border-bottom: none;
     }
     @media (min-width: 1024px) {
-      .sidebar {
+      .doc-sidebar {
         /* Make it sticky. */
         max-height: 100vh;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
       }
-      .sidebar__content {
+      .doc-sidebar__content {
         max-height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
@@ -73,14 +73,14 @@
     .night .sg-code {
       background: #fafaff !important;
     }
-    .drawer {
+    .doc-drawer {
       position: absolute;
     }
-    .sidebar .collapse__toggler:hover {
+    .doc-sidebar .collapse__toggler:hover {
       cursor: pointer;
     }
-    .sidebar .collapse__toggler,
-    .sidebar .ls-unstyled a {
+    .doc-sidebar .collapse__toggler,
+    .doc-sidebar .ls-unstyled a {
       display: block;
       padding: 0.25rem 0;
     }
@@ -91,7 +91,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col">
-        <nav class="navbar maxmd-navbar-responsive fixed ac-txtc">
+        <nav class="doc-navbar navbar maxmd-navbar-responsive fixed ac-txtc">
           <div class="navbar__brand">
             <a href="layout.html" class="navbar__link">CSS Starter Kit</a>
           </div>
@@ -110,8 +110,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="main xs-col-12 md-col-9 xl-col-10 p-top-20">
-        <div class="main__content row cols-center">
+      <div class="main xs-col-12 md-col-9 xl-col-10">
+        <div class="main__content row cols-center p-top-20">
           <div class="md-col-12 xl-col-10">
             <div class="sg-container">
               <section class="sg-section sg-section-card">
@@ -1147,14 +1147,14 @@
           </div>
         </div>
       </div>
-      <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu p-top-20">
-        <div class="sidebar__content row">
+      <div class="doc-sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu">
+        <div class="doc-sidebar__content row p-top-20">
           <div class="col">
             <div class="row ac-txtc">
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <div>
-                  <input id="sidebar-collapse-toggle-1" name="sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
                   <div class="collapse">
                     <ul class="ls-unstyled">
                       <li>
@@ -1181,8 +1181,8 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <div>
-                  <input id="sidebar-collapse-toggle-2" name="sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
                   <div class="collapse">
                     <ul class="ls-unstyled">
                       <li>
@@ -1215,8 +1215,8 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <div>
-                  <input id="sidebar-collapse-toggle-3" name="sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
                   <div class="collapse">
                     <ul class="ls-unstyled">
                       <li>
@@ -1258,8 +1258,8 @@
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
                 <div>
-                  <input id="sidebar-collapse-toggle-4" name="sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
                   <div class="collapse">
                     <ul class="ls-unstyled">
                       <li>
@@ -1286,14 +1286,14 @@
                     </ul>
                   </div>
                 </div>
+                <p class="m-top-10">
+                  <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+                  <label for="switch-night-mode" id="lbl-night-mode">
+                    <span>Night mode</span>
+                  </label>
+                </p>
               </div>
             </div>
-            <p class="m-top-12">
-              <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
-              <label for="switch-night-mode" id="lbl-night-mode">
-                <span>Night mode</span>
-              </label>
-            </p>
           </div>
         </div>
       </div>
