@@ -63,8 +63,8 @@
 
 		.sidebar__content,
 		.main {
-			padding-top: 2.5rem;
-			padding-bottom: 2.5rem;
+			padding-top: 5rem;
+			padding-bottom: 5rem;
 		}
 
 		.sg-block {
@@ -92,15 +92,25 @@
 			position: absolute;
 		}
 
+		.sidebar .collapse__toggler:hover {
+			cursor: pointer;
+		}
+
+		.sidebar .collapse__toggler, 
+		.sidebar .ls-unstyled a {
+			display: block;
+			padding: 0.25rem 0;
+		}
+
 ### Body
 
 	div.container-fluid
-		div.row.md-hide
+		div.row
 			div.col
-				nav.navbar.navbar-responsive.bd-bottom.fixed.ac-txtc
+				nav.navbar.navbar-responsive.bgc-gray-3.fixed.ac-txtc
 					div.navbar__brand
 						a(href='/').navbar__link CSS Starter Kit
-					a(href='#!', id='open-fsmenu').navbar__toggler Menu
+					a(href='#!', id='open-fsmenu').navbar__toggler.md-hide Menu
 
 		div.row
 			div.main.xs-col-12.md-col-9.xl-col-10.maxmd-p-top-20
@@ -111,8 +121,6 @@
 			div.sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu.maxmd-p-top-12
 				div.sidebar__content.row
 					div.col
-						h1.h2.maxmd-hide.bd-bottom.p-bottom-5.m-top-1.m-bottom-5 CSS Starter Kit
-
 						//- p
 						//- 	b DISCLAIMER - This is a very early stage work in progress project
 
@@ -122,91 +130,99 @@
 
 						//- br
 
-						div.row
+						div.row.ac-txtc
 							div.xs-col-12.sm-col-6.md-col-12
-								h6.txt-uc Layout
-
-								ul.menu.menu--pills.flex-col
-									li
-										a(href='layout.html#flex-grid') Flex grid
-									li
-										a(href='layout.html#gutter') Gutter
-									li
-										a(href='layout.html#horizontal-modifiers') Horizontal modifiers
-									li
-										a(href='layout.html#vertical-modifiers') Vertical modifiers
-									li
-										a(href='layout.html#offset') Offset
-									li
-										a(href='layout.html#grid') Grid
-
-							div.xs-col-12.sm-col-6.md-col-12
-								h6.txt-uc Elements
-
-								ul.menu.menu--pills.flex-col
-									li
-										a(href='elements.html#content') Content
-									li
-										a(href='elements.html#form') Form
-									li
-										a(href='elements.html#button') Button
-									li
-										a(href='elements.html#button-group') Button group
-									li
-										a(href='elements.html#input-group') Input group
-									li
-										a(href='elements.html#switch') Switch
-									li
-										a(href='elements.html#list') List
-									li
-										a(href='elements.html#table') Table
+								div
+									input(id='sidebar-collapse-toggle-1', name='sidebar-collapse', type='radio').collapse-toggle
+									label(for='sidebar-collapse-toggle-1').collapse__toggler.h5 Layout
+									div.collapse
+										ul.ls-unstyled
+											li
+												a(href='layout.html#flex-grid') Flex grid
+											li
+												a(href='layout.html#gutter') Gutter
+											li
+												a(href='layout.html#horizontal-modifiers') Horizontal modifiers
+											li
+												a(href='layout.html#vertical-modifiers') Vertical modifiers
+											li
+												a(href='layout.html#offset') Offset
+											li
+												a(href='layout.html#grid') Grid
 
 							div.xs-col-12.sm-col-6.md-col-12
-								h6.txt-uc Helpers
-
-								ul.menu.menu--pills.flex-col
-									li
-										a(href='helpers.html#border') Border
-									li
-										a(href='helpers.html#clearfix') Clearfix
-									li
-										a(href='helpers.html#color') Color
-									li
-										a(href='helpers.html#float') Float
-									li
-										a(href='helpers.html#hiding') Hiding
-									li
-										a(href='helpers.html#sizing') Sizing
-									li
-										a(href='helpers.html#spacing') Spacing
-									li
-										a(href='helpers.html#text') Text
-									li
-										a(href='helpers.html#text-alignment') Text alignment
-									li
-										a(href='helpers.html#text-transform') Text transform
-									li
-										a(href='helpers.html#other-text-helpers') Other text helpers
+								div
+									input(id='sidebar-collapse-toggle-2', name='sidebar-collapse', type='radio').collapse-toggle
+									label(for='sidebar-collapse-toggle-2').collapse__toggler.h5 Elements
+									div.collapse
+										ul.ls-unstyled
+											li
+												a(href='elements.html#content') Content
+											li
+												a(href='elements.html#form') Form
+											li
+												a(href='elements.html#button') Button
+											li
+												a(href='elements.html#button-group') Button group
+											li
+												a(href='elements.html#input-group') Input group
+											li
+												a(href='elements.html#switch') Switch
+											li
+												a(href='elements.html#list') List
+											li
+												a(href='elements.html#table') Table
 
 							div.xs-col-12.sm-col-6.md-col-12
-								h6.txt-uc Components
+								div
+									input(id='sidebar-collapse-toggle-3', name='sidebar-collapse', type='radio').collapse-toggle
+									label(for='sidebar-collapse-toggle-3').collapse__toggler.h5 Helpers
+									div.collapse
+										ul.ls-unstyled
+											li
+												a(href='helpers.html#border') Border
+											li
+												a(href='helpers.html#clearfix') Clearfix
+											li
+												a(href='helpers.html#color') Color
+											li
+												a(href='helpers.html#float') Float
+											li
+												a(href='helpers.html#hiding') Hiding
+											li
+												a(href='helpers.html#sizing') Sizing
+											li
+												a(href='helpers.html#spacing') Spacing
+											li
+												a(href='helpers.html#text') Text
+											li
+												a(href='helpers.html#text-alignment') Text alignment
+											li
+												a(href='helpers.html#text-transform') Text transform
+											li
+												a(href='helpers.html#other-text-helpers') Other text helpers
 
-								ul.menu.menu--pills.flex-col
-									li
-										a(href='components.html#card') Card
-									li
-										a(href='components.html#collapse') Collapse
-									li
-										a(href='components.html#drawer') Drawer
-									li
-										a(href='components.html#menu') Menu
-									li
-										a(href='components.html#navbar') Navbar
-									li
-										a(href='components.html#navmenu') Navmenu
-									li
-										a(href='components.html#tabs') Tabs
-						
+							div.xs-col-12.sm-col-6.md-col-12
+								div
+									input(id='sidebar-collapse-toggle-4', name='sidebar-collapse', type='radio').collapse-toggle
+									label(for='sidebar-collapse-toggle-4').collapse__toggler.h5 Components
+									div.collapse
+										ul.ls-unstyled
+											li
+												a(href='components.html#card') Card
+											li
+												a(href='components.html#collapse') Collapse
+											li
+												a(href='components.html#drawer') Drawer
+											li
+												a(href='components.html#menu') Menu
+											li
+												a(href='components.html#navbar') Navbar
+											li
+												a(href='components.html#navmenu') Navmenu
+											li
+												a(href='components.html#tabs') Tabs
+
 						p.m-top-4.m-bottom-4
 							input(id='switch-night-mode', type='checkbox').switch.switch--sm
 							label(for='switch-night-mode', id='lbl-night-mode')

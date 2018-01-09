@@ -53,8 +53,8 @@
     }
     .sidebar__content,
     .main {
-      padding-top: 2.5rem;
-      padding-bottom: 2.5rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
     .sg-block {
       border-top-color: #e8e9ec;
@@ -75,18 +75,26 @@
     .drawer {
       position: absolute;
     }
+    .sidebar .collapse__toggler:hover {
+      cursor: pointer;
+    }
+    .sidebar .collapse__toggler,
+    .sidebar .ls-unstyled a {
+      display: block;
+      padding: 0.25rem 0;
+    }
   </style>
 </head>
 
 <body class="sg">
   <div class="container-fluid">
-    <div class="row md-hide">
+    <div class="row">
       <div class="col">
-        <nav class="navbar navbar-responsive bd-bottom fixed ac-txtc">
+        <nav class="navbar navbar-responsive bgc-gray-3 fixed ac-txtc">
           <div class="navbar__brand">
             <a href="/" class="navbar__link">CSS Starter Kit</a>
           </div>
-          <a href="#!" id="open-fsmenu" class="navbar__toggler">Menu</a>
+          <a href="#!" id="open-fsmenu" class="navbar__toggler md-hide">Menu</a>
         </nav>
       </div>
     </div>
@@ -1499,123 +1507,142 @@
       <div class="sidebar xs-col-12 md-col-3 xl-col-2 maxmd-fsmenu maxmd-p-top-12">
         <div class="sidebar__content row">
           <div class="col">
-            <h1 class="h2 maxmd-hide bd-bottom p-bottom-5 m-top-1 m-bottom-5">CSS Starter Kit</h1>
-            <div class="row">
+            <div class="row ac-txtc">
               <div class="xs-col-12 sm-col-6 md-col-12">
-                <h6 class="txt-uc">Layout</h6>
-                <ul class="menu menu--pills flex-col">
-                  <li>
-                    <a href="layout.html#flex-grid">Flex grid</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#gutter">Gutter</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#offset">Offset</a>
-                  </li>
-                  <li>
-                    <a href="layout.html#grid">Grid</a>
-                  </li>
-                </ul>
+                <div>
+                  <input id="sidebar-collapse-toggle-1" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout.html#flex-grid">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#gutter">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#horizontal-modifiers">Horizontal modifiers</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#vertical-modifiers">Vertical modifiers</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#offset">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout.html#grid">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
-                <h6 class="txt-uc">Elements</h6>
-                <ul class="menu menu--pills flex-col">
-                  <li>
-                    <a href="elements.html#content">Content</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#form">Form</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#button">Button</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#button-group">Button group</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#input-group">Input group</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#switch">Switch</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#list">List</a>
-                  </li>
-                  <li>
-                    <a href="elements.html#table">Table</a>
-                  </li>
-                </ul>
+                <div>
+                  <input id="sidebar-collapse-toggle-2" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements.html#content">Content</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#form">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#button">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#button-group">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#input-group">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#switch">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#list">List</a>
+                      </li>
+                      <li>
+                        <a href="elements.html#table">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
-                <h6 class="txt-uc">Helpers</h6>
-                <ul class="menu menu--pills flex-col">
-                  <li>
-                    <a href="helpers.html#border">Border</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#clearfix">Clearfix</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#color">Color</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#float">Float</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#hiding">Hiding</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#sizing">Sizing</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#spacing">Spacing</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#text">Text</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#text-alignment">Text alignment</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#text-transform">Text transform</a>
-                  </li>
-                  <li>
-                    <a href="helpers.html#other-text-helpers">Other text helpers</a>
-                  </li>
-                </ul>
+                <div>
+                  <input id="sidebar-collapse-toggle-3" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers.html#border">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#clearfix">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#color">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#float">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#hiding">Hiding</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#sizing">Sizing</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#spacing">Spacing</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text-alignment">Text alignment</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text-transform">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#other-text-helpers">Other text helpers</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="xs-col-12 sm-col-6 md-col-12">
-                <h6 class="txt-uc">Components</h6>
-                <ul class="menu menu--pills flex-col">
-                  <li>
-                    <a href="components.html#card">Card</a>
-                  </li>
-                  <li>
-                    <a href="components.html#collapse">Collapse</a>
-                  </li>
-                  <li>
-                    <a href="components.html#drawer">Drawer</a>
-                  </li>
-                  <li>
-                    <a href="components.html#menu">Menu</a>
-                  </li>
-                  <li>
-                    <a href="components.html#navbar">Navbar</a>
-                  </li>
-                  <li>
-                    <a href="components.html#navmenu">Navmenu</a>
-                  </li>
-                  <li>
-                    <a href="components.html#tabs">Tabs</a>
-                  </li>
-                </ul>
+                <div>
+                  <input id="sidebar-collapse-toggle-4" name="sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components.html#card">Card</a>
+                      </li>
+                      <li>
+                        <a href="components.html#collapse">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components.html#drawer">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components.html#menu">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components.html#navbar">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components.html#navmenu">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components.html#tabs">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <p class="m-top-4 m-bottom-4">

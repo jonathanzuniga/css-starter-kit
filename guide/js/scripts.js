@@ -85,14 +85,14 @@ $(function() {
 function navbarScrolled() {
 	// Caches a jQuery object containing the navbar element.
 	var navbar = $('.navbar.fixed');
-	$('.sidebar').add(window).scroll(function() {
-		var scroll = $(this).scrollTop();
-		if (scroll >= 2) {
-			navbar.addClass('scrolled');
-		} else {
-			navbar.removeClass('scrolled');
-		}
-	});
+	// $('.sidebar').add(window).scroll(function() {
+	// 	var scroll = $(this).scrollTop();
+	// 	if (scroll >= 2) {
+	// 		navbar.addClass('scrolled');
+	// 	} else {
+	// 		navbar.removeClass('scrolled');
+	// 	}
+	// });
 }
 
 function navbarMenuToggle() {
