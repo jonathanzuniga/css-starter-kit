@@ -112,26 +112,26 @@
 				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed.ac-txtc
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
-						a(href='layout.html').navbar__link CSS Starter Kit
+						a(href='index.html').navbar__link CSS Starter Kit
 					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-hide Menu
 					div.navbar__collapse.collapse.maxmd-hide
 						ul.navbar__menu
 							li.navbar__item
-								a(href='layout.html').navbar__link Documentation
+								a(href='index.html').navbar__link Preface
 							li.navbar__item
-								a(href='index.html').navbar__link About
+								a(href='layout.html').navbar__link Documentation
 
-		div.row
-			div.main.xs-col-12.md-col-9.xl-col-10
-				div.main__content.row.cols-center.p-top-20
-					div.md-col-12.xl-col-10
+		div.row.cols-center
+			div.main.xs-col-12.md-col-10.xl-col-8
+				div.main__content.row.p-top-20
+					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
-			div.doc-sidebar.xs-col-12.md-col-3.xl-col-2.maxmd-fsmenu
+			div.doc-sidebar.xs-col-12.md-col-2.xl-col-2.maxmd-fsmenu
 				div.doc-sidebar__content.row.p-top-20
 					div.col
-						div.row.ac-txtc
-							div.xs-col-12.sm-col-6.md-col-12
+						div.row.ac-txtc.maxsm-txt-center
+							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-1', name='doc-sidebar-collapse', type='radio').collapse-toggle
 									label(for='doc-sidebar-collapse-toggle-1').collapse__toggler.h5 Layout
@@ -150,7 +150,7 @@
 											li
 												a(href='layout.html#grid') Grid
 
-							div.xs-col-12.sm-col-6.md-col-12
+							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-2', name='doc-sidebar-collapse', type='radio').collapse-toggle
 									label(for='doc-sidebar-collapse-toggle-2').collapse__toggler.h5 Elements
@@ -173,7 +173,7 @@
 											li
 												a(href='elements.html#table') Table
 
-							div.xs-col-12.sm-col-6.md-col-12
+							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-3', name='doc-sidebar-collapse', type='radio').collapse-toggle
 									label(for='doc-sidebar-collapse-toggle-3').collapse__toggler.h5 Helpers
@@ -202,7 +202,7 @@
 											li
 												a(href='helpers.html#other-text-helpers') Other text helpers
 
-							div.xs-col-12.sm-col-6.md-col-12
+							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-4', name='doc-sidebar-collapse', type='radio').collapse-toggle
 									label(for='doc-sidebar-collapse-toggle-4').collapse__toggler.h5 Components
