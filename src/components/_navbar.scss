@@ -20,11 +20,11 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-navbar-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
@@ -63,19 +63,12 @@
 .navbar {
 	background-color: $navbar-background-color;
 	justify-content: flex-start;
-	// transition: $base-transition;
 }
 
 .night {
 	.navbar {
 		background-color: $night-navbar-background-color;
 	}
-}
-
-.navbar-toggle {
-	opacity: 0;
-	position: absolute;
-	z-index: -1;
 }
 
 .navbar__brand {
@@ -112,11 +105,11 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
@@ -125,12 +118,6 @@
  *                 li.navbar__item.maxsm-bd-top
  *                     a(href='').navbar__link About
  */
-// .navbar__collapse:last-child {
-// 	.navbar__menu {
-// 		justify-content: flex-end;
-// 	}
-// }
-
 .navbar__menu--right {
 	justify-content: flex-end;
 }
@@ -148,18 +135,6 @@
 		}
 	}
 }
-
-// .navbar__link,
-// .navbar__toggler {
-// 	&:link,
-// 	&:visited {
-// 		color: $text-color;
-// 	}
-
-// 	&:hover {
-// 		color: $link-color;
-// 	}
-// }
 
 .night {
 	.navbar__item {
@@ -193,11 +168,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -208,19 +183,15 @@
  */
 @mixin navbar-responsive-collapse {
 	.navbar__toggler {
+		cursor: $navbar-toggler-cursor;
 		display: flex;
 		order: 2;
 	}
 
 	.navbar__collapse {
 		flex-wrap: wrap;
-		max-height: 0;
-		opacity: 0;
 		padding: 0 $navbar-padding-x;
-		transform: translateY(-$navbar-padding-x);
-		transition: $navbar-collapse-transition;
 		width: 100%;
-		z-index: -1;
 
 		&:first-of-type {
 			order: 4;
@@ -228,60 +199,6 @@
 
 		&:last-of-type {
 			order: 3;
-		}
-
-		&.open {
-			animation: fade-in-move-down 0.8s;
-			max-height: 100vh;
-			opacity: 1;
-			transform: translateY(0);
-			z-index: 10;
-		}
-	}
-
-	.navbar-toggle {
-		&:checked {
-			~ .navbar__collapse {
-				animation: fade-in-move-down 0.8s;
-				max-height: 100vh;
-				opacity: 1;
-				transform: translateY(0);
-				z-index: 10;
-			}
-		}
-
-		&:not(:checked) {
-			~ .navbar__collapse {
-				animation: fade-out-move-up 0.4s;
-			}
-		}
-	}
-
-	@keyframes fade-in-move-down {
-		0% {
-			max-height: 0;
-			opacity: 0;
-			transform: translateY(-$base-spacing-unit);
-		}
-
-		100% {
-			max-height: 100vh;
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	@keyframes fade-out-move-up {
-		100% {
-			max-height: 0;
-			opacity: 0;
-			transform: translateY(-$base-spacing-unit);
-		}
-
-		0% {
-			max-height: 100vh;
-			opacity: 1;
-			transform: translateY(0);
 		}
 	}
 
@@ -361,11 +278,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-menu-at-top-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -381,11 +298,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-open-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.open
+ *         div.navbar__collapse.collapse.open
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -400,11 +317,11 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-grid-gap-0.maxlg-txt-center
  *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href='').navbar__link Home
@@ -421,9 +338,9 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-txt-center
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link RSS feed
@@ -431,7 +348,7 @@
  *                     a(href='').navbar__link Follow me
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.maxlg-txt-center
  *                 li.navbar__item.active.maxlg-bd-top
  *                     a(href='').navbar__link Home

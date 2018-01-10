@@ -110,10 +110,11 @@
 		div.row
 			div.col
 				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed.ac-txtc
+					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
 						a(href='layout.html').navbar__link CSS Starter Kit
-					a(href='#!', id='open-fsmenu').navbar__toggler.md-hide Menu
-					div.navbar__collapse
+					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-hide Menu
+					div.navbar__collapse.collapse.maxmd-hide
 						ul.navbar__menu
 							li.navbar__item
 								a(href='layout.html').navbar__link Documentation

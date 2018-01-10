@@ -45,12 +45,12 @@
  *     @example
  *     div
  *         input(checked, id='eg-open-one-toggle-1', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-1').collapse__toggler.btn.btn--link Collapse item
+ *         label(for='eg-open-one-toggle-1').btn.btn--link Collapse item
  *         div.collapse
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  *     div
  *         input(id='eg-open-one-toggle-2', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-2').collapse__toggler.btn.btn--link Collapse item
+ *         label(for='eg-open-one-toggle-2').btn.btn--link Collapse item
  *         div.collapse
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
@@ -71,18 +71,48 @@
   position: absolute;
   z-index: -1; }
 
+@media (min-width: 0) {
+  .maxxs-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 768px) {
+  .maxsm-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1024px) {
+  .maxmd-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1280px) {
+  .maxlg-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1680px) {
+  .maxxl-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
 /**
  * Open multiple items:
  *
  *     @example
  *     div
  *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-1').collapse__toggler.btn.btn--link Collapse item
+ *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
  *         div.collapse
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  *     div
  *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-2').collapse__toggler.btn.btn--link Collapse item
+ *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
  *         div.collapse
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
@@ -96,10 +126,10 @@
  *     div.drawer-wrapper
  *         input(type='checkbox', id='eg-open-drawer-right').drawer-toggle-right
  *         input(type='checkbox', id='eg-open-drawer-left').drawer-toggle-left
- *         div.drawer.drawer--right
+ *         div.doc-drawer.drawer.drawer--right
  *             div.p-4
  *                 label(for='eg-open-drawer-right').btn.btn--link Close
- *         div.drawer.drawer--left
+ *         div.doc-drawer.drawer.drawer--left
  *             div.p-4
  *                 label(for='eg-open-drawer-left').btn.btn--link Close
  *         div.drawer-outside
@@ -183,10 +213,10 @@
  *     div.drawer-wrapper
  *         input(type='checkbox', id='eg-open-drawer-right-push').drawer-toggle-right
  *         input(type='checkbox', id='eg-open-drawer-left-push').drawer-toggle-left
- *         div.drawer.drawer--right.drawer--push
+ *         div.doc-drawer.drawer.drawer--right.drawer--push
  *             div.p-4
  *                 label(for='eg-open-drawer-right-push').btn.btn--link Close
- *         div.drawer.drawer--left.drawer--push
+ *         div.doc-drawer.drawer.drawer--left.drawer--push
  *             div.p-4
  *                 label(for='eg-open-drawer-left-push').btn.btn--link Close
  *         div.drawer-outside
@@ -254,10 +284,10 @@
  *     div.drawer-wrapper
  *         input(type='checkbox', id='eg-open-drawer-right-overlap').drawer-toggle-right
  *         input(type='checkbox', id='eg-open-drawer-left-overlap').drawer-toggle-left
- *         div.drawer.drawer--right.drawer--overlap
+ *         div.doc-drawer.drawer.drawer--right.drawer--overlap
  *             div.p-4
  *                 label(for='eg-open-drawer-right-overlap').btn.btn--link Close
- *         div.drawer.drawer--left.drawer--overlap
+ *         div.doc-drawer.drawer.drawer--left.drawer--overlap
  *             div.p-4
  *                 label(for='eg-open-drawer-left-overlap').btn.btn--link Close
  *         div.drawer-outside
@@ -362,11 +392,11 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-navbar-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
@@ -399,11 +429,6 @@
 .night .navbar {
   background-color: #191a1c; }
 
-.navbar-toggle {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
 .navbar__brand {
   font-size: 1.25em; }
   .navbar__brand > * {
@@ -431,11 +456,11 @@
  *
  *     @example
  *     nav.navbar.maxsm-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
@@ -470,11 +495,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -500,58 +525,18 @@
   order: 4; }
 
 .navbar-responsive .navbar__toggler {
+  cursor: pointer;
   display: flex;
   order: 2; }
 
 .navbar-responsive .navbar__collapse {
   flex-wrap: wrap;
-  max-height: 0;
-  opacity: 0;
   padding: 0 1rem;
-  transform: translateY(-1rem);
-  transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-  width: 100%;
-  z-index: -1; }
+  width: 100%; }
   .navbar-responsive .navbar__collapse:first-of-type {
     order: 4; }
   .navbar-responsive .navbar__collapse:last-of-type {
     order: 3; }
-  .navbar-responsive .navbar__collapse.open {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-
-.navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-  animation: fade-in-move-down 0.8s;
-  max-height: 100vh;
-  opacity: 1;
-  transform: translateY(0);
-  z-index: 10; }
-
-.navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-  animation: fade-out-move-up 0.4s; }
-
-@keyframes fade-in-move-down {
-  0% {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-2em); }
-  100% {
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes fade-out-move-up {
-  100% {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-2em); }
-  0% {
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0); } }
 
 .navbar-responsive .navbar__menu,
 .navbar-responsive .navbar__item {
@@ -587,53 +572,17 @@
   .maxxs-navbar-responsive.navbar-responsive--top .navbar__toggler {
     order: 4; }
   .maxxs-navbar-responsive .navbar__toggler {
+    cursor: pointer;
     display: flex;
     order: 2; }
   .maxxs-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
-    max-height: 0;
-    opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
-    transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
     .maxxs-navbar-responsive .navbar__collapse:first-of-type {
       order: 4; }
     .maxxs-navbar-responsive .navbar__collapse:last-of-type {
       order: 3; }
-    .maxxs-navbar-responsive .navbar__collapse.open {
-      animation: fade-in-move-down 0.8s;
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0);
-      z-index: 10; }
-  .maxxs-navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-  .maxxs-navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-    animation: fade-out-move-up 0.4s; }
-  @keyframes fade-in-move-down {
-    0% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    100% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
-  @keyframes fade-out-move-up {
-    100% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    0% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
   .maxxs-navbar-responsive .navbar__menu,
   .maxxs-navbar-responsive .navbar__item {
     flex-direction: column; }
@@ -664,53 +613,17 @@
   .maxsm-navbar-responsive.navbar-responsive--top .navbar__toggler {
     order: 4; }
   .maxsm-navbar-responsive .navbar__toggler {
+    cursor: pointer;
     display: flex;
     order: 2; }
   .maxsm-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
-    max-height: 0;
-    opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
-    transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
     .maxsm-navbar-responsive .navbar__collapse:first-of-type {
       order: 4; }
     .maxsm-navbar-responsive .navbar__collapse:last-of-type {
       order: 3; }
-    .maxsm-navbar-responsive .navbar__collapse.open {
-      animation: fade-in-move-down 0.8s;
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0);
-      z-index: 10; }
-  .maxsm-navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-  .maxsm-navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-    animation: fade-out-move-up 0.4s; }
-  @keyframes fade-in-move-down {
-    0% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    100% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
-  @keyframes fade-out-move-up {
-    100% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    0% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
   .maxsm-navbar-responsive .navbar__menu,
   .maxsm-navbar-responsive .navbar__item {
     flex-direction: column; }
@@ -741,53 +654,17 @@
   .maxmd-navbar-responsive.navbar-responsive--top .navbar__toggler {
     order: 4; }
   .maxmd-navbar-responsive .navbar__toggler {
+    cursor: pointer;
     display: flex;
     order: 2; }
   .maxmd-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
-    max-height: 0;
-    opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
-    transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
     .maxmd-navbar-responsive .navbar__collapse:first-of-type {
       order: 4; }
     .maxmd-navbar-responsive .navbar__collapse:last-of-type {
       order: 3; }
-    .maxmd-navbar-responsive .navbar__collapse.open {
-      animation: fade-in-move-down 0.8s;
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0);
-      z-index: 10; }
-  .maxmd-navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-  .maxmd-navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-    animation: fade-out-move-up 0.4s; }
-  @keyframes fade-in-move-down {
-    0% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    100% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
-  @keyframes fade-out-move-up {
-    100% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    0% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
   .maxmd-navbar-responsive .navbar__menu,
   .maxmd-navbar-responsive .navbar__item {
     flex-direction: column; }
@@ -818,53 +695,17 @@
   .maxlg-navbar-responsive.navbar-responsive--top .navbar__toggler {
     order: 4; }
   .maxlg-navbar-responsive .navbar__toggler {
+    cursor: pointer;
     display: flex;
     order: 2; }
   .maxlg-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
-    max-height: 0;
-    opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
-    transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
     .maxlg-navbar-responsive .navbar__collapse:first-of-type {
       order: 4; }
     .maxlg-navbar-responsive .navbar__collapse:last-of-type {
       order: 3; }
-    .maxlg-navbar-responsive .navbar__collapse.open {
-      animation: fade-in-move-down 0.8s;
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0);
-      z-index: 10; }
-  .maxlg-navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-  .maxlg-navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-    animation: fade-out-move-up 0.4s; }
-  @keyframes fade-in-move-down {
-    0% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    100% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
-  @keyframes fade-out-move-up {
-    100% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    0% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
   .maxlg-navbar-responsive .navbar__menu,
   .maxlg-navbar-responsive .navbar__item {
     flex-direction: column; }
@@ -895,53 +736,17 @@
   .maxxl-navbar-responsive.navbar-responsive--top .navbar__toggler {
     order: 4; }
   .maxxl-navbar-responsive .navbar__toggler {
+    cursor: pointer;
     display: flex;
     order: 2; }
   .maxxl-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
-    max-height: 0;
-    opacity: 0;
     padding: 0 1rem;
-    transform: translateY(-1rem);
-    transition: max-height 0.4s cubic-bezier(0, 0, 0, 0.1), opacity 0.4s cubic-bezier(0.25, 0, 0.5, 1), transform 0.5s cubic-bezier(0.55, 1.75, 0.5, 1.25), z-index 0.4s ease;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
     .maxxl-navbar-responsive .navbar__collapse:first-of-type {
       order: 4; }
     .maxxl-navbar-responsive .navbar__collapse:last-of-type {
       order: 3; }
-    .maxxl-navbar-responsive .navbar__collapse.open {
-      animation: fade-in-move-down 0.8s;
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0);
-      z-index: 10; }
-  .maxxl-navbar-responsive .navbar-toggle:checked ~ .navbar__collapse {
-    animation: fade-in-move-down 0.8s;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 10; }
-  .maxxl-navbar-responsive .navbar-toggle:not(:checked) ~ .navbar__collapse {
-    animation: fade-out-move-up 0.4s; }
-  @keyframes fade-in-move-down {
-    0% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    100% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
-  @keyframes fade-out-move-up {
-    100% {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-2em); }
-    0% {
-      max-height: 100vh;
-      opacity: 1;
-      transform: translateY(0); } }
   .maxxl-navbar-responsive .navbar__menu,
   .maxxl-navbar-responsive .navbar__item {
     flex-direction: column; }
@@ -965,11 +770,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-menu-at-top-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -984,11 +789,11 @@
  *
  *     @example
  *     nav.navbar.navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-open-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.open
+ *         div.navbar__collapse.collapse.open
  *             ul.navbar__menu
  *                 li.navbar__item.active
  *                     a(href='').navbar__link Home
@@ -1002,11 +807,11 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.xs-grid-2.md-grid-3.lg-grid-0.maxlg-grid-gap-0.maxlg-txt-center
  *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href='').navbar__link Home
@@ -1022,9 +827,9 @@
  *
  *     @example
  *     nav.navbar.maxlg-navbar-responsive.ac-txtc
- *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').navbar-toggle
+ *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-txt-center
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link RSS feed
@@ -1032,7 +837,7 @@
  *                     a(href='').navbar__link Follow me
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
- *         div.navbar__collapse
+ *         div.navbar__collapse.collapse
  *             ul.navbar__menu.navbar__menu--right.maxlg-txt-center
  *                 li.navbar__item.active.maxlg-bd-top
  *                     a(href='').navbar__link Home
