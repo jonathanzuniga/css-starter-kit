@@ -19,7 +19,7 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *     nav.navbar.maxsm-navbar-responsive
  *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -71,6 +71,11 @@
 	}
 }
 
+.navbar__brand,
+.navbar__item {
+	align-items: stretch;
+}
+
 .navbar__brand {
 	font-size: $navbar-brand-font-size;
 
@@ -104,7 +109,7 @@
  * `.navbar__menu--right`
  *
  *     @example
- *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *     nav.navbar.maxsm-navbar-responsive
  *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -122,42 +127,50 @@
 	justify-content: flex-end;
 }
 
-.navbar__item {
-	align-items: stretch;
+.navbar__item .navbar__link,
+.navbar__toggler {
+	&:link,
+	&:visited {
+		color: $navbar-link-color;
+	}
 
-	&.active {
-		.navbar__link {
-			&:link,
-			&:hover,
-			&:visited {
-				color: $link-color;
-			}
+	&:hover {
+		color: $navbar-link-hover-color;
+	}
+}
+
+.navbar__brand,
+.navbar__item.active {
+	.navbar__link {
+		&:link,
+		&:hover,
+		&:visited {
+			color: $navbar-item-active-link-color;
 		}
 	}
 }
 
 .night {
-	.navbar__item {
-		&.active {
-			.navbar__link {
-				&:link,
-				&:hover,
-				&:visited {
-					color: $night-link-color;
-				}
-			}
-		}
-	}
-
-	.navbar__link,
+	.navbar__item .navbar__link,
 	.navbar__toggler {
 		&:link,
 		&:visited {
-			color: $night-text-color;
+			color: $night-navbar-link-color;
 		}
 
 		&:hover {
-			color: $night-link-color;
+			color: $night-navbar-link-hover-color;
+		}
+	}
+
+	.navbar__brand,
+	.navbar__item.active {
+		.navbar__link {
+			&:link,
+			&:hover,
+			&:visited {
+				color: $night-navbar-item-active-link-color;
+			}
 		}
 	}
 }
@@ -167,7 +180,7 @@
  * `.navbar-responsive` `.max[size]-navbar-responsive`
  *
  *     @example
- *     nav.navbar.navbar-responsive.ac-txtc
+ *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -207,7 +220,7 @@
 		flex-direction: column;
 	}
 
-	.navbar__link,
+	.navbar__item .navbar__link,
 	.navbar__form {
 		display: block;
 		width: 100%;
@@ -277,7 +290,7 @@
  * `.navbar-responsive--top`
  *
  *     @example
- *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
+ *     nav.navbar.navbar-responsive.navbar-responsive--top
  *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -297,7 +310,7 @@
  * `.open`
  *
  *     @example
- *     nav.navbar.navbar-responsive.ac-txtc
+ *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -316,7 +329,7 @@
  * Responsive navbar grid menu:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive.ac-txtc
+ *     nav.navbar.maxlg-navbar-responsive
  *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -337,7 +350,7 @@
  * Navbar brand in the center:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive.ac-txtc
+ *     nav.navbar.maxlg-navbar-responsive
  *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse

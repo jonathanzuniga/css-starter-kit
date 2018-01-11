@@ -10,6 +10,7 @@
 	style(type='text/css').
 		.doc-navbar {
 			background-color: #f3f3f3;
+			height: 60px;
 		}
 
 		.night .doc-navbar {
@@ -109,7 +110,7 @@
 	div.container-fluid
 		div.row
 			div.col
-				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed.ac-txtc
+				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
 						a(href='index.html').navbar__link CSS Starter Kit
@@ -122,15 +123,15 @@
 								a(href='layout.html').navbar__link Documentation
 
 		div.row.cols-center
-			div.main.xs-col-12.md-col-10.xl-col-8
-				div.main__content.row.p-top-20
+			div.main.xs-col-12.md-col-10.xl-col-7
+				div.main__content.row.p-top-25
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
 			div.doc-sidebar.xs-col-12.md-col-2.xl-col-2.maxmd-fsmenu
-				div.doc-sidebar__content.row.p-top-20
+				div.doc-sidebar__content.row.p-top-25
 					div.col
-						div.row.ac-txtc.maxmd-txt-center
+						div.row.maxmd-txt-center
 							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-1', name='doc-sidebar-collapse', type='radio').collapse-toggle

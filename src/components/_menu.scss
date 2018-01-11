@@ -27,9 +27,12 @@
 		padding: $menu-item-padding;
 
 		&.active {
-			a,
-			a:hover {
-				color: $text-color;
+			a {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $text-color;
+				}
 			}
 		}
 
@@ -45,9 +48,12 @@
 	.menu {
 		li {
 			&.active {
-				a,
-				a:hover {
-					color: $night-text-color;
+				a {
+					&:link,
+					&:hover,
+					&:visited {
+						color: $night-text-color;
+					}
 				}
 			}
 		}

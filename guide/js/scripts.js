@@ -4,7 +4,7 @@ $(function() {
 	var pagename = page.replace('.html', '');
 
 	// Comparar cada texto de .collapse__toggler y si es el mismo checar el radio button.
-	$('.collapse__toggler').each(function() {
+	$('.doc-sidebar .collapse__toggler').each(function() {
 		if ($(this).text().trim().toLowerCase() == pagename)
 			$(this).prev('.collapse-toggle').prop('checked', true);
 	});
@@ -13,7 +13,7 @@ $(function() {
 	var hash = window.location.hash.substr(1);
 
 	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
-	$('a[href*="#' + hash + '"').parent().addClass('active');
+	$('.doc-sidebar a[href$="#' + hash + '"]').parent().addClass('active');
 
 	fsMenuToggle();
 	switchNightMode();
@@ -26,7 +26,15 @@ $(function() {
 		var anchor = href[1];
 		if (page == href[0])
 			smoothScroll('#' + anchor);
+
+		$('.doc-sidebar li').removeClass('active');
+		$(this).parent().addClass('active');
 	});
+
+	// Agregar clase .active al item del menu del navbar.
+	$('.doc-navbar .navbar__link[href="' + page + '"]').parent().addClass('active');
+	if (!$('.doc-navbar .navbar__item:first').hasClass('active'))
+		$('.doc-navbar .navbar__item:last').addClass('active');
 });
 
 function fsMenuToggle() {

@@ -565,7 +565,7 @@ $sizes: (
 // Spacing
 
 // Cantidad de espacios para margins & paddings,
-$spacings:          20 !default;
+$spacings:          25 !default;
 
 // incrementando cada espacio por...
 $spacing:           0.25rem !default;
@@ -640,7 +640,14 @@ $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.12);
 
 $collapse-transition: max-height 0.3s $base-transition-timing-function, 
                       opacity    0.3s $base-transition-timing-function, 
-                      transform  0.3s $base-transition-timing-function;
+                      transform  0.2s $base-transition-timing-function;
+
+$collapse-list-unstyled-link-color:                   get_color('gray 25');
+$night-collapse-list-unstyled-link-color:             get_color('gray 25');
+$collapse-list-unstyled-link-hover-color:             get_color('gray 33');
+$night-collapse-list-unstyled-link-hover-color:       get_color('gray 17');
+$collapse-list-unstyled-item-active-link-color:       $text-color;
+$night-collapse-list-unstyled-item-active-link-color: $night-text-color;
 
 
 // Drawer
@@ -678,6 +685,13 @@ $navbar-padding-x:              em_to_rem($half-spacing-unit);
 
 $navbar-brand-font-size:        1.25em;
 $navbar-toggler-cursor:         pointer;
+
+$navbar-link-color:                   get_color('gray 25');
+$night-navbar-link-color:             get_night_color('gray 25');
+$navbar-link-hover-color:             get_color('gray 33');
+$night-navbar-link-hover-color:       get_night_color('gray 17');
+$navbar-item-active-link-color:       $text-color;
+$night-navbar-item-active-link-color: $night-text-color;
 
 
 // Navmenu

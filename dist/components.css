@@ -54,13 +54,28 @@
  *         div.collapse
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
+/**
+ * Open multiple items:
+ *
+ *     @example
+ *     div
+ *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
 .collapse {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   position: relative;
   transform: translateY(-0.5em);
-  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; }
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.2s ease; }
   .collapse.open, .collapse-toggle:checked ~ .collapse {
     max-height: 100vh;
     opacity: 1;
@@ -101,21 +116,24 @@
     opacity: 1;
     transform: translateY(0); } }
 
-/**
- * Open multiple items:
- *
- *     @example
- *     div
- *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
- *         div.collapse
- *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- *     div
- *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
- *         div.collapse
- *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- */
+.collapse .ls-unstyled a:link, .collapse .ls-unstyled a:visited {
+  color: #9e9e9f; }
+
+.collapse .ls-unstyled a:hover {
+  color: #6b6b6c; }
+
+.collapse .ls-unstyled .active a:link, .collapse .ls-unstyled .active a:hover, .collapse .ls-unstyled .active a:visited {
+  color: #3f3f40; }
+
+.night .collapse .ls-unstyled a:link, .night .collapse .ls-unstyled a:visited {
+  color: #9e9e9f; }
+
+.night .collapse .ls-unstyled a:hover {
+  color: #bdbdbe; }
+
+.night .collapse .ls-unstyled .active a:link, .night .collapse .ls-unstyled .active a:hover, .night .collapse .ls-unstyled .active a:visited {
+  color: #ececec; }
+
 /***
  * Drawer:
  */
@@ -328,16 +346,14 @@
     display: block;
     margin: 0 0 0.25em;
     padding: 0; }
-    .menu li.active a,
-    .menu li.active a:hover {
+    .menu li.active a:link, .menu li.active a:hover, .menu li.active a:visited {
       color: #3f3f40; }
     .menu li a {
       display: block;
       padding: 0.5em 1em;
       text-decoration: none; }
 
-.night .menu li.active a,
-.night .menu li.active a:hover {
+.night .menu li.active a:link, .night .menu li.active a:hover, .night .menu li.active a:visited {
   color: #ececec; }
 
 /**
@@ -391,7 +407,7 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *     nav.navbar.maxsm-navbar-responsive
  *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -429,6 +445,10 @@
 .night .navbar {
   background-color: #191a1c; }
 
+.navbar__brand,
+.navbar__item {
+  align-items: stretch; }
+
 .navbar__brand {
   font-size: 1.25em; }
   .navbar__brand > * {
@@ -455,7 +475,7 @@
  * `.navbar__menu--right`
  *
  *     @example
- *     nav.navbar.maxsm-navbar-responsive.ac-txtc
+ *     nav.navbar.maxsm-navbar-responsive
  *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -472,29 +492,42 @@
 .navbar__menu--right {
   justify-content: flex-end; }
 
-.navbar__item {
-  align-items: stretch; }
-  .navbar__item.active .navbar__link:link, .navbar__item.active .navbar__link:hover, .navbar__item.active .navbar__link:visited {
-    color: #1d97f4; }
+.navbar__item .navbar__link:link, .navbar__item .navbar__link:visited,
+.navbar__toggler:link,
+.navbar__toggler:visited {
+  color: #9e9e9f; }
 
-.night .navbar__item.active .navbar__link:link, .night .navbar__item.active .navbar__link:hover, .night .navbar__item.active .navbar__link:visited {
-  color: #89c9f9; }
+.navbar__item .navbar__link:hover,
+.navbar__toggler:hover {
+  color: #6b6b6c; }
 
-.night .navbar__link:link, .night .navbar__link:visited,
+.navbar__brand .navbar__link:link, .navbar__brand .navbar__link:hover, .navbar__brand .navbar__link:visited,
+.navbar__item.active .navbar__link:link,
+.navbar__item.active .navbar__link:hover,
+.navbar__item.active .navbar__link:visited {
+  color: #3f3f40; }
+
+.night .navbar__item .navbar__link:link, .night .navbar__item .navbar__link:visited,
 .night .navbar__toggler:link,
 .night .navbar__toggler:visited {
-  color: #ececec; }
+  color: #9e9e9f; }
 
-.night .navbar__link:hover,
+.night .navbar__item .navbar__link:hover,
 .night .navbar__toggler:hover {
-  color: #89c9f9; }
+  color: #bdbdbe; }
+
+.night .navbar__brand .navbar__link:link, .night .navbar__brand .navbar__link:hover, .night .navbar__brand .navbar__link:visited,
+.night .navbar__item.active .navbar__link:link,
+.night .navbar__item.active .navbar__link:hover,
+.night .navbar__item.active .navbar__link:visited {
+  color: #ececec; }
 
 /**
  * Responsive navbar menu:
  * `.navbar-responsive` `.max[size]-navbar-responsive`
  *
  *     @example
- *     nav.navbar.navbar-responsive.ac-txtc
+ *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -542,7 +575,7 @@
 .navbar-responsive .navbar__item {
   flex-direction: column; }
 
-.navbar-responsive .navbar__link,
+.navbar-responsive .navbar__item .navbar__link,
 .navbar-responsive .navbar__form {
   display: block;
   width: 100%; }
@@ -586,7 +619,7 @@
   .maxxs-navbar-responsive .navbar__menu,
   .maxxs-navbar-responsive .navbar__item {
     flex-direction: column; }
-  .maxxs-navbar-responsive .navbar__link,
+  .maxxs-navbar-responsive .navbar__item .navbar__link,
   .maxxs-navbar-responsive .navbar__form {
     display: block;
     width: 100%; }
@@ -627,7 +660,7 @@
   .maxsm-navbar-responsive .navbar__menu,
   .maxsm-navbar-responsive .navbar__item {
     flex-direction: column; }
-  .maxsm-navbar-responsive .navbar__link,
+  .maxsm-navbar-responsive .navbar__item .navbar__link,
   .maxsm-navbar-responsive .navbar__form {
     display: block;
     width: 100%; }
@@ -668,7 +701,7 @@
   .maxmd-navbar-responsive .navbar__menu,
   .maxmd-navbar-responsive .navbar__item {
     flex-direction: column; }
-  .maxmd-navbar-responsive .navbar__link,
+  .maxmd-navbar-responsive .navbar__item .navbar__link,
   .maxmd-navbar-responsive .navbar__form {
     display: block;
     width: 100%; }
@@ -709,7 +742,7 @@
   .maxlg-navbar-responsive .navbar__menu,
   .maxlg-navbar-responsive .navbar__item {
     flex-direction: column; }
-  .maxlg-navbar-responsive .navbar__link,
+  .maxlg-navbar-responsive .navbar__item .navbar__link,
   .maxlg-navbar-responsive .navbar__form {
     display: block;
     width: 100%; }
@@ -750,7 +783,7 @@
   .maxxl-navbar-responsive .navbar__menu,
   .maxxl-navbar-responsive .navbar__item {
     flex-direction: column; }
-  .maxxl-navbar-responsive .navbar__link,
+  .maxxl-navbar-responsive .navbar__item .navbar__link,
   .maxxl-navbar-responsive .navbar__form {
     display: block;
     width: 100%; }
@@ -769,7 +802,7 @@
  * `.navbar-responsive--top`
  *
  *     @example
- *     nav.navbar.navbar-responsive.navbar-responsive--top.ac-txtc
+ *     nav.navbar.navbar-responsive.navbar-responsive--top
  *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -788,7 +821,7 @@
  * `.open`
  *
  *     @example
- *     nav.navbar.navbar-responsive.ac-txtc
+ *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -806,7 +839,7 @@
  * Responsive navbar grid menu:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive.ac-txtc
+ *     nav.navbar.maxlg-navbar-responsive
  *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
@@ -826,7 +859,7 @@
  * Navbar brand in the center:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive.ac-txtc
+ *     nav.navbar.maxlg-navbar-responsive
  *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
