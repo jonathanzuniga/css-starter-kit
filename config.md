@@ -5,7 +5,7 @@
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
 	link(rel='stylesheet', href='css/styledown.css')
-	link(rel='stylesheet', href='../dist/all.css')
+	link(rel='stylesheet', href='../dist/csssk.css')
 
 	style(type='text/css').
 		.doc-navbar {

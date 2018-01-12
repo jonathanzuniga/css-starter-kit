@@ -10,98 +10,61 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass-min', function() {
-	return gulp.src('src/**/*.scss') // Source files.
-		.pipe(sass({outputStyle: 'compressed'})) // Using gulp-sass.
+	return gulp.src('src/**/*.scss')
+		.pipe(sass({outputStyle: 'compressed'}))
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist')) // Destination.
+		.pipe(gulp.dest('dist'))
 });
+
+var config   = 'config.md';
+var template = [
+		'<!doctype html>',
+		'<html>',
+		'<head>',
+		'<meta charset="utf-8">',
+		'<title>CSS Starter Kit Guide</title>',
+		'</head>',
+		'<body>',
+		'</body>',
+		'</html>'
+	].join('\n');
 
 gulp.task('styledown', function() {
 	gulp.src('index.md') // /path/to/styledown/*.md
 		.pipe(styledown({
-			config: 'config.md', // /path/to/config.md
-			template: [
-				'<!doctype html>',
-				'<html>',
-				'<head>',
-				'<meta charset="utf-8">',
-				'<title>CSS Starter Kit Guide</title>',
-				'</head>',
-				'<body>',
-				'</body>',
-				'</html>'
-			].join('\n'),
+			config:   config, // /path/to/config.md
+			template: template,
 			filename: 'index.html' // output.html
 		}))
 		.pipe(gulp.dest('guide')); // /path/to/
-	gulp.src('dist/elements.css') // /path/to/styledown/*.md
+	gulp.src('dist/elements.css')
 		.pipe(styledown({
-			config: 'config.md', // /path/to/config.md
-			template: [
-				'<!doctype html>',
-				'<html>',
-				'<head>',
-				'<meta charset="utf-8">',
-				'<title>CSS Starter Kit Guide</title>',
-				'</head>',
-				'<body>',
-				'</body>',
-				'</html>'
-			].join('\n'),
-			filename: 'elements.html' // output.html
+			config:   config,
+			template: template,
+			filename: 'elements.html'
 		}))
-		.pipe(gulp.dest('guide')); // /path/to/
-	gulp.src('dist/components.css') // /path/to/styledown/*.md
+		.pipe(gulp.dest('guide'));
+	gulp.src('dist/components.css')
 		.pipe(styledown({
-			config: 'config.md', // /path/to/config.md
-			template: [
-				'<!doctype html>',
-				'<html>',
-				'<head>',
-				'<meta charset="utf-8">',
-				'<title>CSS Starter Kit Guide</title>',
-				'</head>',
-				'<body>',
-				'</body>',
-				'</html>'
-			].join('\n'),
-			filename: 'components.html' // output.html
+			config:   config,
+			template: template,
+			filename: 'components.html'
 		}))
-		.pipe(gulp.dest('guide')); // /path/to/
-	gulp.src('dist/helpers.css') // /path/to/styledown/*.md
+		.pipe(gulp.dest('guide'));
+	gulp.src('dist/helpers.css')
 		.pipe(styledown({
-			config: 'config.md', // /path/to/config.md
-			template: [
-				'<!doctype html>',
-				'<html>',
-				'<head>',
-				'<meta charset="utf-8">',
-				'<title>CSS Starter Kit Guide</title>',
-				'</head>',
-				'<body>',
-				'</body>',
-				'</html>'
-			].join('\n'),
-			filename: 'helpers.html' // output.html
+			config:   config,
+			template: template,
+			filename: 'helpers.html'
 		}))
-		.pipe(gulp.dest('guide')); // /path/to/
-	gulp.src('dist/layout.css') // /path/to/styledown/*.md
+		.pipe(gulp.dest('guide'));
+	gulp.src('dist/layout.css')
 		.pipe(styledown({
-			config: 'config.md', // /path/to/config.md
-			template: [
-				'<!doctype html>',
-				'<html>',
-				'<head>',
-				'<meta charset="utf-8">',
-				'<title>CSS Starter Kit Guide</title>',
-				'</head>',
-				'<body>',
-				'</body>',
-				'</html>'
-			].join('\n'),
-			filename: 'layout.html' // output.html
+			config:   config,
+			template: template,
+			filename: 'layout.html'
 		}))
-		.pipe(gulp.dest('guide')); // /path/to/
+		.pipe(gulp.dest('guide'));
 });
 
 // Watch task.

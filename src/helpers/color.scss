@@ -1,0 +1,129 @@
+@import '../partials/_all';
+
+
+/***
+ * Color:
+ */
+
+@each $name, $hex, $gen in $color-palette {
+	$name_ucf: str_ucfirst($name);
+	$name_r: str_replace(to_lower_case($name), ' ', '-');
+	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
+
+	@if not ($gen == '') {
+		$range: '1...#{$color-spectrum-range}';
+
+		/**
+		 * #{$name_ucf} color:
+		 * `.bgc-#{$name_r}-[#{$range}]` `.txtc-#{$name_r}-[#{$range}]` `.bdc-#{$name_r}-[#{$range}]`
+		 *
+		 *     @example
+		 *     table.tbl
+		 *         tr
+		 *             td.w-20
+		 *                 div.doc-color-swatch.bgc-#{$name_r}-#{$color-spectrum-range / 2}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2}.maxsm-hide #{$name_r}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2} #{$hex}
+		 *             td.w-20.txt-select.txtc-#{$name_r}-#{$color-spectrum-range / 2} #{$rgb}
+		 */
+	}
+	@else {
+		/**
+		 * #{$name_ucf} color:
+		 * `.bgc-#{$name_r}` `.txtc-#{$name_r}` `.bdc-#{$name_r}`
+		 *
+		 *     @example
+		 *     table.tbl
+		 *         tr
+		 *             td.w-20
+		 *                 div.doc-color-swatch.bgc-#{$name_r}
+		 *             td.w-20.txt-select.txtc-#{$name_r}.maxsm-hide #{$name_r}
+		 *             td.w-20.txt-select.txtc-#{$name_r} #{$hex}
+		 *             td.w-20.txt-select.txtc-#{$name_r} #{$rgb}
+		 */
+	}
+}
+
+@each $name, $hex in $colors {
+	$name_ucf: str_ucfirst($name);
+	$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+	.bgc-#{$name_r} {
+		background-color: $hex;
+	}
+
+	.bdc-#{$name_r} {
+		// @extend .bd;
+		border-color: $hex;
+	}
+
+	.txtc-#{$name_r} {
+		color: $hex;
+	}
+}
+
+.night {
+	@each $name, $hex in $night-colors {
+		$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+		.bgc-#{$name_r} {
+			background-color: $hex;
+		}
+
+		.bdc-#{$name_r} {
+			// @extend .bd;
+			border-color: $hex;
+		}
+
+		.txtc-#{$name_r} {
+			color: $hex;
+		}
+	}
+}
+
+/**
+ * Link color to text color:
+ *
+ *     @example
+ *     p.ac-txtc
+ *         a(href='') Link with text color
+ */
+.ac-txtc a:not(.btn) {
+	&:link,
+	&:visited {
+		color: $text-color;
+	}
+
+	&:hover {
+		color: $link-color;
+	}
+}
+
+p.ac-txtc a:not(.btn) {
+	border-bottom-color: rgba($text-color, 0.2);
+
+	&:hover {
+		border-bottom-color: $link-color;
+	}
+}
+
+.night {
+	.ac-txtc a:not(.btn) {
+		&:link,
+		&:visited {
+			color: $night-text-color;
+		}
+
+		&:hover {
+			color: $night-link-color;
+		}
+	}	
+
+	p.ac-txtc a:not(.btn) {
+		border-bottom-color: rgba($night-text-color, 0.2);
+
+		&:hover {
+			border-bottom-color: $night-link-color;
+		}
+	}
+}

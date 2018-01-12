@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/**
+ * File area:
+ * `.file-area`
+ *
+ *     @example
+ *     div.file-area
+ *         input(id='eg-file', title='Add a file', type='file', required)
+ *         div.file-area__bg
+ *         p.h2.m-top-0.txtc-gray-25 Drag file here
+ *         p.txtc-gray-25 – or –
+ *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
+ */
+.file-area {
+  padding: 6.25em 1em;
+  position: relative;
+  text-align: center; }
+  .file-area [type=file] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; }
+    .file-area [type=file]:focus + .file-area__bg {
+      background-color: none; }
+    .file-area [type=file]:valid + .file-area__bg {
+      background-color: #dbeefd; }
+    .file-area [type=file]:hover + .file-area__bg {
+      background-color: #efeff0; }
+  .file-area .file-area__bg {
+    background-color: #f7f7f7;
+    border-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+  .file-area:hover .file-area__bg {
+    background-color: #efeff0; }
+  .file-area label {
+    position: relative;
+    z-index: 1; }
+
+.night .file-area [type=file]:focus + .file-area__bg {
+  background-color: none; }
+
+.night .file-area [type=file]:valid + .file-area__bg {
+  background-color: #1a2e3f; }
+
+.night .file-area [type=file]:hover + .file-area__bg {
+  background-color: #2e2f31; }
+
+.night .file-area .file-area__bg {
+  background-color: #242526; }
+
+.night .file-area:hover .file-area__bg {
+  background-color: #2e2f31; }

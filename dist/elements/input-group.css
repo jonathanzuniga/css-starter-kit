@@ -1,0 +1,105 @@
+/***
+ * Input group:
+ */
+/**
+ * Button addons:
+ * `.input-group`
+ *
+ *     @example
+ *     div.input-group
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
+ */
+/**
+ * Mixed addons:
+ * `.input-group`
+ *
+ *     @example
+ *     div.input-group
+ *         label.lbl Search:
+ *         div.input-group-btn
+ *             input(type='search').input
+ *             button.btn.btn--secondary Go
+ */
+.input-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%; }
+  .input-group .lbl {
+    margin-bottom: 0; }
+    .input-group .lbl:first-child {
+      margin-right: 0.5em; }
+      .input-group .lbl:first-child + .input-group-btn {
+        flex-grow: 2;
+        width: auto; }
+
+.input-group-btn {
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%; }
+  .input-group-btn > *:not(:last-child) {
+    margin-right: -0.063rem; }
+  .input-group-btn .input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 6em; }
+    .input-group-btn .input:first-child {
+      flex: 1 1 auto; }
+    .input-group-btn .input:last-child {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem; }
+    .input-group-btn .input:focus, .input-group-btn .input:focus:hover, .input-group-btn .input:active {
+      border-color: #89c9f9; }
+    .input-group-btn .input:focus, .input-group-btn .input:focus:hover, .input-group-btn .input:hover, .input-group-btn .input:active {
+      z-index: 3; }
+  .input-group-btn .btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+
+/**
+ * Input group size:
+ * `.input-group--[size]`
+ *
+ *     @example
+ *     div.fld.input-group.input-group--lg
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
+ *     div.fld.input-group.input-group--sm
+ *         div.input-group-btn
+ *             input(type='search', placeholder='Search...').input
+ *             button.btn.btn--secondary Go
+ */
+.input-group--sm .btn {
+  border-radius: 0.25rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+  .input-group--sm .btn.btn--gradient {
+    padding: 0.313em 0.813em; }
+
+.input-group--sm .input {
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+  .input-group--sm .input:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
+
+.input-group--lg .btn {
+  border-radius: 0.25rem;
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+  .input-group--lg .btn.btn--gradient {
+    padding: 0.313em 0.813em; }
+
+.input-group--lg .input {
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+  .input-group--lg .input:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }

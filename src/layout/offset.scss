@@ -1,0 +1,33 @@
+@import '../partials/_all';
+
+
+/***
+ * Offset:
+ */
+
+/**
+ * Offsetting columns:
+ * `.offset-[#]` `.[size]-offset-[#]`
+ *
+ *     @example
+ *     div.row
+ *         div.col-4
+ *             div.bgc-green-10 &nbsp;
+ *         div.col-4.offset-4
+ *             div.bgc-green-10 &nbsp;
+ *     div.row.m-top-4
+ *         div.md-col-5
+ *             div.bgc-green-10 &nbsp;
+ *         div.md-col-3.lg-offset-3
+ *             div.bgc-green-10 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.offset-#{$i},
+			.#{$size}-offset-#{$i} {
+				margin-left: percentage($i / $grid-columns-number);
+			}
+		}
+	}
+}

@@ -1,0 +1,461 @@
+@import '../partials/_all';
+
+
+/***
+ * Text:
+ */
+
+/**
+ * Font weight thin:
+ * `.txt-thin`
+ *
+ *     @example
+ *     p.txt-thin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-thin {
+	font-weight: 100;
+}
+
+/**
+ * Font weight extra-light:
+ * `.txt-xlt`
+ *
+ *     @example
+ *     p.txt-xlt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-xlt {
+	font-weight: 200;
+}
+
+/**
+ * Font weight light:
+ * `.txt-lt`
+ *
+ *     @example
+ *     p.txt-lt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-lt {
+	font-weight: 300;
+}
+
+/**
+ * Font weight regular:
+ * `.txt-rg`
+ *
+ *     @example
+ *     p.txt-rg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-rg {
+	font-weight: 400;
+}
+
+/**
+ * Font weight medium:
+ * `.txt-md`
+ *
+ *     @example
+ *     p.txt-medium Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-md {
+	font-weight: 500;
+}
+
+/**
+ * Font weight semi-bold:
+ * `.txt-sb`
+ *
+ *     @example
+ *     p.txt-sb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-sb {
+	font-weight: 600;
+}
+
+/**
+ * Font weight bold:
+ * `.txt-b`
+ *
+ *     @example
+ *     p.txt-b Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-b {
+	font-weight: 700;
+}
+
+/**
+ * Font weight extra-bold:
+ * `.txt-xb`
+ *
+ *     @example
+ *     p.txt-xb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-xb {
+	font-weight: 800;
+}
+
+/**
+ * Font weight black:
+ * `.txt-black`
+ *
+ *     @example
+ *     p.txt-black Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-black {
+	font-weight: 900;
+}
+
+/**
+ * Italic text:
+ * `.txt-i`
+ *
+ *     @example
+ *     p.txt-i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-i {
+	font-style: italic;
+}
+
+/**
+ * Strikethrough text:
+ * `.txt-strike`
+ *
+ *     @example
+ *     p.txt-strike Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-strike {
+	text-decoration: line-through;
+}
+
+/**
+ * Highlighting text:
+ * `.txt-hl`
+ *
+ *     @example
+ *     p 
+ *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-hl {
+	border-radius: $hightlight-border-radius;
+	background-color: $hightlight-background-color;
+	background-image: $hightlight-background;
+}
+
+.night {
+	.txt-hl {
+		background-color: $night-hightlight-background-color;
+		background-image: $night-hightlight-background;
+	}
+}
+
+/**
+ * Small font:
+ * `.txt-sm`
+ *
+ *     @example
+ *     p.txt-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-sm {
+	font-size: $small-font-size;
+}
+
+/**
+ * Large font:
+ * `.txt-lg`
+ *
+ *     @example
+ *     p.txt-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-lg {
+	font-size: $large-font-size;
+}
+
+/* ========================================================================== */
+
+/***
+ * Text alignment:
+ */
+
+/**
+ * Left aligned text:
+ * `.txt-left`
+ *
+ *     @example
+ *     p.txt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-left {
+	text-align: left;
+}
+
+/**
+ * Center aligned text:
+ * `.txt-center`
+ *
+ *     @example
+ *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-center {
+	text-align: center;
+}
+
+/**
+ * Right aligned text:
+ * `.txt-right`
+ *
+ *     @example
+ *     p.txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-right {
+	text-align: right;
+}
+
+/**
+ * Responsive text alignment:
+ * `.[size]-txt-[position]` `.max[size]-txt-[position]`
+ *
+ *     @example
+ *     p.lg-txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		.#{$size}-txt-left {
+			text-align: left;
+		}
+
+		.#{$size}-txt-center {
+			text-align: center;
+		}
+
+		.#{$size}-txt-right {
+			text-align: right;
+		}
+	}
+	
+	@media (max-width: $length - 1) {
+		.max#{$size}-txt-left {
+			text-align: left;
+		}
+
+		.max#{$size}-txt-center {
+			text-align: center;
+		}
+
+		.max#{$size}-txt-right {
+			text-align: right;
+		}
+	}
+}
+
+/* ========================================================================== */
+
+/***
+ * Text transform:
+ */
+
+/**
+ * Capitalized text:
+ * `.txt-cap`
+ *
+ *     @example
+ *     p.txt-cap Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-cap {
+	text-transform: capitalize;
+}
+
+/**
+ * Lowercased text:
+ * `.txt-lc`
+ *
+ *     @example
+ *     p.txt-lc Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-lc {
+	text-transform: lowercase;
+}
+
+/**
+ * Uppercased text:
+ * `.txt-uc`
+ *
+ *     @example
+ *     p.txt-uc Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-uc {
+	text-transform: uppercase;
+}
+
+/* ========================================================================== */
+
+/***
+ * Other text helpers:
+ */
+
+/**
+ * Selecting all text with one click:
+ * `.txt-select`
+ *
+ *     @example
+ *     p.txt-select Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.txt-select {
+	-webkit-user-select: all; /* Chrome, Opera, Safari */
+	-moz-user-select: all; /* Firefox 2+ */
+	-ms-user-select: all; /* IE 10+ */
+	user-select: all; /* Standard syntax */
+}
+
+/**
+ * Drop cap:
+ * `.dcap`
+ *
+ *     @example
+ *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+.dcap:first-letter {
+	background-color: $dropcap-background-color;
+	border: $dropcap-border;
+	color: $dropcap-color;
+	display: block;
+	float: left;
+
+	font-size: $dropcap-font-size;
+	font-style: $dropcap-font-style;
+	font-weight: $dropcap-font-weight;
+
+	letter-spacing: $dropcap-letter-spacing;
+	line-height: $dropcap-line-height;
+
+	margin-top: $dropcap-margin-top;
+	margin-right: $dropcap-margin-right;
+	padding: $dropcap-padding;
+
+	text-shadow: $dropcap-text-shadow;
+
+	width: $dropcap-width;
+	height: $dropcap-height;
+
+	text-align: $dropcap-text-align;
+	text-indent: 0;
+	vertical-align: $dropcap-vertical-align;
+}
+
+.night {
+	.dcap:first-letter {
+		color: $night-dropcap-color;
+	}
+}
+
+/**
+ * Small caps:
+ * `.smcaps` `.smcaps-1ln`
+ *
+ *     @example
+ *     p.smcaps-1ln Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+.smcaps {
+	font-variant: small-caps;
+	letter-spacing: $smcaps-letter-spacing;
+	margin-right: $smcaps-margin-right;
+}
+
+.smcaps-1ln:first-line {
+	@extend .smcaps;
+}
+
+/**
+ * Indent text:
+ * `.txt-indent`
+ *
+ *     @example
+ *     div.txt-indent
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
+ *
+ *         p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
+ *
+ *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.  
+ */
+.txt-indent {
+	blockquote, pre,
+	ul, ol, dl, figure, img {
+		margin-top: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit;
+	}
+
+	figure {
+		img {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	p:not([class*="cols-"]) {
+		margin-bottom: 0;
+
+		& + p:not([class*="cols-"]) {
+			text-indent: $half-spacing-unit + 0.5;
+		}
+	}
+}
+
+/**
+ * Divide the content in columns:
+ * `.[size]-cols-[#]`
+ *
+ *     @example
+ *     p.xs-cols-1.sm-cols-2.md-cols-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 1 through $grid-columns-number {
+			.#{$size}-cols-#{$i} {
+				column-count: $i;
+				column-gap: $gutter-width;
+			}
+		}
+	}
+}
+
+.txt-smooth {
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+}
+
+.a-underline a {
+	text-decoration: underline;
+}
+
+.a-underline-bgs a {
+	background-image: -webkit-linear-gradient(top, transparent 50%, $link-color 50%);
+	background-image: linear-gradient(to bottom, transparent 50%, $link-color 50%);
+	background-repeat: repeat-x;
+	background-size: 0.125rem 0.125rem;
+	background-position: 0 90%;
+	text-shadow: 0.063rem 0 $base-background-color, 
+				 0.125rem 0 $base-background-color, 
+				-0.063rem 0 $base-background-color, 
+				-0.125rem 0 $base-background-color;
+
+	&:hover {
+		background-image: -webkit-linear-gradient(top, transparent 50%, $text-color 50%);
+		background-image: linear-gradient(to bottom, transparent 50%, $text-color 50%);
+	}
+}
+
+.night {
+	.a-underline-alt a {
+		background-image: -webkit-linear-gradient(top, transparent 50%, $night-link-color 50%);
+		background-image: linear-gradient(to bottom, transparent 50%, $night-link-color 50%);
+		background-repeat: repeat-x;
+		background-size: 0.125rem 0.125rem;
+		background-position: 0 90%;
+		text-shadow: 0.063rem 0 $night-base-background-color, 
+					 0.125rem 0 $night-base-background-color, 
+					-0.063rem 0 $night-base-background-color, 
+					-0.125rem 0 $night-base-background-color;
+
+		&:hover {
+			background-image: -webkit-linear-gradient(top, transparent 50%, $night-text-color 50%);
+			background-image: linear-gradient(to bottom, transparent 50%, $night-text-color 50%);
+		}
+	}
+}

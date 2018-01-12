@@ -1,0 +1,258 @@
+@import '../partials/_all';
+
+
+/***
+ * Table:
+ */
+
+table {
+	border-collapse: collapse;
+	margin-bottom: $half-spacing-unit;
+	max-width: 100%;
+	width: 100%;
+}
+
+th {
+	text-align: $table-header-text-align;
+}
+
+/**
+ * Standard table:
+ * `.tbl` Tables are styled nicely for you.
+ *
+ *     @example
+ *     table.tbl
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl {
+	// border-spacing: 0;
+
+	th, td {
+		&:not(:last-child) {
+			border-right-width: $table-border-width;
+			border-right-style: $table-border-right-style;
+		}
+	}
+
+	tr + tr {
+		th, td {
+			border-top-width: $table-border-width;
+			border-top-style: $table-border-style;
+		}
+	}
+
+	th {
+		background-color: $table-header-background-color;
+		border-top-width: $table-border-width ;
+		border-top-style: $table-border-style;
+		border-bottom-width: $table-border-width;
+		border-bottom-style: $table-border-style;
+		font-weight: $table-header-font-weight;
+	}
+
+	th, td {
+		border-color: $table-border-color;
+		padding: $table-cell-padding;
+		vertical-align: top;
+	}
+}
+
+.night .tbl {
+	th {
+		background-color: $night-table-header-background-color;
+	}
+
+	th, td {
+		border-color: $night-table-border-color;
+	}
+}
+
+@each $prop, $abbr in (width: tbl-col) {
+	@each $size, $length in $sizes {
+		@for $i from 1 through length($sizes) {
+			$col: $i;
+			.#{$abbr}-#{$col}-#{$size} {
+				tr th:nth-child(#{$col}),
+				tr td:nth-child(#{$col}) {
+					#{$prop}: $length;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Bordered table:
+ * `.tbl--bordered`
+ *
+ *     @example
+ *     table.tbl.tbl--bordered
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--bordered {
+	border-width: $table-border-width;
+	border-style: $table-border-style;
+	border-color: $table-border-color;
+
+	td, th {
+		&:not(:last-child) {
+			border-right-style: $table-border-style;
+		}
+	}
+}
+
+.night .tbl--bordered {
+	border-color: $night-table-border-color;
+}
+
+/**
+ * Responsive table:
+ * `.tbl--responsive`
+ *
+ *     @example
+ *     table.tbl.tbl--responsive
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--responsive {
+	overflow-x: auto;
+}
+
+@media screen and (max-width: $breakpoint-sm-min-width - 1) {
+	.tbl--responsive {
+		display: block;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-y: hidden;
+	}
+}
+
+/**
+ * Scrolling table:
+ * `.tbl--scroll`
+ *
+ *     @example
+ *     table.tbl.tbl--scroll
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--scroll {
+	display: block;
+	overflow-x: auto;
+
+	th, td {
+		white-space: nowrap;
+	}
+}
+
+/**
+ * Striped table:
+ * `.tbl--striped`
+ *
+ *     @example
+ *     table.tbl.tbl--striped
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+.tbl--striped {
+	tbody {
+		tr:nth-child(#{$table-striped-index}) {
+			td, th {
+				background-color: $table-striped-background-color;
+			}
+		}
+	}
+}
+
+.night {
+	.tbl--striped {
+		tbody {
+			tr:nth-child(#{$table-striped-index}) {
+				td, th {
+					background-color: $night-table-striped-background-color;
+				}
+			}
+		}
+	}
+}

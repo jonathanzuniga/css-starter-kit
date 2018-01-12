@@ -1,0 +1,46 @@
+@import '../partials/_all';
+
+
+/***
+ * List:
+ */
+
+ /**
+ * Unstyled list:
+ * `.ls-unstyled`
+ *
+ *     @example
+ *     ul.ls-unstyled
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ *             ul
+ *                 li Caramel
+ *                 li Ice cream
+ */
+.ls-unstyled {
+	list-style: none;
+	padding-left: 0;
+}
+
+ /**
+ * Inline list:
+ * `.ls-inline`
+ *
+ *     @example
+ *     ul.ls-inline
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ */
+.ls-inline {
+	@extend .ls-unstyled;
+
+	li {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: $half-spacing-unit;
+		}
+	}
+}

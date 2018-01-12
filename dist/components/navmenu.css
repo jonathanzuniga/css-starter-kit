@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/***
+ * Navmenu:
+ */
+/**
+ * Full screen menu:
+ * `.max[size]-fsmenu`
+ *
+ *     @example
+ *     p Es el menú que ves en esta guía al consultarla desde tu teléfono móvil. Usa la clase <code>.open</code> para que este visible.
+ */
+@media (max-width: -1) {
+  .maxxs-fsmenu {
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s step-end, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-end, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+    z-index: 999; }
+    .maxxs-fsmenu > * {
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94); }
+    .maxxs-fsmenu.open {
+      background-color: #fff;
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.5s step-start, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-start, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94); }
+      .maxxs-fsmenu.open > * {
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s; }
+  .night .maxxs-fsmenu.open {
+    background-color: #191a1c; } }
+
+@media (max-width: 767px) {
+  .maxsm-fsmenu {
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s step-end, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-end, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+    z-index: 999; }
+    .maxsm-fsmenu > * {
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94); }
+    .maxsm-fsmenu.open {
+      background-color: #fff;
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.5s step-start, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-start, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94); }
+      .maxsm-fsmenu.open > * {
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s; }
+  .night .maxsm-fsmenu.open {
+    background-color: #191a1c; } }
+
+@media (max-width: 1023px) {
+  .maxmd-fsmenu {
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s step-end, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-end, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+    z-index: 999; }
+    .maxmd-fsmenu > * {
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94); }
+    .maxmd-fsmenu.open {
+      background-color: #fff;
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.5s step-start, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-start, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94); }
+      .maxmd-fsmenu.open > * {
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s; }
+  .night .maxmd-fsmenu.open {
+    background-color: #191a1c; } }
+
+@media (max-width: 1279px) {
+  .maxlg-fsmenu {
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s step-end, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-end, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+    z-index: 999; }
+    .maxlg-fsmenu > * {
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94); }
+    .maxlg-fsmenu.open {
+      background-color: #fff;
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.5s step-start, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-start, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94); }
+      .maxlg-fsmenu.open > * {
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s; }
+  .night .maxlg-fsmenu.open {
+    background-color: #191a1c; } }
+
+@media (max-width: 1679px) {
+  .maxxl-fsmenu {
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s step-end, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-end, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+    z-index: 999; }
+    .maxxl-fsmenu > * {
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.8, 0, 0.55, 0.94); }
+    .maxxl-fsmenu.open {
+      background-color: #fff;
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.5s step-start, transform 0.5s cubic-bezier(0.8, 0, 0.55, 0.94), visibility 0.5s step-start, background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94); }
+      .maxxl-fsmenu.open > * {
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s; }
+  .night .maxxl-fsmenu.open {
+    background-color: #191a1c; } }
+
+.mobile-nav {
+  background-color: #f7f7f7;
+  width: 100%; }
+
+.mobile-nav__item {
+  letter-spacing: 0.18em; }
+  .mobile-nav__item:first-child {
+    border-color: transparent; }
+  .mobile-nav__item.active .mobile-nav__link:link, .mobile-nav__item.active .mobile-nav__link:hover, .mobile-nav__item.active .mobile-nav__link:visited {
+    color: #1d97f4; }
+
+.night .mobile-nav {
+  background-color: #242526; }
+
+.night .mobile-nav__item.active .mobile-nav__link:link, .night .mobile-nav__item.active .mobile-nav__link:hover, .night .mobile-nav__item.active .mobile-nav__link:visited {
+  color: #89c9f9; }
+
+.night .mobile-nav__link:link, .night .mobile-nav__link:visited {
+  color: #ececec; }
+
+.night .mobile-nav__link:hover {
+  color: #89c9f9; }

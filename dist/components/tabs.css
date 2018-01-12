@@ -1,0 +1,148 @@
+/***
+ * Tabs:
+ */
+/**
+ * Standard tabs:
+ * `.tabs`
+ *
+ *     @example
+ *     div.tabs
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs {
+  align-items: stretch;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .tabs ul, .tabs a {
+    border-bottom-color: #e8e9ec;
+    border-bottom-style: solid;
+    border-bottom-width: 0.063rem; }
+  .tabs ul {
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    padding-left: 0;
+    position: relative; }
+  .tabs li {
+    display: block;
+    margin: 0; }
+    .tabs li:first-child {
+      margin-left: 0; }
+    .tabs li a {
+      border-bottom-color: transparent;
+      border-bottom-width: 0.188rem;
+      display: flex;
+      margin-bottom: -0.063rem;
+      padding: 0.5em 1em; }
+      .tabs li a:link, .tabs li a:visited {
+        color: #9e9e9f; }
+      .tabs li a:hover {
+        border-bottom-color: transparent;
+        color: #6b6b6c; }
+    .tabs li.active a {
+      border-bottom-color: #1d97f4;
+      border-bottom-width: 0.188rem; }
+      .tabs li.active a:link, .tabs li.active a:visited {
+        color: #3f3f40; }
+      .tabs li.active a:hover {
+        color: #3f3f40; }
+
+.night .tabs ul, .night .tabs a {
+  border-bottom-color: #393b3f; }
+
+.night .tabs li a {
+  border-bottom-color: transparent; }
+  .night .tabs li a:link, .night .tabs li a:visited {
+    color: #9e9e9f; }
+  .night .tabs li a:hover {
+    border-bottom-color: transparent;
+    color: #bdbdbe; }
+
+.night .tabs li.active a {
+  border-bottom-color: #89c9f9; }
+  .night .tabs li.active a:link, .night .tabs li.active a:visited {
+    color: #ececec; }
+  .night .tabs li.active a:hover {
+    color: #ececec; }
+
+/**
+ * Center tabs:
+ * `.tabs--center`
+ *
+ *     @example
+ *     div.tabs.tabs--center
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs--center ul {
+  justify-content: center; }
+
+/**
+ * Right tabs:
+ * `.tabs--right`
+ *
+ *     @example
+ *     div.tabs.tabs--right
+ *         ul
+ *             li.active
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ */
+.tabs--right ul {
+  justify-content: right; }
+
+/**
+ * Active item underline:
+ * `.active-item-underline`
+ *
+ *     @example
+ *     div.tabs
+ *         ul
+ *             li
+ *                 a(href='#!') Tab 1
+ *             li
+ *                 a(href='#!') Tab 2
+ *             li
+ *                 a(href='#!') Tab 3
+ *             li
+ *                 a(href='#!') Tab 4
+ *             li(style='transform: translateX(71px); width: 73px;').active-underline
+ */
+.active-underline {
+  background-color: #1d97f4;
+  height: 0.188rem;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transition: transform ease-out 0.2s, width ease-out 0.2s;
+  will-change: transform, width;
+  transform: translateX(0);
+  width: 71px; }
+
+.night .active-underline {
+  background-color: #89c9f9; }
+
+.tabs-details > div:not(.active) {
+  display: none; }

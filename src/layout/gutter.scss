@@ -1,0 +1,84 @@
+@import '../partials/_all';
+
+
+/***
+ * Gutter:
+ */
+
+@each $number, $width in $gutters {
+	/**
+	 * Gutters width x#{$width}:
+	 * `.gutters-#{$number}`
+	 *
+	 *     @example
+	 *     div.row.gutters-#{$number}
+	 *         div.col-8
+	 *             div.bgc-green-10 &nbsp;
+	 *         div.col-4
+	 *             div.bgc-green-10 &nbsp;
+	 */
+	.gutters-#{$number} {
+		&.row {
+			// margin-right: -($gutter-width * $width);
+			// margin-left: -($gutter-width * $width);
+
+			> .col,
+			> [class*="col-"] {
+				padding-right: $gutter-width * $width;
+				padding-left: $gutter-width * $width;
+			}
+		}
+	}
+
+	.grid-gap-#{$number} {
+		// Grid gap.
+		&[class*='grid-'] {
+			grid-gap: $gutter-width * $width;
+		}
+	}
+
+	@each $size, $length in $grid-breakpoints {
+		@media (min-width: $length) {
+			.#{$size}-gutters-#{$number} {
+				&.row {
+					// margin-right: -($gutter-width * $width);
+					// margin-left: -($gutter-width * $width);
+			
+					> .col,
+					> [class*="col-"] {
+						padding-right: $gutter-width * $width;
+						padding-left: $gutter-width * $width;
+					}
+				}
+
+				// Para la división del contenido en cols.
+				@for $i from 1 through $grid-columns-number {
+					&.#{$size}-cols-#{$i} {
+						column-gap: $gutter-width * $width;
+					}
+				}
+			}
+		}
+
+		@media (max-width: $length - 1) {
+			.max#{$size}-grid-gap-#{$number} {
+				// Grid gap.
+				&[class*='grid-'] {
+					grid-gap: $gutter-width * $width;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Responsive gutters:
+ * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
+ *
+ *     @example
+ *     div.row.md-gutters-0
+ *         div.col-8
+ *             div.bgc-green-10 &nbsp;
+ *         div.col-4
+ *             div.bgc-green-20 &nbsp;
+ */

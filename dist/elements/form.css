@@ -1,0 +1,324 @@
+/***
+ * Form:
+ */
+.fld {
+  margin-bottom: 1em; }
+
+/**
+ * Label and input:
+ * `.lbl` `.input`
+ *
+ *     @example
+ *     label(for='eg-input').lbl Label
+ *     input(id='eg-input', placeholder='Text input', type='text').input
+ */
+.lbl {
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 0.5em; }
+
+.input,
+.txtarea {
+  background-color: transparent;
+  border: 0.063rem solid #e0e0e0;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: #3f3f40;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: inherit;
+  padding: 0.25em 0.75em;
+  width: 100%; }
+  .input::placeholder,
+  .txtarea::placeholder {
+    color: #c1c1c2; }
+  .input:invalid,
+  .txtarea:invalid {
+    border-color: #ff5956; }
+  .input:valid,
+  .txtarea:valid {
+    border-color: #e0e0e0; }
+  .input:focus, .input:focus:hover,
+  .txtarea:focus,
+  .txtarea:focus:hover {
+    background-color: transparent;
+    border-color: #89c9f9;
+    border-width: 0.063rem;
+    box-shadow: none; }
+    .input:focus::placeholder, .input:focus:hover::placeholder,
+    .txtarea:focus::placeholder,
+    .txtarea:focus:hover::placeholder {
+      color: #89c9f9; }
+  .input:hover,
+  .txtarea:hover {
+    border-color: #e0e0e0; }
+  .input:active,
+  .txtarea:active {
+    border-color: #1d97f4; }
+
+.night .input,
+.night .txtarea {
+  background-color: transparent;
+  border-color: #444446;
+  color: #ececec; }
+  .night .input::placeholder,
+  .night .txtarea::placeholder {
+    color: #6e6e70; }
+  .night .input:invalid,
+  .night .txtarea:invalid {
+    border-color: #ff5956; }
+  .night .input:valid,
+  .night .txtarea:valid {
+    border-color: #444446; }
+  .night .input:focus, .night .input:focus:hover,
+  .night .txtarea:focus,
+  .night .txtarea:focus:hover {
+    border-color: #89c9f9;
+    box-shadow: none; }
+    .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
+    .night .txtarea:focus::placeholder,
+    .night .txtarea:focus:hover::placeholder {
+      color: #89c9f9; }
+  .night .input:hover,
+  .night .txtarea:hover {
+    border-color: #444446; }
+  .night .input:active,
+  .night .txtarea:active {
+    border-color: #1d97f4; }
+
+/**
+ * Input size:
+ * `.input--[size]`
+ *
+ *     @example
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--lg
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--sm
+ */
+.input--sm {
+  border-radius: 0.25rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+
+.input--lg {
+  border-radius: 0.25rem;
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+
+/**
+ * Line input:
+ * `.input--line`
+ *
+ *     @example
+ *     input(type='text', placeholder='Line input').input.input--line
+ */
+.input--line {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom: 0.063rem solid #e0e0e0;
+  border-left: none;
+  border-radius: 0;
+  padding-right: 0;
+  padding-left: 0; }
+  .input--line:focus, .input--line:focus:hover {
+    box-shadow: none; }
+
+.night .input--line:focus, .night .input--line:focus:hover {
+  box-shadow: none; }
+
+/**
+ * Textarea:
+ * `.txtarea`
+ *
+ *     @example
+ *     textarea(placeholder='Textarea', rows='5').txtarea
+ */
+/**
+ * Checkbox and radio:
+ * 
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio', type='radio', value='')
+ *                     | Radio
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(name='radio', type='radio', value='')
+ *                     | Radio
+ *     div.row
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ */
+.fld--check:not(:last-child) {
+  margin-bottom: 0.5em; }
+
+.lbl--check {
+  margin-bottom: 0;
+  padding-left: 1.25em;
+  position: relative; }
+  .lbl--check:not(:last-child) {
+    margin-right: 1.25em; }
+  .lbl--check [type='checkbox'],
+  .lbl--check [type='radio'] {
+    margin-top: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/**
+ * Select menu:
+ * `.sel`
+ *
+ *     @example
+ *     select.sel
+ *         option Option 1
+ *         option Option 2
+ *         option Option 3
+ */
+.sel {
+  background-color: transparent;
+  border: 0.063rem solid #e0e0e0;
+  border-radius: 0.25rem;
+  display: block;
+  font-size: 16px;
+  line-height: inherit;
+  padding: 0.25em 0.75em;
+  width: 100%; }
+  .sel:focus, .sel:focus:hover {
+    border-color: #89c9f9;
+    border-width: 0.063rem; }
+
+.night .sel {
+  border-color: #444446;
+  color: #ececec; }
+  .night .sel option {
+    color: #3f3f40; }
+
+/**
+ * Pure CSS select menu icon:
+ * `.sel-icn`
+ *
+ *     @example
+ *     div.sel-icn
+ *         select.sel
+ *             option Option 1
+ *             option Option 2
+ *             option Option 3
+ */
+.sel-icn {
+  position: relative; }
+  .sel-icn .sel {
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 1.75em; }
+  .sel-icn:after {
+    border: 0.125em solid #3f3f40;
+    border-right: 0;
+    border-top: 0;
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-top: -0.438em;
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    pointer-events: none;
+    transform: rotate(-45deg); }
+
+.night .sel-icn:after {
+  border-color: #ececec; }
+
+/**
+ * Select menu size:
+ * `.sel--[size]` `.sel-icn--[size]`
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.sel.sel--sm
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *             div.fld
+ *                 select.sel.sel--lg
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.sel-icn.sel-icn--sm
+ *                     select.sel
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ *             div.fld
+ *                 div.sel-icn.sel-icn--lg
+ *                     select.sel
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.sel--sm, .sel-icn--sm .sel {
+  border-radius: 0.25rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+
+.sel--lg, .sel-icn--lg .sel {
+  border-radius: 0.25rem;
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+
+.sel-icn--sm .sel {
+  padding-right: 1.41667em; }
+
+.sel-icn--sm:after {
+  width: 0.33333em;
+  height: 0.33333em;
+  margin-top: -0.292em;
+  right: 0.5em; }
+
+.sel-icn--lg .sel {
+  padding-right: 2.25em; }
+
+.sel-icn--lg:after {
+  width: 0.75em;
+  height: 0.75em;
+  margin-top: -0.657em;
+  right: 1em; }

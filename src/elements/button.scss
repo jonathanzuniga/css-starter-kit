@@ -1,0 +1,655 @@
+@import '../partials/_all';
+
+
+/***
+ * Button:
+ */
+
+/**
+ * Standard button:
+ * `.btn`
+ *
+ *     @example
+ *     button.btn Button
+ */
+.btn {
+	background-color: $button-background-color;
+	color: $text-color;
+	border: $button-border;
+	border-radius: $button-border-radius;
+	box-shadow: none;
+	display: inline-block;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	line-height: $button-line-height;
+	padding: $button-padding;
+	text-align: center;
+	// transition: $base-transition;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:link {
+		text-decoration: none;
+	}
+
+	&:link,
+	&:visited {
+		color: $text-color;
+	}
+
+	&:hover {
+		background-color: 
+			shade(
+				#000, 
+				$button-background-color, 
+				$button-hover-background-color-shade-amount
+			);
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		background-color: 
+			shade(
+				#000, 
+				$button-background-color, 
+				$button-active-background-color-shade-amount
+			);
+		color: $text-color;
+	}
+
+	&:active,
+	&.active,
+	&:focus {
+		box-shadow: $button-active-box-shadow;
+	}
+}
+
+.night .btn {
+	background-color: $night-button-background-color;
+	color: $night-text-color;
+
+	&:link,
+	&:visited {
+		color: $night-text-color;
+	}
+
+	&:hover {
+		background-color: 
+			shade(
+				#fff, 
+				$night-button-background-color, 
+				$button-hover-background-color-shade-amount
+			);
+		color: $night-text-color;
+	}
+
+	&:active,
+	&.active {
+		background-color: 
+			shade(
+				#fff, 
+				$night-button-background-color, 
+				$button-active-background-color-shade-amount
+			);
+		color: $night-text-color;
+	}
+
+	&:active,
+	&.active,
+	&:focus {
+		box-shadow: $night-button-active-box-shadow;
+	}
+}
+
+@each 
+	$name, 
+	$background-color, 
+	$border-color, 
+	$text-color, 
+	$gradient-background-color-top-tint-amount, 
+	$gradient-background-color-bottom-shade-amount,
+	$gradient-background-color-top-hue, 
+	$gradient-background-color-top-saturation, 
+	$gradient-background-color-top-lightness,
+	$gradient-background-color-bottom-hue, 
+	$gradient-background-color-bottom-saturation, 
+	$gradient-background-color-bottom-lightness,
+	$active-box-shadow in $buttons {
+	$name_ucf: str_ucfirst($name);
+	$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+	/**
+	 * #{$name_ucf} button:
+	 * `.btn--#{$name_r}`
+	 *
+	 *     @example
+	 *     button.btn.btn--#{$name_r} Button
+     *     button.btn.btn--#{$name_r}.btn--outline Outline button
+	 */
+	.btn--#{$name_r} {
+		background-color: $background-color;
+		border-color: $border-color;
+		color: $text-color;
+
+		&:link,
+		&:visited {
+			color: $text-color;
+		}
+
+		&:hover {
+			background-color: 
+				shade(
+					#000, 
+					$background-color, 
+					$button-hover-background-color-shade-amount
+				);
+			color: $text-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: 
+				shade(
+					#000, 
+					$background-color, 
+					$button-active-background-color-shade-amount
+				);
+			color: $text-color;
+		}
+
+		@if not ($active-box-shadow == '') {
+			&:active,
+			&.active,
+			&:focus {
+				box-shadow: 0 0 0 $control-focus-box-shadow-spread 
+				            rgba($background-color, $control-focus-box-shadow-color-opacity);
+			}
+		}
+	}
+
+	.btn--gradient {
+		border: $button-gradient-border;
+		padding: $button-gradient-padding;
+
+		&.btn--#{$name_r} {
+			$button-gradient-background-color-top: 
+				tint(
+					$base-background-color, 
+					$background-color, 
+					$gradient-background-color-top-tint-amount
+				);
+			$button-gradient-background-color-bottom: 
+				shade(
+					#000, 
+					$background-color, 
+					$gradient-background-color-bottom-shade-amount
+				);
+
+			$button-gradient-background-color-top-hsl: 
+				hsl(
+					hue($button-gradient-background-color-top) + $gradient-background-color-top-hue, 
+					saturation($button-gradient-background-color-top) + $gradient-background-color-top-saturation, 
+					lightness($button-gradient-background-color-top) + $gradient-background-color-top-lightness
+				);
+			$button-gradient-background-color-bottom-hsl: 
+				hsl(
+					hue($button-gradient-background-color-bottom) + $gradient-background-color-bottom-hue, 
+					saturation($button-gradient-background-color-bottom) + $gradient-background-color-bottom-saturation, 
+					lightness($button-gradient-background-color-bottom) + $gradient-background-color-bottom-lightness
+				);
+
+			@include button_gradient_bg(
+				$button-gradient-background-color-top-hsl, 
+				$button-gradient-background-color-bottom-hsl
+			);
+
+			&:link,
+			&:visited {
+				color: $text-color;
+			}
+
+			&:hover {
+				@include button_gradient_bg(
+					shade(
+						#000, 
+						$button-gradient-background-color-top-hsl, 
+						$button-hover-background-color-shade-amount
+					), 
+					shade(
+						#000, 
+						$button-gradient-background-color-bottom-hsl, 
+						$button-hover-background-color-shade-amount
+					)
+				);
+			}
+
+			&:active,
+			&.active {
+				@include button_gradient_bg(
+					shade(
+						#000, 
+						$button-gradient-background-color-top-hsl, 
+						$button-active-background-color-shade-amount
+					), 
+					shade(
+						#000, 
+						$button-gradient-background-color-bottom-hsl, 
+						$button-active-background-color-shade-amount
+					)
+				);
+			}
+		}
+	}
+
+	.btn--outline {
+		background-color: transparent;
+
+		&.btn--#{$name_r} {
+			border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+			color: $background-color;
+
+			&:link,
+			&:visited {
+				color: $background-color;
+			}
+
+			&:hover {
+				background-color: $background-color;
+				border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+				color: $text-color;
+			}
+
+			&:active,
+			&.active {
+				background-color: 
+					shade(
+						#000, 
+						$background-color, 
+						$button-active-background-color-shade-amount
+					);
+				border-color: transparentize(
+					shade(
+						#000, 
+						$background-color, 
+						$button-active-background-color-shade-amount
+					), 
+					$button-outline-border-transparentize-amount
+				);
+				color: $text-color;
+			}
+		}
+	}
+
+	.toggle,
+	.toggle [type='checkbox'],
+	.toggle [type='radio'] {
+		opacity: 0;
+		position: absolute;
+
+		&:checked {
+			& + .btn--#{$name_r} {
+				@extend .btn--#{$name_r}.active;
+			}
+		}
+	}
+}
+
+.night {
+	@each 
+		$name, 
+		$background-color, 
+		$border-color, 
+		$text-color, 
+		$gradient-background-color-top-tint-amount, 
+		$gradient-background-color-bottom-shade-amount,
+		$gradient-background-color-top-hue, 
+		$gradient-background-color-top-saturation, 
+		$gradient-background-color-top-lightness,
+		$gradient-background-color-bottom-hue, 
+		$gradient-background-color-bottom-saturation, 
+		$gradient-background-color-bottom-lightness,
+		$active-box-shadow in $night-buttons {
+		$name_ucf: str_ucfirst($name);
+		$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+		.btn--#{$name_r} {
+			background-color: $background-color;
+			border-color: $border-color;
+			color: $text-color;
+
+			&:link,
+			&:visited {
+				color: $text-color;
+			}
+
+			&:hover {
+				background-color: 
+					shade(
+						#000, 
+						$background-color, 
+						$button-hover-background-color-shade-amount
+					);
+				color: $text-color;
+			}
+
+			&:active,
+			&.active {
+				background-color: 
+					shade(
+						#000, 
+						$background-color, 
+						$button-active-background-color-shade-amount
+					);
+				color: $text-color;
+			}
+
+			@if not ($active-box-shadow == '') {
+				&:active,
+				&.active,
+				&:focus {
+					box-shadow: 0 0 0 $control-focus-box-shadow-spread 
+					            rgba($background-color, $control-focus-box-shadow-color-opacity);
+				}
+			}
+		}
+
+		.btn--gradient {
+			&.btn--#{$name_r} {
+				$button-gradient-background-color-top: 
+					tint(
+						$base-background-color, 
+						$background-color, 
+						$gradient-background-color-top-tint-amount
+					);
+				$button-gradient-background-color-bottom: 
+					shade(
+						#000, 
+						$background-color, 
+						$gradient-background-color-bottom-shade-amount
+					);
+
+				$button-gradient-background-color-top-hsl: 
+					hsl(
+						hue($button-gradient-background-color-top) + $gradient-background-color-top-hue, 
+						saturation($button-gradient-background-color-top) + $gradient-background-color-top-saturation, 
+						lightness($button-gradient-background-color-top) + $gradient-background-color-top-lightness
+					);
+				$button-gradient-background-color-bottom-hsl: 
+					hsl(
+						hue($button-gradient-background-color-bottom) + $gradient-background-color-bottom-hue, 
+						saturation($button-gradient-background-color-bottom) + $gradient-background-color-bottom-saturation, 
+						lightness($button-gradient-background-color-bottom) + $gradient-background-color-bottom-lightness
+					);
+
+				@include button_gradient_bg(
+					$button-gradient-background-color-top-hsl, 
+					$button-gradient-background-color-bottom-hsl
+				);
+
+				&:link,
+				&:visited {
+					color: $text-color;
+				}
+
+				&:hover {
+					@include button_gradient_bg(
+						shade(
+							#000, 
+							$button-gradient-background-color-top-hsl, 
+							$button-hover-background-color-shade-amount
+						), 
+						shade(
+							#000, 
+							$button-gradient-background-color-bottom-hsl, 
+							$button-hover-background-color-shade-amount
+						)
+					);
+				}
+
+				&:active,
+				&.active {
+					@include button_gradient_bg(
+						shade(
+							#000, 
+							$button-gradient-background-color-top-hsl, 
+							$button-active-background-color-shade-amount
+						), 
+						shade(
+							#000, 
+							$button-gradient-background-color-bottom-hsl, 
+							$button-active-background-color-shade-amount
+						)
+					);
+				}
+			}
+		}
+
+		.btn--outline {
+			background-color: transparent;
+
+			&.btn--#{$name_r} {
+				border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+				color: $background-color;
+
+				&:link,
+				&:visited {
+					color: $background-color;
+				}
+
+				&:hover {
+					background-color: $background-color;
+					border-color: transparentize($background-color, $button-outline-border-transparentize-amount);
+					color: $text-color;
+				}
+
+				&:active,
+				&.active {
+					background-color: 
+						shade(
+							#000, 
+							$background-color, 
+							$button-active-background-color-shade-amount
+						);
+					border-color: transparentize(
+						shade(
+							#000, 
+							$background-color, 
+							$button-active-background-color-shade-amount
+						), 
+						$button-outline-border-transparentize-amount
+					);
+					color: $text-color;
+				}
+			}
+		}
+
+		.toggle,
+		.toggle [type='checkbox'],
+		.toggle [type='radio'] {
+			&:checked {
+				& + .btn--#{$name_r} {
+					@extend .btn--#{$name_r}.active;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Link button:
+ * `.btn--link`
+ *
+ *     @example
+ *     button.btn.btn--link Link button
+ */
+.btn--link {
+	background-color: transparent;
+	border-color: transparent;
+
+	color: $link-color;
+
+	cursor: pointer;
+
+	&:link {
+		text-decoration: $link-decoration;
+	}
+
+	&:link,
+	&:visited {
+		color: $link-color;
+	}
+
+	&:hover {
+		background-color: transparent;
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+
+	&:active,
+	&.active {
+		background-color: transparent;
+		color: $link-hover-color;
+	}
+}
+
+.night {
+	.btn--link {
+		background-color: transparent;
+		color: $night-link-color;
+
+		&:link,
+		&:visited {
+			color: $night-link-color;
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: $night-link-hover-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: transparent;
+			color: $night-link-hover-color;
+		}
+	}
+}
+
+/**
+ * Pill button:
+ * `.btn--pill`
+ *
+ *     @example
+ *     button.btn.btn--secondary.btn--pill Pill button
+ */
+.btn--pill {
+	border-radius: 2em;
+
+	&.btn--sm,
+	&.btn--lg {
+		@extend .btn--pill;
+	}
+}
+
+/**
+ * Button size:
+ * `.btn--sm` `.btn--lg`
+ *
+ *     @example
+ *     button.btn.btn--primary.btn--sm Small button
+ *     button.btn.btn--primary.btn--lg Large button
+ */
+.btn--sm {
+	border-radius: $button-small-border-radius;
+	font-size: $button-small-font-size;
+	padding: $button-small-padding-y $button-small-padding-x;
+
+	&.btn--gradient {
+		padding: $button-small-gradient-padding;
+	}
+}
+
+.btn--lg {
+	border-radius: $button-large-border-radius;
+	font-size: $button-large-font-size;
+	padding: $button-large-padding-y $button-large-padding-x;
+
+	&.btn--gradient {
+		padding: $button-large-gradient-padding;
+	}
+}
+
+/**
+ * Expanded button:
+ * `.expanded`
+ *
+ *     @example
+ *     button.btn.btn--primary.btn--lg.expanded Expanded button
+ */
+.btn {
+	&.expanded {
+		display: block;
+		width: 100%;
+	}
+}
+
+/**
+ * Active button:
+ * `.active`
+ *
+ *     @example
+ *     button.btn.btn--primary.active Active button
+ */
+
+/**
+ * Disabled button:
+ * `.disabled` `disabled`
+ *
+ *     @example
+ *     button.btn.btn--primary.disabled Disabled button
+ *     button(disabled).btn.btn--primary Disabled button
+ */
+.btn {
+	&[disabled],
+	&.disabled {
+		opacity: $button-disabled-opacity;
+		pointer-events: none;
+
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+
+/**
+ * Toggle button:
+ * `.toggle`
+ *
+ *     @example
+ *     input(id='eg-toggle-btn', type='checkbox').toggle
+ *     label(for='eg-toggle-btn').btn.btn--primary Toggle button
+ */
+.toggle,
+.toggle [type='checkbox'],
+.toggle [type='radio'] {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+
+	&:checked {
+		& + .btn {
+			@extend .btn.active;
+		}
+	}
+}

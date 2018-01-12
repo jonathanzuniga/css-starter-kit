@@ -1,0 +1,106 @@
+@import '../partials/_all';
+
+
+/***
+ * Float:
+ */
+
+/**
+ * Float left:
+ * `.flt-left`
+ *
+ *     @example
+ *     span.flt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-left {
+	float: left;
+}
+
+/**
+ * Float right:
+ * `.flt-right`
+ *
+ *     @example
+ *     span.flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-right {
+	float: right;
+}
+
+/**
+ * Don't float:
+ * `.flt-none`
+ *
+ *     @example
+ *     span.flt-none Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.flt-none {
+	float: none;
+}
+
+/**
+ * Responsive float:
+ * `.[size]-flt-[position]`
+ *
+ *     @example
+ *     span.md-flt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		.#{$size}-flt-left {
+			float: left;
+		}
+
+		.#{$size}-flt-right {
+			float: right;
+		}
+
+		.#{$size}-flt-none {
+			float: none;
+		}
+	}
+}
+
+/**
+ * Element to the left side:
+ * `.[size]-el-left-[#]`
+ *
+ *     @example
+ *     div.xs-el-left-4.bd.bdc-gray-300-25.p-3
+ *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
+ *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+
+/**
+ * Element to the right side:
+ * `.[size]-el-right-[#]`
+ *
+ *     @example
+ *     div.md-el-right-4.bd.bdc-gray-300-25.p-3
+ *         p.txt-sm In fermentum mi sit amet mauris sagittis, non laoreet urna placerat.
+ *     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod. Aliquam suscipit quam id lorem vehicula, nec imperdiet urna porta. 
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through ($grid-columns-number - 1) {
+			.#{$size}-el-left-#{$i} {
+				float: left;
+				margin-right: $half-spacing-unit;
+			}
+
+			.#{$size}-el-right-#{$i} {
+				float: right;
+				margin-left: $half-spacing-unit;
+			}
+
+			.#{$size}-el-left-#{$i},
+			.#{$size}-el-right-#{$i},
+			.txt-indent .#{$size}-el-left-#{$i},
+			.txt-indent .#{$size}-el-right-#{$i} {
+				margin-top: 0.5rem;
+				margin-bottom: 0;
+				width: percentage($i / $grid-columns-number);
+			}
+		}
+	}
+}

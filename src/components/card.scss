@@ -1,0 +1,49 @@
+@import '../partials/_all';
+
+
+/***
+ * Card:
+ */
+
+/**
+ * Standard card:
+ * `.card`
+ *
+ *     @example
+ *     div.row
+ *         div.md-col-6
+ *             div.card
+ *                 div.card__body
+ *                     h4.card__title Card title
+ *                     div.card__content
+ *                         p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href='') First link
+ *                         li
+ *                             a(href='') Second link
+ */
+.card {
+	background-color: $card-background-color;
+	border: $card-border;
+	border-radius: $card-border-radius;
+	
+	box-shadow: $card-box-shadow;
+
+	// transition: $base-transition;
+
+	&:hover {
+		box-shadow: $card-hover-box-shadow;
+	}
+}
+
+.night {
+	.card {
+		background-color: $night-card-background-color;
+		border-color: $night-card-border-color;
+	}
+}
+
+.card__body {
+	padding: $card-padding;
+}

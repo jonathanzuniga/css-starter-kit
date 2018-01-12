@@ -1,0 +1,98 @@
+/***
+ * Collapse:
+ */
+/**
+ * Open one item:
+ * `.collapse`
+ *
+ *     @example
+ *     div
+ *         input(checked, id='eg-open-one-toggle-1', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggle-1').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-one-toggle-2', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggle-2').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+/**
+ * Open multiple items:
+ *
+ *     @example
+ *     div
+ *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
+ *         div.collapse
+ *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+.collapse {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(-0.5em);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.2s ease; }
+  .collapse.open, .collapse-toggle:checked ~ .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); }
+
+.collapse-toggle {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+@media (min-width: 0) {
+  .maxxs-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 768px) {
+  .maxsm-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1024px) {
+  .maxmd-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1280px) {
+  .maxlg-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+@media (min-width: 1680px) {
+  .maxxl-navbar-responsive .collapse {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0); } }
+
+.collapse .ls-unstyled a:link, .collapse .ls-unstyled a:visited {
+  color: #9e9e9f; }
+
+.collapse .ls-unstyled a:hover {
+  color: #6b6b6c; }
+
+.collapse .ls-unstyled .active a:link, .collapse .ls-unstyled .active a:hover, .collapse .ls-unstyled .active a:visited {
+  color: #3f3f40; }
+
+.night .collapse .ls-unstyled a:link, .night .collapse .ls-unstyled a:visited {
+  color: #9e9e9f; }
+
+.night .collapse .ls-unstyled a:hover {
+  color: #bdbdbe; }
+
+.night .collapse .ls-unstyled .active a:link, .night .collapse .ls-unstyled .active a:hover, .night .collapse .ls-unstyled .active a:visited {
+  color: #ececec; }
