@@ -142,8 +142,8 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-drawer-right').drawer-toggle-right
- *         input(type='checkbox', id='eg-drawer-left').drawer-toggle-left
+ *         input(type='checkbox', id='eg-drawer-right').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-drawer-left').drawer-toggle.drawer-toggle--left
  *         div.doc-drawer.drawer.drawer--right
  *             div
  *                 label(for='eg-drawer-right').btn.btn--link Close
@@ -193,21 +193,21 @@
 .drawer-outside {
   transform: none; }
 
-.drawer-toggle, [class*='drawer-toggle-'] {
+.drawer-toggle {
   opacity: 0;
   position: absolute;
   z-index: -1; }
-  .drawer-toggle:checked ~ .drawer, [class*='drawer-toggle-']:checked ~ .drawer {
+  .drawer-toggle:checked ~ .drawer {
     visibility: visible; }
 
-.drawer-toggle-right:checked ~ .drawer--right {
+.drawer-toggle--right:checked ~ .drawer--right {
   margin-right: 0; }
-  .drawer-toggle-right:checked ~ .drawer--right ~ .drawer-outside {
+  .drawer-toggle--right:checked ~ .drawer--right ~ .drawer-outside {
     margin-right: 300px; }
 
-.drawer-toggle-left:checked ~ .drawer--left {
+.drawer-toggle--left:checked ~ .drawer--left {
   margin-left: 0; }
-  .drawer-toggle-left:checked ~ .drawer--left ~ .drawer-outside {
+  .drawer-toggle--left:checked ~ .drawer--left ~ .drawer-outside {
     margin-left: 300px; }
 
 .open.drawer {
@@ -229,8 +229,8 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-drawer-with-push-right').drawer-toggle-right
- *         input(type='checkbox', id='eg-drawer-with-push-left').drawer-toggle-left
+ *         input(type='checkbox', id='eg-drawer-with-push-right').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-drawer-with-push-left').drawer-toggle.drawer-toggle--left
  *         div.doc-drawer.drawer.drawer--right.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-right').btn.btn--link Close
@@ -256,23 +256,23 @@
 .drawer--push ~ .drawer-outside {
   transition: transform 0.16s ease, visibility 0.16s ease; }
 
-[class*='drawer-toggle-']:checked ~ .drawer--push ~ .drawer-outside {
+.drawer-toggle:checked ~ .drawer--push ~ .drawer-outside {
   margin: 0; }
 
-.drawer-toggle-right:checked ~ .drawer--push.drawer--right {
+.drawer-toggle--right:checked ~ .drawer--push.drawer--right {
   transform: translate(0, 0); }
-  .drawer-toggle-right:checked ~ .drawer--push.drawer--right ~ .drawer-outside {
+  .drawer-toggle--right:checked ~ .drawer--push.drawer--right ~ .drawer-outside {
     transform: translateX(-300px); }
 
-.drawer-toggle-right:checked ~ .drawer--push.drawer--left {
+.drawer-toggle--right:checked ~ .drawer--push.drawer--left {
   transform: translateX(-300px); }
 
-.drawer-toggle-left:checked ~ .drawer--push.drawer--left {
+.drawer-toggle--left:checked ~ .drawer--push.drawer--left {
   transform: translate(0, 0); }
-  .drawer-toggle-left:checked ~ .drawer--push.drawer--left ~ .drawer-outside {
+  .drawer-toggle--left:checked ~ .drawer--push.drawer--left ~ .drawer-outside {
     transform: translateX(300px); }
 
-.drawer-toggle-left:checked ~ .drawer--push.drawer--right {
+.drawer-toggle--left:checked ~ .drawer--push.drawer--right {
   transform: translateX(300px); }
 
 .open.drawer--push ~ .drawer-outside {
@@ -300,8 +300,8 @@
  *
  *     @example
  *     div.drawer-wrapper
- *         input(type='checkbox', id='eg-drawer-with-overlap-right').drawer-toggle-right
- *         input(type='checkbox', id='eg-drawer-with-overlap-left').drawer-toggle-left
+ *         input(type='checkbox', id='eg-drawer-with-overlap-right').drawer-toggle.drawer-toggle--right
+ *         input(type='checkbox', id='eg-drawer-with-overlap-left').drawer-toggle.drawer-toggle--left
  *         div.doc-drawer.drawer.drawer--right.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-right').btn.btn--link Close
@@ -315,7 +315,7 @@
  *                     label(for='eg-drawer-with-overlap-left').btn.btn--link Open left drawer
  *                     label(for='eg-drawer-with-overlap-right').btn.btn--link Open right drawer
  */
-[class*='drawer-toggle-']:checked ~ .drawer--overlap ~ .drawer-outside {
+.drawer-toggle:checked ~ .drawer--overlap ~ .drawer-outside {
   margin: 0; }
 
 .open.drawer--overlap ~ .drawer-outside {
