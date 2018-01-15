@@ -14,7 +14,7 @@
 		}
 
 		.night .doc-navbar {
-			background-color: #0a0a0b;
+			background-color: #131313;
 		}
 
 		.doc-sidebar {

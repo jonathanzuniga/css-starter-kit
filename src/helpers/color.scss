@@ -62,25 +62,6 @@
 	}
 }
 
-.night {
-	@each $name, $hex in $night-colors {
-		$name_r: str_replace(to_lower_case($name), ' ', '-');
-
-		.bgc-#{$name_r} {
-			background-color: $hex;
-		}
-
-		.bdc-#{$name_r} {
-			// @extend .bd;
-			border-color: $hex;
-		}
-
-		.txtc-#{$name_r} {
-			color: $hex;
-		}
-	}
-}
-
 /**
  * Link color to text color:
  *

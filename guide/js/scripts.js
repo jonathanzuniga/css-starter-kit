@@ -49,7 +49,7 @@ function fsMenuToggle() {
 		}
 	});
 
-	$('[class*="-fsmenu"] a').click(function() {
+	$('[class*="-fsmenu"] a, #lbl-night-mode').click(function() {
 		fsMenuClose();
 	});
 }

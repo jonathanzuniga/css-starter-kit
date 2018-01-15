@@ -67,16 +67,6 @@ $color-spectrum-range: 50;
 	@return unquote('#000');
 }
 
-// Get one night color from the list.
-@function get_night_color($color) {
-	@each $cp in $night-colors {
-		@if nth($cp, 1) == $color {
-			@return nth($cp, 2);
-		}
-	}
-	@return unquote('#fff');
-}
-
 // Hepler. Remove unit from input number.
 @function clear_unit($value) {
 	@if type_of($value) == 'number' {

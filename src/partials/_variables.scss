@@ -45,13 +45,12 @@ $base-border-radius:   0.25rem;
 // Color
 
 $base-background-color:       #fff;
-$night-base-background-color: #191a1c;
+$night-base-background-color: #000;
 
-$colors:                      (gen_colors($base-background-color, #000)) !default;
-$night-colors:                (gen_colors(#fff, $night-base-background-color)) !default;
+$colors:                     (gen_colors($base-background-color, $night-base-background-color)) !default;
 
 $text-color:                  get_color('gray 40');
-$night-text-color:            get_night_color('gray 5');
+$night-text-color:            get_color('gray 5');
 
 
 // Transition
@@ -68,7 +67,7 @@ $base-transition:                 background-color $base-transition-duration $ba
 // Hyperlink
 
 $link-color:                           get_color('blue 25');
-$night-link-color:                     get_night_color('blue 13');
+$night-link-color:                     get_color('blue 13');
 $link-decoration:                      none;
 
 $link-visited-color:                   $link-color;
@@ -76,13 +75,13 @@ $night-link-visited-color:             $night-link-color;
 $link-visited-decoration:              none;
 
 $link-hover-color:                     get_color('blue 31');
-$night-link-hover-color:               get_night_color('blue 7');
+$night-link-hover-color:               get_color('blue 7');
 $link-hover-decoration:                none;
 
 $link-border-bottom-width:             0.063rem;
 $link-border-bottom-style:             solid;
 $link-border-bottom-color:             get_color('blue 4');
-$night-link-border-bottom-color:       get_night_color('blue 46');
+$night-link-border-bottom-color:       get_color('blue 46');
 
 $link-hover-border-bottom-color:       $link-hover-color;
 $night-link-hover-border-bottom-color: $night-link-hover-color;
@@ -93,7 +92,7 @@ $night-link-hover-border-bottom-color: $night-link-hover-color;
 $blockquote-border-width:         0.313rem;
 $blockquote-border-style:         solid;
 $blockquote-border-color:         get_color('gray 4');
-$night-blockquote-border-color:   get_night_color('gray 46');
+$night-blockquote-border-color:   get_color('gray 46');
 $blockquote-left-quotation-mark:  '«'; // '“';
 $blockquote-right-quotation-mark: '»'; // '”';
 
@@ -101,13 +100,13 @@ $blockquote-right-quotation-mark: '»'; // '”';
 // Code
 
 $code-background-color:       get_color('gray 4');
-$night-code-background-color: get_night_color('gray 46');
+$night-code-background-color: get_color('gray 46');
 $code-border-radius:          $base-border-radius;
 $code-font-size:              1em;
 $code-padding:                0.25em 0.5em;
 
 $pre-background-color:        get_color('gray 2');
-$night-pre-background-color:  get_night_color('gray 48');
+$night-pre-background-color:  get_color('gray 48');
 $pre-border-radius:           $base-border-radius;
 
 
@@ -130,7 +129,7 @@ $heading-line-height: 1.2;
 $control-border-width:                   0.063rem; // 1px
 $control-border-style:                   solid;
 $control-border-color:                   get_color('gray 8');
-$night-control-border-color:             get_night_color('gray 42');
+$night-control-border-color:             get_color('gray 42');
 $control-border-radius:                  $base-border-radius;
 $control-line-height:                    inherit;
 
@@ -146,29 +145,29 @@ $control-large-padding-x:                $control-padding-x;
 $control-large-font-size:                1.25em;
 
 $control-active-border-color:            get_color('blue 25');
-$night-control-active-border-color:      get_night_color('blue 25');
+$night-control-active-border-color:      get_color('blue 25');
 
 $control-focus-border-color:             get_color('blue 13');
-$night-control-focus-border-color:       get_night_color('blue 13');
+$night-control-focus-border-color:       get_color('blue 13');
 
 $control-focus-box-shadow-spread:        0.063rem;
 
 $control-focus-box-shadow-color-opacity: 1;
 
 $control-focus-box-shadow-color:         rgba(get_color('blue 25'), $control-focus-box-shadow-color-opacity);
-$night-control-focus-box-shadow-color:   rgba(get_night_color('blue 25'), $control-focus-box-shadow-color-opacity);
+$night-control-focus-box-shadow-color:   rgba(get_color('blue 25'), $control-focus-box-shadow-color-opacity);
 
 $control-focus-box-shadow:               none;
 $night-control-focus-box-shadow:         none;
 
 $control-invalid-border-color:           get_color('red 25');
-$night-control-invalid-border-color:     get_night_color('red 25');
+$night-control-invalid-border-color:     get_color('red 25');
 
 
 // Button
 
 $button-background-color:              get_color('cool gray 6');
-$night-button-background-color:        get_night_color('cool gray 44');
+$night-button-background-color:        get_color('cool gray 44');
 $button-border-color:                  transparent;
 $button-border:                        $control-border-width $control-border-style $button-border-color;
 $button-border-radius:                 $control-border-radius;
@@ -209,10 +208,10 @@ $buttons: (
 	'danger'    get_color('red 25')             $button-border-color $button-text-color       4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
 );
 $night-buttons: (
-	'primary'   get_night_color('blue 25')      $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'secondary' get_night_color('cool gray 35') $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'success'   get_night_color('green 25')     $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
-	'danger'    get_night_color('red 25')       $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 ''
+	'primary'   get_color('blue 25')      $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'secondary' get_color('cool gray 35') $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'success'   get_color('green 25')     $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 '',
+	'danger'    get_color('red 25')       $button-border-color $night-button-text-color 4% 12% -2.5 1.75 0.5 3.25 3.25 3.25 ''
 );
 
 
@@ -286,9 +285,9 @@ $input-focus-box-shadow:                  $control-focus-box-shadow;
 $night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
 $input-placeholder:                       get_color('gray 16');
-$night-input-placeholder:                 get_night_color('gray 34');
+$night-input-placeholder:                 get_color('gray 34');
 $input-focus-placeholder:                 get_color('blue 13');
-$night-input-focus-placeholder:           get_night_color('blue 13');
+$night-input-focus-placeholder:           get_color('blue 13');
 
 $input-hover-border-color:                $input-border-color;
 $night-input-hover-border-color:          $night-input-border-color;
@@ -326,16 +325,16 @@ $night-input-group-btn-input-focus-border-color: $night-control-focus-border-col
 
 $file-area-padding:                      6.25em $half-spacing-unit;
 $file-area-background-color:             get_color('gray 2');
-$night-file-area-background-color:       get_night_color('gray 48');
+$night-file-area-background-color:       get_color('gray 48');
 
 $file-area-focus-background-color:       none;
 $night-file-area-focus-background-color: none;
 
 $file-area-hover-background-color:       get_color('gray 4');
-$night-file-area-hover-background-color: get_night_color('gray 46');
+$night-file-area-hover-background-color: get_color('gray 46');
 
 $file-area-valid-background-color:       get_color('blue 4');
-$night-file-area-valid-background-color: get_night_color('blue 46');
+$night-file-area-valid-background-color: get_color('blue 46');
 
 
 // Select menu
@@ -424,7 +423,7 @@ $switch-label-after-top:                             50%;
 $switch-label-after-left:                            $quarter-spacing-unit;
 
 $switch-checked-label-before-background-color:       get_color('blue 25');
-$night-switch-checked-label-before-background-color: get_night_color('blue 13');
+$night-switch-checked-label-before-background-color: get_color('blue 13');
 $switch-checked-label-after-left:                    $switch-label-width - $switch-label-height + 0.313;
 
 $switch-label-before-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
@@ -464,17 +463,17 @@ $table-border-width:                   1px;
 $table-border-style:                   solid;
 $table-border-right-style:             dotted;
 $table-border-color:                   get_color('gray 6');
-$night-table-border-color:             get_night_color('gray 44');
+$night-table-border-color:             get_color('gray 44');
 
 $table-header-background-color:        get_color('gray 3');
-$night-table-header-background-color:  get_night_color('gray 47');
+$night-table-header-background-color:  get_color('gray 47');
 
 $table-cell-padding:                   $quarter-spacing-unit $half-spacing-unit;
 
 $table-striped-index:                  even; // 'odd'
 
 $table-striped-background-color:       get_color('gray 2');
-$night-table-striped-background-color: get_night_color('gray 48');
+$night-table-striped-background-color: get_color('gray 48');
 
 
 // ==========================================================================
@@ -485,7 +484,7 @@ $night-table-striped-background-color: get_night_color('gray 48');
 // Border
 
 $border-color:       get_color('cool gray 6');
-$night-border-color: get_night_color('cool gray 44');
+$night-border-color: get_color('cool gray 44');
 $border-style:       solid;
 $border-width:       0.063rem;
 
@@ -506,7 +505,7 @@ $sides: (
 
 $hightlight-border-radius:          0;
 $hightlight-background-color:       get_color('yellow 5');
-$night-hightlight-background-color: get_night_color('gray 45');
+$night-hightlight-background-color: get_color('gray 45');
 $hightlight-background:             none;
 $night-hightlight-background:       none;
 
@@ -630,7 +629,7 @@ $card-background-color:       $base-background-color;
 $night-card-background-color: $night-base-background-color;
 $card-padding:                $half-spacing-unit;
 $card-border:                 $border-width $border-style get_color('gray 6');
-$night-card-border-color:     get_night_color('gray 44');
+$night-card-border-color:     get_color('gray 44');
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.1);
 $card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.12);
@@ -653,7 +652,7 @@ $night-collapse-list-unstyled-item-active-link-color: $night-text-color;
 // Drawer
 
 $drawer-background-color:       get_color('gray 2');
-$night-drawer-background-color: get_night_color('gray 48');
+$night-drawer-background-color: get_color('gray 48');
 $drawer-width:                  300px;
 
 
@@ -667,10 +666,10 @@ $menu-link-padding: $quarter-spacing-unit $half-spacing-unit;
 // Menu pills
 
 $menu-pills-link-hover-background-color:        get_color('gray 2');
-$night-menu-pills-link-hover-background-color:  get_night_color('gray 48');
+$night-menu-pills-link-hover-background-color:  get_color('gray 48');
 
 $menu-pills-item-active-background-color:       get_color('blue 2');
-$night-menu-pills-item-active-background-color: get_night_color('blue 48');
+$night-menu-pills-item-active-background-color: get_color('blue 48');
 
 
 // Navbar
@@ -687,9 +686,9 @@ $navbar-brand-font-size:        1.25em;
 $navbar-toggler-cursor:         pointer;
 
 $navbar-link-color:                   get_color('gray 25');
-$night-navbar-link-color:             get_night_color('gray 25');
+$night-navbar-link-color:             get_color('gray 25');
 $navbar-link-hover-color:             get_color('gray 33');
-$night-navbar-link-hover-color:       get_night_color('gray 17');
+$night-navbar-link-hover-color:       get_color('gray 17');
 $navbar-item-active-link-color:       $text-color;
 $night-navbar-item-active-link-color: $night-text-color;
 
@@ -716,7 +715,7 @@ $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezie
 // Mobile nav
 
 $mobile-nav-background-color:       get_color('gray 2');
-$night-mobile-nav-background-color: get_night_color('gray 48');
+$night-mobile-nav-background-color: get_color('gray 48');
 
 
 // Tabs
@@ -735,10 +734,10 @@ $night-tabs-link-border-bottom-color:             transparent;
 $tabs-link-border-bottom-width:                   0.188rem; // 3px
 
 $tabs-link-color:                                 get_color('gray 25');
-$night-tabs-link-color:                           get_night_color('gray 25');
+$night-tabs-link-color:                           get_color('gray 25');
 
 $tabs-link-hover-color:                           get_color('gray 33');
-$night-tabs-link-hover-color:                     get_night_color('gray 17');
+$night-tabs-link-hover-color:                     get_color('gray 17');
 
 $tabs-link-padding:                               $quarter-spacing-unit $half-spacing-unit;
 
