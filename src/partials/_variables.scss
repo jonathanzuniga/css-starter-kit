@@ -130,11 +130,12 @@ $control-border-width:                   0.063rem; // 1px
 $control-border-style:                   solid;
 $control-border-color:                   get_color('gray 8');
 $night-control-border-color:             get_color('gray 42');
+
 $control-border-radius:                  $base-border-radius;
 $control-line-height:                    inherit;
 
-$control-padding-y:                      0.250em; // 0.375em; //  6px
-$control-padding-x:                      0.750em; // 12px
+$control-padding-y:                      0.250em;
+$control-padding-x:                      0.750em;
 
 $control-small-padding-y:                $control-padding-y;
 $control-small-padding-x:                $control-padding-x;
@@ -150,30 +151,23 @@ $night-control-active-border-color:      get_color('blue 25');
 $control-focus-border-color:             get_color('blue 13');
 $night-control-focus-border-color:       get_color('blue 13');
 
-$control-focus-box-shadow-spread:        0.063rem;
-
-$control-focus-box-shadow-color-opacity: 1;
-
-$control-focus-box-shadow-color:         rgba(get_color('blue 25'), $control-focus-box-shadow-color-opacity);
-$night-control-focus-box-shadow-color:   rgba(get_color('blue 25'), $control-focus-box-shadow-color-opacity);
-
-$control-focus-box-shadow:               none;
-$night-control-focus-box-shadow:         none;
-
 $control-invalid-border-color:           get_color('red 25');
 $night-control-invalid-border-color:     get_color('red 25');
 
 
 // Button
 
+$button-border-width:                   $control-border-width;
+$button-border-style:                   $control-border-style;
 $button-border-color:                   transparent;
-$button-border:                         $control-border-width $control-border-style $button-border-color;
-$button-border-radius:                  $control-border-radius;
 
+$button-border-radius:                  $control-border-radius;
 $button-font-size:                      $base-font-size;
 $button-font-weight:                    400;
 $button-line-height:                    $control-line-height;
-$button-padding:                        $control-padding-y $control-padding-x;
+
+$button-padding-y:                      $control-padding-y;
+$button-padding-x:                      $control-padding-x;
 
 $button-hover-background-color-amount:  12%;
 $button-active-background-color-amount: 24%;
@@ -184,15 +178,14 @@ $button-active-background-color-amount: 24%;
 // - background color, 
 // - night background color, 
 // - text color, 
-// - light colors on hover/active state, 
-// - show a box shadow on active state.
+// - light colors on hover/active state.
 $buttons: (
-  'primary'   get_color('blue 25')      get_color('blue 25')      get_color('white')   '' '',
-  'secondary' get_color('cool gray 25') get_color('cool gray 35') get_color('white')   '' '',
-  'success'   get_color('green 25')     get_color('green 25')     get_color('white')   '' '',
-  'danger'    get_color('red 25')       get_color('red 25')       get_color('white')   '' '',
-  'light'     get_color('cool gray 6')  get_color('cool gray 6')  get_color('gray 40') '' '',
-  'dark'      get_color('cool gray 44') get_color('cool gray 44') get_color('gray 5')  '' ''
+  'primary'   get_color('blue 25')      get_color('blue 25')      get_color('white')   '',
+  'secondary' get_color('cool gray 25') get_color('cool gray 35') get_color('white')   '',
+  'success'   get_color('green 25')     get_color('green 25')     get_color('white')   '',
+  'danger'    get_color('red 25')       get_color('red 25')       get_color('white')   '',
+  'light'     get_color('cool gray 6')  get_color('cool gray 6')  get_color('gray 40') '',
+  'dark'      get_color('cool gray 44') get_color('cool gray 44') get_color('gray 5')  ''
 );
 
 
@@ -203,33 +196,23 @@ $button-outline-border-transparentize-amount: 0;
 
 // Disabled button
 
-$button-disabled-opacity:        0.6;
-
-
-// Gradient button
-
-$button-gradient-border:         none;
-$button-gradient-padding:       ($control-padding-y + 0.063) ($control-padding-x + 0.063);
+$button-disabled-opacity:    0.6;
 
 
 // Small button
 
-$button-small-border-radius:     $control-border-radius;
-$button-small-font-size:         $small-font-size;
-$button-small-padding-y:         $control-small-padding-y;
-$button-small-padding-x:         $control-small-padding-x;
-
-$button-small-gradient-padding: ($button-small-padding-y + 0.063) ($button-small-padding-x + 0.063);
+$button-small-border-radius: $control-border-radius;
+$button-small-font-size:     $small-font-size;
+$button-small-padding-y:     $control-small-padding-y;
+$button-small-padding-x:     $control-small-padding-x;
 
 
 // Large button
 
-$button-large-border-radius:     $control-border-radius;
-$button-large-font-size:         $control-large-font-size;
-$button-large-padding-y:         $control-large-padding-y;
-$button-large-padding-x:         $control-large-padding-x;
-
-$button-large-gradient-padding: ($button-large-padding-y + 0.063) ($button-large-padding-x + 0.063);
+$button-large-border-radius: $control-border-radius;
+$button-large-font-size:     $control-large-font-size;
+$button-large-padding-y:     $control-large-padding-y;
+$button-large-padding-x:     $control-large-padding-x;
 
 
 // Label
@@ -262,9 +245,6 @@ $input-focus-border-color:                $control-focus-border-color;
 $night-input-focus-border-color:          $night-control-focus-border-color;
 $input-focus-border-width:                $control-border-width;
 
-$input-focus-box-shadow:                  $control-focus-box-shadow;
-$night-input-focus-box-shadow:            $night-control-focus-box-shadow;
-
 $input-placeholder:                       get_color('gray 16');
 $night-input-placeholder:                 get_color('gray 34');
 $input-focus-placeholder:                 get_color('blue 13');
@@ -288,12 +268,6 @@ $input-large-border-radius:               $control-border-radius;
 $input-large-font-size:                   $control-large-font-size;
 $input-large-padding-y:                   $control-large-padding-y;
 $input-large-padding-x:                   $control-large-padding-x;
-
-
-// Input line
-
-$input-line-focus-box-shadow:             none;
-$night-input-line-focus-box-shadow:       none;
 
 
 // Input group button

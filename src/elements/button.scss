@@ -6,14 +6,16 @@
  */
 
 .btn {
-	border: $button-border;
+	border-width: $button-border-width;
+	border-style: $button-border-style;
+	border-color: $button-border-color;
 	border-radius: $button-border-radius;
 	box-shadow: none;
 	display: inline-block;
 	font-size: $button-font-size;
 	font-weight: $button-font-weight;
 	line-height: $button-line-height;
-	padding: $button-padding;
+	padding: $button-padding-y $button-padding-x;
 	text-align: center;
 	vertical-align: middle;
 	white-space: nowrap;
@@ -31,7 +33,7 @@
 	}
 }
 
-@each $name, $background-color, $night-background-color, $text-color, $state-light-color, $active-box-shadow in $buttons {
+@each $name, $background-color, $night-background-color, $text-color, $state-light-color in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -93,15 +95,6 @@
 			}
 			color: $text-color;
 		}
-
-		@if not ($active-box-shadow == '') {
-			&:active,
-			&.active,
-			&:focus {
-				box-shadow: 0 0 0 $control-focus-box-shadow-spread 
-				            rgba($background-color, $control-focus-box-shadow-color-opacity);
-			}
-		}
 	}
 
 	.night .btn--#{$name_r} {
@@ -143,15 +136,6 @@
 						$night-background-color, 
 						$button-active-background-color-amount
 					);
-			}
-		}
-
-		@if not ($active-box-shadow == '') {
-			&:active,
-			&.active,
-			&:focus {
-				box-shadow: 0 0 0 $control-focus-box-shadow-spread 
-				            rgba($night-background-color, $control-focus-box-shadow-color-opacity);
 			}
 		}
 	}
@@ -389,20 +373,12 @@
 	border-radius: $button-small-border-radius;
 	font-size: $button-small-font-size;
 	padding: $button-small-padding-y $button-small-padding-x;
-
-	&.btn--gradient {
-		padding: $button-small-gradient-padding;
-	}
 }
 
 .btn--lg {
 	border-radius: $button-large-border-radius;
 	font-size: $button-large-font-size;
 	padding: $button-large-padding-y $button-large-padding-x;
-
-	&.btn--gradient {
-		padding: $button-large-gradient-padding;
-	}
 }
 
 /**

@@ -317,8 +317,7 @@ small {
   .txtarea:focus:hover {
     background-color: transparent;
     border-color: #89c9f9;
-    border-width: 0.063rem;
-    box-shadow: none; }
+    border-width: 0.063rem; }
     .input:focus::placeholder, .input:focus:hover::placeholder,
     .txtarea:focus::placeholder,
     .txtarea:focus:hover::placeholder {
@@ -347,8 +346,7 @@ small {
   .night .input:focus, .night .input:focus:hover,
   .night .txtarea:focus,
   .night .txtarea:focus:hover {
-    border-color: #89c9f9;
-    box-shadow: none; }
+    border-color: #89c9f9; }
     .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
     .night .txtarea:focus::placeholder,
     .night .txtarea:focus:hover::placeholder {
@@ -396,11 +394,6 @@ small {
   border-radius: 0;
   padding-right: 0;
   padding-left: 0; }
-  .input--line:focus, .input--line:focus:hover {
-    box-shadow: none; }
-
-.night .input--line:focus, .night .input--line:focus:hover {
-  box-shadow: none; }
 
 /**
  * Textarea:
@@ -600,7 +593,9 @@ small {
  * Button:
  */
 .btn {
-  border: 0.063rem solid transparent;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: transparent;
   border-radius: 0.25rem;
   box-shadow: none;
   display: inline-block;
@@ -1152,15 +1147,11 @@ small {
   border-radius: 0.25rem;
   font-size: 0.75em;
   padding: 0.25em 0.75em; }
-  .btn--sm.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 .btn--lg {
   border-radius: 0.25rem;
   font-size: 1.25em;
   padding: 0.25em 0.75em; }
-  .btn--lg.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 /**
  * Expanded button:
@@ -1233,13 +1224,6 @@ small {
       border-radius: 0; }
     .btn-group > .btn:not(:last-of-type) {
       margin-right: -1px; }
-    .btn-group > .btn:active, .btn-group > .btn.active, .btn-group > .btn:focus {
-      box-shadow: none; }
-  .btn-group.active {
-    box-shadow: none; }
-
-.night .btn-group.active {
-  box-shadow: none; }
 
 /**
  * Expanded button group:
@@ -1275,15 +1259,11 @@ small {
   border-radius: 0.25rem;
   font-size: 0.75em;
   padding: 0.25em 0.75em; }
-  .btn-group--sm > .btn.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 .btn-group--lg > .btn {
   border-radius: 0.25rem;
   font-size: 1.25em;
   padding: 0.25em 0.75em; }
-  .btn-group--lg > .btn.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 /**
  * Toggle state:
@@ -1311,8 +1291,6 @@ small {
 .btn-group.toggle {
   opacity: 1;
   position: initial; }
-  .btn-group.toggle > .btn:active, .btn-group.toggle > .btn.active, .btn-group.toggle > .btn:focus {
-    box-shadow: none; }
 
 /***
  * Input group:
@@ -1396,8 +1374,6 @@ small {
   border-radius: 0.25rem;
   font-size: 0.75em;
   padding: 0.25em 0.75em; }
-  .input-group--sm .btn.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 .input-group--sm .input {
   font-size: 0.75em;
@@ -1410,8 +1386,6 @@ small {
   border-radius: 0.25rem;
   font-size: 1.25em;
   padding: 0.25em 0.75em; }
-  .input-group--lg .btn.btn--gradient {
-    padding: 0.313em 0.813em; }
 
 .input-group--lg .input {
   font-size: 1.25em;

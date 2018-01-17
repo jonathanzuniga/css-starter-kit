@@ -19,8 +19,6 @@
 	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-
-	// display: inline-flex;
 	
 	> .btn {
 		flex: 0 1 auto;
@@ -41,24 +39,6 @@
 
 		&:not(:last-of-type) {
 			margin-right: -1px;
-		}
-
-		&:active,
-		&.active,
-		&:focus {
-			box-shadow: none;
-		}
-	}
-
-	&.active {
-		box-shadow: $input-focus-box-shadow;
-	}
-}
-
-.night {
-	.btn-group {
-		&.active {
-			box-shadow: $night-input-focus-box-shadow;
 		}
 	}
 }
@@ -101,10 +81,6 @@
 		border-radius: $button-small-border-radius;
 		font-size: $button-small-font-size;
 		padding: $button-small-padding-y $button-small-padding-x;
-
-		&.btn--gradient {
-			padding: $button-small-gradient-padding;
-		}
 	}
 }
 
@@ -113,10 +89,6 @@
 		border-radius: $button-large-border-radius;
 		font-size: $button-large-font-size;
 		padding: $button-large-padding-y $button-large-padding-x;
-
-		&.btn--gradient {
-			padding: $button-large-gradient-padding;
-		}
 	}
 }
 
@@ -147,13 +119,5 @@
 	&.toggle {
 		opacity: 1;
 		position: initial;
-
-		> .btn {
-			&:active,
-			&.active,
-			&:focus {
-				box-shadow: none;
-			}
-		}
 	}
 }
