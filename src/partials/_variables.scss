@@ -166,26 +166,17 @@ $night-control-invalid-border-color:     get_color('red 25');
 
 // Button
 
-$button-background-color:               get_color('cool gray 6');
-$night-button-background-color:         get_color('cool gray 44');
 $button-border-color:                   transparent;
 $button-border:                         $control-border-width $control-border-style $button-border-color;
 $button-border-radius:                  $control-border-radius;
-
-$button-active-box-shadow:              none;
-$night-button-active-box-shadow:        none;
 
 $button-font-size:                      $base-font-size;
 $button-font-weight:                    400;
 $button-line-height:                    $control-line-height;
 $button-padding:                        $control-padding-y $control-padding-x;
-$button-text-color:                     #fff;
-$night-button-text-color:               #fff;
 
 $button-hover-background-color-amount:  12%;
 $button-active-background-color-amount: 24%;
-
-$button-light-colors:                   '';
 
 
 // Estilo de los botones:
@@ -196,10 +187,12 @@ $button-light-colors:                   '';
 // - light colors on hover/active state, 
 // - show a box shadow on active state.
 $buttons: (
-  'primary'   get_color('blue 25')      get_color('blue 25')      $button-text-color $button-light-colors '',
-  'secondary' get_color('cool gray 25') get_color('cool gray 35') $button-text-color $button-light-colors '',
-  'success'   get_color('green 25')     get_color('green 25')     $button-text-color $button-light-colors '',
-  'danger'    get_color('red 25')       get_color('red 25')       $button-text-color $button-light-colors ''
+  'primary'   get_color('blue 25')      get_color('blue 25')      get_color('white')   '' '',
+  'secondary' get_color('cool gray 25') get_color('cool gray 35') get_color('white')   '' '',
+  'success'   get_color('green 25')     get_color('green 25')     get_color('white')   '' '',
+  'danger'    get_color('red 25')       get_color('red 25')       get_color('white')   '' '',
+  'light'     get_color('cool gray 6')  get_color('cool gray 6')  get_color('gray 40') '' '',
+  'dark'      get_color('cool gray 44') get_color('cool gray 44') get_color('gray 5')  '' ''
 );
 
 

@@ -599,16 +599,7 @@ small {
 /***
  * Button:
  */
-/**
- * Standard button:
- * `.btn`
- *
- *     @example
- *     button.btn Button
- */
 .btn {
-  background-color: #e8e9ec;
-  color: #3f3f40;
   border: 0.063rem solid transparent;
   border-radius: 0.25rem;
   box-shadow: none;
@@ -628,43 +619,6 @@ small {
   user-select: none; }
   .btn:link {
     text-decoration: none; }
-  .btn:link, .btn:visited {
-    color: #3f3f40; }
-  .btn:hover {
-    background-color: #cccdd0;
-    color: #3f3f40;
-    text-decoration: none; }
-  .btn:active, .btn.active, .toggle:checked + .btn,
-  .toggle [type='checkbox']:checked + .btn,
-  .toggle [type='radio']:checked + .btn {
-    background-color: #b0b1b3;
-    color: #3f3f40; }
-  .btn:active, .btn.active, .toggle:checked + .btn,
-  .toggle [type='checkbox']:checked + .btn,
-  .toggle [type='radio']:checked + .btn, .btn:focus {
-    box-shadow: none; }
-
-.night .btn {
-  background-color: #26272a;
-  color: #ececec; }
-  .night .btn:link, .night .btn:visited {
-    color: #ececec; }
-  .night .btn:hover {
-    background-color: #212225;
-    color: #ececec; }
-  .night .btn:active, .night .btn.active, .night .toggle:checked + .btn, .night
-  .toggle [type='checkbox']:checked + .btn,
-  .toggle .night [type='checkbox']:checked + .btn, .night
-  .toggle [type='radio']:checked + .btn,
-  .toggle .night [type='radio']:checked + .btn {
-    background-color: #1d1e20;
-    color: #ececec; }
-  .night .btn:active, .night .btn.active, .night .toggle:checked + .btn, .night
-  .toggle [type='checkbox']:checked + .btn,
-  .toggle .night [type='checkbox']:checked + .btn, .night
-  .toggle [type='radio']:checked + .btn,
-  .toggle .night [type='radio']:checked + .btn, .night .btn:focus {
-    box-shadow: none; }
 
 /**
 	 * Primary button:
@@ -677,17 +631,17 @@ small {
 .btn--primary {
   background-color: #1d97f4;
   border-color: transparent;
-  color: #fff; }
+  color: #ffffff; }
   .btn--primary:link, .btn--primary:visited {
-    color: #fff; }
+    color: #ffffff; }
   .btn--primary:hover {
     background-color: #1a85d7;
-    color: #fff; }
+    color: #ffffff; }
   .btn--primary:active, .btn--primary.active, .toggle:checked + .btn--primary,
   .toggle [type='checkbox']:checked + .btn--primary,
   .toggle [type='radio']:checked + .btn--primary {
     background-color: #1673b9;
-    color: #fff; }
+    color: #ffffff; }
 
 .night .btn--primary {
   background-color: #1d97f4; }
@@ -710,13 +664,13 @@ small {
     .btn--outline.btn--primary:hover {
       background-color: #1d97f4;
       border-color: #1d97f4;
-      color: #fff; }
+      color: #ffffff; }
     .btn--outline.btn--primary:active, .btn--outline.btn--primary.active, .toggle:checked + .btn--outline.btn--primary,
     .toggle [type='checkbox']:checked + .btn--outline.btn--primary,
     .toggle [type='radio']:checked + .btn--outline.btn--primary {
       background-color: #1673b9;
       border-color: #1673b9;
-      color: #fff; }
+      color: #ffffff; }
 
 .night .btn--outline {
   background-color: transparent; }
@@ -728,7 +682,7 @@ small {
     .night .btn--outline.btn--primary:hover {
       background-color: #1d97f4;
       border-color: #1d97f4;
-      color: #fff; }
+      color: #ffffff; }
     .night .btn--outline.btn--primary:active, .night .btn--outline.btn--primary.active, .night .toggle:checked + .btn--outline.btn--primary, .night
     .toggle [type='checkbox']:checked + .btn--outline.btn--primary,
     .toggle .night [type='checkbox']:checked + .btn--outline.btn--primary, .night
@@ -736,13 +690,14 @@ small {
     .toggle .night [type='radio']:checked + .btn--outline.btn--primary {
       background-color: #1673b9;
       border-color: #1673b9;
-      color: #fff; }
+      color: #ffffff; }
 
 .toggle,
 .toggle [type='checkbox'],
 .toggle [type='radio'] {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
 
 /**
 	 * Secondary button:
@@ -755,17 +710,17 @@ small {
 .btn--secondary {
   background-color: #9ea3af;
   border-color: transparent;
-  color: #fff; }
+  color: #ffffff; }
   .btn--secondary:link, .btn--secondary:visited {
-    color: #fff; }
+    color: #ffffff; }
   .btn--secondary:hover {
     background-color: #8b8f9a;
-    color: #fff; }
+    color: #ffffff; }
   .btn--secondary:active, .btn--secondary.active, .toggle:checked + .btn--secondary,
   .toggle [type='checkbox']:checked + .btn--secondary,
   .toggle [type='radio']:checked + .btn--secondary {
     background-color: #787c85;
-    color: #fff; }
+    color: #ffffff; }
 
 .night .btn--secondary {
   background-color: #5f6269; }
@@ -788,13 +743,13 @@ small {
     .btn--outline.btn--secondary:hover {
       background-color: #9ea3af;
       border-color: #9ea3af;
-      color: #fff; }
+      color: #ffffff; }
     .btn--outline.btn--secondary:active, .btn--outline.btn--secondary.active, .toggle:checked + .btn--outline.btn--secondary,
     .toggle [type='checkbox']:checked + .btn--outline.btn--secondary,
     .toggle [type='radio']:checked + .btn--outline.btn--secondary {
       background-color: #787c85;
       border-color: #787c85;
-      color: #fff; }
+      color: #ffffff; }
 
 .night .btn--outline {
   background-color: transparent; }
@@ -806,7 +761,7 @@ small {
     .night .btn--outline.btn--secondary:hover {
       background-color: #5f6269;
       border-color: #5f6269;
-      color: #fff; }
+      color: #ffffff; }
     .night .btn--outline.btn--secondary:active, .night .btn--outline.btn--secondary.active, .night .toggle:checked + .btn--outline.btn--secondary, .night
     .toggle [type='checkbox']:checked + .btn--outline.btn--secondary,
     .toggle .night [type='checkbox']:checked + .btn--outline.btn--secondary, .night
@@ -814,13 +769,14 @@ small {
     .toggle .night [type='radio']:checked + .btn--outline.btn--secondary {
       background-color: #484a50;
       border-color: #484a50;
-      color: #fff; }
+      color: #ffffff; }
 
 .toggle,
 .toggle [type='checkbox'],
 .toggle [type='radio'] {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
 
 /**
 	 * Success button:
@@ -833,17 +789,17 @@ small {
 .btn--success {
   background-color: #0ec96b;
   border-color: transparent;
-  color: #fff; }
+  color: #ffffff; }
   .btn--success:link, .btn--success:visited {
-    color: #fff; }
+    color: #ffffff; }
   .btn--success:hover {
     background-color: #0cb15e;
-    color: #fff; }
+    color: #ffffff; }
   .btn--success:active, .btn--success.active, .toggle:checked + .btn--success,
   .toggle [type='checkbox']:checked + .btn--success,
   .toggle [type='radio']:checked + .btn--success {
     background-color: #0b9951;
-    color: #fff; }
+    color: #ffffff; }
 
 .night .btn--success {
   background-color: #0ec96b; }
@@ -866,13 +822,13 @@ small {
     .btn--outline.btn--success:hover {
       background-color: #0ec96b;
       border-color: #0ec96b;
-      color: #fff; }
+      color: #ffffff; }
     .btn--outline.btn--success:active, .btn--outline.btn--success.active, .toggle:checked + .btn--outline.btn--success,
     .toggle [type='checkbox']:checked + .btn--outline.btn--success,
     .toggle [type='radio']:checked + .btn--outline.btn--success {
       background-color: #0b9951;
       border-color: #0b9951;
-      color: #fff; }
+      color: #ffffff; }
 
 .night .btn--outline {
   background-color: transparent; }
@@ -884,7 +840,7 @@ small {
     .night .btn--outline.btn--success:hover {
       background-color: #0ec96b;
       border-color: #0ec96b;
-      color: #fff; }
+      color: #ffffff; }
     .night .btn--outline.btn--success:active, .night .btn--outline.btn--success.active, .night .toggle:checked + .btn--outline.btn--success, .night
     .toggle [type='checkbox']:checked + .btn--outline.btn--success,
     .toggle .night [type='checkbox']:checked + .btn--outline.btn--success, .night
@@ -892,13 +848,14 @@ small {
     .toggle .night [type='radio']:checked + .btn--outline.btn--success {
       background-color: #0b9951;
       border-color: #0b9951;
-      color: #fff; }
+      color: #ffffff; }
 
 .toggle,
 .toggle [type='checkbox'],
 .toggle [type='radio'] {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
 
 /**
 	 * Danger button:
@@ -911,17 +868,17 @@ small {
 .btn--danger {
   background-color: #ff5956;
   border-color: transparent;
-  color: #fff; }
+  color: #ffffff; }
   .btn--danger:link, .btn--danger:visited {
-    color: #fff; }
+    color: #ffffff; }
   .btn--danger:hover {
     background-color: #e04e4c;
-    color: #fff; }
+    color: #ffffff; }
   .btn--danger:active, .btn--danger.active, .toggle:checked + .btn--danger,
   .toggle [type='checkbox']:checked + .btn--danger,
   .toggle [type='radio']:checked + .btn--danger {
     background-color: #c24441;
-    color: #fff; }
+    color: #ffffff; }
 
 .night .btn--danger {
   background-color: #ff5956; }
@@ -944,13 +901,13 @@ small {
     .btn--outline.btn--danger:hover {
       background-color: #ff5956;
       border-color: #ff5956;
-      color: #fff; }
+      color: #ffffff; }
     .btn--outline.btn--danger:active, .btn--outline.btn--danger.active, .toggle:checked + .btn--outline.btn--danger,
     .toggle [type='checkbox']:checked + .btn--outline.btn--danger,
     .toggle [type='radio']:checked + .btn--outline.btn--danger {
       background-color: #c24441;
       border-color: #c24441;
-      color: #fff; }
+      color: #ffffff; }
 
 .night .btn--outline {
   background-color: transparent; }
@@ -962,7 +919,7 @@ small {
     .night .btn--outline.btn--danger:hover {
       background-color: #ff5956;
       border-color: #ff5956;
-      color: #fff; }
+      color: #ffffff; }
     .night .btn--outline.btn--danger:active, .night .btn--outline.btn--danger.active, .night .toggle:checked + .btn--outline.btn--danger, .night
     .toggle [type='checkbox']:checked + .btn--outline.btn--danger,
     .toggle .night [type='checkbox']:checked + .btn--outline.btn--danger, .night
@@ -970,13 +927,172 @@ small {
     .toggle .night [type='radio']:checked + .btn--outline.btn--danger {
       background-color: #c24441;
       border-color: #c24441;
-      color: #fff; }
+      color: #ffffff; }
 
 .toggle,
 .toggle [type='checkbox'],
 .toggle [type='radio'] {
   opacity: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
+
+/**
+	 * Light button:
+	 * `.btn--light`
+	 *
+	 *     @example
+	 *     button.btn.btn--light Button
+     *     button.btn.btn--light.btn--outline Outline button
+	 */
+.btn--light {
+  background-color: #e8e9ec;
+  border-color: transparent;
+  color: #3f3f40; }
+  .btn--light:link, .btn--light:visited {
+    color: #3f3f40; }
+  .btn--light:hover {
+    background-color: #cccdd0;
+    color: #3f3f40; }
+  .btn--light:active, .btn--light.active, .toggle:checked + .btn--light,
+  .toggle [type='checkbox']:checked + .btn--light,
+  .toggle [type='radio']:checked + .btn--light {
+    background-color: #b0b1b3;
+    color: #3f3f40; }
+
+.night .btn--light {
+  background-color: #e8e9ec; }
+  .night .btn--light:hover {
+    background-color: #cccdd0; }
+  .night .btn--light:active, .night .btn--light.active, .night .toggle:checked + .btn--light, .night
+  .toggle [type='checkbox']:checked + .btn--light,
+  .toggle .night [type='checkbox']:checked + .btn--light, .night
+  .toggle [type='radio']:checked + .btn--light,
+  .toggle .night [type='radio']:checked + .btn--light {
+    background-color: #b0b1b3; }
+
+.btn--outline {
+  background-color: transparent; }
+  .btn--outline.btn--light {
+    border-color: #e8e9ec;
+    color: #e8e9ec; }
+    .btn--outline.btn--light:link, .btn--outline.btn--light:visited {
+      color: #e8e9ec; }
+    .btn--outline.btn--light:hover {
+      background-color: #e8e9ec;
+      border-color: #e8e9ec;
+      color: #3f3f40; }
+    .btn--outline.btn--light:active, .btn--outline.btn--light.active, .toggle:checked + .btn--outline.btn--light,
+    .toggle [type='checkbox']:checked + .btn--outline.btn--light,
+    .toggle [type='radio']:checked + .btn--outline.btn--light {
+      background-color: #b0b1b3;
+      border-color: #b0b1b3;
+      color: #3f3f40; }
+
+.night .btn--outline {
+  background-color: transparent; }
+  .night .btn--outline.btn--light {
+    border-color: #e8e9ec;
+    color: #e8e9ec; }
+    .night .btn--outline.btn--light:link, .night .btn--outline.btn--light:visited {
+      color: #e8e9ec; }
+    .night .btn--outline.btn--light:hover {
+      background-color: #e8e9ec;
+      border-color: #e8e9ec;
+      color: #3f3f40; }
+    .night .btn--outline.btn--light:active, .night .btn--outline.btn--light.active, .night .toggle:checked + .btn--outline.btn--light, .night
+    .toggle [type='checkbox']:checked + .btn--outline.btn--light,
+    .toggle .night [type='checkbox']:checked + .btn--outline.btn--light, .night
+    .toggle [type='radio']:checked + .btn--outline.btn--light,
+    .toggle .night [type='radio']:checked + .btn--outline.btn--light {
+      background-color: #b0b1b3;
+      border-color: #b0b1b3;
+      color: #3f3f40; }
+
+.toggle,
+.toggle [type='checkbox'],
+.toggle [type='radio'] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+/**
+	 * Dark button:
+	 * `.btn--dark`
+	 *
+	 *     @example
+	 *     button.btn.btn--dark Button
+     *     button.btn.btn--dark.btn--outline Outline button
+	 */
+.btn--dark {
+  background-color: #26272a;
+  border-color: transparent;
+  color: #ececec; }
+  .btn--dark:link, .btn--dark:visited {
+    color: #ececec; }
+  .btn--dark:hover {
+    background-color: #212225;
+    color: #ececec; }
+  .btn--dark:active, .btn--dark.active, .toggle:checked + .btn--dark,
+  .toggle [type='checkbox']:checked + .btn--dark,
+  .toggle [type='radio']:checked + .btn--dark {
+    background-color: #1d1e20;
+    color: #ececec; }
+
+.night .btn--dark {
+  background-color: #26272a; }
+  .night .btn--dark:hover {
+    background-color: #212225; }
+  .night .btn--dark:active, .night .btn--dark.active, .night .toggle:checked + .btn--dark, .night
+  .toggle [type='checkbox']:checked + .btn--dark,
+  .toggle .night [type='checkbox']:checked + .btn--dark, .night
+  .toggle [type='radio']:checked + .btn--dark,
+  .toggle .night [type='radio']:checked + .btn--dark {
+    background-color: #1d1e20; }
+
+.btn--outline {
+  background-color: transparent; }
+  .btn--outline.btn--dark {
+    border-color: #26272a;
+    color: #26272a; }
+    .btn--outline.btn--dark:link, .btn--outline.btn--dark:visited {
+      color: #26272a; }
+    .btn--outline.btn--dark:hover {
+      background-color: #26272a;
+      border-color: #26272a;
+      color: #ececec; }
+    .btn--outline.btn--dark:active, .btn--outline.btn--dark.active, .toggle:checked + .btn--outline.btn--dark,
+    .toggle [type='checkbox']:checked + .btn--outline.btn--dark,
+    .toggle [type='radio']:checked + .btn--outline.btn--dark {
+      background-color: #1d1e20;
+      border-color: #1d1e20;
+      color: #ececec; }
+
+.night .btn--outline {
+  background-color: transparent; }
+  .night .btn--outline.btn--dark {
+    border-color: #26272a;
+    color: #26272a; }
+    .night .btn--outline.btn--dark:link, .night .btn--outline.btn--dark:visited {
+      color: #26272a; }
+    .night .btn--outline.btn--dark:hover {
+      background-color: #26272a;
+      border-color: #26272a;
+      color: #ececec; }
+    .night .btn--outline.btn--dark:active, .night .btn--outline.btn--dark.active, .night .toggle:checked + .btn--outline.btn--dark, .night
+    .toggle [type='checkbox']:checked + .btn--outline.btn--dark,
+    .toggle .night [type='checkbox']:checked + .btn--outline.btn--dark, .night
+    .toggle [type='radio']:checked + .btn--outline.btn--dark,
+    .toggle .night [type='radio']:checked + .btn--outline.btn--dark {
+      background-color: #1d1e20;
+      border-color: #1d1e20;
+      color: #ececec; }
+
+.toggle,
+.toggle [type='checkbox'],
+.toggle [type='radio'] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
 
 /**
  * Link button:
@@ -1088,13 +1204,6 @@ small {
  *     input(id='eg-toggle-btn', type='checkbox').toggle
  *     label(for='eg-toggle-btn').btn.btn--primary Toggle button
  */
-.toggle,
-.toggle [type='checkbox'],
-.toggle [type='radio'] {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
 /***
  * Button group:
  */
@@ -1124,9 +1233,7 @@ small {
       border-radius: 0; }
     .btn-group > .btn:not(:last-of-type) {
       margin-right: -1px; }
-    .btn-group > .btn:active, .btn-group > .btn.active, .btn-group > .toggle:checked + .btn,
-    .toggle .btn-group > [type='checkbox']:checked + .btn,
-    .toggle .btn-group > [type='radio']:checked + .btn, .btn-group > .btn:focus {
+    .btn-group > .btn:active, .btn-group > .btn.active, .btn-group > .btn:focus {
       box-shadow: none; }
   .btn-group.active {
     box-shadow: none; }
@@ -1204,7 +1311,7 @@ small {
 .btn-group.toggle {
   opacity: 1;
   position: initial; }
-  .btn-group.toggle > .btn:active, .btn-group.toggle > .btn.active, .btn-group.toggle > .toggle:checked + .btn, .btn-group.toggle > [type='checkbox']:checked + .btn, .btn-group.toggle > [type='radio']:checked + .btn, .btn-group.toggle > .btn:focus {
+  .btn-group.toggle > .btn:active, .btn-group.toggle > .btn.active, .btn-group.toggle > .btn:focus {
     box-shadow: none; }
 
 /***

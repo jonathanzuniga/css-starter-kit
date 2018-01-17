@@ -5,16 +5,7 @@
  * Button:
  */
 
-/**
- * Standard button:
- * `.btn`
- *
- *     @example
- *     button.btn Button
- */
 .btn {
-	background-color: $button-background-color;
-	color: $text-color;
 	border: $button-border;
 	border-radius: $button-border-radius;
 	box-shadow: none;
@@ -24,7 +15,6 @@
 	line-height: $button-line-height;
 	padding: $button-padding;
 	text-align: center;
-	// transition: $base-transition;
 	vertical-align: middle;
 	white-space: nowrap;
 
@@ -39,119 +29,9 @@
 	&:link {
 		text-decoration: none;
 	}
-
-	&:link,
-	&:visited {
-		color: $text-color;
-	}
-
-	&:hover {
-		@if not ($button-light-colors == '') {
-			background-color: 
-				tint(
-					$base-background-color, 
-					$button-background-color, 
-					$button-hover-background-color-amount
-				);
-		}
-		@else {
-			background-color: 
-				shade(
-					$night-base-background-color, 
-					$button-background-color, 
-					$button-hover-background-color-amount
-				);
-		}
-		color: $text-color;
-		text-decoration: none;
-	}
-
-	&:active,
-	&.active {
-		@if not ($button-light-colors == '') {
-			background-color: 
-				tint(
-					$base-background-color, 
-					$button-background-color, 
-					$button-active-background-color-amount
-				);
-		}
-		@else {
-			background-color: 
-				shade(
-					$night-base-background-color, 
-					$button-background-color, 
-					$button-active-background-color-amount
-				);
-		}
-		color: $text-color;
-	}
-
-	&:active,
-	&.active,
-	&:focus {
-		box-shadow: $button-active-box-shadow;
-	}
 }
 
-.night .btn {
-	background-color: $night-button-background-color;
-	color: $night-text-color;
-
-	&:link,
-	&:visited {
-		color: $night-text-color;
-	}
-
-	&:hover {
-		@if not ($button-light-colors == '') {
-			background-color: 
-				tint(
-					$base-background-color, 
-					$night-button-background-color, 
-					$button-hover-background-color-amount
-				);
-		}
-		@else {
-			background-color: 
-				shade(
-					$night-base-background-color, 
-					$night-button-background-color, 
-					$button-hover-background-color-amount
-				);
-		}
-		color: $night-text-color;
-	}
-
-	&:active,
-	&.active {
-		@if not ($button-light-colors == '') {
-			background-color: 
-				tint(
-					$base-background-color, 
-					$night-button-background-color, 
-					$button-active-background-color-amount
-				);
-		}
-		@else {
-			background-color: 
-				shade(
-					$night-base-background-color, 
-					$night-button-background-color, 
-					$button-active-background-color-amount
-				);
-		}
-		color: $night-text-color;
-	}
-
-	&:active,
-	&.active,
-	&:focus {
-		box-shadow: $night-button-active-box-shadow;
-	}
-}
-
-@each $name, $background-color, $night-background-color, $text-color, $light-colors, $active-box-shadow in $buttons {
+@each $name, $background-color, $night-background-color, $text-color, $state-light-color, $active-box-shadow in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -174,7 +54,7 @@
 		}
 
 		&:hover {
-			@if not ($light-colors == '') {
+			@if not ($state-light-color == '') {
 				background-color: 
 					tint(
 						$base-background-color, 
@@ -195,7 +75,7 @@
 
 		&:active,
 		&.active {
-			@if not ($light-colors == '') {
+			@if not ($state-light-color == '') {
 				background-color: 
 					tint(
 						$base-background-color, 
@@ -228,7 +108,7 @@
 		background-color: $night-background-color;
 
 		&:hover {
-			@if not ($light-colors == '') {
+			@if not ($state-light-color == '') {
 				background-color: 
 					tint(
 						$base-background-color, 
@@ -248,7 +128,7 @@
 
 		&:active,
 		&.active {
-			@if not ($light-colors == '') {
+			@if not ($state-light-color == '') {
 				background-color: 
 					tint(
 						$base-background-color, 
@@ -304,7 +184,7 @@
 
 			&:active,
 			&.active {
-				@if not ($light-colors == '') {
+				@if not ($state-light-color == '') {
 					background-color: 
 						tint(
 							$base-background-color, 
@@ -369,7 +249,7 @@
 
 			&:active,
 			&.active {
-				@if not ($light-colors == '') {
+				@if not ($state-light-color == '') {
 					background-color: 
 						tint(
 							$base-background-color, 
@@ -411,6 +291,7 @@
 	.toggle [type='radio'] {
 		opacity: 0;
 		position: absolute;
+		z-index: -1;
 
 		&:checked {
 			& + .btn--#{$name_r} {
@@ -575,16 +456,3 @@
  *     input(id='eg-toggle-btn', type='checkbox').toggle
  *     label(for='eg-toggle-btn').btn.btn--primary Toggle button
  */
-.toggle,
-.toggle [type='checkbox'],
-.toggle [type='radio'] {
-	opacity: 0;
-	position: absolute;
-	z-index: -1;
-
-	&:checked {
-		& + .btn {
-			@extend .btn.active;
-		}
-	}
-}
