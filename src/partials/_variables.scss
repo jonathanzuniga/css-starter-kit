@@ -126,7 +126,7 @@ $heading-line-height: 1.2;
 
 // Se usan los mismo valores para los demas controles de las formas.
 
-$control-border-width:                   0.063rem; // 1px
+$control-border-width:                   0.063rem;
 $control-border-style:                   solid;
 $control-border-color:                   get_color('gray 8');
 $night-control-border-color:             get_color('gray 42');
@@ -581,13 +581,13 @@ $grid-gap: $gutter-width;
 // Card
 
 $card-background-color:       $base-background-color;
-$night-card-background-color: $night-base-background-color;
+$night-card-background-color: get_color('gray 46');
 $card-padding:                $half-spacing-unit;
-$card-border:                 $border-width $border-style get_color('gray 6');
-$night-card-border-color:     get_color('gray 44');
+$card-border:                 $border-width $border-style $border-color;
+$night-card-border-color:     $night-card-background-color;
 $card-border-radius:          $border-radius;
-$card-box-shadow:             0 0.063em 0.063em rgba(black, 0.1);
-$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.12);
+$card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
+$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.1);
 
 
 // Collapse

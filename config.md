@@ -9,12 +9,12 @@
 
 	style(type='text/css').
 		.doc-navbar {
-			background-color: #f3f3f3;
+			background-color: #efeff0;
 			height: 60px;
 		}
 
 		.night .doc-navbar {
-			background-color: #131313;
+			background-color: #191919;
 		}
 
 		.doc-sidebar {
