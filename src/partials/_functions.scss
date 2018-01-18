@@ -58,7 +58,7 @@ $color-spectrum-range: 50;
 }
 
 // Get one color from the list.
-@function get_color($color) {
+@function color($color) {
 	@each $cp in $colors {
 		@if nth($cp, 1) == $color {
 			@return nth($cp, 2);
@@ -87,7 +87,7 @@ $color-spectrum-range: 50;
 	}
 }
 
-// Hepler. Make unit from input number. 
+// Helper. Make unit from input number. 
 // Replace $value unit to target unit.
 @function make_unit($value, $unit: px) {
 	$value: clear_unit($value);
