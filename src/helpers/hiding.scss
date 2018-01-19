@@ -17,7 +17,7 @@
  *             div.bgc-gray-80 &nbsp;
  */
 .hide {
-	display: none $hiding-important;
+	display: none $hide-important;
 }
 
 /**
@@ -34,13 +34,13 @@
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		.#{$size}-hide {
-			display: none $hiding-important;
+			display: none $hide-important;
 		}
 	}
 
 	@media (max-width: $length - 1) {
 		.max#{$size}-hide {
-			display: none $hiding-important;
+			display: none $hide-important;
 		}
 	}
 
