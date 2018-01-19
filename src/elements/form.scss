@@ -63,6 +63,7 @@
 		background-color: $input-focus-background-color;
 		border-color: $input-focus-border-color;
 		border-width: $input-focus-border-width;
+		box-shadow: $input-focus-box-shadow;
 
 		&::placeholder {
 			color: $input-focus-placeholder;
@@ -137,6 +138,51 @@
 }
 
 /**
+ * Flat input:
+ * `.input--flat`
+ *
+ *     @example
+ *     input(type='text', placeholder='Flat input').input.input--flat
+ */
+.input--flat {
+	background-color: $input-flat-background-color;
+	border-color: $input-flat-border-color;
+
+	&:valid {
+		border-color: $input-flat-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $input-focus-border-color;
+	}
+
+	&:hover {
+		background-color: $input-flat-hover-background-color;
+		border-color: $input-flat-hover-border-color;
+	}
+}
+
+.night .input--flat {
+	background-color: $night-input-flat-background-color;
+	border-color: $night-input-flat-border-color;
+
+	&:valid {
+		border-color: $night-input-flat-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $night-input-focus-border-color;
+	}
+
+	&:hover {
+		background-color: $night-input-flat-hover-background-color;
+		border-color: $night-input-flat-hover-border-color;
+	}
+}
+
+/**
  * Line input:
  * `.input--line`
  *
@@ -155,6 +201,18 @@
 
 	padding-right: 0;
 	padding-left: 0;
+
+	&:focus,
+	&:focus:hover {
+		box-shadow: $input-line-focus-box-shadow;
+	}
+}
+
+.night .input--line {
+	&:focus,
+	&:focus:hover {
+		box-shadow: $input-line-focus-box-shadow;
+	}
 }
 
 /**

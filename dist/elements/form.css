@@ -43,8 +43,9 @@
   .txtarea:focus,
   .txtarea:focus:hover {
     background-color: transparent;
-    border-color: #89c9f9;
-    border-width: 0.063rem; }
+    border-color: #4aacf6;
+    border-width: 0.063rem;
+    box-shadow: inset 0 0 0 0.063rem #4aacf6; }
     .input:focus::placeholder, .input:focus:hover::placeholder,
     .txtarea:focus::placeholder,
     .txtarea:focus:hover::placeholder {
@@ -83,7 +84,7 @@
     border-color: #333333; }
   .night .input:active,
   .night .txtarea:active {
-    border-color: #1d97f4; }
+    border-color: #89c9f9; }
 
 /**
  * Input size:
@@ -106,6 +107,35 @@
   padding: 0.25em 0.75em; }
 
 /**
+ * Flat input:
+ * `.input--flat`
+ *
+ *     @example
+ *     input(type='text', placeholder='Flat input').input.input--flat
+ */
+.input--flat {
+  background-color: #fbfbfc;
+  border-color: #fbfbfc; }
+  .input--flat:valid {
+    border-color: #fbfbfc; }
+  .input--flat:focus, .input--flat:focus:hover {
+    border-color: #4aacf6; }
+  .input--flat:hover {
+    background-color: #f7f8f9;
+    border-color: #f7f8f9; }
+
+.night .input--flat {
+  background-color: #060707;
+  border-color: #060707; }
+  .night .input--flat:valid {
+    border-color: #060707; }
+  .night .input--flat:focus, .night .input--flat:focus:hover {
+    border-color: #89c9f9; }
+  .night .input--flat:hover {
+    background-color: #0d0d0e;
+    border-color: #0d0d0e; }
+
+/**
  * Line input:
  * `.input--line`
  *
@@ -121,6 +151,11 @@
   border-radius: 0;
   padding-right: 0;
   padding-left: 0; }
+  .input--line:focus, .input--line:focus:hover {
+    box-shadow: inset 0 -0.063rem 0 0 #4aacf6; }
+
+.night .input--line:focus, .night .input--line:focus:hover {
+  box-shadow: inset 0 -0.063rem 0 0 #4aacf6; }
 
 /**
  * Textarea:
@@ -212,7 +247,7 @@
   padding: 0.25em 0.75em;
   width: 100%; }
   .sel:focus, .sel:focus:hover {
-    border-color: #89c9f9;
+    border-color: #4aacf6;
     border-width: 0.063rem; }
 
 .night .sel {
