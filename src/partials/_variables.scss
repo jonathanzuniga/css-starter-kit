@@ -151,6 +151,9 @@ $night-control-active-border-color:      color('blue 13');
 $control-focus-border-color:             color('blue 13');
 $night-control-focus-border-color:       color('blue 13');
 
+$control-focus-box-shadow:               inset 0 0 0 0.063rem $control-focus-border-color;
+$night-control-focus-box-shadow:         inset 0 0 0 0.063rem $night-control-focus-border-color;
+
 $control-invalid-border-color:           color('red 25');
 $night-control-invalid-border-color:     color('red 25');
 
@@ -243,8 +246,8 @@ $night-input-active-border-color:         $night-control-active-border-color;
 $input-focus-background-color:            transparent;
 $input-focus-border-color:                $control-focus-border-color;
 $night-input-focus-border-color:          $night-control-focus-border-color;
-$input-focus-box-shadow:                  inset 0 0 0 0.063rem $input-focus-border-color;
-$night-input-focus-box-shadow:            inset 0 0 0 0.063rem $night-input-focus-border-color;
+$input-focus-box-shadow:                  $control-focus-box-shadow;
+$night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
 $input-placeholder:                       color('gray 16');
 $night-input-placeholder:                 color('gray 34');
@@ -329,8 +332,8 @@ $select-padding-x:                $control-padding-x;
 
 $select-focus-border-color:       $control-focus-border-color;
 $night-select-focus-border-color: $night-control-focus-border-color;
-$select-focus-box-shadow:         inset 0 0 0 0.063rem $select-focus-border-color;
-$night-select-focus-box-shadow:   inset 0 0 0 0.063rem $night-select-focus-border-color;
+$select-focus-box-shadow:         $control-focus-box-shadow;
+$night-select-focus-box-shadow:   $night-control-focus-box-shadow;
 
 $select-small-border-radius:      $control-border-radius;
 $select-small-font-size:          $small-font-size;
