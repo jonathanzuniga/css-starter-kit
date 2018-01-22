@@ -234,7 +234,8 @@ $input-text-color:                        $text-color;
 $night-input-text-color:                  $night-text-color;
 $input-font-size:                         $base-font-size;
 $input-line-height:                       $control-line-height;
-$input-padding:                           $control-padding-y $control-padding-x;
+$input-padding-y:                         $control-padding-y;
+$input-padding-x:                         $control-padding-x;
 
 $input-active-border-color:               $control-active-border-color;
 $night-input-active-border-color:         $night-control-active-border-color;
@@ -242,7 +243,6 @@ $night-input-active-border-color:         $night-control-active-border-color;
 $input-focus-background-color:            transparent;
 $input-focus-border-color:                $control-focus-border-color;
 $night-input-focus-border-color:          $night-control-focus-border-color;
-$input-focus-border-width:                $control-border-width;
 $input-focus-box-shadow:                  inset 0 0 0 0.063rem $input-focus-border-color;
 $night-input-focus-box-shadow:            inset 0 0 0 0.063rem $night-input-focus-border-color;
 
@@ -315,17 +315,22 @@ $night-file-area-valid-background-color: color('blue 46');
 // Select menu
 
 $select-background-color:         transparent;
-$select-border:                   $control-border-width $control-border-style $control-border-color;
+$select-border-width:             $control-border-width;
+$select-border-style:             $control-border-style;
+$select-border-color:             $control-border-color;
 $night-select-border-color:       $night-control-border-color;
 $select-border-radius:            $control-border-radius;
 $select-text-color:               $text-color;
 $night-select-text-color:         $night-text-color;
 $select-font-size:                $base-font-size;
 $select-line-height:              $control-line-height;
-$select-padding:                  $control-padding-y $control-padding-x;
+$select-padding-y:                $control-padding-y;
+$select-padding-x:                $control-padding-x;
 
 $select-focus-border-color:       $control-focus-border-color;
-$select-focus-border-width:       $control-border-width;
+$night-select-focus-border-color: $night-control-focus-border-color;
+$select-focus-box-shadow:         inset 0 0 0 0.063rem $select-focus-border-color;
+$night-select-focus-box-shadow:   inset 0 0 0 0.063rem $night-select-focus-border-color;
 
 $select-small-border-radius:      $control-border-radius;
 $select-small-font-size:          $small-font-size;
@@ -352,7 +357,9 @@ $select-margin-right:             $half-spacing-unit;
 
 // Pure CSS select menu icon.
 
-$select-icon-after-border:              0.125em solid $text-color;
+$select-icon-after-border-width:        0.125em;
+$select-icon-after-border-style:        solid;
+$select-icon-after-border-color:        $text-color;
 $night-select-icon-after-border-color:  $night-text-color;
 $select-icon-after-margin-top:         -0.438em;
 $select-icon-after-width:               $quarter-spacing-unit;
@@ -443,7 +450,8 @@ $night-table-border-color:             color('gray 44');
 $table-header-background-color:        color('gray 3');
 $night-table-header-background-color:  color('gray 47');
 
-$table-cell-padding:                   $quarter-spacing-unit $half-spacing-unit;
+$table-cell-padding-y:                 $quarter-spacing-unit;
+$table-cell-padding-x:                 $half-spacing-unit;
 
 $table-striped-index:                  even; // 'odd'
 
@@ -603,7 +611,9 @@ $grid-gap: $gutter-width;
 $card-background-color:       $base-background-color;
 $night-card-background-color: color('gray 46');
 $card-padding:                $half-spacing-unit;
-$card-border:                 $border-width $border-style $border-color;
+$card-border-width:           $border-width;
+$card-border-style:           $border-style;
+$card-border-color:           $border-color;
 $night-card-border-color:     $night-card-background-color;
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
@@ -635,8 +645,10 @@ $drawer-height:                 200px;
 // Menu
 
 $menu-item-margin:  0 0 ($quarter-spacing-unit / 2);
-$menu-item-padding: 0;
-$menu-link-padding: $quarter-spacing-unit $half-spacing-unit;
+$menu-item-padding-y: 0;
+$menu-item-padding-x: 0;
+$menu-link-padding-y: $quarter-spacing-unit;
+$menu-link-padding-x: $half-spacing-unit;
 
 
 // Menu pills
@@ -715,7 +727,8 @@ $night-tabs-link-color:                           color('gray 25');
 $tabs-link-hover-color:                           color('gray 33');
 $night-tabs-link-hover-color:                     color('gray 17');
 
-$tabs-link-padding:                               $quarter-spacing-unit $half-spacing-unit;
+$tabs-link-padding-y:                             $quarter-spacing-unit;
+$tabs-link-padding-x:                             $half-spacing-unit;
 
 $tabs-link-hover-border-bottom-color:             transparent;
 $night-tabs-link-hover-border-bottom-color:       transparent;

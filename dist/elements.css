@@ -319,7 +319,6 @@ small {
   .txtarea:focus:hover {
     background-color: transparent;
     border-color: #8ccaf9;
-    border-width: 0.063rem;
     box-shadow: inset 0 0 0 0.063rem #8ccaf9; }
     .input:focus::placeholder, .input:focus:hover::placeholder,
     .txtarea:focus::placeholder,
@@ -526,7 +525,9 @@ small {
  */
 .sel {
   background-color: transparent;
-  border: 0.063rem solid #e0e0e0;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: #e0e0e0;
   border-radius: 0.25rem;
   display: block;
   font-size: 16px;
@@ -535,11 +536,14 @@ small {
   width: 100%; }
   .sel:focus, .sel:focus:hover {
     border-color: #8ccaf9;
-    border-width: 0.063rem; }
+    box-shadow: inset 0 0 0 0.063rem #8ccaf9; }
 
 .night .sel {
   border-color: #333333;
   color: #f3f3f3; }
+  .night .sel:focus, .night .sel:focus:hover {
+    border-color: #8ccaf9;
+    box-shadow: inset 0 0 0 0.063rem #8ccaf9; }
   .night .sel option {
     color: #131313; }
 
@@ -562,7 +566,9 @@ small {
     -moz-appearance: none;
     padding-right: 1.75em; }
   .sel-icn:after {
-    border: 0.125em solid #131313;
+    border-width: 0.125em;
+    border-style: solid;
+    border-color: #131313;
     border-right: 0;
     border-top: 0;
     content: '';

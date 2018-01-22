@@ -36,7 +36,7 @@
 	font-family: $base-font-family;
 	font-size: $input-font-size;
 	line-height: $input-line-height;
-	padding: $input-padding;
+	padding: $input-padding-y $input-padding-x;
 	width: 100%;
 
 	// &::-moz-placeholder {
@@ -64,7 +64,6 @@
 	&:focus:hover {
 		background-color: $input-focus-background-color;
 		border-color: $input-focus-border-color;
-		border-width: $input-focus-border-width;
 		box-shadow: $input-focus-box-shadow;
 
 		&::placeholder {
@@ -321,12 +320,14 @@
  */
 .sel {
 	background-color: $select-background-color;
-	border: $select-border;
+	border-width: $select-border-width;
+	border-style: $select-border-style;
+	border-color: $select-border-color;
 	border-radius: $select-border-radius;
 	display: block;
 	font-size: $select-font-size;
 	line-height: $select-line-height;
-	padding: $select-padding;
+	padding: $select-padding-y $select-padding-x;
 	width: 100%;
 
 	// -ms-touch-action: manipulation;
@@ -354,18 +355,22 @@
 	&:focus,
 	&:focus:hover {
 		border-color: $select-focus-border-color;
-		border-width: $select-focus-border-width;
+		box-shadow: $select-focus-box-shadow;
 	}
 }
 
-.night {
-	.sel {
-		border-color: $night-select-border-color;
-		color: $night-select-text-color;
+.night .sel {
+	border-color: $night-select-border-color;
+	color: $night-select-text-color;
 
-		option {
-			color: $text-color;
-		}
+	&:focus,
+	&:focus:hover {
+		border-color: $night-select-focus-border-color;
+		box-shadow: $night-select-focus-box-shadow;
+	}
+
+	option {
+		color: $text-color;
 	}
 }
 
@@ -393,7 +398,9 @@
 	}
 	
 	&:after {
-		border: $select-icon-after-border;
+		border-width: $select-icon-after-border-width;
+		border-style: $select-icon-after-border-style;
+		border-color: $select-icon-after-border-color;
 		border-right: 0;
 		border-top: 0;
 		
