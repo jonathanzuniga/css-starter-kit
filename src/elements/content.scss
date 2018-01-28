@@ -11,7 +11,7 @@
 
 	outline: none;
 	
-	transition: $base-transition;
+	// transition: $base-transition;
 }
 
 body {
@@ -20,17 +20,16 @@ body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	line-height: $line-height-ratio;
-	// transition: $base-transition;
 
-    -moz-osx-font-smoothing: auto;
-	 -webkit-font-smoothing: subpixel-antialiased;
+	// -moz-osx-font-smoothing: unset;
+	//  -webkit-font-smoothing: subpixel-antialiased;
 
 	text-rendering: optimizeLegibility;
+}
 
-	&.night {
-		background-color: $night-base-background-color;
-		color: $night-text-color;
-	}
+body.night {
+	background-color: $night-base-background-color;
+	color: $night-text-color;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -41,7 +40,7 @@ ul, ol, dl, figure {
 
 a {
 	text-decoration: $link-decoration;
-	// transition: $base-transition;
+	transition: $base-transition;
 		
 	&:link {
 		color: $link-color;
@@ -56,10 +55,10 @@ a {
 		text-decoration: $link-hover-decoration;
 	}
 
-	&:hover,
-	&:active {
-		transition-duration: 0s;
-	}
+	// &:hover,
+	// &:active {
+	// 	transition-duration: 0s;
+	// }
 }
 
 .night {
@@ -87,13 +86,11 @@ p > a:not(.btn) {
 	}
 }
 
-.night {
-	p > a:not(.btn) {
-		border-bottom-color: $night-link-border-bottom-color;
+.night p > a:not(.btn) {
+	border-bottom-color: $night-link-border-bottom-color;
 
-		&:hover {
-			border-bottom-color: $night-link-hover-border-bottom-color;
-		}
+	&:hover {
+		border-bottom-color: $night-link-hover-border-bottom-color;
 	}
 }
 

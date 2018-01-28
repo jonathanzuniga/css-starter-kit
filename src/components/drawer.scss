@@ -29,7 +29,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-top').btn.btn--secondary Top
@@ -44,9 +43,9 @@
 
 .drawer {
 	background-color: $drawer-background-color;
+	// opacity: 0;
 	position: fixed;
-	
-	visibility: hidden;
+	// visibility: hidden;
 	width: $drawer-width;
 }
 
@@ -96,8 +95,7 @@
 
 .drawer,
 .drawer ~ .drawer-outside {
-	transition: margin $base-transition-duration $base-transition-timing-function, 
-				visibility $base-transition-duration $base-transition-timing-function;
+	transition: $drawer-outside-transition;
 }
 
 .drawer-outside {
@@ -111,7 +109,8 @@
 
 	&:checked {
 		~ .drawer {
-			visibility: visible;
+			// opacity: 1;
+			// visibility: visible;
 		}
 	}
 }
@@ -158,7 +157,8 @@
 
 .open {
 	&.drawer {
-		visibility: visible;
+		// opacity: 1;
+		// visibility: visible;
 	}
 
 	&.drawer--top {
@@ -219,7 +219,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-with-push-top').btn.btn--secondary Top
@@ -251,8 +250,7 @@
 
 .drawer--push,
 .drawer--push ~ .drawer-outside {
-	transition: transform $base-transition-duration $base-transition-timing-function, 
-			    visibility $base-transition-duration $base-transition-timing-function;
+	transition: $drawer-push-outside-transition;
 }
 
 .drawer-toggle:checked {
@@ -436,7 +434,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-with-overlap-top').btn.btn--secondary Top

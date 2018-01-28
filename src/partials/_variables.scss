@@ -56,10 +56,9 @@ $night-text-color:            color('gray 3');
 // Transition
 
 $base-transition-duration:        0.16s;
-$base-transition-timing-function: ease;
+$base-transition-timing-function: ease-out;
 $base-transition:                 background-color $base-transition-duration $base-transition-timing-function, 
                                   border-color     $base-transition-duration $base-transition-timing-function, 
-                                  border-width     $base-transition-duration $base-transition-timing-function, 
                                   box-shadow       $base-transition-duration $base-transition-timing-function, 
                                   color            $base-transition-duration $base-transition-timing-function;
 
@@ -172,6 +171,8 @@ $button-line-height:                    $control-line-height;
 $button-padding-y:                      $control-padding-y;
 $button-padding-x:                      $control-padding-x;
 
+$button-transition:                     $base-transition;
+
 $button-hover-background-color-amount:  12%;
 $button-active-background-color-amount: 24%;
 
@@ -239,6 +240,7 @@ $input-font-size:                         $base-font-size;
 $input-line-height:                       $control-line-height;
 $input-padding-y:                         $control-padding-y;
 $input-padding-x:                         $control-padding-x;
+$input-transition:                        $base-transition;
 
 $input-active-border-color:               $control-active-border-color;
 $night-input-active-border-color:         $night-control-active-border-color;
@@ -249,10 +251,11 @@ $night-input-focus-border-color:          $night-control-focus-border-color;
 $input-focus-box-shadow:                  $control-focus-box-shadow;
 $night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
-$input-placeholder:                       color('gray 16');
-$night-input-placeholder:                 color('gray 34');
-$input-focus-placeholder:                 color('blue 13');
-$night-input-focus-placeholder:           color('blue 13');
+$input-placeholder-color:                 color('gray 16');
+$night-input-placeholder-color:           color('gray 34');
+$input-focus-placeholder-color:           color('blue 13');
+$night-input-focus-placeholder-color:     color('blue 13');
+$input-placeholder-opacity:               0.8;
 
 $input-hover-border-color:                $input-border-color;
 $night-input-hover-border-color:          $night-input-border-color;
@@ -620,14 +623,16 @@ $card-border-color:           $border-color;
 $night-card-border-color:     $night-card-background-color;
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
-$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.1);
+$card-transition:             $base-transition;
+
+$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.15);
 
 
 // Collapse
 
-$collapse-transition: max-height 0.3s $base-transition-timing-function, 
-                      opacity    0.3s $base-transition-timing-function, 
-                      transform  0.2s $base-transition-timing-function;
+$collapse-transition: max-height 0.3s $base-transition-timing-function,
+                      opacity    0.3s $base-transition-timing-function,
+                      transform  0.3s $base-transition-timing-function;
 
 $collapse-list-unstyled-link-color:                   color('gray 25');
 $night-collapse-list-unstyled-link-color:             color('gray 25');
@@ -639,10 +644,17 @@ $night-collapse-list-unstyled-item-active-link-color: $night-text-color;
 
 // Drawer
 
-$drawer-background-color:       color('gray 2');
-$night-drawer-background-color: color('gray 48');
-$drawer-width:                  300px;
-$drawer-height:                 200px;
+$drawer-background-color:        color('gray 2');
+$night-drawer-background-color:  color('gray 48');
+$drawer-width:                   300px;
+$drawer-height:                  200px;
+
+$drawer-outside-transition:      margin     $base-transition-duration $base-transition-timing-function;
+                                 // opacity    $base-transition-duration $base-transition-timing-function;
+
+$drawer-push-outside-transition: 
+// opacity    $base-transition-duration $base-transition-timing-function,
+                                 transform  $base-transition-duration $base-transition-timing-function;
 
 
 // Menu
@@ -746,5 +758,5 @@ $tabs-item-active-link-border-bottom-width:       0.188rem; // 3px
 $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
-$tabs-item-active-underline-transition:           transform ease-out 0.2s, 
-                                                  width ease-out 0.2s;
+$tabs-item-active-underline-transition:           transform $base-transition-duration $base-transition-timing-function, 
+                                                  width     $base-transition-duration $base-transition-timing-function;

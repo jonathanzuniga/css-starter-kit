@@ -26,9 +26,10 @@
   border-style: solid;
   border-color: #e8e9ec;
   border-radius: 0.25rem;
-  box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.05);
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   .card:hover {
-    box-shadow: 0 0.063em 1em rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0.063em 1em rgba(0, 0, 0, 0.15); }
 
 .night .card {
   background-color: #191919;
@@ -76,8 +77,8 @@
   opacity: 0;
   overflow: hidden;
   position: relative;
-  transform: translateY(-0.5em);
-  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.2s ease; }
+  transform: translateY(0.5em);
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out; }
   .collapse.open, .collapse-toggle:checked ~ .collapse {
     max-height: 100vh;
     opacity: 1;
@@ -163,7 +164,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-top').btn.btn--secondary Top
@@ -178,7 +178,6 @@
 .drawer {
   background-color: #f7f7f7;
   position: fixed;
-  visibility: hidden;
   width: 300px; }
 
 .night .drawer {
@@ -215,7 +214,7 @@
 
 .drawer,
 .drawer ~ .drawer-outside {
-  transition: margin 0.16s ease, visibility 0.16s ease; }
+  transition: margin 0.16s ease-out; }
 
 .drawer-outside {
   transform: none; }
@@ -224,8 +223,6 @@
   opacity: 0;
   position: absolute;
   z-index: -1; }
-  .drawer-toggle:checked ~ .drawer {
-    visibility: visible; }
 
 .drawer-toggle--top:checked ~ .drawer--top {
   margin-top: 0; }
@@ -246,9 +243,6 @@
   margin-left: 0; }
   .drawer-toggle--left:checked ~ .drawer--left ~ .drawer-outside {
     margin-left: 300px; }
-
-.open.drawer {
-  visibility: visible; }
 
 .open.drawer--top {
   margin-top: 0; }
@@ -295,7 +289,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-with-push-top').btn.btn--secondary Top
@@ -321,7 +314,7 @@
 
 .drawer--push,
 .drawer--push ~ .drawer-outside {
-  transition: transform 0.16s ease, visibility 0.16s ease; }
+  transition: transform 0.16s ease-out; }
 
 .drawer-toggle:checked ~ .drawer--push ~ .drawer-outside {
   margin: 0; }
@@ -432,7 +425,6 @@
  *         div.drawer-outside
  *             div
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 p In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.
  *                 div.txt-center
  *                     div.btn-group
  *                         label(for='eg-drawer-with-overlap-top').btn.btn--secondary Top
@@ -1373,7 +1365,7 @@
   position: absolute;
   left: 0;
   bottom: -1px;
-  transition: transform ease-out 0.2s, width ease-out 0.2s;
+  transition: transform 0.16s ease-out, width 0.16s ease-out;
   will-change: transform, width;
   transform: translateX(0);
   width: 71px; }
