@@ -5,6 +5,7 @@
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
 	link(rel='stylesheet', href='css/styledown.css')
+	link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
 	link(rel='stylesheet', href='../dist/csssk.css')
 
 	style(type='text/css').
@@ -104,6 +105,32 @@
 			display: block;
 			padding: 0.25rem 0;
 		}
+
+		.ion-ios-moon-outline:before,
+		.ion-ios-moon:before {
+			font-size: 3em;
+			line-height: inherit;
+		}
+
+		.ion-ios-moon-outline:before {
+			color: #e0e0e0;
+		}
+
+		.night .ion-ios-moon:before {
+			color: #333333;
+		}
+
+	script().
+		;(function (window, document, undefined) {
+			'use strict';
+
+			if (!('localStorage' in window)) return;
+			
+			var nightMode = localStorage.getItem('nightMode');
+			if (!nightMode) return;
+			
+			document.documentElement.classList.add('night', 'txt-smooth');
+		})(window, document);
 
 ### Body
 
@@ -227,7 +254,8 @@
 								p.m-top-10
 									input(id='switch-night-mode', type='checkbox').switch.switch--sm
 									label(for='switch-night-mode', id='lbl-night-mode')
-										span Night mode
+										span
+											i(title='Night mode', id='icon-night-mode').ion-ios-moon-outline
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='js/styledown.js')

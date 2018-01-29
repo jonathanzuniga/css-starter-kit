@@ -61,6 +61,14 @@ function fsMenuClose() {
 }
 
 function switchNightMode() {
+	if (!('localStorage' in window)) return;
+
+	var nightMode = localStorage.getItem('nightMode');
+	if (nightMode) {
+		$('#switch-night-mode').prop('checked', true);
+		$('#icon-night-mode').removeClass('ion-ios-moon-outline').addClass('ion-ios-moon');
+	}
+
 	switchNightModeStart('#switch-night-mode');
 	$('#switch-night-mode').change(function() {
 		switchNightModeStart($(this));
@@ -68,10 +76,16 @@ function switchNightMode() {
 }
 
 function switchNightModeStart(element) {
-	if ($(element).is(':checked'))
-		$('body').addClass('night txt-smooth');
-	else
-		$('body').removeClass('night txt-smooth');
+	if ($(element).is(':checked')) {
+		$('html').addClass('night txt-smooth');
+		$('#icon-night-mode').removeClass('ion-ios-moon-outline').addClass('ion-ios-moon');
+		localStorage.setItem('nightMode', true);
+	}
+	else {
+		$('html').removeClass('night txt-smooth');
+		$('#icon-night-mode').removeClass('ion-ios-moon').addClass('ion-ios-moon-outline');
+		localStorage.removeItem('nightMode');
+	}
 }
 
 function smoothScroll($url) {
