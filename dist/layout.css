@@ -8,7 +8,7 @@ html, body {
   margin: 0;
   padding: 0; }
 
-.row {
+.cols {
   display: flex;
   flex-wrap: wrap;
   margin-right: -1rem;
@@ -28,7 +28,7 @@ html, body {
  *
  *     @example
  *     div.container
- *         div.row
+ *         div.cols
  *             div.col
  *                 div.bgc-green-10 &nbsp;
  *             div.col
@@ -43,7 +43,7 @@ html, body {
  *
  *     @example
  *     div.container-fluid
- *         div.row
+ *         div.cols
  *             div.col
  *                 div.bgc-green-10 &nbsp;
  *             div.col
@@ -57,16 +57,16 @@ html, body {
   width: 100%; }
 
 /**
- * Rows and columns:
- * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
+ * Columns:
+ * Remember, wrap any of the `.*col*` classes inside of a `.cols` class.
  *
  *     @example
- *     div.row
+ *     div.cols
  *         div.col
  *             div.bgc-green-10 &nbsp;
  *         div.col
  *             div.bgc-green-10 &nbsp;
- *     div.row.m-top-4
+ *     div.cols.m-top-4
  *         div.col
  *             div.bgc-green-10 &nbsp;
  *         div.col
@@ -129,17 +129,17 @@ html, body {
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.row
+ *     div.cols
  *         div.xs-col-6
  *             div.bgc-green-10 &nbsp;
  *         div.xs-col-6
  *             div.bgc-green-10 &nbsp;
- *     div.row.m-top-4
+ *     div.cols.m-top-4
  *         div.sm-col-6.md-col-8
  *             div.bgc-green-10 &nbsp;
  *         div.sm-col-6.md-col-4
  *             div.bgc-green-10 &nbsp;
- *     div.row.m-top-4
+ *     div.cols.m-top-4
  *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
  *             div.bgc-green-10 &nbsp;
  *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
@@ -350,14 +350,14 @@ html, body {
 	 * `.gutters-0`
 	 *
 	 *     @example
-	 *     div.row.gutters-0
+	 *     div.cols.gutters-0
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-.gutters-0.row > .col,
-.gutters-0.row > [class*="col-"] {
+.gutters-0.cols > .col,
+.gutters-0.cols > [class*="col-"] {
   padding-right: 0rem;
   padding-left: 0rem; }
 
@@ -365,8 +365,8 @@ html, body {
   grid-gap: 0rem; }
 
 @media (min-width: 0) {
-  .xs-gutters-0.row > .col,
-  .xs-gutters-0.row > [class*="col-"] {
+  .xs-gutters-0.cols > .col,
+  .xs-gutters-0.cols > [class*="col-"] {
     padding-right: 0rem;
     padding-left: 0rem; }
   .xs-gutters-0.xs-cols-1 {
@@ -399,8 +399,8 @@ html, body {
     grid-gap: 0rem; } }
 
 @media (min-width: 768px) {
-  .sm-gutters-0.row > .col,
-  .sm-gutters-0.row > [class*="col-"] {
+  .sm-gutters-0.cols > .col,
+  .sm-gutters-0.cols > [class*="col-"] {
     padding-right: 0rem;
     padding-left: 0rem; }
   .sm-gutters-0.sm-cols-1 {
@@ -433,8 +433,8 @@ html, body {
     grid-gap: 0rem; } }
 
 @media (min-width: 1024px) {
-  .md-gutters-0.row > .col,
-  .md-gutters-0.row > [class*="col-"] {
+  .md-gutters-0.cols > .col,
+  .md-gutters-0.cols > [class*="col-"] {
     padding-right: 0rem;
     padding-left: 0rem; }
   .md-gutters-0.md-cols-1 {
@@ -467,8 +467,8 @@ html, body {
     grid-gap: 0rem; } }
 
 @media (min-width: 1280px) {
-  .lg-gutters-0.row > .col,
-  .lg-gutters-0.row > [class*="col-"] {
+  .lg-gutters-0.cols > .col,
+  .lg-gutters-0.cols > [class*="col-"] {
     padding-right: 0rem;
     padding-left: 0rem; }
   .lg-gutters-0.lg-cols-1 {
@@ -501,8 +501,8 @@ html, body {
     grid-gap: 0rem; } }
 
 @media (min-width: 1680px) {
-  .xl-gutters-0.row > .col,
-  .xl-gutters-0.row > [class*="col-"] {
+  .xl-gutters-0.cols > .col,
+  .xl-gutters-0.cols > [class*="col-"] {
     padding-right: 0rem;
     padding-left: 0rem; }
   .xl-gutters-0.xl-cols-1 {
@@ -539,14 +539,14 @@ html, body {
 	 * `.gutters-5`
 	 *
 	 *     @example
-	 *     div.row.gutters-5
+	 *     div.cols.gutters-5
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-.gutters-5.row > .col,
-.gutters-5.row > [class*="col-"] {
+.gutters-5.cols > .col,
+.gutters-5.cols > [class*="col-"] {
   padding-right: 0.5rem;
   padding-left: 0.5rem; }
 
@@ -554,8 +554,8 @@ html, body {
   grid-gap: 0.5rem; }
 
 @media (min-width: 0) {
-  .xs-gutters-5.row > .col,
-  .xs-gutters-5.row > [class*="col-"] {
+  .xs-gutters-5.cols > .col,
+  .xs-gutters-5.cols > [class*="col-"] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
   .xs-gutters-5.xs-cols-1 {
@@ -588,8 +588,8 @@ html, body {
     grid-gap: 0.5rem; } }
 
 @media (min-width: 768px) {
-  .sm-gutters-5.row > .col,
-  .sm-gutters-5.row > [class*="col-"] {
+  .sm-gutters-5.cols > .col,
+  .sm-gutters-5.cols > [class*="col-"] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
   .sm-gutters-5.sm-cols-1 {
@@ -622,8 +622,8 @@ html, body {
     grid-gap: 0.5rem; } }
 
 @media (min-width: 1024px) {
-  .md-gutters-5.row > .col,
-  .md-gutters-5.row > [class*="col-"] {
+  .md-gutters-5.cols > .col,
+  .md-gutters-5.cols > [class*="col-"] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
   .md-gutters-5.md-cols-1 {
@@ -656,8 +656,8 @@ html, body {
     grid-gap: 0.5rem; } }
 
 @media (min-width: 1280px) {
-  .lg-gutters-5.row > .col,
-  .lg-gutters-5.row > [class*="col-"] {
+  .lg-gutters-5.cols > .col,
+  .lg-gutters-5.cols > [class*="col-"] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
   .lg-gutters-5.lg-cols-1 {
@@ -690,8 +690,8 @@ html, body {
     grid-gap: 0.5rem; } }
 
 @media (min-width: 1680px) {
-  .xl-gutters-5.row > .col,
-  .xl-gutters-5.row > [class*="col-"] {
+  .xl-gutters-5.cols > .col,
+  .xl-gutters-5.cols > [class*="col-"] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
   .xl-gutters-5.xl-cols-1 {
@@ -728,14 +728,14 @@ html, body {
 	 * `.gutters-1`
 	 *
 	 *     @example
-	 *     div.row.gutters-1
+	 *     div.cols.gutters-1
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-.gutters-1.row > .col,
-.gutters-1.row > [class*="col-"] {
+.gutters-1.cols > .col,
+.gutters-1.cols > [class*="col-"] {
   padding-right: 1rem;
   padding-left: 1rem; }
 
@@ -743,8 +743,8 @@ html, body {
   grid-gap: 1rem; }
 
 @media (min-width: 0) {
-  .xs-gutters-1.row > .col,
-  .xs-gutters-1.row > [class*="col-"] {
+  .xs-gutters-1.cols > .col,
+  .xs-gutters-1.cols > [class*="col-"] {
     padding-right: 1rem;
     padding-left: 1rem; }
   .xs-gutters-1.xs-cols-1 {
@@ -777,8 +777,8 @@ html, body {
     grid-gap: 1rem; } }
 
 @media (min-width: 768px) {
-  .sm-gutters-1.row > .col,
-  .sm-gutters-1.row > [class*="col-"] {
+  .sm-gutters-1.cols > .col,
+  .sm-gutters-1.cols > [class*="col-"] {
     padding-right: 1rem;
     padding-left: 1rem; }
   .sm-gutters-1.sm-cols-1 {
@@ -811,8 +811,8 @@ html, body {
     grid-gap: 1rem; } }
 
 @media (min-width: 1024px) {
-  .md-gutters-1.row > .col,
-  .md-gutters-1.row > [class*="col-"] {
+  .md-gutters-1.cols > .col,
+  .md-gutters-1.cols > [class*="col-"] {
     padding-right: 1rem;
     padding-left: 1rem; }
   .md-gutters-1.md-cols-1 {
@@ -845,8 +845,8 @@ html, body {
     grid-gap: 1rem; } }
 
 @media (min-width: 1280px) {
-  .lg-gutters-1.row > .col,
-  .lg-gutters-1.row > [class*="col-"] {
+  .lg-gutters-1.cols > .col,
+  .lg-gutters-1.cols > [class*="col-"] {
     padding-right: 1rem;
     padding-left: 1rem; }
   .lg-gutters-1.lg-cols-1 {
@@ -879,8 +879,8 @@ html, body {
     grid-gap: 1rem; } }
 
 @media (min-width: 1680px) {
-  .xl-gutters-1.row > .col,
-  .xl-gutters-1.row > [class*="col-"] {
+  .xl-gutters-1.cols > .col,
+  .xl-gutters-1.cols > [class*="col-"] {
     padding-right: 1rem;
     padding-left: 1rem; }
   .xl-gutters-1.xl-cols-1 {
@@ -917,14 +917,14 @@ html, body {
 	 * `.gutters-15`
 	 *
 	 *     @example
-	 *     div.row.gutters-15
+	 *     div.cols.gutters-15
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-.gutters-15.row > .col,
-.gutters-15.row > [class*="col-"] {
+.gutters-15.cols > .col,
+.gutters-15.cols > [class*="col-"] {
   padding-right: 1.5rem;
   padding-left: 1.5rem; }
 
@@ -932,8 +932,8 @@ html, body {
   grid-gap: 1.5rem; }
 
 @media (min-width: 0) {
-  .xs-gutters-15.row > .col,
-  .xs-gutters-15.row > [class*="col-"] {
+  .xs-gutters-15.cols > .col,
+  .xs-gutters-15.cols > [class*="col-"] {
     padding-right: 1.5rem;
     padding-left: 1.5rem; }
   .xs-gutters-15.xs-cols-1 {
@@ -966,8 +966,8 @@ html, body {
     grid-gap: 1.5rem; } }
 
 @media (min-width: 768px) {
-  .sm-gutters-15.row > .col,
-  .sm-gutters-15.row > [class*="col-"] {
+  .sm-gutters-15.cols > .col,
+  .sm-gutters-15.cols > [class*="col-"] {
     padding-right: 1.5rem;
     padding-left: 1.5rem; }
   .sm-gutters-15.sm-cols-1 {
@@ -1000,8 +1000,8 @@ html, body {
     grid-gap: 1.5rem; } }
 
 @media (min-width: 1024px) {
-  .md-gutters-15.row > .col,
-  .md-gutters-15.row > [class*="col-"] {
+  .md-gutters-15.cols > .col,
+  .md-gutters-15.cols > [class*="col-"] {
     padding-right: 1.5rem;
     padding-left: 1.5rem; }
   .md-gutters-15.md-cols-1 {
@@ -1034,8 +1034,8 @@ html, body {
     grid-gap: 1.5rem; } }
 
 @media (min-width: 1280px) {
-  .lg-gutters-15.row > .col,
-  .lg-gutters-15.row > [class*="col-"] {
+  .lg-gutters-15.cols > .col,
+  .lg-gutters-15.cols > [class*="col-"] {
     padding-right: 1.5rem;
     padding-left: 1.5rem; }
   .lg-gutters-15.lg-cols-1 {
@@ -1068,8 +1068,8 @@ html, body {
     grid-gap: 1.5rem; } }
 
 @media (min-width: 1680px) {
-  .xl-gutters-15.row > .col,
-  .xl-gutters-15.row > [class*="col-"] {
+  .xl-gutters-15.cols > .col,
+  .xl-gutters-15.cols > [class*="col-"] {
     padding-right: 1.5rem;
     padding-left: 1.5rem; }
   .xl-gutters-15.xl-cols-1 {
@@ -1106,14 +1106,14 @@ html, body {
 	 * `.gutters-2`
 	 *
 	 *     @example
-	 *     div.row.gutters-2
+	 *     div.cols.gutters-2
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-.gutters-2.row > .col,
-.gutters-2.row > [class*="col-"] {
+.gutters-2.cols > .col,
+.gutters-2.cols > [class*="col-"] {
   padding-right: 2rem;
   padding-left: 2rem; }
 
@@ -1121,8 +1121,8 @@ html, body {
   grid-gap: 2rem; }
 
 @media (min-width: 0) {
-  .xs-gutters-2.row > .col,
-  .xs-gutters-2.row > [class*="col-"] {
+  .xs-gutters-2.cols > .col,
+  .xs-gutters-2.cols > [class*="col-"] {
     padding-right: 2rem;
     padding-left: 2rem; }
   .xs-gutters-2.xs-cols-1 {
@@ -1155,8 +1155,8 @@ html, body {
     grid-gap: 2rem; } }
 
 @media (min-width: 768px) {
-  .sm-gutters-2.row > .col,
-  .sm-gutters-2.row > [class*="col-"] {
+  .sm-gutters-2.cols > .col,
+  .sm-gutters-2.cols > [class*="col-"] {
     padding-right: 2rem;
     padding-left: 2rem; }
   .sm-gutters-2.sm-cols-1 {
@@ -1189,8 +1189,8 @@ html, body {
     grid-gap: 2rem; } }
 
 @media (min-width: 1024px) {
-  .md-gutters-2.row > .col,
-  .md-gutters-2.row > [class*="col-"] {
+  .md-gutters-2.cols > .col,
+  .md-gutters-2.cols > [class*="col-"] {
     padding-right: 2rem;
     padding-left: 2rem; }
   .md-gutters-2.md-cols-1 {
@@ -1223,8 +1223,8 @@ html, body {
     grid-gap: 2rem; } }
 
 @media (min-width: 1280px) {
-  .lg-gutters-2.row > .col,
-  .lg-gutters-2.row > [class*="col-"] {
+  .lg-gutters-2.cols > .col,
+  .lg-gutters-2.cols > [class*="col-"] {
     padding-right: 2rem;
     padding-left: 2rem; }
   .lg-gutters-2.lg-cols-1 {
@@ -1257,8 +1257,8 @@ html, body {
     grid-gap: 2rem; } }
 
 @media (min-width: 1680px) {
-  .xl-gutters-2.row > .col,
-  .xl-gutters-2.row > [class*="col-"] {
+  .xl-gutters-2.cols > .col,
+  .xl-gutters-2.cols > [class*="col-"] {
     padding-right: 2rem;
     padding-left: 2rem; }
   .xl-gutters-2.xl-cols-1 {
@@ -1295,7 +1295,7 @@ html, body {
  * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
  *
  *     @example
- *     div.row.md-gutters-0
+ *     div.cols.md-gutters-0
  *         div.col-8
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
@@ -1306,72 +1306,72 @@ html, body {
  */
 /**
  * Aligns columns to left:
- * `.cols-left`
+ * `.cols--left`
  *
  *     @example
- *     div.row.cols-left
+ *     div.cols.cols--left
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-left {
+.cols--left {
   justify-content: flex-start; }
 
 /**
  * Aligns columns to center:
- * `.cols-center`
+ * `.cols--center`
  *
  *     @example
- *     div.row.cols-center
+ *     div.cols.cols--center
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-center {
+.cols--center {
   justify-content: center; }
 
 /**
  * Aligns columns to right:
- * `.cols-right`
+ * `.cols--right`
  *
  *     @example
- *     div.row.cols-right
+ *     div.cols.cols--right
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-right {
+.cols--right {
   justify-content: flex-end; }
 
 /**
  * Space between columns:
- * `.cols-between`
+ * `.cols--between`
  *
  *     @example
- *     div.row.cols-between
+ *     div.cols.cols--between
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-between {
+.cols--between {
   justify-content: space-between; }
 
 /**
  * Space around columns:
- * `.cols-around`
+ * `.cols--around`
  *
  *     @example
- *     div.row.cols-around
+ *     div.cols.cols--around
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-around {
+.cols--around {
   justify-content: space-around; }
 
 /***
@@ -1379,10 +1379,10 @@ html, body {
  */
 /**
  * Aligns columns to top:
- * `.cols-top`
+ * `.cols--top`
  *
  *     @example
- *     div.row.cols-top.doc-h-100px
+ *     div.cols.cols--top.doc-h-100px
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
@@ -1390,15 +1390,15 @@ html, body {
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-top {
+.cols--top {
   align-items: flex-start; }
 
 /**
  * Aligns columns to middle:
- * `.cols-middle`
+ * `.cols--middle`
  *
  *     @example
- *     div.row.cols-middle.doc-h-100px
+ *     div.cols.cols--middle.doc-h-100px
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
@@ -1406,15 +1406,15 @@ html, body {
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-middle {
+.cols--middle {
   align-items: center; }
 
 /**
  * Aligns columns to bottom:
- * `.cols-bottom`
+ * `.cols--bottom`
  *
  *     @example
- *     div.row.cols-bottom.doc-h-100px
+ *     div.cols.cols--bottom.doc-h-100px
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
@@ -1422,55 +1422,55 @@ html, body {
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.cols-bottom {
+.cols--bottom {
   align-items: flex-end; }
 
 /**
  * Aligns column to top:
- * `.col-top`
+ * `.col--top`
  *
  *     @example
- *     div.row.cols-bottom.doc-h-100px
- *         div.col-4.col-top
+ *     div.cols.cols--bottom.doc-h-100px
+ *         div.col-4.col--top
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.col-top {
+.col--top {
   align-self: flex-start; }
 
 /**
  * Aligns column to middle:
- * `.col-middle`
+ * `.col--middle`
  *
  *     @example
- *     div.row.doc-h-100px
+ *     div.cols.doc-h-100px
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
- *         div.col-4.col-middle
+ *         div.col-4.col--middle
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  */
-.col-middle {
+.col--middle {
   align-self: center; }
 
 /**
  * Aligns column to bottom:
- * `.col-middle`
+ * `.col--bottom`
  *
  *     @example
- *     div.row.doc-h-100px
+ *     div.cols.doc-h-100px
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
- *         div.col-4.col-bottom
+ *         div.col-4.col--bottom
  *             div.bgc-green-10 &nbsp;
  */
-.col-bottom {
+.col--bottom {
   align-self: flex-end; }
 
 /***
@@ -1481,12 +1481,12 @@ html, body {
  * `.offset-[#]` `.[size]-offset-[#]`
  *
  *     @example
- *     div.row
+ *     div.cols
  *         div.col-4
  *             div.bgc-green-10 &nbsp;
  *         div.col-4.offset-4
  *             div.bgc-green-10 &nbsp;
- *     div.row.m-top-4
+ *     div.cols.m-top-4
  *         div.md-col-5
  *             div.bgc-green-10 &nbsp;
  *         div.md-col-3.lg-offset-3

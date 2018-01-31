@@ -135,7 +135,7 @@
 ### Body
 
 	div.container-fluid
-		div.row
+		div.cols
 			div.col
 				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
@@ -149,16 +149,16 @@
 							li.navbar__item
 								a(href='layout.html').navbar__link Documentation
 
-		div.row.cols-center
+		div.cols.cols--center
 			div.main.xs-col-12.md-col-10.xl-col-7
-				div.main__content.row.p-top-25
+				div.main__content.cols.p-top-25
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
 			div.doc-sidebar.xs-col-12.md-col-2.xl-col-2.maxmd-fsmenu
-				div.doc-sidebar__content.row.p-top-25
+				div.doc-sidebar__content.cols.p-top-25
 					div.col
-						div.row.maxmd-txt-center
+						div.cols.maxmd-txt-center
 							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-1', name='doc-sidebar-collapse', type='radio').collapse-toggle

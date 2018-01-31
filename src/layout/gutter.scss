@@ -11,14 +11,14 @@
 	 * `.gutters-#{$number}`
 	 *
 	 *     @example
-	 *     div.row.gutters-#{$number}
+	 *     div.cols.gutters-#{$number}
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
 	.gutters-#{$number} {
-		&.row {
+		&.cols {
 			// margin-right: -($gutter-width * $width);
 			// margin-left: -($gutter-width * $width);
 
@@ -40,7 +40,7 @@
 	@each $size, $length in $grid-breakpoints {
 		@media (min-width: $length) {
 			.#{$size}-gutters-#{$number} {
-				&.row {
+				&.cols {
 					// margin-right: -($gutter-width * $width);
 					// margin-left: -($gutter-width * $width);
 			
@@ -76,7 +76,7 @@
  * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
  *
  *     @example
- *     div.row.md-gutters-0
+ *     div.cols.md-gutters-0
  *         div.col-8
  *             div.bgc-green-10 &nbsp;
  *         div.col-4
