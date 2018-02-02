@@ -53,6 +53,19 @@ $color-spectrum-range: 50;
 					comma
 				);
 		}
+
+		// Transparent colors.
+		@for $csr from 1 to $color-spectrum-range {
+			$colors-list: 
+				append(
+					$colors-list, 
+					'#{$name} #{$csr}t' rgba(
+						$hex,
+						$csr / $color-spectrum-range
+					), 
+					comma
+				);
+		}
 	}
 	@return $colors-list;
 }

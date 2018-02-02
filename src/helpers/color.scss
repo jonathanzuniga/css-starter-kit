@@ -11,7 +11,7 @@
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
 	@if not ($gen == '') {
-		$range: '1...#{$color-spectrum-range}';
+		$range: '1...#{$color-spectrum-range - 1}';
 
 		/**
 		 * #{$name_ucf} color:
