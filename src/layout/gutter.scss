@@ -5,66 +5,60 @@
  * Gutter:
  */
 
-@each $number, $width in $gutters {
+@for $i from 0 through $gutters {
 	/**
-	 * Gutters width x#{$width}:
-	 * `.gutters-#{$number}`
+	 * Gutters width #{$gutter * $i}:
+	 * `.gutters-#{$i}`
 	 *
 	 *     @example
-	 *     div.cols.gutters-#{$number}
+	 *     div.cols.gutters-#{$i}
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-	.gutters-#{$number} {
+	.gutters-#{$i} {
 		&.cols {
-			// margin-right: -($gutter-width * $width);
-			// margin-left: -($gutter-width * $width);
-
 			> .col,
 			> [class*="col-"] {
-				padding-right: $gutter-width * $width;
-				padding-left: $gutter-width * $width;
+				padding-right: $gutter * $i;
+				padding-left: $gutter * $i;
 			}
 		}
 	}
 
-	.grid-gap-#{$number} {
+	.grid-gap-#{$i} {
 		// Grid gap.
 		&[class*='grid-'] {
-			grid-gap: $gutter-width * $width;
+			grid-gap: $gutter * $i;
 		}
 	}
 
 	@each $size, $length in $grid-breakpoints {
 		@media (min-width: $length) {
-			.#{$size}-gutters-#{$number} {
+			.#{$size}-gutters-#{$i} {
 				&.cols {
-					// margin-right: -($gutter-width * $width);
-					// margin-left: -($gutter-width * $width);
-			
 					> .col,
 					> [class*="col-"] {
-						padding-right: $gutter-width * $width;
-						padding-left: $gutter-width * $width;
+						padding-right: $gutter * $i;
+						padding-left: $gutter * $i;
 					}
 				}
 
 				// Para la división del contenido en cols.
 				@for $i from 1 through $grid-columns-number {
 					&.#{$size}-cols-#{$i} {
-						column-gap: $gutter-width * $width;
+						column-gap: $gutter * $i;
 					}
 				}
 			}
 		}
 
 		@media (max-width: $length - 1) {
-			.max#{$size}-grid-gap-#{$number} {
+			.max#{$size}-grid-gap-#{$i} {
 				// Grid gap.
 				&[class*='grid-'] {
-					grid-gap: $gutter-width * $width;
+					grid-gap: $gutter * $i;
 				}
 			}
 		}
