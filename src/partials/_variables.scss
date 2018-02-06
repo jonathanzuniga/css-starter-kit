@@ -144,11 +144,11 @@ $control-large-padding-x:                $control-padding-x;
 
 $control-large-font-size:                1.25em;
 
-$control-active-border-color:            color('blue 13');
-$night-control-active-border-color:      color('blue 13');
+$control-active-border-color:            color('blue 13t');
+$night-control-active-border-color:      color('blue 13t');
 
-$control-focus-border-color:             color('blue 13');
-$night-control-focus-border-color:       color('blue 13');
+$control-focus-border-color:             color('blue 13t');
+$night-control-focus-border-color:       color('blue 13t');
 
 $control-focus-box-shadow:               inset 0 0 0 0.063rem $control-focus-border-color;
 $night-control-focus-box-shadow:         inset 0 0 0 0.063rem $night-control-focus-border-color;
@@ -251,10 +251,10 @@ $night-input-focus-border-color:          $night-control-focus-border-color;
 $input-focus-box-shadow:                  $control-focus-box-shadow;
 $night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
-$input-placeholder-color:                 color('gray 16');
-$night-input-placeholder-color:           color('gray 34');
-$input-focus-placeholder-color:           color('blue 13');
-$night-input-focus-placeholder-color:     color('blue 13');
+$input-placeholder-color:                 color('black 15t');
+$night-input-placeholder-color:           color('white 17t');
+$input-focus-placeholder-color:           color('blue 13t');
+$night-input-focus-placeholder-color:     color('blue 13t');
 $input-placeholder-opacity:               0.8;
 
 $input-hover-border-color:                $input-border-color;
@@ -279,15 +279,15 @@ $input-large-padding-x:                   $control-large-padding-x;
 
 // Flat input
 
-$input-flat-background-color:             color('cool gray 1');
-$night-input-flat-background-color:       color('cool gray 49');
-$input-flat-border-color:                 $input-flat-background-color;
-$night-input-flat-border-color:           $night-input-flat-background-color;
+$input-flat-background-color:             color('cool gray 2t');
+$night-input-flat-background-color:       color('white 1t');
+$input-flat-border-color:                 transparent;
+$night-input-flat-border-color:           transparent;
 
-$input-flat-hover-background-color:       color('cool gray 2');
-$night-input-flat-hover-background-color: color('cool gray 48');
-$input-flat-hover-border-color:           $input-flat-hover-background-color;
-$night-input-flat-hover-border-color:     $night-input-flat-hover-background-color;
+$input-flat-hover-background-color:       color('cool gray 3t');
+$night-input-flat-hover-background-color: color('white 2t');
+$input-flat-hover-border-color:           transparent;
+$night-input-flat-hover-border-color:     transparent;
 
 
 // Line input
@@ -474,8 +474,8 @@ $night-table-striped-background-color: color('gray 48');
 
 $border-width:       0.063rem;
 $border-style:       solid;
-$border-color:       color('cool gray 6');
-$night-border-color: color('cool gray 44');
+$border-color:       color('cool gray 6t');
+$night-border-color: color('cool gray 6t');
 
 $border-radius:      $base-border-radius;
 
@@ -644,9 +644,9 @@ $night-collapse-list-unstyled-item-active-link-color: $night-text-color;
 
 // Drawer
 
-$drawer-background-color:        color('gray 2');
-$night-drawer-background-color:  color('gray 48');
-$drawer-width:                   300px;
+$drawer-background-color:        $base-background-color;
+$night-drawer-background-color:  $night-base-background-color;
+$drawer-width:                   260px;
 $drawer-height:                  200px;
 
 $drawer-outside-transition:      margin     $base-transition-duration $base-transition-timing-function;
@@ -688,12 +688,16 @@ $navbar-padding-x:              em_to_rem($half-spacing-unit);
 $navbar-brand-font-size:        1.25em;
 $navbar-toggler-cursor:         pointer;
 
-$navbar-link-color:                   color('gray 25');
-$night-navbar-link-color:             color('gray 25');
-$navbar-link-hover-color:             color('gray 33');
-$night-navbar-link-hover-color:       color('gray 17');
-$navbar-item-active-link-color:       $text-color;
-$night-navbar-item-active-link-color: $night-text-color;
+$navbar-link-color:                   color('black 15t');
+$night-navbar-link-color:             color('white 17t');
+$navbar-link-hover-color:             color('black 23t');
+$night-navbar-link-hover-color:       color('white 25');
+$navbar-item-active-link-color:       color('black 23t');
+$night-navbar-item-active-link-color: color('white 25');
+
+$navbar-dark-link-color:              color('white 17t');
+$navbar-dark-link-hover-color:        color('white 25');
+$navbar-dark-item-active-link-color:  color('white 25');
 
 
 // Navmenu

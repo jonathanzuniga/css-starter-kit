@@ -132,6 +132,8 @@
 
 .navbar__item .navbar__link,
 .navbar__toggler {
+	color: $navbar-link-color;
+
 	&:link,
 	&:visited {
 		color: $navbar-link-color;
@@ -156,6 +158,8 @@
 .night {
 	.navbar__item .navbar__link,
 	.navbar__toggler {
+		color: $night-navbar-link-color;
+
 		&:link,
 		&:visited {
 			color: $night-navbar-link-color;
@@ -417,31 +421,58 @@
 }
 
 .navbar--dark {
-	// background-color: ;
-
-	.navbar__item {
-		color: $night-text-color;
-
-		&.active {
-			.navbar__link {
-				&:link,
-				&:hover,
-				&:visited {
-					color: $night-link-color;
-				}
-			}
-		}
-	}
-
-	.navbar__link,
+	.navbar__item .navbar__link,
 	.navbar__toggler {
+		color: $navbar-dark-link-color;
+
 		&:link,
 		&:visited {
-			color: $night-text-color;
+			color: $navbar-dark-link-color;
 		}
 
 		&:hover {
-			color: $night-link-color;
+			color: $navbar-dark-link-hover-color;
+		}
+	}
+
+	.navbar__brand,
+	.navbar__item.active {
+		.navbar__link {
+			&:link,
+			&:hover,
+			&:visited {
+				color: $navbar-dark-item-active-link-color;
+			}
 		}
 	}
 }
+
+// .navbar--dark {
+// 	// background-color: ;
+
+// 	.navbar__item {
+// 		color: $night-text-color;
+
+// 		&.active {
+// 			.navbar__link {
+// 				&:link,
+// 				&:hover,
+// 				&:visited {
+// 					color: $night-navbar-item-active-link-color;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.navbar__link,
+// 	.navbar__toggler {
+// 		&:link,
+// 		&:visited {
+// 			color: $night-navbar-link-color;
+// 		}
+
+// 		&:hover {
+// 			color: $night-navbar-link-hover-color;
+// 		}
+// 	}
+// }
