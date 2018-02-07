@@ -406,7 +406,7 @@
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		@for $i from 1 through $grid-columns-number {
+		@for $i from 1 through $grid-columns {
 			.#{$size}-cols-#{$i} {
 				column-count: $i;
 				column-gap: $gutter-width;

@@ -82,7 +82,7 @@
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		@for $i from 0 through ($grid-columns-number - 1) {
+		@for $i from 0 through ($grid-columns - 1) {
 			.#{$size}-el-left-#{$i} {
 				float: left;
 				margin-right: $half-spacing-unit;
@@ -99,7 +99,7 @@
 			.txt-indent .#{$size}-el-right-#{$i} {
 				margin-top: 0.5rem;
 				margin-bottom: 0;
-				width: percentage($i / $grid-columns-number);
+				width: percentage($i / $grid-columns);
 			}
 		}
 	}

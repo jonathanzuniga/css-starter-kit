@@ -20,16 +20,16 @@
 	.gutters-#{$i} {
 		&.cols {
 			> .col,
-			> [class*="col-"] {
+			> [class*='col-'] {
 				padding-right: $gutter * $i;
 				padding-left: $gutter * $i;
 			}
 		}
 	}
 
-	.grid-gap-#{$i} {
-		// Grid gap.
-		&[class*='grid-'] {
+	// Grid gap.
+	.gap-#{$i} {
+		&[class*='gcols-'] {
 			grid-gap: $gutter * $i;
 		}
 	}
@@ -39,25 +39,32 @@
 			.#{$size}-gutters-#{$i} {
 				&.cols {
 					> .col,
-					> [class*="col-"] {
+					> [class*='col-'] {
 						padding-right: $gutter * $i;
 						padding-left: $gutter * $i;
 					}
 				}
 
 				// Para la división del contenido en cols.
-				@for $i from 1 through $grid-columns-number {
+				@for $i from 1 through $grid-columns {
 					&.#{$size}-cols-#{$i} {
 						column-gap: $gutter * $i;
 					}
 				}
 			}
+
+			// Grid gap.
+			.#{$size}-gap-#{$i} {
+				&[class*='gcols-'] {
+					grid-gap: $gutter * $i;
+				}
+			}
 		}
 
 		@media (max-width: $length - 1) {
-			.max#{$size}-grid-gap-#{$i} {
-				// Grid gap.
-				&[class*='grid-'] {
+			// Grid gap.
+			.max#{$size}-gap-#{$i} {
+				&[class*='gcols-'] {
 					grid-gap: $gutter * $i;
 				}
 			}

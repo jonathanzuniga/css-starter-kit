@@ -23,10 +23,10 @@
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		@for $i from 0 through ($grid-columns-number - 1) {
+		@for $i from 0 through ($grid-columns - 1) {
 			.offset-#{$i},
 			.#{$size}-offset-#{$i} {
-				margin-left: percentage($i / $grid-columns-number);
+				margin-left: percentage($i / $grid-columns);
 			}
 		}
 	}

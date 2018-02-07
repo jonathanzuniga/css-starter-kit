@@ -7,10 +7,10 @@
 
 /**
  * Grid with flexible sizes:
- * `.grid-[#]`
+ * `.gcols-[#]`
  *
  *     @example
- *     div.grid-2
+ *     div.gcols-2
  *         div
  *             div.bgc-green-10 &nbsp;
  *         div
@@ -20,8 +20,8 @@
  *         div
  *             div.bgc-green-10 &nbsp;
  */
-@for $i from 1 through $grid-columns-number {
-	.grid-#{$i} {
+@for $i from 1 through $grid-columns {
+	.gcols-#{$i} {
 		display: grid;
 		grid-gap: $grid-gap;
 		grid-template-columns: repeat($i, 1fr);
@@ -30,10 +30,10 @@
 
 /**
  * Responsive grid:
- * `.[size]-grid-[#]` `.max[size]-grid-[#]`
+ * `.[size]-gcols-[#]` `.max[size]-gcols-[#]`
  *
  *     @example
- *     div.xs-grid-2.md-grid-3
+ *     div.xs-gcols-2.md-gcols-3
  *         div
  *             div.bgc-green-10 &nbsp;
  *         div
@@ -49,25 +49,25 @@
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		.#{$size}-grid-0 {
+		.#{$size}-gcols-0 {
 			display: inherit;
 			grid-gap: initial;
 			grid-template-columns: none;
 		}
 
-		@for $i from 1 through $grid-columns-number {
-			.#{$size}-grid-#{$i} {
+		@for $i from 1 through $grid-columns {
+			.#{$size}-gcols-#{$i} {
 				display: grid;
 				grid-gap: $gutter-width;
 				grid-template-columns: repeat($i, 1fr);
 			}
 
-			.#{$size}-cell-x-#{$i} {
+			.#{$size}-gcol-#{$i} {
 				grid-column: #{$i};
 			}
 
-			.#{$size}-grid-0 {
-				.#{$size}-cell-x-#{$i} {
+			.#{$size}-gcols-0 {
+				.#{$size}-gcol-#{$i} {
 					grid-column: auto;
 				}
 			}
@@ -75,19 +75,19 @@
 	}
 	
 	@media (max-width: $length - 1) {
-		@for $i from 1 through $grid-columns-number {
-			.max#{$size}-grid-#{$i} {
+		@for $i from 1 through $grid-columns {
+			.max#{$size}-gcols-#{$i} {
 				display: grid;
 				grid-gap: $gutter-width;
 				grid-template-columns: repeat($i, 1fr);
 			}
 
-			.max#{$size}-cell-x-#{$i} {
+			.max#{$size}-gcol-#{$i} {
 				grid-column: #{$i};
 			}
 
-			.#{$size}-grid-0 {
-				.max#{$size}-cell-x-#{$i} {
+			.#{$size}-gcols-0 {
+				.max#{$size}-gcol-#{$i} {
 					grid-column: auto;
 				}
 			}
@@ -97,16 +97,16 @@
 
 /**
  * Place items on the grid:
- * `.[size]-cell-x-[#]` `.max[size]-cell-x-[#]`
+ * `.[size]-gcol-[#]` `.max[size]-gcol-[#]`
  *
  *     @example
- *     div.xs-grid-2.md-grid-3
+ *     div.xs-gcols-2.md-gcols-3
  *         div
  *             div.bgc-green-10 &nbsp;
  *         div
  *             div.bgc-green-20 &nbsp;
- *         div.maxmd-cell-x-2
+ *         div.maxmd-gcol-2
  *             div.bgc-green-10 &nbsp;
- *         div.md-cell-x-2.maxmd-hide
+ *         div.md-gcol-2.maxmd-hide
  *             div.bgc-green-20 &nbsp;
  */

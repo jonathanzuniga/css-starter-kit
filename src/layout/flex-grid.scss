@@ -38,9 +38,17 @@ html, body {
 	@include gutter;
 }
 
-.col,
-[class*="col-"] {
+.col {
 	@extend %column;
+}
+
+@each $size, $length in $grid-breakpoints {
+	@for $i from 1 through $grid-columns {
+		.col-#{$i},
+		.#{$size}-col-#{$i} {
+			@extend %column;
+		}
+	}
 }
 
 /**
@@ -100,11 +108,9 @@ html, body {
  *         div.col
  *             div.bgc-green-10 &nbsp;
  */
-@for $i from 1 through $grid-columns-number {
+@for $i from 1 through $grid-columns {
 	.col-#{$i} {
-		@extend %column;
-
-		$column-width: percentage($i / $grid-columns-number);
+		$column-width: percentage($i / $grid-columns);
 		flex-basis: $column-width;
 		max-width: $column-width;
 	}
@@ -132,16 +138,16 @@ html, body {
  *             div.bgc-green-10 &nbsp;
  */
 // Si no se escriben los primeros tamaños de una clase [size]-col-[#], que entonces sean 100% de ancho.
-[class*="-col-"] {
+[class*='-col-'] {
 	flex-basis: 100%;
 	max-width: 100%;
 }
 
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		@for $i from 1 through $grid-columns-number {
+		@for $i from 1 through $grid-columns {
 			.#{$size}-col-#{$i} {
-				$column-width: percentage($i / $grid-columns-number);
+				$column-width: percentage($i / $grid-columns);
 				flex-basis: $column-width;
 				max-width: $column-width;
 			}
