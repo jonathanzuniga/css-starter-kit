@@ -18,6 +18,9 @@
 	 *             div.bgc-green-10 &nbsp;
 	 */
 	.gutters-#{$i} {
+		margin-right: -#{$gutter * $i};
+		margin-left: -#{$gutter * $i};
+
 		&.cols {
 			> .col,
 			> [class*='col-'] {
@@ -37,6 +40,9 @@
 	@each $size, $length in $grid-breakpoints {
 		@media (min-width: $length) {
 			.#{$size}-gutters-#{$i} {
+				margin-right: -#{$gutter * $i};
+				margin-left: -#{$gutter * $i};
+
 				&.cols {
 					> .col,
 					> [class*='col-'] {
