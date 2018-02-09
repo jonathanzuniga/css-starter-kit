@@ -119,44 +119,44 @@ $color-spectrum-range: 50;
 }
 
 // Convert pixels to rems. $value = pixel size. $base = base pixel size.
-@function px_to_rem($value, $base: $base-font-size) {
+@function px_to_rem($value, $base: $font-size-base) {
 	@return ($value / $base) * 1rem;
 }
 
 // Convert rems to pixels.
 @function rem_to_px($value) {
 	$value: clear_unit($value);
-	$base-font-size: clear_unit($base-font-size);
-	@return make_unit($value * $base-font-size, px);
+	$font-size-base: clear_unit($font-size-base);
+	@return make_unit($value * $font-size-base, px);
 }
 
 // Convert pixels to ems.
-@function px_to_em($value, $base: $base-font-size) {
+@function px_to_em($value, $base: $font-size-base) {
 	@if $value == 0 { @return 0 }
 	@return ($value / $base) + 0em;
 }
 
 // Convert ems to pixels.
-@function em_to_px($value, $base: $base-font-size) {
+@function em_to_px($value, $base: $font-size-base) {
 	$value: clear_unit($value);
 	$font-size: clear_unit($base);
 	@return make_unit($value * $font-size, px);
 }
 
 // Convert ems to rems.
-@function em_to_rem($value, $base: $base-font-size) {
+@function em_to_rem($value, $base: $font-size-base) {
 	$value: clear_unit($value);
 	$font-size: clear_unit($base);
-	$base-font-size	: clear_unit($base-font-size);
-	@return make_unit($font-size * $value / $base-font-size, rem);
+	$font-size-base	: clear_unit($font-size-base);
+	@return make_unit($font-size * $value / $font-size-base, rem);
 }
 
 // Convert rems to ems.
-@function rem_to_em($value, $base: $base-font-size) {
+@function rem_to_em($value, $base: $font-size-base) {
 	$value: clear_unit($value);
 	$font-size: clear_unit($base);
-	$base-font-size: clear_unit($base-font-size);
-	@return make_unit($value * $base-font-size / $font-size, em);
+	$font-size-base: clear_unit($font-size-base);
+	@return make_unit($value * $font-size-base / $font-size, em);
 }
 
 // Replace `$search` with `$replace` in `$string`

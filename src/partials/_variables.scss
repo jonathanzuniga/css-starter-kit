@@ -10,44 +10,45 @@
 
 // Base
 
-$base-font-family:    -apple-system, 
-                       BlinkMacSystemFont, 
-                       'Segoe UI', 
-                       'Roboto', 
-                       'Noto Sans', 
-                       'Ubuntu', 
-                       'Droid Sans', 
-                       'Helvetica Neue', 
-                       sans-serif;
-$mono-font-family:     'SF Mono', 
-                       'Segoe UI Mono', 
-                       'Roboto Mono', 
-                       'Ubuntu Mono', 
-                       Menlo, 
-                       Courier, 
-                       monospace;
+$font-family-sans-serif: -apple-system, 
+                          BlinkMacSystemFont, 
+                         'Segoe UI', 
+                         'Roboto', 
+                         'Noto Sans', 
+                         'Ubuntu', 
+                         'Droid Sans', 
+                         'Helvetica Neue', 
+                         sans-serif !default;
+$font-family-monospace:  'SF Mono', 
+                         'Segoe UI Mono', 
+                         'Roboto Mono', 
+                         'Ubuntu Mono', 
+                         Menlo, 
+                         Courier, 
+                         monospace !default;
+$font-family-base:       $font-family-sans-serif;
 
-$base-font-size:       16px !default;
-$small-font-size:      0.75em; // 12px
-$large-font-size:      1.50em; // 24px
+$font-size-base:         16px !default;
+$font-size-small:        0.75em; // 12px
+$font-size-large:        1.50em; // 24px
 
-$base-line-height:     25px !default;
+$line-height-base:       25px !default;
 
-$base-spacing-unit:    2em; // 32px
-$half-spacing-unit:    $base-spacing-unit / 2; // 1.0em (16px)
-$quarter-spacing-unit: $base-spacing-unit / 4; // 0.5em  (8px)
+$spacing-unit-base:      2em; // 32px
+$spacing-unit-half:      $spacing-unit-base / 2; // 1.0em (16px)
+$spacing-unit-quarter:   $spacing-unit-base / 4; // 0.5em  (8px)
 
-$line-height-ratio:    $base-line-height / $base-font-size;
+$line-height-ratio:      $line-height-base / $font-size-base;
 
-$base-border-radius:   0.25rem;
+$border-radius-base:     0.25rem;
 
 
 // Color
 
-$base-background-color:       #fff;
-$night-base-background-color: #000;
+$body-background-color:       #fff;
+$night-body-background-color: #000;
 
-$colors:                     (gen_colors($base-background-color, $night-base-background-color)) !default;
+$colors:                     (gen_colors($body-background-color, $night-body-background-color)) !default;
 
 $text-color:                  color('gray 47');
 $night-text-color:            color('gray 3');
@@ -55,12 +56,12 @@ $night-text-color:            color('gray 3');
 
 // Transition
 
-$base-transition-duration:        0.16s;
-$base-transition-timing-function: ease-out;
-$base-transition:                 background-color $base-transition-duration $base-transition-timing-function, 
-                                  border-color     $base-transition-duration $base-transition-timing-function, 
-                                  box-shadow       $base-transition-duration $base-transition-timing-function, 
-                                  color            $base-transition-duration $base-transition-timing-function;
+$transition-duration:        0.16s;
+$transition-timing-function: ease-out;
+$transition-base:            background-color $transition-duration $transition-timing-function, 
+                             border-color     $transition-duration $transition-timing-function, 
+                             box-shadow       $transition-duration $transition-timing-function, 
+                             color            $transition-duration $transition-timing-function;
 
 
 // Hyperlink
@@ -100,13 +101,13 @@ $blockquote-right-quotation-mark: '»'; // '”';
 
 $code-background-color:       color('gray 4');
 $night-code-background-color: color('gray 46');
-$code-border-radius:          $base-border-radius;
+$code-border-radius:          $border-radius-base;
 $code-font-size:              1em;
 $code-padding:                0.25em 0.5em;
 
 $pre-background-color:        color('gray 2');
 $night-pre-background-color:  color('gray 48');
-$pre-border-radius:           $base-border-radius;
+$pre-border-radius:           $border-radius-base;
 
 
 // Heading
@@ -130,7 +131,7 @@ $control-border-style:                   solid;
 $control-border-color:                   color('gray 8');
 $night-control-border-color:             color('gray 42');
 
-$control-border-radius:                  $base-border-radius;
+$control-border-radius:                  $border-radius-base;
 $control-line-height:                    inherit;
 
 $control-padding-y:                      0.250em;
@@ -164,14 +165,14 @@ $button-border-style:                   $control-border-style;
 $button-border-color:                   transparent;
 
 $button-border-radius:                  $control-border-radius;
-$button-font-size:                      $base-font-size;
+$button-font-size:                      $font-size-base;
 $button-font-weight:                    400;
 $button-line-height:                    $control-line-height;
 
 $button-padding-y:                      $control-padding-y;
 $button-padding-x:                      $control-padding-x;
 
-$button-transition:                     $base-transition;
+$button-transition:                     $transition-base;
 
 $button-hover-background-color-amount:  12%;
 $button-active-background-color-amount: 24%;
@@ -206,7 +207,7 @@ $button-disabled-opacity:    0.6;
 // Small button
 
 $button-small-border-radius: $control-border-radius;
-$button-small-font-size:     $small-font-size;
+$button-small-font-size:     $font-size-small;
 $button-small-padding-y:     $control-small-padding-y;
 $button-small-padding-x:     $control-small-padding-x;
 
@@ -221,7 +222,7 @@ $button-large-padding-x:     $control-large-padding-x;
 
 // Label
 
-$label-font-size: px_to_em($base-font-size);
+$label-font-size: px_to_em($font-size-base);
 $label-padding:  ($control-padding-y / 2) 0;
 
 
@@ -236,11 +237,11 @@ $night-input-border-color:                $night-control-border-color;
 $input-border-radius:                     $control-border-radius;
 $input-text-color:                        $text-color;
 $night-input-text-color:                  $night-text-color;
-$input-font-size:                         $base-font-size;
+$input-font-size:                         $font-size-base;
 $input-line-height:                       $control-line-height;
 $input-padding-y:                         $control-padding-y;
 $input-padding-x:                         $control-padding-x;
-$input-transition:                        $base-transition;
+$input-transition:                        $transition-base;
 
 $input-active-border-color:               $control-active-border-color;
 $night-input-active-border-color:         $night-control-active-border-color;
@@ -267,7 +268,7 @@ $input-valid-border-color:                $input-border-color;
 $night-input-valid-border-color:          $night-input-border-color;
 
 $input-small-border-radius:               $control-border-radius;
-$input-small-font-size:                   $small-font-size;
+$input-small-font-size:                   $font-size-small;
 $input-small-padding-y:                   $control-small-padding-y;
 $input-small-padding-x:                   $control-small-padding-x;
  
@@ -304,7 +305,7 @@ $night-input-group-btn-input-focus-border-color: $night-control-focus-border-col
 
 // File area
 
-$file-area-padding:                      6.25em $half-spacing-unit;
+$file-area-padding:                      6.25em $spacing-unit-half;
 $file-area-background-color:             color('gray 2');
 $night-file-area-background-color:       color('gray 48');
 
@@ -328,7 +329,7 @@ $night-select-border-color:       $night-control-border-color;
 $select-border-radius:            $control-border-radius;
 $select-text-color:               $text-color;
 $night-select-text-color:         $night-text-color;
-$select-font-size:                $base-font-size;
+$select-font-size:                $font-size-base;
 $select-line-height:              $control-line-height;
 $select-padding-y:                $control-padding-y;
 $select-padding-x:                $control-padding-x;
@@ -339,7 +340,7 @@ $select-focus-box-shadow:         $control-focus-box-shadow;
 $night-select-focus-box-shadow:   $night-control-focus-box-shadow;
 
 $select-small-border-radius:      $control-border-radius;
-$select-small-font-size:          $small-font-size;
+$select-small-font-size:          $font-size-small;
 $select-small-padding-y:          $control-small-padding-y;
 $select-small-padding-x:          $control-small-padding-x;
 
@@ -356,9 +357,9 @@ $select-large-padding-x:          $control-large-padding-x;
 $select-background-image:         none;
 $select-focus-background-image:   none;
 
-$select-background-position:      calc(100% - #{$quarter-spacing-unit / 2}) center;
-$select-background-size:          $base-spacing-unit;
-$select-margin-right:             $half-spacing-unit;
+$select-background-position:      calc(100% - #{$spacing-unit-quarter / 2}) center;
+$select-background-size:          $spacing-unit-base;
+$select-margin-right:             $spacing-unit-half;
 
 
 // Pure CSS select menu icon.
@@ -368,8 +369,8 @@ $select-icon-after-border-style:        solid;
 $select-icon-after-border-color:        $text-color;
 $night-select-icon-after-border-color:  $night-text-color;
 $select-icon-after-margin-top:         -0.438em;
-$select-icon-after-width:               $quarter-spacing-unit;
-$select-icon-after-height:              $quarter-spacing-unit;
+$select-icon-after-width:               $spacing-unit-quarter;
+$select-icon-after-height:              $spacing-unit-quarter;
 $select-icon-after-top:                 50%;
 $select-icon-after-right:               $control-padding-x;
 $select-icon-after-transform:           rotate(-45deg);
@@ -402,16 +403,16 @@ $switch-label-box-shadow:                            none;
 
 // Switch toggle
 
-$switch-label-after-background-color:                $base-background-color;
-$night-switch-label-after-background-color:          $night-base-background-color;
+$switch-label-after-background-color:                $body-background-color;
+$night-switch-label-after-background-color:          $night-body-background-color;
 $switch-label-after-box-shadow:                      0 0.063em 0.063em rgba(0, 0, 0, 0.1);
-$switch-label-after-width:                           $switch-label-height - ($quarter-spacing-unit + 0.313);
-$switch-label-after-height:                          $switch-label-height - ($quarter-spacing-unit + 0.313);
+$switch-label-after-width:                           $switch-label-height - ($spacing-unit-quarter + 0.313);
+$switch-label-after-height:                          $switch-label-height - ($spacing-unit-quarter + 0.313);
 $switch-label-after-top:                             50%;
-$switch-label-after-left:                            $quarter-spacing-unit;
+$switch-label-after-left:                            $spacing-unit-quarter;
 
-$switch-checked-label-before-background-color:       color('green 25');
-$night-switch-checked-label-before-background-color: color('green 25');
+$switch-checked-label-before-background-color:       color('blue 25');
+$night-switch-checked-label-before-background-color: color('blue 13');
 $switch-checked-label-after-left:                    $switch-label-width - $switch-label-height + 0.313;
 
 $switch-label-before-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
@@ -425,9 +426,9 @@ $switch-small-label-height:                          1.859em;
 $switch-small-label-width:                           $switch-small-label-height * 2;
 $switch-small-label-border-radius:                   $switch-small-label-height / 2;
 
-$switch-small-label-after-width:                     $switch-small-label-height - ($quarter-spacing-unit + 0.188);
-$switch-small-label-after-height:                    $switch-small-label-height - ($quarter-spacing-unit + 0.188);
-$switch-small-label-after-left:                     ($quarter-spacing-unit - 0.063);
+$switch-small-label-after-width:                     $switch-small-label-height - ($spacing-unit-quarter + 0.188);
+$switch-small-label-after-height:                    $switch-small-label-height - ($spacing-unit-quarter + 0.188);
+$switch-small-label-after-left:                     ($spacing-unit-quarter - 0.063);
 
 $switch-small-checked-label-after-left:              $switch-small-label-width - $switch-small-label-height + 0.25;
 
@@ -435,9 +436,9 @@ $switch-large-label-height:                          3.016em;
 $switch-large-label-width:                           $switch-large-label-height * 2;
 $switch-large-label-border-radius:                   $switch-large-label-height / 2;
 
-$switch-large-label-after-width:                     $switch-large-label-height - ($quarter-spacing-unit + 0.375);
-$switch-large-label-after-height:                    $switch-large-label-height - ($quarter-spacing-unit + 0.375);
-$switch-large-label-after-left:                     ($quarter-spacing-unit + 0.063);
+$switch-large-label-after-width:                     $switch-large-label-height - ($spacing-unit-quarter + 0.375);
+$switch-large-label-after-height:                    $switch-large-label-height - ($spacing-unit-quarter + 0.375);
+$switch-large-label-after-left:                     ($spacing-unit-quarter + 0.063);
 
 $switch-large-checked-label-after-left:              $switch-large-label-width - $switch-large-label-height + 0.375;
 
@@ -456,8 +457,8 @@ $night-table-border-color:             color('gray 44');
 $table-header-background-color:        color('gray 3');
 $night-table-header-background-color:  color('gray 47');
 
-$table-cell-padding-y:                 $quarter-spacing-unit;
-$table-cell-padding-x:                 $half-spacing-unit;
+$table-cell-padding-y:                 $spacing-unit-quarter;
+$table-cell-padding-x:                 $spacing-unit-half;
 
 $table-striped-index:                  even; // 'odd'
 
@@ -477,7 +478,7 @@ $border-style:       solid;
 $border-color:       color('cool gray 6t');
 $night-border-color: color('cool gray 6t');
 
-$border-radius:      $base-border-radius;
+$border-radius:      $border-radius-base;
 
 
 // Sides:
@@ -505,7 +506,7 @@ $dropcap-background-color: transparent;
 $dropcap-border:           none;
 $dropcap-color:            $text-color;
 $night-dropcap-color:      $night-text-color;
-$dropcap-font-size:        px_to_em($base-font-size * 3.5);
+$dropcap-font-size:        px_to_em($font-size-base * 3.5);
 $dropcap-font-style:       normal;
 $dropcap-font-weight:      normal;
 $dropcap-letter-spacing:   0;
@@ -590,7 +591,7 @@ $grid-breakpoints: (
 ) !default;
 
 // Gutter normal width.
-$gutter-width: em_to_rem($half-spacing-unit) !default;
+$gutter-width: em_to_rem($spacing-unit-half) !default;
 
 // Gutters and grid gap.
 $gutters: 8;
@@ -609,25 +610,25 @@ $grid-gap: $gutter-width;
 
 // Card
 
-$card-background-color:       $base-background-color;
+$card-background-color:       $body-background-color;
 $night-card-background-color: color('gray 46');
-$card-padding:                $half-spacing-unit;
+$card-padding:                $spacing-unit-half;
 $card-border-width:           $border-width;
 $card-border-style:           $border-style;
 $card-border-color:           $border-color;
 $night-card-border-color:     $night-card-background-color;
 $card-border-radius:          $border-radius;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
-$card-transition:             $base-transition;
+$card-transition:             $transition-base;
 
-$card-hover-box-shadow:       0 0.063em $half-spacing-unit rgba(black, 0.15);
+$card-hover-box-shadow:       0 0.063em $spacing-unit-half rgba(black, 0.15);
 
 
 // Collapse
 
-$collapse-transition: max-height 0.3s $base-transition-timing-function,
-                      opacity    0.3s $base-transition-timing-function,
-                      transform  0.3s $base-transition-timing-function;
+$collapse-transition: max-height 0.3s $transition-timing-function,
+                      opacity    0.3s $transition-timing-function,
+                      transform  0.3s $transition-timing-function;
 
 $collapse-list-unstyled-link-color:                   color('gray 25');
 $night-collapse-list-unstyled-link-color:             color('gray 25');
@@ -639,26 +640,26 @@ $night-collapse-list-unstyled-item-active-link-color: $night-text-color;
 
 // Drawer
 
-$drawer-background-color:        $base-background-color;
-$night-drawer-background-color:  $night-base-background-color;
+$drawer-background-color:        $body-background-color;
+$night-drawer-background-color:  $night-body-background-color;
 $drawer-width:                   260px;
 $drawer-height:                  200px;
 
-$drawer-outside-transition:      margin     $base-transition-duration $base-transition-timing-function;
-                                 // opacity    $base-transition-duration $base-transition-timing-function;
+$drawer-outside-transition:      margin     $transition-duration $transition-timing-function;
+                                 // opacity    $transition-duration $transition-timing-function;
 
 $drawer-push-outside-transition: 
-// opacity    $base-transition-duration $base-transition-timing-function,
-                                 transform  $base-transition-duration $base-transition-timing-function;
+// opacity    $transition-duration $transition-timing-function,
+                                 transform  $transition-duration $transition-timing-function;
 
 
 // Menu
 
-$menu-item-margin:  0 0 ($quarter-spacing-unit / 2);
+$menu-item-margin:  0 0 ($spacing-unit-quarter / 2);
 $menu-item-padding-y: 0;
 $menu-item-padding-x: 0;
-$menu-link-padding-y: $quarter-spacing-unit;
-$menu-link-padding-x: $half-spacing-unit;
+$menu-link-padding-y: $spacing-unit-quarter;
+$menu-link-padding-x: $spacing-unit-half;
 
 
 // Menu pills
@@ -674,11 +675,11 @@ $night-menu-pills-item-active-background-color: color('blue 48');
 
 // Navbar brand
 
-$navbar-background-color:       $base-background-color;
-$night-navbar-background-color: $night-base-background-color;
+$navbar-background-color:       $body-background-color;
+$night-navbar-background-color: $night-body-background-color;
 
-$navbar-padding-y:              em_to_rem($quarter-spacing-unit);
-$navbar-padding-x:              em_to_rem($half-spacing-unit);
+$navbar-padding-y:              em_to_rem($spacing-unit-quarter);
+$navbar-padding-x:              em_to_rem($spacing-unit-half);
 
 $navbar-brand-font-size:        1.25em;
 $navbar-toggler-cursor:         pointer;
@@ -705,8 +706,8 @@ $full-screen-menu-transition:                  opacity          0.5s step-end,
                                                background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
-$full-screen-menu-open-background-color:       $base-background-color;
-$night-full-screen-menu-open-background-color: $night-base-background-color;
+$full-screen-menu-open-background-color:       $body-background-color;
+$night-full-screen-menu-open-background-color: $night-body-background-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
                                                transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
@@ -741,8 +742,8 @@ $night-tabs-link-color:                           color('gray 25');
 $tabs-link-hover-color:                           color('gray 33');
 $night-tabs-link-hover-color:                     color('gray 17');
 
-$tabs-link-padding-y:                             $quarter-spacing-unit;
-$tabs-link-padding-x:                             $half-spacing-unit;
+$tabs-link-padding-y:                             $spacing-unit-quarter;
+$tabs-link-padding-x:                             $spacing-unit-half;
 
 $tabs-link-hover-border-bottom-color:             transparent;
 $night-tabs-link-hover-border-bottom-color:       transparent;
@@ -757,5 +758,5 @@ $tabs-item-active-link-border-bottom-width:       0.188rem; // 3px
 $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
-$tabs-item-active-underline-transition:           transform $base-transition-duration $base-transition-timing-function, 
-                                                  width     $base-transition-duration $base-transition-timing-function;
+$tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
+                                                  width     $transition-duration $transition-timing-function;

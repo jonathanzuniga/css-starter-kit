@@ -15,10 +15,10 @@
 }
 
 body {
-	background-color: $base-background-color;
+	background-color: $body-background-color;
 	color: $text-color;
-	font-family: $base-font-family;
-	font-size: $base-font-size;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
 	line-height: $line-height-ratio;
 
 	// -moz-osx-font-smoothing: unset;
@@ -28,19 +28,19 @@ body {
 }
 
 .night body {
-	background-color: $night-base-background-color;
+	background-color: $night-body-background-color;
 	color: $night-text-color;
 }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-	margin-bottom: $half-spacing-unit;
+	margin-bottom: $spacing-unit-half;
 }
 
 a {
 	text-decoration: $link-decoration;
-	transition: $base-transition;
+	transition: $transition-base;
 		
 	&:link {
 		color: $link-color;
@@ -113,7 +113,7 @@ img {
  */
 blockquote {
 	border-left: $blockquote-border-width $blockquote-border-style $blockquote-border-color;
-	padding: 0 0 0 ($base-spacing-unit - 0.5) - 0.313;
+	padding: 0 0 0 ($spacing-unit-base - 0.5) - 0.313;
 	// transition: $base-transition;
 
 	p {
@@ -126,17 +126,17 @@ blockquote {
 
 		&:before {
 			content: $blockquote-left-quotation-mark;
-			margin-right: $quarter-spacing-unit / 2;
+			margin-right: $spacing-unit-quarter / 2;
 		}
 
 		&:after {
 			content: $blockquote-right-quotation-mark;
-			margin-left: $quarter-spacing-unit / 2;
+			margin-left: $spacing-unit-quarter / 2;
 		}
 	}
 
 	footer {
-		font-size: $small-font-size;
+		font-size: $font-size-small;
 
 		&:before {
 			content: '— ';
@@ -178,10 +178,9 @@ i {
 code {
 	background-color: $code-background-color;
 	border-radius: $code-border-radius;
-	font-family: $mono-font-family;
+	font-family: $font-family-monospace;
 	font-size: $code-font-size;
 	padding: $code-padding;
-	// transition: $base-transition;
 }
 
 .night {
@@ -205,8 +204,7 @@ pre {
 	background-color: $pre-background-color;
 	border-radius: $pre-border-radius;
 	overflow-x: auto;
-	padding: $quarter-spacing-unit $half-spacing-unit;
-	// transition: $base-transition;
+	padding: $spacing-unit-quarter $spacing-unit-half;
 
 	code {
 		background-color: transparent;
@@ -228,7 +226,7 @@ figure {
 	margin-right: 0;
 
 	figcaption {
-		font-size: $small-font-size;
+		font-size: $font-size-small;
 		font-style: italic;
 		text-align: center;
 	}
@@ -296,10 +294,10 @@ figure {
  */
 ol, ul {
 	list-style-position: outside;
-	padding-left: $half-spacing-unit * 2.5;
+	padding-left: $spacing-unit-half * 2.5;
 
 	&:not(:last-of-type) {
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: $spacing-unit-half;
 	}
 }
 
@@ -316,6 +314,5 @@ ul {
  *         small  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.
  */
 small {
-	font-size: $small-font-size;
-	// line-height: $line-height-ratio - px-to-em($base-font-size - em-to-px($small-font-size) + 1);
+	font-size: $font-size-small;
 }

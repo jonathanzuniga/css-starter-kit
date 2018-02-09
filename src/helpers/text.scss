@@ -155,7 +155,7 @@
  *     p.txt-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-sm {
-	font-size: $small-font-size;
+	font-size: $font-size-small;
 }
 
 /**
@@ -166,7 +166,7 @@
  *     p.txt-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .txt-lg {
-	font-size: $large-font-size;
+	font-size: $font-size-large;
 }
 
 /* ========================================================================== */
@@ -377,8 +377,8 @@
 .txt-indent {
 	blockquote, pre,
 	ul, ol, dl, figure, img {
-		margin-top: $half-spacing-unit;
-		margin-bottom: $half-spacing-unit;
+		margin-top: $spacing-unit-half;
+		margin-bottom: $spacing-unit-half;
 	}
 
 	figure {
@@ -392,7 +392,7 @@
 		margin-bottom: 0;
 
 		& + p:not([class*="cols-"]) {
-			text-indent: $half-spacing-unit + 0.5;
+			text-indent: $spacing-unit-half + 0.5;
 		}
 	}
 }
@@ -430,10 +430,10 @@
 	background-repeat: repeat-x;
 	background-size: 0.125rem 0.125rem;
 	background-position: 0 90%;
-	text-shadow: 0.063rem 0 $base-background-color, 
-				 0.125rem 0 $base-background-color, 
-				-0.063rem 0 $base-background-color, 
-				-0.125rem 0 $base-background-color;
+	text-shadow: 0.063rem 0 $body-background-color, 
+				 0.125rem 0 $body-background-color, 
+				-0.063rem 0 $body-background-color, 
+				-0.125rem 0 $body-background-color;
 
 	&:hover {
 		background-image: -webkit-linear-gradient(top, transparent 50%, $text-color 50%);
@@ -448,10 +448,10 @@
 		background-repeat: repeat-x;
 		background-size: 0.125rem 0.125rem;
 		background-position: 0 90%;
-		text-shadow: 0.063rem 0 $night-base-background-color, 
-					 0.125rem 0 $night-base-background-color, 
-					-0.063rem 0 $night-base-background-color, 
-					-0.125rem 0 $night-base-background-color;
+		text-shadow: 0.063rem 0 $night-body-background-color, 
+					 0.125rem 0 $night-body-background-color, 
+					-0.063rem 0 $night-body-background-color, 
+					-0.125rem 0 $night-body-background-color;
 
 		&:hover {
 			background-image: -webkit-linear-gradient(top, transparent 50%, $night-text-color 50%);
