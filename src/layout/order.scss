@@ -1,0 +1,28 @@
+@import '../partials/_all';
+
+
+/***
+ * Order:
+ */
+
+@for $i from 1 through $grid-columns {
+	.order-#{$i} {
+		order: #{$i};
+	}
+}
+
+@each $size, $length in $grid-breakpoints {
+	@for $i from 1 through $grid-columns {
+		@media (min-width: $length) {
+			.#{$size}-order-#{$i} {
+				order: #{$i};
+			}
+		}
+
+		@media (max-width: $length - 1) {
+			.max#{$size}-order-#{$i} {
+				order: #{$i};
+			}
+		}
+	}
+}
