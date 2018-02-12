@@ -2592,6 +2592,21 @@ html, body {
 /***
  * Order:
  */
+/**
+ * Reordering:
+ * `.order-[#]` `.[size]-order-[#]` `.max[size]-order-[#]`
+ *
+ *     @example
+ *     div.cols.txt-center.txtc-green-25
+ *         div.col.order-2
+ *             div.bgc-green-10 1
+ *         div.col
+ *             div.bgc-green-10 2
+ *         div.col.order-4
+ *             div.bgc-green-10 3
+ *         div.col
+ *             div.bgc-green-10 4
+ */
 .order-1 {
   order: 1; }
 
