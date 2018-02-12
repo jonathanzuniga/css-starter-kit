@@ -150,12 +150,12 @@
 								a(href='layout.html').navbar__link Documentation
 
 		div.cols.cols--center
-			div.main.xs-col-12.md-col-10.xl-col-7
+			div.main.xs-col-12.md-col-10.xl-col-8
 				div.main__content.cols.p-top-25
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
-			div.doc-sidebar.xs-col-12.md-col-2.xl-col-2.maxmd-fsmenu
+			div.doc-sidebar.xs-col-12.md-col-2.xl-col-1.maxmd-fsmenu
 				div.doc-sidebar__content.cols.p-top-25
 					div.col
 						div.cols.maxmd-txt-center
