@@ -36,9 +36,11 @@
 			grid-gap: $gutter * $i;
 		}
 	}
+}
 
-	@each $size, $length in $grid-breakpoints {
-		@media (min-width: $length) {
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through $gutters {
 			.#{$size}-gutters-#{$i} {
 				margin-right: -#{$gutter * $i};
 				margin-left: -#{$gutter * $i};
@@ -66,8 +68,10 @@
 				}
 			}
 		}
+	}
 
-		@media (max-width: $length - 1) {
+	@media (max-width: $length - 1) {
+		@for $i from 0 through $gutters {
 			// Grid gap.
 			.max#{$size}-gap-#{$i} {
 				&[class*='gcols-'] {

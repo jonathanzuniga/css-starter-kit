@@ -20,29 +20,37 @@
 			#{$prop}-top: $spacing * $i $spacing-important;
 			#{$prop}-bottom: $spacing * $i $spacing-important;
 		}
+	}
 
-		@each $side, $sprop, $scorner1, $scorner2 in $sides {
+	@each $side, $sprop, $scorner1, $scorner2 in $sides {
+		@for $i from 0 through $spacings {
 			.#{$abbr}-#{$side}-#{$i} {
 				#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 			}
+		}
 
-			@each $size, $length in $grid-breakpoints {
-				@media (min-width: $length) {
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				@for $i from 0 through $spacings {
 					.#{$size}-#{$abbr}-#{$side}-#{$i} {
 						#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 					}
 				}
+			}
 
-				@media (max-width: $length - 1) {
+			@media (max-width: $length - 1) {
+				@for $i from 0 through $spacings {
 					.max#{$size}-#{$abbr}-#{$side}-#{$i} {
 						#{$prop}-#{$sprop}: $spacing * $i $spacing-important;
 					}
 				}
 			}
 		}
+	}
 
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
+	@each $size, $length in $grid-breakpoints {
+		@media (min-width: $length) {
+			@for $i from 0 through $spacings {
 				.#{$size}-#{$abbr}-#{$i} {
 					#{$prop}: $spacing * $i $spacing-important;
 				}
@@ -57,8 +65,10 @@
 					#{$prop}-bottom: $spacing * $i $spacing-important;
 				}
 			}
+		}
 
-			@media (max-width: $length - 1) {
+		@media (max-width: $length - 1) {
+			@for $i from 0 through $spacings {
 				.max#{$size}-#{$abbr}-#{$i} {
 					#{$prop}: $spacing * $i $spacing-important;
 				}

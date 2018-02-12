@@ -12,9 +12,9 @@
  *     @example
  *     div.cols
  *         div.col-8
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-gray-25 &nbsp;
  *         div.col-4.hide
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-gray-25 &nbsp;
  */
 .hide {
 	display: none $hide-important;
@@ -27,14 +27,20 @@
  *     @example
  *     div.cols
  *         div.col-8
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-gray-25 &nbsp;
  *         div.col-4.lg-hide
- *             div.bgc-gray-80 &nbsp;
+ *             div.bgc-gray-25 &nbsp;
  */
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
 		.#{$size}-hide {
 			display: none $hide-important;
+		}
+
+		@for $i from 0 through 1 {
+			.#{$size}-opacity-#{$i} {
+				opacity: #{$i};
+			}
 		}
 	}
 
@@ -42,16 +48,8 @@
 		.max#{$size}-hide {
 			display: none $hide-important;
 		}
-	}
 
-	@for $i from 0 through 1 {
-		@media (min-width: $length) {
-			.#{$size}-opacity-#{$i} {
-				opacity: #{$i};
-			}
-		}
-
-		@media (max-width: $length - 1) {
+		@for $i from 0 through 1 {
 			.max#{$size}-opacity-#{$i} {
 				opacity: #{$i};
 			}

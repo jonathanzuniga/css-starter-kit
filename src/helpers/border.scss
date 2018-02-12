@@ -79,23 +79,25 @@
 	 *     @example
 	 *     div.#{$abbr}.sm-#{$abbr}-y-0.md-#{$abbr}-y.md-#{$abbr}-x-0.p-5
 	 */
-	@each $side, $sprop, $scorner1, $scorner2 in $sides {
-		.#{$abbr}-#{$side} {
-			#{$prop}-#{$sprop}: $border-width $border-style $border-color;
-		}
-
-		.night {
+	@each $size, $length in $grid-breakpoints {
+		@each $side, $sprop, $scorner1, $scorner2 in $sides {
 			.#{$abbr}-#{$side} {
-				#{$prop}-#{$sprop}-color: $night-border-color;
+				#{$prop}-#{$sprop}: $border-width $border-style $border-color;
+			}
+
+			.night {
+				.#{$abbr}-#{$side} {
+					#{$prop}-#{$sprop}-color: $night-border-color;
+				}
+			}
+
+			.#{$abbr}-#{$side}-0 {
+				#{$prop}-#{$sprop}: none;
 			}
 		}
 
-		.#{$abbr}-#{$side}-0 {
-			#{$prop}-#{$sprop}: none;
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
+		@media (min-width: $length) {
+			@each $side, $sprop, $scorner1, $scorner2 in $sides {
 				.#{$size}-#{$abbr}-#{$side} {
 					#{$prop}-#{$sprop}: $border-width $border-style $border-color;
 				}
@@ -111,26 +113,6 @@
 				}
 			}
 
-			@media (max-width: $length - 1) {
-				.max#{$size}-#{$abbr}-#{$side} {
-					#{$prop}-#{$sprop}: $border-width $border-style $border-color;
-				}
-
-				.night {
-					.max#{$size}-#{$abbr}-#{$side} {
-						#{$prop}-#{$sprop}-color: $night-border-color;
-					}
-				}
-
-				.max#{$size}-#{$abbr}-#{$side}-0 {
-					#{$prop}-#{$sprop}: none;
-				}
-			}
-		}
-	}
-
-	@each $size, $length in $grid-breakpoints {
-		@media (min-width: $length) {
 			.#{$size}-#{$abbr} {
 				#{$prop}: $border-width $border-style $border-color;
 			}
@@ -177,6 +159,22 @@
 		}
 
 		@media (max-width: $length - 1) {
+			@each $side, $sprop, $scorner1, $scorner2 in $sides {
+				.max#{$size}-#{$abbr}-#{$side} {
+					#{$prop}-#{$sprop}: $border-width $border-style $border-color;
+				}
+
+				.night {
+					.max#{$size}-#{$abbr}-#{$side} {
+						#{$prop}-#{$sprop}-color: $night-border-color;
+					}
+				}
+
+				.max#{$size}-#{$abbr}-#{$side}-0 {
+					#{$prop}-#{$sprop}: none;
+				}
+			}
+
 			.max#{$size}-#{$abbr} {
 				#{$prop}: $border-width $border-style $border-color;
 			}
@@ -222,6 +220,100 @@
 			}
 		}
 	}
+
+	// @each $size, $length in $grid-breakpoints {
+	// 	@media (min-width: $length) {
+	// 		.#{$size}-#{$abbr} {
+	// 			#{$prop}: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.#{$size}-#{$abbr}-x {
+	// 			#{$prop}-right: $border-width $border-style $border-color;
+	// 			#{$prop}-left: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.#{$size}-#{$abbr}-y {
+	// 			#{$prop}-top: $border-width $border-style $border-color;
+	// 			#{$prop}-bottom: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.night {
+	// 			.#{$size}-#{$abbr} {
+	// 				#{$prop}-color: $night-border-color;
+	// 			}
+
+	// 			.#{$size}-#{$abbr}-x {
+	// 				#{$prop}-right-color: $night-border-color;
+	// 				#{$prop}-left-color: $night-border-color;
+	// 			}
+
+	// 			.#{$size}-#{$abbr}-y {
+	// 				#{$prop}-top-color: $night-border-color;
+	// 				#{$prop}-bottom-color: $night-border-color;
+	// 			}
+	// 		}
+
+	// 		.#{$size}-#{$abbr}-0 {
+	// 			#{$prop}: none;
+	// 		}
+
+	// 		.#{$size}-#{$abbr}-x-0 {
+	// 			#{$prop}-right: none;
+	// 			#{$prop}-left: none;
+	// 		}
+
+	// 		.#{$size}-#{$abbr}-y-0 {
+	// 			#{$prop}-top: none;
+	// 			#{$prop}-bottom: none;
+	// 		}
+	// 	}
+
+	// 	@media (max-width: $length - 1) {
+	// 		.max#{$size}-#{$abbr} {
+	// 			#{$prop}: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.max#{$size}-#{$abbr}-x {
+	// 			#{$prop}-right: $border-width $border-style $border-color;
+	// 			#{$prop}-left: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.max#{$size}-#{$abbr}-y {
+	// 			#{$prop}-top: $border-width $border-style $border-color;
+	// 			#{$prop}-bottom: $border-width $border-style $border-color;
+	// 		}
+
+	// 		.night {
+	// 			.max#{$size}-#{$abbr} {
+	// 				#{$prop}-color: $night-border-color;
+	// 			}
+
+	// 			.max#{$size}-#{$abbr}-x {
+	// 				#{$prop}-right-color: $night-border-color;
+	// 				#{$prop}-left-color: $night-border-color;
+	// 			}
+
+	// 			.max#{$size}-#{$abbr}-y {
+	// 				#{$prop}-top-color: $night-border-color;
+	// 				#{$prop}-bottom-color: $night-border-color;
+	// 			}
+	// 		}
+
+	// 		.max#{$size}-#{$abbr}-0 {
+	// 			#{$prop}: none;
+	// 		}
+
+	// 		.max#{$size}-#{$abbr}-x-0 {
+	// 			#{$prop}-right: none;
+	// 			#{$prop}-left: none;
+	// 		}
+
+	// 		.max#{$size}-#{$abbr}-y-0 {
+	// 			#{$prop}-top: none;
+	// 			#{$prop}-bottom: none;
+	// 		}
+	// 	}
+	// }
 }
 
 @each $prop, $abbr in (border-radius: bd-radius) {

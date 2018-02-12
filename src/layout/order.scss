@@ -12,14 +12,16 @@
 }
 
 @each $size, $length in $grid-breakpoints {
-	@for $i from 1 through $grid-columns {
-		@media (min-width: $length) {
+	@media (min-width: $length) {
+		@for $i from 1 through $grid-columns {
 			.#{$size}-order-#{$i} {
 				order: #{$i};
 			}
 		}
+	}
 
-		@media (max-width: $length - 1) {
+	@media (max-width: $length - 1) {
+		@for $i from 1 through $grid-columns {
 			.max#{$size}-order-#{$i} {
 				order: #{$i};
 			}
