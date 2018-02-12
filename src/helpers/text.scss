@@ -5,103 +5,17 @@
  * Text:
  */
 
-/**
- * Font weight thin:
- * `.txt-thin`
- *
- *     @example
- *     p.txt-thin Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-thin {
-	font-weight: 100;
-}
-
-/**
- * Font weight extra-light:
- * `.txt-xlt`
- *
- *     @example
- *     p.txt-xlt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-xlt {
-	font-weight: 200;
-}
-
-/**
- * Font weight light:
- * `.txt-lt`
- *
- *     @example
- *     p.txt-lt Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-lt {
-	font-weight: 300;
-}
-
-/**
- * Font weight regular:
- * `.txt-rg`
- *
- *     @example
- *     p.txt-rg Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-rg {
-	font-weight: 400;
-}
-
-/**
- * Font weight medium:
- * `.txt-md`
- *
- *     @example
- *     p.txt-medium Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-md {
-	font-weight: 500;
-}
-
-/**
- * Font weight semi-bold:
- * `.txt-sb`
- *
- *     @example
- *     p.txt-sb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-sb {
-	font-weight: 600;
-}
-
-/**
- * Font weight bold:
- * `.txt-b`
- *
- *     @example
- *     p.txt-b Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-b {
-	font-weight: 700;
-}
-
-/**
- * Font weight extra-bold:
- * `.txt-xb`
- *
- *     @example
- *     p.txt-xb Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-xb {
-	font-weight: 800;
-}
-
-/**
- * Font weight black:
- * `.txt-black`
- *
- *     @example
- *     p.txt-black Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-black {
-	font-weight: 900;
+@each $name, $weight in $font-weights {
+	/**
+	 * Font weight #{$weight}:
+	 * `.txt-#{$name}`
+	 *
+	 *     @example
+	 *     p.txt-#{$name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	 */
+	.txt-#{$name} {
+		font-weight: #{$weight};
+	}
 }
 
 /**
