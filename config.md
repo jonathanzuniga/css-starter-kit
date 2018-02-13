@@ -103,9 +103,11 @@
 											li
 												a(href='helpers.html#color') Color
 											li
+												a(href='helpers.html#display') Display
+											li
 												a(href='helpers.html#float') Float
 											li
-												a(href='helpers.html#hiding') Hiding
+												a(href='helpers.html#opacity') Opacity
 											li
 												a(href='helpers.html#sizing') Sizing
 											li
@@ -118,6 +120,8 @@
 												a(href='helpers.html#text-transform') Text transform
 											li
 												a(href='helpers.html#other-text-helpers') Other text helpers
+											li
+												a(href='helpers.html#visibility') Visibility
 
 							div.col-12
 								div

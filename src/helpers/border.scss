@@ -222,7 +222,7 @@
 	}
 }
 
-@each $prop, $abbr in (border-radius: bd-radius) {
+@each $prop, $abbr in (border-radius: bdr) {
 	/**
 	 * Rounded corners:
 	 * `.#{$abbr}`
@@ -236,45 +236,45 @@
 
 	/**
 	 * Rounded top right corner:
-	 * `.#{$abbr}-1`
+	 * `.#{$abbr}-tright`
 	 *
 	 *     @example
-	 *     div.bgc-gray-25.#{$abbr}-1.p-5
+	 *     div.bgc-gray-25.#{$abbr}-tright.p-5
 	 */
-	.#{$abbr}-1 {
+	.#{$abbr}-tright {
 		border-top-right-radius: $border-radius;
 	}
 
 	/**
 	 * Rounded bottom right corner:
-	 * `.#{$abbr}-2`
+	 * `.#{$abbr}-bright`
 	 *
 	 *     @example
-	 *     div.bgc-gray-25.#{$abbr}-2.p-5
+	 *     div.bgc-gray-25.#{$abbr}-bright.p-5
 	 */
-	.#{$abbr}-2 {
+	.#{$abbr}-bright {
 		border-bottom-right-radius: $border-radius;
 	}
 
 	/**
 	 * Rounded bottom left corner:
-	 * `.#{$abbr}-3`
+	 * `.#{$abbr}-bleft`
 	 *
 	 *     @example
-	 *     div.bgc-gray-25.#{$abbr}-3.p-5
+	 *     div.bgc-gray-25.#{$abbr}-bleft.p-5
 	 */
-	.#{$abbr}-3 {
+	.#{$abbr}-bleft {
 		border-bottom-left-radius: $border-radius;
 	}
 
 	/**
 	 * Rounded top left corner:
-	 * `.#{$abbr}-4`
+	 * `.#{$abbr}-tleft`
 	 *
 	 *     @example
-	 *     div.bgc-gray-25.#{$abbr}-4.p-5
+	 *     div.bgc-gray-25.#{$abbr}-tleft.p-5
 	 */
-	.#{$abbr}-4 {
+	.#{$abbr}-tleft {
 		border-top-left-radius: $border-radius;
 	}
 
@@ -303,7 +303,3 @@
 		#{$prop}: 0;
 	}
 }
-
-// [class^='bd-'] {
-// 	transition: $base-transition;
-// }

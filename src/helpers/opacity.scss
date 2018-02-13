@@ -1,0 +1,43 @@
+@import '../partials/_all';
+
+
+/***
+ * Opacity:
+ */
+
+/**
+ * Opacity at size:
+ * `.[size]-op-[#]` `.max[size]-op-[#]`
+ *
+ *     @example
+ *     div.cols
+ *         div.col-8
+ *             div.bgc-gray-25 &nbsp;
+ *         div.col-4.lg-op-0
+ *             div.bgc-gray-25 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		@for $i from 0 through 1 {
+			.#{$size}-op-#{$i} {
+				opacity: #{$i};
+			}
+		}
+	}
+
+	@media (max-width: $length - 1) {
+		@for $i from 0 through 1 {
+			.max#{$size}-op-#{$i} {
+				opacity: #{$i};
+			}
+		}
+	}
+}
+
+.op-0 {
+	opacity: 0;
+}
+
+.op-1 {
+	opacity: 1;
+}

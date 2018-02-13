@@ -1,6 +1,50 @@
 @import '../partials/_all';
 
 
+/***
+ * Display:
+ */
+
+/**
+ * Display none:
+ * `.d-none`
+ *
+ *     @example
+ *     div.cols
+ *         div.col-8
+ *             div.bgc-gray-25 &nbsp;
+ *         div.col-4.d-none
+ *             div.bgc-gray-25 &nbsp;
+ */
+.d-none {
+	display: none $display-important;
+}
+
+/**
+ * Display none at size:
+ * `.[size]-d-none` `.max[size]-d-none`
+ *
+ *     @example
+ *     div.cols
+ *         div.col-8
+ *             div.bgc-gray-25 &nbsp;
+ *         div.col-4.lg-d-none
+ *             div.bgc-gray-25 &nbsp;
+ */
+@each $size, $length in $grid-breakpoints {
+	@media (min-width: $length) {
+		.#{$size}-d-none {
+			display: none $display-important;
+		}
+	}
+
+	@media (max-width: $length - 1) {
+		.max#{$size}-d-none {
+			display: none $display-important;
+		}
+	}
+}
+
 .d-block {
 	display: block;
 }
