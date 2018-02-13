@@ -22,15 +22,14 @@
  *         div.doc-drawer.drawer.drawer--left
  *             div
  *                 label(for='eg-drawer-left').btn.btn--link Close
- *         div.drawer-outside
- *             div
- *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 div.txt-center
- *                     div.btn-group
- *                         label(for='eg-drawer-top').btn.btn--secondary Top
- *                         label(for='eg-drawer-right').btn.btn--secondary Right
- *                         label(for='eg-drawer-bottom').btn.btn--secondary Bottom
- *                         label(for='eg-drawer-left').btn.btn--secondary Left
+ *         div.doc-drawer-overlay.drawer-overlay
+ *         div.doc-drawer-outside.drawer-outside
+ *             div.txt-center
+ *                 div.btn-group
+ *                     label(for='eg-drawer-top').btn.btn--secondary Top
+ *                     label(for='eg-drawer-right').btn.btn--secondary Right
+ *                     label(for='eg-drawer-bottom').btn.btn--secondary Bottom
+ *                     label(for='eg-drawer-left').btn.btn--secondary Left
  */
 .drawer-wrapper {
   overflow: hidden;
@@ -38,8 +37,10 @@
 
 .drawer {
   background-color: #fff;
+  display: block;
   position: fixed;
-  width: 260px; }
+  width: 260px;
+  z-index: 110; }
 
 .night .drawer {
   background-color: #000; }
@@ -75,15 +76,36 @@
 
 .drawer,
 .drawer ~ .drawer-outside {
-  transition: margin 0.16s ease-out; }
+  transition: margin 0.3s ease-out; }
 
 .drawer-outside {
   transform: none; }
+
+.drawer-overlay {
+  background-color: #202020;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  z-index: 100; }
+
+.night .drawer-overlay {
+  background-color: #202020; }
 
 .drawer-toggle {
   opacity: 0;
   position: absolute;
   z-index: -1; }
+  .drawer-toggle:checked ~ .drawer-overlay {
+    display: block;
+    opacity: 0.5;
+    visibility: visible; }
 
 .drawer-toggle--top:checked ~ .drawer--top {
   margin-top: 0; }
@@ -147,35 +169,33 @@
  *         div.doc-drawer.drawer.drawer--left.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-left').btn.btn--link Close
- *         div.drawer-outside
- *             div
- *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 div.txt-center
- *                     div.btn-group
- *                         label(for='eg-drawer-with-push-top').btn.btn--secondary Top
- *                         label(for='eg-drawer-with-push-right').btn.btn--secondary Right
- *                         label(for='eg-drawer-with-push-bottom').btn.btn--secondary Bottom
- *                         label(for='eg-drawer-with-push-left').btn.btn--secondary Left
+ *         div.doc-drawer-overlay.drawer-overlay
+ *         div.doc-drawer-outside.drawer-outside
+ *             div.txt-center
+ *                 div.btn-group
+ *                     label(for='eg-drawer-with-push-top').btn.btn--secondary Top
+ *                     label(for='eg-drawer-with-push-right').btn.btn--secondary Right
+ *                     label(for='eg-drawer-with-push-bottom').btn.btn--secondary Bottom
+ *                     label(for='eg-drawer-with-push-left').btn.btn--secondary Left
  */
-.drawer--push.drawer--top {
-  margin-top: 0;
-  transform: translateY(-200px); }
-
-.drawer--push.drawer--right {
-  margin-right: 0;
-  transform: translateX(260px); }
-
-.drawer--push.drawer--bottom {
-  margin-bottom: 0;
-  transform: translateY(200px); }
-
-.drawer--push.drawer--left {
-  margin-left: 0;
-  transform: translateX(-260px); }
+.drawer--push {
+  will-change: transform; }
+  .drawer--push.drawer--top {
+    margin-top: 0;
+    transform: translateY(-200px); }
+  .drawer--push.drawer--right {
+    margin-right: 0;
+    transform: translateX(260px); }
+  .drawer--push.drawer--bottom {
+    margin-bottom: 0;
+    transform: translateY(200px); }
+  .drawer--push.drawer--left {
+    margin-left: 0;
+    transform: translateX(-260px); }
 
 .drawer--push,
 .drawer--push ~ .drawer-outside {
-  transition: transform 0.16s ease-out; }
+  transition: transform 0.3s ease-out; }
 
 .drawer-toggle:checked ~ .drawer--push ~ .drawer-outside {
   margin: 0; }
@@ -283,15 +303,14 @@
  *         div.doc-drawer.drawer.drawer--left.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-left').btn.btn--link Close
- *         div.drawer-outside
- *             div
- *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.
- *                 div.txt-center
- *                     div.btn-group
- *                         label(for='eg-drawer-with-overlap-top').btn.btn--secondary Top
- *                         label(for='eg-drawer-with-overlap-right').btn.btn--secondary Right
- *                         label(for='eg-drawer-with-overlap-bottom').btn.btn--secondary Bottom
- *                         label(for='eg-drawer-with-overlap-left').btn.btn--secondary Left
+ *         div.doc-drawer-overlay.drawer-overlay
+ *         div.doc-drawer-outside.drawer-outside
+ *             div.txt-center
+ *                 div.btn-group
+ *                     label(for='eg-drawer-with-overlap-top').btn.btn--secondary Top
+ *                     label(for='eg-drawer-with-overlap-right').btn.btn--secondary Right
+ *                     label(for='eg-drawer-with-overlap-bottom').btn.btn--secondary Bottom
+ *                     label(for='eg-drawer-with-overlap-left').btn.btn--secondary Left
  */
 .drawer-toggle:checked ~ .drawer--overlap ~ .drawer-outside {
   margin: 0; }

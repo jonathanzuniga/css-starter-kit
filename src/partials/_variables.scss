@@ -48,10 +48,10 @@ $border-radius-base:     0.25rem;
 $body-background-color:       #fff;
 $night-body-background-color: #000;
 
-$colors:                     (gen_colors($body-background-color, $night-body-background-color)) !default;
+$colors:                     (colors($body-background-color, $night-body-background-color)) !default;
 
-$text-color:                  color('gray 47');
-$night-text-color:            color('gray 3');
+$body-color:                  color('gray 47');
+$night-body-color:            color('gray 3');
 
 
 // Transition
@@ -132,6 +132,10 @@ $control-border-color:                   color('gray 8');
 $night-control-border-color:             color('gray 42');
 
 $control-border-radius:                  $border-radius-base;
+
+$control-color:                          $body-color;
+$night-control-color:                    $night-body-color;
+
 $control-line-height:                    inherit;
 
 $control-padding-y:                      0.250em;
@@ -235,8 +239,8 @@ $input-border-style:                      $control-border-style;
 $input-border-color:                      $control-border-color;
 $night-input-border-color:                $night-control-border-color;
 $input-border-radius:                     $control-border-radius;
-$input-text-color:                        $text-color;
-$night-input-text-color:                  $night-text-color;
+$input-color:                             $control-color;
+$night-input-color:                       $night-control-color;
 $input-font-size:                         $font-size-base;
 $input-line-height:                       $control-line-height;
 $input-padding-y:                         $control-padding-y;
@@ -327,8 +331,8 @@ $select-border-style:             $control-border-style;
 $select-border-color:             $control-border-color;
 $night-select-border-color:       $night-control-border-color;
 $select-border-radius:            $control-border-radius;
-$select-text-color:               $text-color;
-$night-select-text-color:         $night-text-color;
+$select-color:                    $control-color;
+$night-select-color:              $night-control-color;
 $select-font-size:                $font-size-base;
 $select-line-height:              $control-line-height;
 $select-padding-y:                $control-padding-y;
@@ -349,6 +353,8 @@ $select-large-font-size:          $control-large-font-size;
 $select-large-padding-y:          $control-large-padding-y;
 $select-large-padding-x:          $control-large-padding-x;
 
+$night-select-option-color:       $control-color;
+
 
 // Select menu arrow icon.
 
@@ -366,8 +372,8 @@ $select-margin-right:             $spacing-unit-half;
 
 $select-icon-after-border-width:        0.125em;
 $select-icon-after-border-style:        solid;
-$select-icon-after-border-color:        $text-color;
-$night-select-icon-after-border-color:  $night-text-color;
+$select-icon-after-border-color:        $body-color;
+$night-select-icon-after-border-color:  $night-body-color;
 $select-icon-after-margin-top:         -0.438em;
 $select-icon-after-width:               $spacing-unit-quarter;
 $select-icon-after-height:              $spacing-unit-quarter;
@@ -552,8 +558,8 @@ $night-hightlight-background:       none;
 
 $dropcap-background-color: transparent;
 $dropcap-border:           none;
-$dropcap-color:            $text-color;
-$night-dropcap-color:      $night-text-color;
+$dropcap-color:            $body-color;
+$night-dropcap-color:      $night-body-color;
 $dropcap-font-size:        px_to_em($font-size-base * 3.5);
 $dropcap-font-style:       normal;
 $dropcap-font-weight:      normal;
@@ -655,32 +661,50 @@ $collapse-list-unstyled-link-color:                   color('gray 25');
 $night-collapse-list-unstyled-link-color:             color('gray 25');
 $collapse-list-unstyled-link-hover-color:             color('gray 33');
 $night-collapse-list-unstyled-link-hover-color:       color('gray 17');
-$collapse-list-unstyled-item-active-link-color:       $text-color;
-$night-collapse-list-unstyled-item-active-link-color: $night-text-color;
+$collapse-list-unstyled-item-active-link-color:       $body-color;
+$night-collapse-list-unstyled-item-active-link-color: $night-body-color;
 
 
 // Drawer
 
-$drawer-background-color:        $body-background-color;
-$night-drawer-background-color:  $night-body-background-color;
-$drawer-width:                   260px;
-$drawer-height:                  200px;
+$drawer-background-color:               $body-background-color;
+$night-drawer-background-color:         $night-body-background-color;
+$drawer-width:                          260px;
+$drawer-height:                         200px;
+$drawer-z-index:                        110;
 
-$drawer-outside-transition:      margin     $transition-duration $transition-timing-function;
+$drawer-outside-transition:             margin 0.3s $transition-timing-function;
 
-$drawer-push-outside-transition: transform  $transition-duration $transition-timing-function;
+$drawer-overlay-background-color:       color('gray 45');
+$night-drawer-overlay-background-color: color('gray 45');
+$drawer-overlay-transition:             opacity    0.3s $transition-timing-function,
+                                        visibility 0.3s $transition-timing-function;
+$drawer-overlay-z-index:                100;
+
+$drawer-push-outside-transition:        transform 0.3s $transition-timing-function;
 
 
 // Menu
 
-$menu-item-margin:  0 0 ($spacing-unit-quarter / 2);
-$menu-item-padding-y: 0;
-$menu-item-padding-x: 0;
-$menu-link-padding-y: $spacing-unit-quarter;
-$menu-link-padding-x: $spacing-unit-half;
+$menu-item-margin:                              0 0 ($spacing-unit-quarter / 2);
+$menu-item-padding-y:                           0;
+$menu-item-padding-x:                           0;
+$menu-link-padding-y:                           $spacing-unit-quarter;
+$menu-link-padding-x:                           $spacing-unit-half;
+
+$menu-item-active-link-color:                   $body-color;
+$night-menu-item-active-link-color:             $night-body-color;
 
 
 // Menu pills
+
+$menu-pills-item-link-border-radius:            $border-radius;
+
+$menu-pills-item-link-color:                    $body-color;
+$night-menu-pills-item-link-color:              $night-body-color;
+
+$menu-pills-item-active-link-color:             $link-color;
+$night-menu-pills-item-active-link-color:       $night-link-color;
 
 $menu-pills-link-hover-background-color:        color('gray 2');
 $night-menu-pills-link-hover-background-color:  color('gray 48');
@@ -693,14 +717,14 @@ $night-menu-pills-item-active-background-color: color('blue 48');
 
 // Navbar brand
 
-$navbar-background-color:       $body-background-color;
-$night-navbar-background-color: $night-body-background-color;
+$navbar-background-color:             $body-background-color;
+$night-navbar-background-color:       $night-body-background-color;
 
-$navbar-padding-y:              em_to_rem($spacing-unit-quarter);
-$navbar-padding-x:              em_to_rem($spacing-unit-half);
+$navbar-padding-y:                    em_to_rem($spacing-unit-quarter);
+$navbar-padding-x:                    em_to_rem($spacing-unit-half);
 
-$navbar-brand-font-size:        1.25em;
-$navbar-toggler-cursor:         pointer;
+$navbar-brand-font-size:              1.25em;
+$navbar-toggler-cursor:               pointer;
 
 $navbar-link-color:                   color('black 15t');
 $night-navbar-link-color:             color('white 17t');
@@ -736,8 +760,16 @@ $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezie
 
 // Mobile nav
 
-$mobile-nav-background-color:       color('gray 2');
-$night-mobile-nav-background-color: color('gray 48');
+$mobile-nav-background-color:             color('gray 2');
+$night-mobile-nav-background-color:       color('gray 48');
+
+$mobile-nav-link-color:                   $body-color;
+$night-mobile-nav-link-color:             $night-body-color;
+$mobile-nav-link-hover-color:             $link-color;
+$night-mobile-nav-link-hover-color:       $night-link-color;
+
+$mobile-nav-item-active-link-color:       $body-color;
+$night-mobile-nav-item-active-link-color: $night-body-color;
 
 
 // Tabs
@@ -766,10 +798,10 @@ $tabs-link-padding-x:                             $spacing-unit-half;
 $tabs-link-hover-border-bottom-color:             transparent;
 $night-tabs-link-hover-border-bottom-color:       transparent;
 
-$tabs-item-active-link-color:                     $text-color;
-$night-tabs-item-active-link-color:               $night-text-color;
-$tabs-item-active-link-hover-color:               $text-color;
-$night-tabs-item-active-link-hover-color:         $night-text-color;
+$tabs-item-active-link-color:                     $body-color;
+$night-tabs-item-active-link-color:               $night-body-color;
+$tabs-item-active-link-hover-color:               $body-color;
+$night-tabs-item-active-link-hover-color:         $night-body-color;
 
 $tabs-item-active-link-border-bottom-width:       0.188rem; // 3px
 

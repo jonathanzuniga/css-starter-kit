@@ -8,96 +8,7 @@
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/csssk.css">
-  <style type="text/css">
-    .doc-navbar {
-      background-color: #efeff0;
-      height: 60px;
-    }
-    .night .doc-navbar {
-      background-color: #191919;
-    }
-    .doc-sidebar {
-      font-size: 14px;
-    }
-    h2 {
-      margin-bottom: 1.25rem;
-    }
-    .sg-canvas {
-      *zoom: 1;
-    }
-    .sg-canvas:before,
-    .sg-canvas:after {
-      content: ' ';
-      display: table;
-    }
-    .sg-canvas:after {
-      clear: both;
-    }
-    .doc-color-swatch {
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-    }
-    .doc-h-100px {
-      height: 100px;
-    }
-    .sg-block:last-of-type {
-      border-bottom: none;
-    }
-    @media (min-width: 1024px) {
-      .doc-sidebar {
-        /* Make it sticky. */
-        max-height: 100vh;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-      }
-      .doc-sidebar__content {
-        max-height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        position: relative;
-      }
-    }
-    .sg-block {
-      border-top-color: #e8e9ec;
-      margin: 0;
-    }
-    .night .sg-block {
-      border-top-color: #3a3b3e;
-    }
-    .night .sg-expando::before {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    .night .sg-expando:hover::before {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-    .night .sg-code {
-      background: #fafaff !important;
-    }
-    .doc-drawer {
-      position: absolute;
-    }
-    .doc-sidebar .collapse__toggler:hover {
-      cursor: pointer;
-    }
-    .doc-sidebar .collapse__toggler,
-    .doc-sidebar .ls-unstyled a {
-      display: block;
-      padding: 0.25rem 0;
-    }
-    .ion-ios-moon-outline:before,
-    .ion-ios-moon:before {
-      font-size: 3em;
-      line-height: inherit;
-    }
-    .ion-ios-moon-outline:before {
-      color: #e0e0e0;
-    }
-    .night .ion-ios-moon:before {
-      color: #333333;
-    }
-  </style>
+  <link rel="stylesheet" href="css/doc.css">
   <script>
     ;
     (function(window, document, undefined) {
@@ -313,16 +224,14 @@
                             <label for="eg-drawer-left" class="btn btn--link">Close</label>
                           </div>
                         </div>
-                        <div class="drawer-outside">
-                          <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.</p>
-                            <div class="txt-center">
-                              <div class="btn-group">
-                                <label for="eg-drawer-top" class="btn btn--secondary">Top</label>
-                                <label for="eg-drawer-right" class="btn btn--secondary">Right</label>
-                                <label for="eg-drawer-bottom" class="btn btn--secondary">Bottom</label>
-                                <label for="eg-drawer-left" class="btn btn--secondary">Left</label>
-                              </div>
+                        <div class="doc-drawer-overlay drawer-overlay"></div>
+                        <div class="doc-drawer-outside drawer-outside">
+                          <div class="txt-center">
+                            <div class="btn-group">
+                              <label for="eg-drawer-top" class="btn btn--secondary">Top</label>
+                              <label for="eg-drawer-right" class="btn btn--secondary">Right</label>
+                              <label for="eg-drawer-bottom" class="btn btn--secondary">Bottom</label>
+                              <label for="eg-drawer-left" class="btn btn--secondary">Left</label>
                             </div>
                           </div>
                         </div>
@@ -352,20 +261,14 @@
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;drawer-outside&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis
-        est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque
-        in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius
-        hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero
-        pulvinar, placerat tortor ut, fermentum quam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-overlay drawer-overlay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-outside drawer-outside&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -406,16 +309,14 @@
                             <label for="eg-drawer-with-push-left" class="btn btn--link">Close</label>
                           </div>
                         </div>
-                        <div class="drawer-outside">
-                          <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.</p>
-                            <div class="txt-center">
-                              <div class="btn-group">
-                                <label for="eg-drawer-with-push-top" class="btn btn--secondary">Top</label>
-                                <label for="eg-drawer-with-push-right" class="btn btn--secondary">Right</label>
-                                <label for="eg-drawer-with-push-bottom" class="btn btn--secondary">Bottom</label>
-                                <label for="eg-drawer-with-push-left" class="btn btn--secondary">Left</label>
-                              </div>
+                        <div class="doc-drawer-overlay drawer-overlay"></div>
+                        <div class="doc-drawer-outside drawer-outside">
+                          <div class="txt-center">
+                            <div class="btn-group">
+                              <label for="eg-drawer-with-push-top" class="btn btn--secondary">Top</label>
+                              <label for="eg-drawer-with-push-right" class="btn btn--secondary">Right</label>
+                              <label for="eg-drawer-with-push-bottom" class="btn btn--secondary">Bottom</label>
+                              <label for="eg-drawer-with-push-left" class="btn btn--secondary">Left</label>
                             </div>
                           </div>
                         </div>
@@ -445,20 +346,14 @@
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;drawer-outside&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis
-        est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque
-        in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius
-        hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero
-        pulvinar, placerat tortor ut, fermentum quam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-overlay drawer-overlay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-outside drawer-outside&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-push-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -499,16 +394,14 @@
                             <label for="eg-drawer-with-overlap-left" class="btn btn--link">Close</label>
                           </div>
                         </div>
-                        <div class="drawer-outside">
-                          <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.</p>
-                            <div class="txt-center">
-                              <div class="btn-group">
-                                <label for="eg-drawer-with-overlap-top" class="btn btn--secondary">Top</label>
-                                <label for="eg-drawer-with-overlap-right" class="btn btn--secondary">Right</label>
-                                <label for="eg-drawer-with-overlap-bottom" class="btn btn--secondary">Bottom</label>
-                                <label for="eg-drawer-with-overlap-left" class="btn btn--secondary">Left</label>
-                              </div>
+                        <div class="doc-drawer-overlay drawer-overlay"></div>
+                        <div class="doc-drawer-outside drawer-outside">
+                          <div class="txt-center">
+                            <div class="btn-group">
+                              <label for="eg-drawer-with-overlap-top" class="btn btn--secondary">Top</label>
+                              <label for="eg-drawer-with-overlap-right" class="btn btn--secondary">Right</label>
+                              <label for="eg-drawer-with-overlap-bottom" class="btn btn--secondary">Bottom</label>
+                              <label for="eg-drawer-with-overlap-left" class="btn btn--secondary">Left</label>
                             </div>
                           </div>
                         </div>
@@ -538,20 +431,14 @@
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;drawer-outside&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis
-        est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque
-        in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius
-        hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero
-        pulvinar, placerat tortor ut, fermentum quam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-overlay drawer-overlay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-drawer-outside drawer-outside&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn-group&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-top&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-right&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-bottom&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">&quot;eg-drawer-with-overlap-left&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>

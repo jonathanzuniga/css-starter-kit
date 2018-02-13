@@ -1,0 +1,116 @@
+.doc-navbar {
+	background-color: #efeff0;
+	height: 60px;
+}
+
+.night .doc-navbar {
+	background-color: #191919;
+}
+
+.doc-sidebar {
+	font-size: 14px;
+}
+
+h2 {
+	margin-bottom: 1.25rem;
+}
+
+.sg-canvas {
+	*zoom: 1;
+}
+
+.sg-canvas:before,
+.sg-canvas:after {
+	content: ' ';
+	display: table;
+}
+
+.sg-canvas:after {
+	clear: both;
+}
+
+.doc-color-swatch {
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+}
+
+.doc-h-100px {
+	height: 100px;
+}
+
+.sg-block:last-of-type {
+	border-bottom: none;
+}
+
+@media (min-width: 1024px) {
+	.doc-sidebar {
+		/* Make it sticky. */
+		max-height: 100vh;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
+
+	.doc-sidebar__content {
+		max-height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: relative;
+	}
+}
+
+.sg-block {
+	border-top-color: #e8e9ec;
+	margin: 0;
+}
+
+.night .sg-block {
+	border-top-color: #3a3b3e;
+}
+
+.night .sg-expando::before {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.night .sg-expando:hover::before {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.night .sg-code {
+	background: #fafaff !important;
+}
+
+.doc-drawer,
+.doc-drawer-overlay {
+	position: absolute;
+}
+
+.doc-drawer-outside {
+	min-height: 200px;
+}
+
+.doc-sidebar .collapse__toggler:hover {
+	cursor: pointer;
+}
+
+.doc-sidebar .collapse__toggler, 
+.doc-sidebar .ls-unstyled a {
+	display: block;
+	padding: 0.25rem 0;
+}
+
+.ion-ios-moon-outline:before,
+.ion-ios-moon:before {
+	font-size: 3em;
+	line-height: inherit;
+}
+
+.ion-ios-moon-outline:before {
+	color: #e0e0e0;
+}
+
+.night .ion-ios-moon:before {
+	color: #333333;
+}
+		
