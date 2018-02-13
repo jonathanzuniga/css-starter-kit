@@ -1237,35 +1237,6 @@
   .night .maxxl-fsmenu.open {
     background-color: #000; } }
 
-.mobile-nav {
-  background-color: #f7f7f7;
-  width: 100%; }
-
-.mobile-nav__item {
-  letter-spacing: 0.18em; }
-  .mobile-nav__item:first-child {
-    border-color: transparent; }
-  .mobile-nav__item.active .mobile-nav__link:link, .mobile-nav__item.active .mobile-nav__link:hover, .mobile-nav__item.active .mobile-nav__link:visited {
-    color: #131313; }
-
-.mobile-nav__link:link, .mobile-nav__link:visited {
-  color: #131313; }
-
-.mobile-nav__link:hover {
-  color: #2299f4; }
-
-.night .mobile-nav {
-  background-color: #0d0d0d; }
-
-.night .mobile-nav__item.active .mobile-nav__link:link, .night .mobile-nav__item.active .mobile-nav__link:hover, .night .mobile-nav__item.active .mobile-nav__link:visited {
-  color: #f3f3f3; }
-
-.night .mobile-nav__link:link, .night .mobile-nav__link:visited {
-  color: #f3f3f3; }
-
-.night .mobile-nav__link:hover {
-  color: #8ccaf9; }
-
 /***
  * Tabs:
  */
@@ -1416,7 +1387,7 @@
   display: none; }
 
 /***
- * Content:
+ * Base:
  */
 * {
   margin: 0;
@@ -1469,113 +1440,6 @@ p > a:not(.btn) {
   border-bottom-color: #051827; }
   .night p > a:not(.btn):hover {
     border-bottom-color: #c1e2fc; }
-
-img {
-  max-width: 100%; }
-
-/**
- * Blockquote:
- * `blockquote`
- *
- *     @example
- *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *     blockquote
- *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *     blockquote
- *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *         footer A common form of 
- *             cite lorem ipsum
- */
-blockquote {
-  border-left: 0.313rem solid #efeff0;
-  padding: 0 0 0 1.187em; }
-  blockquote p {
-    font-size: 1.125em; }
-    blockquote p:before, blockquote p:after {
-      font-weight: bold; }
-    blockquote p:before {
-      content: "«";
-      margin-right: 0.25em; }
-    blockquote p:after {
-      content: "»";
-      margin-left: 0.25em; }
-  blockquote footer {
-    font-size: 0.75em; }
-    blockquote footer:before {
-      content: '— '; }
-
-.night blockquote {
-  border-left-color: #191919; }
-
-/**
- * Bold and italic:
- * `strong` `i`
- *
- *     @example
- *     strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *     br
- *     i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-b,
-strong {
-  font-weight: 700; }
-
-i {
-  font-style: italic; }
-
-/**
- * Code:
- * `code`
- *
- *     @example
- *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
- */
-code {
-  background-color: #efeff0;
-  border-radius: 0.25rem;
-  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
-  font-size: 1em;
-  padding: 0.25em 0.5em; }
-
-.night code {
-  background-color: #191919; }
-
-/**
- * Code block:
- * `pre`
- *
- *     @example
- *     pre
- *         code
- *             | body {
- *             |     font-size: 100%;
- *             | }
- */
-pre {
-  background-color: #f7f7f7;
-  border-radius: 0.25rem;
-  overflow-x: auto;
-  padding: 0.5em 1em; }
-  pre code {
-    background-color: transparent; }
-
-.night pre {
-  background-color: #0d0d0d; }
-  .night pre code {
-    background-color: transparent; }
-
-figure {
-  margin-left: 0;
-  margin-right: 0; }
-  figure figcaption {
-    font-size: 0.75em;
-    font-style: italic;
-    text-align: center; }
-  figure code {
-    background-color: none;
-    padding: 0; }
-  figure img {
-    margin: 0; }
 
 /**
  * Heading:
@@ -1648,6 +1512,157 @@ h6,
     margin-top: 0.75em; }
 
 /**
+ * Inline elements:
+ * `b` `strong` `del` `s` `em` `i`  `ins` `u` `mark` `small`
+ *
+ *     @example
+ *     p
+ *         b Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         del Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         s Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         em Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         ins Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         u Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         mark Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+b,
+strong,
+.txt-b {
+  font-weight: 700; }
+
+em,
+i,
+.txt-i {
+  font-style: italic; }
+
+mark,
+.txt-mark {
+  border-radius: 0;
+  background-color: #fef6de;
+  background-image: none;
+  padding: 0.2em; }
+
+.night mark,
+.night .txt-mark {
+  background-color: #202020;
+  background-image: none; }
+
+small,
+.txt-sm {
+  font-size: 0.75em; }
+
+img {
+  max-width: 100%; }
+
+/**
+ * Blockquote:
+ * `blockquote` `.bq`
+ *
+ *     @example
+ *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote.bq
+ *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *         footer A common form of 
+ *             cite lorem ipsum
+ */
+blockquote {
+  padding: 0 0 0 1.187rem; }
+  blockquote p {
+    font-size: 1.125em; }
+  blockquote footer {
+    font-size: 0.75em; }
+
+.bq {
+  border-left-width: 0.313rem;
+  border-left-style: solid;
+  border-left-color: #efeff0; }
+  .bq p:before, .bq p:after {
+    font-weight: 700; }
+  .bq p:before {
+    content: "«";
+    margin-right: 0.25em; }
+  .bq p:after {
+    content: "»";
+    margin-left: 0.25em; }
+  .bq footer:before {
+    content: "— "; }
+
+.night .bq {
+  border-left-color: #191919; }
+
+/**
+ * Code:
+ * `code`
+ *
+ *     @example
+ *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
+ */
+code {
+  background-color: none;
+  border-radius: none;
+  color: #ff6a69;
+  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
+  font-size: 0.875em;
+  padding: 0; }
+
+.night code {
+  background-color: none;
+  color: #e04c4a; }
+
+/**
+ * Code block:
+ * `pre`
+ *
+ *     @example
+ *     pre
+ *         code
+ *             | body {
+ *             |     font-size: 100%;
+ *             | }
+ */
+pre {
+  background-color: #f7f7f7;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  padding: 0.5em 1em; }
+  pre code {
+    background-color: transparent;
+    color: inherit; }
+
+.night pre {
+  background-color: #0d0d0d; }
+  .night pre code {
+    background-color: transparent;
+    color: inherit; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+  figure figcaption {
+    font-size: 0.75em;
+    font-style: italic;
+    text-align: center; }
+  figure code {
+    background-color: none;
+    padding: 0; }
+  figure img {
+    margin: 0; }
+
+/**
  * Standard list:
  * `ol` `ul`
  *
@@ -1672,17 +1687,6 @@ ol, ul {
 
 ul {
   list-style-type: disc; }
-
-/**
- * Small:
- * `small`
- *
- *     @example
- *     p
- *         small  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero fermentum, pulvinar libero eget, consequat magna. Cras rutrum volutpat nunc, in efficitur sem vestibulum vitae. Suspendisse quis tellus in sapien pretium consequat a ac est. Nullam tincidunt vulputate ullamcorper. Etiam velit diam, bibendum at porta non, viverra non augue.
- */
-small {
-  font-size: 0.75em; }
 
 /***
  * Form:
@@ -3213,18 +3217,18 @@ th {
  *                 td Table data
  */
 .tbl th:not(:last-child), .tbl td:not(:last-child) {
-  border-right-width: 1px;
+  border-right-width: 0.063rem;
   border-right-style: dotted; }
 
 .tbl tr + tr th, .tbl tr + tr td {
-  border-top-width: 1px;
+  border-top-width: 0.063rem;
   border-top-style: solid; }
 
 .tbl th {
   background-color: #f3f3f3;
-  border-top-width: 1px;
+  border-top-width: 0.063rem;
   border-top-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 0.063rem;
   border-bottom-style: solid;
   font-weight: 600; }
 
@@ -3665,7 +3669,7 @@ th {
  *                 td Table data
  */
 .tbl--bordered {
-  border-width: 1px;
+  border-width: 0.063rem;
   border-style: solid;
   border-color: #e8e8e8; }
   .tbl--bordered td:not(:last-child), .tbl--bordered th:not(:last-child) {
@@ -21136,16 +21140,6 @@ p.ac-c a:not(.btn) {
   font-weight: 900; }
 
 /**
- * Italic text:
- * `.txt-i`
- *
- *     @example
- *     p.txt-i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-i {
-  font-style: italic; }
-
-/**
  * Strikethrough text:
  * `.txt-strike`
  *
@@ -21154,33 +21148,6 @@ p.ac-c a:not(.btn) {
  */
 .txt-strike {
   text-decoration: line-through; }
-
-/**
- * Highlighting text:
- * `.txt-hl`
- *
- *     @example
- *     p 
- *         span.txt-hl Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-hl {
-  border-radius: 0;
-  background-color: #fef6de;
-  background-image: none; }
-
-.night .txt-hl {
-  background-color: #202020;
-  background-image: none; }
-
-/**
- * Small font:
- * `.txt-sm`
- *
- *     @example
- *     p.txt-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-sm {
-  font-size: 0.75em; }
 
 /**
  * Large font:
@@ -21641,14 +21608,14 @@ p.ac-c a:not(.btn) {
 .a-underline a {
   text-decoration: underline; }
 
-.a-underline-bgs a {
+.a-underline-alt a {
   background-image: -webkit-linear-gradient(top, transparent 50%, #2299f4 50%);
   background-image: linear-gradient(to bottom, transparent 50%, #2299f4 50%);
   background-repeat: repeat-x;
   background-size: 0.125rem 0.125rem;
   background-position: 0 90%;
   text-shadow: 0.063rem 0 #fff, 0.125rem 0 #fff, -0.063rem 0 #fff, -0.125rem 0 #fff; }
-  .a-underline-bgs a:hover {
+  .a-underline-alt a:hover {
     background-image: -webkit-linear-gradient(top, transparent 50%, #131313 50%);
     background-image: linear-gradient(to bottom, transparent 50%, #131313 50%); }
 

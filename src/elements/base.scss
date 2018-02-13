@@ -1,0 +1,340 @@
+@import '../partials/_all';
+
+
+/***
+ * Base:
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+
+	outline: none;
+}
+
+body {
+	background-color: $body-background-color;
+	color: $body-color;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-ratio;
+
+	text-rendering: optimizeLegibility;
+}
+
+.night body {
+	background-color: $night-body-background-color;
+	color: $night-body-color;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+	margin-bottom: $spacing-unit-half;
+}
+
+a {
+	text-decoration: $link-decoration;
+	transition: $transition-base;
+		
+	&:link {
+		color: $link-color;
+	}
+
+	&:visited {
+		color: $link-visited-color;
+	}
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+.night a {		
+	&:link {
+		color: $night-link-color;
+	}
+
+	&:visited {
+		color: $night-link-visited-color;
+	}
+
+	&:hover {
+		color: $night-link-hover-color;
+	}
+}
+
+p > a:not(.btn) {
+	border-bottom: $link-border-bottom-width $link-border-bottom-style $link-border-bottom-color;
+
+	&:hover {
+		border-bottom-color: $link-hover-border-bottom-color;
+	}
+}
+
+.night p > a:not(.btn) {
+	border-bottom-color: $night-link-border-bottom-color;
+
+	&:hover {
+		border-bottom-color: $night-link-hover-border-bottom-color;
+	}
+}
+
+/**
+ * Heading:
+ * `h1` `h2` `h3` `h4` `h5` `h6`
+ * `.h1` `.h2` `.h3` `.h4` `.h5` `.h6`
+ *
+ *     @example
+ *     div.cols
+ *         div.col
+ *             h1 Heading
+ *             h2 Heading
+ *             h3 Heading
+ *             h4 Heading
+ *             h5 Heading
+ *             h6 Heading
+ *         div.col
+ *             p.h1 Heading
+ *             p.h2 Heading
+ *             p.h3 Heading
+ *             p.h4 Heading
+ *             p.h5 Heading
+ *             p.h6 Heading
+ */
+@each $heading, $size in $headings {
+	#{$heading},
+	.#{$heading} {
+		font-size: $size;
+		line-height: $heading-line-height;
+
+		&:not(:first-child) {
+			margin-top: $size - 0.25;
+		}
+	}
+}
+
+/**
+ * Inline elements:
+ * `b` `strong` `del` `s` `em` `i`  `ins` `u` `mark` `small`
+ *
+ *     @example
+ *     p
+ *         b Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         strong Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         del Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         s Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         em Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         i Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         ins Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         u Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         mark Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p
+ *         small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+b,
+strong,
+.txt-b {
+	font-weight: 700;
+}
+
+em,
+i,
+.txt-i {
+	font-style: italic;
+}
+
+mark,
+.txt-mark {
+	border-radius: $mark-border-radius;
+	background-color: $mark-background-color;
+	background-image: $mark-background-image;
+	padding: $mark-padding;
+}
+
+.night {
+	mark,
+	.txt-mark {
+		background-color: $night-mark-background-color;
+		background-image: $night-mark-background-image;
+	}
+}
+
+small,
+.txt-sm {
+	font-size: $font-size-small;
+}
+
+img {
+	max-width: 100%;
+}
+
+/**
+ * Blockquote:
+ * `blockquote` `.bq`
+ *
+ *     @example
+ *     blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote
+ *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     blockquote.bq
+ *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *         footer A common form of 
+ *             cite lorem ipsum
+ */
+blockquote {
+	padding: $blockquote-padding;
+
+	p {
+		font-size: $blockquote-p-font-size;
+	}
+
+	footer {
+		font-size: $blockquote-footer-font-size;
+	}
+}
+
+.bq {
+	border-left-width: $blockquote-border-width;
+	border-left-style: $blockquote-border-style;
+	border-left-color: $blockquote-border-color;
+
+	p {
+		&:before,
+		&:after {
+			font-weight: $blockquote-p-before-after-font-weight;
+		}
+
+		&:before {
+			content: $blockquote-p-before-content;
+			margin-right: $blockquote-p-before-margin-right;
+		}
+
+		&:after {
+			content: $blockquote-p-after-content;
+			margin-left: $blockquote-p-after-margin-left;
+		}
+	}
+
+	footer {
+		&:before {
+			content: $blockquote-footer-before-content;
+		}
+	}
+}
+
+.night .bq {
+	border-left-color: $night-blockquote-border-color;
+}
+
+/**
+ * Code:
+ * `code`
+ *
+ *     @example
+ *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
+ */
+code {
+	background-color: $code-background-color;
+	border-radius: $code-border-radius;
+	color: $code-color;
+	font-family: $font-family-monospace;
+	font-size: $code-font-size;
+	padding: $code-padding;
+}
+
+.night code {
+	background-color: $night-code-background-color;
+	color: $night-code-color;
+}
+
+/**
+ * Code block:
+ * `pre`
+ *
+ *     @example
+ *     pre
+ *         code
+ *             | body {
+ *             |     font-size: 100%;
+ *             | }
+ */
+pre {
+	background-color: $pre-background-color;
+	border-radius: $pre-border-radius;
+	overflow-x: auto;
+	padding: $spacing-unit-quarter $spacing-unit-half;
+
+	code {
+		background-color: transparent;
+		color: inherit;
+	}
+}
+
+.night pre {
+	background-color: $night-pre-background-color;
+
+	code {
+		background-color: transparent;
+		color: inherit;
+	}
+}
+
+figure {
+	margin-left: 0;
+	margin-right: 0;
+
+	figcaption {
+		font-size: $font-size-small;
+		font-style: italic;
+		text-align: center;
+	}
+
+	code {
+		background-color: none;
+		padding: 0;
+	}
+
+	img {
+		margin: 0;
+	}
+}
+
+/**
+ * Standard list:
+ * `ol` `ul`
+ *
+ *     @example
+ *     div.cols
+ *         div.col-6
+ *             ol
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ *         div.col-6
+ *             ul
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ */
+ol, ul {
+	list-style-position: outside;
+	padding-left: $spacing-unit-half * 2.5;
+
+	&:not(:last-of-type) {
+		margin-bottom: $spacing-unit-half;
+	}
+}
+
+ul {
+	list-style-type: disc;
+}

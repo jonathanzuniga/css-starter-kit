@@ -74,7 +74,7 @@
 									div.collapse
 										ul.ls-unstyled
 											li
-												a(href='elements.html#content') Content
+												a(href='elements.html#base') Base
 											li
 												a(href='elements.html#form') Form
 											li

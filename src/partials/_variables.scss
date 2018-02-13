@@ -6,8 +6,6 @@
 // ==========================================================================
 
 
-// Content
-
 // Base
 
 $font-family-sans-serif: -apple-system, 
@@ -87,41 +85,63 @@ $link-hover-border-bottom-color:       $link-hover-color;
 $night-link-hover-border-bottom-color: $night-link-hover-color;
 
 
+// Heading
+
+$headings: (
+  'h1': 2.5em,  // 40px
+  'h2': 2em,    // 32px
+  'h3': 1.75em, // 28px
+  'h4': 1.5em,  // 24px
+  'h5': 1.25em, // 20px
+  'h6': 1em     // 16px
+) !default;
+
+$heading-line-height: 1.2;
+
+
+// Marked text
+
+$mark-border-radius:          0;
+$mark-background-color:       color('yellow 5');
+$night-mark-background-color: color('gray 45');
+$mark-background-image:       none;
+$night-mark-background-image: none;
+$mark-padding:                0.2em;
+
+
 // Blockquote
 
-$blockquote-border-width:         0.313rem;
-$blockquote-border-style:         solid;
-$blockquote-border-color:         color('gray 4');
-$night-blockquote-border-color:   color('gray 46');
-$blockquote-left-quotation-mark:  '«'; // '“';
-$blockquote-right-quotation-mark: '»'; // '”';
+$blockquote-border-width:               0.313rem;
+$blockquote-border-style:               solid;
+$blockquote-border-color:               color('gray 4');
+$night-blockquote-border-color:         color('gray 46');
+
+$blockquote-padding:                    0 0 0 (1.5 - $blockquote-border-width);
+
+$blockquote-p-font-size:                1.125em;
+$blockquote-p-before-after-font-weight: 700;
+$blockquote-p-before-content:           '«'; // '“';
+$blockquote-p-before-margin-right:       $spacing-unit-quarter / 2;
+$blockquote-p-after-content:            '»'; // '”';
+$blockquote-p-after-margin-left:        $spacing-unit-quarter / 2;
+
+$blockquote-footer-font-size:           $font-size-small;
+$blockquote-footer-before-content:      '— ';
 
 
 // Code
 
-$code-background-color:       color('gray 4');
-$night-code-background-color: color('gray 46');
-$code-border-radius:          $border-radius-base;
-$code-font-size:              1em;
-$code-padding:                0.25em 0.5em;
+$code-background-color:       none;
+$night-code-background-color: none;
+$code-color:                  color('red 22');
+$night-code-color:            color('red 28');
+$code-border-radius:          none;
+$code-font-size:              0.875em; // 14px
+$code-padding:                0;
 
 $pre-background-color:        color('gray 2');
 $night-pre-background-color:  color('gray 48');
 $pre-border-radius:           $border-radius-base;
-
-
-// Heading
-
-$headings: (
-	'h1': 2.5em,  // 40px
-	'h2': 2em,    // 32px
-	'h3': 1.75em, // 28px
-	'h4': 1.5em,  // 24px
-	'h5': 1.25em, // 20px
-	'h6': 1em     // 16px
-) !default;
-
-$heading-line-height: 1.2;
 
 
 // Se usan los mismo valores para los demas controles de las formas.
@@ -193,8 +213,8 @@ $buttons: (
   'secondary' color('cool gray 25') color('cool gray 35') color('white 25')   '',
   'success'   color('green 25')     color('green 25')     color('white 25')   '',
   'danger'    color('red 25')       color('red 25')       color('white 25')   '',
-  'light'     color('cool gray 6')  color('cool gray 6')  color('gray 40') '',
-  'dark'      color('cool gray 44') color('cool gray 44') color('gray 5')  ''
+  'light'     color('cool gray 6')  color('cool gray 6')  color('gray 40')    '',
+  'dark'      color('cool gray 44') color('cool gray 44') color('gray 5')     ''
 );
 
 
@@ -454,7 +474,7 @@ $switch-large-checked-label-after-left:              $switch-large-label-width -
 $table-header-font-weight:             600;
 $table-header-text-align:              left;
 
-$table-border-width:                   1px;
+$table-border-width:                   0.063rem;
 $table-border-style:                   solid;
 $table-border-right-style:             dotted;
 $table-border-color:                   color('gray 6');
@@ -502,6 +522,17 @@ $sides: (
 $hide-important: !important;
 
 
+// Spacing
+
+// Cantidad de espacios para margins & paddings,
+$spacings:          25 !default;
+
+// incrementando cada espacio por...
+$spacing:           0.25rem !default;
+
+$spacing-important: !important;
+
+
 // Sizing
 
 // Porcentajes para widths & heights.
@@ -519,17 +550,6 @@ $sizes: (
 ) !default;
 
 
-// Spacing
-
-// Cantidad de espacios para margins & paddings,
-$spacings:          25 !default;
-
-// incrementando cada espacio por...
-$spacing:           0.25rem !default;
-
-$spacing-important: !important;
-
-
 // Text
 
 $font-weights: (
@@ -543,15 +563,6 @@ $font-weights: (
   800: 800,
   900: 900
 ) !default;
-
-
-// Highlighting text
-
-$hightlight-border-radius:          0;
-$hightlight-background-color:       color('yellow 5');
-$night-hightlight-background-color: color('gray 45');
-$hightlight-background:             none;
-$night-hightlight-background:       none;
 
 
 // Drop cap
@@ -758,18 +769,18 @@ $full-screen-menu-open-transition:             opacity          0.5s step-start,
 $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
-// Mobile nav
+// // Mobile nav
 
-$mobile-nav-background-color:             color('gray 2');
-$night-mobile-nav-background-color:       color('gray 48');
+// $mobile-nav-background-color:             color('gray 2');
+// $night-mobile-nav-background-color:       color('gray 48');
 
-$mobile-nav-link-color:                   $body-color;
-$night-mobile-nav-link-color:             $night-body-color;
-$mobile-nav-link-hover-color:             $link-color;
-$night-mobile-nav-link-hover-color:       $night-link-color;
+// $mobile-nav-link-color:                   $body-color;
+// $night-mobile-nav-link-color:             $night-body-color;
+// $mobile-nav-link-hover-color:             $link-color;
+// $night-mobile-nav-link-hover-color:       $night-link-color;
 
-$mobile-nav-item-active-link-color:       $body-color;
-$night-mobile-nav-item-active-link-color: $night-body-color;
+// $mobile-nav-item-active-link-color:       $body-color;
+// $night-mobile-nav-item-active-link-color: $night-body-color;
 
 
 // Tabs
