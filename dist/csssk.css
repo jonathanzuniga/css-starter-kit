@@ -73,13 +73,15 @@
  *             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
 .collapse {
+  height: initial;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   position: relative;
   transform: translateY(0.5em);
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out; }
+  transition: height 0.3s ease-out, max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out; }
   .collapse.open, .collapse-toggle:checked ~ .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); }
@@ -91,30 +93,35 @@
 
 @media (min-width: 0) {
   .maxxs-navbar-responsive .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); } }
 
 @media (min-width: 768px) {
   .maxsm-navbar-responsive .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); } }
 
 @media (min-width: 1024px) {
   .maxmd-navbar-responsive .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); } }
 
 @media (min-width: 1280px) {
   .maxlg-navbar-responsive .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); } }
 
 @media (min-width: 1680px) {
   .maxxl-navbar-responsive .collapse {
+    height: auto;
     max-height: 100vh;
     opacity: 1;
     transform: translateY(0); } }

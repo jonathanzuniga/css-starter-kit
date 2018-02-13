@@ -15,6 +15,7 @@ $(function() {
 	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
 	$('.doc-sidebar a[href$="#' + hash + '"]').parent().addClass('active');
 
+	sbCollapse();
 	fsMenuToggle();
 	switchNightMode();
 
@@ -36,6 +37,27 @@ $(function() {
 	if (!$('.doc-navbar .navbar__item:first').hasClass('active'))
 		$('.doc-navbar .navbar__item:last').addClass('active');
 });
+
+function sbCollapse() {
+	$('.doc-sidebar .collapse').each(function() {
+		var collapse_height = $(this).css({
+			'height': 'auto',
+			'max-height': 'none',
+			'overflow': 'auto'
+		}).height();
+		$(this)
+			.data('collapse-open-height', collapse_height)
+			.removeAttr('style')
+			.css('height', $(this).height());
+	});
+
+	$('.doc-sidebar .collapse__toggler').click(function() {
+		$('.doc-sidebar .collapse-toggle').prop('checked', false);
+		$('.doc-sidebar .collapse').css('height', 0);
+
+		$(this).next('.collapse').css('height', $(this).next('.collapse').data('collapse-open-height'));
+	});
+}
 
 function fsMenuToggle() {
 	$('#open-fsmenu').click(function() {

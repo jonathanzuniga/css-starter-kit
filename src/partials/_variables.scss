@@ -641,9 +641,15 @@ $card-hover-box-shadow:       0 0.063em $spacing-unit-half rgba(black, 0.15);
 
 // Collapse
 
-$collapse-transition: max-height 0.3s $transition-timing-function,
-                      opacity    0.3s $transition-timing-function,
-                      transform  0.3s $transition-timing-function;
+
+$collapse-height:                                     initial;
+$collapse-max-height:                                 0;
+$collapse-open-height:                                auto;
+$collapse-open-max-height:                            100vh;
+$collapse-transition:                                 height     0.3s $transition-timing-function,
+                                                      max-height 0.3s $transition-timing-function,
+                                                      opacity    0.3s $transition-timing-function,
+                                                      transform  0.3s $transition-timing-function;
 
 $collapse-list-unstyled-link-color:                   color('gray 25');
 $night-collapse-list-unstyled-link-color:             color('gray 25');
@@ -661,11 +667,8 @@ $drawer-width:                   260px;
 $drawer-height:                  200px;
 
 $drawer-outside-transition:      margin     $transition-duration $transition-timing-function;
-                                 // opacity    $transition-duration $transition-timing-function;
 
-$drawer-push-outside-transition: 
-// opacity    $transition-duration $transition-timing-function,
-                                 transform  $transition-duration $transition-timing-function;
+$drawer-push-outside-transition: transform  $transition-duration $transition-timing-function;
 
 
 // Menu
