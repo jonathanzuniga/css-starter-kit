@@ -5,62 +5,63 @@
  * Display:
  */
 
-/**
- * Display none:
- * `.d-none`
- *
- *     @example
- *     div.cols
- *         div.col-8
- *             div.bgc-gray-25 &nbsp;
- *         div.col-4.d-none
- *             div.bgc-gray-25 &nbsp;
- */
-.d-none {
-	display: none $display-important;
-}
+@include classes_abbr_name(d, display, (
+		/* <display-outside> values */
+		block: 'block',
+		inline: 'inline',
+		runin: 'run-in',
 
-/**
- * Display none at size:
- * `.[size]-d-none` `.max[size]-d-none`
- *
- *     @example
- *     div.cols
- *         div.col-8
- *             div.bgc-gray-25 &nbsp;
- *         div.col-4.lg-d-none
- *             div.bgc-gray-25 &nbsp;
- */
-@each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
-		.#{$size}-d-none {
-			display: none $display-important;
-		}
-	}
+		/* <display-inside> values */
+		flow: 'flow',
+		flowroot: 'flow-root',
+		table: 'table',
+		flex: 'flex',
+		grid: 'grid',
+		ruby: 'ruby',
+		subgrid: 'subgrid',
 
-	@media (max-width: $length - 1) {
-		.max#{$size}-d-none {
-			display: none $display-important;
-		}
-	}
-}
+		/* <display-outside> plus <display-inside> values */
+		block-flow: 'block flow',
+		inline-table: 'inline table',
+		flex-runin: 'flex run-in',
 
-.d-block {
-	display: block;
-}
+		/* <display-listitem> values */
+		listitem: 'list-item',
+		listitem-block: 'list-item block',
+		listitem-inline: 'list-item inline',
+		listitem-flow: 'list-item flow',
+		listitem-flowroot: 'list-item flow-root',
+		listitem-block-flow: 'list-item block flow',
+		listitem-block-flowroot: 'list-item block flow-root',
+		flow-listitem-block: 'flow list-item block',
 
-.d-flex {
-	display: flex;
-}
+		/* <display-internal> values */
+		tablerowgroup: 'table-row-group',
+		tableheadergroup: 'table-header-group',
+		tablefootergroup: 'table-footer-group',
+		tablerow: 'table-row',
+		tablecell: 'table-cell',
+		tablecolumngroup: 'table-column-group',
+		tablecolumn: 'table-column',
+		tablecaption: 'table-caption',
+		rubybase: 'ruby-base',
+		rubytext: 'ruby-text',
+		rubybasecontainer: 'ruby-base-container',
+		rubytextcontainer: 'ruby-text-container',
 
-.d-inline {
-	display: inline;
-}
+		/* <display-box> values */
+		contents: 'contents',
+		none: 'none',
 
-.d-inline-block {
-	display: inline-block;
-}
+		/* <display-legacy> values */
+		inlineblock: 'inline-block',
+		inlinetable: 'inline-table',
+		inlineflex: 'inline-flex',
+		inlinegrid: 'inline-grid',
 
-.d-inline-flex {
-	display: inline-flex;
-}
+		/* Global values */
+		inherit: 'inherit',
+		initial: 'initial',
+		unset: 'unset'
+	)
+);
