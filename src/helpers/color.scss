@@ -11,11 +11,11 @@
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
 
 	@if not ($gen == '') {
-		$range: '1...#{$color-spectrum-range - 1}';
+		$range: '[1...#{$color-spectrum-range - 1}]';
 
 		/**
 		 * #{$name_ucf} color:
-		 * `.bgc-#{$name_r}-[#{$range}]` `.c-#{$name_r}-[#{$range}]` `.bdc-#{$name_r}-[#{$range}]`
+		 * `.bgc-#{$name_r}-#{$range}` `.c-#{$name_r}-#{$range}` `.bdc-#{$name_r}-#{$range}`
 		 *
 		 *     @example
 		 *     table.tbl
