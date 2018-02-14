@@ -53,3 +53,43 @@
 		@content;
 	}
 }
+
+@mixin classes_abbr_name($abbreviation, $property, $array) {
+	@each $abbr, $prop in ($abbreviation: $property) {
+		$prop_ucf: str_ucfirst($prop);
+		$prop_r: str_replace($prop_ucf, '-', ' ');
+		@each $name, $value in $array {
+			/**
+			 * #{$prop_r} #{$value}:
+			 * `.#{$abbr}-#{$name}` `.[size]-#{$abbr}-#{$name}` `.max[size]-#{$abbr}-#{$name}`
+			 *
+			 *     @example
+			 *     p
+			 *         span.#{$abbr}-#{$name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+			.#{$abbr}-#{$name} {
+				#{$prop}: #{$value};
+			}
+		}
+
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				@each $name, $value in $array {
+					.#{$size}-#{$abbr}-#{$name} {
+						#{$prop}: #{$value};
+					}
+				}
+			}
+
+			@if ($length != 0) {
+				@media (max-width: $length - 1) {
+					@each $name, $value in $array {
+						.max#{$size}-#{$abbr}-#{$name} {
+							#{$prop}: #{$value};
+						}
+					}
+				}
+			}
+		}
+	}
+}
