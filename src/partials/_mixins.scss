@@ -54,38 +54,39 @@
 	}
 }
 
-@mixin classes_abbr_name($abbreviation, $property, $array) {
+@mixin classes_abbr_value($abbreviation, $property, $list) {
 	@each $abbr, $prop in ($abbreviation: $property) {
 		$prop_ucf: str_ucfirst($prop);
 		$prop_r: str_replace($prop_ucf, '-', ' ');
-		@each $name, $value in $array {
+		@each $item in $list {
+			$item_rename: value_to_class($item);
 			/**
-			 * #{$prop_r} #{$value}:
-			 * `.#{$abbr}-#{$name}` `.[size]-#{$abbr}-#{$name}` `.max[size]-#{$abbr}-#{$name}`
+			 * #{$prop_r} #{$item}:
+			 * `.#{$abbr}-#{$item_rename}` `.[size]-#{$abbr}-#{$item_rename}` `.max[size]-#{$abbr}-#{$item_rename}`
 			 *
 			 *     @example
 			 *     p
-			 *         span.#{$abbr}-#{$name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 *         span.#{$abbr}-#{$item_rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			 */
-			.#{$abbr}-#{$name} {
-				#{$prop}: #{$value};
+			.#{$abbr}-#{$item_rename} {
+				#{$prop}: #{$item};
 			}
 		}
 
 		@each $size, $length in $grid-breakpoints {
 			@media (min-width: $length) {
-				@each $name, $value in $array {
-					.#{$size}-#{$abbr}-#{$name} {
-						#{$prop}: #{$value};
+				@each $item in $list {
+					.#{$size}-#{$abbr}-#{value_to_class($item)} {
+						#{$prop}: #{$item};
 					}
 				}
 			}
 
 			@if ($length != 0) {
 				@media (max-width: $length - 1) {
-					@each $name, $value in $array {
-						.max#{$size}-#{$abbr}-#{$name} {
-							#{$prop}: #{$value};
+					@each $item in $list {
+						.max#{$size}-#{$abbr}-#{value_to_class($item)} {
+							#{$prop}: #{$item};
 						}
 					}
 				}

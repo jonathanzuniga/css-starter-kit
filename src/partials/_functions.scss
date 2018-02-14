@@ -190,3 +190,12 @@ $color-spectrum-range: 50;
 @function str_ucfirst($string) {
 	@return capitalize($string);
 }
+
+@function value_to_class($string) {
+	@if type_of($string) == string {
+		$string: str_replace($string, '-', '');
+		$string: str_replace($string, ' ', '-');
+	}
+
+	@return $string;
+}
