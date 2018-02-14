@@ -8,10 +8,11 @@
 @each $prop, $abbr in (width: w, height: h) {
 	@each $size, $length in $sizes {
 		@if $size == 50 {
+			$range: '[#]';
 			@if $abbr == w {
 				/**
-				 * Width #{$size}%:
-				 * `.#{$abbr}-#{$size}` Applies `#{$prop}: #{$size}%;` to element.
+				 * Width:
+				 * `.#{$abbr}-#{$range}`
 				 *
 				 *     @example
 				 *     div.#{$abbr}-#{$size}.bgc-red-10 &nbsp;
@@ -19,8 +20,8 @@
 			}
 			@else {
 				/**
-				 * Height #{$size}%:
-				 * `.#{$abbr}-#{$size}` Applies `#{$prop}: #{$size}%;` to element.
+				 * Height:
+				 * `.#{$abbr}-#{$range}`
 				 *
 				 *     @example
 				 *     div.doc-h-100px

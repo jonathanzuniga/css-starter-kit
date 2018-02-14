@@ -107,6 +107,8 @@
 											li
 												a(href='helpers.html#float') Float
 											li
+												a(href='helpers.html#font-weight') Font weight
+											li
 												a(href='helpers.html#opacity') Opacity
 											li
 												a(href='helpers.html#sizing') Sizing

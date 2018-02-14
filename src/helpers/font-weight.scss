@@ -1,0 +1,41 @@
+@import '../partials/_all';
+
+
+/***
+ * Font weight:
+ */
+
+@each $abbr, $prop in (fw: font-weight) {
+	$prop_ucf: str_ucfirst($prop);
+	$prop_r: str_replace($prop_ucf, '-', ' ');
+	@each $name, $weight in $font-weights {
+		/**
+		 * #{$prop_r} #{$weight}:
+		 * `.#{$abbr}-#{$name}` `.[size]-#{$abbr}-#{$name}` `.max[size]-#{$abbr}-#{$name}`
+		 *
+		 *     @example
+		 *     p.#{$abbr}-#{$name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 */
+		.#{$abbr}-#{$name} {
+			#{$prop}: #{$weight};
+		}
+	}
+
+	@each $size, $length in $grid-breakpoints {
+		@media (min-width: $length) {
+			@each $name, $weight in $font-weights {
+				.#{$size}-#{$abbr}-#{$name} {
+					#{$prop}: #{$weight};
+				}
+			}
+		}
+
+		@media (max-width: $length - 1) {
+			@each $name, $weight in $font-weights {
+				.max#{$size}-#{$abbr}-#{$name} {
+					display: none $display-important;
+				}
+			}
+		}
+	}
+}
