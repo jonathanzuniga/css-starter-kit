@@ -30,8 +30,8 @@
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
 						a(href='index.html').navbar__link CSS Starter Kit
-					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-hide Menu
-					div.navbar__collapse.collapse.maxmd-hide
+					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-d-none Menu
+					div.navbar__collapse.collapse.maxmd-d-none
 						ul.navbar__menu
 							li.navbar__item
 								a(href='index.html').navbar__link Preface
@@ -47,7 +47,7 @@
 			div.doc-sidebar.xs-col-12.md-col-2.xl-col-1.maxmd-fsmenu
 				div.doc-sidebar__content.cols.p-top-25
 					div.col
-						div.cols.maxmd-txt-center
+						div.cols.maxmd-ta-center
 							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-1', name='doc-sidebar-collapse', type='radio').collapse-toggle
@@ -119,11 +119,11 @@
 											li
 												a(href='helpers.html#text') Text
 											li
-												a(href='helpers.html#text-alignment') Text alignment
-											li
 												a(href='helpers.html#text-transform') Text transform
 											li
 												a(href='helpers.html#other-text-helpers') Other text helpers
+											li
+												a(href='helpers.html#text-align') Text align
 											li
 												a(href='helpers.html#visibility') Visibility
 

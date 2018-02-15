@@ -33,8 +33,8 @@
           <div class="navbar__brand">
             <a href="index.html" class="navbar__link">CSS Starter Kit</a>
           </div>
-          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-hide">Menu</label>
-          <div class="navbar__collapse collapse maxmd-hide">
+          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
+          <div class="navbar__collapse collapse maxmd-d-none">
             <ul class="navbar__menu">
               <li class="navbar__item">
                 <a href="index.html" class="navbar__link">Preface</a>
@@ -1810,63 +1810,6 @@
                 </section>
               </section>
 
-              <section class="sg-section sg-section-text-alignment">
-                <h2 id="text-alignment" class="sg">Text alignment</h2>
-                <section class="sg-block sg-section-left-aligned-text">
-                  <div class="sg-text">
-                    <h3 id="left-aligned-text" class="sg">Left aligned text</h3>
-                    <p class="sg">
-                      <code class="sg">.txt-left</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <p class="txt-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-left&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-center-aligned-text">
-                  <div class="sg-text">
-                    <h3 id="center-aligned-text" class="sg">Center aligned text</h3>
-                    <p class="sg">
-                      <code class="sg">.txt-center</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <p class="txt-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-center&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-right-aligned-text">
-                  <div class="sg-text">
-                    <h3 id="right-aligned-text" class="sg">Right aligned text</h3>
-                    <p class="sg">
-                      <code class="sg">.txt-right</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <p class="txt-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-right&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-responsive-text-alignment">
-                  <div class="sg-text">
-                    <h3 id="responsive-text-alignment" class="sg">Responsive text alignment</h3>
-                    <p class="sg">
-                      <code class="sg">.[size]-txt-[position]</code>
-                      <code class="sg">.max[size]-txt-[position]</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <p class="lg-txt-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;lg-txt-right&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
-                  </div>
-                </section>
-              </section>
-
               <section class="sg-section sg-section-text-transform">
                 <h2 id="text-transform" class="sg">Text transform</h2>
                 <section class="sg-block sg-section-capitalized-text">
@@ -2008,6 +1951,205 @@
                 </section>
               </section>
 
+              <section class="sg-section sg-section-text-align">
+                <h2 id="text-align" class="sg">Text align</h2>
+                <section class="sg-block sg-section-text-align-left">
+                  <div class="sg-text">
+                    <h3 id="text-align-left" class="sg">Text align left</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-left</code>
+                      <code class="sg">.[size]-ta-left</code>
+                      <code class="sg">.max[size]-ta-left</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-left&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-right">
+                  <div class="sg-text">
+                    <h3 id="text-align-right" class="sg">Text align right</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-right</code>
+                      <code class="sg">.[size]-ta-right</code>
+                      <code class="sg">.max[size]-ta-right</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-right&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-center">
+                  <div class="sg-text">
+                    <h3 id="text-align-center" class="sg">Text align center</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-center</code>
+                      <code class="sg">.[size]-ta-center</code>
+                      <code class="sg">.max[size]-ta-center</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-center&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-justify">
+                  <div class="sg-text">
+                    <h3 id="text-align-justify" class="sg">Text align justify</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-justify</code>
+                      <code class="sg">.[size]-ta-justify</code>
+                      <code class="sg">.max[size]-ta-justify</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-justify&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-justify-all">
+                  <div class="sg-text">
+                    <h3 id="text-align-justify-all" class="sg">Text align justify-all</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-justifyall</code>
+                      <code class="sg">.[size]-ta-justifyall</code>
+                      <code class="sg">.max[size]-ta-justifyall</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-justifyall">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-justifyall&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-start">
+                  <div class="sg-text">
+                    <h3 id="text-align-start" class="sg">Text align start</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-start</code>
+                      <code class="sg">.[size]-ta-start</code>
+                      <code class="sg">.max[size]-ta-start</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-start&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-end">
+                  <div class="sg-text">
+                    <h3 id="text-align-end" class="sg">Text align end</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-end</code>
+                      <code class="sg">.[size]-ta-end</code>
+                      <code class="sg">.max[size]-ta-end</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-end&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-match-parent">
+                  <div class="sg-text">
+                    <h3 id="text-align-match-parent" class="sg">Text align match-parent</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-matchparent</code>
+                      <code class="sg">.[size]-ta-matchparent</code>
+                      <code class="sg">.max[size]-ta-matchparent</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-matchparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-matchparent&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-moz-center">
+                  <div class="sg-text">
+                    <h3 id="text-align-moz-center" class="sg">Text align -moz-center</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-mozcenter</code>
+                      <code class="sg">.[size]-ta-mozcenter</code>
+                      <code class="sg">.max[size]-ta-mozcenter</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-mozcenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-mozcenter&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-webkit-center">
+                  <div class="sg-text">
+                    <h3 id="text-align-webkit-center" class="sg">Text align -webkit-center</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-webkitcenter</code>
+                      <code class="sg">.[size]-ta-webkitcenter</code>
+                      <code class="sg">.max[size]-ta-webkitcenter</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-webkitcenter">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-webkitcenter&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-inherit">
+                  <div class="sg-text">
+                    <h3 id="text-align-inherit" class="sg">Text align inherit</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-inherit</code>
+                      <code class="sg">.[size]-ta-inherit</code>
+                      <code class="sg">.max[size]-ta-inherit</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-inherit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-inherit&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-initial">
+                  <div class="sg-text">
+                    <h3 id="text-align-initial" class="sg">Text align initial</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-initial</code>
+                      <code class="sg">.[size]-ta-initial</code>
+                      <code class="sg">.max[size]-ta-initial</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-initial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-initial&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-text-align-unset">
+                  <div class="sg-text">
+                    <h3 id="text-align-unset" class="sg">Text align unset</h3>
+                    <p class="sg">
+                      <code class="sg">.ta-unset</code>
+                      <code class="sg">.[size]-ta-unset</code>
+                      <code class="sg">.max[size]-ta-unset</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ta-unset">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-unset&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
               <section class="sg-section sg-section-visibility">
                 <h2 id="visibility" class="sg">Visibility</h2>
                 <section class="sg-block sg-section-visibility-visible">
@@ -2109,7 +2251,7 @@
       <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
         <div class="doc-sidebar__content cols p-top-25">
           <div class="col">
-            <div class="cols maxmd-txt-center">
+            <div class="cols maxmd-ta-center">
               <div class="col-12">
                 <div>
                   <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
@@ -2212,13 +2354,13 @@
                         <a href="helpers.html#text">Text</a>
                       </li>
                       <li>
-                        <a href="helpers.html#text-alignment">Text alignment</a>
-                      </li>
-                      <li>
                         <a href="helpers.html#text-transform">Text transform</a>
                       </li>
                       <li>
                         <a href="helpers.html#other-text-helpers">Other text helpers</a>
+                      </li>
+                      <li>
+                        <a href="helpers.html#text-align">Text align</a>
                       </li>
                       <li>
                         <a href="helpers.html#visibility">Visibility</a>

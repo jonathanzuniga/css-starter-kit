@@ -18646,127 +18646,6 @@ p.ac-c a:not(.btn) {
 
 /* ========================================================================== */
 /***
- * Text alignment:
- */
-/**
- * Left aligned text:
- * `.txt-left`
- *
- *     @example
- *     p.txt-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-left {
-  text-align: left; }
-
-/**
- * Center aligned text:
- * `.txt-center`
- *
- *     @example
- *     p.txt-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-center {
-  text-align: center; }
-
-/**
- * Right aligned text:
- * `.txt-right`
- *
- *     @example
- *     p.txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-.txt-right {
-  text-align: right; }
-
-/**
- * Responsive text alignment:
- * `.[size]-txt-[position]` `.max[size]-txt-[position]`
- *
- *     @example
- *     p.lg-txt-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- */
-@media (min-width: 0) {
-  .xs-txt-left {
-    text-align: left; }
-  .xs-txt-center {
-    text-align: center; }
-  .xs-txt-right {
-    text-align: right; } }
-
-@media (max-width: -1) {
-  .maxxs-txt-left {
-    text-align: left; }
-  .maxxs-txt-center {
-    text-align: center; }
-  .maxxs-txt-right {
-    text-align: right; } }
-
-@media (min-width: 768px) {
-  .sm-txt-left {
-    text-align: left; }
-  .sm-txt-center {
-    text-align: center; }
-  .sm-txt-right {
-    text-align: right; } }
-
-@media (max-width: 767px) {
-  .maxsm-txt-left {
-    text-align: left; }
-  .maxsm-txt-center {
-    text-align: center; }
-  .maxsm-txt-right {
-    text-align: right; } }
-
-@media (min-width: 1024px) {
-  .md-txt-left {
-    text-align: left; }
-  .md-txt-center {
-    text-align: center; }
-  .md-txt-right {
-    text-align: right; } }
-
-@media (max-width: 1023px) {
-  .maxmd-txt-left {
-    text-align: left; }
-  .maxmd-txt-center {
-    text-align: center; }
-  .maxmd-txt-right {
-    text-align: right; } }
-
-@media (min-width: 1280px) {
-  .lg-txt-left {
-    text-align: left; }
-  .lg-txt-center {
-    text-align: center; }
-  .lg-txt-right {
-    text-align: right; } }
-
-@media (max-width: 1279px) {
-  .maxlg-txt-left {
-    text-align: left; }
-  .maxlg-txt-center {
-    text-align: center; }
-  .maxlg-txt-right {
-    text-align: right; } }
-
-@media (min-width: 1680px) {
-  .xl-txt-left {
-    text-align: left; }
-  .xl-txt-center {
-    text-align: center; }
-  .xl-txt-right {
-    text-align: right; } }
-
-@media (max-width: 1679px) {
-  .maxxl-txt-left {
-    text-align: left; }
-  .maxxl-txt-center {
-    text-align: center; }
-  .maxxl-txt-right {
-    text-align: right; } }
-
-/* ========================================================================== */
-/***
  * Text transform:
  */
 /**
@@ -19114,6 +18993,391 @@ p.ac-c a:not(.btn) {
   .night .a-underline-alt a:hover {
     background-image: -webkit-linear-gradient(top, transparent 50%, #f3f3f3 50%);
     background-image: linear-gradient(to bottom, transparent 50%, #f3f3f3 50%); }
+
+/***
+	 * Text align:
+	 */
+/**
+			 * Text align left:
+			 * `.ta-left` `.[size]-ta-left` `.max[size]-ta-left`
+			 *
+			 *     @example
+			 *     div.ta-left Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-left {
+  text-align: left; }
+
+/**
+			 * Text align right:
+			 * `.ta-right` `.[size]-ta-right` `.max[size]-ta-right`
+			 *
+			 *     @example
+			 *     div.ta-right Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-right {
+  text-align: right; }
+
+/**
+			 * Text align center:
+			 * `.ta-center` `.[size]-ta-center` `.max[size]-ta-center`
+			 *
+			 *     @example
+			 *     div.ta-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-center {
+  text-align: center; }
+
+/**
+			 * Text align justify:
+			 * `.ta-justify` `.[size]-ta-justify` `.max[size]-ta-justify`
+			 *
+			 *     @example
+			 *     div.ta-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-justify {
+  text-align: justify; }
+
+/**
+			 * Text align justify-all:
+			 * `.ta-justifyall` `.[size]-ta-justifyall` `.max[size]-ta-justifyall`
+			 *
+			 *     @example
+			 *     div.ta-justifyall Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-justifyall {
+  text-align: justify-all; }
+
+/**
+			 * Text align start:
+			 * `.ta-start` `.[size]-ta-start` `.max[size]-ta-start`
+			 *
+			 *     @example
+			 *     div.ta-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-start {
+  text-align: start; }
+
+/**
+			 * Text align end:
+			 * `.ta-end` `.[size]-ta-end` `.max[size]-ta-end`
+			 *
+			 *     @example
+			 *     div.ta-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-end {
+  text-align: end; }
+
+/**
+			 * Text align match-parent:
+			 * `.ta-matchparent` `.[size]-ta-matchparent` `.max[size]-ta-matchparent`
+			 *
+			 *     @example
+			 *     div.ta-matchparent Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-matchparent {
+  text-align: match-parent; }
+
+/**
+			 * Text align -moz-center:
+			 * `.ta-mozcenter` `.[size]-ta-mozcenter` `.max[size]-ta-mozcenter`
+			 *
+			 *     @example
+			 *     div.ta-mozcenter Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-mozcenter {
+  text-align: -moz-center; }
+
+/**
+			 * Text align -webkit-center:
+			 * `.ta-webkitcenter` `.[size]-ta-webkitcenter` `.max[size]-ta-webkitcenter`
+			 *
+			 *     @example
+			 *     div.ta-webkitcenter Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-webkitcenter {
+  text-align: -webkit-center; }
+
+/**
+			 * Text align inherit:
+			 * `.ta-inherit` `.[size]-ta-inherit` `.max[size]-ta-inherit`
+			 *
+			 *     @example
+			 *     div.ta-inherit Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-inherit {
+  text-align: inherit; }
+
+/**
+			 * Text align initial:
+			 * `.ta-initial` `.[size]-ta-initial` `.max[size]-ta-initial`
+			 *
+			 *     @example
+			 *     div.ta-initial Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-initial {
+  text-align: initial; }
+
+/**
+			 * Text align unset:
+			 * `.ta-unset` `.[size]-ta-unset` `.max[size]-ta-unset`
+			 *
+			 *     @example
+			 *     div.ta-unset Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+.ta-unset {
+  text-align: unset; }
+
+@media (min-width: 0) {
+  .xs-ta-left {
+    text-align: left; }
+  .xs-ta-right {
+    text-align: right; }
+  .xs-ta-center {
+    text-align: center; }
+  .xs-ta-justify {
+    text-align: justify; }
+  .xs-ta-justifyall {
+    text-align: justify-all; }
+  .xs-ta-start {
+    text-align: start; }
+  .xs-ta-end {
+    text-align: end; }
+  .xs-ta-matchparent {
+    text-align: match-parent; }
+  .xs-ta-mozcenter {
+    text-align: -moz-center; }
+  .xs-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .xs-ta-inherit {
+    text-align: inherit; }
+  .xs-ta-initial {
+    text-align: initial; }
+  .xs-ta-unset {
+    text-align: unset; } }
+
+@media (min-width: 768px) {
+  .sm-ta-left {
+    text-align: left; }
+  .sm-ta-right {
+    text-align: right; }
+  .sm-ta-center {
+    text-align: center; }
+  .sm-ta-justify {
+    text-align: justify; }
+  .sm-ta-justifyall {
+    text-align: justify-all; }
+  .sm-ta-start {
+    text-align: start; }
+  .sm-ta-end {
+    text-align: end; }
+  .sm-ta-matchparent {
+    text-align: match-parent; }
+  .sm-ta-mozcenter {
+    text-align: -moz-center; }
+  .sm-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .sm-ta-inherit {
+    text-align: inherit; }
+  .sm-ta-initial {
+    text-align: initial; }
+  .sm-ta-unset {
+    text-align: unset; } }
+
+@media (max-width: 767px) {
+  .maxsm-ta-left {
+    text-align: left; }
+  .maxsm-ta-right {
+    text-align: right; }
+  .maxsm-ta-center {
+    text-align: center; }
+  .maxsm-ta-justify {
+    text-align: justify; }
+  .maxsm-ta-justifyall {
+    text-align: justify-all; }
+  .maxsm-ta-start {
+    text-align: start; }
+  .maxsm-ta-end {
+    text-align: end; }
+  .maxsm-ta-matchparent {
+    text-align: match-parent; }
+  .maxsm-ta-mozcenter {
+    text-align: -moz-center; }
+  .maxsm-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .maxsm-ta-inherit {
+    text-align: inherit; }
+  .maxsm-ta-initial {
+    text-align: initial; }
+  .maxsm-ta-unset {
+    text-align: unset; } }
+
+@media (min-width: 1024px) {
+  .md-ta-left {
+    text-align: left; }
+  .md-ta-right {
+    text-align: right; }
+  .md-ta-center {
+    text-align: center; }
+  .md-ta-justify {
+    text-align: justify; }
+  .md-ta-justifyall {
+    text-align: justify-all; }
+  .md-ta-start {
+    text-align: start; }
+  .md-ta-end {
+    text-align: end; }
+  .md-ta-matchparent {
+    text-align: match-parent; }
+  .md-ta-mozcenter {
+    text-align: -moz-center; }
+  .md-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .md-ta-inherit {
+    text-align: inherit; }
+  .md-ta-initial {
+    text-align: initial; }
+  .md-ta-unset {
+    text-align: unset; } }
+
+@media (max-width: 1023px) {
+  .maxmd-ta-left {
+    text-align: left; }
+  .maxmd-ta-right {
+    text-align: right; }
+  .maxmd-ta-center {
+    text-align: center; }
+  .maxmd-ta-justify {
+    text-align: justify; }
+  .maxmd-ta-justifyall {
+    text-align: justify-all; }
+  .maxmd-ta-start {
+    text-align: start; }
+  .maxmd-ta-end {
+    text-align: end; }
+  .maxmd-ta-matchparent {
+    text-align: match-parent; }
+  .maxmd-ta-mozcenter {
+    text-align: -moz-center; }
+  .maxmd-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .maxmd-ta-inherit {
+    text-align: inherit; }
+  .maxmd-ta-initial {
+    text-align: initial; }
+  .maxmd-ta-unset {
+    text-align: unset; } }
+
+@media (min-width: 1280px) {
+  .lg-ta-left {
+    text-align: left; }
+  .lg-ta-right {
+    text-align: right; }
+  .lg-ta-center {
+    text-align: center; }
+  .lg-ta-justify {
+    text-align: justify; }
+  .lg-ta-justifyall {
+    text-align: justify-all; }
+  .lg-ta-start {
+    text-align: start; }
+  .lg-ta-end {
+    text-align: end; }
+  .lg-ta-matchparent {
+    text-align: match-parent; }
+  .lg-ta-mozcenter {
+    text-align: -moz-center; }
+  .lg-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .lg-ta-inherit {
+    text-align: inherit; }
+  .lg-ta-initial {
+    text-align: initial; }
+  .lg-ta-unset {
+    text-align: unset; } }
+
+@media (max-width: 1279px) {
+  .maxlg-ta-left {
+    text-align: left; }
+  .maxlg-ta-right {
+    text-align: right; }
+  .maxlg-ta-center {
+    text-align: center; }
+  .maxlg-ta-justify {
+    text-align: justify; }
+  .maxlg-ta-justifyall {
+    text-align: justify-all; }
+  .maxlg-ta-start {
+    text-align: start; }
+  .maxlg-ta-end {
+    text-align: end; }
+  .maxlg-ta-matchparent {
+    text-align: match-parent; }
+  .maxlg-ta-mozcenter {
+    text-align: -moz-center; }
+  .maxlg-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .maxlg-ta-inherit {
+    text-align: inherit; }
+  .maxlg-ta-initial {
+    text-align: initial; }
+  .maxlg-ta-unset {
+    text-align: unset; } }
+
+@media (min-width: 1680px) {
+  .xl-ta-left {
+    text-align: left; }
+  .xl-ta-right {
+    text-align: right; }
+  .xl-ta-center {
+    text-align: center; }
+  .xl-ta-justify {
+    text-align: justify; }
+  .xl-ta-justifyall {
+    text-align: justify-all; }
+  .xl-ta-start {
+    text-align: start; }
+  .xl-ta-end {
+    text-align: end; }
+  .xl-ta-matchparent {
+    text-align: match-parent; }
+  .xl-ta-mozcenter {
+    text-align: -moz-center; }
+  .xl-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .xl-ta-inherit {
+    text-align: inherit; }
+  .xl-ta-initial {
+    text-align: initial; }
+  .xl-ta-unset {
+    text-align: unset; } }
+
+@media (max-width: 1679px) {
+  .maxxl-ta-left {
+    text-align: left; }
+  .maxxl-ta-right {
+    text-align: right; }
+  .maxxl-ta-center {
+    text-align: center; }
+  .maxxl-ta-justify {
+    text-align: justify; }
+  .maxxl-ta-justifyall {
+    text-align: justify-all; }
+  .maxxl-ta-start {
+    text-align: start; }
+  .maxxl-ta-end {
+    text-align: end; }
+  .maxxl-ta-matchparent {
+    text-align: match-parent; }
+  .maxxl-ta-mozcenter {
+    text-align: -moz-center; }
+  .maxxl-ta-webkitcenter {
+    text-align: -webkit-center; }
+  .maxxl-ta-inherit {
+    text-align: inherit; }
+  .maxxl-ta-initial {
+    text-align: initial; }
+  .maxxl-ta-unset {
+    text-align: unset; } }
 
 /***
 	 * Visibility:
