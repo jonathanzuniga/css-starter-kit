@@ -1,25 +1,23 @@
 @import '../partials/_all';
 
 
-/***
- * Visibility:
- */
+@include class_abbr_val(
+	/* Abbreviation */
+	'v',
 
-/**
- * Visible or hidden:
- * `.vi-[#]`
- *
- *     @example
- *     div.cols
- *         div.col-8
- *             div.bgc-gray-25 &nbsp;
- *         div.col-4.v-0
- *             div.bgc-gray-25 &nbsp;
- */
-.v-0 {
-	visibility: hidden;
-}
+	/* Property */
+	'visibility',
 
-.v-1 {
-	visibility: visible;
-}
+	/* Values */
+	(
+		/* Keyword values */
+		'visible',
+		'hidden',
+		'collapse',
+
+		/* Global values */
+		'inherit',
+		'initial',
+		'unset'
+	)
+);

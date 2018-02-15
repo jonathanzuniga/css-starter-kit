@@ -35,8 +35,8 @@
 	}
 	-webkit-animation: $animations;
 	   -moz-animation: $animations;
-	     -o-animation: $animations;
-	        animation: $animations;
+		 -o-animation: $animations;
+			animation: $animations;
 }
 
 @mixin keyframes($animation-name) {
@@ -54,43 +54,99 @@
 	}
 }
 
-@mixin classes_abbr_value($abbreviation, $property, $list) {
+@mixin class_abbr_val($abbreviation, $property, $values) {
+	// $prop_merge: list_to_str($property);
+
+	/***
+	 * #{str_ucfirst(str_replace($property, '-', ' '))}:
+	 */
+
+	// @if $property-extended {
+	// 	@if type_of($property) == 'list' {
+	// 		@each $abbr, $prop in ($abbreviation: $prop_merge) {
+	// 			@each $prop-ext in $property-extended {
+	// 				@each $value in $values {
+	// 					$i: index($values, $value);
+	// 					.#{$abbr}-#{$prop-ext}-#{$i} {
+	// 						#{nth($property, 1)}-#{$prop-ext}-#{nth($property, 2)}: #{$value};
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	@else {
+
+	// 	}
+	// }
+	// @else {
 	@each $abbr, $prop in ($abbreviation: $property) {
 		$prop_ucf: str_ucfirst($prop);
 		$prop_r: str_replace($prop_ucf, '-', ' ');
-		@each $item in $list {
-			$item_rename: value_to_class($item);
+		@each $value in $values {
+			$value_rename: val_to_class_name($value);
 			/**
-			 * #{$prop_r} #{$item}:
-			 * `.#{$abbr}-#{$item_rename}` `.[size]-#{$abbr}-#{$item_rename}` `.max[size]-#{$abbr}-#{$item_rename}`
+			 * #{$prop_r} #{$value}:
+			 * `.#{$abbr}-#{$value_rename}` `.[size]-#{$abbr}-#{$value_rename}` `.max[size]-#{$abbr}-#{$value_rename}`
 			 *
 			 *     @example
-			 *     p
-			 *         span.#{$abbr}-#{$item_rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 *     div.#{$abbr}-#{$value_rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			 */
-			.#{$abbr}-#{$item_rename} {
-				#{$prop}: #{$item};
+			.#{$abbr}-#{$value_rename} {
+				#{$prop}: #{$value};
 			}
 		}
 
 		@each $size, $length in $grid-breakpoints {
 			@media (min-width: $length) {
-				@each $item in $list {
-					.#{$size}-#{$abbr}-#{value_to_class($item)} {
-						#{$prop}: #{$item};
+				@each $value in $values {
+					.#{$size}-#{$abbr}-#{val_to_class_name($value)} {
+						#{$prop}: #{$value};
 					}
 				}
 			}
 
 			@if ($length != 0) {
 				@media (max-width: $length - 1) {
-					@each $item in $list {
-						.max#{$size}-#{$abbr}-#{value_to_class($item)} {
-							#{$prop}: #{$item};
+					@each $value in $values {
+						.max#{$size}-#{$abbr}-#{val_to_class_name($value)} {
+							#{$prop}: #{$value};
 						}
 					}
 				}
 			}
 		}
 	}
+	// }
 }
+
+
+// abbr-val / d-inline
+// prop: val / display: inline
+
+// abbr-prop_ext-# / m-top-4
+// prop-prop_ext: val / margin-top: 1rem
+
+// abbr-prop_ext-# / bdr-topright-1
+// prop-prop_ext-prop: val / border-top-right-radius: 1px
+
+// @include class(
+// 	/* Abbreviation */
+// 	'bdr',
+
+// 	/* Property */
+// 	(
+// 		'border', 
+// 		'radius'
+// 	),
+
+// 	Property extended
+// 	(
+// 		'top-right',
+// 		'bottom-right',
+// 		'bottom-left',
+// 		'top-left'
+// 	),
+
+// 	/* Values */
+// 	$border-radius
+// );

@@ -1,18 +1,19 @@
 @import '../partials/_all';
 
 
-.pos-absolute {
-	position: absolute;
-}
+@include class_abbr_val(
+	/* Abbreviation */
+	'pos',
 
-.pos-relative {
-	position: relative;
-}
+	/* Property */
+	'position',
 
-.pos-fixed {
-	position: fixed;
-}
-
-.pos-sticky {
-	position: sticky;
-}
+	/* Values */
+	(
+		'absolute',
+		'fixed',
+		'relative',
+		'static',
+		'sticky'
+	)
+);

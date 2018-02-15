@@ -1,8 +1,23 @@
 @import '../partials/_all';
 
 
-/***
- * Font weight:
- */
+@include class_abbr_val(
+	/* Abbreviation */
+	'fw',
 
-@include classes_abbr_value(fw, font-weight, $font-weights);
+	/* Property */
+	'font-weight',
+
+	/* Values */
+	(
+		100,
+		200,
+		300,
+		400,
+		500,
+		600,
+		700,
+		800,
+		900
+	)
+);

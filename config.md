@@ -111,6 +111,8 @@
 											li
 												a(href='helpers.html#opacity') Opacity
 											li
+												a(href='helpers.html#position') Position
+											li
 												a(href='helpers.html#sizing') Sizing
 											li
 												a(href='helpers.html#spacing') Spacing
