@@ -224,7 +224,7 @@ $color-spectrum-range: 50;
 		$length: length($list);
 		@for $i from 1 through $length {
 			$string: $string + nth($list, $i);
-			@if not $i == $length {
+			@if $i < $length {
 				$string: $string + ' ';
 			}
 		}

@@ -97,6 +97,8 @@
 									div.collapse
 										ul.ls-unstyled
 											li
+												a(href='helpers.html#border-style') Border style
+											li
 												a(href='helpers.html#border') Border
 											li
 												a(href='helpers.html#clearfix') Clearfix

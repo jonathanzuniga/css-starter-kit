@@ -1,0 +1,59 @@
+@import '../partials/_all';
+
+
+/***
+ * Border style:
+ */
+
+$abbr: 'bds';
+$values: (	
+	/* Keyword values */
+	'none',
+	'hidden',
+	'dotted',
+	'dashed',
+	'solid',
+	'double',
+	'groove',
+	'ridge',
+	'inset',
+	'outset',
+
+	/* Global values */
+	'inherit',
+	'initial',
+	'unset'
+);
+
+@include class_abbr_val(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	'border-style',
+
+	/* Values */
+	$values
+);
+
+@include class_abbr_propext_val(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	(
+		'border',
+		'style'
+	),
+
+	/* Property extended */
+	(
+		'top',
+		'right',
+		'bottom',
+		'left'
+	),
+
+	/* Values */
+	$values
+);
