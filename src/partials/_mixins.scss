@@ -94,6 +94,45 @@
 	}
 }
 
+@mixin class_abbr_len($abbreviation, $property, $length-value, $number-of-lengths) {
+	@each $abbr, $prop in ($abbreviation: $property) {
+		$prop-ucf: str_ucfirst($prop);
+		$prop-r: str_replace($prop-ucf, '-', ' ');
+		@for $i from 0 through $number-of-lengths {
+			/**
+			 * #{$prop-r} #{$length-value * $i}:
+			 * `.#{$abbr}-#{$i}` `.[size]-#{$abbr}-#{$i}` `.max[size]-#{$abbr}-#{$i}`
+			 *
+			 *     @example
+			 *     div.#{$abbr}-#{$i} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 */
+			.#{$abbr}-#{$i} {
+				#{$prop}: $length-value * $i;
+			}
+		}
+
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				@for $i from 0 through $number-of-lengths {
+					.#{$size}-#{$abbr}-#{$i} {
+						#{$prop}: $length-value * $i;
+					}
+				}
+			}
+
+			@if ($length != 0) {
+				@media (max-width: $length - 1) {
+					@for $i from 0 through $number-of-lengths {
+						.max#{$size}-#{$abbr}-#{$i} {
+							#{$prop}: $length-value * $i;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @mixin class_abbr_propext_val($abbreviation, $property, $property-extended, $values) {
 	$prop-merge: list_to_str($property);
 	@each $abbr, $prop in ($abbreviation: $prop-merge) {

@@ -5,12 +5,15 @@
  * Border width:
  */
 
+$abbr: 'bdw';
+$prop: 'border-width';
+
 @include class_abbr_val(
 	/* Abbreviation */
-	'bdw',
+	$abbr,
 
 	/* Property */
-	'border-width',
+	$prop,
 
 	/* Values */
 	(
@@ -24,4 +27,18 @@
 		'initial',
 		'unset'
 	)
+);
+
+@include class_abbr_len(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+
+	/* Length */
+	$border-width,
+	
+	/* Number of lengths */
+	$border-widths
 );
