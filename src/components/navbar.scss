@@ -28,19 +28,20 @@
  *             a(href='').navbar__link Brand
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.maxsm-txt-center
+ *             ul.navbar__menu.maxsm-ta-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.maxsm-bd-top
  *                     a(href='').navbar__link Archive
  *                 li.navbar__item.maxsm-bd-top
  *                     a(href='').navbar__link About
- *             form.navbar__form.maxsm-txt-center.maxsm-bd-top
- *                 input(type='search', placeholder='Search').input.input--line.maxsm-txt-center
+ *             form.navbar__form.maxsm-ta-center.maxsm-bd-top
+ *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
  */
 .navbar,
 .navbar__brand,
 .navbar__collapse,
+.navbar__no-collapse,
 .navbar__menu,
 .navbar__item,
 .navbar__link,
@@ -98,6 +99,7 @@
 }
 
 .navbar__collapse,
+.navbar__no-collapse,
 .navbar__menu {
 	flex-grow: 1;
 }
@@ -118,7 +120,7 @@
  *             a(href='').navbar__link Brand
  *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.maxsm-txt-center
+ *             ul.navbar__menu.navbar__menu--right.maxsm-ta-center
  *                 li.navbar__item.active.maxsm-bd-top
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.maxsm-bd-top
@@ -130,7 +132,7 @@
 	justify-content: flex-end;
 }
 
-.navbar__item .navbar__link,
+.navbar__link,
 .navbar__toggler {
 	color: $navbar-link-color;
 
@@ -156,7 +158,7 @@
 }
 
 .night {
-	.navbar__item .navbar__link,
+	.navbar__link,
 	.navbar__toggler {
 		color: $night-navbar-link-color;
 
@@ -220,34 +222,54 @@
 		&:last-of-type {
 			order: 3;
 		}
-	}
 
-	.navbar__menu,
-	.navbar__item {
-		flex-direction: column;
-	}
+		.navbar__menu,
+		.navbar__item {
+			flex-direction: column;
+		}
 
-	.navbar__item .navbar__link,
-	.navbar__form {
-		display: block;
-		width: 100%;
-	}
+		.navbar__item .navbar__link,
+		.navbar__form {
+			display: block;
+			width: 100%;
+		}
 
-	.navbar__item {
-		.navbar__link {
+		.navbar__item {
+			.navbar__link {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+
+		.navbar__form {
 			padding-right: 0;
 			padding-left: 0;
 		}
+
+		.input,
+		.btn {
+			line-height: inherit;
+		}
 	}
 
-	.navbar__form {
-		padding-right: 0;
-		padding-left: 0;
-	}
+	.navbar__no-collapse {
+		overflow-x: auto;
+		width: 100%;
 
-	.input,
-	.btn {
-		line-height: inherit;
+		.navbar__menu {
+			justify-content: center;
+
+			// display: inline-block;
+			// flex-grow: 0;
+			// margin-right: auto;
+			// margin-left: auto;
+			// white-space: nowrap;
+			// overflow-x: auto;
+		}
+
+		// .navbar__item {
+		// 	display: inline-block;
+		// }
 	}
 }
 
@@ -342,7 +364,7 @@
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-txt-center
+ *             ul.navbar__menu.navbar__menu--right.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
  *                 li.navbar__item.active.xs-bd-bottom.lg-bd-bottom-0
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.xs-bd-bottom.xs-bd-left.md-bd-x.lg-bd-0
@@ -361,7 +383,7 @@
  *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.maxlg-txt-center
+ *             ul.navbar__menu.maxlg-ta-center
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link RSS feed
  *                 li.navbar__item.maxlg-bd-top
@@ -369,13 +391,36 @@
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.maxlg-txt-center
+ *             ul.navbar__menu.navbar__menu--right.maxlg-ta-center
  *                 li.navbar__item.active.maxlg-bd-top
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link Archive
  *                 li.navbar__item.maxlg-bd-top
  *                     a(href='').navbar__link About
+ */
+
+ /**
+ * Responsive navbar horizontal menu:
+ *
+ *     @example
+ *     nav.navbar.maxmd-navbar-responsive
+ *         a(href='#!').navbar__link.md-d-none Menu
+ *         div.navbar__brand
+ *             a(href='').navbar__link.maxmd-m-0 Brand
+ *         a(href='#!').navbar__link.md-d-none RSS
+ *         div.navbar__no-collapse
+ *             ul.navbar__menu.navbar__menu--right
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__link About
+ *                 li.navbar__item
+ *                     a(href='').navbar__link Contact
+ *                 li.navbar__item
+ *                     a(href='').navbar__link RSS
  */
 
 /**
@@ -421,7 +466,7 @@
 }
 
 .navbar--dark {
-	.navbar__item .navbar__link,
+	.navbar__link,
 	.navbar__toggler {
 		color: $navbar-dark-link-color;
 
@@ -447,32 +492,4 @@
 	}
 }
 
-// .navbar--dark {
-// 	// background-color: ;
 
-// 	.navbar__item {
-// 		color: $night-text-color;
-
-// 		&.active {
-// 			.navbar__link {
-// 				&:link,
-// 				&:hover,
-// 				&:visited {
-// 					color: $night-navbar-item-active-link-color;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	.navbar__link,
-// 	.navbar__toggler {
-// 		&:link,
-// 		&:visited {
-// 			color: $night-navbar-link-color;
-// 		}
-
-// 		&:hover {
-// 			color: $night-navbar-link-hover-color;
-// 		}
-// 	}
-// }
