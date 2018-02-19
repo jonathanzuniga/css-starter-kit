@@ -5,38 +5,16 @@
  * Opacity:
  */
 
-$range: '[0...#{$opacities}]';
-/**
- * Opacity at size:
- * `.op-#{$range}` `.[size]-op-#{$range}` `.max[size]-op-#{$range}`
- *
- *     @example
- *     div.cols
- *         div.col-8
- *             div.bgc-gray-25 &nbsp;
- *         div.col-4.lg-op-0
- *             div.bgc-gray-25 &nbsp;
- */
-@for $i from 0 through $opacities {
-	.op-#{$i} {
-		opacity: #{$opacity * $i};
-	}
-}
+$abbr: 'op';
+$prop: 'opacity';
 
-@each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
-		@for $i from 0 through $opacities {
-			.#{$size}-op-#{$i} {
-				opacity: #{$opacity * $i};
-			}
-		}
-	}
+@include class_abbr_key(
+	/* Abbreviation */
+	$abbr,
 
-	@media (max-width: $length - 1) {
-		@for $i from 0 through $opacities {
-			.max#{$size}-op-#{$i} {
-				opacity: #{$opacity * $i};
-			}
-		}
-	}
-}
+	/* Property */
+	$prop,
+
+	/* Map */
+	$opacities
+);
