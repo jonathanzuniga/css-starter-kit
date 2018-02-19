@@ -84,20 +84,6 @@ th {
 	}
 }
 
-@each $prop, $abbr in (width: tbl-col) {
-	@each $size, $length in $sizes {
-		@for $i from 1 through length($sizes) {
-			$col: $i;
-			.#{$abbr}-#{$col}-#{$size} {
-				tr th:nth-child(#{$col}),
-				tr td:nth-child(#{$col}) {
-					#{$prop}: $length;
-				}
-			}
-		}
-	}
-}
-
 /**
  * Bordered table:
  * `.tbl--bordered`

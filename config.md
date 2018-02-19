@@ -121,8 +121,6 @@
 											li
 												a(href='helpers.html#position') Position
 											li
-												a(href='helpers.html#sizing') Sizing
-											li
 												a(href='helpers.html#text') Text
 											li
 												a(href='helpers.html#text-transform') Text transform
