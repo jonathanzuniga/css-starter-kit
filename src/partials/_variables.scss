@@ -329,7 +329,6 @@ $night-input-group-btn-input-focus-border-color: $night-control-focus-border-col
 
 // File area
 
-$file-area-padding:                      6.25em $spacing-unit-half;
 $file-area-background-color:             color('gray 2');
 $night-file-area-background-color:       color('gray 48');
 
@@ -341,6 +340,9 @@ $night-file-area-hover-background-color: color('gray 46');
 
 $file-area-valid-background-color:       color('blue 4');
 $night-file-area-valid-background-color: color('blue 46');
+
+$file-area-border-radius:                $border-radius-base;
+$file-area-padding:                      6.25em $spacing-unit-half;
 
 
 // Select menu
@@ -499,6 +501,11 @@ $night-table-striped-background-color: color('gray 48');
 
 // Border
 
+$border-radii: (
+	0: 0,
+	4: 0.25rem
+);
+
 $border-widths: (
 	0: 0,
 	1: 0.063rem,
@@ -506,13 +513,13 @@ $border-widths: (
 );
 
 // $border-widths:      5;
-$border-width:       0.063rem;
-$border-style:       solid;
-$border-color:       color('cool gray 6t');
-$night-border-color: color('cool gray 6t');
+// $border-width:       0.063rem;
+// $border-style:       solid;
+// $border-color:       color('cool gray 6t');
+// $night-border-color: color('cool gray 6t');
 
-$border-radii:       5;
-$border-radius:      $border-radius-base;
+// $border-radii:       5;
+// $border-radius:      $border-radius-base;
 
 
 // Sides:
@@ -530,21 +537,39 @@ $sides: (
 $display-important: !important;
 
 
+// Margin
+
+$margins: (
+	0:  0,
+	4:  0.25rem,
+	8:  0.5rem,
+	16: 1rem
+);
+
+
 // Opacity
 
 $opacities: 20;
 $opacity:   0.05;
 
 
-// Spacing
+// Padding
 
-// Cantidad de espacios para margins & paddings,
-$spacings:          25 !default;
+$paddings: (
+	0:  0,
+	4:  0.25rem,
+	8:  0.5rem,
+	16: 1rem
+);
 
-// incrementando cada espacio por...
-$spacing:           0.25rem !default;
 
-$spacing-important: !important;
+// // Cantidad de espacios para margins & paddings,
+// $spacings:          25 !default;
+
+// // incrementando cada espacio por...
+// $spacing:           0.25rem !default;
+
+// $spacing-important: !important;
 
 
 // Sizing
@@ -646,11 +671,11 @@ $grid-gap: $gutter-width;
 $card-background-color:       $body-background-color;
 $night-card-background-color: color('gray 46');
 $card-padding:                $spacing-unit-half;
-$card-border-width:           $border-width;
-$card-border-style:           $border-style;
-$card-border-color:           $border-color;
+$card-border-width:           0.063rem;
+$card-border-style:           solid;
+$card-border-color:           color('cool gray 6t');
 $night-card-border-color:     $night-card-background-color;
-$card-border-radius:          $border-radius;
+$card-border-radius:          $border-radius-base;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
 $card-transition:             $transition-base;
 
@@ -710,7 +735,7 @@ $night-menu-item-active-link-color:             $night-body-color;
 
 // Menu pills
 
-$menu-pills-item-link-border-radius:            $border-radius;
+$menu-pills-item-link-border-radius:            $border-radius-base;
 
 $menu-pills-item-link-color:                    $body-color;
 $night-menu-pills-item-link-color:              $night-body-color;
@@ -773,9 +798,9 @@ $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezie
 // Tabs
 
 $tabs-border-bottom-width:                        0.063rem; // 1px
-$tabs-border-bottom-style:                        $border-style;
-$tabs-border-bottom-color:                        $border-color;
-$night-tabs-border-bottom-color:                  $night-border-color;
+$tabs-border-bottom-style:                        solid;
+$tabs-border-bottom-color:                        color('cool gray 6t');
+$night-tabs-border-bottom-color:                  color('cool gray 6t');
 
 $tabs-item-margin:                                0;
 

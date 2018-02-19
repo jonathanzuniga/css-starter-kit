@@ -39,13 +39,13 @@
 								a(href='layout.html').navbar__link Documentation
 
 		div.cols.cols--center
-			div.main.xs-col-12.md-col-10.xl-col-8
-				div.main__content.cols.p-top-25
+			div.doc-main.xs-col-12.md-col-10.xl-col-8
+				div.doc-main__content.cols
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
 			div.doc-sidebar.xs-col-12.md-col-2.xl-col-1.maxmd-fsmenu
-				div.doc-sidebar__content.cols.p-top-25
+				div.doc-sidebar__content.cols
 					div.col
 						div.cols.maxmd-ta-center
 							div.col-12
@@ -97,11 +97,11 @@
 									div.collapse
 										ul.ls-unstyled
 											li
+												a(href='helpers.html#border-radius') Border radius
+											li
 												a(href='helpers.html#border-style') Border style
 											li
 												a(href='helpers.html#border-width') Border width
-											li
-												a(href='helpers.html#border') Border
 											li
 												a(href='helpers.html#clearfix') Clearfix
 											li
@@ -113,13 +113,15 @@
 											li
 												a(href='helpers.html#font-weight') Font weight
 											li
+												a(href='helpers.html#margin') Margin
+											li
 												a(href='helpers.html#opacity') Opacity
+											li
+												a(href='helpers.html#padding') Padding
 											li
 												a(href='helpers.html#position') Position
 											li
 												a(href='helpers.html#sizing') Sizing
-											li
-												a(href='helpers.html#spacing') Spacing
 											li
 												a(href='helpers.html#text') Text
 											li
@@ -152,7 +154,7 @@
 											li
 												a(href='components.html#tabs') Tabs
 
-								p.m-top-10
+								p.m-top-16
 									input(id='switch-night-mode', type='checkbox').switch.switch--sm
 									label(for='switch-night-mode', id='lbl-night-mode')
 										span

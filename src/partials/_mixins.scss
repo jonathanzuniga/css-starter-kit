@@ -133,27 +133,27 @@
 	}
 }
 
-@mixin class_abbr_map($abbreviation, $property, $map) {
+@mixin class_abbr_key($abbreviation, $property, $map) {
 	@each $abbr, $prop in ($abbreviation: $property) {
 		$prop-ucf: str_ucfirst($prop);
 		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@each $name, $value in $map {
+		@each $key, $value in $map {
 			/**
 			 * #{$prop-r} #{$value}:
-			 * `.#{$abbr}-#{$name}` `.[size]-#{$abbr}-#{$name}` `.max[size]-#{$abbr}-#{$name}`
+			 * `.#{$abbr}-#{$key}` `.[size]-#{$abbr}-#{$key}` `.max[size]-#{$abbr}-#{$key}`
 			 *
 			 *     @example
-			 *     div.#{$abbr}-#{$name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			 *     div.#{$abbr}-#{$key} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			 */
-			.#{$abbr}-#{$name} {
+			.#{$abbr}-#{$key} {
 				#{$prop}: #{$value};
 			}
 		}
 
 		@each $size, $length in $grid-breakpoints {
 			@media (min-width: $length) {
-				@each $name, $value in $map {
-					.#{$size}-#{$abbr}-#{$name} {
+				@each $key, $value in $map {
+					.#{$size}-#{$abbr}-#{$key} {
 						#{$prop}: #{$value};
 					}
 				}
@@ -161,8 +161,8 @@
 
 			@if ($length != 0) {
 				@media (max-width: $length - 1) {
-					@each $name, $value in $map {
-						.max#{$size}-#{$abbr}-#{$name} {
+					@each $key, $value in $map {
+						.max#{$size}-#{$abbr}-#{$key} {
 							#{$prop}: #{$value};
 						}
 					}
@@ -173,9 +173,9 @@
 }
 
 @mixin class_abbr_propext_val($abbreviation, $property, $property-extended, $values) {
-	$prop-merge: list_to_str($property);
-	@each $abbr, $prop in ($abbreviation: $prop-merge) {
-		$prop-ucf: str_ucfirst($prop_merge);
+	$prop-split: str_split($property, '-');
+	@each $abbr, $prop in ($abbreviation: $property) {
+		$prop-ucf: str_ucfirst($property);
 		$prop-r: str_replace($prop-ucf, '-', ' ');
 		@each $prop-ext in $property-extended {
 			$prop-ext-r: str_replace($prop-ext, '-', ' ');
@@ -189,7 +189,7 @@
 				 *     div.#{$abbr}-#{$prop-ext}-#{$value-rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				 */
 				.#{$abbr}-#{$prop-ext}-#{$value-rename} {
-					#{nth($property, 1)}-#{$prop-ext}-#{nth($property, 2)}: #{$value};
+					#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
 				}
 			}
 		}
@@ -199,7 +199,7 @@
 				@each $prop-ext in $property-extended {
 					@each $value in $values {
 						.#{$size}-#{$abbr}-#{$prop-ext}-#{val_to_class_name($value)} {
-							#{nth($property, 1)}-#{$prop-ext}-#{nth($property, 2)}: #{$value};
+							#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
 						}
 					}
 				}
@@ -210,7 +210,7 @@
 					@each $prop-ext in $property-extended {
 						@each $value in $values {
 							.max#{$size}-#{$abbr}-#{$prop-ext}-#{val_to_class_name($value)} {
-								#{nth($property, 1)}-#{$prop-ext}-#{nth($property, 2)}: #{$value};
+								#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
 							}
 						}
 					}
@@ -220,40 +220,90 @@
 	}
 }
 
-// @mixin class_abbr_propext_num($abbreviation, $property, $property-extended, $number, $numbers) {
-// 	$prop_merge: list_to_str($property);
+@mixin class_abbr_propext_key($abbreviation, $property, $property-extended, $map) {
+	$property-contains-a-dash: str-index($property, '-');
+	$prop-split: ();
+	@if $property-contains-a-dash {
+		$prop-split: str_split($property, '-');
+	}
 
-// 	@if type_of($property) == 'list' {
-// 		@each $abbr, $prop in ($abbreviation: $prop_merge) {
-// 			@each $prop-ext in $property-extended {
-// 				@each $value in $values {
-// 					$i: index($values, $value);
-// 					.#{$abbr}-#{$prop-ext}-#{$i} {
-// 						#{nth($property, 1)}-#{$prop-ext}-#{nth($property, 2)}: #{$value};
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	@else {
+	@each $abbr, $prop in ($abbreviation: $property) {
+		$prop-ucf: str_ucfirst($property);
+		$prop-r: str_replace($prop-ucf, '-', ' ');
+		@each $prop-ext in $property-extended {
+			$prop-ext-r: str_replace($prop-ext, '-', ' ');
+			$prop-ext-rename: val_to_class_name($prop-ext);
+			@each $key, $value in $map {
+				/**
+				 * #{$prop-r} #{$prop-ext-r} #{$value}:
+				 * `.#{$abbr}-#{$prop-ext-rename}-#{$key}` `.[size]-#{$abbr}-#{$prop-ext-rename}-#{$key}` `.max[size]-#{$abbr}-#{$prop-ext-rename}-#{$key}`
+				 *
+				 *     @example
+				 *     div.#{$abbr}-#{$prop-ext-rename}-#{$key} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+				.#{$abbr}-#{$prop-ext-rename}-#{$key} {
+					@if $property-contains-a-dash {
+						#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
+					}
+					@else {
+						#{$property)}-#{$prop-ext}: #{$value};
+					}
+				}
+			}
+		}
 
-// 	}
-// }
+		@each $size, $length in $grid-breakpoints {
+			@media (min-width: $length) {
+				@each $prop-ext in $property-extended {
+					$prop-ext-rename: val_to_class_name($prop-ext);
+					@each $key, $value in $map {
+						.#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key} {
+							@if $property-contains-a-dash {
+								#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
+							}
+							@else {
+								#{$property}-#{$prop-ext}: #{$value};
+							}
+						}
+					}
+				}
+			}
+
+			@if ($length != 0) {
+				@media (max-width: $length - 1) {
+					@each $prop-ext in $property-extended {
+						$prop-ext-rename: val_to_class_name($prop-ext);
+						@each $key, $value in $map {
+							.max#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key} {
+								@if $property-contains-a-dash {
+									#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
+								}
+								@else {
+									#{$property}-#{$prop-ext}: #{$value};
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 // abbr-val / bdw-thin
 // prop: val / border-width: thin
 
-// abbr-len / bdw-1
+// abbr-key / bdw-1
 // prop: val / border-width: 1px
 
 // abbr-prop_ext-val / bds-top-solid
 // prop1-prop_ext-prop2: val / border-top-style: solid
 
-// abbr-prop_ext-len / bdw-top-4
+// abbr-prop_ext-key / bdw-top-4
 // prop1-prop_ext-prop2: val / border-top-width: 1px
 
-// abbr-prop_ext-len / bdr-topright-1
+// abbr-prop_ext-key / bdr-topright-1
 // prop1-prop_ext-prop2: val / border-top-right-radius: 1px
 
 

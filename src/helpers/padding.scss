@@ -1,0 +1,39 @@
+@import '../partials/_all';
+
+
+/***
+ * Padding:
+ */
+
+$abbr: 'p';
+$prop: 'padding';
+
+@include class_abbr_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+
+	/* Map */
+	$paddings
+);
+
+@include class_abbr_propext_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+	
+	/* Property extended */
+	(
+		'top',
+		'right',
+		'bottom',
+		'left'
+	),
+
+	/* Map */
+	$paddings
+);

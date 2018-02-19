@@ -29,7 +29,7 @@ $prop: 'border-width';
 	)
 );
 
-@include class_abbr_map(
+@include class_abbr_key(
 	/* Abbreviation */
 	$abbr,
 
@@ -40,16 +40,21 @@ $prop: 'border-width';
 	$border-widths
 );
 
-// @include class_abbr_len(
-// 	/* Abbreviation */
-// 	$abbr,
+@include class_abbr_propext_key(
+	/* Abbreviation */
+	$abbr,
 
-// 	/* Property */
-// 	$prop,
-
-// 	/* Length */
-// 	$border-width,
+	/* Property */
+	$prop,
 	
-// 	/* Number of lengths */
-// 	$border-widths
-// );
+	/* Property extended */
+	(
+		'top',
+		'right',
+		'bottom',
+		'left'
+	),
+
+	/* Map */
+	$border-widths
+);

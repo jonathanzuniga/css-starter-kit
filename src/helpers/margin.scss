@@ -1,0 +1,39 @@
+@import '../partials/_all';
+
+
+/***
+ * Margin:
+ */
+
+$abbr: 'm';
+$prop: 'margin';
+
+@include class_abbr_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+
+	/* Map */
+	$margins
+);
+
+@include class_abbr_propext_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+	
+	/* Property extended */
+	(
+		'top',
+		'right',
+		'bottom',
+		'left'
+	),
+
+	/* Map */
+	$margins
+);

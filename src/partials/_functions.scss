@@ -205,11 +205,11 @@ $color-spectrum-range: 50;
 	// Loop through string.
 	@while $index != null {
 		// Get the substring from the first character to the separator.
-		$item: str_index($string, 1, $index - 1);
+		$item: str_slice($string, 1, $index - 1);
 		// Push item to array
 		$split-list: append($split-list, $item);
 		// Remove item and separator from string.
-		$string: str_index($string, $index + 1);
+		$string: str_slice($string, $index + 1);
 		// Find new index of separator.
 		$index : str_index($string, $separator);
 	}

@@ -1,0 +1,41 @@
+@import '../partials/_all';
+
+
+/***
+ * Border radius:
+ */
+
+$abbr: 'bdr';
+$prop: 'border-radius';
+
+@include class_abbr_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+
+	/* Map */
+	$border-radii
+);
+
+@include class_abbr_propext_key(
+	/* Abbreviation */
+	$abbr,
+
+	/* Property */
+	$prop,
+
+	/* Property extended */
+	(
+		'top-right',
+		'top-right-and-bottom-left',
+		'bottom-right',
+		'bottom-left',
+		'top-left',
+		'top-left-and-bottom-right'
+	),
+
+	/* Map */
+	$border-radii
+);
