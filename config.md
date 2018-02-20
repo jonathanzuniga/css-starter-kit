@@ -18,7 +18,7 @@
 			var nightMode = localStorage.getItem('nightMode');
 			if (!nightMode) return;
 			
-			document.documentElement.classList.add('night', 'txt-smooth');
+			document.documentElement.classList.add('night', 'fsmooth');
 		})(window, document);
 
 ### Body
@@ -111,6 +111,8 @@
 											li
 												a(href='helpers.html#float') Float
 											li
+												a(href='helpers.html#font-size') Font size
+											li
 												a(href='helpers.html#font-weight') Font weight
 											li
 												a(href='helpers.html#margin') Margin
@@ -121,13 +123,11 @@
 											li
 												a(href='helpers.html#position') Position
 											li
-												a(href='helpers.html#text') Text
+												a(href='helpers.html#text-align') Text align
 											li
 												a(href='helpers.html#text-transform') Text transform
 											li
-												a(href='helpers.html#other-text-helpers') Other text helpers
-											li
-												a(href='helpers.html#text-align') Text align
+												a(href='helpers.html#text') Text
 											li
 												a(href='helpers.html#visibility') Visibility
 

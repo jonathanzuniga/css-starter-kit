@@ -99,12 +99,12 @@ function switchNightMode() {
 
 function switchNightModeStart(element) {
 	if ($(element).is(':checked')) {
-		$('html').addClass('night txt-smooth');
+		$('html').addClass('night fsmooth');
 		$('#icon-night-mode').removeClass('ion-ios-moon-outline').addClass('ion-ios-moon');
 		localStorage.setItem('nightMode', true);
 	}
 	else {
-		$('html').removeClass('night txt-smooth');
+		$('html').removeClass('night fsmooth');
 		$('#icon-night-mode').removeClass('ion-ios-moon').addClass('ion-ios-moon-outline');
 		localStorage.removeItem('nightMode');
 	}

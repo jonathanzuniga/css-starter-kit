@@ -96,6 +96,7 @@ $headings: (
 	'h6': 1em     // 16px
 ) !default;
 
+$heading-font-weight: 500;
 $heading-line-height: 1.2;
 
 
@@ -131,13 +132,13 @@ $blockquote-footer-before-content:      '— ';
 
 // Code
 
-$code-background-color:       none;
-$night-code-background-color: none;
-$code-color:                  color('orange 28');
-$night-code-color:            color('orange 28');
-$code-border-radius:          none;
+$code-background-color:       rgba(black, 0.05);
+$night-code-background-color: rgba(white, 0.05);
+$code-color:                  inherit;
+$night-code-color:            inherit;
+$code-border-radius:          $border-radius-base;
 $code-font-size:              0.875em; // 14px
-$code-padding:                0;
+$code-padding:                0.125em 0.313em; // 2px 5px
 
 $pre-background-color:        color('gray 2');
 $night-pre-background-color:  color('gray 48');
@@ -213,8 +214,8 @@ $buttons: (
 	'secondary' color('cool gray 25') color('cool gray 35') color('white 25')   '',
 	'success'   color('green 25')     color('green 25')     color('white 25')   '',
 	'danger'    color('red 25')       color('red 25')       color('white 25')   '',
-	'light'     color('cool gray 6')  color('cool gray 6')  color('gray 40')    '',
-	'dark'      color('cool gray 44') color('cool gray 44') color('gray 5')     ''
+	'light'     color('white 25')     color('white 25')     color('black 25')   '',
+	'dark'      color('black 25')     color('black 25')     color('white 25')   'y'
 );
 
 
@@ -516,6 +517,14 @@ $border-widths: (
 );
 
 
+// Font size
+
+$font-sizes: (
+	sm: $font-size-small,
+	lg: $font-size-large
+);
+
+
 // Margin
 
 $margins: (
@@ -646,9 +655,9 @@ $collapse-max-height:                                 0;
 $collapse-open-height:                                auto;
 $collapse-open-max-height:                            100vh;
 $collapse-transition:                                 height     0.3s $transition-timing-function,
-																											max-height 0.3s $transition-timing-function,
-																											opacity    0.3s $transition-timing-function,
-																											transform  0.3s $transition-timing-function;
+													  max-height 0.3s $transition-timing-function,
+													  opacity    0.3s $transition-timing-function,
+													  transform  0.3s $transition-timing-function;
 
 $collapse-list-unstyled-link-color:                   color('gray 25');
 $night-collapse-list-unstyled-link-color:             color('gray 25');
@@ -671,7 +680,7 @@ $drawer-outside-transition:             margin 0.3s $transition-timing-function;
 $drawer-overlay-background-color:       color('gray 45');
 $night-drawer-overlay-background-color: color('gray 45');
 $drawer-overlay-transition:             opacity    0.3s $transition-timing-function,
-																				visibility 0.3s $transition-timing-function;
+										visibility 0.3s $transition-timing-function;
 $drawer-overlay-z-index:                100;
 
 $drawer-push-outside-transition:        transform 0.3s $transition-timing-function;
@@ -736,18 +745,18 @@ $navbar-dark-item-active-link-color:  color('white 25');
 // Full screen menu
 
 $full-screen-menu-transition:                  opacity          0.5s step-end, 
-																							 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-																							 visibility       0.5s step-end, 
-																							 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+											   visibility       0.5s step-end, 
+											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
 $full-screen-menu-open-background-color:       $body-background-color;
 $night-full-screen-menu-open-background-color: $night-body-background-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
-																							 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-																							 visibility       0.5s step-start, 
-																							 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+											   visibility       0.5s step-start, 
+											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
@@ -788,4 +797,4 @@ $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
 $tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
-																									width     $transition-duration $transition-timing-function;
+												  width     $transition-duration $transition-timing-function;

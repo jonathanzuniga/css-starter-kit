@@ -79,6 +79,7 @@ p > a:not(.btn) {
 h1,
 .h1 {
   font-size: 2.5em;
+  font-weight: 500;
   line-height: 1.2; }
   h1:not(:first-child),
   .h1:not(:first-child) {
@@ -87,6 +88,7 @@ h1,
 h2,
 .h2 {
   font-size: 2em;
+  font-weight: 500;
   line-height: 1.2; }
   h2:not(:first-child),
   .h2:not(:first-child) {
@@ -95,6 +97,7 @@ h2,
 h3,
 .h3 {
   font-size: 1.75em;
+  font-weight: 500;
   line-height: 1.2; }
   h3:not(:first-child),
   .h3:not(:first-child) {
@@ -103,6 +106,7 @@ h3,
 h4,
 .h4 {
   font-size: 1.5em;
+  font-weight: 500;
   line-height: 1.2; }
   h4:not(:first-child),
   .h4:not(:first-child) {
@@ -111,6 +115,7 @@ h4,
 h5,
 .h5 {
   font-size: 1.25em;
+  font-weight: 500;
   line-height: 1.2; }
   h5:not(:first-child),
   .h5:not(:first-child) {
@@ -119,6 +124,7 @@ h5,
 h6,
 .h6 {
   font-size: 1em;
+  font-weight: 500;
   line-height: 1.2; }
   h6:not(:first-child),
   .h6:not(:first-child) {
@@ -151,29 +157,25 @@ h6,
  *         small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 b,
-strong,
-.txt-b {
+strong {
   font-weight: 700; }
 
 em,
-i,
-.txt-i {
+i {
   font-style: italic; }
 
-mark,
-.txt-mark {
+mark {
   border-radius: 0;
   background-color: #fef6de;
   background-image: none;
+  color: inherit;
   padding: 0.2em; }
 
-.night mark,
-.night .txt-mark {
+.night mark {
   background-color: #202020;
   background-image: none; }
 
-small,
-.txt-sm {
+small {
   font-size: 0.75em; }
 
 img {
@@ -225,16 +227,16 @@ blockquote {
  *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
  */
 code {
-  background-color: none;
-  border-radius: none;
-  color: #e08a50;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  color: inherit;
   font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
   font-size: 0.875em;
-  padding: 0; }
+  padding: 0.125em 0.313em; }
 
 .night code {
-  background-color: none;
-  color: #e08a50; }
+  background-color: rgba(255, 255, 255, 0.05);
+  color: inherit; }
 
 /**
  * Code block:

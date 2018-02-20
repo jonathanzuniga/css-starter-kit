@@ -107,6 +107,7 @@ p > a:not(.btn) {
 	#{$heading},
 	.#{$heading} {
 		font-size: $size;
+		font-weight: $heading-font-weight;
 		line-height: $heading-line-height;
 
 		&:not(:first-child) {
@@ -142,35 +143,31 @@ p > a:not(.btn) {
  *         small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 b,
-strong,
-.txt-b {
+strong {
 	font-weight: 700;
 }
 
 em,
-i,
-.txt-i {
+i {
 	font-style: italic;
 }
 
-mark,
-.txt-mark {
+mark {
 	border-radius: $mark-border-radius;
 	background-color: $mark-background-color;
 	background-image: $mark-background-image;
+	color: inherit;
 	padding: $mark-padding;
 }
 
 .night {
-	mark,
-	.txt-mark {
+	mark {
 		background-color: $night-mark-background-color;
 		background-image: $night-mark-background-image;
 	}
 }
 
-small,
-.txt-sm {
+small {
 	font-size: $font-size-small;
 }
 
