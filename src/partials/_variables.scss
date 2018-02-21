@@ -48,8 +48,8 @@ $night-body-background-color: #000;
 
 $colors:                     (colors($body-background-color, $night-body-background-color)) !default;
 
-$body-color:                  color('gray 47');
-$night-body-color:            color('gray 3');
+$body-color:                  color('black 21t');
+$night-body-color:            color('white 21t');
 
 
 // Transition
@@ -57,9 +57,9 @@ $night-body-color:            color('gray 3');
 $transition-duration:        0.16s;
 $transition-timing-function: ease-out;
 $transition-base:            background-color $transition-duration $transition-timing-function, 
-														 border-color     $transition-duration $transition-timing-function, 
-														 box-shadow       $transition-duration $transition-timing-function, 
-														 color            $transition-duration $transition-timing-function;
+							 border-color     $transition-duration $transition-timing-function, 
+							 box-shadow       $transition-duration $transition-timing-function, 
+							 color            $transition-duration $transition-timing-function;
 
 
 // Hyperlink
@@ -277,11 +277,11 @@ $night-input-focus-border-color:          $night-control-focus-border-color;
 $input-focus-box-shadow:                  $control-focus-box-shadow;
 $night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
-$input-placeholder-color:                 color('black 15t');
-$night-input-placeholder-color:           color('white 17t');
+$input-placeholder-color:                 color('black 6t');
+$night-input-placeholder-color:           color('white 6t');
 $input-focus-placeholder-color:           color('blue 13t');
 $night-input-focus-placeholder-color:     color('blue 13t');
-$input-placeholder-opacity:               0.8;
+$input-placeholder-opacity:               1;
 
 $input-hover-border-color:                $input-border-color;
 $night-input-hover-border-color:          $night-input-border-color;
@@ -344,6 +344,7 @@ $night-file-area-valid-background-color: color('blue 46');
 
 $file-area-border-radius:                $border-radius-base;
 $file-area-padding:                      6.25em $spacing-unit-half;
+$file-area-transition:                   $transition-base;
 
 
 // Select menu
@@ -667,10 +668,10 @@ $collapse-transition:                                 height     0.3s $transitio
 													  opacity    0.3s $transition-timing-function,
 													  transform  0.3s $transition-timing-function;
 
-$collapse-list-unstyled-link-color:                   color('gray 25');
-$night-collapse-list-unstyled-link-color:             color('gray 25');
-$collapse-list-unstyled-link-hover-color:             color('gray 33');
-$night-collapse-list-unstyled-link-hover-color:       color('gray 17');
+$collapse-list-unstyled-link-color:                   color('black 15t');
+$night-collapse-list-unstyled-link-color:             color('white 15t');
+$collapse-list-unstyled-link-hover-color:             color('black 21t');
+$night-collapse-list-unstyled-link-hover-color:       color('white 21t');
 $collapse-list-unstyled-item-active-link-color:       $body-color;
 $night-collapse-list-unstyled-item-active-link-color: $night-body-color;
 
@@ -737,15 +738,17 @@ $navbar-brand-font-size:              1.25em;
 $navbar-toggler-cursor:               pointer;
 
 $navbar-link-color:                   color('black 15t');
-$night-navbar-link-color:             color('white 17t');
-$navbar-link-hover-color:             color('black 23t');
-$night-navbar-link-hover-color:       color('white 25');
-$navbar-item-active-link-color:       color('black 23t');
-$night-navbar-item-active-link-color: color('white 25');
+$night-navbar-link-color:             color('white 15t');
 
-$navbar-dark-link-color:              color('white 17t');
-$navbar-dark-link-hover-color:        color('white 25');
-$navbar-dark-item-active-link-color:  color('white 25');
+$navbar-link-hover-color:             color('black 21t');
+$night-navbar-link-hover-color:       color('white 21t');
+
+$navbar-item-active-link-color:       $body-color;
+$night-navbar-item-active-link-color: $night-body-color;
+
+$navbar-dark-link-color:              color('white 15t');
+$navbar-dark-link-hover-color:        color('white 21t');
+$navbar-dark-item-active-link-color:  $night-body-color;
 
 
 // Navmenu
@@ -782,11 +785,11 @@ $night-tabs-link-border-bottom-color:             transparent;
 
 $tabs-link-border-bottom-width:                   0.188rem; // 3px
 
-$tabs-link-color:                                 color('gray 25');
-$night-tabs-link-color:                           color('gray 25');
+$tabs-link-color:                                 color('black 15t');
+$night-tabs-link-color:                           color('white 15t');
 
-$tabs-link-hover-color:                           color('gray 33');
-$night-tabs-link-hover-color:                     color('gray 17');
+$tabs-link-hover-color:                           color('black 21t');
+$night-tabs-link-hover-color:                     color('white 21t');
 
 $tabs-link-padding-y:                             $spacing-unit-quarter;
 $tabs-link-padding-x:                             $spacing-unit-half;

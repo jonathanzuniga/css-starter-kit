@@ -9,7 +9,7 @@
 
 body {
   background-color: #fff;
-  color: #131313;
+  color: rgba(0, 0, 0, 0.84);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5625;
@@ -17,7 +17,7 @@ body {
 
 .night body {
   background-color: #000;
-  color: #f3f3f3; }
+  color: rgba(255, 255, 255, 0.84); }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -330,7 +330,7 @@ ul {
   border-color: #e0e0e0;
   border-radius: 0.25rem;
   box-shadow: none;
-  color: #131313;
+  color: rgba(0, 0, 0, 0.84);
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -340,11 +340,11 @@ ul {
   width: 100%; }
   .input::-moz-placeholder,
   .txtarea::-moz-placeholder {
-    opacity: 0.8; }
+    opacity: 1; }
   .input::placeholder,
   .txtarea::placeholder {
-    color: rgba(0, 0, 0, 0.6);
-    opacity: 0.8; }
+    color: rgba(0, 0, 0, 0.24);
+    opacity: 1; }
   .input:invalid,
   .txtarea:invalid {
     border-color: #ff5654; }
@@ -373,11 +373,11 @@ ul {
 .navbar--dark .input {
   background-color: transparent;
   border-color: #333333;
-  color: #f3f3f3; }
+  color: rgba(255, 255, 255, 0.84); }
   .night .input::placeholder,
   .night .txtarea::placeholder,
   .navbar--dark .input::placeholder {
-    color: rgba(255, 255, 255, 0.68); }
+    color: rgba(255, 255, 255, 0.24); }
   .night .input:invalid,
   .night .txtarea:invalid,
   .navbar--dark .input:invalid {
@@ -592,12 +592,12 @@ ul {
 
 .night .sel {
   border-color: #333333;
-  color: #f3f3f3; }
+  color: rgba(255, 255, 255, 0.84); }
   .night .sel:focus, .night .sel:focus:hover {
     border-color: rgba(34, 153, 244, 0.52);
     box-shadow: inset 0 0 0 0.063rem rgba(34, 153, 244, 0.52); }
   .night .sel option {
-    color: #131313; }
+    color: rgba(0, 0, 0, 0.84); }
 
 /**
  * Pure CSS select menu icon:
@@ -620,7 +620,7 @@ ul {
   .sel-icn:after {
     border-width: 0.125em;
     border-style: solid;
-    border-color: #131313;
+    border-color: rgba(0, 0, 0, 0.84);
     border-right: 0;
     border-top: 0;
     content: '';
@@ -635,7 +635,7 @@ ul {
     transform: rotate(-45deg); }
 
 .night .sel-icn:after {
-  border-color: #f3f3f3; }
+  border-color: rgba(255, 255, 255, 0.84); }
 
 /**
  * Select menu size:
@@ -1580,6 +1580,7 @@ ul {
     right: 0;
     bottom: 0;
     left: 0;
+    transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
     z-index: -1; }
   .file-area:hover .file-area__bg {
     background-color: #efeff0; }
