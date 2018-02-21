@@ -227,6 +227,8 @@
 		$prop-split: str_split($property, '-');
 	}
 
+	$class-name: '';
+
 	@each $abbr, $prop in ($abbreviation: $property) {
 		$prop-ucf: str_ucfirst($property);
 		$prop-r: str_replace($prop-ucf, '-', ' ');
@@ -234,14 +236,15 @@
 			$prop-ext-r: str_replace($prop-ext, '-', ' ');
 			$prop-ext-rename: val_to_class_name($prop-ext);
 			@each $key, $value in $map {
+				$class-name: #{$abbr}-#{$prop-ext-rename}-#{$key};
 				/**
 				 * #{$prop-r} #{$prop-ext-r} #{$value}:
-				 * `.#{$abbr}-#{$prop-ext-rename}-#{$key}` `.[size]-#{$abbr}-#{$prop-ext-rename}-#{$key}` `.max[size]-#{$abbr}-#{$prop-ext-rename}-#{$key}`
+				 * `.#{$class-name}` `.[size]-#{$class-name}` `.max[size]-#{$class-name}`
 				 *
 				 *     @example
-				 *     div.#{$abbr}-#{$prop-ext-rename}-#{$key} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 *     div.#{$class-name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				 */
-				.#{$abbr}-#{$prop-ext-rename}-#{$key} {
+				.#{$class-name} {
 					@if $property-contains-a-dash {
 						#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
 					}

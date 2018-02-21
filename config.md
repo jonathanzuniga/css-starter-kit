@@ -103,6 +103,8 @@
 											li
 												a(href='helpers.html#border-width') Border width
 											li
+												a(href='helpers.html#border') Border
+											li
 												a(href='helpers.html#clearfix') Clearfix
 											li
 												a(href='helpers.html#color') Color

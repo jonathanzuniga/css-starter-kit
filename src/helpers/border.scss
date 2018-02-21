@@ -2,11 +2,11 @@
 
 
 /***
- * Border radius:
+ * Border:
  */
 
-$abbr: 'bdr';
-$prop: 'border-radius';
+$abbr: 'bd';
+$prop: 'border';
 
 @include class_abbr_key(
 	/* Abbreviation */
@@ -16,7 +16,7 @@ $prop: 'border-radius';
 	$prop,
 
 	/* Map */
-	$border-radii
+	$borders
 );
 
 @include class_abbr_propext_key(
@@ -25,17 +25,15 @@ $prop: 'border-radius';
 
 	/* Property */
 	$prop,
-
+	
 	/* Property extended */
 	(
-		// 'top-right-and-bottom-left',
-		// 'top-left-and-bottom-right',
-		'top-right',
-		'top-left',
-		'bottom-right',
-		'bottom-left'
+		'top',
+		'right',
+		'bottom',
+		'left'
 	),
 
 	/* Map */
-	$border-radii
+	$borders
 );
