@@ -8,24 +8,13 @@
 $abbr: 'bdr';
 $prop: 'border-radius';
 
-@include class_abbr_key(
+@include class_gen(
 	/* Abbreviation */
 	$abbr,
 
 	/* Property */
 	$prop,
-
-	/* Map */
-	$border-radii
-);
-
-@include class_abbr_propext_key(
-	/* Abbreviation */
-	$abbr,
-
-	/* Property */
-	$prop,
-
+	
 	/* Property extended */
 	(
 		// 'top-right-and-bottom-left',

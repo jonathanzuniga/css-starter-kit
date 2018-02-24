@@ -8,18 +8,7 @@
 $abbr: 'bd';
 $prop: 'border';
 
-@include class_abbr_key(
-	/* Abbreviation */
-	$abbr,
-
-	/* Property */
-	$prop,
-
-	/* Map */
-	$borders
-);
-
-@include class_abbr_propext_key(
+@include class_gen(
 	/* Abbreviation */
 	$abbr,
 
@@ -28,10 +17,13 @@ $prop: 'border';
 	
 	/* Property extended */
 	(
+		'',
 		'top',
 		'right',
 		'bottom',
-		'left'
+		'left',
+		'y',
+		'x'
 	),
 
 	/* Map */
