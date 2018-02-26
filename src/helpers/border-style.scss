@@ -5,53 +5,24 @@
  * Border style:
  */
 
-$abbr: 'bds';
-$prop: 'border-style';
-$values: (	
-	/* Keyword values */
-	'none',
-	// 'hidden',
-	'dotted',
-	'dashed',
-	'solid',
-	// 'double',
-	// 'groove',
-	// 'ridge',
-	// 'inset',
-	// 'outset',
-
-	/* Global values */
-	// 'inherit',
-	// 'initial',
-	// 'unset'
-);
-
-@include class_abbr_val(
+@include class_gen(
 	/* Abbreviation */
-	$abbr,
+	'bds',
 
 	/* Property */
-	$prop,
-
-	/* Values */
-	$values
-);
-
-@include class_abbr_propext_val(
-	/* Abbreviation */
-	$abbr,
-
-	/* Property */
-	$prop,
+	'border-style',
 
 	/* Property extended */
 	(
+		'',
 		'top',
 		'right',
 		'bottom',
-		'left'
+		'left',
+		'y',
+		'x'
 	),
 
-	/* Values */
-	$values
+	/* Map */
+	$border-styles
 );

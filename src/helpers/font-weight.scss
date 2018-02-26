@@ -5,23 +5,18 @@
  * Font weight:
  */
 
-@include class_abbr_val(
+@include class_gen(
 	/* Abbreviation */
 	'fw',
 
 	/* Property */
 	'font-weight',
 
-	/* Values */
+	/* Property extended */
 	(
-		100,
-		200,
-		300,
-		400,
-		500,
-		600,
-		700,
-		800,
-		900
-	)
+		''
+	),
+
+	/* Map */
+	$font-weights
 );

@@ -5,19 +5,18 @@
  * Position:
  */
 
-@include class_abbr_val(
+@include class_gen(
 	/* Abbreviation */
 	'pos',
 
 	/* Property */
 	'position',
 
-	/* Values */
+	/* Property extended */
 	(
-		'absolute',
-		'fixed',
-		'relative',
-		'static',
-		'sticky'
-	)
+		''
+	),
+
+	/* Map */
+	$positions
 );

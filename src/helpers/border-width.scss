@@ -5,54 +5,22 @@
  * Border width:
  */
 
-$abbr: 'bdw';
-$prop: 'border-width';
-
-// @include class_abbr_val(
-// 	/* Abbreviation */
-// 	$abbr,
-
-// 	/* Property */
-// 	$prop,
-
-// 	/* Values */
-// 	(
-// 		/* Keyword values */
-// 		// 'thin',
-// 		// 'medium',
-// 		// 'thick',
-
-// 		/* Global keywords */
-// 		// 'inherit',
-// 		// 'initial',
-// 		// 'unset'
-// 	)
-// );
-
-@include class_abbr_key(
+@include class_gen(
 	/* Abbreviation */
-	$abbr,
+	'bdw',
 
 	/* Property */
-	$prop,
-
-	/* Map */
-	$border-widths
-);
-
-@include class_abbr_propext_key(
-	/* Abbreviation */
-	$abbr,
-
-	/* Property */
-	$prop,
+	'border-width',
 	
 	/* Property extended */
 	(
+		'',
 		'top',
 		'right',
 		'bottom',
-		'left'
+		'left',
+		'y',
+		'x'
 	),
 
 	/* Map */

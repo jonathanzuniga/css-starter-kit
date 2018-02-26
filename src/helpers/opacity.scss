@@ -5,15 +5,17 @@
  * Opacity:
  */
 
-$abbr: 'op';
-$prop: 'opacity';
-
-@include class_abbr_key(
+@include class_gen(
 	/* Abbreviation */
-	$abbr,
+	'op',
 
 	/* Property */
-	$prop,
+	'opacity',
+
+	/* Property extended */
+	(
+		''
+	),
 
 	/* Map */
 	$opacities

@@ -54,259 +54,13 @@
 	}
 }
 
-@mixin class_abbr_val($abbreviation, $property, $values) {
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($prop);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@each $value in $values {
-			$value-rename: val_to_class_name($value);
-			/**
-			 * #{$prop-r} #{$value}:
-			 * `.#{$abbr}-#{$value-rename}` `.[size]-#{$abbr}-#{$value-rename}` `.max[size]-#{$abbr}-#{$value-rename}`
-			 *
-			 *     @example
-			 *     div.#{$abbr}-#{$value-rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			 */
-			.#{$abbr}-#{$value-rename} {
-				#{$prop}: #{$value};
-			}
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
-				@each $value in $values {
-					.#{$size}-#{$abbr}-#{val_to_class_name($value)} {
-						#{$prop}: #{$value};
-					}
-				}
-			}
-
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@each $value in $values {
-						.max#{$size}-#{$abbr}-#{val_to_class_name($value)} {
-							#{$prop}: #{$value};
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@mixin class_abbr_len($abbreviation, $property, $length-value, $number-of-lengths) {
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($prop);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@for $i from 0 through $number-of-lengths {
-			/**
-			 * #{$prop-r} #{$length-value * $i}:
-			 * `.#{$abbr}-#{$i}` `.[size]-#{$abbr}-#{$i}` `.max[size]-#{$abbr}-#{$i}`
-			 *
-			 *     @example
-			 *     div.#{$abbr}-#{$i} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			 */
-			.#{$abbr}-#{$i} {
-				#{$prop}: $length-value * $i;
-			}
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
-				@for $i from 0 through $number-of-lengths {
-					.#{$size}-#{$abbr}-#{$i} {
-						#{$prop}: $length-value * $i;
-					}
-				}
-			}
-
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@for $i from 0 through $number-of-lengths {
-						.max#{$size}-#{$abbr}-#{$i} {
-							#{$prop}: $length-value * $i;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@mixin class_abbr_key($abbreviation, $property, $map) {
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($prop);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@each $key, $value in $map {
-			/**
-			 * #{$prop-r} #{$value}:
-			 * `.#{$abbr}-#{$key}` `.[size]-#{$abbr}-#{$key}` `.max[size]-#{$abbr}-#{$key}`
-			 *
-			 *     @example
-			 *     div.#{$abbr}-#{$key} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			 */
-			.#{$abbr}-#{$key} {
-				#{$prop}: #{$value};
-			}
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
-				@each $key, $value in $map {
-					.#{$size}-#{$abbr}-#{$key} {
-						#{$prop}: #{$value};
-					}
-				}
-			}
-
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@each $key, $value in $map {
-						.max#{$size}-#{$abbr}-#{$key} {
-							#{$prop}: #{$value};
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@mixin class_abbr_propext_val($abbreviation, $property, $property-extended, $values) {
-	$prop-split: str_split($property, '-');
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($property);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@each $prop-ext in $property-extended {
-			$prop-ext-r: str_replace($prop-ext, '-', ' ');
-			@each $value in $values {
-				$value-rename: val_to_class_name($value);
-				/**
-				 * #{$prop-r} #{$prop-ext-r} #{$value}:
-				 * `.#{$abbr}-#{$prop-ext}-#{$value-rename}` `.[size]-#{$abbr}-#{$prop-ext}-#{$value-rename}` `.max[size]-#{$abbr}-#{$prop-ext}-#{$value-rename}`
-				 *
-				 *     @example
-				 *     div.#{$abbr}-#{$prop-ext}-#{$value-rename} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				 */
-				.#{$abbr}-#{$prop-ext}-#{$value-rename} {
-					#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-				}
-			}
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
-				@each $prop-ext in $property-extended {
-					@each $value in $values {
-						.#{$size}-#{$abbr}-#{$prop-ext}-#{val_to_class_name($value)} {
-							#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-						}
-					}
-				}
-			}
-
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@each $prop-ext in $property-extended {
-						@each $value in $values {
-							.max#{$size}-#{$abbr}-#{$prop-ext}-#{val_to_class_name($value)} {
-								#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@mixin class_abbr_propext_key($abbreviation, $property, $property-extended, $map) {
-	$property-contains-a-dash: str-index($property, '-');
-	$prop-split: ();
-	@if $property-contains-a-dash {
-		$prop-split: str_split($property, '-');
-	}
-
-	$class-name: '';
-
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($property);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
-		@each $prop-ext in $property-extended {
-			$prop-ext-r: str_replace($prop-ext, '-', ' ');
-			$prop-ext-rename: val_to_class_name($prop-ext);
-			@each $key, $value in $map {
-				$class-name: #{$abbr}-#{$prop-ext-rename}-#{$key};
-				/**
-				 * #{$prop-r} #{$prop-ext-r} #{$value}:
-				 * `.#{$class-name}` `.[size]-#{$class-name}` `.max[size]-#{$class-name}`
-				 *
-				 *     @example
-				 *     div.#{$class-name} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				 */
-				.#{$class-name} {
-					@if $property-contains-a-dash {
-						#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-					}
-					@else {
-						#{$property)}-#{$prop-ext}: #{$value};
-					}
-				}
-			}
-		}
-
-		@each $size, $length in $grid-breakpoints {
-			@media (min-width: $length) {
-				@each $prop-ext in $property-extended {
-					$prop-ext-rename: val_to_class_name($prop-ext);
-					@each $key, $value in $map {
-						.#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key} {
-							@if $property-contains-a-dash {
-								#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-							}
-							@else {
-								#{$property}-#{$prop-ext}: #{$value};
-							}
-						}
-					}
-				}
-			}
-
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@each $prop-ext in $property-extended {
-						$prop-ext-rename: val_to_class_name($prop-ext);
-						@each $key, $value in $map {
-							.max#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key} {
-								@if $property-contains-a-dash {
-									#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-								}
-								@else {
-									#{$property}-#{$prop-ext}: #{$value};
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 @mixin class_gen($abbreviation, $property, $property-extended, $map) {
-	$prop-contains-a-dash: str-index($property, '-');
-	$prop-split: ();
-	@if $prop-contains-a-dash {
-		$prop-split: str_split($property, '-');
-	}
-
-	$example_title:    '';
-	$selector:         '';
-	$declaration_prop: '';
-
+	$example_title: '';
+	$selector: '';
 	@each $abbr, $prop in ($abbreviation: $property) {
 		$prop-ucf: str_ucfirst($property);
 		$prop-r: str_replace($prop-ucf, '-', ' ');
+
 		@each $prop-ext in $property-extended {
 			$prop-ext-r: str_replace($prop-ext, '-', ' ');
 			$prop-ext-rename: val_to_class_name($prop-ext);
@@ -315,17 +69,14 @@
 				@if $prop-ext == '' {
 					$example_title:    #{$prop-r} #{$value};
 					$selector:         #{$abbr}-#{$key};
-					$declaration_prop: #{$property};
 				}
 				@else if $prop-ext == 'y' or $prop-ext == 'x' {
 					$example_title:    #{$prop-r} #{$value};
 					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
-					$declaration_prop: #{$property};
 				}
 				@else {
 					$example_title:    #{$prop-r} #{$prop-ext-r} #{$value};
 					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
-					$declaration_prop: #{$property}-#{$prop-ext};
 				}
 
 				/**
@@ -335,24 +86,7 @@
 				 *     @example
 				 *     div.#{$selector} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				 */
-				.#{$selector} {
-					@if $prop-ext == 'y' {
-						#{$declaration_prop}-top: #{$value};
-						#{$declaration_prop}-bottom: #{$value};
-					}
-					@else if $prop-ext == 'x' {
-						#{$declaration_prop}-right: #{$value};
-						#{$declaration_prop}-left: #{$value};
-					}
-					@else {
-						@if $prop-contains-a-dash {
-							#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-						}
-						@else {
-							#{$declaration_prop}: #{$value};
-						}
-					}
-				}
+				@include rule_set($abbr, $property, $prop-ext, $key, $value);
 			}
 		}
 
@@ -360,38 +94,8 @@
 			@if ($length != 0) {
 				@media (max-width: $length - 1) {
 					@each $prop-ext in $property-extended {
-						$prop-ext-rename: val_to_class_name($prop-ext);
 						@each $key, $value in $map {
-							@if $prop-ext == '' {
-								$selector:         max#{$size}-#{$abbr}-#{$key};
-								$declaration_prop: #{$property};
-							}
-							@else if $prop-ext == 'y' or $prop-ext == 'x' {
-								$selector:         max#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key};
-								$declaration_prop: #{$property};
-							}
-							@else {
-								$selector:         max#{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key};
-								$declaration_prop: #{$property}-#{$prop-ext};
-							}
-							.#{$selector} {
-								@if $prop-ext == 'y' {
-									#{$declaration_prop}-top: #{$value};
-									#{$declaration_prop}-bottom: #{$value};
-								}
-								@else if $prop-ext == 'x' {
-									#{$declaration_prop}-right: #{$value};
-									#{$declaration_prop}-left: #{$value};
-								}
-								@else {
-									@if $prop-contains-a-dash {
-										#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-									}
-									@else {
-										#{$declaration_prop}: #{$value};
-									}
-								}
-							}
+							@include rule_set($abbr, $property, $prop-ext, $key, $value, 'max' + $size);
 						}
 					}
 				}
@@ -399,40 +103,57 @@
 
 			@media (min-width: $length) {
 				@each $prop-ext in $property-extended {
-					$prop-ext-rename: val_to_class_name($prop-ext);
 					@each $key, $value in $map {
-						@if $prop-ext == '' {
-							$selector:         #{$size}-#{$abbr}-#{$key};
-							$declaration_prop: #{$property};
-						}
-						@else if $prop-ext == 'y' or $prop-ext == 'x' {
-							$selector:         #{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key};
-							$declaration_prop: #{$property};
-						}
-						@else {
-							$selector:         #{$size}-#{$abbr}-#{$prop-ext-rename}-#{$key};
-							$declaration_prop: #{$property}-#{$prop-ext};
-						}
-						.#{$selector} {
-							@if $prop-ext == 'y' {
-								#{$declaration_prop}-top: #{$value};
-								#{$declaration_prop}-bottom: #{$value};
-							}
-							@else if $prop-ext == 'x' {
-								#{$declaration_prop}-right: #{$value};
-								#{$declaration_prop}-left: #{$value};
-							}
-							@else {
-								@if $prop-contains-a-dash {
-									#{nth($prop-split, 1)}-#{$prop-ext}-#{nth($prop-split, 2)}: #{$value};
-								}
-								@else {
-									#{$declaration_prop}: #{$value};
-								}
-							}
-						}
+						@include rule_set($abbr, $property, $prop-ext, $key, $value, $size);
 					}
 				}
+			}
+		}
+	}
+}
+
+@mixin rule_set($abbreviation, $property, $property-extended, $key, $value, $size: '') {
+	@if $size != '' {
+		$size: $size + '-';
+	}
+
+	$selector: '';
+	$declaration_prop: '';
+	$prop-ext-rename:  val_to_class_name($property-extended);
+	@if $property-extended == '' {
+		$selector:         #{$size}#{$abbreviation}-#{$key};
+		$declaration_prop: #{$property};
+	}
+	@else if $property-extended == 'y' or $property-extended == 'x' {
+		$selector:         #{$size}#{$abbreviation}-#{$prop-ext-rename}-#{$key};
+		$declaration_prop: #{$property};
+	}
+	@else {
+		$selector:         #{$size}#{$abbreviation}-#{$prop-ext-rename}-#{$key};
+		$declaration_prop: #{$property}-#{$property-extended};
+	}
+
+	$prop-contains-a-dash: str-index($property, '-');
+	$prop-split: ();
+	@if $prop-contains-a-dash {
+		$prop-split: str_split($property, '-');
+	}
+
+	.#{$selector} {
+		@if $property-extended == 'y' {
+			#{$declaration_prop}-top: #{$value};
+			#{$declaration_prop}-bottom: #{$value};
+		}
+		@else if $property-extended == 'x' {
+			#{$declaration_prop}-right: #{$value};
+			#{$declaration_prop}-left: #{$value};
+		}
+		@else {
+			@if $prop-contains-a-dash and $property-extended != '' {
+				#{nth($prop-split, 1)}-#{$property-extended}-#{nth($prop-split, 2)}: #{$value};
+			}
+			@else {
+				#{$declaration_prop}: #{$value};
 			}
 		}
 	}
