@@ -66,16 +66,17 @@
 			$prop-ext-rename: val_to_class_name($prop-ext);
 
 			@each $key, $value in $map {
+				$value-r: str_replace(#{$value}, ' !important', '');
 				@if $prop-ext == '' {
-					$example_title:    #{$prop-r} #{$value};
+					$example_title:    #{$prop-r} #{$value-r};
 					$selector:         #{$abbr}-#{$key};
 				}
 				@else if $prop-ext == 'y' or $prop-ext == 'x' {
-					$example_title:    #{$prop-r} #{$value};
+					$example_title:    #{$prop-r} #{$value-r};
 					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
 				}
 				@else {
-					$example_title:    #{$prop-r} #{$prop-ext-r} #{$value};
+					$example_title:    #{$prop-r} #{$prop-ext-r} #{$value-r};
 					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
 				}
 
