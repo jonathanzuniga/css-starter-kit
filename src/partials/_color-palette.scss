@@ -1,26 +1,243 @@
+//
 // Color palette
 
-// Name color, hex., generate list of tints and shades?
+// Neutrals
+//
+// Dark neutrals
+$n900: #091e42;
+$n800: #172b4d;
+$n700: #253858;
+$n600: #344563;
+$n500: #42526e;
+
+// Mid-neutrals
+$n400: #505f79;
+$n300: #5e6c84;
+$n200: #6c798f;
+$n100: #7a869a;
+$n90:  #8993a4;
+$n80:  #97a0af;
+$n70:  #a5adba;
+$n60:  #b3bac5;
+
+// Light neutrals
+$n50:  #c1c7d0;
+$n40:  #dfe1e5;
+$n30:  #ebecf0;
+$n20:  #f4f5f7;
+$n10:  #fafbfc;
+$n0:   #ffffff;
+
+// Blues
+$b500: #0747a6;
+$b400: #0052cc;
+$b300: #0065ff;
+$b200: #2684ff;
+$b100: #4c9aff;
+$b75:  #b2d4ff;
+$b50:  #deebff;
+
+// Greens
+$g500: #006644;
+$g400: #00875a;
+$g300: #36b37e;
+$g200: #57d9a3;
+$g100: #79f2c0;
+$g75:  #abf5d1;
+$g50:  #e3fcef;
+
+// Purples
+$p500: #403294;
+$p400: #5243aa;
+$p300: #6554c0;
+$p200: #8777d9;
+$p100: #998dd9;
+$p75:  #c0b6f2;
+$p50:  #eae6ff;
+
+// Reds
+$r500: #bf2600;
+$r400: #de350b;
+$r300: #ff5630;
+$r200: #ff7452;
+$r100: #ff8f73;
+$r75:  #ffbdad;
+$r50:  #ffebe5;
+
+// Teals
+$t500: #008da6;
+$t400: #00a3bf;
+$t300: #00b8d9;
+$t200: #00c7e5;
+$t100: #79e2f2;
+$t75:  #b3f5ff;
+$t50:  #e6fcff;
+
+// Yellows
+$y500: #ff8b00;
+$y400: #ff991f;
+$y300: #ffab00;
+$y200: #ffc400;
+$y100: #ffe380;
+$y75:  #fff0b2;
+$y50:  #fffae5;
+
+// Fades
+$black: $n800;
+$white: $n0;
+
+$transparent: transparent;
+
+$black-90:   rgba($black, 0.9);
+$black-80:   rgba($black, 0.8);
+$black-70:   rgba($black, 0.7);
+$black-60:   rgba($black, 0.6);
+$black-50:   rgba($black, 0.5);
+$black-40:   rgba($black, 0.4);
+$black-30:   rgba($black, 0.3);
+$black-20:   rgba($black, 0.2);
+$black-10:   rgba($black, 0.1);
+$black-05:   rgba($black, 0.05);
+$black-025:  rgba($black, 0.025);
+$black-0125: rgba($black, 0.0125);
+
+$white-90:   rgba($white, 0.9);
+$white-80:   rgba($white, 0.8);
+$white-70:   rgba($white, 0.7);
+$white-60:   rgba($white, 0.6);
+$white-50:   rgba($white, 0.5);
+$white-40:   rgba($white, 0.4);
+$white-30:   rgba($white, 0.3);
+$white-20:   rgba($white, 0.2);
+$white-10:   rgba($white, 0.1);
+$white-05:   rgba($white, 0.05);
+$white-025:  rgba($white, 0.025);
+$white-0125: rgba($white, 0.0125);
+
+// Color defaults
+$blue:   $b400;
+$green:  $g300;
+$purple: $p300;
+$red:    $r300;
+$teal:   $t300;
+$yellow: $y300;
+
+$gray-dark:  $n500;
+$gray-light: $n20;
+$gray:       $n80;
+
+// Name color, hex., generate list of tints, shades and transparent colors?
 $color-palette: (
-	'black'        #000000 'y',
-	'white'        #ffffff 'y',
+	'n900'        $n900 '',
+	'n800'        $n800 '',
+	'n700'        $n700 '',
+	'n600'        $n600 '',
+	'n500'        $n500 '',
+	'n400'        $n400 '',
+	'n300'        $n300 '',
+	'n200'        $n200 '',
+	'n100'        $n100 '',
+	'n90'         $n90  '',
+	'n80'         $n80  '',
+	'n70'         $n70  '',
+	'n60'         $n60  '',
+	'n50'         $n50  '',
+	'n40'         $n40  '',
+	'n30'         $n30  '',
+	'n20'         $n20  '',
+	'n10'         $n10  '',
+	'n0'          $n0   '',
 
-	'cyan 500'     #00BCD4 '',         
+	'b500'        $b500 '',
+	'b400'        $b400 '',
+	'b300'        $b300 '',
+	'b200'        $b200 '',
+	'b100'        $b100 '',
+	'b75'         $b75  '',
+	'b50'         $b50  '',
 
-	'blue'         #2299f4 'y',
-	'darkblue'     #0f73d8 '',
-	'gray'         #9e9e9f 'y',
-	'coolgray'     #9ea3af 'y',
-	'green'        #12c96d 'y',
-	'orange'       #ff9d5b 'y',
-	'pink'         #f0368d '',
-	'purple'       #b25bb9 '',
-	'red'          #ff5654 'y',
-	'teal'         #41c1b5 '',
-	'yellow'       #fcd45a 'y'
+	'g500'        $g500 '',
+	'g400'        $g400 '',
+	'g300'        $g300 '',
+	'g200'        $g200 '',
+	'g100'        $g100 '',
+	'g75'         $g75  '',
+	'g50'         $g50  '',
+
+	'p500'        $p500 '',
+	'p400'        $p400 '',
+	'p300'        $p300 '',
+	'p200'        $p200 '',
+	'p100'        $p100 '',
+	'p75'         $p75  '',
+	'p50'         $p50  '',
+
+	'r500'        $r500 '',
+	'r400'        $r400 '',
+	'r300'        $r300 '',
+	'r200'        $r200 '',
+	'r100'        $r100 '',
+	'r75'         $r75  '',
+	'r50'         $r50  '',
+
+	't500'        $t500 '',
+	't400'        $t400 '',
+	't300'        $t300 '',
+	't200'        $t200 '',
+	't100'        $t100 '',
+	't75'         $t75  '',
+	't50'         $t50  '',
+
+	'y500'        $y500 '',
+	'y400'        $y400 '',
+	'y300'        $y300 '',
+	'y200'        $y200 '',
+	'y100'        $y100 '',
+	'y75'         $y75  '',
+	'y50'         $y50  '',
+
+	'black'       $black '',
+	'white'       $white '',
+
+	'transparent' $transparent '',
+
+	'black 90'    $black-90   '',
+	'black 80'    $black-80   '',
+	'black 70'    $black-70   '',
+	'black 60'    $black-60   '',
+	'black 50'    $black-50   '',
+	'black 40'    $black-40   '',
+	'black 30'    $black-30   '',
+	'black 20'    $black-20   '',
+	'black 10'    $black-10   '',
+	'black 05'    $black-05   '',
+	'black 025'   $black-025  '',
+	'black 0125'  $black-0125 '',
+
+	'white 90'    $white-90   '',
+	'white 80'    $white-80   '',
+	'white 70'    $white-70   '',
+	'white 60'    $white-60   '',
+	'white 50'    $white-50   '',
+	'white 40'    $white-40   '',
+	'white 30'    $white-30   '',
+	'white 20'    $white-20   '',
+	'white 10'    $white-10   '',
+	'white 05'    $white-05   '',
+	'white 025'   $white-025  '',
+	'white 0125'  $white-0125 '',
+
+	'blue'        $blue   '',
+	'green'       $green  '',
+	'purple'      $purple '',
+	'red'         $red    '',
+	'teal'        $teal   '',
+	'yellow'      $yellow '',
+
+	'gray dark'   $gray-dark  '',
+	'gray light'  $gray-light '',
+	'gray'        $gray       ''
 );
-
-
 
 // $color-palette: (
 // 	'black'        #000000 'y',

@@ -34,7 +34,7 @@
 	}
 }
 
-@each $name, $background-color, $night-background-color, $text-color, $state-light-color in $buttons {
+@each $name, $background-color, $night-background-color, $text-color, $night-text-color, $state-light-color in $buttons {
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
@@ -100,6 +100,7 @@
 
 	.night .btn--#{$name_r} {
 		background-color: $night-background-color;
+		color: $night-text-color;
 
 		&:hover {
 			@if not ($state-light-color == '') {
@@ -118,6 +119,7 @@
 						$button-hover-background-color-amount
 					);
 			}
+			color: $night-text-color;
 		}
 
 		&:active,
@@ -138,6 +140,7 @@
 						$button-active-background-color-amount
 					);
 			}
+			color: $night-text-color;
 		}
 	}
 
@@ -158,7 +161,22 @@
 			}
 
 			&:hover {
-				background-color: $background-color;
+				@if not ($state-light-color == '') {
+					background-color: 
+						tint(
+							$body-background-color, 
+							$background-color, 
+							$button-hover-background-color-amount
+						);
+				}
+				@else {
+					background-color: 
+						shade(
+							$night-body-background-color, 
+							$background-color, 
+							$button-hover-background-color-amount
+						);
+				}
 				border-color: 
 					transparentize(
 						$background-color, 
@@ -223,13 +241,28 @@
 			}
 
 			&:hover {
-				background-color: $night-background-color;
+				@if not ($state-light-color == '') {
+					background-color: 
+						tint(
+							$body-background-color, 
+							$night-background-color, 
+							$button-hover-background-color-amount
+						);
+				}
+				@else {
+					background-color: 
+						shade(
+							$night-body-background-color, 
+							$night-background-color, 
+							$button-hover-background-color-amount
+						);
+				}
 				border-color: 
 					transparentize(
 						$night-background-color, 
 						$button-outline-border-transparentize-amount
 					);
-				color: $text-color;
+				color: $night-text-color;
 			}
 
 			&:active,
@@ -266,7 +299,7 @@
 						$button-outline-border-transparentize-amount
 					);
 				}
-				color: $text-color;
+				color: $night-text-color;
 			}
 		}
 	}

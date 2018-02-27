@@ -1,3 +1,4 @@
+//
 // Functions
 
 
@@ -17,7 +18,7 @@ $color-spectrum-range: 50;
 	$half: $color-spectrum-range / 2;
 	$colors-list: ();
 	@each $name, $hex, $gen in $color-palette {
-		@if not ($gen == '') {
+		@if not $gen == '' {
 			@for $csr from 1 to $color-spectrum-range {
 				@if ($csr <= $half) {
 					$colors-list: 
