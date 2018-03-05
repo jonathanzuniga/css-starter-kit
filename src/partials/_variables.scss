@@ -212,10 +212,11 @@ $button-active-background-color-amount: 20%;
 // - night text color,
 // - light colors on hover/active state.
 $buttons: (
-	'primary'   color('cerulean')       color('cerulean')      color('white') color('white') '',
-	'secondary' color('gray')       color('gray dark') color('white') color('white') '',
-	'light'     color('white')      color('white')     color('black') color('black') '',
-	'dark'      color('black')      color('black')     color('white') color('white') 'y'
+	'primary'   color('cerulean')  color('cerulean')       color('white') color('white') '',
+	'secondary' color('cool gray') color('cool gray dark') color('white') color('white') '',
+	'success'   color('green')     color('green')          color('white') color('white') '',
+	'light'     color('white')     color('white')          color('black') color('black') '',
+	'dark'      color('black')     color('black')          color('white') color('white') 'y'
 );
 
 
@@ -738,14 +739,15 @@ $collapse-max-height:                                 0;
 $collapse-open-height:                                auto;
 $collapse-open-max-height:                            100vh;
 $collapse-transition:                                 height     0.3s $transition-timing-function,
-														max-height 0.3s $transition-timing-function,
-														opacity    0.3s $transition-timing-function,
-														transform  0.3s $transition-timing-function;
+													  max-height 0.3s $transition-timing-function,
+													  opacity    0.3s $transition-timing-function,
+													  transform  0.3s $transition-timing-function;
 
-$collapse-list-unstyled-link-color:                   color('black 20');
-$night-collapse-list-unstyled-link-color:             color('white 20');
-$collapse-list-unstyled-link-hover-color:             color('black 40');
-$night-collapse-list-unstyled-link-hover-color:       color('white 40');
+$collapse-list-unstyled-item-active-link-font-weight: 500;
+$collapse-list-unstyled-link-color:                   color('black 60');
+$night-collapse-list-unstyled-link-color:             color('white 60');
+$collapse-list-unstyled-link-hover-color:             color('black 90');
+$night-collapse-list-unstyled-link-hover-color:       color('white 90');
 $collapse-list-unstyled-item-active-link-color:       $body-color;
 $night-collapse-list-unstyled-item-active-link-color: $night-body-color;
 
@@ -830,18 +832,18 @@ $navbar-dark-item-active-link-color:  $night-body-color;
 // Full screen menu
 
 $full-screen-menu-transition:                  opacity          0.5s step-end, 
-												 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-												 visibility       0.5s step-end, 
-												 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+											   visibility       0.5s step-end, 
+											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
 $full-screen-menu-open-background-color:       $body-background-color;
 $night-full-screen-menu-open-background-color: $night-body-background-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
-												 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-												 visibility       0.5s step-start, 
-												 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+											   visibility       0.5s step-start, 
+											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
@@ -882,4 +884,4 @@ $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
 $tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
-													width     $transition-duration $transition-timing-function;
+												  width     $transition-duration $transition-timing-function;
