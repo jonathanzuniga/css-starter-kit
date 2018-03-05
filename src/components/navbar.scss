@@ -414,7 +414,7 @@
 
 /**
  * Navbar optional classes:
- * `.fixed` `.scrolled`
+ * `.navbar--fixed` `.navbar--shadow`
  *
  *     @example
  *     table.tbl
@@ -431,13 +431,13 @@
  *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
  */
 .navbar {
-	&.fixed {
+	&.navbar--fixed {
 		position: fixed;
 		width: 100%;
 		z-index: 1000;
 	}
 
-	&.scrolled {
+	&.navbar--shadow {
 		box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
 					0 4px 5px 0 rgba(0, 0, 0, 0.06),
 					0 1px 10px 0 rgba(0, 0, 0, 0.08);
@@ -446,7 +446,7 @@
 
 .night {
 	.navbar {
-		&.scrolled {
+		&.navbar--shadow {
 			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 
 						0 4px 5px 0 rgba(0, 0, 0, 0.14), 
 						0 1px 10px 0 rgba(0, 0, 0, 0.12);

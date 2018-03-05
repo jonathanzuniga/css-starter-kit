@@ -526,7 +526,7 @@
 .menu.menu--pills li.active a,
 .menu.menu--pills li.active a:hover {
   background-color: #000;
-  color: #5392ff; }
+  color: #009bef; }
 
 .night .menu.menu--pills li a {
   color: rgba(255, 255, 255, 0.9); }
@@ -538,7 +538,7 @@
 .night .menu.menu--pills li.active a,
 .night .menu.menu--pills li.active a:hover {
   background-color: rgba(255, 255, 255, 0.05);
-  color: #79a6f6; }
+  color: #009bef; }
 
 /***
  * Navbar:
@@ -642,14 +642,14 @@
 
 .navbar__link,
 .navbar__toggler {
-  color: rgba(0, 0, 0, 0.2); }
+  color: rgba(0, 0, 0, 0.6); }
   .navbar__link:link, .navbar__link:visited,
   .navbar__toggler:link,
   .navbar__toggler:visited {
-    color: rgba(0, 0, 0, 0.2); }
+    color: rgba(0, 0, 0, 0.6); }
   .navbar__link:hover,
   .navbar__toggler:hover {
-    color: rgba(0, 0, 0, 0.4); }
+    color: rgba(0, 0, 0, 0.9); }
 
 .navbar__brand .navbar__link:link, .navbar__brand .navbar__link:hover, .navbar__brand .navbar__link:visited,
 .navbar__item.active .navbar__link:link,
@@ -659,14 +659,14 @@
 
 .night .navbar__link,
 .night .navbar__toggler {
-  color: rgba(255, 255, 255, 0.2); }
+  color: rgba(255, 255, 255, 0.6); }
   .night .navbar__link:link, .night .navbar__link:visited,
   .night .navbar__toggler:link,
   .night .navbar__toggler:visited {
-    color: rgba(255, 255, 255, 0.2); }
+    color: rgba(255, 255, 255, 0.6); }
   .night .navbar__link:hover,
   .night .navbar__toggler:hover {
-    color: rgba(255, 255, 255, 0.4); }
+    color: rgba(255, 255, 255, 0.9); }
 
 .night .navbar__brand .navbar__link:link, .night .navbar__brand .navbar__link:hover, .night .navbar__brand .navbar__link:visited,
 .night .navbar__item.active .navbar__link:link,
@@ -1081,7 +1081,7 @@
  */
 /**
  * Navbar optional classes:
- * `.fixed` `.scrolled`
+ * `.navbar--fixed` `.navbar--shadow`
  *
  *     @example
  *     table.tbl
@@ -1097,27 +1097,27 @@
  *                 td <code>.scrolled</code>
  *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
  */
-.navbar.fixed {
+.navbar.navbar--fixed {
   position: fixed;
   width: 100%;
   z-index: 1000; }
 
-.navbar.scrolled {
+.navbar.navbar--shadow {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
 
-.night .navbar.scrolled {
+.night .navbar.navbar--shadow {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .navbar--dark .navbar__link,
 .navbar--dark .navbar__toggler {
-  color: rgba(255, 255, 255, 0.2); }
+  color: rgba(255, 255, 255, 0.6); }
   .navbar--dark .navbar__link:link, .navbar--dark .navbar__link:visited,
   .navbar--dark .navbar__toggler:link,
   .navbar--dark .navbar__toggler:visited {
-    color: rgba(255, 255, 255, 0.2); }
+    color: rgba(255, 255, 255, 0.6); }
   .navbar--dark .navbar__link:hover,
   .navbar--dark .navbar__toggler:hover {
-    color: rgba(255, 255, 255, 0.4); }
+    color: rgba(255, 255, 255, 0.9); }
 
 .navbar--dark .navbar__brand .navbar__link:link, .navbar--dark .navbar__brand .navbar__link:hover, .navbar--dark .navbar__brand .navbar__link:visited,
 .navbar--dark .navbar__item.active .navbar__link:link,
@@ -1318,7 +1318,7 @@
   .tabs ul, .tabs a {
     border-bottom-width: 0.063rem;
     border-bottom-style: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.5); }
+    border-bottom-color: rgba(0, 0, 0, 0.075); }
   .tabs ul {
     display: flex;
     flex-grow: 1;
@@ -1337,31 +1337,31 @@
       margin-bottom: -0.063rem;
       padding: 0.5em 1em; }
       .tabs li a:link, .tabs li a:visited {
-        color: rgba(0, 0, 0, 0.2); }
+        color: rgba(0, 0, 0, 0.6); }
       .tabs li a:hover {
         border-bottom-color: transparent;
-        color: rgba(0, 0, 0, 0.4); }
+        color: rgba(0, 0, 0, 0.9); }
     .tabs li.active a {
       border-bottom-width: 0.188rem;
-      border-bottom-color: #5392ff; }
+      border-bottom-color: #009bef; }
       .tabs li.active a:link, .tabs li.active a:visited {
         color: rgba(0, 0, 0, 0.9); }
       .tabs li.active a:hover {
         color: rgba(0, 0, 0, 0.9); }
 
 .night .tabs ul, .night .tabs a {
-  border-bottom-color: rgba(255, 255, 255, 0.5); }
+  border-bottom-color: rgba(255, 255, 255, 0.075); }
 
 .night .tabs li a {
   border-bottom-color: transparent; }
   .night .tabs li a:link, .night .tabs li a:visited {
-    color: rgba(255, 255, 255, 0.2); }
+    color: rgba(255, 255, 255, 0.6); }
   .night .tabs li a:hover {
     border-bottom-color: transparent;
-    color: rgba(255, 255, 255, 0.4); }
+    color: rgba(255, 255, 255, 0.9); }
 
 .night .tabs li.active a {
-  border-bottom-color: #79a6f6; }
+  border-bottom-color: #009bef; }
   .night .tabs li.active a:link, .night .tabs li.active a:visited {
     color: rgba(255, 255, 255, 0.9); }
   .night .tabs li.active a:hover {
@@ -1423,7 +1423,7 @@
  *             li(style='transform: translateX(71px); width: 73px;').active-underline
  */
 .active-underline {
-  background-color: #5392ff;
+  background-color: #009bef;
   height: 0.188rem;
   position: absolute;
   left: 0;
@@ -1434,7 +1434,7 @@
   width: 71px; }
 
 .night .active-underline {
-  background-color: #79a6f6; }
+  background-color: #009bef; }
 
 .tabs-details > div:not(.active) {
   display: none; }

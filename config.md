@@ -26,7 +26,7 @@
 	div.container-fluid
 		div.cols
 			div.col
-				nav.doc-navbar.navbar.maxmd-navbar-responsive.fixed
+				nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
 						a(href='index.html').navbar__link CSS Starter Kit

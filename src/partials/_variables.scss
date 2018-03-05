@@ -65,16 +65,16 @@ $transition-base:            background-color $transition-duration $transition-t
 
 // Hyperlink
 
-$link-color:                           color('blue 40');
-$night-link-color:                     color('blue 30');
+$link-color:                           color('cerulean 40');
+$night-link-color:                     color('cerulean 40');
 $link-decoration:                      none;
 
 $link-visited-color:                   $link-color;
 $night-link-visited-color:             $night-link-color;
 $link-visited-decoration:              none;
 
-$link-hover-color:                     color('blue');
-$night-link-hover-color:               color('blue 20');
+$link-hover-color:                     color('cerulean 60');
+$night-link-hover-color:               color('cerulean 60');
 $link-hover-decoration:                none;
 
 $link-border-bottom-width:             0.063rem;
@@ -104,7 +104,7 @@ $heading-line-height: 1.2;
 // Marked text
 
 $mark-border-radius:          0;
-$mark-background-color:       color('yellow 10');
+$mark-background-color:       rgba(color('gold 20'), 0.1);
 $night-mark-background-color: color('white 05');
 $mark-background-image:       none;
 $night-mark-background-image: none;
@@ -150,8 +150,8 @@ $pre-border-radius:           $border-radius-base;
 
 $control-border-width:                   0.063rem;
 $control-border-style:                   solid;
-$control-border-color:                   color('black 10');
-$night-control-border-color:             color('white 10');
+$control-border-color:                   color('black 20');
+$night-control-border-color:             color('white 20');
 
 $control-border-radius:                  $border-radius-base;
 
@@ -171,11 +171,11 @@ $control-large-padding-x:                $control-padding-x;
 
 $control-large-font-size:                1.25em;
 
-$control-active-border-color:            color('blue 30');
-$night-control-active-border-color:      color('blue 30');
+$control-active-border-color:            color('cerulean 30');
+$night-control-active-border-color:      color('cerulean 30');
 
-$control-focus-border-color:             color('blue 30');
-$night-control-focus-border-color:       color('blue 30');
+$control-focus-border-color:             color('cerulean 30');
+$night-control-focus-border-color:       color('cerulean 30');
 
 $control-focus-box-shadow:               inset 0 0 0 0.063rem $control-focus-border-color;
 $night-control-focus-box-shadow:         inset 0 0 0 0.063rem $night-control-focus-border-color;
@@ -212,7 +212,7 @@ $button-active-background-color-amount: 20%;
 // - night text color,
 // - light colors on hover/active state.
 $buttons: (
-	'primary'   color('blue')       color('blue')      color('white') color('white') '',
+	'primary'   color('cerulean')       color('cerulean')      color('white') color('white') '',
 	'secondary' color('gray')       color('gray dark') color('white') color('white') '',
 	'light'     color('white')      color('white')     color('black') color('black') '',
 	'dark'      color('black')      color('black')     color('white') color('white') 'y'
@@ -279,8 +279,8 @@ $night-input-focus-box-shadow:            $night-control-focus-box-shadow;
 
 $input-placeholder-color:                 color('black 20');
 $night-input-placeholder-color:           color('white 20');
-$input-focus-placeholder-color:           color('blue 20');
-$night-input-focus-placeholder-color:     color('blue 20');
+$input-focus-placeholder-color:           color('cerulean 20');
+$night-input-focus-placeholder-color:     color('cerulean 20');
 $input-placeholder-opacity:               1;
 
 $input-hover-border-color:                $input-border-color;
@@ -530,14 +530,15 @@ $border-widths: (
 
 $borders: (
 	0: 0,
-	1: '0.063rem solid ' + color('black 10')
+	1: '0.063rem solid ' + color('black 075')
 );
 
 
 // Display
 
 $displays: (
-	none: none
+	block: block,
+	none:  none
 );
 
 
@@ -561,15 +562,15 @@ $font-sizes: (
 // Font weight
 
 $font-weights: (
-	100: 100,
-	200: 200,
-	300: 300,
-	400: 400,
-	500: 500,
-	600: 600,
-	700: 700,
-	800: 800,
-	900: 900
+	100: 100, // Thin (Hairline).
+	200: 200, // Extra Light (Ultra Light).
+	300: 300, // Light.
+	400: 400, // Normal.
+	500: 500, // Medium.
+	600: 600, // Semi Bold (Demi Bold).
+	700: 700, // Bold.
+	800: 800, // Extra Bold (Ultra Bold).
+	900: 900  // Black (Heavy).
 );
 
 
@@ -586,7 +587,7 @@ $margins: (
 // Opacity
 
 $opacities: (
-	  0: 0,
+		0: 0,
 	 50: 0.5,
 	100: 1
 );
@@ -737,9 +738,9 @@ $collapse-max-height:                                 0;
 $collapse-open-height:                                auto;
 $collapse-open-max-height:                            100vh;
 $collapse-transition:                                 height     0.3s $transition-timing-function,
-													  max-height 0.3s $transition-timing-function,
-													  opacity    0.3s $transition-timing-function,
-													  transform  0.3s $transition-timing-function;
+														max-height 0.3s $transition-timing-function,
+														opacity    0.3s $transition-timing-function,
+														transform  0.3s $transition-timing-function;
 
 $collapse-list-unstyled-link-color:                   color('black 20');
 $night-collapse-list-unstyled-link-color:             color('white 20');
@@ -810,17 +811,17 @@ $navbar-padding-x:                    em_to_rem($spacing-unit-half);
 $navbar-brand-font-size:              1.25em;
 $navbar-toggler-cursor:               pointer;
 
-$navbar-link-color:                   color('black 20');
-$night-navbar-link-color:             color('white 20');
+$navbar-link-color:                   color('black 60');
+$night-navbar-link-color:             color('white 60');
 
-$navbar-link-hover-color:             color('black 40');
-$night-navbar-link-hover-color:       color('white 40');
+$navbar-link-hover-color:             color('black 90');
+$night-navbar-link-hover-color:       color('white 90');
 
 $navbar-item-active-link-color:       $body-color;
 $night-navbar-item-active-link-color: $night-body-color;
 
-$navbar-dark-link-color:              color('white 20');
-$navbar-dark-link-hover-color:        color('white 40');
+$navbar-dark-link-color:              color('white 60');
+$navbar-dark-link-hover-color:        color('white 90');
 $navbar-dark-item-active-link-color:  $night-body-color;
 
 
@@ -829,18 +830,18 @@ $navbar-dark-item-active-link-color:  $night-body-color;
 // Full screen menu
 
 $full-screen-menu-transition:                  opacity          0.5s step-end, 
-											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-											   visibility       0.5s step-end, 
-											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+												 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+												 visibility       0.5s step-end, 
+												 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
 $full-screen-menu-open-background-color:       $body-background-color;
 $night-full-screen-menu-open-background-color: $night-body-background-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
-											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-											   visibility       0.5s step-start, 
-											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+												 transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+												 visibility       0.5s step-start, 
+												 background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
@@ -848,8 +849,8 @@ $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezie
 
 $tabs-border-bottom-width:                        0.063rem; // 1px
 $tabs-border-bottom-style:                        solid;
-$tabs-border-bottom-color:                        color('black 50');
-$night-tabs-border-bottom-color:                  color('white 50');
+$tabs-border-bottom-color:                        color('black 075');
+$night-tabs-border-bottom-color:                  color('white 075');
 
 $tabs-item-margin:                                0;
 
@@ -858,11 +859,11 @@ $night-tabs-link-border-bottom-color:             transparent;
 
 $tabs-link-border-bottom-width:                   0.188rem; // 3px
 
-$tabs-link-color:                                 color('black 20');
-$night-tabs-link-color:                           color('white 20');
+$tabs-link-color:                                 color('black 60');
+$night-tabs-link-color:                           color('white 60');
 
-$tabs-link-hover-color:                           color('black 40');
-$night-tabs-link-hover-color:                     color('white 40');
+$tabs-link-hover-color:                           color('black 90');
+$night-tabs-link-hover-color:                     color('white 90');
 
 $tabs-link-padding-y:                             $spacing-unit-quarter;
 $tabs-link-padding-x:                             $spacing-unit-half;
@@ -881,4 +882,4 @@ $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
 $tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
-												  width     $transition-duration $transition-timing-function;
+													width     $transition-duration $transition-timing-function;
