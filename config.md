@@ -38,8 +38,8 @@
 							li.navbar__item
 								a(href='layout.html').navbar__link Documentation
 
-		div.cols.cols--center
-			div.doc-main.xs-col-12.md-col-10.xl-col-8
+		div.cols
+			div.doc-main.xs-col-12.md-col-10.xl-col-11
 				div.doc-main__content.cols
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
