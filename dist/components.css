@@ -78,7 +78,7 @@
   opacity: 0;
   overflow: hidden;
   position: relative;
-  transform: translateY(0.5em);
+  transform: translateY(-0.5em);
   transition: height 0.3s ease-out, max-height 0.3s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out; }
   .collapse.open, .collapse-toggle:checked ~ .collapse {
     height: auto;
@@ -600,8 +600,6 @@
 
 .navbar__brand {
   font-size: 1.25em; }
-  .navbar__brand > * {
-    margin-right: 1em; }
 
 .navbar__toggler {
   display: none; }
@@ -1064,10 +1062,8 @@
  *
  *     @example
  *     nav.navbar.maxmd-navbar-responsive
- *         a(href='#!').navbar__link.md-d-none Menu
- *         div.navbar__brand
- *             a(href='').navbar__link.maxmd-m-0 Brand
- *         a(href='#!').navbar__link.md-d-none RSS
+ *         div.navbar__brand.maxmd-d-block.maxmd-ta-center.maxmd-w-100
+ *             a(href='').navbar__link.maxmd-d-block Brand
  *         div.navbar__no-collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.active

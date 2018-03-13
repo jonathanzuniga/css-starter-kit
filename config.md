@@ -132,6 +132,8 @@
 												a(href='helpers.html#text') Text
 											li
 												a(href='helpers.html#visibility') Visibility
+											li
+												a(href='helpers.html#width') Width
 
 							div.col-12
 								div
