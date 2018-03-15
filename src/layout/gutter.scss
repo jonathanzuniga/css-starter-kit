@@ -5,77 +5,77 @@
  * Gutter:
  */
 
-@for $i from 0 through $gutters {
+@each $key, $width in $gutters {
 	/**
-	 * Gutters width #{$gutter * $i}:
-	 * `.gutters-#{$i}`
+	 * Gutters width #{$width}:
+	 * `.gutters-#{$key}`
 	 *
 	 *     @example
-	 *     div.cols.gutters-#{$i}
+	 *     div.cols.gutters-#{$key}
 	 *         div.col-8
 	 *             div.bgc-green-10 &nbsp;
 	 *         div.col-4
 	 *             div.bgc-green-10 &nbsp;
 	 */
-	.gutters-#{$i} {
-		margin-right: -#{$gutter * $i};
-		margin-left: -#{$gutter * $i};
+	.gutters-#{$key} {
+		margin-right: -#{$width};
+		margin-left: -#{$width};
 
 		&.cols {
 			> .col,
 			> [class*='col-'] {
-				padding-right: $gutter * $i;
-				padding-left: $gutter * $i;
+				padding-right: $width;
+				padding-left: $width;
 			}
 		}
 	}
 
 	// Grid gap.
-	.gap-#{$i} {
+	.gap-#{$key} {
 		&[class*='gcols-'] {
-			grid-gap: $gutter * $i;
+			grid-gap: $width;
 		}
 	}
 }
 
 @each $size, $length in $grid-breakpoints {
 	@media (min-width: $length) {
-		@for $i from 0 through $gutters {
-			.#{$size}-gutters-#{$i} {
-				margin-right: -#{$gutter * $i};
-				margin-left: -#{$gutter * $i};
+		@each $key, $width in $gutters {
+			.#{$size}-gutters-#{$key} {
+				margin-right: -#{$width};
+				margin-left: -#{$width};
 
 				&.cols {
 					> .col,
 					> [class*='col-'] {
-						padding-right: $gutter * $i;
-						padding-left: $gutter * $i;
+						padding-right: $width;
+						padding-left: $width;
 					}
 				}
 
 				// Para la división del contenido en cols.
 				@for $i from 1 through $grid-columns {
-					&.#{$size}-cols-#{$i} {
-						column-gap: $gutter * $i;
+					&.#{$size}-cols-#{$key} {
+						column-gap: $width;
 					}
 				}
 			}
 
 			// Grid gap.
-			.#{$size}-gap-#{$i} {
+			.#{$size}-gap-#{$key} {
 				&[class*='gcols-'] {
-					grid-gap: $gutter * $i;
+					grid-gap: $width;
 				}
 			}
 		}
 	}
 
 	@media (max-width: $length - 1) {
-		@for $i from 0 through $gutters {
+		@each $key, $width in $gutters {
 			// Grid gap.
-			.max#{$size}-gap-#{$i} {
+			.max#{$size}-gap-#{$key} {
 				&[class*='gcols-'] {
-					grid-gap: $gutter * $i;
+					grid-gap: $width;
 				}
 			}
 		}
