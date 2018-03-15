@@ -9,39 +9,19 @@
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
-
-	@if not ($gen == '') {
-		$range: '[1...#{$color-spectrum-range - 1}]';
-
-		/**
-		 * #{$name_ucf} color:
-		 * `.bgc-#{$name_r}-#{$range}` `.c-#{$name_r}-#{$range}` `.bdc-#{$name_r}-#{$range}`
-		 *
-		 *     @example
-		 *     table.tbl
-		 *         tr
-		 *             td.w-20
-		 *                 div.doc-color-swatch.bgc-#{$name_r}-#{$color-spectrum-range / 2}
-		 *             td.w-20.txt-select.c-#{$name_r}-#{$color-spectrum-range / 2}.maxsm-hide #{$name_r}
-		 *             td.w-20.txt-select.c-#{$name_r}-#{$color-spectrum-range / 2} #{$hex}
-		 *             td.w-20.txt-select.c-#{$name_r}-#{$color-spectrum-range / 2} #{$rgb}
-		 */
-	}
-	@else {
-		/**
-		 * #{$name_ucf} color:
-		 * `.bgc-#{$name_r}` `.c-#{$name_r}` `.bdc-#{$name_r}`
-		 *
-		 *     @example
-		 *     table.tbl
-		 *         tr
-		 *             td.w-20
-		 *                 div.doc-color-swatch.bgc-#{$name_r}
-		 *             td.w-20.txt-select.c-#{$name_r}.maxsm-hide #{$name_r}
-		 *             td.w-20.txt-select.c-#{$name_r} #{$hex}
-		 *             td.w-20.txt-select.c-#{$name_r} #{$rgb}
-		 */
-	}
+	/**
+	 * #{$name_ucf} color:
+	 * `.bgc-#{$name_r}` `.c-#{$name_r}` `.bdc-#{$name_r}`
+	 *
+	 *     @example
+	 *     table.tbl
+	 *         tr
+	 *             td.w-20
+	 *                 div.doc-color-swatch.bgc-#{$name_r}
+	 *             td.w-20.txt-select.c-#{$name_r}.maxsm-hide #{$name_r}
+	 *             td.w-20.txt-select.c-#{$name_r} #{$hex}
+	 *             td.w-20.txt-select.c-#{$name_r} #{$rgb}
+	 */
 }
 
 @each $name, $hex in $colors {

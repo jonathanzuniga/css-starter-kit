@@ -13,58 +13,15 @@
 }
 
 // Generar la lista completa de colores.
-$color-spectrum-range: 50;
 @function colors($light-background-color, $dark-background-color) {
-	$half: $color-spectrum-range / 2;
 	$colors-list: ();
-	@each $name, $hex, $gen in $color-palette {
-		@if not $gen == '' {
-			@for $csr from 1 to $color-spectrum-range {
-				@if ($csr <= $half) {
-					$colors-list: 
-						append(
-							$colors-list, 
-							'#{$name} #{$csr}' tint(
-								$light-background-color, 
-								$hex, 
-								percentage(1 - ($csr / $half))
-							), 
-							comma
-						);
-
-					// Transparent colors.
-					$colors-list: 
-						append(
-							$colors-list, 
-							'#{$name} #{$csr}t' rgba(
-								$hex,
-								$csr / $half
-							), 
-							comma
-						);
-				}
-				@else {
-					$colors-list: 
-						append(
-							$colors-list, 
-							'#{$name} #{$csr}' shade(
-								$dark-background-color, 
-								$hex, 
-								percentage(($csr / $half) - 1)
-							), 
-							comma
-						);
-				}
-			}
-		}
-		@else {
-			$colors-list: 
-				append(
-					$colors-list, 
-					'#{$name}' $hex, 
-					comma
-				);
-		}
+	@each $name, $hex in $color-palette {
+		$colors-list: 
+			append(
+				$colors-list, 
+				'#{$name}' $hex, 
+				comma
+			);
 	}
 	@return $colors-list;
 }
