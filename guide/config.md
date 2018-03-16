@@ -4,9 +4,9 @@
 
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
-	link(rel='stylesheet', href='css/styledown.css')
 	link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
 	link(rel='stylesheet', href='../dist/csssk.css')
+	link(rel='stylesheet', href='css/styledown.css')
 	link(rel='stylesheet', href='css/doc.css')
 
 	script().
@@ -55,17 +55,17 @@
 									div.collapse
 										ul.ls-unstyled
 											li
-												a(href='layout.html#flex-grid') Flex grid
+												a(href='layout-flex-grid.html') Flex grid
 											li
-												a(href='layout.html#gutter') Gutter
+												a(href='layout-gutter.html') Gutter
 											li
-												a(href='layout.html#horizontal-modifiers') Horizontal modifiers
+												a(href='layout-modifier-horizontal.html') Horizontal modifier
 											li
-												a(href='layout.html#vertical-modifiers') Vertical modifiers
+												a(href='layout-modifier-vertical.html') Vertical modifier
 											li
-												a(href='layout.html#offset') Offset
+												a(href='layout-offset.html') Offset
 											li
-												a(href='layout.html#grid') Grid
+												a(href='layout-grid.html') Grid
 
 							div.col-12
 								div
@@ -74,21 +74,21 @@
 									div.collapse
 										ul.ls-unstyled
 											li
-												a(href='elements.html#base') Base
+												a(href='elements-base.html') Base
 											li
-												a(href='elements.html#form') Form
+												a(href='elements-form.html') Form
 											li
-												a(href='elements.html#button') Button
+												a(href='elements-button.html') Button
 											li
-												a(href='elements.html#button-group') Button group
+												a(href='elements-button-group.html') Button group
 											li
-												a(href='elements.html#input-group') Input group
+												a(href='elements-input-group.html') Input group
 											li
-												a(href='elements.html#switch') Switch
+												a(href='elements-switch.html') Switch
 											li
-												a(href='elements.html#list') List
+												a(href='elements-switch.html') List
 											li
-												a(href='elements.html#table') Table
+												a(href='elements-table.html') Table
 
 							div.col-12
 								div
@@ -97,43 +97,43 @@
 									div.collapse
 										ul.ls-unstyled
 											li
-												a(href='helpers.html#border-radius') Border radius
+												a(href='helpers-border-radius.html') Border radius
 											li
-												a(href='helpers.html#border-style') Border style
+												a(href='helpers-border-style.html') Border style
 											li
-												a(href='helpers.html#border-width') Border width
+												a(href='helpers-border-width.html') Border width
 											li
-												a(href='helpers.html#border') Border
+												a(href='helpers-border.html') Border
 											li
-												a(href='helpers.html#clearfix') Clearfix
+												a(href='helpers-clearfix.html') Clearfix
 											li
-												a(href='helpers.html#color') Color
+												a(href='helpers-color.html') Color
 											li
-												a(href='helpers.html#display') Display
+												a(href='helpers-display.html') Display
 											li
-												a(href='helpers.html#float') Float
+												a(href='helpers-float.html') Float
 											li
-												a(href='helpers.html#font-size') Font size
+												a(href='helpers-font-size.html') Font size
 											li
-												a(href='helpers.html#font-weight') Font weight
+												a(href='helpers-font-weight.html') Font weight
 											li
-												a(href='helpers.html#margin') Margin
+												a(href='helpers-margin.html') Margin
 											li
-												a(href='helpers.html#opacity') Opacity
+												a(href='helpers-opacity.html') Opacity
 											li
-												a(href='helpers.html#padding') Padding
+												a(href='helpers-padding.html') Padding
 											li
-												a(href='helpers.html#position') Position
+												a(href='helpers-position.html') Position
 											li
-												a(href='helpers.html#text-align') Text align
+												a(href='helpers-text-align.html') Text align
 											li
-												a(href='helpers.html#text-transform') Text transform
+												a(href='helpers-text-transform.html') Text transform
 											li
-												a(href='helpers.html#text') Text
+												a(href='helpers-text.html') Text
 											li
-												a(href='helpers.html#visibility') Visibility
+												a(href='helpers-visibility.html') Visibility
 											li
-												a(href='helpers.html#width') Width
+												a(href='helpers-width.html') Width
 
 							div.col-12
 								div
@@ -142,19 +142,19 @@
 									div.collapse
 										ul.ls-unstyled
 											li
-												a(href='components.html#card') Card
+												a(href='components-card.html') Card
 											li
-												a(href='components.html#collapse') Collapse
+												a(href='components-collapse.html') Collapse
 											li
-												a(href='components.html#drawer') Drawer
+												a(href='components-drawer.html') Drawer
 											li
-												a(href='components.html#menu') Menu
+												a(href='components-menu.html') Menu
 											li
-												a(href='components.html#navbar') Navbar
+												a(href='components-navbar.html') Navbar
 											li
-												a(href='components.html#navmenu') Navmenu
+												a(href='components-navmenu.html') Navmenu
 											li
-												a(href='components.html#tabs') Tabs
+												a(href='components-tabs.html') Tabs
 
 								p.m-top-16
 									input(id='switch-night-mode', type='checkbox').switch.switch--sm

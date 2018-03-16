@@ -1,0 +1,352 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Starter Kit Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/csssk.css">
+  <link rel="stylesheet" href="css/styledown.css">
+  <link rel="stylesheet" href="css/doc.css">
+  <script>
+    ;
+    (function(window, document, undefined) {
+      'use strict';
+
+      if (!('localStorage' in window)) return;
+
+      var nightMode = localStorage.getItem('nightMode');
+      if (!nightMode) return;
+
+      document.documentElement.classList.add('night', 'fsmooth');
+    })(window, document);
+  </script>
+</head>
+
+<body class="sg">
+  <div class="container-fluid">
+    <div class="cols">
+      <div class="col">
+        <nav class="doc-navbar navbar maxmd-navbar-responsive navbar--fixed">
+          <input type="checkbox" id="doc-navbar-toggle" class="collapse-toggle">
+          <div class="navbar__brand">
+            <a href="index.html" class="navbar__link">CSS Starter Kit</a>
+          </div>
+          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
+          <div class="navbar__collapse collapse maxmd-d-none">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">Preface</a>
+              </li>
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="doc-main xs-col-12 md-col-10 xl-col-11">
+        <div class="doc-main__content cols">
+          <div class="md-col-12 xl-col-12">
+            <div class="sg-container">
+              <section class="sg-section sg-section-input-group">
+                <h2 id="input-group" class="sg">Input group</h2>
+                <section class="sg-block sg-section-button-addons">
+                  <div class="sg-text">
+                    <h3 id="button-addons" class="sg">Button addons</h3>
+                    <p class="sg">
+                      <code class="sg">.input-group</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="input-group">
+                        <div class="input-group-btn">
+                          <input type="search" placeholder="Search..." class="input">
+                          <button class="btn btn--secondary">Go</button>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-mixed-addons">
+                  <div class="sg-text">
+                    <h3 id="mixed-addons" class="sg">Mixed addons</h3>
+                    <p class="sg">
+                      <code class="sg">.input-group</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="input-group">
+                        <label class="lbl">Search:</label>
+                        <div class="input-group-btn">
+                          <input type="search" class="input">
+                          <button class="btn btn--secondary">Go</button>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;lbl&quot;</span>&gt;</span>Search:<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-input-group-size">
+                  <div class="sg-text">
+                    <h3 id="input-group-size" class="sg">Input group size</h3>
+                    <p class="sg">
+                      <code class="sg">.input-group--[size]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="fld input-group input-group--lg">
+                        <div class="input-group-btn">
+                          <input type="search" placeholder="Search..." class="input">
+                          <button class="btn btn--secondary">Go</button>
+                        </div>
+                      </div>
+                      <div class="fld input-group input-group--sm">
+                        <div class="input-group-btn">
+                          <input type="search" placeholder="Search..." class="input">
+                          <button class="btn btn--secondary">Go</button>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld input-group input-group--lg&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fld input-group input-group--sm&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-pill-input-group-button">
+                  <div class="sg-text">
+                    <h3 id="pill-input-group-button" class="sg">Pill input group button</h3>
+                    <p class="sg">
+                      <code class="sg">.input-group-btn--pill</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="input-group">
+                        <div class="input-group-btn input-group-btn--pill">
+                          <input type="search" placeholder="Search..." class="input">
+                          <button class="btn btn--secondary">Go</button>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input-group-btn input-group-btn--pill&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;search&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Go<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
+        <div class="doc-sidebar__content cols">
+          <div class="col">
+            <div class="cols maxmd-ta-center">
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout-flex-grid.html">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout-gutter.html">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-vertical.html">Vertical modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-offset.html">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout-grid.html">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements-base.html">Base</a>
+                      </li>
+                      <li>
+                        <a href="elements-form.html">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements-button.html">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements-button-group.html">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements-input-group.html">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">List</a>
+                      </li>
+                      <li>
+                        <a href="elements-table.html">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers-border-radius.html">Border radius</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-style.html">Border style</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-width.html">Border width</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border.html">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers-clearfix.html">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers-color.html">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers-display.html">Display</a>
+                      </li>
+                      <li>
+                        <a href="helpers-float.html">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-size.html">Font size</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-weight.html">Font weight</a>
+                      </li>
+                      <li>
+                        <a href="helpers-margin.html">Margin</a>
+                      </li>
+                      <li>
+                        <a href="helpers-opacity.html">Opacity</a>
+                      </li>
+                      <li>
+                        <a href="helpers-padding.html">Padding</a>
+                      </li>
+                      <li>
+                        <a href="helpers-position.html">Position</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-align.html">Text align</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-transform.html">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text.html">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers-visibility.html">Visibility</a>
+                      </li>
+                      <li>
+                        <a href="helpers-width.html">Width</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components-card.html">Card</a>
+                      </li>
+                      <li>
+                        <a href="components-collapse.html">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components-drawer.html">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components-menu.html">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components-navbar.html">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components-navmenu.html">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components-tabs.html">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="m-top-16">
+                  <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+                  <label for="switch-night-mode" id="lbl-night-mode">
+                    <span>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                    </span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/styledown.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

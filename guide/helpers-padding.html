@@ -1,0 +1,666 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Starter Kit Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/csssk.css">
+  <link rel="stylesheet" href="css/styledown.css">
+  <link rel="stylesheet" href="css/doc.css">
+  <script>
+    ;
+    (function(window, document, undefined) {
+      'use strict';
+
+      if (!('localStorage' in window)) return;
+
+      var nightMode = localStorage.getItem('nightMode');
+      if (!nightMode) return;
+
+      document.documentElement.classList.add('night', 'fsmooth');
+    })(window, document);
+  </script>
+</head>
+
+<body class="sg">
+  <div class="container-fluid">
+    <div class="cols">
+      <div class="col">
+        <nav class="doc-navbar navbar maxmd-navbar-responsive navbar--fixed">
+          <input type="checkbox" id="doc-navbar-toggle" class="collapse-toggle">
+          <div class="navbar__brand">
+            <a href="index.html" class="navbar__link">CSS Starter Kit</a>
+          </div>
+          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
+          <div class="navbar__collapse collapse maxmd-d-none">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">Preface</a>
+              </li>
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="doc-main xs-col-12 md-col-10 xl-col-11">
+        <div class="doc-main__content cols">
+          <div class="md-col-12 xl-col-12">
+            <div class="sg-container">
+              <section class="sg-section sg-section-padding">
+                <h2 id="padding" class="sg">Padding</h2>
+                <section class="sg-block sg-section-padding-0">
+                  <div class="sg-text">
+                    <h3 id="padding-0" class="sg">Padding 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-0</code>
+                      <code class="sg">.[size]-p-0</code>
+                      <code class="sg">.max[size]-p-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-25rem" class="sg">Padding 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-4</code>
+                      <code class="sg">.[size]-p-4</code>
+                      <code class="sg">.max[size]-p-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-5rem" class="sg">Padding 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-8</code>
+                      <code class="sg">.[size]-p-8</code>
+                      <code class="sg">.max[size]-p-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-1rem" class="sg">Padding 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-16</code>
+                      <code class="sg">.[size]-p-16</code>
+                      <code class="sg">.max[size]-p-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-top-0">
+                  <div class="sg-text">
+                    <h3 id="padding-top-0" class="sg">Padding top 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-top-0</code>
+                      <code class="sg">.[size]-p-top-0</code>
+                      <code class="sg">.max[size]-p-top-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-top-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-top-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-top-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-top-0-25rem" class="sg">Padding top 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-top-4</code>
+                      <code class="sg">.[size]-p-top-4</code>
+                      <code class="sg">.max[size]-p-top-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-top-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-top-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-top-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-top-0-5rem" class="sg">Padding top 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-top-8</code>
+                      <code class="sg">.[size]-p-top-8</code>
+                      <code class="sg">.max[size]-p-top-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-top-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-top-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-top-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-top-1rem" class="sg">Padding top 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-top-16</code>
+                      <code class="sg">.[size]-p-top-16</code>
+                      <code class="sg">.max[size]-p-top-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-top-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-top-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-right-0">
+                  <div class="sg-text">
+                    <h3 id="padding-right-0" class="sg">Padding right 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-right-0</code>
+                      <code class="sg">.[size]-p-right-0</code>
+                      <code class="sg">.max[size]-p-right-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-right-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-right-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-right-0-25rem" class="sg">Padding right 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-right-4</code>
+                      <code class="sg">.[size]-p-right-4</code>
+                      <code class="sg">.max[size]-p-right-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-right-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-right-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-right-0-5rem" class="sg">Padding right 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-right-8</code>
+                      <code class="sg">.[size]-p-right-8</code>
+                      <code class="sg">.max[size]-p-right-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-right-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-right-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-right-1rem" class="sg">Padding right 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-right-16</code>
+                      <code class="sg">.[size]-p-right-16</code>
+                      <code class="sg">.max[size]-p-right-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-right-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-bottom-0">
+                  <div class="sg-text">
+                    <h3 id="padding-bottom-0" class="sg">Padding bottom 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-bottom-0</code>
+                      <code class="sg">.[size]-p-bottom-0</code>
+                      <code class="sg">.max[size]-p-bottom-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-bottom-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-bottom-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-bottom-0-25rem" class="sg">Padding bottom 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-bottom-4</code>
+                      <code class="sg">.[size]-p-bottom-4</code>
+                      <code class="sg">.max[size]-p-bottom-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-bottom-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-bottom-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-bottom-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-bottom-0-5rem" class="sg">Padding bottom 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-bottom-8</code>
+                      <code class="sg">.[size]-p-bottom-8</code>
+                      <code class="sg">.max[size]-p-bottom-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-bottom-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-bottom-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-bottom-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-bottom-1rem" class="sg">Padding bottom 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-bottom-16</code>
+                      <code class="sg">.[size]-p-bottom-16</code>
+                      <code class="sg">.max[size]-p-bottom-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-bottom-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-bottom-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-left-0">
+                  <div class="sg-text">
+                    <h3 id="padding-left-0" class="sg">Padding left 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-left-0</code>
+                      <code class="sg">.[size]-p-left-0</code>
+                      <code class="sg">.max[size]-p-left-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-left-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-left-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-left-0-25rem" class="sg">Padding left 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-left-4</code>
+                      <code class="sg">.[size]-p-left-4</code>
+                      <code class="sg">.max[size]-p-left-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-left-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-left-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-left-0-5rem" class="sg">Padding left 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-left-8</code>
+                      <code class="sg">.[size]-p-left-8</code>
+                      <code class="sg">.max[size]-p-left-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-left-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-left-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-left-1rem" class="sg">Padding left 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-left-16</code>
+                      <code class="sg">.[size]-p-left-16</code>
+                      <code class="sg">.max[size]-p-left-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-left-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0">
+                  <div class="sg-text">
+                    <h3 id="padding-0" class="sg">Padding 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-y-0</code>
+                      <code class="sg">.[size]-p-y-0</code>
+                      <code class="sg">.max[size]-p-y-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-y-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-y-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-25rem" class="sg">Padding 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-y-4</code>
+                      <code class="sg">.[size]-p-y-4</code>
+                      <code class="sg">.max[size]-p-y-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-y-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-y-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-5rem" class="sg">Padding 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-y-8</code>
+                      <code class="sg">.[size]-p-y-8</code>
+                      <code class="sg">.max[size]-p-y-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-y-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-y-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-1rem" class="sg">Padding 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-y-16</code>
+                      <code class="sg">.[size]-p-y-16</code>
+                      <code class="sg">.max[size]-p-y-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-y-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-y-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0">
+                  <div class="sg-text">
+                    <h3 id="padding-0" class="sg">Padding 0</h3>
+                    <p class="sg">
+                      <code class="sg">.p-x-0</code>
+                      <code class="sg">.[size]-p-x-0</code>
+                      <code class="sg">.max[size]-p-x-0</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-x-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-x-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-25rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-25rem" class="sg">Padding 0.25rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-x-4</code>
+                      <code class="sg">.[size]-p-x-4</code>
+                      <code class="sg">.max[size]-p-x-4</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-x-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-x-4&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-0-5rem">
+                  <div class="sg-text">
+                    <h3 id="padding-0-5rem" class="sg">Padding 0.5rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-x-8</code>
+                      <code class="sg">.[size]-p-x-8</code>
+                      <code class="sg">.max[size]-p-x-8</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-x-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-x-8&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-padding-1rem">
+                  <div class="sg-text">
+                    <h3 id="padding-1rem" class="sg">Padding 1rem</h3>
+                    <p class="sg">
+                      <code class="sg">.p-x-16</code>
+                      <code class="sg">.[size]-p-x-16</code>
+                      <code class="sg">.max[size]-p-x-16</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="p-x-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-x-16&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
+        <div class="doc-sidebar__content cols">
+          <div class="col">
+            <div class="cols maxmd-ta-center">
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout-flex-grid.html">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout-gutter.html">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-vertical.html">Vertical modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-offset.html">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout-grid.html">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements-base.html">Base</a>
+                      </li>
+                      <li>
+                        <a href="elements-form.html">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements-button.html">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements-button-group.html">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements-input-group.html">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">List</a>
+                      </li>
+                      <li>
+                        <a href="elements-table.html">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers-border-radius.html">Border radius</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-style.html">Border style</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-width.html">Border width</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border.html">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers-clearfix.html">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers-color.html">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers-display.html">Display</a>
+                      </li>
+                      <li>
+                        <a href="helpers-float.html">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-size.html">Font size</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-weight.html">Font weight</a>
+                      </li>
+                      <li>
+                        <a href="helpers-margin.html">Margin</a>
+                      </li>
+                      <li>
+                        <a href="helpers-opacity.html">Opacity</a>
+                      </li>
+                      <li>
+                        <a href="helpers-padding.html">Padding</a>
+                      </li>
+                      <li>
+                        <a href="helpers-position.html">Position</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-align.html">Text align</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-transform.html">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text.html">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers-visibility.html">Visibility</a>
+                      </li>
+                      <li>
+                        <a href="helpers-width.html">Width</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components-card.html">Card</a>
+                      </li>
+                      <li>
+                        <a href="components-collapse.html">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components-drawer.html">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components-menu.html">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components-navbar.html">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components-navmenu.html">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components-tabs.html">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="m-top-16">
+                  <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+                  <label for="switch-night-mode" id="lbl-night-mode">
+                    <span>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                    </span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/styledown.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

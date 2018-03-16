@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Starter Kit Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/csssk.css">
+  <link rel="stylesheet" href="css/styledown.css">
+  <link rel="stylesheet" href="css/doc.css">
+  <script>
+    ;
+    (function(window, document, undefined) {
+      'use strict';
+
+      if (!('localStorage' in window)) return;
+
+      var nightMode = localStorage.getItem('nightMode');
+      if (!nightMode) return;
+
+      document.documentElement.classList.add('night', 'fsmooth');
+    })(window, document);
+  </script>
+</head>
+
+<body class="sg">
+  <div class="container-fluid">
+    <div class="cols">
+      <div class="col">
+        <nav class="doc-navbar navbar maxmd-navbar-responsive navbar--fixed">
+          <input type="checkbox" id="doc-navbar-toggle" class="collapse-toggle">
+          <div class="navbar__brand">
+            <a href="index.html" class="navbar__link">CSS Starter Kit</a>
+          </div>
+          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
+          <div class="navbar__collapse collapse maxmd-d-none">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">Preface</a>
+              </li>
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="doc-main xs-col-12 md-col-10 xl-col-11">
+        <div class="doc-main__content cols">
+          <div class="md-col-12 xl-col-12">
+            <div class="sg-container">
+              <section class="sg-section sg-section-text">
+                <h2 id="text" class="sg">Text</h2>
+                <section class="sg-block sg-section-selecting-all-text-with-one-click">
+                  <div class="sg-text">
+                    <h3 id="selecting-all-text-with-one-click" class="sg">Selecting all text with one click</h3>
+                    <p class="sg">
+                      <code class="sg">.usel</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p class="usel">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;usel&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-drop-cap">
+                  <div class="sg-text">
+                    <h3 id="drop-cap" class="sg">Drop cap</h3>
+                    <p class="sg">
+                      <code class="sg">.dcap</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p class="dcap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dcap&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+  nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel,
+  viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur
+  cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-small-caps">
+                  <div class="sg-text">
+                    <h3 id="small-caps" class="sg">Small caps</h3>
+                    <p class="sg">
+                      <code class="sg">.smcaps</code>
+                      <code class="sg">.smcaps-1ln</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p class="smcaps-1ln">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;smcaps-1ln&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+  nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-indent-text">
+                  <div class="sg-text">
+                    <h3 id="indent-text" class="sg">Indent text</h3>
+                    <p class="sg">
+                      <code class="sg">.tindent</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="tindent">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est. Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh, eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor ut, fermentum quam.</p>
+                        <p>In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin sem quis gravida cursus.</p>
+                        <p>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.</p>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;tindent&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam pulvinar, placerat lacus ut, facilisis est.
+    Vivamus interdum mattis enim a lacinia. Quisque eu maximus mauris, sit amet rhoncus justo. Vestibulum id neque in odio
+    aliquet mollis non in ex. Maecenas dui sem, suscipit ac dolor eget, egestas porta risus. Curabitur varius hendrerit nibh,
+    eget mollis urna mattis auctor. Praesent at scelerisque purus, quis aliquet quam. Cras et libero pulvinar, placerat tortor
+    ut, fermentum quam.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>In fermentum mi sit amet mauris sagittis, non laoreet urna placerat. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Sed rutrum, nibh vitae facilisis tincidunt, diam lacus porta est, quis feugiat nisi nibh
+    ac risus. Mauris vitae venenatis arcu. Nullam volutpat, sem non dictum accumsan, urna massa commodo odio, et euismod
+    diam quam id lorem. Suspendisse in massa sapien. Nunc ac magna a nunc laoreet imperdiet. Pellentesque vel elit ex. Maecenas
+    mollis interdum lacus, id bibendum leo aliquet ac. Pellentesque vitae ipsum a ex condimentum mollis. Ut sollicitudin
+    sem quis gravida cursus.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis,
+    odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl
+    magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit
+    amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque
+    commodo.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-divide-the-content-in-columns">
+                  <div class="sg-text">
+                    <h3 id="divide-the-content-in-columns" class="sg">Divide the content in columns</h3>
+                    <p class="sg">
+                      <code class="sg">.[size]-cols-[#]</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p class="xs-cols-1 sm-cols-2 md-cols-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;xs-cols-1 sm-cols-2 md-cols-3&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida
+  nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel,
+  viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur
+  cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
+        <div class="doc-sidebar__content cols">
+          <div class="col">
+            <div class="cols maxmd-ta-center">
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout-flex-grid.html">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout-gutter.html">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-vertical.html">Vertical modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-offset.html">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout-grid.html">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements-base.html">Base</a>
+                      </li>
+                      <li>
+                        <a href="elements-form.html">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements-button.html">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements-button-group.html">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements-input-group.html">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">List</a>
+                      </li>
+                      <li>
+                        <a href="elements-table.html">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers-border-radius.html">Border radius</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-style.html">Border style</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-width.html">Border width</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border.html">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers-clearfix.html">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers-color.html">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers-display.html">Display</a>
+                      </li>
+                      <li>
+                        <a href="helpers-float.html">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-size.html">Font size</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-weight.html">Font weight</a>
+                      </li>
+                      <li>
+                        <a href="helpers-margin.html">Margin</a>
+                      </li>
+                      <li>
+                        <a href="helpers-opacity.html">Opacity</a>
+                      </li>
+                      <li>
+                        <a href="helpers-padding.html">Padding</a>
+                      </li>
+                      <li>
+                        <a href="helpers-position.html">Position</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-align.html">Text align</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-transform.html">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text.html">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers-visibility.html">Visibility</a>
+                      </li>
+                      <li>
+                        <a href="helpers-width.html">Width</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components-card.html">Card</a>
+                      </li>
+                      <li>
+                        <a href="components-collapse.html">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components-drawer.html">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components-menu.html">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components-navbar.html">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components-navmenu.html">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components-tabs.html">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="m-top-16">
+                  <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+                  <label for="switch-night-mode" id="lbl-night-mode">
+                    <span>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                    </span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/styledown.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

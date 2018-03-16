@@ -1,0 +1,491 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Starter Kit Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="../dist/csssk.css">
+  <link rel="stylesheet" href="css/styledown.css">
+  <link rel="stylesheet" href="css/doc.css">
+  <script>
+    ;
+    (function(window, document, undefined) {
+      'use strict';
+
+      if (!('localStorage' in window)) return;
+
+      var nightMode = localStorage.getItem('nightMode');
+      if (!nightMode) return;
+
+      document.documentElement.classList.add('night', 'fsmooth');
+    })(window, document);
+  </script>
+</head>
+
+<body class="sg">
+  <div class="container-fluid">
+    <div class="cols">
+      <div class="col">
+        <nav class="doc-navbar navbar maxmd-navbar-responsive navbar--fixed">
+          <input type="checkbox" id="doc-navbar-toggle" class="collapse-toggle">
+          <div class="navbar__brand">
+            <a href="index.html" class="navbar__link">CSS Starter Kit</a>
+          </div>
+          <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
+          <div class="navbar__collapse collapse maxmd-d-none">
+            <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a href="index.html" class="navbar__link">Preface</a>
+              </li>
+              <li class="navbar__item">
+                <a href="layout.html" class="navbar__link">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="doc-main xs-col-12 md-col-10 xl-col-11">
+        <div class="doc-main__content cols">
+          <div class="md-col-12 xl-col-12">
+            <div class="sg-container">
+              <section class="sg-section sg-section-base">
+                <h2 id="base" class="sg">Base</h2>
+                <section class="sg-block sg-section-heading">
+                  <div class="sg-text">
+                    <h3 id="heading" class="sg">Heading</h3>
+                    <p class="sg">
+                      <code class="sg">h1</code>
+                      <code class="sg">h2</code>
+                      <code class="sg">h3</code>
+                      <code class="sg">h4</code>
+                      <code class="sg">h5</code>
+                      <code class="sg">h6</code>
+                      <code class="sg">.h1</code>
+                      <code class="sg">.h2</code>
+                      <code class="sg">.h3</code>
+                      <code class="sg">.h4</code>
+                      <code class="sg">.h5</code>
+                      <code class="sg">.h6</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="cols">
+                        <div class="col">
+                          <h1>Heading</h1>
+                          <h2>Heading</h2>
+                          <h3>Heading</h3>
+                          <h4>Heading</h4>
+                          <h5>Heading</h5>
+                          <h6>Heading</h6>
+                        </div>
+                        <div class="col">
+                          <p class="h1">Heading</p>
+                          <p class="h2">Heading</p>
+                          <p class="h3">Heading</p>
+                          <p class="h4">Heading</p>
+                          <p class="h5">Heading</p>
+                          <p class="h6">Heading</p>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;cols&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h1&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h2&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h3&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h4&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h5&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;h6&quot;</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-inline-elements">
+                  <div class="sg-text">
+                    <h3 id="inline-elements" class="sg">Inline elements</h3>
+                    <p class="sg">
+                      <code class="sg">b</code>
+                      <code class="sg">strong</code>
+                      <code class="sg">del</code>
+                      <code class="sg">s</code>
+                      <code class="sg">em</code>
+                      <code class="sg">i</code>
+                      <code class="sg">ins</code>
+                      <code class="sg">u</code>
+                      <code class="sg">mark</code>
+                      <code class="sg">small</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p>
+                        <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+                      </p>
+                      <p>
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
+                      </p>
+                      <p>
+                        <del>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</del>
+                      </p>
+                      <p>
+                        <s>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</s>
+                      </p>
+                      <p>
+                        <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
+                      </p>
+                      <p>
+                        <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i>
+                      </p>
+                      <p>
+                        <ins>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ins>
+                      </p>
+                      <p>
+                        <u>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</u>
+                      </p>
+                      <p>
+                        <mark>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</mark>
+                      </p>
+                      <p>
+                        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+                      </p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">del</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">del</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">s</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">s</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">i</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ins</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">ins</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">u</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">u</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">mark</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">mark</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-blockquote">
+                  <div class="sg-text">
+                    <h3 id="blockquote" class="sg">Blockquote</h3>
+                    <p class="sg">
+                      <code class="sg">blockquote</code>
+                      <code class="sg">.bq</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+                      <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </blockquote>
+                      <blockquote class="bq">
+                        <p class="m-bottom-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <footer>A common form of
+                          <cite>lorem ipsum</cite>
+                        </footer>
+                      </blockquote>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bq&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;m-bottom-0&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>A common form of
+    <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-code">
+                  <div class="sg-text">
+                    <h3 id="code" class="sg">Code</h3>
+                    <p class="sg">
+                      <code class="sg">code</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <p>Use
+                        <code>&lt;code&gt;</code>for inline code that can wrap.</p>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Use
+  <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;code&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span>for inline code that can wrap.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-code-block">
+                  <div class="sg-text">
+                    <h3 id="code-block" class="sg">Code block</h3>
+                    <p class="sg">
+                      <code class="sg">pre</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas"><pre><code>body {
+    font-size: 100%;
+}</code></pre>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>body {
+    font-size: 100%;
+}<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-standard-list">
+                  <div class="sg-text">
+                    <h3 id="standard-list" class="sg">Standard list</h3>
+                    <p class="sg">
+                      <code class="sg">ol</code>
+                      <code class="sg">ul</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="cols">
+                        <div class="col-6">
+                          <ol>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                          </ol>
+                        </div>
+                        <div class="col-6">
+                          <ul>
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;cols&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col-6&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                  </div>
+                </section>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
+        <div class="doc-sidebar__content cols">
+          <div class="col">
+            <div class="cols maxmd-ta-center">
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="layout-flex-grid.html">Flex grid</a>
+                      </li>
+                      <li>
+                        <a href="layout-gutter.html">Gutter</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-modifier-vertical.html">Vertical modifier</a>
+                      </li>
+                      <li>
+                        <a href="layout-offset.html">Offset</a>
+                      </li>
+                      <li>
+                        <a href="layout-grid.html">Grid</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="elements-base.html">Base</a>
+                      </li>
+                      <li>
+                        <a href="elements-form.html">Form</a>
+                      </li>
+                      <li>
+                        <a href="elements-button.html">Button</a>
+                      </li>
+                      <li>
+                        <a href="elements-button-group.html">Button group</a>
+                      </li>
+                      <li>
+                        <a href="elements-input-group.html">Input group</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">Switch</a>
+                      </li>
+                      <li>
+                        <a href="elements-switch.html">List</a>
+                      </li>
+                      <li>
+                        <a href="elements-table.html">Table</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="helpers-border-radius.html">Border radius</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-style.html">Border style</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border-width.html">Border width</a>
+                      </li>
+                      <li>
+                        <a href="helpers-border.html">Border</a>
+                      </li>
+                      <li>
+                        <a href="helpers-clearfix.html">Clearfix</a>
+                      </li>
+                      <li>
+                        <a href="helpers-color.html">Color</a>
+                      </li>
+                      <li>
+                        <a href="helpers-display.html">Display</a>
+                      </li>
+                      <li>
+                        <a href="helpers-float.html">Float</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-size.html">Font size</a>
+                      </li>
+                      <li>
+                        <a href="helpers-font-weight.html">Font weight</a>
+                      </li>
+                      <li>
+                        <a href="helpers-margin.html">Margin</a>
+                      </li>
+                      <li>
+                        <a href="helpers-opacity.html">Opacity</a>
+                      </li>
+                      <li>
+                        <a href="helpers-padding.html">Padding</a>
+                      </li>
+                      <li>
+                        <a href="helpers-position.html">Position</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-align.html">Text align</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text-transform.html">Text transform</a>
+                      </li>
+                      <li>
+                        <a href="helpers-text.html">Text</a>
+                      </li>
+                      <li>
+                        <a href="helpers-visibility.html">Visibility</a>
+                      </li>
+                      <li>
+                        <a href="helpers-width.html">Width</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div>
+                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
+                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
+                  <div class="collapse">
+                    <ul class="ls-unstyled">
+                      <li>
+                        <a href="components-card.html">Card</a>
+                      </li>
+                      <li>
+                        <a href="components-collapse.html">Collapse</a>
+                      </li>
+                      <li>
+                        <a href="components-drawer.html">Drawer</a>
+                      </li>
+                      <li>
+                        <a href="components-menu.html">Menu</a>
+                      </li>
+                      <li>
+                        <a href="components-navbar.html">Navbar</a>
+                      </li>
+                      <li>
+                        <a href="components-navmenu.html">Navmenu</a>
+                      </li>
+                      <li>
+                        <a href="components-tabs.html">Tabs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="m-top-16">
+                  <input id="switch-night-mode" type="checkbox" class="switch switch--sm">
+                  <label for="switch-night-mode" id="lbl-night-mode">
+                    <span>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                    </span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/styledown.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
