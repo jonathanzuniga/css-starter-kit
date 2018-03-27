@@ -52,51 +52,47 @@
         <div class="doc-main__content cols">
           <div class="md-col-12 xl-col-12">
             <div class="sg-container">
-              <section class="sg-section sg-section-text-align">
-                <h2 id="text-align" class="sg">Text align</h2>
-                <section class="sg-block sg-section-text-align-right">
+              <section class="sg-section sg-section-order">
+                <h2 id="order" class="sg">Order</h2>
+                <section class="sg-block sg-section-reordering">
                   <div class="sg-text">
-                    <h3 id="text-align-right" class="sg">Text align right</h3>
+                    <h3 id="reordering" class="sg">Reordering</h3>
                     <p class="sg">
-                      <code class="sg">.ta-right</code>
-                      <code class="sg">.[size]-ta-right</code>
-                      <code class="sg">.max[size]-ta-right</code>
+                      <code class="sg">.order-[#]</code>
+                      <code class="sg">.[size]-order-[#]</code>
+                      <code class="sg">.max[size]-order-[#]</code>
                     </p>
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <div class="ta-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-right&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-text-align-center">
-                  <div class="sg-text">
-                    <h3 id="text-align-center" class="sg">Text align center</h3>
-                    <p class="sg">
-                      <code class="sg">.ta-center</code>
-                      <code class="sg">.[size]-ta-center</code>
-                      <code class="sg">.max[size]-ta-center</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <div class="ta-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-center&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-                  </div>
-                </section>
-                <section class="sg-block sg-section-text-align-left">
-                  <div class="sg-text">
-                    <h3 id="text-align-left" class="sg">Text align left</h3>
-                    <p class="sg">
-                      <code class="sg">.ta-left</code>
-                      <code class="sg">.[size]-ta-left</code>
-                      <code class="sg">.max[size]-ta-left</code>
-                    </p>
-                  </div>
-                  <div class="sg-example">
-                    <div class="sg-canvas">
-                      <div class="ta-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ta-left&quot;</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+                      <div class="cols ta-center c-teal-60">
+                        <div class="col order-2">
+                          <div class="bgc-teal-10">1</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-teal-10">2</div>
+                        </div>
+                        <div class="col order-4">
+                          <div class="bgc-teal-10">3</div>
+                        </div>
+                        <div class="col">
+                          <div class="bgc-teal-10">4</div>
+                        </div>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;cols ta-center c-teal-60&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col order-2&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-teal-10&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-teal-10&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col order-4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-teal-10&quot;</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bgc-teal-10&quot;</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
               </section>

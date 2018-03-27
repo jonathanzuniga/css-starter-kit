@@ -36,7 +36,7 @@
 							li.navbar__item
 								a(href='index.html').navbar__link Preface
 							li.navbar__item
-								a(href='layout.html').navbar__link Documentation
+								a(href='layout-flex-grid.html').navbar__link Documentation
 
 		div.cols
 			div.doc-main.xs-col-12.md-col-10.xl-col-11
@@ -65,6 +65,8 @@
 											li
 												a(href='layout-offset.html') Offset
 											li
+												a(href='layout-order.html') Order
+											li
 												a(href='layout-grid.html') Grid
 
 							div.col-12
@@ -86,7 +88,7 @@
 											li
 												a(href='elements-switch.html') Switch
 											li
-												a(href='elements-switch.html') List
+												a(href='elements-list.html') List
 											li
 												a(href='elements-table.html') Table
 

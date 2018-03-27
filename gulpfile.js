@@ -213,6 +213,10 @@ gulp.task('styledown', function() {
 		.pipe(styledown({ config: config, template: template, filename: prefix_layout + 'offset.html' }))
 		.pipe(gulp.dest(dest));
 
+	gulp.src('dist/layout/order.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_layout + 'order.html' }))
+		.pipe(gulp.dest(dest));
+
 	gulp.src('dist/layout/grid.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_layout + 'grid.html' }))
 		.pipe(gulp.dest(dest));
