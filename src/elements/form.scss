@@ -337,29 +337,30 @@
 	// -ms-touch-action: manipulation;
 	// touch-action: manipulation;
 
-	// Add background image.
-	@if $select-background-image != none {
-		background-image: url($select-background-image);
-		background-position: $select-background-position;
-		background-size: $select-background-size;
+	&:focus,
+	&:focus:hover {
+		border-color: $select-focus-border-color;
+		box-shadow: $select-focus-box-shadow;
+	}
+}
+
+@if $select-icon-background-image != none {
+	.sel--icn {
+		background-image: url($select-icon-background-image);
+		background-position: $select-icon-background-position;
+		background-size: $select-icon-background-size;
 		background-repeat: no-repeat;
-		margin-right: $select-margin-right;
+		margin-right: $select-icon-margin-right;
 		padding-right: $select-icon-padding-right;
 
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
-		@if $select-focus-background-image != none {
+		@if $select-icon-focus-background-image != none {
 			&:focus {
-				background-image: url($select-focus-background-image);
+				background-image: url($select-icon-focus-background-image);
 			}
 		}
-	}
-
-	&:focus,
-	&:focus:hover {
-		border-color: $select-focus-border-color;
-		box-shadow: $select-focus-box-shadow;
 	}
 }
 
@@ -380,16 +381,16 @@
 
 /**
  * Pure CSS select menu icon:
- * `.sel-icn`
+ * `.sel-css-icn`
  *
  *     @example
- *     div.sel-icn
+ *     div.sel-css-icn
  *         select.sel
  *             option Option 1
  *             option Option 2
  *             option Option 3
  */
-.sel-icn {
+.sel-css-icn {
 	position: relative;
 
 	.sel {
@@ -398,36 +399,36 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
-		padding-right: $select-icon-padding-right;
+		padding-right: $select-css-icon-padding-right;
 	}
 	
 	&:after {
-		border-width: $select-icon-after-border-width;
-		border-style: $select-icon-after-border-style;
-		border-color: $select-icon-after-border-color;
+		border-width: $select-css-icon-after-border-width;
+		border-style: $select-css-icon-after-border-style;
+		border-color: $select-css-icon-after-border-color;
 		border-right: 0;
 		border-top: 0;
 		
 		content: '';
 		display: block;
 
-		width: $select-icon-after-width;
-		height: $select-icon-after-height;
+		width: $select-css-icon-after-width;
+		height: $select-css-icon-after-height;
 
-		margin-top: $select-icon-after-margin-top;
+		margin-top: $select-css-icon-after-margin-top;
 		position: absolute;
-		top: $select-icon-after-top;
-		right: $select-icon-after-right;
+		top: $select-css-icon-after-top;
+		right: $select-css-icon-after-right;
 
 		pointer-events: none;
-		transform: $select-icon-after-transform;
+		transform: $select-css-icon-after-transform;
 	}
 }
 
 .night {
-	.sel-icn {
+	.sel-css-icn {
 		&:after {
-			border-color: $night-select-icon-after-border-color;
+			border-color: $night-select-css-icon-after-border-color;
 		}
 	}
 }
@@ -451,13 +452,13 @@
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.sel-icn.sel-icn--sm
+ *                 div.sel-css-icn.sel-css-icn--sm
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  *             div.fld
- *                 div.sel-icn.sel-icn--lg
+ *                 div.sel-css-icn.sel-css-icn--lg
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
@@ -469,7 +470,7 @@
 	padding: $select-small-padding-y $select-small-padding-x;
 
 	// Arrow icon.
-	@if $select-background-image != none {
+	@if $select-icon-background-image != none {
 		padding-right: $select-icon-small-padding-right;
 	}
 }
@@ -480,39 +481,39 @@
 	padding: $select-large-padding-y $select-large-padding-x;
 
 	// Arrow icon.
-	@if $select-background-image != none {
+	@if $select-icon-background-image != none {
 		padding-right: $select-icon-large-padding-right;
 	}
 }
 
-.sel-icn--sm {
+.sel-css-icn--sm {
 	.sel {
 		@extend .sel--sm;
 
-		padding-right: $select-icon-small-padding-right;
+		padding-right: $select-css-icon-small-padding-right;
 	}
 
 	&:after {
-		width: $select-icon-small-after-width;
-		height: $select-icon-small-after-height;
+		width: $select-css-icon-small-after-width;
+		height: $select-css-icon-small-after-height;
 
-		margin-top: $select-icon-small-after-margin-top;
-		right: $select-icon-small-after-right;
+		margin-top: $select-css-icon-small-after-margin-top;
+		right: $select-css-icon-small-after-right;
 	}
 }
 
-.sel-icn--lg {
+.sel-css-icn--lg {
 	.sel {
 		@extend .sel--lg;
 
-		padding-right: $select-icon-large-padding-right;
+		padding-right: $select-css-icon-large-padding-right;
 	}
 
 	&:after {
-		width: $select-icon-large-after-width;
-		height: $select-icon-large-after-height;
+		width: $select-css-icon-large-after-width;
+		height: $select-css-icon-large-after-height;
 
-		margin-top: $select-icon-large-after-margin-top;
-		right: $select-icon-large-after-right;
+		margin-top: $select-css-icon-large-after-margin-top;
+		right: $select-css-icon-large-after-right;
 	}
 }
