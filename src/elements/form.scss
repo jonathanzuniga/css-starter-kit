@@ -332,6 +332,7 @@
 	font-size: $select-font-size;
 	line-height: $select-line-height;
 	padding: $select-padding-y $select-padding-x;
+	transition: $input-transition;
 	width: 100%;
 
 	// -ms-touch-action: manipulation;
@@ -394,8 +395,6 @@
 	position: relative;
 
 	.sel {
-		background: none;
-
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
@@ -515,5 +514,64 @@
 
 		margin-top: $select-css-icon-large-after-margin-top;
 		right: $select-css-icon-large-after-right;
+	}
+}
+
+.sel--flat {
+	background-color: $select-flat-background-color;
+	border-color: $select-flat-border-color;
+
+	&:valid {
+		border-color: $select-flat-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $select-focus-border-color;
+	}
+
+	&:hover {
+		background-color: $select-flat-hover-background-color;
+		border-color: $select-flat-hover-border-color;
+	}
+}
+
+/**
+ * Flat select menu:
+ * `.sel--flat`
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.sel.sel--flat
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.sel-css-icn
+ *                     select.sel.sel--flat
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.night .sel--flat,
+.navbar--dark .sel--flat {
+	background-color: $night-select-flat-background-color;
+	border-color: $night-select-flat-border-color;
+
+	&:valid {
+		border-color: $night-select-flat-border-color;
+	}
+
+	&:focus,
+	&:focus:hover {
+		border-color: $night-select-focus-border-color;
+	}
+
+	&:hover {
+		background-color: $night-select-flat-hover-background-color;
+		border-color: $night-select-flat-hover-border-color;
 	}
 }

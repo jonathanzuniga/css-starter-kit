@@ -280,6 +280,7 @@
   font-size: 16px;
   line-height: inherit;
   padding: 0.25em 0.75em;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
   width: 100%; }
   .sel:focus, .sel:focus:hover {
     border-color: #56acf2;
@@ -308,7 +309,6 @@
 .sel-css-icn {
   position: relative; }
   .sel-css-icn .sel {
-    background: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     padding-right: 1.813em; }
@@ -390,3 +390,50 @@
   height: 0.4695em;
   margin-top: -0.4695em;
   right: 1em; }
+
+.sel--flat {
+  background-color: rgba(0, 0, 0, 0.025);
+  border-color: transparent; }
+  .sel--flat:valid {
+    border-color: transparent; }
+  .sel--flat:focus, .sel--flat:focus:hover {
+    border-color: #56acf2; }
+  .sel--flat:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: transparent; }
+
+/**
+ * Flat select menu:
+ * `.sel--flat`
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.sel.sel--flat
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.sel-css-icn
+ *                     select.sel.sel--flat
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.night .sel--flat,
+.navbar--dark .sel--flat {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: transparent; }
+  .night .sel--flat:valid,
+  .navbar--dark .sel--flat:valid {
+    border-color: transparent; }
+  .night .sel--flat:focus, .night .sel--flat:focus:hover,
+  .navbar--dark .sel--flat:focus,
+  .navbar--dark .sel--flat:focus:hover {
+    border-color: #56acf2; }
+  .night .sel--flat:hover,
+  .navbar--dark .sel--flat:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: transparent; }
