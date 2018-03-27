@@ -243,7 +243,6 @@
 
 /**
  * Checkbox and radio:
- * 
  *
  *     @example
  *     div.cols
@@ -289,26 +288,179 @@
  *                     | Radio
  */
 .fld--check:not(:last-child) {
-	margin-bottom: $spacing-unit-half / 2;
+	margin-bottom: $field-check-margin-bottom;
 }
 
 .lbl--check {
 	margin-bottom: 0;
-	padding-left: $spacing-unit-half + 0.25;
+	padding-left: $label-check-padding-left;
 	position: relative;
 
 	&:not(:last-child) {
-		margin-right: $spacing-unit-half + 0.25;
+		margin-right: $label-check-padding-left;
 	}
 
 	[type='checkbox'],
 	[type='radio'] {
-		margin-top: $spacing-unit-quarter;
+		margin-top: $label-check-type-margin-top;
 
 		position: absolute;
 
 		top: 0;
 		left: 0;
+	}
+}
+
+/**
+ * Pure CSS custom checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *     div.cols
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *             div.fld
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ */
+.lbl--check-css {
+	@extend .lbl--check;
+
+	padding-left: $label-check-css-padding-left;
+
+	&:not(:last-child) {
+		margin-right: $label-check-css-padding-left;
+	}
+
+	&:hover {
+		.check-css-indic {
+			background-color: $label-check-css-hover-check-css-indicator-background-color;
+			border-color: $label-check-css-hover-check-css-indicator-border-color;
+		}
+	}
+
+	[type='checkbox'],
+	[type='radio'] {
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+
+		&:checked ~ .check-css-indic {
+			background-color: $label-check-css-type-checked-check-css-indicator-background-color;
+			border-color: $label-check-css-type-checked-check-css-indicator-border-color;
+
+			&:after {
+				display: block;
+			}
+		}
+	}
+
+	[type='checkbox'] {
+		& ~ .check-css-indic {
+			border-radius: $label-check-css-type-checkbox-check-css-indicator-border-radius;
+		}
+
+		&:checked ~ .check-css-indic {
+			&:after {
+				border-width: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-width;
+				border-style: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-style;
+				border-color: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-color;
+				
+				top: $label-check-css-type-checkbox-checked-check-css-indicator-after-top;
+				left: $label-check-css-type-checkbox-checked-check-css-indicator-after-left;
+
+				transform: $label-check-css-type-checkbox-checked-check-css-indicator-after-transform;
+
+				width: $label-check-css-type-checkbox-checked-check-css-indicator-after-width;
+				height: $label-check-css-type-checkbox-checked-check-css-indicator-after-height;
+			}
+		}
+	}
+
+	[type='radio'] {
+		& ~ .check-css-indic {
+			border-radius: $label-check-css-type-radio-check-css-indicator-border-radius;
+		}
+
+		&:checked ~ .check-css-indic {
+			&:after {
+				background-color: $label-check-css-type-radio-checked-check-css-indicator-after-background-color;
+				border-radius: $label-check-css-type-radio-checked-check-css-indicator-after-border-radius;
+
+				top: $label-check-css-type-radio-checked-check-css-indicator-after-top;
+				left: $label-check-css-type-radio-checked-check-css-indicator-after-left;
+
+				width: $label-check-css-type-radio-checked-check-css-indicator-after-width;
+				height: $label-check-css-type-radio-checked-check-css-indicator-after-height;
+			}
+		}
+	}
+}
+
+.check-css-indic {
+	background-color: $check-css-indicator-background-color;
+
+	border-width: $check-css-indicator-border-width;
+	border-style: $check-css-indicator-border-style;
+	border-color: $check-css-indicator-border-color;
+
+	margin-top: $check-css-indicator-margin-top;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: $check-css-indicator-width;
+	height: $check-css-indicator-height;
+
+	&:after {
+		content: '';
+		display: none;
+		position: absolute;
 	}
 }
 
@@ -381,7 +533,7 @@
 }
 
 /**
- * Pure CSS select menu icon:
+ * Select menu with pure CSS icon:
  * `.sel-css-icn`
  *
  *     @example
@@ -434,7 +586,7 @@
 
 /**
  * Select menu size:
- * `.sel--[size]` `.sel-icn--[size]`
+ * `.sel--[size]` `.sel-css-icn--[size]`
  *
  *     @example
  *     div.cols
