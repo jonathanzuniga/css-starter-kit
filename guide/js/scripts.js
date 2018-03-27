@@ -2,35 +2,21 @@ $(function() {
 	var url = window.location.pathname;
 	var page = url.substring(url.lastIndexOf('/') + 1)
 	var pagename = page.replace('.html', '');
+	var section = pagename.substring(0, pagename.indexOf('-'));
+	var subsection = pagename.substring(pagename.indexOf('-') + 1);
 
 	// Comparar cada texto de .collapse__toggler y si es el mismo checar el radio button.
 	$('.doc-sidebar .collapse__toggler').each(function() {
-		if ($(this).text().trim().toLowerCase() == pagename)
+		if ($(this).text().trim().toLowerCase() == section)
 			$(this).prev('.collapse-toggle').prop('checked', true);
 	});
 
-	// Obtener el anchor de la url.
-	var hash = window.location.hash.substr(1);
-
 	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
-	$('.doc-sidebar a[href$="#' + hash + '"]').parent().addClass('active');
+	$('.doc-sidebar a[href="' + page + '"]').parent().addClass('active');
 
 	sbCollapse();
 	fsMenuToggle();
 	switchNightMode();
-
-	if (window.location.hash)
-		smoothScroll(window.location.hash);
-	
-	$('.doc-sidebar a').click(function() {
-		var href = $(this).attr('href').split('#');
-		var anchor = href[1];
-		if (page == href[0])
-			smoothScroll('#' + anchor);
-
-		$('.doc-sidebar li').removeClass('active');
-		$(this).parent().addClass('active');
-	});
 
 	// Agregar clase .active al item del menu del navbar.
 	$('.doc-navbar .navbar__link[href="' + page + '"]').parent().addClass('active');
@@ -108,10 +94,4 @@ function switchNightModeStart(element) {
 		$('#icon-night-mode').removeClass('ion-ios-moon').addClass('ion-ios-moon-outline');
 		localStorage.removeItem('nightMode');
 	}
-}
-
-function smoothScroll($url) {
-	$('html, body').animate({
-		scrollTop: $($url).offset().top - 80
-	}, 500);
 }
