@@ -381,6 +381,19 @@
 			background-color: $label-check-css-hover-check-css-indicator-background-color;
 			border-color: $label-check-css-hover-check-css-indicator-border-color;
 		}
+
+		[type='checkbox'],
+		[type='radio'] {
+			&:checked {
+				~ .check-css-indic {
+					background-color: $label-check-css-hover-type-checked-check-css-indicator-background-color;
+				}
+
+				&:active ~ .check-css-indic {
+					background-color: $label-check-css-hover-type-checked-active-check-css-indicator-background-color;
+				}
+			}
+		}
 	}
 
 	[type='checkbox'],
@@ -457,11 +470,55 @@
 	width: $check-css-indicator-width;
 	height: $check-css-indicator-height;
 
+	transition: $transition-base;
+
 	&:after {
 		content: '';
 		display: none;
 		position: absolute;
 	}
+}
+
+/**
+ * Flat pure CSS custom checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ */
+.lbl--check-css {
+	&:hover {
+		.check-css-indic--flat {
+			background-color: $label-check-css-hover-check-css-indicator-flat-background-color;
+			border-color: $label-check-css-hover-check-css-indicator-flat-border-color;
+		}
+	}
+}
+
+.check-css-indic--flat {
+	background-color: $check-css-indicator-flat-background-color;
+	border-color: $check-css-indicator-flat-border-color;
 }
 
 /**

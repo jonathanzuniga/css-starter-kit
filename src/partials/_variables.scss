@@ -10,21 +10,21 @@
 // Base
 
 $font-family-sans-serif: -apple-system, 
-						 BlinkMacSystemFont, 
-						 'Segoe UI', 
-						 'Roboto', 
-						 'Noto Sans', 
-						 'Ubuntu', 
-						 'Droid Sans', 
-						 'Helvetica Neue', 
-						 sans-serif !default;
+                         BlinkMacSystemFont, 
+                         'Segoe UI', 
+                         'Roboto', 
+                         'Noto Sans', 
+                         'Ubuntu', 
+                         'Droid Sans', 
+                         'Helvetica Neue', 
+                         sans-serif !default;
 $font-family-monospace:  'SF Mono', 
-						 'Segoe UI Mono', 
-						 'Roboto Mono', 
-						 'Ubuntu Mono', 
-						 Menlo, 
-						 Courier, 
-						 monospace !default;
+                         'Segoe UI Mono', 
+                         'Roboto Mono', 
+                         'Ubuntu Mono', 
+                         Menlo, 
+                         Courier, 
+                         monospace !default;
 $font-family-base:       $font-family-sans-serif;
 
 $font-size-base:         16px !default;
@@ -58,9 +58,9 @@ $night-body-color:            color('white 90');
 $transition-duration:        0.16s;
 $transition-timing-function: ease-out;
 $transition-base:            background-color $transition-duration $transition-timing-function, 
-							 border-color     $transition-duration $transition-timing-function, 
-							 box-shadow       $transition-duration $transition-timing-function, 
-							 color            $transition-duration $transition-timing-function;
+                             border-color     $transition-duration $transition-timing-function, 
+                             box-shadow       $transition-duration $transition-timing-function, 
+                             color            $transition-duration $transition-timing-function;
 
 
 // Hyperlink
@@ -89,12 +89,12 @@ $night-link-hover-border-bottom-color: $night-link-hover-color;
 // Heading
 
 $headings: (
-	'h1': 2.5em,  // 40px
-	'h2': 2em,    // 32px
-	'h3': 1.75em, // 28px
-	'h4': 1.5em,  // 24px
-	'h5': 1.25em, // 20px
-	'h6': 1em     // 16px
+    'h1': 2.5em,  // 40px
+    'h2': 2em,    // 32px
+    'h3': 1.75em, // 28px
+    'h4': 1.5em,  // 24px
+    'h5': 1.25em, // 20px
+    'h6': 1em     // 16px
 ) !default;
 
 $heading-font-weight: 500;
@@ -212,11 +212,11 @@ $button-active-background-color-amount: 20%;
 // - night text color,
 // - light colors on hover/active state.
 $buttons: (
-	'primary'   color('cerulean')  color('cerulean')     color('white') color('white') '',
-	'secondary' color('cool gray') color('cool gray 60') color('white') color('white') '',
-	'success'   color('green')     color('green')        color('white') color('white') '',
-	'light'     color('white')     color('white')        color('black') color('black') '',
-	'dark'      color('black')     color('black')        color('white') color('white') 'y'
+    'primary'   color('cerulean')  color('cerulean')     color('white') color('white') '',
+    'secondary' color('cool gray') color('cool gray 60') color('white') color('white') '',
+    'success'   color('green')     color('green')        color('white') color('white') '',
+    'light'     color('white')     color('white')        color('black') color('black') '',
+    'dark'      color('black')     color('black')        color('white') color('white') 'y'
 );
 
 
@@ -358,37 +358,46 @@ $label-check-type-margin-top: 0.50em;
 
 // Pure CSS custom checkbox and radio
 
-$label-check-css-padding-left:                                                 2em;
-$label-check-css-hover-check-css-indicator-background-color:                   transparent;
-$label-check-css-hover-check-css-indicator-border-color:                       $control-border-color;
+$label-check-css-padding-left:                                                   2em;
+$label-check-css-hover-check-css-indicator-background-color:                     transparent;
+$label-check-css-hover-check-css-indicator-border-color:                         $control-border-color;
 
-$label-check-css-type-checked-check-css-indicator-background-color:            color('cerulean');
-$label-check-css-type-checked-check-css-indicator-border-color:                color('cerulean');
+$label-check-css-type-checked-check-css-indicator-background-color:              color('cerulean');
+$label-check-css-type-checked-check-css-indicator-border-color:                  color('cerulean');
 
-$label-check-css-type-checkbox-check-css-indicator-border-radius:              $control-border-radius;
+$label-check-css-hover-type-checked-check-css-indicator-background-color:        shade(
+                                                                                    $night-body-background-color, 
+                                                                                    $label-check-css-type-checked-check-css-indicator-background-color, 
+                                                                                    $button-hover-background-color-amount);
+$label-check-css-hover-type-checked-active-check-css-indicator-background-color: shade(
+                                                                                    $night-body-background-color, 
+                                                                                    $label-check-css-type-checked-check-css-indicator-background-color, 
+                                                                                    $button-active-background-color-amount);
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-width: 0 0.125em 0.125em 0;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-style: solid;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-color: color('white');
+$label-check-css-type-checkbox-check-css-indicator-border-radius:                $control-border-radius;
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-top:          0.125em;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-left:         0.375em;
+$label-check-css-type-checkbox-checked-check-css-indicator-after-border-width:   0 0.125em 0.125em 0;
+$label-check-css-type-checkbox-checked-check-css-indicator-after-border-style:   solid;
+$label-check-css-type-checkbox-checked-check-css-indicator-after-border-color:   color('white');
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-transform:    rotate(45deg);
+$label-check-css-type-checkbox-checked-check-css-indicator-after-top:            0.125em;
+$label-check-css-type-checkbox-checked-check-css-indicator-after-left:           0.375em;
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-width:        0.250em; //  4px
-$label-check-css-type-checkbox-checked-check-css-indicator-after-height:       0.625em; // 10px
+$label-check-css-type-checkbox-checked-check-css-indicator-after-transform:      rotate(45deg);
 
-$label-check-css-type-radio-check-css-indicator-border-radius:                  50%;
+$label-check-css-type-checkbox-checked-check-css-indicator-after-width:          0.250em; //  4px
+$label-check-css-type-checkbox-checked-check-css-indicator-after-height:         0.625em; // 10px
 
-$label-check-css-type-radio-checked-check-css-indicator-after-background-color: color('white');
-$label-check-css-type-radio-checked-check-css-indicator-after-border-radius:    50%;
-				
-$label-check-css-type-radio-checked-check-css-indicator-after-top:              0.375em;
-$label-check-css-type-radio-checked-check-css-indicator-after-left:             0.375em;
+$label-check-css-type-radio-check-css-indicator-border-radius:                   50%;
 
-$label-check-css-type-radio-checked-check-css-indicator-after-width:            0.375em;
-$label-check-css-type-radio-checked-check-css-indicator-after-height:           0.375em;
+$label-check-css-type-radio-checked-check-css-indicator-after-background-color:  color('white');
+$label-check-css-type-radio-checked-check-css-indicator-after-border-radius:     50%;
+
+$label-check-css-type-radio-checked-check-css-indicator-after-top:               0.375em;
+$label-check-css-type-radio-checked-check-css-indicator-after-left:              0.375em;
+
+$label-check-css-type-radio-checked-check-css-indicator-after-width:             0.375em;
+$label-check-css-type-radio-checked-check-css-indicator-after-height:            0.375em;
 
 $check-css-indicator-background-color: transparent;
 
@@ -400,6 +409,15 @@ $check-css-indicator-margin-top:       0.125em;
 
 $check-css-indicator-width:            1.250em;
 $check-css-indicator-height:           1.250em;
+
+
+// Flat pure CSS custom checkbox and radio
+
+$label-check-css-hover-check-css-indicator-flat-background-color: color('black 10');
+$label-check-css-hover-check-css-indicator-flat-border-color:     transparent;
+
+$check-css-indicator-flat-background-color:                       color('black 075');
+$check-css-indicator-flat-border-color:                           transparent;
 
 
 // Select menu
@@ -572,144 +590,144 @@ $night-table-striped-background-color: color('white 025');
 // Border radius
 
 $border-radii: (
-	0: 0,
-	4: 0.25rem
+    0: 0,
+    4: 0.25rem
 );
 
 
 // Border style
 
 $border-styles: (
-	none:  none,
-	solid: solid
+    none:  none,
+    solid: solid
 );
 
 
 // Border width
 
 $border-widths: (
-	0: 0,
-	1: 0.063rem,
-	2: 0.125rem
+    0: 0,
+    1: 0.063rem,
+    2: 0.125rem
 );
 
 
 // Border
 
 $borders: (
-	0: 0,
-	1: '0.063rem solid ' + color('black 075')
+    0: 0,
+    1: '0.063rem solid ' + color('black 075')
 );
 
 
 // Display
 
 $displays: (
-	block: block,
-	none:  none
+    block: block,
+    none:  none
 );
 
 
 // Float
 
 $floats: (
-	left:  left,
-	right: right,
-	none:  none,
+    left:  left,
+    right: right,
+    none:  none,
 );
 
 
 // Font size
 
 $font-sizes: (
-	sm: $font-size-small,
-	lg: $font-size-large
+    sm: $font-size-small,
+    lg: $font-size-large
 );
 
 
 // Font weight
 
 $font-weights: (
-	100: 100, // Thin (Hairline).
-	200: 200, // Extra Light (Ultra Light).
-	300: 300, // Light.
-	400: 400, // Normal.
-	500: 500, // Medium.
-	600: 600, // Semi Bold (Demi Bold).
-	700: 700, // Bold.
-	800: 800, // Extra Bold (Ultra Bold).
-	900: 900  // Black (Heavy).
+    100: 100, // Thin (Hairline).
+    200: 200, // Extra Light (Ultra Light).
+    300: 300, // Light.
+    400: 400, // Normal.
+    500: 500, // Medium.
+    600: 600, // Semi Bold (Demi Bold).
+    700: 700, // Bold.
+    800: 800, // Extra Bold (Ultra Bold).
+    900: 900  // Black (Heavy).
 );
 
 
 // Margin
 
 $margins: (
-	 0: 0       !important,
-	 4: 0.25rem !important,
-	 8: 0.50rem !important,
-	16: 1rem    !important
+     0: 0       !important,
+     4: 0.25rem !important,
+     8: 0.50rem !important,
+    16: 1rem    !important
 );
 
 
 // Opacity
 
 $opacities: (
-		0: 0,
-	 50: 0.5,
-	100: 1
+        0: 0,
+     50: 0.5,
+    100: 1
 );
 
 
 // Padding
 
 $paddings: (
-	 0: 0       !important,
-	 4: 0.25rem !important,
-	 8: 0.50rem !important,
-	16: 1rem    !important
+     0: 0       !important,
+     4: 0.25rem !important,
+     8: 0.50rem !important,
+    16: 1rem    !important
 );
 
 
 // Position
 
 $positions: (
-	absolute: absolute,
-	sticky:   sticky
+    absolute: absolute,
+    sticky:   sticky
 );
 
 
 // Text align
 
 $text-aligns: (
-	right:   right,
-	center:  center,
-	left:    left
+    right:   right,
+    center:  center,
+    left:    left
 );
 
 
 // Text transform
 
 $text-transforms: (
-	capitalize: capitalize,
-	lowercase:  lowercase,
-	uppercase:  uppercase
+    capitalize: capitalize,
+    lowercase:  lowercase,
+    uppercase:  uppercase
 );
 
 
 // Visibility
 
 $visibilities: (
-	visible: visible,
-	hidden:  hidden
+    visible: visible,
+    hidden:  hidden
 );
 
 
 // Width
 
 $widths: (
-	 50: '50%',
-	100: '100%'
+     50: '50%',
+    100: '100%'
 );
 
 
@@ -765,11 +783,11 @@ $breakpoint-lg-min-width: 1280px;
 $breakpoint-xl-min-width: 1680px;
 
 $grid-breakpoints: (
-	xs: $breakpoint-xs-min-width,
-	sm: $breakpoint-sm-min-width,
-	md: $breakpoint-md-min-width,
-	lg: $breakpoint-lg-min-width,
-	xl: $breakpoint-xl-min-width
+    xs: $breakpoint-xs-min-width,
+    sm: $breakpoint-sm-min-width,
+    md: $breakpoint-md-min-width,
+    lg: $breakpoint-lg-min-width,
+    xl: $breakpoint-xl-min-width
 ) !default;
 
 // Gutter normal width.
@@ -777,8 +795,8 @@ $gutter-width: 1rem !default;
 
 // Gutters and grid gap.
 $gutters: (
-	0: 0,
-	1: $gutter-width
+    0: 0,
+    1: $gutter-width
 );
 
 
@@ -816,9 +834,9 @@ $collapse-max-height:                                 0;
 $collapse-open-height:                                auto;
 $collapse-open-max-height:                            100vh;
 $collapse-transition:                                 height     0.3s $transition-timing-function,
-													  max-height 0.3s $transition-timing-function,
-													  opacity    0.3s $transition-timing-function,
-													  transform  0.3s $transition-timing-function;
+                                                      max-height 0.3s $transition-timing-function,
+                                                      opacity    0.3s $transition-timing-function,
+                                                      transform  0.3s $transition-timing-function;
 
 $collapse-list-unstyled-item-active-link-font-weight: 500;
 $collapse-list-unstyled-link-color:                   color('black 60');
@@ -842,7 +860,7 @@ $drawer-outside-transition:             margin 0.3s $transition-timing-function;
 $drawer-overlay-background-color:       color('black 50');
 $night-drawer-overlay-background-color: color('white 50');
 $drawer-overlay-transition:             opacity    0.3s $transition-timing-function,
-										visibility 0.3s $transition-timing-function;
+                                        visibility 0.3s $transition-timing-function;
 $drawer-overlay-z-index:                100;
 
 $drawer-push-outside-transition:        transform 0.3s $transition-timing-function;
@@ -909,18 +927,18 @@ $navbar-dark-item-active-link-color:  $night-body-color;
 // Full screen menu
 
 $full-screen-menu-transition:                  opacity          0.5s step-end, 
-											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-											   visibility       0.5s step-end, 
-											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility       0.5s step-end, 
+                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
 $full-screen-menu-open-background-color:       $body-background-color;
 $night-full-screen-menu-open-background-color: $night-body-background-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
-											   transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-											   visibility       0.5s step-start, 
-											   background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                                               visibility       0.5s step-start, 
+                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
@@ -961,4 +979,4 @@ $tabs-item-active-link-border-bottom-color:       $link-color;
 $night-tabs-item-active-link-border-bottom-color: $night-link-color;
 
 $tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
-												  width     $transition-duration $transition-timing-function;
+                                                  width     $transition-duration $transition-timing-function;

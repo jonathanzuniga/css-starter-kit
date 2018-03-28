@@ -628,6 +628,12 @@ ul {
   .lbl--check-css:hover .check-css-indic {
     background-color: transparent;
     border-color: rgba(0, 0, 0, 0.2); }
+  .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
+  .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
+    background-color: #048fdb; }
+  .lbl--check-css:hover [type='checkbox']:checked:active ~ .check-css-indic,
+  .lbl--check-css:hover [type='radio']:checked:active ~ .check-css-indic {
+    background-color: #0884c7; }
   .lbl--check-css [type='checkbox'],
   .lbl--check-css [type='radio'] {
     opacity: 0;
@@ -671,11 +677,48 @@ ul {
   top: 0;
   left: 0;
   width: 1.25em;
-  height: 1.25em; }
+  height: 1.25em;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   .check-css-indic:after {
     content: '';
     display: none;
     position: absolute; }
+
+/**
+ * Flat pure CSS custom checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ */
+.lbl--check-css:hover .check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: transparent; }
+
+.check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.075);
+  border-color: transparent; }
 
 /**
  * Select menu:
