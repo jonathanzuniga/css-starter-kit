@@ -78,21 +78,23 @@
 											li
 												a(href='elements-base.html') Base
 											li
-												a(href='elements-form.html') Form
-											li
 												a(href='elements-button.html') Button
 											li
 												a(href='elements-button-group.html') Button group
 											li
+												a(href='elements-file-area.html') File area
+											li
+												a(href='elements-form.html') Form
+											li
 												a(href='elements-input-group.html') Input group
-											li
-												a(href='elements-switch.html') Switch
-											li
-												a(href='elements-toolbar.html') Toolbar
 											li
 												a(href='elements-list.html') List
 											li
+												a(href='elements-switch.html') Switch
+											li
 												a(href='elements-table.html') Table
+											li
+												a(href='elements-toolbar.html') Toolbar
 
 							div.col-12
 								div

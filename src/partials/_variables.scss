@@ -18,6 +18,7 @@ $font-family-sans-serif: -apple-system,
                          'Droid Sans', 
                          'Helvetica Neue', 
                          sans-serif !default;
+
 $font-family-monospace:  'SF Mono', 
                          'Segoe UI Mono', 
                          'Roboto Mono', 
@@ -25,11 +26,12 @@ $font-family-monospace:  'SF Mono',
                          Menlo, 
                          Courier, 
                          monospace !default;
+
 $font-family-base:       $font-family-sans-serif;
 
 $font-size-base:         16px !default;
-$font-size-small:        0.75em; // 12px
-$font-size-large:        1.50em; // 24px
+$font-size-sm:           0.75em; // 12px
+$font-size-lg:           1.50em; // 24px
 
 $line-height-base:       25px !default;
 
@@ -44,13 +46,13 @@ $border-radius-base:     0.25rem;
 
 // Color
 
-$body-background-color:       #fff;
-$night-body-background-color: #272727;
+$day__body-bg-color: #fff;
+$ngt__body-bg-color: #272727;
 
-$colors:                     (colors($body-background-color, $night-body-background-color));
+$colors:             colors($day__body-bg-color, $ngt__body-bg-color);
 
-$body-color:                  color('black 90');
-$night-body-color:            color('white 90');
+$day__body-color:    color('black 90');
+$ngt__body-color:    color('white 90');
 
 
 // Transition
@@ -65,25 +67,28 @@ $transition-base:            background-color $transition-duration $transition-t
 
 // Hyperlink
 
-$link-color:                           color('cerulean 40');
-$night-link-color:                     color('cerulean 40');
-$link-decoration:                      none;
+$day__a-color:                     color('cerulean 40');
+$ngt__a-color:                     color('cerulean 40');
+$a-text-decoration:                none;
 
-$link-visited-color:                   $link-color;
-$night-link-visited-color:             $night-link-color;
-$link-visited-decoration:              none;
+$day__a-visited-color:             $day__a-color;
+$ngt__a-visited-color:             $ngt__a-color;
+$a-visited-text-decoration:        none;
 
-$link-hover-color:                     color('cerulean 50');
-$night-link-hover-color:               color('cerulean 50');
-$link-hover-decoration:                none;
+$day__a-hover-color:               color('cerulean 50');
+$ngt__a-hover-color:               color('cerulean 50');
+$a-hover-text-decoration:          none;
 
-$link-border-bottom-width:             0.063rem;
-$link-border-bottom-style:             solid;
-$link-border-bottom-color:             $link-color;
-$night-link-border-bottom-color:       $night-link-color;
 
-$link-hover-border-bottom-color:       $link-hover-color;
-$night-link-hover-border-bottom-color: $night-link-hover-color;
+// Nota: Borde para los enlaces que estan dentro de los parrafos.
+
+$a-border-bottom-width:            0.063rem;
+$a-border-bottom-style:            solid;
+$day__a-border-bottom-color:       $day__a-color;
+$ngt__a-border-bottom-color:       $ngt__a-color;
+
+$day__a-hover-border-bottom-color: $day__a-hover-color;
+$ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
 
 
 // Heading
@@ -103,105 +108,108 @@ $heading-line-height: 1.2;
 
 // Marked text
 
-$mark-border-radius:          0;
-$mark-background-color:       rgba(color('gold 20'), 0.1);
-$night-mark-background-color: color('white 05');
-$mark-background-image:       none;
-$night-mark-background-image: none;
-$mark-padding:                0.2em;
+$mark-border-radius: 0;
+$day__mark-bg-color: rgba(color('gold 20'), 0.1);
+$ngt__mark-bg-color: color('white 05');
+$day__mark-bg-image: none;
+$ngt__mark-bg-image: none;
+$mark-padding:       0.2em;
 
 
 // Blockquote
 
 $blockquote-border-width:               0.313rem;
 $blockquote-border-style:               solid;
-$blockquote-border-color:               color('black 05');
-$night-blockquote-border-color:         color('white 05');
+$day__blockquote-border-color:          color('black 05');
+$ngt__blockquote-border-color:          color('white 05');
 
 $blockquote-padding:                    0 0 0 (1.5 - $blockquote-border-width);
 
-$blockquote-p-font-size:                1.125em;
-$blockquote-p-before-after-font-weight: 700;
-$blockquote-p-before-content:           '«'; // '“';
-$blockquote-p-before-margin-right:       $spacing-unit-quarter / 2;
-$blockquote-p-after-content:            '»'; // '”';
-$blockquote-p-after-margin-left:        $spacing-unit-quarter / 2;
+$blockquote__p-font-size:                1.125em;
+$blockquote__p-before-after-font-weight: 700;
+$blockquote__p-before-content:           '«'; // '“';
+$blockquote__p-before-margin-right:       $spacing-unit-quarter / 2;
+$blockquote__p-after-content:            '»'; // '”';
+$blockquote__p-after-margin-left:        $spacing-unit-quarter / 2;
 
-$blockquote-footer-font-size:           $font-size-small;
-$blockquote-footer-before-content:      '— ';
+$blockquote__footer-font-size:           $font-size-sm;
+$blockquote__footer-before-content:      '— ';
 
 
 // Code
 
-$code-background-color:       rgba(black, 0.05);
-$night-code-background-color: rgba(white, 0.05);
-$code-color:                  inherit;
-$night-code-color:            inherit;
-$code-border-radius:          $border-radius-base;
-$code-font-size:              0.875em; // 14px
-$code-padding:                0.125em 0.313em; // 2px 5px
+$day__code-bg-color: rgba(black, 0.05);
+$ngt__code-bg-color: rgba(white, 0.05);
+$day__code-color:    inherit;
+$ngt__code-color:    inherit;
+$code-border-radius: $border-radius-base;
+$code-font-size:     0.875em; // 14px
+$code-padding:       0.125em 0.313em; // 2px 5px
 
-$pre-background-color:        color('black 05');
-$night-pre-background-color:  color('white 05');
-$pre-border-radius:           $border-radius-base;
+$day__pre-bg-color:  color('black 05');
+$ngt__pre-bg-color:  color('white 05');
+$pre-border-radius:  $border-radius-base;
 
 
 // Se usan los mismo valores para los demas controles de las formas.
 
-$control-border-width:                   0.063rem;
-$control-border-style:                   solid;
-$control-border-color:                   color('black 20');
-$night-control-border-color:             color('white 20');
+$control-border-width:              0.063rem;
+$control-border-style:              solid;
+$day__control-border-color:         color('black 20');
+$ngt__control-border-color:         color('white 20');
 
-$control-border-radius:                  $border-radius-base;
+$day__control-hover-border-color:   color('black 30');
+$ngt__control-hover-border-color:   color('white 30');
 
-$control-color:                          $body-color;
-$night-control-color:                    $night-body-color;
+$control-border-radius:             $border-radius-base;
 
-$control-line-height:                    inherit;
+$day__control-color:                $day__body-color;
+$ngt__control-color:                $ngt__body-color;
 
-$control-padding-y:                      0.250em;
-$control-padding-x:                      0.750em;
+$control-line-height:               inherit;
 
-$control-small-padding-y:                $control-padding-y;
-$control-small-padding-x:                $control-padding-x;
+$control-padding-y:                 0.250em;
+$control-padding-x:                 0.750em;
 
-$control-large-padding-y:                $control-padding-y;
-$control-large-padding-x:                $control-padding-x;
+$control-sm-padding-y:              $control-padding-y;
+$control-sm-padding-x:              $control-padding-x;
 
-$control-large-font-size:                1.25em;
+$control-lg-padding-y:              $control-padding-y;
+$control-lg-padding-x:              $control-padding-x;
 
-$control-active-border-color:            color('cerulean 30');
-$night-control-active-border-color:      color('cerulean 30');
+$control-lg-font-size:              1.25em;
 
-$control-focus-border-color:             color('cerulean 30');
-$night-control-focus-border-color:       color('cerulean 30');
+$day__control-invalid-border-color: color('red 30');
+$ngt__control-invalid-border-color: color('red 30');
 
-$control-focus-box-shadow:               inset 0 0 0 0.063rem $control-focus-border-color;
-$night-control-focus-box-shadow:         inset 0 0 0 0.063rem $night-control-focus-border-color;
+$day__control-focus-border-color:   color('cerulean 30');
+$ngt__control-focus-border-color:   color('cerulean 30');
 
-$control-invalid-border-color:           color('red 30');
-$night-control-invalid-border-color:     color('red 30');
+$day__control-focus-box-shadow:     inset 0 0 0 0.063rem $day__control-focus-border-color;
+$ngt__control-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__control-focus-border-color;
+
+$day__control-active-border-color:  color('cerulean 30');
+$ngt__control-active-border-color:  color('cerulean 30');
 
 
 // Button
 
-$button-border-width:                   $control-border-width;
-$button-border-style:                   $control-border-style;
-$button-border-color:                   transparent;
+$button-border-width:           $control-border-width;
+$button-border-style:           $control-border-style;
+$button-border-color:           transparent;
 
-$button-border-radius:                  $control-border-radius;
-$button-font-size:                      $font-size-base;
-$button-font-weight:                    400;
-$button-line-height:                    $control-line-height;
+$button-border-radius:          $control-border-radius;
+$button-font-size:              $font-size-base;
+$button-font-weight:            400;
+$button-line-height:            $control-line-height;
 
-$button-padding-y:                      $control-padding-y;
-$button-padding-x:                      $control-padding-x;
+$button-padding-y:              $control-padding-y;
+$button-padding-x:              $control-padding-x;
 
-$button-transition:                     $transition-base;
+$button-transition:             $transition-base;
 
-$button-hover-background-color-amount:  10%;
-$button-active-background-color-amount: 20%;
+$button-hover-bg-color-amount:  10%;
+$button-active-bg-color-amount: 20%;
 
 
 // Estilo de los botones:
@@ -227,23 +235,23 @@ $button-outline-border-transparentize-amount: 0;
 
 // Disabled button
 
-$button-disabled-opacity:    0.6;
+$button-disabled-opacity: 0.6;
 
 
 // Small button
 
-$button-small-border-radius: $control-border-radius;
-$button-small-font-size:     $font-size-small;
-$button-small-padding-y:     $control-small-padding-y;
-$button-small-padding-x:     $control-small-padding-x;
+$button-sm-border-radius: $control-border-radius;
+$button-sm-font-size:     $font-size-sm;
+$button-sm-padding-y:     $control-sm-padding-y;
+$button-sm-padding-x:     $control-sm-padding-x;
 
 
 // Large button
 
-$button-large-border-radius: $control-border-radius;
-$button-large-font-size:     $control-large-font-size;
-$button-large-padding-y:     $control-large-padding-y;
-$button-large-padding-x:     $control-large-padding-x;
+$button-lg-border-radius: $control-border-radius;
+$button-lg-font-size:     $control-lg-font-size;
+$button-lg-padding-y:     $control-lg-padding-y;
+$button-lg-padding-x:     $control-lg-padding-x;
 
 
 // Label
@@ -254,98 +262,97 @@ $label-padding:  ($control-padding-y / 2) 0;
 
 // Input
 
-$input-background-color:                  transparent;
-$night-input-background-color:            transparent;
-$input-border-width:                      $control-border-width;
-$input-border-style:                      $control-border-style;
-$input-border-color:                      $control-border-color;
-$night-input-border-color:                $night-control-border-color;
-$input-border-radius:                     $control-border-radius;
-$input-color:                             $control-color;
-$night-input-color:                       $night-control-color;
-$input-font-size:                         $font-size-base;
-$input-line-height:                       $control-line-height;
-$input-padding-y:                         $control-padding-y;
-$input-padding-x:                         $control-padding-x;
-$input-transition:                        $transition-base;
+$day__input-bg-color:                transparent;
+$ngt__input-bg-color:                transparent;
 
-$input-active-border-color:               $control-active-border-color;
-$night-input-active-border-color:         $night-control-active-border-color;
+$input-border-width:                 $control-border-width;
+$input-border-style:                 $control-border-style;
+$day__input-border-color:            $day__control-border-color;
+$ngt__input-border-color:            $ngt__control-border-color;
 
-$input-focus-background-color:            transparent;
-$input-focus-border-color:                $control-focus-border-color;
-$night-input-focus-border-color:          $night-control-focus-border-color;
-$input-focus-box-shadow:                  $control-focus-box-shadow;
-$night-input-focus-box-shadow:            $night-control-focus-box-shadow;
+$input-border-radius:                $control-border-radius;
+$day__input-color:                   $day__control-color;
+$ngt__input-color:                   $ngt__control-color;
+$input-font-size:                    $font-size-base;
+$input-line-height:                  $control-line-height;
+$input-padding-y:                    $control-padding-y;
+$input-padding-x:                    $control-padding-x;
+$input-transition:                   $transition-base;
 
-$input-placeholder-color:                 color('black 20');
-$night-input-placeholder-color:           color('white 20');
-$input-focus-placeholder-color:           color('cerulean 20');
-$night-input-focus-placeholder-color:     color('cerulean 20');
-$input-placeholder-opacity:               1;
+$day__input-focus-bg-color:          transparent;
+$ngt__input-focus-bg-color:          transparent;
+$day__input-focus-border-color:      $day__control-focus-border-color;
+$ngt__input-focus-border-color:      $ngt__control-focus-border-color;
+$day__input-focus-box-shadow:        $day__control-focus-box-shadow;
+$ngt__input-focus-box-shadow:        $ngt__control-focus-box-shadow;
 
-$input-hover-border-color:                $input-border-color;
-$night-input-hover-border-color:          $night-input-border-color;
+$day__input-placeholder-color:       color('black 20');
+$ngt__input-placeholder-color:       color('white 20');
 
-$input-invalid-border-color:              $control-invalid-border-color;
-$night-input-invalid-border-color:        $night-control-invalid-border-color;
+$day__input-focus-placeholder-color: color('cerulean 20');
+$ngt__input-focus-placeholder-color: color('cerulean 20');
 
-$input-valid-border-color:                $input-border-color;
-$night-input-valid-border-color:          $night-input-border-color;
+$input-placeholder-opacity:          1;
 
-$input-small-border-radius:               $control-border-radius;
-$input-small-font-size:                   $font-size-small;
-$input-small-padding-y:                   $control-small-padding-y;
-$input-small-padding-x:                   $control-small-padding-x;
+$day__input-invalid-border-color:    $day__control-invalid-border-color;
+$ngt__input-invalid-border-color:    $ngt__control-invalid-border-color;
+
+$day__input-valid-border-color:      $day__input-border-color;
+$ngt__input-valid-border-color:      $ngt__input-border-color;
+
+$day__input-hover-border-color:      $day__control-hover-border-color;
+$ngt__input-hover-border-color:      $ngt__control-hover-border-color;
+
+$day__input-active-border-color:     $day__control-active-border-color;
+$ngt__input-active-border-color:     $ngt__control-active-border-color;
+
+$input-sm-border-radius:             $control-border-radius;
+$input-sm-font-size:                 $font-size-sm;
+$input-sm-padding-y:                 $control-sm-padding-y;
+$input-sm-padding-x:                 $control-sm-padding-x;
  
-$input-large-border-radius:               $control-border-radius;
-$input-large-font-size:                   $control-large-font-size;
-$input-large-padding-y:                   $control-large-padding-y;
-$input-large-padding-x:                   $control-large-padding-x;
+$input-lg-border-radius:             $control-border-radius;
+$input-lg-font-size:                 $control-lg-font-size;
+$input-lg-padding-y:                 $control-lg-padding-y;
+$input-lg-padding-x:                 $control-lg-padding-x;
 
 
 // Flat input
 
-$input-flat-background-color:             color('black 025');
-$night-input-flat-background-color:       color('white 025');
-$input-flat-border-color:                 transparent;
-$night-input-flat-border-color:           transparent;
+$day__input-flat-bg-color:           color('black 025');
+$ngt__input-flat-bg-color:           color('white 025');
+$day__input-flat-border-color:       transparent;
+$ngt__input-flat-border-color:       transparent;
 
-$input-flat-hover-background-color:       color('black 05');
-$night-input-flat-hover-background-color: color('white 05');
-$input-flat-hover-border-color:           transparent;
-$night-input-flat-hover-border-color:     transparent;
+$day__input-flat-hover-bg-color:     color('black 05');
+$ngt__input-flat-hover-bg-color:     color('white 05');
+$day__input-flat-hover-border-color: transparent;
+$ngt__input-flat-hover-border-color: transparent;
 
 
 // Line input
 
-$input-line-focus-box-shadow:             inset 0 -0.063rem 0 0 $input-focus-border-color;
-$night-input-line-focus-box-shadow:       inset 0 -0.063rem 0 0 $night-input-focus-border-color;
-
-
-// Input group button
-
-$input-group-btn-input-focus-border-color:       $control-focus-border-color;
-$night-input-group-btn-input-focus-border-color: $night-control-focus-border-color;
+$day__input-line-focus-box-shadow: inset 0 -0.063rem 0 0 $day__input-focus-border-color;
+$ngt__input-line-focus-box-shadow: inset 0 -0.063rem 0 0 $ngt__input-focus-border-color;
 
 
 // File area
 
-$file-area-background-color:             color('black 025');
-$night-file-area-background-color:       color('white 025');
+$day__file-area-bg-color:       color('black 025');
+$ngt__file-area-bg-color:       color('white 025');
 
-$file-area-focus-background-color:       none;
-$night-file-area-focus-background-color: none;
+$day__file-area-focus-bg-color: none;
+$ngt__file-area-focus-bg-color: none;
 
-$file-area-hover-background-color:       color('black 05');
-$night-file-area-hover-background-color: color('white 05');
+$day__file-area-valid-bg-color: color('black 10');
+$ngt__file-area-valid-bg-color: color('white 10');
 
-$file-area-valid-background-color:       color('black 10');
-$night-file-area-valid-background-color: color('white 10');
+$day__file-area-hover-bg-color: color('black 05');
+$ngt__file-area-hover-bg-color: color('white 05');
 
-$file-area-border-radius:                $border-radius-base;
-$file-area-padding:                      6.25em $spacing-unit-half;
-$file-area-transition:                   $transition-base;
+$file-area-border-radius:       $border-radius-base;
+$file-area-padding:             6.25em $spacing-unit-half;
+$file-area-transition:          $transition-base;
 
 
 // Checkbox and radio
@@ -358,86 +365,96 @@ $label-check-type-margin-top: 0.50em;
 
 // Pure CSS custom checkbox and radio
 
-$label-check-css-padding-left:                                                         2em;
-$label-check-css-hover-check-css-indicator-background-color:                           transparent;
-$label-check-css-hover-check-css-indicator-border-color:                               $control-border-color;
-$night-label-check-css-hover-check-css-indicator-background-color:                     transparent;
-$night-label-check-css-hover-check-css-indicator-border-color:                         $night-control-border-color;
+$label-check-css-padding-left:                                                    2em;
+$day__label-check-css-hover__check-css-indic-bg-color:                            transparent;
+$ngt__label-check-css-hover__check-css-indic-bg-color:                            transparent;
+$day__label-check-css-hover__check-css-indic-border-color:                        $day__control-hover-border-color;
+$ngt__label-check-css-hover__check-css-indic-border-color:                        $ngt__control-hover-border-color;
 
-$label-check-css-type-checked-check-css-indicator-background-color:                    color('cerulean');
-$night-label-check-css-type-checked-check-css-indicator-background-color:              color('cerulean');
-$label-check-css-type-checked-check-css-indicator-border-color:                        color('cerulean');
-$night-label-check-css-type-checked-check-css-indicator-border-color:                  color('cerulean');
+$day__label-check-css__type-checked__check-css-indic-bg-color:                    color('cerulean');
+$ngt__label-check-css__type-checked__check-css-indic-bg-color:                    color('cerulean');
 
-$label-check-css-hover-type-checked-check-css-indicator-background-color:              shade(
-                                                                                           $night-body-background-color, 
-                                                                                           $label-check-css-type-checked-check-css-indicator-background-color, 
-                                                                                           $button-hover-background-color-amount);
-$night-label-check-css-hover-type-checked-check-css-indicator-background-color:        shade(
-                                                                                           $night-body-background-color, 
-                                                                                           $label-check-css-type-checked-check-css-indicator-background-color, 
-                                                                                           $button-hover-background-color-amount);
-$label-check-css-hover-type-checked-active-check-css-indicator-background-color:       shade(
-                                                                                           $night-body-background-color, 
-                                                                                           $label-check-css-type-checked-check-css-indicator-background-color, 
-                                                                                           $button-active-background-color-amount);
-$night-label-check-css-hover-type-checked-active-check-css-indicator-background-color: shade(
-                                                                                           $night-body-background-color, 
-                                                                                           $label-check-css-type-checked-check-css-indicator-background-color, 
-                                                                                           $button-active-background-color-amount);
+$day__label-check-css__type-checked__check-css-indic-border-color:                color('cerulean');
+$ngt__label-check-css__type-checked__check-css-indic-border-color:                color('cerulean');
 
-$label-check-css-type-checkbox-check-css-indicator-border-radius:                      $control-border-radius;
+$day__label-check-css-hover__type-checked__check-css-indic-bg-color:              shade(
+                                                                                      $ngt__body-bg-color, 
+                                                                                      $day__label-check-css__type-checked__check-css-indic-bg-color, 
+                                                                                      $button-hover-bg-color-amount);
+$ngt__label-check-css-hover__type-checked__check-css-indic-bg-color:              shade(
+                                                                                      $ngt__body-bg-color, 
+                                                                                      $ngt__label-check-css__type-checked__check-css-indic-bg-color, 
+                                                                                      $button-hover-bg-color-amount);
+$day__label-check-css-hover__type-checked-active__check-css-indic-bg-color:       shade(
+                                                                                      $ngt__body-bg-color, 
+                                                                                      $day__label-check-css__type-checked__check-css-indic-bg-color, 
+                                                                                      $button-active-bg-color-amount);
+$ngt__label-check-css-hover__type-checked-active__check-css-indic-bg-color:       shade(
+                                                                                      $ngt__body-bg-color, 
+                                                                                      $ngt__label-check-css__type-checked__check-css-indic-bg-color, 
+                                                                                      $button-active-bg-color-amount);
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-width:         0 0.125em 0.125em 0;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-style:         solid;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-border-color:         color('white');
-$night-label-check-css-type-checkbox-checked-check-css-indicator-after-border-color:   color('white');
+$label-check-css__type-checkbox__check-css-indic-border-radius:                   $control-border-radius;
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-top:                  0.125em;
-$label-check-css-type-checkbox-checked-check-css-indicator-after-left:                 0.375em;
+$label-check-css__type-checkbox-checked__check-css-indic-after-border-width:      0 0.125em 0.125em 0;
+$label-check-css__type-checkbox-checked__check-css-indic-after-border-style:      solid;
+$day__label-check-css__type-checkbox-checked__check-css-indic-after-border-color: color('white');
+$ngt__label-check-css__type-checkbox-checked__check-css-indic-after-border-color: color('white');
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-transform:            rotate(45deg);
+$label-check-css__type-checkbox-checked__check-css-indic-after-top:               0.125em;
+$label-check-css__type-checkbox-checked__check-css-indic-after-left:              0.375em;
 
-$label-check-css-type-checkbox-checked-check-css-indicator-after-width:                0.250em; //  4px
-$label-check-css-type-checkbox-checked-check-css-indicator-after-height:               0.625em; // 10px
+$label-check-css__type-checkbox-checked__check-css-indic-after-transform:         rotate(45deg);
 
-$label-check-css-type-radio-check-css-indicator-border-radius:                         50%;
+$label-check-css__type-checkbox-checked__check-css-indic-after-width:             0.250em; //  4px
+$label-check-css__type-checkbox-checked__check-css-indic-after-height:            0.625em; // 10px
 
-$label-check-css-type-radio-checked-check-css-indicator-after-background-color:        color('white');
-$night-label-check-css-type-radio-checked-check-css-indicator-after-background-color:  color('white');
-$label-check-css-type-radio-checked-check-css-indicator-after-border-radius:           50%;
+$label-check-css__type-radio__check-css-indic-border-radius:                      50%;
 
-$label-check-css-type-radio-checked-check-css-indicator-after-top:                     0.375em;
-$label-check-css-type-radio-checked-check-css-indicator-after-left:                    0.375em;
+$day__label-check-css__type-radio-checked__check-css-indic-after-bg-color:        color('white');
+$ngt__label-check-css__type-radio-checked__check-css-indic-after-bg-color:        color('white');
 
-$label-check-css-type-radio-checked-check-css-indicator-after-width:                   0.375em;
-$label-check-css-type-radio-checked-check-css-indicator-after-height:                  0.375em;
+$label-check-css__type-radio-checked__check-css-indic-after-border-radius:        50%;
 
-$check-css-indicator-background-color:       transparent;
-$night-check-css-indicator-background-color: transparent;
+$label-check-css__type-radio-checked__check-css-indic-after-top:                  0.375em; // 6px
+$label-check-css__type-radio-checked__check-css-indic-after-left:                 0.375em;
 
-$check-css-indicator-border-width:           $control-border-width;
-$check-css-indicator-border-style:           $control-border-style;
-$check-css-indicator-border-color:           $control-border-color;
-$night-check-css-indicator-border-color:     $night-control-border-color;
+$label-check-css-type-radio-checked-check-css-indicator-after-width:              0.375em;
+$label-check-css-type-radio-checked-check-css-indicator-after-height:             0.375em;
 
-$check-css-indicator-margin-top:             0.125em;
+$day__check-css-indic-bg-color:     transparent;
+$ngt__check-css-indic-bg-color:     transparent;
 
-$check-css-indicator-width:                  1.250em;
-$check-css-indicator-height:                 1.250em;
+$check-css-indic-border-width:      $control-border-width;
+$check-css-indic-border-style:      $control-border-style;
+$day__check-css-indic-border-color: $day__control-border-color;
+$ngt__check-css-indic-border-color: $ngt__control-border-color;
+
+$check-css-indic-margin-top:        0.125em;
+
+$check-css-indic-width:             1.250em;
+$check-css-indic-height:            1.250em;
 
 
 // Flat pure CSS custom checkbox and radio
 
-$label-check-css-hover-check-css-indicator-flat-background-color:       color('black 10');
-$night-label-check-css-hover-check-css-indicator-flat-background-color: color('white 10');
-$label-check-css-hover-check-css-indicator-flat-border-color:           transparent;
-$night-label-check-css-hover-check-css-indicator-flat-border-color:     transparent;
+$day__label-check-css-hover__check-css-indic-flat-bg-color:      color('black 10');
+$ngt__label-check-css-hover__check-css-indic-flat-bg-color:      color('white 10');
 
-$check-css-indicator-flat-background-color:                             color('black 075');
-$night-check-css-indicator-flat-background-color:                       color('white 075');
-$check-css-indicator-flat-border-color:                                 transparent;
-$night-check-css-indicator-flat-border-color:                           transparent;
+$day__label-check-css-active__check-css-indic-flat-bg-color:     color('black 20');
+$ngt__label-check-css-active__check-css-indic-flat-bg-color:     color('white 20');
+
+$day__label-check-css-hover__check-css-indic-flat-border-color:  transparent;
+$ngt__label-check-css-hover__check-css-indic-flat-border-color:  transparent;
+
+$day__label-check-css-active__check-css-indic-flat-border-color: transparent;
+$ngt__label-check-css-active__check-css-indic-flat-border-color: transparent;
+
+$day__check-css-indic-flat-bg-color:     color('black 075');
+$ngt__check-css-indic-flat-bg-color:     color('white 075');
+
+$day__check-css-indic-flat-border-color: transparent;
+$ngt__check-css-indic-flat-border-color: transparent;
 
 
 // Select menu
@@ -445,40 +462,43 @@ $night-check-css-indicator-flat-border-color:                           transpar
 $select-background-color:         transparent;
 $select-border-width:             $control-border-width;
 $select-border-style:             $control-border-style;
-$select-border-color:             $control-border-color;
-$night-select-border-color:       $night-control-border-color;
+$select-border-color:             $day__control-border-color;
+$night-select-border-color:       $ngt__control-border-color;
 $select-border-radius:            $control-border-radius;
-$select-color:                    $control-color;
-$night-select-color:              $night-control-color;
+$select-color:                    $day__control-color;
+$night-select-color:              $ngt__control-color;
 $select-font-size:                $font-size-base;
 $select-line-height:              $control-line-height;
 $select-padding-y:                $control-padding-y;
 $select-padding-x:                $control-padding-x;
 
-$select-focus-border-color:       $control-focus-border-color;
-$night-select-focus-border-color: $night-control-focus-border-color;
-$select-focus-box-shadow:         $control-focus-box-shadow;
-$night-select-focus-box-shadow:   $night-control-focus-box-shadow;
+$select-focus-border-color:       $day__control-focus-border-color;
+$night-select-focus-border-color: $ngt__control-focus-border-color;
+$select-focus-box-shadow:         $day__control-focus-box-shadow;
+$night-select-focus-box-shadow:   $ngt__control-focus-box-shadow;
+
+$day__select-hover-border-color:   $day__control-hover-border-color;
+$ngt__select-hover-border-color:   $ngt__control-hover-border-color;
 
 $select-small-border-radius:      $control-border-radius;
-$select-small-font-size:          $font-size-small;
-$select-small-padding-y:          $control-small-padding-y;
-$select-small-padding-x:          $control-small-padding-x;
+$select-small-font-size:          $font-size-sm;
+$select-small-padding-y:          $control-sm-padding-y;
+$select-small-padding-x:          $control-sm-padding-x;
 
 $select-large-border-radius:      $control-border-radius;
-$select-large-font-size:          $control-large-font-size;
-$select-large-padding-y:          $control-large-padding-y;
-$select-large-padding-x:          $control-large-padding-x;
+$select-large-font-size:          $control-lg-font-size;
+$select-large-padding-y:          $control-lg-padding-y;
+$select-large-padding-x:          $control-lg-padding-x;
 
-$night-select-option-color:       $control-color;
+$night-select-option-color:       $day__control-color;
 
 
 // Pure CSS select menu icon.
 
 $select-css-icon-after-border-width:        0.125em;
 $select-css-icon-after-border-style:        solid;
-$select-css-icon-after-border-color:        $body-color;
-$night-select-css-icon-after-border-color:  $night-body-color;
+$select-css-icon-after-border-color:        $day__body-color;
+$night-select-css-icon-after-border-color:  $ngt__body-color;
 $select-css-icon-after-margin-top:         -0.313em;
 $select-css-icon-after-width:               0.313em;
 $select-css-icon-after-height:              0.313em;
@@ -491,13 +511,13 @@ $select-css-icon-small-after-width:         $select-css-icon-after-width / 1.5;
 $select-css-icon-small-after-height:        $select-css-icon-after-height / 1.5;
 $select-css-icon-small-after-margin-top:    $select-css-icon-after-margin-top / 1.5;
 $select-css-icon-small-after-right:         $select-css-icon-after-right - 0.25;
-$select-css-icon-small-padding-right:       $select-css-icon-small-after-width + ($control-small-padding-x * 2);
+$select-css-icon-small-padding-right:       $select-css-icon-small-after-width + ($control-sm-padding-x * 2);
 
 $select-css-icon-large-after-width:         $select-css-icon-after-width * 1.5;
 $select-css-icon-large-after-height:        $select-css-icon-after-height * 1.5;
 $select-css-icon-large-after-margin-top:    $select-css-icon-after-margin-top * 1.5;
 $select-css-icon-large-after-right:         $select-css-icon-after-right + 0.25;
-$select-css-icon-large-padding-right:       $select-css-icon-large-after-width + ($control-large-padding-x * 2);
+$select-css-icon-large-padding-right:       $select-css-icon-large-after-width + ($control-lg-padding-x * 2);
 
 
 // Select menu arrow icon.
@@ -530,8 +550,8 @@ $night-select-flat-hover-border-color:     transparent;
 $switch-label-height:                                2.438em;
 $switch-label-width:                                 $switch-label-height * 2;
 
-$switch-label-background-color:                      $control-border-color;
-$night-switch-label-background-color:                $night-control-border-color;
+$switch-label-background-color:                      $day__control-border-color;
+$night-switch-label-background-color:                $ngt__control-border-color;
 $switch-label-border:                                none;
 $switch-label-border-radius:                         $switch-label-height / 2;
 $switch-label-box-shadow:                            none;
@@ -560,6 +580,7 @@ $switch-checked-label-before-transition:             0.20s cubic-bezier(0, 0, 0,
 
 $switch-small-label-height:                          1.859em;
 $switch-small-label-width:                           $switch-small-label-height * 2;
+
 $switch-small-label-border-radius:                   $switch-small-label-height / 2;
 
 $switch-small-label-after-width:                     $switch-small-label-height - ($spacing-unit-quarter + 0.188);
@@ -660,8 +681,8 @@ $floats: (
 // Font size
 
 $font-sizes: (
-    sm: $font-size-small,
-    lg: $font-size-large
+    sm: $font-size-sm,
+    lg: $font-size-lg
 );
 
 
@@ -757,8 +778,8 @@ $widths: (
 
 $dropcap-background-color: transparent;
 $dropcap-border:           none;
-$dropcap-color:            $body-color;
-$night-dropcap-color:      $night-body-color;
+$dropcap-color:            $day__body-color;
+$night-dropcap-color:      $ngt__body-color;
 $dropcap-font-size:        3.5em;
 $dropcap-font-style:       normal;
 $dropcap-font-weight:      normal;
@@ -832,7 +853,7 @@ $grid-gap: $gutter-width;
 
 // Card
 
-$card-background-color:       $body-background-color;
+$card-background-color:       $day__body-bg-color;
 $night-card-background-color: color('white 10');
 $card-padding:                $spacing-unit-half;
 $card-border-width:           0.063rem;
@@ -863,14 +884,14 @@ $collapse-list-unstyled-link-color:                   color('black 60');
 $night-collapse-list-unstyled-link-color:             color('white 60');
 $collapse-list-unstyled-link-hover-color:             color('black 90');
 $night-collapse-list-unstyled-link-hover-color:       color('white 90');
-$collapse-list-unstyled-item-active-link-color:       $body-color;
-$night-collapse-list-unstyled-item-active-link-color: $night-body-color;
+$collapse-list-unstyled-item-active-link-color:       $day__body-color;
+$night-collapse-list-unstyled-item-active-link-color: $ngt__body-color;
 
 
 // Drawer
 
-$drawer-background-color:               $body-background-color;
-$night-drawer-background-color:         $night-body-background-color;
+$drawer-background-color:               $day__body-bg-color;
+$night-drawer-background-color:         $ngt__body-bg-color;
 $drawer-width:                          260px;
 $drawer-height:                         200px;
 $drawer-z-index:                        110;
@@ -894,19 +915,19 @@ $menu-item-padding-x:                           0;
 $menu-link-padding-y:                           $spacing-unit-quarter;
 $menu-link-padding-x:                           $spacing-unit-half;
 
-$menu-item-active-link-color:                   $body-color;
-$night-menu-item-active-link-color:             $night-body-color;
+$menu-item-active-link-color:                   $day__body-color;
+$night-menu-item-active-link-color:             $ngt__body-color;
 
 
 // Menu pills
 
 $menu-pills-item-link-border-radius:            $border-radius-base;
 
-$menu-pills-item-link-color:                    $body-color;
-$night-menu-pills-item-link-color:              $night-body-color;
+$menu-pills-item-link-color:                    $day__body-color;
+$night-menu-pills-item-link-color:              $ngt__body-color;
 
-$menu-pills-item-active-link-color:             $link-color;
-$night-menu-pills-item-active-link-color:       $night-link-color;
+$menu-pills-item-active-link-color:             $day__a-color;
+$night-menu-pills-item-active-link-color:       $ngt__a-color;
 
 $menu-pills-link-hover-background-color:        color('black 05');
 $night-menu-pills-link-hover-background-color:  color('white 05');
@@ -919,8 +940,8 @@ $night-menu-pills-item-active-background-color: color('cerulean 90');
 
 // Navbar brand
 
-$navbar-background-color:             $body-background-color;
-$night-navbar-background-color:       $night-body-background-color;
+$navbar-background-color:             $day__body-bg-color;
+$night-navbar-background-color:       $ngt__body-bg-color;
 
 $navbar-padding-y:                    em_to_rem($spacing-unit-quarter);
 $navbar-padding-x:                    em_to_rem($spacing-unit-half);
@@ -934,12 +955,12 @@ $night-navbar-link-color:             color('white 60');
 $navbar-link-hover-color:             color('black 90');
 $night-navbar-link-hover-color:       color('white 90');
 
-$navbar-item-active-link-color:       $body-color;
-$night-navbar-item-active-link-color: $night-body-color;
+$navbar-item-active-link-color:       $day__body-color;
+$night-navbar-item-active-link-color: $ngt__body-color;
 
 $navbar-dark-link-color:              color('white 60');
 $navbar-dark-link-hover-color:        color('white 90');
-$navbar-dark-item-active-link-color:  $night-body-color;
+$navbar-dark-item-active-link-color:  $ngt__body-color;
 
 
 // Navmenu
@@ -952,8 +973,8 @@ $full-screen-menu-transition:                  opacity          0.5s step-end,
                                                background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
 $full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
-$full-screen-menu-open-background-color:       $body-background-color;
-$night-full-screen-menu-open-background-color: $night-body-background-color;
+$full-screen-menu-open-background-color:       $day__body-bg-color;
+$night-full-screen-menu-open-background-color: $ngt__body-bg-color;
 
 $full-screen-menu-open-transition:             opacity          0.5s step-start, 
                                                transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
@@ -988,15 +1009,15 @@ $tabs-link-padding-x:                             $spacing-unit-half;
 $tabs-link-hover-border-bottom-color:             transparent;
 $night-tabs-link-hover-border-bottom-color:       transparent;
 
-$tabs-item-active-link-color:                     $body-color;
-$night-tabs-item-active-link-color:               $night-body-color;
-$tabs-item-active-link-hover-color:               $body-color;
-$night-tabs-item-active-link-hover-color:         $night-body-color;
+$tabs-item-active-link-color:                     $day__body-color;
+$night-tabs-item-active-link-color:               $ngt__body-color;
+$tabs-item-active-link-hover-color:               $day__body-color;
+$night-tabs-item-active-link-hover-color:         $ngt__body-color;
 
 $tabs-item-active-link-border-bottom-width:       0.188rem; // 3px
 
-$tabs-item-active-link-border-bottom-color:       $link-color;
-$night-tabs-item-active-link-border-bottom-color: $night-link-color;
+$tabs-item-active-link-border-bottom-color:       $day__a-color;
+$night-tabs-item-active-link-border-bottom-color: $ngt__a-color;
 
 $tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
                                                   width     $transition-duration $transition-timing-function;

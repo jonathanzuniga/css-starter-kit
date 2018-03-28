@@ -52,39 +52,37 @@
 .ac-c a:not(.btn) {
 	&:link,
 	&:visited {
-		color: $body-color;
+		color: $day__body-color;
 	}
 
 	&:hover {
-		color: $link-color;
+		color: $day__a-color;
 	}
 }
 
 p.ac-c a:not(.btn) {
-	border-bottom-color: rgba($body-color, 0.2);
+	border-bottom-color: rgba($day__body-color, 0.2);
 
 	&:hover {
-		border-bottom-color: $link-color;
+		border-bottom-color: $day__a-color;
 	}
 }
 
-.night {
-	.ac-c a:not(.btn) {
-		&:link,
-		&:visited {
-			color: $night-body-color;
-		}
+.night .ac-c a:not(.btn) {
+	&:link,
+	&:visited {
+		color: $ngt__body-color;
+	}
 
-		&:hover {
-			color: $night-link-color;
-		}
-	}	
+	&:hover {
+		color: $ngt__a-color;
+	}
+}	
 
-	p.ac-c a:not(.btn) {
-		border-bottom-color: rgba($night-body-color, 0.2);
+.night p.ac-c a:not(.btn) {
+	border-bottom-color: rgba($ngt__body-color, 0.2);
 
-		&:hover {
-			border-bottom-color: $night-link-color;
-		}
+	&:hover {
+		border-bottom-color: $ngt__a-color;
 	}
 }

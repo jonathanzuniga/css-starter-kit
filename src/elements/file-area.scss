@@ -19,7 +19,6 @@
 	text-align: center;
 
 	[type=file] {
-		// cursor: pointer;
 		opacity: 0;
 		position: absolute;
 		
@@ -33,30 +32,21 @@
 
 		z-index: 1;
 
-		// opacity: 0;
-		// overflow: hidden;
-		// position: absolute;
-		
-		// width: 0;
-		// height: 0;
-
-		// z-index: -1;
-
 		&:focus + .file-area__bg {
-			background-color: $file-area-focus-background-color;
+			background-color: $day__file-area-focus-bg-color;
 		}
 
 		&:valid + .file-area__bg {
-			background-color: $file-area-valid-background-color;
+			background-color: $day__file-area-valid-bg-color;
 		}
 
 		&:hover + .file-area__bg {
-			background-color: $file-area-hover-background-color;
+			background-color: $day__file-area-hover-bg-color;
 		}
 	}
 
 	.file-area__bg {
-		background-color: $file-area-background-color;
+		background-color: $day__file-area-bg-color;
 		border-radius: $file-area-border-radius;
 
 		position: absolute;
@@ -74,7 +64,7 @@
 	}
 
 	&:hover .file-area__bg {
-		background-color: $file-area-hover-background-color;
+		background-color: $day__file-area-hover-bg-color;
 	}
 
 	label {
@@ -83,28 +73,26 @@
 	}
 }
 
-.night {
-	.file-area {
-		[type=file] {
-			&:focus + .file-area__bg {
-				background-color: $night-file-area-focus-background-color;
-			}
-
-			&:valid + .file-area__bg {
-				background-color: $night-file-area-valid-background-color;
-			}
-
-			&:hover + .file-area__bg {
-				background-color: $night-file-area-hover-background-color;
-			}
+.night .file-area {
+	[type=file] {
+		&:focus + .file-area__bg {
+			background-color: $ngt__file-area-focus-bg-color;
 		}
 
-		.file-area__bg {
-			background-color: $night-file-area-background-color;
+		&:valid + .file-area__bg {
+			background-color: $ngt__file-area-valid-bg-color;
 		}
 
-		&:hover .file-area__bg {
-			background-color: $night-file-area-hover-background-color;
+		&:hover + .file-area__bg {
+			background-color: $ngt__file-area-hover-bg-color;
 		}
+	}
+
+	.file-area__bg {
+		background-color: $ngt__file-area-bg-color;
+	}
+
+	&:hover .file-area__bg {
+		background-color: $ngt__file-area-hover-bg-color;
 	}
 }

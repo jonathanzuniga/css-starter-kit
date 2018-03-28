@@ -58,7 +58,7 @@
       color: #95c4f3; }
   .input:hover,
   .txtarea:hover {
-    border-color: rgba(0, 0, 0, 0.2); }
+    border-color: rgba(0, 0, 0, 0.3); }
   .input:active,
   .txtarea:active {
     border-color: #56acf2; }
@@ -86,7 +86,9 @@
   .night .txtarea:focus:hover,
   .navbar--dark .input:focus,
   .navbar--dark .input:focus:hover {
-    border-color: #56acf2; }
+    background-color: transparent;
+    border-color: #56acf2;
+    box-shadow: inset 0 0 0 0.063rem #56acf2; }
     .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
     .night .txtarea:focus::placeholder,
     .night .txtarea:focus:hover::placeholder,
@@ -96,7 +98,7 @@
   .night .input:hover,
   .night .txtarea:hover,
   .navbar--dark .input:hover {
-    border-color: rgba(255, 255, 255, 0.2); }
+    border-color: rgba(255, 255, 255, 0.3); }
   .night .input:active,
   .night .txtarea:active,
   .navbar--dark .input:active {
@@ -322,7 +324,7 @@
     margin-right: 2em; }
   .lbl--check-css:hover .check-css-indic {
     background-color: transparent;
-    border-color: rgba(0, 0, 0, 0.2); }
+    border-color: rgba(0, 0, 0, 0.3); }
   .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
   .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
     background-color: #048fdb; }
@@ -364,7 +366,7 @@
 
 .night .lbl--check-css:hover .check-css-indic {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.2); }
+  border-color: rgba(255, 255, 255, 0.3); }
 
 .night .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
 .night .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
@@ -438,12 +440,20 @@
   background-color: rgba(0, 0, 0, 0.1);
   border-color: transparent; }
 
+.lbl--check-css:active .check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: transparent; }
+
 .check-css-indic--flat {
   background-color: rgba(0, 0, 0, 0.075);
   border-color: transparent; }
 
 .night .lbl--check-css:hover .check-css-indic--flat {
   background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent; }
+
+.night .lbl--check-css:active .check-css-indic--flat {
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: transparent; }
 
 .night .check-css-indic--flat {
@@ -475,6 +485,8 @@
   .sel:focus, .sel:focus:hover {
     border-color: #56acf2;
     box-shadow: inset 0 0 0 0.063rem #56acf2; }
+  .sel:hover {
+    border-color: rgba(0, 0, 0, 0.3); }
 
 .night .sel {
   border-color: rgba(255, 255, 255, 0.2);
@@ -482,6 +494,8 @@
   .night .sel:focus, .night .sel:focus:hover {
     border-color: #56acf2;
     box-shadow: inset 0 0 0 0.063rem #56acf2; }
+  .night .sel:hover {
+    border-color: rgba(255, 255, 255, 0.3); }
   .night .sel option {
     color: rgba(0, 0, 0, 0.9); }
 

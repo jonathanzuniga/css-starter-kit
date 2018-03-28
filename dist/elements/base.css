@@ -24,13 +24,27 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-bottom: 1em; }
 
+/**
+ * Hyperlink:
+ * `a` `.a-bd-bottom`
+ *
+ *     @example
+ *     div.cols
+ *         div.col
+ *             p
+ *                 a(href='#!') Click me!
+ *         div.col.a-bd-bottom
+ *             p
+ *                 a(href='#!') Click me more!
+ */
 a {
   text-decoration: none;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   a:link {
     color: #009bef; }
   a:visited {
-    color: #009bef; }
+    color: #009bef;
+    text-decoration: none; }
   a:hover {
     color: #047cc0;
     text-decoration: none; }
@@ -44,14 +58,14 @@ a {
 .night a:hover {
   color: #047cc0; }
 
-p > a:not(.btn) {
+.a-bd-bottom p > a:not(.btn) {
   border-bottom: 0.063rem solid #009bef; }
-  p > a:not(.btn):hover {
+  .a-bd-bottom p > a:not(.btn):hover {
     border-bottom-color: #047cc0; }
 
-.night p > a:not(.btn) {
+.night .a-bd-bottom p > a:not(.btn) {
   border-bottom-color: #009bef; }
-  .night p > a:not(.btn):hover {
+  .night .a-bd-bottom p > a:not(.btn):hover {
     border-bottom-color: #047cc0; }
 
 /**

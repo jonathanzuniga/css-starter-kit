@@ -1462,13 +1462,27 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-bottom: 1em; }
 
+/**
+ * Hyperlink:
+ * `a` `.a-bd-bottom`
+ *
+ *     @example
+ *     div.cols
+ *         div.col
+ *             p
+ *                 a(href='#!') Click me!
+ *         div.col.a-bd-bottom
+ *             p
+ *                 a(href='#!') Click me more!
+ */
 a {
   text-decoration: none;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   a:link {
     color: #009bef; }
   a:visited {
-    color: #009bef; }
+    color: #009bef;
+    text-decoration: none; }
   a:hover {
     color: #047cc0;
     text-decoration: none; }
@@ -1482,14 +1496,14 @@ a {
 .night a:hover {
   color: #047cc0; }
 
-p > a:not(.btn) {
+.a-bd-bottom p > a:not(.btn) {
   border-bottom: 0.063rem solid #009bef; }
-  p > a:not(.btn):hover {
+  .a-bd-bottom p > a:not(.btn):hover {
     border-bottom-color: #047cc0; }
 
-.night p > a:not(.btn) {
+.night .a-bd-bottom p > a:not(.btn) {
   border-bottom-color: #009bef; }
-  .night p > a:not(.btn):hover {
+  .night .a-bd-bottom p > a:not(.btn):hover {
     border-bottom-color: #047cc0; }
 
 /**
@@ -2174,6 +2188,8 @@ ul {
     text-decoration: none; }
   .btn--link:link, .btn--link:visited {
     color: #009bef; }
+  .btn--link:visited {
+    text-decoration: none; }
   .btn--link:hover {
     background-color: transparent;
     color: #047cc0;
@@ -2504,7 +2520,7 @@ ul {
       color: #95c4f3; }
   .input:hover,
   .txtarea:hover {
-    border-color: rgba(0, 0, 0, 0.2); }
+    border-color: rgba(0, 0, 0, 0.3); }
   .input:active,
   .txtarea:active {
     border-color: #56acf2; }
@@ -2532,7 +2548,9 @@ ul {
   .night .txtarea:focus:hover,
   .navbar--dark .input:focus,
   .navbar--dark .input:focus:hover {
-    border-color: #56acf2; }
+    background-color: transparent;
+    border-color: #56acf2;
+    box-shadow: inset 0 0 0 0.063rem #56acf2; }
     .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
     .night .txtarea:focus::placeholder,
     .night .txtarea:focus:hover::placeholder,
@@ -2542,7 +2560,7 @@ ul {
   .night .input:hover,
   .night .txtarea:hover,
   .navbar--dark .input:hover {
-    border-color: rgba(255, 255, 255, 0.2); }
+    border-color: rgba(255, 255, 255, 0.3); }
   .night .input:active,
   .night .txtarea:active,
   .navbar--dark .input:active {
@@ -2768,7 +2786,7 @@ ul {
     margin-right: 2em; }
   .lbl--check-css:hover .check-css-indic {
     background-color: transparent;
-    border-color: rgba(0, 0, 0, 0.2); }
+    border-color: rgba(0, 0, 0, 0.3); }
   .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
   .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
     background-color: #048fdb; }
@@ -2810,7 +2828,7 @@ ul {
 
 .night .lbl--check-css:hover .check-css-indic {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.2); }
+  border-color: rgba(255, 255, 255, 0.3); }
 
 .night .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
 .night .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
@@ -2884,12 +2902,20 @@ ul {
   background-color: rgba(0, 0, 0, 0.1);
   border-color: transparent; }
 
+.lbl--check-css:active .check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: transparent; }
+
 .check-css-indic--flat {
   background-color: rgba(0, 0, 0, 0.075);
   border-color: transparent; }
 
 .night .lbl--check-css:hover .check-css-indic--flat {
   background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent; }
+
+.night .lbl--check-css:active .check-css-indic--flat {
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: transparent; }
 
 .night .check-css-indic--flat {
@@ -2921,6 +2947,8 @@ ul {
   .sel:focus, .sel:focus:hover {
     border-color: #56acf2;
     box-shadow: inset 0 0 0 0.063rem #56acf2; }
+  .sel:hover {
+    border-color: rgba(0, 0, 0, 0.3); }
 
 .night .sel {
   border-color: rgba(255, 255, 255, 0.2);
@@ -2928,6 +2956,8 @@ ul {
   .night .sel:focus, .night .sel:focus:hover {
     border-color: #56acf2;
     box-shadow: inset 0 0 0 0.063rem #56acf2; }
+  .night .sel:hover {
+    border-color: rgba(255, 255, 255, 0.3); }
   .night .sel option {
     color: rgba(0, 0, 0, 0.9); }
 
@@ -3137,8 +3167,6 @@ ul {
     .input-group-btn .input:last-child {
       border-top-right-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem; }
-    .input-group-btn .input:focus, .input-group-btn .input:focus:hover, .input-group-btn .input:active {
-      border-color: #56acf2; }
     .input-group-btn .input:focus, .input-group-btn .input:focus:hover, .input-group-btn .input:hover, .input-group-btn .input:active {
       z-index: 3; }
   .input-group-btn .btn:last-child {

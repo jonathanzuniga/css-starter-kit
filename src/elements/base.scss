@@ -13,8 +13,8 @@
 }
 
 body {
-	background-color: $body-background-color;
-	color: $body-color;
+	background-color: $day__body-bg-color;
+	color: $day__body-color;
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	line-height: $line-height-ratio;
@@ -23,8 +23,8 @@ body {
 }
 
 .night body {
-	background-color: $night-body-background-color;
-	color: $night-body-color;
+	background-color: $ngt__body-bg-color;
+	color: $ngt__body-color;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -33,51 +33,65 @@ ul, ol, dl, figure {
 	margin-bottom: $spacing-unit-half;
 }
 
+/**
+ * Hyperlink:
+ * `a` `.a-bd-bottom`
+ *
+ *     @example
+ *     div.cols
+ *         div.col
+ *             p
+ *                 a(href='#!') Click me!
+ *         div.col.a-bd-bottom
+ *             p
+ *                 a(href='#!') Click me more!
+ */
 a {
-	text-decoration: $link-decoration;
+	text-decoration: $a-text-decoration;
 	transition: $transition-base;
 		
 	&:link {
-		color: $link-color;
+		color: $day__a-color;
 	}
 
 	&:visited {
-		color: $link-visited-color;
+		color: $day__a-visited-color;
+		text-decoration: $a-visited-text-decoration;
 	}
 
 	&:hover {
-		color: $link-hover-color;
-		text-decoration: $link-hover-decoration;
+		color: $day__a-hover-color;
+		text-decoration: $a-hover-text-decoration;
 	}
 }
 
 .night a {		
 	&:link {
-		color: $night-link-color;
+		color: $ngt__a-color;
 	}
 
 	&:visited {
-		color: $night-link-visited-color;
+		color: $ngt__a-visited-color;
 	}
 
 	&:hover {
-		color: $night-link-hover-color;
-	}
-}
-
-p > a:not(.btn) {
-	border-bottom: $link-border-bottom-width $link-border-bottom-style $link-border-bottom-color;
-
-	&:hover {
-		border-bottom-color: $link-hover-border-bottom-color;
+		color: $ngt__a-hover-color;
 	}
 }
 
-.night p > a:not(.btn) {
-	border-bottom-color: $night-link-border-bottom-color;
+.a-bd-bottom p > a:not(.btn) {
+	border-bottom: $a-border-bottom-width $a-border-bottom-style $day__a-border-bottom-color;
 
 	&:hover {
-		border-bottom-color: $night-link-hover-border-bottom-color;
+		border-bottom-color: $day__a-hover-border-bottom-color;
+	}
+}
+
+.night .a-bd-bottom p > a:not(.btn) {
+	border-bottom-color: $ngt__a-border-bottom-color;
+
+	&:hover {
+		border-bottom-color: $ngt__a-hover-border-bottom-color;
 	}
 }
 
@@ -154,21 +168,21 @@ i {
 
 mark {
 	border-radius: $mark-border-radius;
-	background-color: $mark-background-color;
-	background-image: $mark-background-image;
+	background-color: $day__mark-bg-color;
+	background-image: $day__mark-bg-image;
 	color: inherit;
 	padding: $mark-padding;
 }
 
 .night {
 	mark {
-		background-color: $night-mark-background-color;
-		background-image: $night-mark-background-image;
+		background-color: $ngt__mark-bg-color;
+		background-image: $ngt__mark-bg-image;
 	}
 }
 
 small {
-	font-size: $font-size-small;
+	font-size: $font-size-sm;
 }
 
 img {
@@ -192,45 +206,45 @@ blockquote {
 	padding: $blockquote-padding;
 
 	p {
-		font-size: $blockquote-p-font-size;
+		font-size: $blockquote__p-font-size;
 	}
 
 	footer {
-		font-size: $blockquote-footer-font-size;
+		font-size: $blockquote__footer-font-size;
 	}
 }
 
 .bq {
 	border-left-width: $blockquote-border-width;
 	border-left-style: $blockquote-border-style;
-	border-left-color: $blockquote-border-color;
+	border-left-color: $day__blockquote-border-color;
 
 	p {
 		&:before,
 		&:after {
-			font-weight: $blockquote-p-before-after-font-weight;
+			font-weight: $blockquote__p-before-after-font-weight;
 		}
 
 		&:before {
-			content: $blockquote-p-before-content;
-			margin-right: $blockquote-p-before-margin-right;
+			content: $blockquote__p-before-content;
+			margin-right: $blockquote__p-before-margin-right;
 		}
 
 		&:after {
-			content: $blockquote-p-after-content;
-			margin-left: $blockquote-p-after-margin-left;
+			content: $blockquote__p-after-content;
+			margin-left: $blockquote__p-after-margin-left;
 		}
 	}
 
 	footer {
 		&:before {
-			content: $blockquote-footer-before-content;
+			content: $blockquote__footer-before-content;
 		}
 	}
 }
 
 .night .bq {
-	border-left-color: $night-blockquote-border-color;
+	border-left-color: $ngt__blockquote-border-color;
 }
 
 /**
@@ -241,17 +255,17 @@ blockquote {
  *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
  */
 code {
-	background-color: $code-background-color;
+	background-color: $day__code-bg-color;
 	border-radius: $code-border-radius;
-	color: $code-color;
+	color: $day__code-color;
 	font-family: $font-family-monospace;
 	font-size: $code-font-size;
 	padding: $code-padding;
 }
 
 .night code {
-	background-color: $night-code-background-color;
-	color: $night-code-color;
+	background-color: $ngt__code-bg-color;
+	color: $ngt__code-color;
 }
 
 /**
@@ -266,7 +280,7 @@ code {
  *             | }
  */
 pre {
-	background-color: $pre-background-color;
+	background-color: $day__pre-bg-color;
 	border-radius: $pre-border-radius;
 	overflow-x: auto;
 	padding: $spacing-unit-quarter $spacing-unit-half;
@@ -278,7 +292,7 @@ pre {
 }
 
 .night pre {
-	background-color: $night-pre-background-color;
+	background-color: $ngt__pre-bg-color;
 
 	code {
 		background-color: transparent;
@@ -291,7 +305,7 @@ figure {
 	margin-right: 0;
 
 	figcaption {
-		font-size: $font-size-small;
+		font-size: $font-size-sm;
 		font-style: italic;
 		text-align: center;
 	}

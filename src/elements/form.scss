@@ -25,13 +25,13 @@
 
 .input,
 .txtarea {
-	background-color: $input-background-color;
+	background-color: $day__input-bg-color;
 	border-width: $input-border-width;
 	border-style: $input-border-style;
-	border-color: $input-border-color;
+	border-color: $day__input-border-color;
 	border-radius: $input-border-radius;
 	box-shadow: none;
-	color: $input-color;
+	color: $day__input-color;
 	display: block;
 	font-family: $font-family-base;
 	font-size: $input-font-size;
@@ -45,16 +45,16 @@
 	}
 
 	&::placeholder {
-		color: $input-placeholder-color;
+		color: $day__input-placeholder-color;
 		opacity: $input-placeholder-opacity;
 	}
 
 	&:invalid {
-		border-color: $input-invalid-border-color;
+		border-color: $day__input-invalid-border-color;
 	}
 
 	&:valid {
-		border-color: $input-valid-border-color;
+		border-color: $day__input-valid-border-color;
 	}
 
 	// &:-moz-ui-invalid:-moz-focusring:not(output),
@@ -64,58 +64,60 @@
 
 	&:focus,
 	&:focus:hover {
-		background-color: $input-focus-background-color;
-		border-color: $input-focus-border-color;
-		box-shadow: $input-focus-box-shadow;
+		background-color: $day__input-focus-bg-color;
+		border-color: $day__input-focus-border-color;
+		box-shadow: $day__input-focus-box-shadow;
 
 		&::placeholder {
-			color: $input-focus-placeholder-color;
+			color: $day__input-focus-placeholder-color;
 		}
 	}
 
 	&:hover {
-		border-color: $input-hover-border-color;
+		border-color: $day__input-hover-border-color;
 	}
 
 	&:active {
-		border-color: $input-active-border-color;
+		border-color: $day__input-active-border-color;
 	}
 }
 
 .night .input,
 .night .txtarea,
 .navbar--dark .input {
-	background-color: $night-input-background-color;
-	border-color: $night-input-border-color;
-	color: $night-input-color;
+	background-color: $ngt__input-bg-color;
+	border-color: $ngt__input-border-color;
+	color: $ngt__input-color;
 
 	&::placeholder {
-		color: $night-input-placeholder-color;
+		color: $ngt__input-placeholder-color;
 	}
 
 	&:invalid {
-		border-color: $night-input-invalid-border-color;
+		border-color: $ngt__input-invalid-border-color;
 	}
 
 	&:valid {
-		border-color: $night-input-valid-border-color;
+		border-color: $ngt__input-valid-border-color;
 	}
 
 	&:focus,
 	&:focus:hover {
-		border-color: $night-input-focus-border-color;
+		background-color: $ngt__input-focus-bg-color;
+		border-color: $ngt__input-focus-border-color;
+		box-shadow: $ngt__input-focus-box-shadow;
 
 		&::placeholder {
-			color: $night-input-focus-placeholder-color;
+			color: $ngt__input-focus-placeholder-color;
 		}
 	}
 
 	&:hover {
-		border-color: $night-input-hover-border-color;
+		border-color: $ngt__input-hover-border-color;
 	}
 
 	&:active {
-		border-color: $night-input-active-border-color;
+		border-color: $ngt__input-active-border-color;
 	}
 }
 
@@ -130,15 +132,15 @@
  *         input(type='text', placeholder='Text input').input.input--sm
  */
 .input--sm {
-	border-radius: $input-small-border-radius;
-	font-size: $input-small-font-size;
-	padding: $input-small-padding-y $input-small-padding-x;
+	border-radius: $input-sm-border-radius;
+	font-size: $input-sm-font-size;
+	padding: $input-sm-padding-y $input-sm-padding-x;
 }
 
 .input--lg {
-	border-radius: $input-large-border-radius;
-	font-size: $input-large-font-size;
-	padding: $input-large-padding-y $input-large-padding-x;
+	border-radius: $input-lg-border-radius;
+	font-size: $input-lg-font-size;
+	padding: $input-lg-padding-y $input-lg-padding-x;
 }
 
 /**
@@ -149,41 +151,41 @@
  *     input(type='text', placeholder='Flat input').input.input--flat
  */
 .input--flat {
-	background-color: $input-flat-background-color;
-	border-color: $input-flat-border-color;
+	background-color: $day__input-flat-bg-color;
+	border-color: $day__input-flat-border-color;
 
 	&:valid {
-		border-color: $input-flat-border-color;
+		border-color: $day__input-flat-border-color;
 	}
 
 	&:focus,
 	&:focus:hover {
-		border-color: $input-focus-border-color;
+		border-color: $day__input-focus-border-color;
 	}
 
 	&:hover {
-		background-color: $input-flat-hover-background-color;
-		border-color: $input-flat-hover-border-color;
+		background-color: $day__input-flat-hover-bg-color;
+		border-color: $day__input-flat-hover-border-color;
 	}
 }
 
 .night .input--flat,
 .navbar--dark .input--flat {
-	background-color: $night-input-flat-background-color;
-	border-color: $night-input-flat-border-color;
+	background-color: $ngt__input-flat-bg-color;
+	border-color: $ngt__input-flat-border-color;
 
 	&:valid {
-		border-color: $night-input-flat-border-color;
+		border-color: $ngt__input-flat-border-color;
 	}
 
 	&:focus,
 	&:focus:hover {
-		border-color: $night-input-focus-border-color;
+		border-color: $ngt__input-focus-border-color;
 	}
 
 	&:hover {
-		background-color: $night-input-flat-hover-background-color;
-		border-color: $night-input-flat-hover-border-color;
+		background-color: $ngt__input-flat-hover-bg-color;
+		border-color: $ngt__input-flat-hover-border-color;
 	}
 }
 
@@ -201,7 +203,7 @@
 	border-right: none;
 	border-bottom-width: $input-border-width;
 	border-bottom-style: $input-border-style;
-	border-bottom-color: $input-border-color;
+	border-bottom-color: $day__input-border-color;
 	border-left: none;
 
 	border-radius: 0;
@@ -211,14 +213,14 @@
 
 	&:focus,
 	&:focus:hover {
-		box-shadow: $input-line-focus-box-shadow;
+		box-shadow: $day__input-line-focus-box-shadow;
 	}
 }
 
 .night .input--line {
 	&:focus,
 	&:focus:hover {
-		box-shadow: $input-line-focus-box-shadow;
+		box-shadow: $ngt__input-line-focus-box-shadow;
 	}
 }
 
@@ -378,19 +380,19 @@
 
 	&:hover {
 		.check-css-indic {
-			background-color: $label-check-css-hover-check-css-indicator-background-color;
-			border-color: $label-check-css-hover-check-css-indicator-border-color;
+			background-color: $day__label-check-css-hover__check-css-indic-bg-color;
+			border-color: $day__label-check-css-hover__check-css-indic-border-color;
 		}
 
 		[type='checkbox'],
 		[type='radio'] {
 			&:checked {
 				~ .check-css-indic {
-					background-color: $label-check-css-hover-type-checked-check-css-indicator-background-color;
+					background-color: $day__label-check-css-hover__type-checked__check-css-indic-bg-color;
 				}
 
 				&:active ~ .check-css-indic {
-					background-color: $label-check-css-hover-type-checked-active-check-css-indicator-background-color;
+					background-color: $day__label-check-css-hover__type-checked-active__check-css-indic-bg-color;
 				}
 			}
 		}
@@ -403,8 +405,8 @@
 		z-index: -1;
 
 		&:checked ~ .check-css-indic {
-			background-color: $label-check-css-type-checked-check-css-indicator-background-color;
-			border-color: $label-check-css-type-checked-check-css-indicator-border-color;
+			background-color: $day__label-check-css__type-checked__check-css-indic-bg-color;
+			border-color: $day__label-check-css__type-checked__check-css-indic-border-color;
 
 			&:after {
 				display: block;
@@ -414,38 +416,38 @@
 
 	[type='checkbox'] {
 		& ~ .check-css-indic {
-			border-radius: $label-check-css-type-checkbox-check-css-indicator-border-radius;
+			border-radius: $label-check-css__type-checkbox__check-css-indic-border-radius;
 		}
 
 		&:checked ~ .check-css-indic {
 			&:after {
-				border-width: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-width;
-				border-style: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-style;
-				border-color: $label-check-css-type-checkbox-checked-check-css-indicator-after-border-color;
+				border-width: $label-check-css__type-checkbox-checked__check-css-indic-after-border-width;
+				border-style: $label-check-css__type-checkbox-checked__check-css-indic-after-border-style;
+				border-color: $day__label-check-css__type-checkbox-checked__check-css-indic-after-border-color;
 				
-				top: $label-check-css-type-checkbox-checked-check-css-indicator-after-top;
-				left: $label-check-css-type-checkbox-checked-check-css-indicator-after-left;
+				top: $label-check-css__type-checkbox-checked__check-css-indic-after-top;
+				left: $label-check-css__type-checkbox-checked__check-css-indic-after-left;
 
-				transform: $label-check-css-type-checkbox-checked-check-css-indicator-after-transform;
+				transform: $label-check-css__type-checkbox-checked__check-css-indic-after-transform;
 
-				width: $label-check-css-type-checkbox-checked-check-css-indicator-after-width;
-				height: $label-check-css-type-checkbox-checked-check-css-indicator-after-height;
+				width: $label-check-css__type-checkbox-checked__check-css-indic-after-width;
+				height: $label-check-css__type-checkbox-checked__check-css-indic-after-height;
 			}
 		}
 	}
 
 	[type='radio'] {
 		& ~ .check-css-indic {
-			border-radius: $label-check-css-type-radio-check-css-indicator-border-radius;
+			border-radius: $label-check-css__type-radio__check-css-indic-border-radius;
 		}
 
 		&:checked ~ .check-css-indic {
 			&:after {
-				background-color: $label-check-css-type-radio-checked-check-css-indicator-after-background-color;
-				border-radius: $label-check-css-type-radio-checked-check-css-indicator-after-border-radius;
+				background-color: $day__label-check-css__type-radio-checked__check-css-indic-after-bg-color;
+				border-radius: $label-check-css__type-radio-checked__check-css-indic-after-border-radius;
 
-				top: $label-check-css-type-radio-checked-check-css-indicator-after-top;
-				left: $label-check-css-type-radio-checked-check-css-indicator-after-left;
+				top: $label-check-css__type-radio-checked__check-css-indic-after-top;
+				left: $label-check-css__type-radio-checked__check-css-indic-after-left;
 
 				width: $label-check-css-type-radio-checked-check-css-indicator-after-width;
 				height: $label-check-css-type-radio-checked-check-css-indicator-after-height;
@@ -457,19 +459,19 @@
 .night .lbl--check-css {
 	&:hover {
 		.check-css-indic {
-			background-color: $night-label-check-css-hover-check-css-indicator-background-color;
-			border-color: $night-label-check-css-hover-check-css-indicator-border-color;
+			background-color: $ngt__label-check-css-hover__check-css-indic-bg-color;
+			border-color: $ngt__label-check-css-hover__check-css-indic-border-color;
 		}
 
 		[type='checkbox'],
 		[type='radio'] {
 			&:checked {
 				~ .check-css-indic {
-					background-color: $night-label-check-css-hover-type-checked-check-css-indicator-background-color;
+					background-color: $ngt__label-check-css-hover__type-checked__check-css-indic-bg-color;
 				}
 
 				&:active ~ .check-css-indic {
-					background-color: $night-label-check-css-hover-type-checked-active-check-css-indicator-background-color;
+					background-color: $ngt__label-check-css-hover__type-checked-active__check-css-indic-bg-color;
 				}
 			}
 		}
@@ -478,15 +480,15 @@
 	[type='checkbox'],
 	[type='radio'] {
 		&:checked ~ .check-css-indic {
-			background-color: $night-label-check-css-type-checked-check-css-indicator-background-color;
-			border-color: $night-label-check-css-type-checked-check-css-indicator-border-color;
+			background-color: $ngt__label-check-css__type-checked__check-css-indic-bg-color;
+			border-color: $ngt__label-check-css__type-checked__check-css-indic-border-color;
 		}
 	}
 
 	[type='checkbox'] {
 		&:checked ~ .check-css-indic {
 			&:after {
-				border-color: $night-label-check-css-type-checkbox-checked-check-css-indicator-after-border-color;
+				border-color: $ngt__label-check-css__type-checkbox-checked__check-css-indic-after-border-color;
 			}
 		}
 	}
@@ -494,27 +496,27 @@
 	[type='radio'] {
 		&:checked ~ .check-css-indic {
 			&:after {
-				background-color: $night-label-check-css-type-radio-checked-check-css-indicator-after-background-color;
+				background-color: $ngt__label-check-css__type-radio-checked__check-css-indic-after-bg-color;
 			}
 		}
 	}
 }
 
 .check-css-indic {
-	background-color: $check-css-indicator-background-color;
+	background-color: $day__check-css-indic-bg-color;
 
-	border-width: $check-css-indicator-border-width;
-	border-style: $check-css-indicator-border-style;
-	border-color: $check-css-indicator-border-color;
+	border-width: $check-css-indic-border-width;
+	border-style: $check-css-indic-border-style;
+	border-color: $day__check-css-indic-border-color;
 
-	margin-top: $check-css-indicator-margin-top;
+	margin-top: $check-css-indic-margin-top;
 
 	position: absolute;
 	top: 0;
 	left: 0;
 
-	width: $check-css-indicator-width;
-	height: $check-css-indicator-height;
+	width: $check-css-indic-width;
+	height: $check-css-indic-height;
 
 	transition: $transition-base;
 
@@ -526,8 +528,8 @@
 }
 
 .night .check-css-indic {
-	background-color: $night-check-css-indicator-background-color;
-	border-color: $night-check-css-indicator-border-color;
+	background-color: $ngt__check-css-indic-bg-color;
+	border-color: $ngt__check-css-indic-border-color;
 }
 
 /**
@@ -561,29 +563,43 @@
 .lbl--check-css {
 	&:hover {
 		.check-css-indic--flat {
-			background-color: $label-check-css-hover-check-css-indicator-flat-background-color;
-			border-color: $label-check-css-hover-check-css-indicator-flat-border-color;
+			background-color: $day__label-check-css-hover__check-css-indic-flat-bg-color;
+			border-color: $day__label-check-css-hover__check-css-indic-flat-border-color;
+		}
+	}
+
+	&:active {
+		.check-css-indic--flat {
+			background-color: $day__label-check-css-active__check-css-indic-flat-bg-color;
+			border-color: $day__label-check-css-active__check-css-indic-flat-border-color;
 		}
 	}
 }
 
 .check-css-indic--flat {
-	background-color: $check-css-indicator-flat-background-color;
-	border-color: $check-css-indicator-flat-border-color;
+	background-color: $day__check-css-indic-flat-bg-color;
+	border-color: $day__check-css-indic-flat-border-color;
 }
 
 .night .lbl--check-css {
 	&:hover {
 		.check-css-indic--flat {
-			background-color: $night-label-check-css-hover-check-css-indicator-flat-background-color;
-			border-color: $night-label-check-css-hover-check-css-indicator-flat-border-color;
+			background-color: $ngt__label-check-css-hover__check-css-indic-flat-bg-color;
+			border-color: $ngt__label-check-css-hover__check-css-indic-flat-border-color;
+		}
+	}
+
+	&:active {
+		.check-css-indic--flat {
+			background-color: $ngt__label-check-css-active__check-css-indic-flat-bg-color;
+			border-color: $ngt__label-check-css-active__check-css-indic-flat-border-color;
 		}
 	}
 }
 
 .night .check-css-indic--flat {
-	background-color: $night-check-css-indicator-flat-background-color;
-	border-color: $night-check-css-indicator-flat-border-color;
+	background-color: $ngt__check-css-indic-flat-bg-color;
+	border-color: $ngt__check-css-indic-flat-border-color;
 }
 
 /**
@@ -617,6 +633,10 @@
 		border-color: $select-focus-border-color;
 		box-shadow: $select-focus-box-shadow;
 	}
+
+	&:hover {
+		border-color: $day__select-hover-border-color;
+	}
 }
 
 @if $select-icon-background-image != none {
@@ -647,6 +667,10 @@
 	&:focus:hover {
 		border-color: $night-select-focus-border-color;
 		box-shadow: $night-select-focus-box-shadow;
+	}
+
+	&:hover {
+		border-color: $ngt__select-hover-border-color;
 	}
 
 	option {

@@ -83,10 +83,6 @@ gulp.task('styledown', function() {
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'base.html' }))
 		.pipe(gulp.dest(dest));
 
-	gulp.src('dist/elements/form.css')
-		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'form.html' }))
-		.pipe(gulp.dest(dest));
-
 	gulp.src('dist/elements/button.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'button.html' }))
 		.pipe(gulp.dest(dest));
@@ -95,24 +91,32 @@ gulp.task('styledown', function() {
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'button-group.html' }))
 		.pipe(gulp.dest(dest));
 
+	gulp.src('dist/elements/file-area.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'file-area.html' }))
+		.pipe(gulp.dest(dest));
+
+	gulp.src('dist/elements/form.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'form.html' }))
+		.pipe(gulp.dest(dest));
+
 	gulp.src('dist/elements/input-group.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'input-group.html' }))
-		.pipe(gulp.dest(dest));
-
-	gulp.src('dist/elements/switch.css')
-		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'switch.html' }))
-		.pipe(gulp.dest(dest));
-
-	gulp.src('dist/elements/toolbar.css')
-		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'toolbar.html' }))
 		.pipe(gulp.dest(dest));
 
 	gulp.src('dist/elements/list.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'list.html' }))
 		.pipe(gulp.dest(dest));
 
+	gulp.src('dist/elements/switch.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'switch.html' }))
+		.pipe(gulp.dest(dest));
+
 	gulp.src('dist/elements/table.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'table.html' }))
+		.pipe(gulp.dest(dest));
+
+	gulp.src('dist/elements/toolbar.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'toolbar.html' }))
 		.pipe(gulp.dest(dest));
 
 
