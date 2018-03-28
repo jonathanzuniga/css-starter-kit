@@ -88,6 +88,8 @@
 											li
 												a(href='elements-switch.html') Switch
 											li
+												a(href='elements-toolbar.html') Toolbar
+											li
 												a(href='elements-list.html') List
 											li
 												a(href='elements-table.html') Table

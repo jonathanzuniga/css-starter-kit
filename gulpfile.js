@@ -103,6 +103,10 @@ gulp.task('styledown', function() {
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'switch.html' }))
 		.pipe(gulp.dest(dest));
 
+	gulp.src('dist/elements/toolbar.css')
+		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'toolbar.html' }))
+		.pipe(gulp.dest(dest));
+
 	gulp.src('dist/elements/list.css')
 		.pipe(styledown({ config: config, template: template, filename: prefix_elements + 'list.html' }))
 		.pipe(gulp.dest(dest));

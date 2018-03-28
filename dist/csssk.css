@@ -1742,601 +1742,6 @@ ul {
   list-style-type: disc; }
 
 /***
- * Form:
- */
-.fld {
-  margin-bottom: 1em; }
-
-/**
- * Label and input:
- * `.lbl` `.input`
- *
- *     @example
- *     label(for='eg-input').lbl Label
- *     input(id='eg-input', placeholder='Text input', type='text').input
- */
-.lbl {
-  display: inline-block;
-  font-size: 1;
-  margin-bottom: 0.5em; }
-
-.input,
-.txtarea {
-  background-color: transparent;
-  border-width: 0.063rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-  box-shadow: none;
-  color: rgba(0, 0, 0, 0.9);
-  display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  line-height: inherit;
-  padding: 0.25em 0.75em;
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
-  width: 100%; }
-  .input::-moz-placeholder,
-  .txtarea::-moz-placeholder {
-    opacity: 1; }
-  .input::placeholder,
-  .txtarea::placeholder {
-    color: rgba(0, 0, 0, 0.2);
-    opacity: 1; }
-  .input:invalid,
-  .txtarea:invalid {
-    border-color: #ff806c; }
-  .input:valid,
-  .txtarea:valid {
-    border-color: rgba(0, 0, 0, 0.2); }
-  .input:focus, .input:focus:hover,
-  .txtarea:focus,
-  .txtarea:focus:hover {
-    background-color: transparent;
-    border-color: #56acf2;
-    box-shadow: inset 0 0 0 0.063rem #56acf2; }
-    .input:focus::placeholder, .input:focus:hover::placeholder,
-    .txtarea:focus::placeholder,
-    .txtarea:focus:hover::placeholder {
-      color: #95c4f3; }
-  .input:hover,
-  .txtarea:hover {
-    border-color: rgba(0, 0, 0, 0.2); }
-  .input:active,
-  .txtarea:active {
-    border-color: #56acf2; }
-
-.night .input,
-.night .txtarea,
-.navbar--dark .input {
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9); }
-  .night .input::placeholder,
-  .night .txtarea::placeholder,
-  .navbar--dark .input::placeholder {
-    color: rgba(255, 255, 255, 0.2); }
-  .night .input:invalid,
-  .night .txtarea:invalid,
-  .navbar--dark .input:invalid {
-    border-color: #ff806c; }
-  .night .input:valid,
-  .night .txtarea:valid,
-  .navbar--dark .input:valid {
-    border-color: rgba(255, 255, 255, 0.2); }
-  .night .input:focus, .night .input:focus:hover,
-  .night .txtarea:focus,
-  .night .txtarea:focus:hover,
-  .navbar--dark .input:focus,
-  .navbar--dark .input:focus:hover {
-    border-color: #56acf2; }
-    .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
-    .night .txtarea:focus::placeholder,
-    .night .txtarea:focus:hover::placeholder,
-    .navbar--dark .input:focus::placeholder,
-    .navbar--dark .input:focus:hover::placeholder {
-      color: #95c4f3; }
-  .night .input:hover,
-  .night .txtarea:hover,
-  .navbar--dark .input:hover {
-    border-color: rgba(255, 255, 255, 0.2); }
-  .night .input:active,
-  .night .txtarea:active,
-  .navbar--dark .input:active {
-    border-color: #56acf2; }
-
-/**
- * Input size:
- * `.input--[size]`
- *
- *     @example
- *     div.fld
- *         input(type='text', placeholder='Text input').input.input--lg
- *     div.fld
- *         input(type='text', placeholder='Text input').input.input--sm
- */
-.input--sm {
-  border-radius: 0.25rem;
-  font-size: 0.75em;
-  padding: 0.25em 0.75em; }
-
-.input--lg {
-  border-radius: 0.25rem;
-  font-size: 1.25em;
-  padding: 0.25em 0.75em; }
-
-/**
- * Flat input:
- * `.input--flat`
- *
- *     @example
- *     input(type='text', placeholder='Flat input').input.input--flat
- */
-.input--flat {
-  background-color: rgba(0, 0, 0, 0.025);
-  border-color: transparent; }
-  .input--flat:valid {
-    border-color: transparent; }
-  .input--flat:focus, .input--flat:focus:hover {
-    border-color: #56acf2; }
-  .input--flat:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-color: transparent; }
-
-.night .input--flat,
-.navbar--dark .input--flat {
-  background-color: rgba(255, 255, 255, 0.025);
-  border-color: transparent; }
-  .night .input--flat:valid,
-  .navbar--dark .input--flat:valid {
-    border-color: transparent; }
-  .night .input--flat:focus, .night .input--flat:focus:hover,
-  .navbar--dark .input--flat:focus,
-  .navbar--dark .input--flat:focus:hover {
-    border-color: #56acf2; }
-  .night .input--flat:hover,
-  .navbar--dark .input--flat:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: transparent; }
-
-/**
- * Line input:
- * `.input--line`
- *
- *     @example
- *     input(type='text', placeholder='Line input').input.input--line
- */
-.input--line {
-  background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-bottom-width: 0.063rem;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  border-left: none;
-  border-radius: 0;
-  padding-right: 0;
-  padding-left: 0; }
-  .input--line:focus, .input--line:focus:hover {
-    box-shadow: inset 0 -0.063rem 0 0 #56acf2; }
-
-.night .input--line:focus, .night .input--line:focus:hover {
-  box-shadow: inset 0 -0.063rem 0 0 #56acf2; }
-
-/**
- * Pill input:
- * `.input--pill`
- *
- *     @example
- *     input(type='text', placeholder='Pill input').input.input--pill
- */
-.input--pill {
-  border-radius: 2em; }
-
-/**
- * Textarea:
- * `.txtarea`
- *
- *     @example
- *     textarea(placeholder='Textarea', rows='5').txtarea
- */
-/**
- * Checkbox and radio:
- *
- *     @example
- *     div.cols
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(checked, name='radio', type='radio', value='')
- *                     | Radio
- *             div.fld.fld--check
- *                 label.lbl.lbl--check
- *                     input(name='radio', type='radio', value='')
- *                     | Radio
- *     div.cols
- *         div.sm-col-12
- *             div.fld
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                 label.lbl.lbl--check
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *             div.fld
- *                 label.lbl.lbl--check
- *                     input(checked, name='radio-inline', type='radio', value='')
- *                     | Radio
- *                 label.lbl.lbl--check
- *                     input(name='radio-inline', type='radio', value='')
- *                     | Radio
- *                 label.lbl.lbl--check
- *                     input(name='radio-inline', type='radio', value='')
- *                     | Radio
- */
-.fld--check:not(:last-child) {
-  margin-bottom: 0.5em; }
-
-.lbl--check, .lbl--check-css {
-  margin-bottom: 0;
-  padding-left: 1.25em;
-  position: relative; }
-  .lbl--check:not(:last-child), .lbl--check-css:not(:last-child) {
-    margin-right: 1.25em; }
-  .lbl--check [type='checkbox'], .lbl--check-css [type='checkbox'],
-  .lbl--check [type='radio'],
-  .lbl--check-css [type='radio'] {
-    margin-top: 0.5em;
-    position: absolute;
-    top: 0;
-    left: 0; }
-
-/**
- * Pure CSS custom checkbox and radio:
- *
- *     @example
- *     div.cols
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(checked, name='radio-css', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(name='radio-css', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic
- *     div.cols
- *         div.sm-col-12
- *             div.fld
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic
- *             div.fld
- *                 label.lbl.lbl--check-css
- *                     input(checked, name='radio-css-inline', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic
- *                 label.lbl.lbl--check-css
- *                     input(name='radio-css-inline', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic
- *                 label.lbl.lbl--check-css
- *                     input(name='radio-css-inline', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic
- */
-.lbl--check-css {
-  padding-left: 2em; }
-  .lbl--check-css:not(:last-child) {
-    margin-right: 2em; }
-  .lbl--check-css:hover .check-css-indic {
-    background-color: transparent;
-    border-color: rgba(0, 0, 0, 0.2); }
-  .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
-  .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
-    background-color: #048fdb; }
-  .lbl--check-css:hover [type='checkbox']:checked:active ~ .check-css-indic,
-  .lbl--check-css:hover [type='radio']:checked:active ~ .check-css-indic {
-    background-color: #0884c7; }
-  .lbl--check-css [type='checkbox'],
-  .lbl--check-css [type='radio'] {
-    opacity: 0;
-    position: absolute;
-    z-index: -1; }
-    .lbl--check-css [type='checkbox']:checked ~ .check-css-indic,
-    .lbl--check-css [type='radio']:checked ~ .check-css-indic {
-      background-color: #009bef;
-      border-color: #009bef; }
-      .lbl--check-css [type='checkbox']:checked ~ .check-css-indic:after,
-      .lbl--check-css [type='radio']:checked ~ .check-css-indic:after {
-        display: block; }
-  .lbl--check-css [type='checkbox'] ~ .check-css-indic {
-    border-radius: 0.25rem; }
-  .lbl--check-css [type='checkbox']:checked ~ .check-css-indic:after {
-    border-width: 0 0.125em 0.125em 0;
-    border-style: solid;
-    border-color: #fff;
-    top: 0.125em;
-    left: 0.375em;
-    transform: rotate(45deg);
-    width: 0.25em;
-    height: 0.625em; }
-  .lbl--check-css [type='radio'] ~ .check-css-indic {
-    border-radius: 50%; }
-  .lbl--check-css [type='radio']:checked ~ .check-css-indic:after {
-    background-color: #fff;
-    border-radius: 50%;
-    top: 0.375em;
-    left: 0.375em;
-    width: 0.375em;
-    height: 0.375em; }
-
-.check-css-indic {
-  background-color: transparent;
-  border-width: 0.063rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
-  margin-top: 0.125em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.25em;
-  height: 1.25em;
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
-  .check-css-indic:after {
-    content: '';
-    display: none;
-    position: absolute; }
-
-/**
- * Flat pure CSS custom checkbox and radio:
- *
- *     @example
- *     div.cols
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic.check-css-indic--flat
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(type='checkbox', value='')
- *                     | Checkbox
- *                     div.check-css-indic.check-css-indic--flat
- *         div.sm-col-6
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(checked, name='radio-css-flat', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic.check-css-indic--flat
- *             div.fld.fld--check
- *                 label.lbl.lbl--check-css
- *                     input(name='radio-css-flat', type='radio', value='')
- *                     | Radio
- *                     div.check-css-indic.check-css-indic--flat
- */
-.lbl--check-css:hover .check-css-indic--flat {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-color: transparent; }
-
-.check-css-indic--flat {
-  background-color: rgba(0, 0, 0, 0.075);
-  border-color: transparent; }
-
-/**
- * Select menu:
- * `.sel`
- *
- *     @example
- *     select.sel
- *         option Option 1
- *         option Option 2
- *         option Option 3
- */
-.sel {
-  background-color: transparent;
-  border-width: 0.063rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-  display: block;
-  font-size: 16px;
-  line-height: inherit;
-  padding: 0.25em 0.75em;
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
-  width: 100%; }
-  .sel:focus, .sel:focus:hover {
-    border-color: #56acf2;
-    box-shadow: inset 0 0 0 0.063rem #56acf2; }
-
-.night .sel {
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9); }
-  .night .sel:focus, .night .sel:focus:hover {
-    border-color: #56acf2;
-    box-shadow: inset 0 0 0 0.063rem #56acf2; }
-  .night .sel option {
-    color: rgba(0, 0, 0, 0.9); }
-
-/**
- * Select menu with pure CSS icon:
- * `.sel-css-icn`
- *
- *     @example
- *     div.sel-css-icn
- *         select.sel
- *             option Option 1
- *             option Option 2
- *             option Option 3
- */
-.sel-css-icn {
-  position: relative; }
-  .sel-css-icn .sel {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 1.813em; }
-  .sel-css-icn:after {
-    border-width: 0.125em;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.9);
-    border-right: 0;
-    border-top: 0;
-    content: '';
-    display: block;
-    width: 0.313em;
-    height: 0.313em;
-    margin-top: -0.313em;
-    position: absolute;
-    top: 50%;
-    right: 0.75em;
-    pointer-events: none;
-    transform: rotate(-45deg); }
-
-.night .sel-css-icn:after {
-  border-color: rgba(255, 255, 255, 0.9); }
-
-/**
- * Select menu size:
- * `.sel--[size]` `.sel-css-icn--[size]`
- *
- *     @example
- *     div.cols
- *         div.sm-col-6
- *             div.fld
- *                 select.sel.sel--sm
- *                     option Option 1
- *                     option Option 2
- *                     option Option 3
- *             div.fld
- *                 select.sel.sel--lg
- *                     option Option 1
- *                     option Option 2
- *                     option Option 3
- *         div.sm-col-6
- *             div.fld
- *                 div.sel-css-icn.sel-css-icn--sm
- *                     select.sel
- *                         option Option 1
- *                         option Option 2
- *                         option Option 3
- *             div.fld
- *                 div.sel-css-icn.sel-css-icn--lg
- *                     select.sel
- *                         option Option 1
- *                         option Option 2
- *                         option Option 3
- */
-.sel--sm, .sel-css-icn--sm .sel {
-  border-radius: 0.25rem;
-  font-size: 0.75em;
-  padding: 0.25em 0.75em; }
-
-.sel--lg, .sel-css-icn--lg .sel {
-  border-radius: 0.25rem;
-  font-size: 1.25em;
-  padding: 0.25em 0.75em; }
-
-.sel-css-icn--sm .sel {
-  padding-right: 1.70867em; }
-
-.sel-css-icn--sm:after {
-  width: 0.20867em;
-  height: 0.20867em;
-  margin-top: -0.20867em;
-  right: 0.5em; }
-
-.sel-css-icn--lg .sel {
-  padding-right: 1.9695em; }
-
-.sel-css-icn--lg:after {
-  width: 0.4695em;
-  height: 0.4695em;
-  margin-top: -0.4695em;
-  right: 1em; }
-
-.sel--flat {
-  background-color: rgba(0, 0, 0, 0.025);
-  border-color: transparent; }
-  .sel--flat:valid {
-    border-color: transparent; }
-  .sel--flat:focus, .sel--flat:focus:hover {
-    border-color: #56acf2; }
-  .sel--flat:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-color: transparent; }
-
-/**
- * Flat select menu:
- * `.sel--flat`
- *
- *     @example
- *     div.cols
- *         div.sm-col-6
- *             div.fld
- *                 select.sel.sel--flat
- *                     option Option 1
- *                     option Option 2
- *                     option Option 3
- *         div.sm-col-6
- *             div.fld
- *                 div.sel-css-icn
- *                     select.sel.sel--flat
- *                         option Option 1
- *                         option Option 2
- *                         option Option 3
- */
-.night .sel--flat,
-.navbar--dark .sel--flat {
-  background-color: rgba(255, 255, 255, 0.025);
-  border-color: transparent; }
-  .night .sel--flat:valid,
-  .navbar--dark .sel--flat:valid {
-    border-color: transparent; }
-  .night .sel--flat:focus, .night .sel--flat:focus:hover,
-  .navbar--dark .sel--flat:focus,
-  .navbar--dark .sel--flat:focus:hover {
-    border-color: #56acf2; }
-  .night .sel--flat:hover,
-  .navbar--dark .sel--flat:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: transparent; }
-
-/***
  * Button:
  */
 .btn {
@@ -2974,6 +2379,673 @@ ul {
   opacity: 1;
   position: initial; }
 
+/**
+ * File area:
+ * `.file-area`
+ *
+ *     @example
+ *     div.file-area
+ *         input(id='eg-file', title='Add a file', type='file', required)
+ *         div.file-area__bg
+ *         p.h2.m-top-0.txtc-gray-25 Drag file here
+ *         p.txtc-gray-25 – or –
+ *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
+ */
+.file-area {
+  padding: 6.25em 1em;
+  position: relative;
+  text-align: center; }
+  .file-area [type=file] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; }
+    .file-area [type=file]:focus + .file-area__bg {
+      background-color: none; }
+    .file-area [type=file]:valid + .file-area__bg {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .file-area [type=file]:hover + .file-area__bg {
+      background-color: rgba(0, 0, 0, 0.05); }
+  .file-area .file-area__bg {
+    background-color: rgba(0, 0, 0, 0.025);
+    border-radius: 0.25rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
+    z-index: -1; }
+  .file-area:hover .file-area__bg {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .file-area label {
+    position: relative;
+    z-index: 1; }
+
+.night .file-area [type=file]:focus + .file-area__bg {
+  background-color: none; }
+
+.night .file-area [type=file]:valid + .file-area__bg {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.night .file-area [type=file]:hover + .file-area__bg {
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.night .file-area .file-area__bg {
+  background-color: rgba(255, 255, 255, 0.025); }
+
+.night .file-area:hover .file-area__bg {
+  background-color: rgba(255, 255, 255, 0.05); }
+
+/***
+ * Form:
+ */
+.fld {
+  margin-bottom: 1em; }
+
+/**
+ * Label and input:
+ * `.lbl` `.input`
+ *
+ *     @example
+ *     label(for='eg-input').lbl Label
+ *     input(id='eg-input', placeholder='Text input', type='text').input
+ */
+.lbl {
+  display: inline-block;
+  font-size: 1;
+  margin-bottom: 0.5em; }
+
+.input,
+.txtarea {
+  background-color: transparent;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.9);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: inherit;
+  padding: 0.25em 0.75em;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
+  width: 100%; }
+  .input::-moz-placeholder,
+  .txtarea::-moz-placeholder {
+    opacity: 1; }
+  .input::placeholder,
+  .txtarea::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+    opacity: 1; }
+  .input:invalid,
+  .txtarea:invalid {
+    border-color: #ff806c; }
+  .input:valid,
+  .txtarea:valid {
+    border-color: rgba(0, 0, 0, 0.2); }
+  .input:focus, .input:focus:hover,
+  .txtarea:focus,
+  .txtarea:focus:hover {
+    background-color: transparent;
+    border-color: #56acf2;
+    box-shadow: inset 0 0 0 0.063rem #56acf2; }
+    .input:focus::placeholder, .input:focus:hover::placeholder,
+    .txtarea:focus::placeholder,
+    .txtarea:focus:hover::placeholder {
+      color: #95c4f3; }
+  .input:hover,
+  .txtarea:hover {
+    border-color: rgba(0, 0, 0, 0.2); }
+  .input:active,
+  .txtarea:active {
+    border-color: #56acf2; }
+
+.night .input,
+.night .txtarea,
+.navbar--dark .input {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9); }
+  .night .input::placeholder,
+  .night .txtarea::placeholder,
+  .navbar--dark .input::placeholder {
+    color: rgba(255, 255, 255, 0.2); }
+  .night .input:invalid,
+  .night .txtarea:invalid,
+  .navbar--dark .input:invalid {
+    border-color: #ff806c; }
+  .night .input:valid,
+  .night .txtarea:valid,
+  .navbar--dark .input:valid {
+    border-color: rgba(255, 255, 255, 0.2); }
+  .night .input:focus, .night .input:focus:hover,
+  .night .txtarea:focus,
+  .night .txtarea:focus:hover,
+  .navbar--dark .input:focus,
+  .navbar--dark .input:focus:hover {
+    border-color: #56acf2; }
+    .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
+    .night .txtarea:focus::placeholder,
+    .night .txtarea:focus:hover::placeholder,
+    .navbar--dark .input:focus::placeholder,
+    .navbar--dark .input:focus:hover::placeholder {
+      color: #95c4f3; }
+  .night .input:hover,
+  .night .txtarea:hover,
+  .navbar--dark .input:hover {
+    border-color: rgba(255, 255, 255, 0.2); }
+  .night .input:active,
+  .night .txtarea:active,
+  .navbar--dark .input:active {
+    border-color: #56acf2; }
+
+/**
+ * Input size:
+ * `.input--[size]`
+ *
+ *     @example
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--lg
+ *     div.fld
+ *         input(type='text', placeholder='Text input').input.input--sm
+ */
+.input--sm {
+  border-radius: 0.25rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+
+.input--lg {
+  border-radius: 0.25rem;
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+
+/**
+ * Flat input:
+ * `.input--flat`
+ *
+ *     @example
+ *     input(type='text', placeholder='Flat input').input.input--flat
+ */
+.input--flat {
+  background-color: rgba(0, 0, 0, 0.025);
+  border-color: transparent; }
+  .input--flat:valid {
+    border-color: transparent; }
+  .input--flat:focus, .input--flat:focus:hover {
+    border-color: #56acf2; }
+  .input--flat:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: transparent; }
+
+.night .input--flat,
+.navbar--dark .input--flat {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: transparent; }
+  .night .input--flat:valid,
+  .navbar--dark .input--flat:valid {
+    border-color: transparent; }
+  .night .input--flat:focus, .night .input--flat:focus:hover,
+  .navbar--dark .input--flat:focus,
+  .navbar--dark .input--flat:focus:hover {
+    border-color: #56acf2; }
+  .night .input--flat:hover,
+  .navbar--dark .input--flat:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: transparent; }
+
+/**
+ * Line input:
+ * `.input--line`
+ *
+ *     @example
+ *     input(type='text', placeholder='Line input').input.input--line
+ */
+.input--line {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom-width: 0.063rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-left: none;
+  border-radius: 0;
+  padding-right: 0;
+  padding-left: 0; }
+  .input--line:focus, .input--line:focus:hover {
+    box-shadow: inset 0 -0.063rem 0 0 #56acf2; }
+
+.night .input--line:focus, .night .input--line:focus:hover {
+  box-shadow: inset 0 -0.063rem 0 0 #56acf2; }
+
+/**
+ * Pill input:
+ * `.input--pill`
+ *
+ *     @example
+ *     input(type='text', placeholder='Pill input').input.input--pill
+ */
+.input--pill {
+  border-radius: 2em; }
+
+/**
+ * Textarea:
+ * `.txtarea`
+ *
+ *     @example
+ *     textarea(placeholder='Textarea', rows='5').txtarea
+ */
+/**
+ * Checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio', type='radio', value='')
+ *                     | Radio
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check
+ *                     input(name='radio', type='radio', value='')
+ *                     | Radio
+ *     div.cols
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                 label.lbl.lbl--check
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *             div.fld
+ *                 label.lbl.lbl--check
+ *                     input(checked, name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ *                 label.lbl.lbl--check
+ *                     input(name='radio-inline', type='radio', value='')
+ *                     | Radio
+ */
+.fld--check:not(:last-child) {
+  margin-bottom: 0.5em; }
+
+.lbl--check, .lbl--check-css {
+  margin-bottom: 0;
+  padding-left: 1.25em;
+  position: relative; }
+  .lbl--check:not(:last-child), .lbl--check-css:not(:last-child) {
+    margin-right: 1.25em; }
+  .lbl--check [type='checkbox'], .lbl--check-css [type='checkbox'],
+  .lbl--check [type='radio'],
+  .lbl--check-css [type='radio'] {
+    margin-top: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/**
+ * Pure CSS custom checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *     div.cols
+ *         div.sm-col-12
+ *             div.fld
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic
+ *             div.fld
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-inline', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic
+ */
+.lbl--check-css {
+  padding-left: 2em; }
+  .lbl--check-css:not(:last-child) {
+    margin-right: 2em; }
+  .lbl--check-css:hover .check-css-indic {
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 0.2); }
+  .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
+  .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
+    background-color: #048fdb; }
+  .lbl--check-css:hover [type='checkbox']:checked:active ~ .check-css-indic,
+  .lbl--check-css:hover [type='radio']:checked:active ~ .check-css-indic {
+    background-color: #0884c7; }
+  .lbl--check-css [type='checkbox'],
+  .lbl--check-css [type='radio'] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1; }
+    .lbl--check-css [type='checkbox']:checked ~ .check-css-indic,
+    .lbl--check-css [type='radio']:checked ~ .check-css-indic {
+      background-color: #009bef;
+      border-color: #009bef; }
+      .lbl--check-css [type='checkbox']:checked ~ .check-css-indic:after,
+      .lbl--check-css [type='radio']:checked ~ .check-css-indic:after {
+        display: block; }
+  .lbl--check-css [type='checkbox'] ~ .check-css-indic {
+    border-radius: 0.25rem; }
+  .lbl--check-css [type='checkbox']:checked ~ .check-css-indic:after {
+    border-width: 0 0.125em 0.125em 0;
+    border-style: solid;
+    border-color: #fff;
+    top: 0.125em;
+    left: 0.375em;
+    transform: rotate(45deg);
+    width: 0.25em;
+    height: 0.625em; }
+  .lbl--check-css [type='radio'] ~ .check-css-indic {
+    border-radius: 50%; }
+  .lbl--check-css [type='radio']:checked ~ .check-css-indic:after {
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.375em;
+    left: 0.375em;
+    width: 0.375em;
+    height: 0.375em; }
+
+.check-css-indic {
+  background-color: transparent;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  margin-top: 0.125em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25em;
+  height: 1.25em;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
+  .check-css-indic:after {
+    content: '';
+    display: none;
+    position: absolute; }
+
+/**
+ * Flat pure CSS custom checkbox and radio:
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(type='checkbox', value='')
+ *                     | Checkbox
+ *                     div.check-css-indic.check-css-indic--flat
+ *         div.sm-col-6
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(checked, name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ *             div.fld.fld--check
+ *                 label.lbl.lbl--check-css
+ *                     input(name='radio-css-flat', type='radio', value='')
+ *                     | Radio
+ *                     div.check-css-indic.check-css-indic--flat
+ */
+.lbl--check-css:hover .check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: transparent; }
+
+.check-css-indic--flat {
+  background-color: rgba(0, 0, 0, 0.075);
+  border-color: transparent; }
+
+/**
+ * Select menu:
+ * `.sel`
+ *
+ *     @example
+ *     select.sel
+ *         option Option 1
+ *         option Option 2
+ *         option Option 3
+ */
+.sel {
+  background-color: transparent;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  display: block;
+  font-size: 16px;
+  line-height: inherit;
+  padding: 0.25em 0.75em;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
+  width: 100%; }
+  .sel:focus, .sel:focus:hover {
+    border-color: #56acf2;
+    box-shadow: inset 0 0 0 0.063rem #56acf2; }
+
+.night .sel {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9); }
+  .night .sel:focus, .night .sel:focus:hover {
+    border-color: #56acf2;
+    box-shadow: inset 0 0 0 0.063rem #56acf2; }
+  .night .sel option {
+    color: rgba(0, 0, 0, 0.9); }
+
+/**
+ * Select menu with pure CSS icon:
+ * `.sel-css-icn`
+ *
+ *     @example
+ *     div.sel-css-icn
+ *         select.sel
+ *             option Option 1
+ *             option Option 2
+ *             option Option 3
+ */
+.sel-css-icn {
+  position: relative; }
+  .sel-css-icn .sel {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 1.813em; }
+  .sel-css-icn:after {
+    border-width: 0.125em;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9);
+    border-right: 0;
+    border-top: 0;
+    content: '';
+    display: block;
+    width: 0.313em;
+    height: 0.313em;
+    margin-top: -0.313em;
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    pointer-events: none;
+    transform: rotate(-45deg); }
+
+.night .sel-css-icn:after {
+  border-color: rgba(255, 255, 255, 0.9); }
+
+/**
+ * Select menu size:
+ * `.sel--[size]` `.sel-css-icn--[size]`
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.sel.sel--sm
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *             div.fld
+ *                 select.sel.sel--lg
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.sel-css-icn.sel-css-icn--sm
+ *                     select.sel
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ *             div.fld
+ *                 div.sel-css-icn.sel-css-icn--lg
+ *                     select.sel
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.sel--sm, .sel-css-icn--sm .sel {
+  border-radius: 0.25rem;
+  font-size: 0.75em;
+  padding: 0.25em 0.75em; }
+
+.sel--lg, .sel-css-icn--lg .sel {
+  border-radius: 0.25rem;
+  font-size: 1.25em;
+  padding: 0.25em 0.75em; }
+
+.sel-css-icn--sm .sel {
+  padding-right: 1.70867em; }
+
+.sel-css-icn--sm:after {
+  width: 0.20867em;
+  height: 0.20867em;
+  margin-top: -0.20867em;
+  right: 0.5em; }
+
+.sel-css-icn--lg .sel {
+  padding-right: 1.9695em; }
+
+.sel-css-icn--lg:after {
+  width: 0.4695em;
+  height: 0.4695em;
+  margin-top: -0.4695em;
+  right: 1em; }
+
+.sel--flat {
+  background-color: rgba(0, 0, 0, 0.025);
+  border-color: transparent; }
+  .sel--flat:valid {
+    border-color: transparent; }
+  .sel--flat:focus, .sel--flat:focus:hover {
+    border-color: #56acf2; }
+  .sel--flat:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: transparent; }
+
+/**
+ * Flat select menu:
+ * `.sel--flat`
+ *
+ *     @example
+ *     div.cols
+ *         div.sm-col-6
+ *             div.fld
+ *                 select.sel.sel--flat
+ *                     option Option 1
+ *                     option Option 2
+ *                     option Option 3
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.sel-css-icn
+ *                     select.sel.sel--flat
+ *                         option Option 1
+ *                         option Option 2
+ *                         option Option 3
+ */
+.night .sel--flat,
+.navbar--dark .sel--flat {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: transparent; }
+  .night .sel--flat:valid,
+  .navbar--dark .sel--flat:valid {
+    border-color: transparent; }
+  .night .sel--flat:focus, .night .sel--flat:focus:hover,
+  .navbar--dark .sel--flat:focus,
+  .navbar--dark .sel--flat:focus:hover {
+    border-color: #56acf2; }
+  .night .sel--flat:hover,
+  .navbar--dark .sel--flat:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: transparent; }
+
+/***
+ * Image:
+ */
+.img-responsive {
+  max-width: 100%;
+  height: auto; }
+
 /***
  * Input group:
  */
@@ -3094,70 +3166,40 @@ ul {
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em; }
 
+/***
+ * List:
+ */
 /**
- * File area:
- * `.file-area`
+ * Unstyled list:
+ * `.ls-unstyled`
  *
  *     @example
- *     div.file-area
- *         input(id='eg-file', title='Add a file', type='file', required)
- *         div.file-area__bg
- *         p.h2.m-top-0.txtc-gray-25 Drag file here
- *         p.txtc-gray-25 – or –
- *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
+ *     ul.ls-unstyled
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ *             ul
+ *                 li Caramel
+ *                 li Ice cream
  */
-.file-area {
-  padding: 6.25em 1em;
-  position: relative;
-  text-align: center; }
-  .file-area [type=file] {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1; }
-    .file-area [type=file]:focus + .file-area__bg {
-      background-color: none; }
-    .file-area [type=file]:valid + .file-area__bg {
-      background-color: rgba(0, 0, 0, 0.1); }
-    .file-area [type=file]:hover + .file-area__bg {
-      background-color: rgba(0, 0, 0, 0.05); }
-  .file-area .file-area__bg {
-    background-color: rgba(0, 0, 0, 0.025);
-    border-radius: 0.25rem;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
-    z-index: -1; }
-  .file-area:hover .file-area__bg {
-    background-color: rgba(0, 0, 0, 0.05); }
-  .file-area label {
-    position: relative;
-    z-index: 1; }
+.ls-unstyled, .ls-inline {
+  list-style: none;
+  padding-left: 0; }
 
-.night .file-area [type=file]:focus + .file-area__bg {
-  background-color: none; }
-
-.night .file-area [type=file]:valid + .file-area__bg {
-  background-color: rgba(255, 255, 255, 0.1); }
-
-.night .file-area [type=file]:hover + .file-area__bg {
-  background-color: rgba(255, 255, 255, 0.05); }
-
-.night .file-area .file-area__bg {
-  background-color: rgba(255, 255, 255, 0.025); }
-
-.night .file-area:hover .file-area__bg {
-  background-color: rgba(255, 255, 255, 0.05); }
+/**
+ * Inline list:
+ * `.ls-inline`
+ *
+ *     @example
+ *     ul.ls-inline
+ *         li Apricot
+ *         li Banana
+ *         li Cherry
+ */
+.ls-inline li {
+  display: inline-block; }
+  .ls-inline li:not(:last-child) {
+    margin-right: 1em; }
 
 /***
  * Switch:
@@ -3290,66 +3332,6 @@ ul {
 
 .switch--lg:checked + label:after {
   left: 3.391em; }
-
-/**
- * Toolbar:
- * `.tbar`
- *
- *     @example
- *     div.tbar
- *         div.btn-group.m-bottom-2
- *             button.btn.btn--secondary First
- *             button.btn.btn--secondary Second
- *             button.btn.btn--secondary Third
- *         button.btn.btn--secondary.m-bottom-2 Forth
- *         div.input-group.m-bottom-2
- *             div.input-group-btn
- *                 input(type='search', placeholder='Search...').input
- *                 button.btn.btn--secondary Go
- */
-.tbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-  .tbar > *:not(:last-child) {
-    margin-right: 0.5em; }
-  .tbar > .input-group {
-    width: auto; }
-
-/***
- * List:
- */
-/**
- * Unstyled list:
- * `.ls-unstyled`
- *
- *     @example
- *     ul.ls-unstyled
- *         li Apricot
- *         li Banana
- *         li Cherry
- *             ul
- *                 li Caramel
- *                 li Ice cream
- */
-.ls-unstyled, .ls-inline {
-  list-style: none;
-  padding-left: 0; }
-
-/**
- * Inline list:
- * `.ls-inline`
- *
- *     @example
- *     ul.ls-inline
- *         li Apricot
- *         li Banana
- *         li Cherry
- */
-.ls-inline li {
-  display: inline-block; }
-  .ls-inline li:not(:last-child) {
-    margin-right: 1em; }
 
 /***
  * Table:
@@ -3546,12 +3528,30 @@ th {
 .night .tbl--striped tbody tr:nth-child(even) td, .night .tbl--striped tbody tr:nth-child(even) th {
   background-color: rgba(255, 255, 255, 0.025); }
 
-/***
- * Image:
+/**
+ * Toolbar:
+ * `.tbar`
+ *
+ *     @example
+ *     div.tbar
+ *         div.btn-group.m-bottom-2
+ *             button.btn.btn--secondary First
+ *             button.btn.btn--secondary Second
+ *             button.btn.btn--secondary Third
+ *         button.btn.btn--secondary.m-bottom-2 Forth
+ *         div.input-group.m-bottom-2
+ *             div.input-group-btn
+ *                 input(type='search', placeholder='Search...').input
+ *                 button.btn.btn--secondary Go
  */
-.img-responsive {
-  max-width: 100%;
-  height: auto; }
+.tbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .tbar > *:not(:last-child) {
+    margin-right: 0.5em; }
+  .tbar > .input-group {
+    width: auto; }
 
 /***
  * Border radius:
