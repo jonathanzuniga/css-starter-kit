@@ -1370,6 +1370,29 @@ ul {
     width: 0.375em;
     height: 0.375em; }
 
+.night .lbl--check-css:hover .check-css-indic {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2); }
+
+.night .lbl--check-css:hover [type='checkbox']:checked ~ .check-css-indic,
+.night .lbl--check-css:hover [type='radio']:checked ~ .check-css-indic {
+  background-color: #048fdb; }
+
+.night .lbl--check-css:hover [type='checkbox']:checked:active ~ .check-css-indic,
+.night .lbl--check-css:hover [type='radio']:checked:active ~ .check-css-indic {
+  background-color: #0884c7; }
+
+.night .lbl--check-css [type='checkbox']:checked ~ .check-css-indic,
+.night .lbl--check-css [type='radio']:checked ~ .check-css-indic {
+  background-color: #009bef;
+  border-color: #009bef; }
+
+.night .lbl--check-css [type='checkbox']:checked ~ .check-css-indic:after {
+  border-color: #fff; }
+
+.night .lbl--check-css [type='radio']:checked ~ .check-css-indic:after {
+  background-color: #fff; }
+
 .check-css-indic {
   background-color: transparent;
   border-width: 0.063rem;
@@ -1386,6 +1409,10 @@ ul {
     content: '';
     display: none;
     position: absolute; }
+
+.night .check-css-indic {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2); }
 
 /**
  * Flat pure CSS custom checkbox and radio:
@@ -1421,6 +1448,14 @@ ul {
 
 .check-css-indic--flat {
   background-color: rgba(0, 0, 0, 0.075);
+  border-color: transparent; }
+
+.night .lbl--check-css:hover .check-css-indic--flat {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent; }
+
+.night .check-css-indic--flat {
+  background-color: rgba(255, 255, 255, 0.075);
   border-color: transparent; }
 
 /**
@@ -2109,7 +2144,8 @@ th {
 .tbar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  align-items: center; }
   .tbar > *:not(:last-child) {
     margin-right: 0.5em; }
   .tbar > .input-group {

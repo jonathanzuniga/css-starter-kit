@@ -454,6 +454,52 @@
 	}
 }
 
+.night .lbl--check-css {
+	&:hover {
+		.check-css-indic {
+			background-color: $night-label-check-css-hover-check-css-indicator-background-color;
+			border-color: $night-label-check-css-hover-check-css-indicator-border-color;
+		}
+
+		[type='checkbox'],
+		[type='radio'] {
+			&:checked {
+				~ .check-css-indic {
+					background-color: $night-label-check-css-hover-type-checked-check-css-indicator-background-color;
+				}
+
+				&:active ~ .check-css-indic {
+					background-color: $night-label-check-css-hover-type-checked-active-check-css-indicator-background-color;
+				}
+			}
+		}
+	}
+
+	[type='checkbox'],
+	[type='radio'] {
+		&:checked ~ .check-css-indic {
+			background-color: $night-label-check-css-type-checked-check-css-indicator-background-color;
+			border-color: $night-label-check-css-type-checked-check-css-indicator-border-color;
+		}
+	}
+
+	[type='checkbox'] {
+		&:checked ~ .check-css-indic {
+			&:after {
+				border-color: $night-label-check-css-type-checkbox-checked-check-css-indicator-after-border-color;
+			}
+		}
+	}
+
+	[type='radio'] {
+		&:checked ~ .check-css-indic {
+			&:after {
+				background-color: $night-label-check-css-type-radio-checked-check-css-indicator-after-background-color;
+			}
+		}
+	}
+}
+
 .check-css-indic {
 	background-color: $check-css-indicator-background-color;
 
@@ -477,6 +523,11 @@
 		display: none;
 		position: absolute;
 	}
+}
+
+.night .check-css-indic {
+	background-color: $night-check-css-indicator-background-color;
+	border-color: $night-check-css-indicator-border-color;
 }
 
 /**
@@ -519,6 +570,20 @@
 .check-css-indic--flat {
 	background-color: $check-css-indicator-flat-background-color;
 	border-color: $check-css-indicator-flat-border-color;
+}
+
+.night .lbl--check-css {
+	&:hover {
+		.check-css-indic--flat {
+			background-color: $night-label-check-css-hover-check-css-indicator-flat-background-color;
+			border-color: $night-label-check-css-hover-check-css-indicator-flat-border-color;
+		}
+	}
+}
+
+.night .check-css-indic--flat {
+	background-color: $night-check-css-indicator-flat-background-color;
+	border-color: $night-check-css-indicator-flat-border-color;
 }
 
 /**
