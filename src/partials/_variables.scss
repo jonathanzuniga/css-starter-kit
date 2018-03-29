@@ -357,104 +357,120 @@ $file-area-transition:          $transition-base;
 
 // Checkbox and radio
 
-$field-check-margin-bottom:   0.50em;
-
-$label-check-padding-left:    1.25em;
-$label-check-type-margin-top: 0.50em;
+$input-check-margin-top:   0.50em;
+$label-check-padding-left: 1.25em;
 
 
-// Pure CSS custom checkbox and radio
+// Inline checkbox and radio
 
-$label-check-css-padding-left:                                                    2em;
-$day__label-check-css-hover__check-css-indic-bg-color:                            transparent;
-$ngt__label-check-css-hover__check-css-indic-bg-color:                            transparent;
-$day__label-check-css-hover__check-css-indic-border-color:                        $day__control-hover-border-color;
-$ngt__label-check-css-hover__check-css-indic-border-color:                        $ngt__control-hover-border-color;
-
-$day__label-check-css__type-checked__check-css-indic-bg-color:                    color('cerulean');
-$ngt__label-check-css__type-checked__check-css-indic-bg-color:                    color('cerulean');
-
-$day__label-check-css__type-checked__check-css-indic-border-color:                color('cerulean');
-$ngt__label-check-css__type-checked__check-css-indic-border-color:                color('cerulean');
-
-$day__label-check-css-hover__type-checked__check-css-indic-bg-color:              shade(
-                                                                                      $ngt__body-bg-color, 
-                                                                                      $day__label-check-css__type-checked__check-css-indic-bg-color, 
-                                                                                      $button-hover-bg-color-amount);
-$ngt__label-check-css-hover__type-checked__check-css-indic-bg-color:              shade(
-                                                                                      $ngt__body-bg-color, 
-                                                                                      $ngt__label-check-css__type-checked__check-css-indic-bg-color, 
-                                                                                      $button-hover-bg-color-amount);
-$day__label-check-css-hover__type-checked-active__check-css-indic-bg-color:       shade(
-                                                                                      $ngt__body-bg-color, 
-                                                                                      $day__label-check-css__type-checked__check-css-indic-bg-color, 
-                                                                                      $button-active-bg-color-amount);
-$ngt__label-check-css-hover__type-checked-active__check-css-indic-bg-color:       shade(
-                                                                                      $ngt__body-bg-color, 
-                                                                                      $ngt__label-check-css__type-checked__check-css-indic-bg-color, 
-                                                                                      $button-active-bg-color-amount);
-
-$label-check-css__type-checkbox__check-css-indic-border-radius:                   $control-border-radius;
-
-$label-check-css__type-checkbox-checked__check-css-indic-after-border-width:      0 0.125em 0.125em 0;
-$label-check-css__type-checkbox-checked__check-css-indic-after-border-style:      solid;
-$day__label-check-css__type-checkbox-checked__check-css-indic-after-border-color: color('white');
-$ngt__label-check-css__type-checkbox-checked__check-css-indic-after-border-color: color('white');
-
-$label-check-css__type-checkbox-checked__check-css-indic-after-top:               0.125em;
-$label-check-css__type-checkbox-checked__check-css-indic-after-left:              0.375em;
-
-$label-check-css__type-checkbox-checked__check-css-indic-after-transform:         rotate(45deg);
-
-$label-check-css__type-checkbox-checked__check-css-indic-after-width:             0.250em; //  4px
-$label-check-css__type-checkbox-checked__check-css-indic-after-height:            0.625em; // 10px
-
-$label-check-css__type-radio__check-css-indic-border-radius:                      50%;
-
-$day__label-check-css__type-radio-checked__check-css-indic-after-bg-color:        color('white');
-$ngt__label-check-css__type-radio-checked__check-css-indic-after-bg-color:        color('white');
-
-$label-check-css__type-radio-checked__check-css-indic-after-border-radius:        50%;
-
-$label-check-css__type-radio-checked__check-css-indic-after-top:                  0.375em; // 6px
-$label-check-css__type-radio-checked__check-css-indic-after-left:                 0.375em;
-
-$label-check-css-type-radio-checked-check-css-indicator-after-width:              0.375em;
-$label-check-css-type-radio-checked-check-css-indicator-after-height:             0.375em;
-
-$day__check-css-indic-bg-color:     transparent;
-$ngt__check-css-indic-bg-color:     transparent;
-
-$check-css-indic-border-width:      $control-border-width;
-$check-css-indic-border-style:      $control-border-style;
-$day__check-css-indic-border-color: $day__control-border-color;
-$ngt__check-css-indic-border-color: $ngt__control-border-color;
-
-$check-css-indic-margin-top:        0.125em;
-
-$check-css-indic-width:             1.250em;
-$check-css-indic-height:            1.250em;
+$control-check-inline-margin-right: 1.25em;
 
 
-// Flat pure CSS custom checkbox and radio
+// Custom checkbox and radio
 
-$day__label-check-css-hover__check-css-indic-flat-bg-color:      color('black 10');
-$ngt__label-check-css-hover__check-css-indic-flat-bg-color:      color('white 10');
+$control-check-custom-margin-bottom: 0.5em;
+$label-check-custom-padding-left:    2em;
 
-$day__label-check-css-active__check-css-indic-flat-bg-color:     color('black 20');
-$ngt__label-check-css-active__check-css-indic-flat-bg-color:     color('white 20');
+$day__input-check-custom-checked__control-check-indic-bg-color:       color('cerulean');
+$ngt__input-check-custom-checked__control-check-indic-bg-color:       color('cerulean');
 
-$day__label-check-css-hover__check-css-indic-flat-border-color:  transparent;
-$ngt__label-check-css-hover__check-css-indic-flat-border-color:  transparent;
+$day__input-check-custom-checked__control-check-indic-border-color:   color('cerulean');
+$ngt__input-check-custom-checked__control-check-indic-border-color:   color('cerulean');
 
-$day__label-check-css-active__check-css-indic-flat-border-color: transparent;
-$ngt__label-check-css-active__check-css-indic-flat-border-color: transparent;
+$day__input-check-custom-checked-hover__control-check-indic-bg-color: shade(
+                                                                          $ngt__body-bg-color,
+                                                                          $day__input-check-custom-checked__control-check-indic-bg-color,
+                                                                          $button-hover-bg-color-amount);
+$ngt__input-check-custom-checked-hover__control-check-indic-bg-color: shade(
+                                                                          $ngt__body-bg-color,
+                                                                          $ngt__input-check-custom-checked__control-check-indic-bg-color,
+                                                                          $button-hover-bg-color-amount);
+$day__input-check-custom-checked-active__control-check-indic-bg-color: shade(
+                                                                          $ngt__body-bg-color,
+                                                                          $day__input-check-custom-checked__control-check-indic-bg-color,
+                                                                          $button-active-bg-color-amount);
+$ngt__input-check-custom-checked-active__control-check-indic-bg-color: shade(
+                                                                          $ngt__body-bg-color,
+                                                                          $ngt__input-check-custom-checked__control-check-indic-bg-color,
+                                                                          $button-active-bg-color-amount);
 
-$day__check-css-indic-flat-bg-color:     color('black 075');
-$ngt__check-css-indic-flat-bg-color:     color('white 075');
+// Custom checkbox indicator
 
-$day__check-css-indic-flat-border-color: transparent;
-$ngt__check-css-indic-flat-border-color: transparent;
+$input-check-custom-checked__control-check-indic-checkbox-after-border-width:      0 0.125em 0.125em 0;
+$input-check-custom-checked__control-check-indic-checkbox-after-border-style:      solid;
+$day__input-check-custom-checked__control-check-indic-checkbox-after-border-color: color('white');
+$ngt__input-check-custom-checked__control-check-indic-checkbox-after-border-color: color('white');
+
+$input-check-custom-checked__control-check-indic-checkbox-after-top:               0.188em;
+$input-check-custom-checked__control-check-indic-checkbox-after-left:              0.375em;
+
+$input-check-custom-checked__control-check-indic-checkbox-after-transform:         rotate(45deg);
+
+$input-check-custom-checked__control-check-indic-checkbox-after-width:             0.188em;
+$input-check-custom-checked__control-check-indic-checkbox-after-height:            0.5em;
+
+
+// Custom radio indicator
+
+$day__input-check-custom-checked__control-check-indic-radio-after-bg-color: color('white');
+$ngt__input-check-custom-checked__control-check-indic-radio-after-bg-color: color('white');
+$input-check-custom-checked__control-check-indic-radio-after-border-radius: 50%;
+
+$input-check-custom-checked__control-check-indic-radio-after-top:           0.375em; // 6px
+$input-check-custom-checked__control-check-indic-radio-after-left:          0.375em;
+
+$input-check-custom-checked__control-check-indic-radio-after-width:         0.375em;
+$input-check-custom-checked__control-check-indic-radio-after-height:        0.375em;
+
+
+$day__control-check-indic-bg-color:          transparent;
+$ngt__control-check-indic-bg-color:          transparent;
+
+$control-check-indic-border-width:           $control-border-width;
+$control-check-indic-border-style:           $control-border-style;
+
+$day__control-check-indic-border-color:      $day__control-border-color;
+$ngt__control-check-indic-border-color:      $ngt__control-border-color;
+
+$control-check-indic-margin-top:             0.125em;
+
+$control-check-indic-width:                  1.25em;
+$control-check-indic-height:                 1.25em;
+
+$control-check-indic-checkbox-border-radius: $control-border-radius;
+$control-check-indic-radio-border-radius:    50%;
+
+$day__label-check-custom-hover__control-check-indic-bg-color:     transparent;
+$ngt__label-check-custom-hover__control-check-indic-bg-color:     transparent;
+
+$day__label-check-custom-hover__control-check-indic-border-color: $day__control-hover-border-color;
+$ngt__label-check-custom-hover__control-check-indic-border-color: $ngt__control-hover-border-color;
+
+
+// Inline custom checkbox and radio
+
+$control-check-inline-custom-margin-right: 1.5em;
+
+
+// Flat custom indicator
+
+$day__control-check-indic-flat-bg-color:                                color('black 10');
+$ngt__control-check-indic-flat-bg-color:                                color('white 10');
+
+$day__control-check-indic-flat-border-color:                            transparent;
+$ngt__control-check-indic-flat-border-color:                            transparent;
+
+$day__label-check-custom-hover__control-check-indic-flat-bg-color:      color('black 20');
+$ngt__label-check-custom-hover__control-check-indic-flat-bg-color:      color('white 20');
+
+$day__label-check-custom-hover__control-check-indic-flat-border-color:  transparent;
+$ngt__label-check-custom-hover__control-check-indic-flat-border-color:  transparent;
+
+$day__label-check-custom-active__control-check-indic-flat-bg-color:     color('black 30');
+$ngt__label-check-custom-active__control-check-indic-flat-bg-color:     color('white 30');
+
+$day__label-check-custom-active__control-check-indic-flat-border-color: transparent;
+$ngt__label-check-custom-active__control-check-indic-flat-border-color: transparent;
 
 
 // Select menu
