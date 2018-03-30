@@ -50,13 +50,13 @@ a {
     text-decoration: none; }
 
 .night a:link {
-  color: #009bef; }
+  color: #56acf2; }
 
 .night a:visited {
-  color: #009bef; }
+  color: #56acf2; }
 
 .night a:hover {
-  color: #047cc0; }
+  color: #009bef; }
 
 .a-bd-bottom p > a:not(.btn) {
   border-bottom: 0.063rem solid #009bef; }
@@ -64,9 +64,9 @@ a {
     border-bottom-color: #047cc0; }
 
 .night .a-bd-bottom p > a:not(.btn) {
-  border-bottom-color: #009bef; }
+  border-bottom-color: #56acf2; }
   .night .a-bd-bottom p > a:not(.btn):hover {
-    border-bottom-color: #047cc0; }
+    border-bottom-color: #009bef; }
 
 /**
  * Heading:
@@ -579,6 +579,84 @@ ul {
   z-index: -1; }
 
 /**
+	 * Danger button:
+	 * `.btn--danger`
+	 *
+	 *     @example
+	 *     button.btn.btn--danger Button
+     *     button.btn.btn--danger.btn--outline Outline button
+	 */
+.btn--danger {
+  background-color: #ff5c49;
+  border-color: transparent;
+  color: #fff; }
+  .btn--danger:link, .btn--danger:visited {
+    color: #fff; }
+  .btn--danger:hover {
+    background-color: #e95746;
+    color: #fff; }
+  .btn--danger:active, .btn--danger.active, .toggle:checked + .btn--danger,
+  .toggle [type='checkbox']:checked + .btn--danger,
+  .toggle [type='radio']:checked + .btn--danger {
+    background-color: #d45142;
+    color: #fff; }
+
+.night .btn--danger {
+  background-color: #ff5c49;
+  color: #fff; }
+  .night .btn--danger:hover {
+    background-color: #e95746;
+    color: #fff; }
+  .night .btn--danger:active, .night .btn--danger.active, .night .toggle:checked + .btn--danger,
+  .night .toggle [type='checkbox']:checked + .btn--danger, .toggle .night [type='checkbox']:checked + .btn--danger,
+  .night .toggle [type='radio']:checked + .btn--danger, .toggle .night [type='radio']:checked + .btn--danger {
+    background-color: #d45142;
+    color: #fff; }
+
+.btn--outline {
+  background-color: transparent; }
+  .btn--outline.btn--danger {
+    border-color: #ff5c49;
+    color: #ff5c49; }
+    .btn--outline.btn--danger:link, .btn--outline.btn--danger:visited {
+      color: #ff5c49; }
+    .btn--outline.btn--danger:hover {
+      background-color: #e95746;
+      border-color: #ff5c49;
+      color: #fff; }
+    .btn--outline.btn--danger:active, .btn--outline.btn--danger.active, .toggle:checked + .btn--outline.btn--danger,
+    .toggle [type='checkbox']:checked + .btn--outline.btn--danger,
+    .toggle [type='radio']:checked + .btn--outline.btn--danger {
+      background-color: #d45142;
+      border-color: #d45142;
+      color: #fff; }
+
+.night .btn--outline {
+  background-color: transparent; }
+  .night .btn--outline.btn--danger {
+    border-color: #ff5c49;
+    color: #ff5c49; }
+    .night .btn--outline.btn--danger:link, .night .btn--outline.btn--danger:visited {
+      color: #ff5c49; }
+    .night .btn--outline.btn--danger:hover {
+      background-color: #e95746;
+      border-color: #ff5c49;
+      color: #fff; }
+    .night .btn--outline.btn--danger:active, .night .btn--outline.btn--danger.active, .night .toggle:checked + .btn--outline.btn--danger,
+    .night .toggle [type='checkbox']:checked + .btn--outline.btn--danger, .toggle .night [type='checkbox']:checked + .btn--outline.btn--danger,
+    .night .toggle [type='radio']:checked + .btn--outline.btn--danger, .toggle .night [type='radio']:checked + .btn--outline.btn--danger {
+      background-color: #d45142;
+      border-color: #d45142;
+      color: #fff; }
+
+.toggle,
+.toggle [type='checkbox'],
+.toggle [type='radio'] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+/**
 	 * Light button:
 	 * `.btn--light`
 	 *
@@ -762,15 +840,15 @@ ul {
 
 .night .btn--link {
   background-color: transparent;
-  color: #009bef; }
+  color: #56acf2; }
   .night .btn--link:link, .night .btn--link:visited {
-    color: #009bef; }
+    color: #56acf2; }
   .night .btn--link:hover {
     background-color: transparent;
-    color: #047cc0; }
+    color: #009bef; }
   .night .btn--link:active, .night .btn--link.active {
     background-color: transparent;
-    color: #047cc0; }
+    color: #009bef; }
 
 /**
  * Button size:
