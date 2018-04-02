@@ -31,32 +31,32 @@
 			width: 100%;
 			height: 100%;
 
-			transition: $full-screen-menu-transition;
+			transition: $fsmenu-transition;
 			z-index: 999;
 
 			> * {
 				opacity: 0;
-				transition: $full-screen-menu-content-transition;
+				transition: $fsmenu-all-transition;
 			}
 
 			&.open {
-				background-color: $full-screen-menu-open-background-color;
+				background-color: $day__fsmenu-open-bg-color;
 				opacity: 1;
 				visibility: visible;
 				transform: translate3d(0, 0, 0);
 
-				transition: $full-screen-menu-open-transition;
+				transition: $fsmenu-open-transition;
 
 				> * {
 					opacity: 1;
-					transition: $full-screen-menu-open-content-transition;
+					transition: $fsmenu-open-all-transition;
 				}
 			}
 		}
 
 		.night {
 			.max#{$size}-fsmenu.open {
-				background-color: $night-full-screen-menu-open-background-color;
+				background-color: $ngt__fsmenu-open-bg-color;
 			}
 		}
 	}

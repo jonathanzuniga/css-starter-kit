@@ -32,7 +32,7 @@
 	ul, a {
 		border-bottom-width: $tabs-border-bottom-width;
 		border-bottom-style: $tabs-border-bottom-style;
-		border-bottom-color: $tabs-border-bottom-color;
+		border-bottom-color: $day__tabs-border-bottom-color;
 	}
 
 	ul {
@@ -46,44 +46,44 @@
 
 	li {
 		display: block;
-		margin: $tabs-item-margin;
+		margin: $tabs__item-margin;
 
 		&:first-child {
 			margin-left: 0;
 		}
 
 		a {
-			border-bottom-width: $tabs-link-border-bottom-width;
-			border-bottom-color: $tabs-link-border-bottom-color;
+			border-bottom-width: $tabs__a-border-bottom-width;
+			border-bottom-color: $day__tabs__a-border-bottom-color;
 
 			display: flex;
 			margin-bottom: -#{$tabs-border-bottom-width};
 
 			&:link,
 			&:visited {
-				color: $tabs-link-color;
+				color: $day__tabs__a-color;
 			}
 
 			&:hover {
-				border-bottom-color: $tabs-link-hover-border-bottom-color;
-				color: $tabs-link-hover-color;
+				border-bottom-color: $day__tabs__a-hover-border-bottom-color;
+				color: $day__tabs__a-hover-color;
 			}
 
-			padding: $tabs-link-padding-y $tabs-link-padding-x;
+			padding: $tabs__a-padding-y $tabs__a-padding-x;
 		}
 
 		&.active {
 			a {
-				border-bottom-width: $tabs-item-active-link-border-bottom-width;
-				border-bottom-color: $tabs-item-active-link-border-bottom-color;
+				border-bottom-width: $tabs__item-active__a-border-bottom-width;
+				border-bottom-color: $day__tabs__item-active__a-border-bottom-color;
 
 				&:link,
 				&:visited {
-					color: $tabs-item-active-link-color;
+					color: $day__tabs__item-active__a-color;
 				}
 
 				&:hover {
-					color: $tabs-item-active-link-hover-color;
+					color: $day__tabs__item-active__a-hover-color;
 				}
 			}
 		}
@@ -92,35 +92,35 @@
 
 .night .tabs {
 	ul, a {
-		border-bottom-color: $night-tabs-border-bottom-color;
+		border-bottom-color: $ngt__tabs-border-bottom-color;
 	}
 
 	li {
 		a {
-			border-bottom-color: $night-tabs-link-border-bottom-color;
+			border-bottom-color: $ngt__tabs__a-border-bottom-color;
 
 			&:link,
 			&:visited {
-				color: $night-tabs-link-color;
+				color: $ngt__tabs__a-color;
 			}
 
 			&:hover {
-				border-bottom-color: $night-tabs-link-hover-border-bottom-color;
-				color: $night-tabs-link-hover-color;
+				border-bottom-color: $ngt__tabs__a-hover-border-bottom-color;
+				color: $ngt__tabs__a-hover-color;
 			}
 		}
 
 		&.active {
 			a {
-				border-bottom-color: $night-tabs-item-active-link-border-bottom-color;
+				border-bottom-color: $ngt__tabs__item-active__a-border-bottom-color;
 
 				&:link,
 				&:visited {
-					color: $night-tabs-item-active-link-color;
+					color: $ngt__tabs__item-active__a-color;
 				}
 
 				&:hover {
-					color: $night-tabs-item-active-link-hover-color;
+					color: $ngt__tabs__item-active__a-hover-color;
 				}
 			}
 		}
@@ -180,7 +180,7 @@
  *         ul
  *             li
  *                 a(href='#!') Tab 1
- *             li
+ *             li.active
  *                 a(href='#!') Tab 2
  *             li
  *                 a(href='#!') Tab 3
@@ -189,13 +189,13 @@
  *             li(style='transform: translateX(71px); width: 73px;').active-underline
  */
 .active-underline {
-	background-color: $tabs-item-active-link-border-bottom-color;
-	height: $tabs-item-active-link-border-bottom-width;
+	background-color: $day__tabs__item-active__a-border-bottom-color;
+	height: $tabs__item-active__a-border-bottom-width;
 	position: absolute;
 	left: 0;
 	bottom: -1px;
 
-	transition: $tabs-item-active-underline-transition;
+	transition: $tabs__item__active-underline-transition;
 	will-change: transform, width;
 
 	// Modify with js:
@@ -204,7 +204,7 @@
 }
 
 .night .active-underline {
-	background-color: $night-tabs-item-active-link-border-bottom-color;
+	background-color: $ngt__tabs__item-active__a-border-bottom-color;
 }
 
 

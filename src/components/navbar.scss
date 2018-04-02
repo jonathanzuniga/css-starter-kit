@@ -10,8 +10,8 @@
 		> .col,
 		> [class*="-col-"] {
 			> .navbar {
-				margin-left: -$gutter-width;
-				margin-right: -$gutter-width;
+				margin-left: -#{$gutter-width};
+				margin-right: -#{$gutter-width};
 			}
 		}
 	}
@@ -57,14 +57,12 @@
 }
 
 .navbar {
-	background-color: $navbar-background-color;
+	background-color: $day__navbar-bg-color;
 	justify-content: flex-start;
 }
 
-.night {
-	.navbar {
-		background-color: $night-navbar-background-color;
-	}
+.night .navbar {
+	background-color: $ngt__navbar-bg-color;
 }
 
 .navbar__brand,
@@ -122,15 +120,15 @@
 
 .navbar__link,
 .navbar__toggler {
-	color: $navbar-link-color;
+	color: $day__navbar-a-color;
 
 	&:link,
 	&:visited {
-		color: $navbar-link-color;
+		color: $day__navbar-a-color;
 	}
 
 	&:hover {
-		color: $navbar-link-hover-color;
+		color: $day__navbar-a-hover-color;
 	}
 }
 
@@ -140,7 +138,7 @@
 		&:link,
 		&:hover,
 		&:visited {
-			color: $navbar-item-active-link-color;
+			color: $day__navbar-item-active__a-color;
 		}
 	}
 }
@@ -148,15 +146,15 @@
 .night {
 	.navbar__link,
 	.navbar__toggler {
-		color: $night-navbar-link-color;
+		color: $ngt__navbar-a-color;
 
 		&:link,
 		&:visited {
-			color: $night-navbar-link-color;
+			color: $ngt__navbar-a-color;
 		}
 
 		&:hover {
-			color: $night-navbar-link-hover-color;
+			color: $ngt__navbar-a-hover-color;
 		}
 	}
 
@@ -166,7 +164,7 @@
 			&:link,
 			&:hover,
 			&:visited {
-				color: $night-navbar-item-active-link-color;
+				color: $ngt__navbar-item-active__a-color;
 			}
 		}
 	}
@@ -443,15 +441,15 @@
 .navbar--dark {
 	.navbar__link,
 	.navbar__toggler {
-		color: $navbar-dark-link-color;
+		color: $navbar-dark__a-color;
 
 		&:link,
 		&:visited {
-			color: $navbar-dark-link-color;
+			color: $navbar-dark__a-color;
 		}
 
 		&:hover {
-			color: $navbar-dark-link-hover-color;
+			color: $navbar-dark__a-hover-color;
 		}
 	}
 
@@ -461,7 +459,7 @@
 			&:link,
 			&:hover,
 			&:visited {
-				color: $navbar-dark-item-active-link-color;
+				color: $navbar-dark__item-active__a-color;
 			}
 		}
 	}

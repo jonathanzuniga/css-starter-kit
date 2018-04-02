@@ -879,10 +879,12 @@ $grid-breakpoints: (
     xl: $breakpoint-xl-min-width
 ) !default;
 
+
+// Gutter
+
 // Gutter normal width.
 $gutter-width: 1rem !default;
 
-// Gutters and grid gap.
 $gutters: (
     0: 0,
     1: $gutter-width
@@ -901,22 +903,23 @@ $grid-gap: $gutter-width;
 
 // Card
 
-$card-background-color:       $day__body-bg-color;
-$night-card-background-color: $ngt__body-bg-color;
-$card-padding:                $spacing-unit-half;
-$card-border-width:           0.063rem;
-$card-border-style:           solid;
-$card-border-color:           color('black 10');
-$night-card-border-color:     color('white 10');
-$card-border-radius:          $border-radius-base;
-$card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
-$card-transition:             $transition-base;
+$day__card-bg-color:     $day__body-bg-color;
+$ngt__card-bg-color:     $ngt__body-bg-color;
+$card-padding:           $spacing-unit-half;
 
-$card-hover-box-shadow:       0 0.063em $spacing-unit-half rgba(black, 0.15);
+$card-border-width:      0.063rem;
+$card-border-style:      solid;
+$day__card-border-color: color('black 10');
+$ngt__card-border-color: color('white 10');
+
+$card-border-radius:     $border-radius-base;
+$card-box-shadow:        0 0.063em 0.063em rgba(black, 0.05);
+$card-transition:        $transition-base;
+
+$card-hover-box-shadow:  0 0.063em $spacing-unit-half rgba(black, 0.15);
 
 
 // Collapse
-
 
 $collapse-height:                                     initial;
 $collapse-max-height:                                 0;
@@ -927,145 +930,152 @@ $collapse-transition:                                 height     0.3s $transitio
                                                       opacity    0.3s $transition-timing-function,
                                                       transform  0.3s $transition-timing-function;
 
-$collapse-list-unstyled-item-active-link-font-weight: 500;
-$collapse-list-unstyled-link-color:                   color('black 60');
-$night-collapse-list-unstyled-link-color:             color('white 60');
-$collapse-list-unstyled-link-hover-color:             color('black 90');
-$night-collapse-list-unstyled-link-hover-color:       color('white 90');
-$collapse-list-unstyled-item-active-link-color:       $day__body-color;
-$night-collapse-list-unstyled-item-active-link-color: $ngt__body-color;
+$collapse__list-unstyled__item-active__a-font-weight: 500;
+
+$day__collapse__list-unstyled__a-color:               color('black 60');
+$ngt__collapse__list-unstyled__a-color:               color('white 60');
+
+$day__collapse__list-unstyled__a-hover-color:         color('black 90');
+$ngt__collapse__list-unstyled__a-hover-color:         color('white 90');
+
+$day__collapse__list-unstyled__item-active__a-color:  $day__body-color;
+$ngt__collapse__list-unstyled__item-active__a-color:  $ngt__body-color;
 
 
 // Drawer
 
-$drawer-background-color:               $day__body-bg-color;
-$night-drawer-background-color:         $ngt__body-bg-color;
-$drawer-width:                          260px;
-$drawer-height:                         200px;
-$drawer-z-index:                        110;
+$day__drawer-bg-color:           $day__body-bg-color;
+$ngt__drawer-bg-color:           $ngt__body-bg-color;
 
-$drawer-outside-transition:             margin 0.3s $transition-timing-function;
+$drawer-width:                   260px;
+$drawer-height:                  200px;
+$drawer-z-index:                 110;
 
-$drawer-overlay-background-color:       color('black 50');
-$night-drawer-overlay-background-color: color('black 50');
-$drawer-overlay-transition:             opacity    0.3s $transition-timing-function,
-                                        visibility 0.3s $transition-timing-function;
-$drawer-overlay-z-index:                100;
+$drawer-outside-transition:      margin 0.3s $transition-timing-function;
 
-$drawer-push-outside-transition:        transform 0.3s $transition-timing-function;
+$day__drawer-overlay-bg-color:   color('black 50');
+$ngt__drawer-overlay-bg-color:   color('black 50');
+
+$drawer-overlay-transition:      opacity    0.3s $transition-timing-function,
+                                 visibility 0.3s $transition-timing-function;
+
+$drawer-overlay-z-index:         100;
+
+$drawer-push-outside-transition: transform 0.3s $transition-timing-function;
 
 
 // Menu
 
-$menu-item-margin:                              0 0 ($spacing-unit-quarter / 2);
-$menu-item-padding-y:                           0;
-$menu-item-padding-x:                           0;
-$menu-link-padding-y:                           $spacing-unit-quarter;
-$menu-link-padding-x:                           $spacing-unit-half;
+$menu__item-margin:                     0 0 ($spacing-unit-quarter / 2);
+$menu__item-padding-y:                  0;
+$menu__item-padding-x:                  0;
+$menu__a-padding-y:                     $spacing-unit-quarter;
+$menu__a-padding-x:                     $spacing-unit-half;
 
-$menu-item-active-link-color:                   $day__body-color;
-$night-menu-item-active-link-color:             $ngt__body-color;
+$day__menu__item-active__a-color:       $day__body-color;
+$ngt__menu__item-active__a-color:       $ngt__body-color;
 
 
 // Menu pills
 
-$menu-pills-item-link-border-radius:            $border-radius-base;
+$menu-pills__item__a-border-radius:     $border-radius-base;
 
-$menu-pills-item-link-color:                    $day__body-color;
-$night-menu-pills-item-link-color:              $ngt__body-color;
+$day__menu-pills__item__a-color:        $day__body-color;
+$ngt__menu-pills__item__a-color:        $ngt__body-color;
 
-$menu-pills-item-active-link-color:             $day__a-color;
-$night-menu-pills-item-active-link-color:       $ngt__a-color;
+$day__menu-pills__item-active__a-color: $day__a-color;
+$ngt__menu-pills__item-active__a-color: $ngt__a-color;
 
-$menu-pills-link-hover-background-color:        color('black 05');
-$night-menu-pills-link-hover-background-color:  color('white 05');
+$day__menu-pills__a-hover-bg-color:     color('black 05');
+$ngt__menu-pills__a-hover-bg-color:     color('white 05');
 
-$menu-pills-item-active-background-color:       color('cerulean 1');
-$night-menu-pills-item-active-background-color: color('cerulean 90');
+$day__menu-pills__item-active-bg-color: color('cerulean 1');
+$ngt__menu-pills__item-active-bg-color: color('cerulean 90');
 
 
 // Navbar
 
 // Navbar brand
 
-$navbar-background-color:             $day__body-bg-color;
-$night-navbar-background-color:       $ngt__body-bg-color;
+$day__navbar-bg-color:              $day__body-bg-color;
+$ngt__navbar-bg-color:              $ngt__body-bg-color;
 
-$navbar-padding-y:                    em_to_rem($spacing-unit-quarter);
-$navbar-padding-x:                    em_to_rem($spacing-unit-half);
+$navbar-padding-y:                  em_to_rem($spacing-unit-quarter);
+$navbar-padding-x:                  em_to_rem($spacing-unit-half);
 
-$navbar-brand-font-size:              1.25em;
-$navbar-toggler-cursor:               pointer;
+$navbar-brand-font-size:            1.25em;
+$navbar-toggler-cursor:             pointer;
 
-$navbar-link-color:                   color('black 60');
-$night-navbar-link-color:             color('white 60');
+$day__navbar-a-color:               color('black 60');
+$ngt__navbar-a-color:               color('white 60');
 
-$navbar-link-hover-color:             color('black 90');
-$night-navbar-link-hover-color:       color('white 90');
+$day__navbar-a-hover-color:         color('black 90');
+$ngt__navbar-a-hover-color:         color('white 90');
 
-$navbar-item-active-link-color:       $day__body-color;
-$night-navbar-item-active-link-color: $ngt__body-color;
+$day__navbar-item-active__a-color:  $day__body-color;
+$ngt__navbar-item-active__a-color:  $ngt__body-color;
 
-$navbar-dark-link-color:              color('white 60');
-$navbar-dark-link-hover-color:        color('white 90');
-$navbar-dark-item-active-link-color:  $ngt__body-color;
+$navbar-dark__a-color:              color('white 60');
+$navbar-dark__a-hover-color:        color('white 90');
+$navbar-dark__item-active__a-color: $ngt__body-color;
 
 
 // Navmenu
 
 // Full screen menu
 
-$full-screen-menu-transition:                  opacity          0.5s step-end, 
-                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                               visibility       0.5s step-end, 
-                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-content-transition:          opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
+$fsmenu-transition:          opacity          0.5s step-end, 
+                             transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                             visibility       0.5s step-end, 
+                             background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+$fsmenu-all-transition:      opacity          0.4s cubic-bezier(0.8, 0, 0.55, 0.94);
 
-$full-screen-menu-open-background-color:       $day__body-bg-color;
-$night-full-screen-menu-open-background-color: $ngt__body-bg-color;
+$day__fsmenu-open-bg-color:  $day__body-bg-color;
+$ngt__fsmenu-open-bg-color:  $ngt__body-bg-color;
 
-$full-screen-menu-open-transition:             opacity          0.5s step-start, 
-                                               transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
-                                               visibility       0.5s step-start, 
-                                               background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
-$full-screen-menu-open-content-transition:     opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
+$fsmenu-open-transition:     opacity          0.5s step-start, 
+                             transform        0.5s cubic-bezier(0.8, 0, 0.55, 0.94), 
+                             visibility       0.5s step-start, 
+                             background-color 0.5s cubic-bezier(0.8, 0, 0.55, 0.94);
+$fsmenu-open-all-transition: opacity          0.5s cubic-bezier(0.8, 0, 0.55, 0.94) 0.5s;
 
 
 // Tabs
 
-$tabs-border-bottom-width:                        0.063rem; // 1px
-$tabs-border-bottom-style:                        solid;
-$tabs-border-bottom-color:                        color('black 075');
-$night-tabs-border-bottom-color:                  color('white 075');
+$tabs-border-bottom-width:                      0.063rem; // 1px
+$tabs-border-bottom-style:                      solid;
+$day__tabs-border-bottom-color:                 color('black 075');
+$ngt__tabs-border-bottom-color:                 color('white 075');
 
-$tabs-item-margin:                                0;
+$tabs__item-margin:                             0;
 
-$tabs-link-border-bottom-color:                   transparent;
-$night-tabs-link-border-bottom-color:             transparent;
+$day__tabs__a-border-bottom-color:              transparent;
+$ngt__tabs__a-border-bottom-color:              transparent;
 
-$tabs-link-border-bottom-width:                   0.188rem; // 3px
+$tabs__a-border-bottom-width:                   0.188rem; // 3px
 
-$tabs-link-color:                                 color('black 60');
-$night-tabs-link-color:                           color('white 60');
+$day__tabs__a-color:                            color('black 60');
+$ngt__tabs__a-color:                            color('white 60');
 
-$tabs-link-hover-color:                           color('black 90');
-$night-tabs-link-hover-color:                     color('white 90');
+$day__tabs__a-hover-color:                      color('black 90');
+$ngt__tabs__a-hover-color:                      color('white 90');
 
-$tabs-link-padding-y:                             $spacing-unit-quarter;
-$tabs-link-padding-x:                             $spacing-unit-half;
+$tabs__a-padding-y:                             $spacing-unit-quarter;
+$tabs__a-padding-x:                             $spacing-unit-half;
 
-$tabs-link-hover-border-bottom-color:             transparent;
-$night-tabs-link-hover-border-bottom-color:       transparent;
+$day__tabs__a-hover-border-bottom-color:        transparent;
+$ngt__tabs__a-hover-border-bottom-color:        transparent;
 
-$tabs-item-active-link-color:                     $day__body-color;
-$night-tabs-item-active-link-color:               $ngt__body-color;
-$tabs-item-active-link-hover-color:               $day__body-color;
-$night-tabs-item-active-link-hover-color:         $ngt__body-color;
+$day__tabs__item-active__a-color:               $day__body-color;
+$ngt__tabs__item-active__a-color:               $ngt__body-color;
 
-$tabs-item-active-link-border-bottom-width:       0.188rem; // 3px
+$day__tabs__item-active__a-hover-color:         $day__body-color;
+$ngt__tabs__item-active__a-hover-color:         $ngt__body-color;
 
-$tabs-item-active-link-border-bottom-color:       $day__a-color;
-$night-tabs-item-active-link-border-bottom-color: $ngt__a-color;
+$tabs__item-active__a-border-bottom-width:      0.188rem; // 3px
 
-$tabs-item-active-underline-transition:           transform $transition-duration $transition-timing-function, 
-                                                  width     $transition-duration $transition-timing-function;
+$day__tabs__item-active__a-border-bottom-color: $day__a-color;
+$ngt__tabs__item-active__a-border-bottom-color: $ngt__a-color;
+
+$tabs__item__active-underline-transition:       transform $transition-duration $transition-timing-function, 
+                                                width     $transition-duration $transition-timing-function;
