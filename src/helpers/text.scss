@@ -159,22 +159,20 @@
 	}
 }
 
-.night {
-	.a-underline-alt a {
-		background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__a-color 50%);
-		background-image: linear-gradient(to bottom, transparent 50%, $ngt__a-color 50%);
-		background-repeat: repeat-x;
-		background-size: 0.125rem 0.125rem;
-		background-position: 0 90%;
-		text-shadow: 0.063rem 0 $ngt__body-bg-color, 
-					 0.125rem 0 $ngt__body-bg-color, 
-					-0.063rem 0 $ngt__body-bg-color, 
-					-0.125rem 0 $ngt__body-bg-color;
+.night .a-underline-alt a {
+	background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__a-color 50%);
+	background-image: linear-gradient(to bottom, transparent 50%, $ngt__a-color 50%);
+	background-repeat: repeat-x;
+	background-size: 0.125rem 0.125rem;
+	background-position: 0 90%;
+	text-shadow: 0.063rem 0 $ngt__body-bg-color, 
+				 0.125rem 0 $ngt__body-bg-color, 
+				-0.063rem 0 $ngt__body-bg-color, 
+				-0.125rem 0 $ngt__body-bg-color;
 
-		&:hover {
-			background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__body-color 50%);
-			background-image: linear-gradient(to bottom, transparent 50%, $ngt__body-color 50%);
-		}
+	&:hover {
+		background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__body-color 50%);
+		background-image: linear-gradient(to bottom, transparent 50%, $ngt__body-color 50%);
 	}
 }
 
@@ -184,12 +182,12 @@
 
 /**
  * Selecting all text with one click:
- * `.usel`
+ * `.us-all`
  *
  *     @example
- *     p.usel Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     p.us-all Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
-.usel {
+.us-all {
 	-webkit-user-select: all; /* Chrome, Opera, Safari */
 	-moz-user-select: all; /* Firefox 2+ */
 	-ms-user-select: all; /* IE 10+ */
