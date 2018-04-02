@@ -94,7 +94,7 @@ a {
 h1,
 .h1 {
   font-size: 2.5em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h1:not(:first-child),
   .h1:not(:first-child) {
@@ -103,7 +103,7 @@ h1,
 h2,
 .h2 {
   font-size: 2em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h2:not(:first-child),
   .h2:not(:first-child) {
@@ -112,7 +112,7 @@ h2,
 h3,
 .h3 {
   font-size: 1.75em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h3:not(:first-child),
   .h3:not(:first-child) {
@@ -121,7 +121,7 @@ h3,
 h4,
 .h4 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h4:not(:first-child),
   .h4:not(:first-child) {
@@ -130,7 +130,7 @@ h4,
 h5,
 .h5 {
   font-size: 1.25em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h5:not(:first-child),
   .h5:not(:first-child) {
@@ -139,7 +139,7 @@ h5,
 h6,
 .h6 {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.2; }
   h6:not(:first-child),
   .h6:not(:first-child) {
@@ -1599,6 +1599,7 @@ ul {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
+  color: rgba(0, 0, 0, 0.9);
   display: block;
   font-size: 16px;
   line-height: inherit;
@@ -1610,8 +1611,11 @@ ul {
     box-shadow: inset 0 0 0 0.063rem #56acf2; }
   .sel:hover {
     border-color: rgba(0, 0, 0, 0.3); }
+  .sel option {
+    color: rgba(0, 0, 0, 0.9); }
 
 .night .sel {
+  background-color: transparent;
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.9); }
   .night .sel:focus, .night .sel:focus:hover {
@@ -1623,23 +1627,23 @@ ul {
     color: rgba(0, 0, 0, 0.9); }
 
 /**
- * Select menu with pure CSS icon:
- * `.sel-css-icn`
+ * Custom select menu:
+ * `.sel-custom`
  *
  *     @example
- *     div.sel-css-icn
+ *     div.sel-custom
  *         select.sel
  *             option Option 1
  *             option Option 2
  *             option Option 3
  */
-.sel-css-icn {
+.sel-custom {
   position: relative; }
-  .sel-css-icn .sel {
+  .sel-custom .sel {
     -webkit-appearance: none;
     -moz-appearance: none;
     padding-right: 1.813em; }
-  .sel-css-icn:after {
+  .sel-custom:after {
     border-width: 0.125em;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.9);
@@ -1656,12 +1660,12 @@ ul {
     pointer-events: none;
     transform: rotate(-45deg); }
 
-.night .sel-css-icn:after {
+.night .sel-custom:after {
   border-color: rgba(255, 255, 255, 0.9); }
 
 /**
  * Select menu size:
- * `.sel--[size]` `.sel-css-icn--[size]`
+ * `.sel--[size]` `.sel-custom--[size]`
  *
  *     @example
  *     div.cols
@@ -1678,41 +1682,41 @@ ul {
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.sel-css-icn.sel-css-icn--sm
+ *                 div.sel-custom.sel-custom--sm
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  *             div.fld
- *                 div.sel-css-icn.sel-css-icn--lg
+ *                 div.sel-custom.sel-custom--lg
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  */
-.sel--sm, .sel-css-icn--sm .sel {
+.sel--sm, .sel-custom--sm .sel {
   border-radius: 0.25rem;
   font-size: 0.75em;
   padding: 0.25em 0.75em; }
 
-.sel--lg, .sel-css-icn--lg .sel {
+.sel--lg, .sel-custom--lg .sel {
   border-radius: 0.25rem;
   font-size: 1.25em;
   padding: 0.25em 0.75em; }
 
-.sel-css-icn--sm .sel {
+.sel-custom--sm .sel {
   padding-right: 1.70867em; }
 
-.sel-css-icn--sm:after {
+.sel-custom--sm:after {
   width: 0.20867em;
   height: 0.20867em;
   margin-top: -0.20867em;
   right: 0.5em; }
 
-.sel-css-icn--lg .sel {
+.sel-custom--lg .sel {
   padding-right: 1.9695em; }
 
-.sel-css-icn--lg:after {
+.sel-custom--lg:after {
   width: 0.4695em;
   height: 0.4695em;
   margin-top: -0.4695em;
@@ -1743,7 +1747,7 @@ ul {
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.sel-css-icn
+ *                 div.sel-custom
  *                     select.sel.sel--flat
  *                         option Option 1
  *                         option Option 2

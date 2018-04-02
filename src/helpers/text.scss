@@ -6,17 +6,21 @@
  */
 
 /**
- * Selecting all text with one click:
- * `.usel`
+ * Display heading:
+ * `.dh1` `.dh2` `.dh3` `.dh4`
  *
  *     @example
- *     p.usel Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.dh1.hyp-auto Display heading
+ *     div.dh2.hyp-auto Display heading
+ *     div.dh3.hyp-auto Display heading
+ *     div.dh4.hyp-auto Display heading
  */
-.usel {
-	-webkit-user-select: all; /* Chrome, Opera, Safari */
-	-moz-user-select: all; /* Firefox 2+ */
-	-ms-user-select: all; /* IE 10+ */
-	user-select: all; /* Standard syntax */
+@each $key, $size in $display-headings {
+	.#{$key} {
+		font-size: $size;
+		font-weight: $display-heading-font-weight;
+		line-height: $display-heading-line-height;
+	}
 }
 
 /**
@@ -177,6 +181,20 @@
 
 .hyp-auto {
 	hyphens: auto;
+}
+
+/**
+ * Selecting all text with one click:
+ * `.usel`
+ *
+ *     @example
+ *     p.usel Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.usel {
+	-webkit-user-select: all; /* Chrome, Opera, Safari */
+	-moz-user-select: all; /* Firefox 2+ */
+	-ms-user-select: all; /* IE 10+ */
+	user-select: all; /* Standard syntax */
 }
 
 .wb-break-all {

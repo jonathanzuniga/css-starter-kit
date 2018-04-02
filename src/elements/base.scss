@@ -118,9 +118,9 @@ a {
  *             p.h5 Heading
  *             p.h6 Heading
  */
-@each $heading, $size in $headings {
-	#{$heading},
-	.#{$heading} {
+@each $key, $size in $headings {
+	#{$key},
+	.#{$key} {
 		font-size: $size;
 		font-weight: $heading-font-weight;
 		line-height: $heading-line-height;

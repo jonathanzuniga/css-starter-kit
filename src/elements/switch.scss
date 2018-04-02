@@ -27,7 +27,7 @@
 	z-index: -1;
 
 	& + label {
-		background-color: $switch-label-background-color;
+		background-color: $day__switch-label-bg-color;
 		border: $switch-label-border;
 		border-radius: $switch-label-border-radius;
 		box-shadow: $switch-label-box-shadow;
@@ -103,25 +103,23 @@
 	}
 }
 
-.night {
-	.switch {
+.night .switch {
+	& + label {
+		background-color: $ngt__switch-label-bg-color;
+
+		// Toggle.
+		&:after {
+			background-color: $night-switch-label-after-background-color;
+		}
+	}
+
+	&:checked {
 		& + label {
-			background-color: $night-switch-label-background-color;
-
-			// Toggle.
-			&:after {
-				background-color: $night-switch-label-after-background-color;
+			&:before {
+				background-color: $night-switch-checked-label-before-background-color;
 			}
 		}
-
-		&:checked {
-			& + label {
-				&:before {
-					background-color: $night-switch-checked-label-before-background-color;
-				}
-			}
-		}
-	}	
+	}
 }
 
 /**

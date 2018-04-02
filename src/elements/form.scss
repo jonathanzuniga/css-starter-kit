@@ -629,11 +629,12 @@
  *         option Option 3
  */
 .sel {
-	background-color: $select-background-color;
+	background-color: $day__select-bg-color;
 	border-width: $select-border-width;
 	border-style: $select-border-style;
 	border-color: $select-border-color;
 	border-radius: $select-border-radius;
+	color: $day__select-color;
 	display: block;
 	font-size: $select-font-size;
 	line-height: $select-line-height;
@@ -646,20 +647,24 @@
 
 	&:focus,
 	&:focus:hover {
-		border-color: $select-focus-border-color;
-		box-shadow: $select-focus-box-shadow;
+		border-color: $day__select-focus-border-color;
+		box-shadow: $day__select-focus-box-shadow;
 	}
 
 	&:hover {
 		border-color: $day__select-hover-border-color;
 	}
+
+	option {
+		color: $day__select__option-color;
+	}
 }
 
-@if $select-icon-background-image != none {
+@if $select-icon-bg-image != none {
 	.sel--icn {
-		background-image: url($select-icon-background-image);
-		background-position: $select-icon-background-position;
-		background-size: $select-icon-background-size;
+		background-image: url($select-icon-bg-image);
+		background-position: $select-icon-bg-position;
+		background-size: $select-icon-bg-size;
 		background-repeat: no-repeat;
 		margin-right: $select-icon-margin-right;
 		padding-right: $select-icon-padding-right;
@@ -667,22 +672,23 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
-		@if $select-icon-focus-background-image != none {
+		@if $select-icon-focus-bg-image != none {
 			&:focus {
-				background-image: url($select-icon-focus-background-image);
+				background-image: url($select-icon-focus-bg-image);
 			}
 		}
 	}
 }
 
 .night .sel {
-	border-color: $night-select-border-color;
-	color: $night-select-color;
+	background-color: $ngt__select-bg-color;
+	border-color: $ngt__select-border-color;
+	color: $ngt__select-color;
 
 	&:focus,
 	&:focus:hover {
-		border-color: $night-select-focus-border-color;
-		box-shadow: $night-select-focus-box-shadow;
+		border-color: $ngt__select-focus-border-color;
+		box-shadow: $ngt__select-focus-box-shadow;
 	}
 
 	&:hover {
@@ -690,65 +696,63 @@
 	}
 
 	option {
-		color: $night-select-option-color;
+		color: $ngt__select__option-color;
 	}
 }
 
 /**
- * Select menu with pure CSS icon:
- * `.sel-css-icn`
+ * Custom select menu:
+ * `.sel-custom`
  *
  *     @example
- *     div.sel-css-icn
+ *     div.sel-custom
  *         select.sel
  *             option Option 1
  *             option Option 2
  *             option Option 3
  */
-.sel-css-icn {
+.sel-custom {
 	position: relative;
 
 	.sel {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 
-		padding-right: $select-css-icon-padding-right;
+		padding-right: $select-custom-padding-right;
 	}
 	
 	&:after {
-		border-width: $select-css-icon-after-border-width;
-		border-style: $select-css-icon-after-border-style;
-		border-color: $select-css-icon-after-border-color;
+		border-width: $select-custom-after-border-width;
+		border-style: $select-custom-after-border-style;
+		border-color: $day__select-custom-after-border-color;
 		border-right: 0;
 		border-top: 0;
 		
 		content: '';
 		display: block;
 
-		width: $select-css-icon-after-width;
-		height: $select-css-icon-after-height;
+		width: $select-custom-after-width;
+		height: $select-custom-after-height;
 
-		margin-top: $select-css-icon-after-margin-top;
+		margin-top: $select-custom-after-margin-top;
 		position: absolute;
-		top: $select-css-icon-after-top;
-		right: $select-css-icon-after-right;
+		top: $select-custom-after-top;
+		right: $select-custom-after-right;
 
 		pointer-events: none;
-		transform: $select-css-icon-after-transform;
+		transform: $select-custom-after-transform;
 	}
 }
 
-.night {
-	.sel-css-icn {
-		&:after {
-			border-color: $night-select-css-icon-after-border-color;
-		}
+.night .sel-custom {
+	&:after {
+		border-color: $ngt__select-custom-after-border-color;
 	}
 }
 
 /**
  * Select menu size:
- * `.sel--[size]` `.sel-css-icn--[size]`
+ * `.sel--[size]` `.sel-custom--[size]`
  *
  *     @example
  *     div.cols
@@ -765,69 +769,69 @@
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.sel-css-icn.sel-css-icn--sm
+ *                 div.sel-custom.sel-custom--sm
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  *             div.fld
- *                 div.sel-css-icn.sel-css-icn--lg
+ *                 div.sel-custom.sel-custom--lg
  *                     select.sel
  *                         option Option 1
  *                         option Option 2
  *                         option Option 3
  */
 .sel--sm {
-	border-radius: $select-small-border-radius;
-	font-size: $select-small-font-size;
-	padding: $select-small-padding-y $select-small-padding-x;
+	border-radius: $select-sm-border-radius;
+	font-size: $select-sm-font-size;
+	padding: $select-sm-padding-y $select-sm-padding-x;
 
 	// Arrow icon.
-	@if $select-icon-background-image != none {
-		padding-right: $select-icon-small-padding-right;
+	@if $select-icon-bg-image != none {
+		padding-right: $select-icon-sm-padding-right;
 	}
 }
 
 .sel--lg {
-	border-radius: $select-large-border-radius;
-	font-size: $select-large-font-size;
-	padding: $select-large-padding-y $select-large-padding-x;
+	border-radius: $select-lg-border-radius;
+	font-size: $select-lg-font-size;
+	padding: $select-lg-padding-y $select-lg-padding-x;
 
 	// Arrow icon.
-	@if $select-icon-background-image != none {
-		padding-right: $select-icon-large-padding-right;
+	@if $select-icon-bg-image != none {
+		padding-right: $select-icon-lg-padding-right;
 	}
 }
 
-.sel-css-icn--sm {
+.sel-custom--sm {
 	.sel {
 		@extend .sel--sm;
 
-		padding-right: $select-css-icon-small-padding-right;
+		padding-right: $select-custom-sm-padding-right;
 	}
 
 	&:after {
-		width: $select-css-icon-small-after-width;
-		height: $select-css-icon-small-after-height;
+		width: $select-custom-sm-after-width;
+		height: $select-custom-sm-after-height;
 
-		margin-top: $select-css-icon-small-after-margin-top;
-		right: $select-css-icon-small-after-right;
+		margin-top: $select-custom-sm-after-margin-top;
+		right: $select-custom-sm-after-right;
 	}
 }
 
-.sel-css-icn--lg {
+.sel-custom--lg {
 	.sel {
 		@extend .sel--lg;
 
-		padding-right: $select-css-icon-large-padding-right;
+		padding-right: $select-custom-lg-padding-right;
 	}
 
 	&:after {
-		width: $select-css-icon-large-after-width;
-		height: $select-css-icon-large-after-height;
+		width: $select-custom-lg-after-width;
+		height: $select-custom-lg-after-height;
 
-		margin-top: $select-css-icon-large-after-margin-top;
-		right: $select-css-icon-large-after-right;
+		margin-top: $select-custom-lg-after-margin-top;
+		right: $select-custom-lg-after-right;
 	}
 }
 
@@ -841,7 +845,7 @@
 
 	&:focus,
 	&:focus:hover {
-		border-color: $select-focus-border-color;
+		border-color: $day__select-focus-border-color;
 	}
 
 	&:hover {
@@ -864,7 +868,7 @@
  *                     option Option 3
  *         div.sm-col-6
  *             div.fld
- *                 div.sel-css-icn
+ *                 div.sel-custom
  *                     select.sel.sel--flat
  *                         option Option 1
  *                         option Option 2
@@ -881,7 +885,7 @@
 
 	&:focus,
 	&:focus:hover {
-		border-color: $night-select-focus-border-color;
+		border-color: $ngt__select-focus-border-color;
 	}
 
 	&:hover {

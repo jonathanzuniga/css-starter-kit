@@ -95,15 +95,15 @@ $ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
 // Heading
 
 $headings: (
-    'h1': 2.5em,  // 40px
-    'h2': 2em,    // 32px
+    'h1': 2.50em, // 40px
+    'h2': 2.00em, // 32px
     'h3': 1.75em, // 28px
-    'h4': 1.5em,  // 24px
+    'h4': 1.50em, // 24px
     'h5': 1.25em, // 20px
-    'h6': 1em     // 16px
+    'h6': 1.00em  // 16px
 ) !default;
 
-$heading-font-weight: 500;
+$heading-font-weight: 300;
 $heading-line-height: 1.2;
 
 
@@ -477,77 +477,85 @@ $ngt__label-check-custom-active__control-check-indic-flat-border-color: transpar
 
 // Select menu
 
-$select-background-color:         transparent;
-$select-border-width:             $control-border-width;
-$select-border-style:             $control-border-style;
-$select-border-color:             $day__control-border-color;
-$night-select-border-color:       $ngt__control-border-color;
-$select-border-radius:            $control-border-radius;
-$select-color:                    $day__control-color;
-$night-select-color:              $ngt__control-color;
-$select-font-size:                $font-size-base;
-$select-line-height:              $control-line-height;
-$select-padding-y:                $control-padding-y;
-$select-padding-x:                $control-padding-x;
+$day__select-bg-color:           transparent;
+$ngt__select-bg-color:           transparent;
 
-$select-focus-border-color:       $day__control-focus-border-color;
-$night-select-focus-border-color: $ngt__control-focus-border-color;
-$select-focus-box-shadow:         $day__control-focus-box-shadow;
-$night-select-focus-box-shadow:   $ngt__control-focus-box-shadow;
+$select-border-width:            $control-border-width;
+$select-border-style:            $control-border-style;
+$select-border-color:            $day__control-border-color;
+$ngt__select-border-color:       $ngt__control-border-color;
 
-$day__select-hover-border-color:   $day__control-hover-border-color;
-$ngt__select-hover-border-color:   $ngt__control-hover-border-color;
+$select-border-radius:           $control-border-radius;
 
-$select-small-border-radius:      $control-border-radius;
-$select-small-font-size:          $font-size-sm;
-$select-small-padding-y:          $control-sm-padding-y;
-$select-small-padding-x:          $control-sm-padding-x;
+$day__select-color:              $day__control-color;
+$ngt__select-color:              $ngt__control-color;
 
-$select-large-border-radius:      $control-border-radius;
-$select-large-font-size:          $control-lg-font-size;
-$select-large-padding-y:          $control-lg-padding-y;
-$select-large-padding-x:          $control-lg-padding-x;
+$select-font-size:               $font-size-base;
+$select-line-height:             $control-line-height;
+$select-padding-y:               $control-padding-y;
+$select-padding-x:               $control-padding-x;
 
-$night-select-option-color:       $day__control-color;
+$day__select-focus-border-color: $day__control-focus-border-color;
+$ngt__select-focus-border-color: $ngt__control-focus-border-color;
+
+$day__select-focus-box-shadow:   $day__control-focus-box-shadow;
+$ngt__select-focus-box-shadow:   $ngt__control-focus-box-shadow;
+
+$day__select-hover-border-color: $day__control-hover-border-color;
+$ngt__select-hover-border-color: $ngt__control-hover-border-color;
+
+$select-sm-border-radius:        $control-border-radius;
+$select-sm-font-size:            $font-size-sm;
+$select-sm-padding-y:            $control-sm-padding-y;
+$select-sm-padding-x:            $control-sm-padding-x;
+
+$select-lg-border-radius:        $control-border-radius;
+$select-lg-font-size:            $control-lg-font-size;
+$select-lg-padding-y:            $control-lg-padding-y;
+$select-lg-padding-x:            $control-lg-padding-x;
+
+$day__select__option-color:      $day__control-color;
+$ngt__select__option-color:      $day__control-color;
 
 
-// Pure CSS select menu icon.
+// Custom select menu.
 
-$select-css-icon-after-border-width:        0.125em;
-$select-css-icon-after-border-style:        solid;
-$select-css-icon-after-border-color:        $day__body-color;
-$night-select-css-icon-after-border-color:  $ngt__body-color;
-$select-css-icon-after-margin-top:         -0.313em;
-$select-css-icon-after-width:               0.313em;
-$select-css-icon-after-height:              0.313em;
-$select-css-icon-after-top:                 50%;
-$select-css-icon-after-right:               $control-padding-x;
-$select-css-icon-after-transform:           rotate(-45deg);
-$select-css-icon-padding-right:             $select-css-icon-after-width + ($control-padding-x * 2);
+$select-custom-after-border-width:      0.125em;
+$select-custom-after-border-style:      solid;
+$day__select-custom-after-border-color: $day__body-color;
+$ngt__select-custom-after-border-color: $ngt__body-color;
 
-$select-css-icon-small-after-width:         $select-css-icon-after-width / 1.5;
-$select-css-icon-small-after-height:        $select-css-icon-after-height / 1.5;
-$select-css-icon-small-after-margin-top:    $select-css-icon-after-margin-top / 1.5;
-$select-css-icon-small-after-right:         $select-css-icon-after-right - 0.25;
-$select-css-icon-small-padding-right:       $select-css-icon-small-after-width + ($control-sm-padding-x * 2);
+$select-custom-after-margin-top:       -0.313em;
+$select-custom-after-width:             0.313em;
+$select-custom-after-height:            0.313em;
+$select-custom-after-top:               50%;
+$select-custom-after-right:             $control-padding-x;
+$select-custom-after-transform:         rotate(-45deg);
+$select-custom-padding-right:           $select-custom-after-width + ($control-padding-x * 2);
 
-$select-css-icon-large-after-width:         $select-css-icon-after-width * 1.5;
-$select-css-icon-large-after-height:        $select-css-icon-after-height * 1.5;
-$select-css-icon-large-after-margin-top:    $select-css-icon-after-margin-top * 1.5;
-$select-css-icon-large-after-right:         $select-css-icon-after-right + 0.25;
-$select-css-icon-large-padding-right:       $select-css-icon-large-after-width + ($control-lg-padding-x * 2);
+$select-custom-sm-after-width:          $select-custom-after-width / 1.5;
+$select-custom-sm-after-height:         $select-custom-after-height / 1.5;
+$select-custom-sm-after-margin-top:     $select-custom-after-margin-top / 1.5;
+$select-custom-sm-after-right:          $select-custom-after-right - 0.25;
+$select-custom-sm-padding-right:        $select-custom-sm-after-width + ($control-sm-padding-x * 2);
+
+$select-custom-lg-after-width:          $select-custom-after-width * 1.5;
+$select-custom-lg-after-height:         $select-custom-after-height * 1.5;
+$select-custom-lg-after-margin-top:     $select-custom-after-margin-top * 1.5;
+$select-custom-lg-after-right:          $select-custom-after-right + 0.25;
+$select-custom-lg-padding-right:        $select-custom-lg-after-width + ($control-lg-padding-x * 2);
 
 
 // Select menu arrow icon.
 
 // Se habilita si se agrega la url del icono, se recomienda en formato svg.
 
-$select-icon-background-image:       none;
-$select-icon-focus-background-image: none;
+$select-icon-bg-image:       none;
+$select-icon-focus-bg-image: none;
 
-$select-icon-background-position:    calc(100% - #{$spacing-unit-quarter / 2}) center;
-$select-icon-background-size:        $spacing-unit-base;
-$select-icon-margin-right:           $spacing-unit-half;
+$select-icon-bg-position:    calc(100% - #{$spacing-unit-quarter / 2}) center;
+$select-icon-bg-size:        $spacing-unit-base;
+$select-icon-margin-right:   $spacing-unit-half;
 
 
 // Flat select menu
@@ -568,8 +576,8 @@ $night-select-flat-hover-border-color:     transparent;
 $switch-label-height:                                2.438em;
 $switch-label-width:                                 $switch-label-height * 2;
 
-$switch-label-background-color:                      $day__control-border-color;
-$night-switch-label-background-color:                $ngt__control-border-color;
+$day__switch-label-bg-color:                         $day__control-border-color;
+$ngt__switch-label-bg-color:                         $ngt__control-border-color;
 $switch-label-border:                                none;
 $switch-label-border-radius:                         $switch-label-height / 2;
 $switch-label-box-shadow:                            none;
@@ -792,6 +800,19 @@ $widths: (
 
 // Text
 
+// Display heading
+
+$display-headings: (
+    'dh1': 6.0em, // 96px
+    'dh2': 5.5em, // 88px
+    'dh3': 5.0em, // 80px
+    'dh4': 4.5em  // 72px
+) !default;
+
+$display-heading-font-weight: $heading-font-weight;
+$display-heading-line-height: $heading-line-height;
+
+
 // Drop cap
 
 $dropcap-background-color: transparent;
@@ -872,12 +893,12 @@ $grid-gap: $gutter-width;
 // Card
 
 $card-background-color:       $day__body-bg-color;
-$night-card-background-color: color('white 10');
+$night-card-background-color: $ngt__body-bg-color;
 $card-padding:                $spacing-unit-half;
 $card-border-width:           0.063rem;
 $card-border-style:           solid;
 $card-border-color:           color('black 10');
-$night-card-border-color:     $night-card-background-color;
+$night-card-border-color:     color('white 10');
 $card-border-radius:          $border-radius-base;
 $card-box-shadow:             0 0.063em 0.063em rgba(black, 0.05);
 $card-transition:             $transition-base;

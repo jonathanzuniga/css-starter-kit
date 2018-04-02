@@ -19,7 +19,7 @@ gulp.task('sass-min', function() {
 var config   = 'guide/config.md';
 var template = [
 		'<!doctype html>',
-		'<html>',
+		'<html lang="en">',
 		'<head>',
 		'<meta charset="utf-8">',
 		'<title>CSS Starter Kit Guide</title>',
