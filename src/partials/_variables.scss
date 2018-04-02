@@ -560,93 +560,99 @@ $select-icon-margin-right:   $spacing-unit-half;
 
 // Flat select menu
 
-$select-flat-background-color:             color('black 025');
-$night-select-flat-background-color:       color('white 025');
-$select-flat-border-color:                 transparent;
-$night-select-flat-border-color:           transparent;
+$day__select-flat-bg-color:           color('black 025');
+$ngt__select-flat-bg-color:           color('white 025');
 
-$select-flat-hover-background-color:       color('black 05');
-$night-select-flat-hover-background-color: color('white 05');
-$select-flat-hover-border-color:           transparent;
-$night-select-flat-hover-border-color:     transparent;
+$day__select-flat-hover-bg-color:     color('black 05');
+$ngt__select-flat-hover-bg-color:     color('white 05');
+
+$day__select-flat-border-color:       transparent;
+$ngt__select-flat-border-color:       transparent;
+
+$day__select-flat-hover-border-color: transparent;
+$ngt__select-flat-hover-border-color: transparent;
 
 
 // Switch
 
-$switch-label-height:                                2.438em;
-$switch-label-width:                                 $switch-label-height * 2;
+$switch-label-height:                       2.438em;
+$switch-label-width:                        $switch-label-height * 2;
 
-$day__switch-label-bg-color:                         $day__control-border-color;
-$ngt__switch-label-bg-color:                         $ngt__control-border-color;
-$switch-label-border:                                none;
-$switch-label-border-radius:                         $switch-label-height / 2;
-$switch-label-box-shadow:                            none;
+$day__switch-label-bg-color:                $day__control-border-color;
+$ngt__switch-label-bg-color:                $ngt__control-border-color;
+
+$switch-label-border:                       none;
+$switch-label-border-radius:                $switch-label-height / 2;
+$switch-label-box-shadow:                   none;
 
 
 // Switch toggle
 
-$switch-label-after-background-color:                color('white');
-$night-switch-label-after-background-color:          color('white');
-$switch-label-after-box-shadow:                      0 0.063em 0.063em rgba(0, 0, 0, 0.1);
-$switch-label-after-width:                           $switch-label-height - ($spacing-unit-quarter + 0.313);
-$switch-label-after-height:                          $switch-label-height - ($spacing-unit-quarter + 0.313);
-$switch-label-after-top:                             50%;
-$switch-label-after-left:                            $spacing-unit-quarter;
+$day__switch-label-after-bg-color:          color('white');
+$ngt__switch-label-after-bg-color:          color('white');
 
-$switch-checked-label-before-background-color:       color('cerulean');
-$night-switch-checked-label-before-background-color: color('cerulean');
-$switch-checked-label-after-left:                    $switch-label-width - $switch-label-height + 0.313;
+$switch-label-after-box-shadow:             0 0.063em 0.063em rgba(0, 0, 0, 0.1);
 
-$switch-label-before-transition:                     0.20s cubic-bezier(0.25, 0, 0.5, 1);
-$switch-label-after-transition:                      0.32s cubic-bezier(0.55, 1.5, 0.5, 1);
-$switch-checked-label-before-transition:             0.20s cubic-bezier(0, 0, 0, 0.1);
+$switch-label-after-width:                  $switch-label-height - ($spacing-unit-quarter + 0.313);
+$switch-label-after-height:                 $switch-label-height - ($spacing-unit-quarter + 0.313);
+$switch-label-after-top:                    50%;
+$switch-label-after-left:                   $spacing-unit-quarter;
+
+$day__switch-checked-label-before-bg-color: color('cerulean');
+$ngt__switch-checked-label-before-bg-color: color('cerulean');
+
+$switch-checked-label-after-left:           $switch-label-width - $switch-label-height + 0.313;
+
+$switch-label-before-transition:            0.20s cubic-bezier(0.25, 0, 0.5, 1);
+$switch-label-after-transition:             0.32s cubic-bezier(0.55, 1.5, 0.5, 1);
+$switch-checked-label-before-transition:    0.20s cubic-bezier(0, 0, 0, 0.1);
 
 
 // Small and large switch
 
-$switch-small-label-height:                          1.859em;
-$switch-small-label-width:                           $switch-small-label-height * 2;
+$switch-sm-label-height:                    1.859em;
+$switch-sm-label-width:                     $switch-sm-label-height * 2;
 
-$switch-small-label-border-radius:                   $switch-small-label-height / 2;
+$switch-sm-label-border-radius:             $switch-sm-label-height / 2;
 
-$switch-small-label-after-width:                     $switch-small-label-height - ($spacing-unit-quarter + 0.188);
-$switch-small-label-after-height:                    $switch-small-label-height - ($spacing-unit-quarter + 0.188);
-$switch-small-label-after-left:                     ($spacing-unit-quarter - 0.063);
+$switch-sm-label-after-width:               $switch-sm-label-height - ($spacing-unit-quarter + 0.188);
+$switch-sm-label-after-height:              $switch-sm-label-height - ($spacing-unit-quarter + 0.188);
+$switch-sm-label-after-left:               ($spacing-unit-quarter - 0.063);
 
-$switch-small-checked-label-after-left:              $switch-small-label-width - $switch-small-label-height + 0.25;
+$switch-sm-checked-label-after-left:        $switch-sm-label-width - $switch-sm-label-height + 0.25;
 
-$switch-large-label-height:                          3.016em;
-$switch-large-label-width:                           $switch-large-label-height * 2;
-$switch-large-label-border-radius:                   $switch-large-label-height / 2;
+$switch-lg-label-height:                    3.016em;
+$switch-lg-label-width:                     $switch-lg-label-height * 2;
+$switch-lg-label-border-radius:             $switch-lg-label-height / 2;
 
-$switch-large-label-after-width:                     $switch-large-label-height - ($spacing-unit-quarter + 0.375);
-$switch-large-label-after-height:                    $switch-large-label-height - ($spacing-unit-quarter + 0.375);
-$switch-large-label-after-left:                     ($spacing-unit-quarter + 0.063);
+$switch-lg-label-after-width:               $switch-lg-label-height - ($spacing-unit-quarter + 0.375);
+$switch-lg-label-after-height:              $switch-lg-label-height - ($spacing-unit-quarter + 0.375);
+$switch-lg-label-after-left:               ($spacing-unit-quarter + 0.063);
 
-$switch-large-checked-label-after-left:              $switch-large-label-width - $switch-large-label-height + 0.375;
+$switch-lg-checked-label-after-left:        $switch-lg-label-width - $switch-lg-label-height + 0.375;
 
 
 // Table
 
-$table-header-font-weight:             600;
-$table-header-text-align:              left;
+$table-header-font-weight:    600;
+$table-header-text-align:     left;
 
-$table-border-width:                   0.063rem;
-$table-border-style:                   solid;
-$table-border-right-style:             dotted;
-$table-border-color:                   color('black 075');
-$night-table-border-color:             color('white 075');
+$table-border-width:          0.063rem;
+$table-border-style:          solid;
+$table-border-right-style:    dotted;
+$day__table-border-color:     color('black 075');
+$ngt__table-border-color:     color('white 075');
 
-$table-header-background-color:        color('black 05');
-$night-table-header-background-color:  color('white 05');
+$day__table-header-bg-color:  color('black 05');
+$ngt__table-header-bg-color:  color('white 05');
 
-$table-cell-padding-y:                 $spacing-unit-quarter;
-$table-cell-padding-x:                 $spacing-unit-half;
+$table-cell-padding-y:        $spacing-unit-quarter;
+$table-cell-padding-x:        $spacing-unit-half;
 
-$table-striped-index:                  even; // 'odd'
+$table-striped-index:         even; // 'odd'
 
-$table-striped-background-color:       color('black 025');
-$night-table-striped-background-color: color('white 025');
+$day__table-striped-bg-color: color('black 025');
+$ngt__table-striped-bg-color: color('white 025');
 
 
 // ==========================================================================
@@ -815,25 +821,28 @@ $display-heading-line-height: $heading-line-height;
 
 // Drop cap
 
-$dropcap-background-color: transparent;
-$dropcap-border:           none;
-$dropcap-color:            $day__body-color;
-$night-dropcap-color:      $ngt__body-color;
-$dropcap-font-size:        3.5em;
-$dropcap-font-style:       normal;
-$dropcap-font-weight:      normal;
-$dropcap-letter-spacing:   0;
-$dropcap-line-height:      inherit;
-$dropcap-margin-top:       0.063em;
-$dropcap-margin-right:     0.125em;
-$dropcap-padding:          0;
-$dropcap-text-shadow:      none;
+$day__dropcap-bg-color:  transparent;
+$ngt__dropcap-bg-color:  transparent;
 
-$dropcap-width:            auto;
-$dropcap-height:           auto;
+$dropcap-border:         none;
+$day__dropcap-color:     $day__body-color;
+$ngt__dropcap-color:     $ngt__body-color;
 
-$dropcap-text-align:       left;
-$dropcap-vertical-align:   bottom;
+$dropcap-font-size:      3.5em;
+$dropcap-font-style:     normal;
+$dropcap-font-weight:    normal;
+$dropcap-letter-spacing: 0;
+$dropcap-line-height:    inherit;
+$dropcap-margin-top:     0.063em;
+$dropcap-margin-right:   0.125em;
+$dropcap-padding:        0;
+$dropcap-text-shadow:    none;
+
+$dropcap-width:          auto;
+$dropcap-height:         auto;
+
+$dropcap-text-align:     left;
+$dropcap-vertical-align: bottom;
 
 
 // Small caps

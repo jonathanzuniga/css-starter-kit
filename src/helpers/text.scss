@@ -31,9 +31,9 @@
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
 .dcap:first-letter {
-	background-color: $dropcap-background-color;
+	background-color: $day__dropcap-bg-color;
 	border: $dropcap-border;
-	color: $dropcap-color;
+	color: $day__dropcap-color;
 	display: block;
 	float: left;
 
@@ -58,10 +58,9 @@
 	vertical-align: $dropcap-vertical-align;
 }
 
-.night {
-	.dcap:first-letter {
-		color: $night-dropcap-color;
-	}
+.night .dcap:first-letter {
+	background-color: $ngt__dropcap-bg-color;
+	color: $ngt__dropcap-color;
 }
 
 /**

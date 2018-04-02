@@ -1756,6 +1756,40 @@ ol, ul {
 ul {
   list-style-type: disc; }
 
+/**
+ * Standard table:
+ * `table`
+ *
+ *     @example
+ *     table
+ *         thead
+ *             tr
+ *                 th Table heading
+ *                 th Table heading
+ *                 th Table heading
+ *         tbody
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ *             tr
+ *                 td Table data
+ *                 td Table data
+ *                 td Table data
+ */
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%; }
+
+th {
+  text-align: left; }
+
 /***
  * Button:
  */
@@ -3502,17 +3536,8 @@ ul {
 /***
  * Table:
  */
-table {
-  border-collapse: collapse;
-  margin-bottom: 1em;
-  max-width: 100%;
-  width: 100%; }
-
-th {
-  text-align: left; }
-
 /**
- * Standard table:
+ * Table:
  * `.tbl` Tables are styled nicely for you.
  *
  *     @example
@@ -12333,6 +12358,7 @@ p.ac-c a:not(.btn) {
   vertical-align: bottom; }
 
 .night .dcap:first-letter {
+  background-color: transparent;
   color: rgba(255, 255, 255, 0.9); }
 
 /**

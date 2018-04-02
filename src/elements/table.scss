@@ -5,19 +5,8 @@
  * Table:
  */
 
-table {
-	border-collapse: collapse;
-	margin-bottom: $spacing-unit-half;
-	max-width: 100%;
-	width: 100%;
-}
-
-th {
-	text-align: $table-header-text-align;
-}
-
 /**
- * Standard table:
+ * Table:
  * `.tbl` Tables are styled nicely for you.
  *
  *     @example
@@ -59,7 +48,7 @@ th {
 	}
 
 	th {
-		background-color: $table-header-background-color;
+		background-color: $day__table-header-bg-color;
 		border-top-width: $table-border-width;
 		border-top-style: $table-border-style;
 		border-bottom-width: $table-border-width;
@@ -68,7 +57,7 @@ th {
 	}
 
 	th, td {
-		border-color: $table-border-color;
+		border-color: $day__table-border-color;
 		padding: $table-cell-padding-y $table-cell-padding-x;
 		vertical-align: top;
 	}
@@ -76,11 +65,11 @@ th {
 
 .night .tbl {
 	th {
-		background-color: $night-table-header-background-color;
+		background-color: $ngt__table-header-bg-color;
 	}
 
 	th, td {
-		border-color: $night-table-border-color;
+		border-color: $ngt__table-border-color;
 	}
 }
 
@@ -112,7 +101,7 @@ th {
 .tbl--bordered {
 	border-width: $table-border-width;
 	border-style: $table-border-style;
-	border-color: $table-border-color;
+	border-color: $day__table-border-color;
 
 	td, th {
 		&:not(:last-child) {
@@ -122,7 +111,7 @@ th {
 }
 
 .night .tbl--bordered {
-	border-color: $night-table-border-color;
+	border-color: $ngt__table-border-color;
 }
 
 /**
@@ -225,19 +214,17 @@ th {
 	tbody {
 		tr:nth-child(#{$table-striped-index}) {
 			td, th {
-				background-color: $table-striped-background-color;
+				background-color: $day__table-striped-bg-color;
 			}
 		}
 	}
 }
 
-.night {
-	.tbl--striped {
-		tbody {
-			tr:nth-child(#{$table-striped-index}) {
-				td, th {
-					background-color: $night-table-striped-background-color;
-				}
+.night .tbl--striped {
+	tbody {
+		tr:nth-child(#{$table-striped-index}) {
+			td, th {
+				background-color: $ngt__table-striped-bg-color;
 			}
 		}
 	}
