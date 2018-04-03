@@ -175,11 +175,9 @@ mark {
 	padding: $mark-padding;
 }
 
-.night {
-	mark {
-		background-color: $ngt__mark-bg-color;
-		background-image: $ngt__mark-bg-image;
-	}
+.night mark {
+	background-color: $ngt__mark-bg-color;
+	background-image: $ngt__mark-bg-image;
 }
 
 small {
@@ -276,15 +274,23 @@ code {
  *     @example
  *     pre
  *         code
- *             | body {
- *             |     font-size: 100%;
+ *             | th.degF {
+ *             |     transform: translate(5.14em, -2em) rotate(-60deg);
  *             | }
  */
 pre {
 	background-color: $day__pre-bg-color;
+	
+	border-top: $pre-border-top;
+	border-right: $pre-border-right;
+	border-bottom: $pre-border-bottom;
+	border-left: $pre-border-left;
+
+	border-color: $day__pre-border-color;
+
 	border-radius: $pre-border-radius;
 	overflow-x: auto;
-	padding: $spacing-unit-quarter $spacing-unit-half;
+	padding: $pre-padding-y $pre-padding-x;
 
 	code {
 		background-color: transparent;
@@ -294,6 +300,7 @@ pre {
 
 .night pre {
 	background-color: $ngt__pre-bg-color;
+	border-color: $ngt__pre-border-color;
 
 	code {
 		background-color: transparent;

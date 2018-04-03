@@ -139,17 +139,32 @@ $blockquote__footer-before-content:      '— ';
 
 // Code
 
-$day__code-bg-color: rgba(black, 0.05);
-$ngt__code-bg-color: rgba(white, 0.05);
-$day__code-color:    inherit;
-$ngt__code-color:    inherit;
-$code-border-radius: $border-radius-base;
-$code-font-size:     0.875em; // 14px
-$code-padding:       0.125em 0.313em; // 2px 5px
+$day__code-bg-color:    color('black 05');
+$ngt__code-bg-color:    color('white 05');
+$day__code-color:       inherit;
+$ngt__code-color:       inherit;
+$code-border-radius:    $border-radius-base;
+$code-font-size:        0.875em; // 14px
+$code-padding:          0.125em 0.313em; // 2px 5px
 
-$day__pre-bg-color:  color('black 05');
-$ngt__pre-bg-color:  color('white 05');
-$pre-border-radius:  $border-radius-base;
+
+// Pre
+
+$day__pre-bg-color:     color('black 025');
+$ngt__pre-bg-color:     color('white 025');
+
+$pre-border-top:        none;
+$pre-border-right:      none;
+$pre-border-bottom:     none;
+$pre-border-left:       none;
+
+$day__pre-border-color: transparent;
+$ngt__pre-border-color: transparent;
+
+$pre-border-radius:     $border-radius-base;
+
+$pre-padding-y:         1.5em;
+$pre-padding-x:         1.5em;
 
 
 // Se usan los mismo valores para los demas controles de las formas.
@@ -815,6 +830,7 @@ $visibilities: (
 // Width
 
 $widths: (
+     25: '25%',
      50: '50%',
     100: '100%'
 );

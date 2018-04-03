@@ -57,6 +57,8 @@
 											li
 												a(href='layout-flex-grid.html') Flex grid
 											li
+												a(href='layout-grid.html') Grid
+											li
 												a(href='layout-gutter.html') Gutter
 											li
 												a(href='layout-modifier-horizontal.html') Horizontal modifier
@@ -66,8 +68,6 @@
 												a(href='layout-offset.html') Offset
 											li
 												a(href='layout-order.html') Order
-											li
-												a(href='layout-grid.html') Grid
 
 							div.col-12
 								div
@@ -103,13 +103,13 @@
 									div.collapse
 										ul.ls-unstyled
 											li
+												a(href='helpers-border.html') Border
+											li
 												a(href='helpers-border-radius.html') Border radius
 											li
 												a(href='helpers-border-style.html') Border style
 											li
 												a(href='helpers-border-width.html') Border width
-											li
-												a(href='helpers-border.html') Border
 											li
 												a(href='helpers-clearfix.html') Clearfix
 											li
@@ -131,11 +131,11 @@
 											li
 												a(href='helpers-position.html') Position
 											li
+												a(href='helpers-text.html') Text
+											li
 												a(href='helpers-text-align.html') Text align
 											li
 												a(href='helpers-text-transform.html') Text transform
-											li
-												a(href='helpers-text.html') Text
 											li
 												a(href='helpers-visibility.html') Visibility
 											li
