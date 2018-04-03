@@ -2123,29 +2123,41 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl th:not(:last-child), .tbl td:not(:last-child) {
-  border-right-width: 0.063rem;
-  border-right-style: dotted; }
+.tbl thead tr:first-child th, .tbl thead tr:first-child td {
+  border-top-width: 0.063rem;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.2); }
 
-.tbl tr + tr th, .tbl tr + tr td {
+.tbl tbody tr:last-child th, .tbl tbody tr:last-child td {
+  border-bottom-width: 0.063rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+
+.tbl tr th, .tbl tr td {
   border-top-width: 0.063rem;
   border-top-style: solid; }
 
+.tbl th:not(:last-child), .tbl td:not(:last-child) {
+  border-right-width: 0.063rem;
+  border-right-style: none; }
+
 .tbl th {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-top-width: 0.063rem;
-  border-top-style: solid;
-  border-bottom-width: 0.063rem;
-  border-bottom-style: solid;
-  font-weight: 600; }
+  background-color: transparent;
+  font-weight: 700; }
 
 .tbl th, .tbl td {
   border-color: rgba(0, 0, 0, 0.075);
   padding: 0.5em 1em;
   vertical-align: top; }
 
+.night .tbl thead tr:first-child th, .night .tbl thead tr:first-child td {
+  border-top-color: rgba(255, 255, 255, 0.2); }
+
+.night .tbl tbody tr:last-child th, .night .tbl tbody tr:last-child td {
+  border-bottom-color: rgba(255, 255, 255, 0.2); }
+
 .night .tbl th {
-  background-color: rgba(255, 255, 255, 0.05); }
+  background-color: transparent; }
 
 .night .tbl th, .night .tbl td {
   border-color: rgba(255, 255, 255, 0.075); }
@@ -2179,11 +2191,23 @@ th {
   border-width: 0.063rem;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.075); }
+  .tbl--bordered thead tr:first-child th, .tbl--bordered thead tr:first-child td {
+    border-top-width: 0.063rem;
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.075); }
+  .tbl--bordered tbody tr:last-child th, .tbl--bordered tbody tr:last-child td {
+    border-bottom-width: 0.063rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.075); }
   .tbl--bordered td:not(:last-child), .tbl--bordered th:not(:last-child) {
     border-right-style: solid; }
 
 .night .tbl--bordered {
   border-color: rgba(255, 255, 255, 0.075); }
+  .night .tbl--bordered thead tr:first-child th, .night .tbl--bordered thead tr:first-child td {
+    border-top-color: rgba(0, 0, 0, 0.075); }
+  .night .tbl--bordered tbody tr:last-child th, .night .tbl--bordered tbody tr:last-child td {
+    border-bottom-color: rgba(0, 0, 0, 0.075); }
 
 /**
  * Responsive table:
@@ -2275,11 +2299,17 @@ th {
  *                 td Table data
  *                 td Table data
  */
-.tbl--striped tbody tr:nth-child(even) td, .tbl--striped tbody tr:nth-child(even) th {
-  background-color: rgba(0, 0, 0, 0.025); }
+.tbl--striped tbody tr:nth-child(odd) td, .tbl--striped tbody tr:nth-child(odd) th {
+  background-color: rgba(0, 0, 0, 0.05); }
 
-.night .tbl--striped tbody tr:nth-child(even) td, .night .tbl--striped tbody tr:nth-child(even) th {
-  background-color: rgba(255, 255, 255, 0.025); }
+.tbl--striped tr th, .tbl--striped tr td {
+  border-top-color: transparent; }
+
+.night .tbl--striped tbody tr:nth-child(odd) td, .night .tbl--striped tbody tr:nth-child(odd) th {
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.night .tbl--striped tr th, .night .tbl--striped tr td {
+  border-top-color: transparent; }
 
 /**
  * Toolbar:
