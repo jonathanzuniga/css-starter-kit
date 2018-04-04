@@ -49,11 +49,29 @@
 			}
 
 			.switch__on {
-				color: $switch-input-checked__switch-inner-label-on-color;
+				color: $day__switch-input-checked__switch-inner-label-on-color;
 			}
 
 			.switch__off {
-				color: $switch-input-checked__switch-inner-label-off-color;
+				color: $day__switch-input-checked__switch-inner-label-off-color;
+			}
+		}
+	}
+}
+
+.night .switch__input {
+	&:checked {
+		& + .switch__lbl {
+			&:before {
+				background-color: $ngt__switch-checked-label-before-bg-color;
+			}
+
+			.switch__on {
+				color: $ngt__switch-input-checked__switch-inner-label-on-color;
+			}
+
+			.switch__off {
+				color: $ngt__switch-input-checked__switch-inner-label-off-color;
 			}
 		}
 	}
@@ -107,26 +125,6 @@
 	}
 }
 
-// Label.
-.switch__txt {
-	height: $switch-label-height;
-	line-height: $switch-label-height;
-	margin-left: $switch-label-width;
-	padding-left: $spacing-unit-quarter;
-	white-space: nowrap;
-}
-
-.night .switch__input {
-	&:checked {
-		& + .switch__lbl {
-			&:before {
-				background-color: $ngt__switch-checked-label-before-bg-color;
-			}
-		}
-	}
-}
-
-
 .night .switch__lbl {
 	background-color: $ngt__switch-label-bg-color;
 
@@ -136,6 +134,14 @@
 	}
 }
 
+// Label.
+.switch__txt {
+	height: $switch-label-height;
+	line-height: $switch-label-height;
+	margin-left: $switch-label-width;
+	padding-left: $spacing-unit-quarter;
+	white-space: nowrap;
+}
 
 /**
  * Switch with label text:
@@ -162,7 +168,8 @@
 .switch__off {
 	font-size: $switch-inner-label-font-size;
 	font-weight: $switch-inner-label-font-weight;
-	line-height: $switch-label-height;
+	letter-spacing: $switch-inner-label-letter-spacing;
+	line-height: $switch-inner-label-line-height;
 	position: absolute;
 	text-transform: $switch-inner-label-text-transform;
 	top: $switch-inner-label-top;
@@ -173,18 +180,24 @@
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
-
-	// z-index: 2;
 }
 
 .switch__on {
-	color: $switch-inner-label-on-color;
+	color: $day__switch-inner-label-on-color;
 	left: $switch-inner-label-on-left;
 }
 
 .switch__off {
-	color: $switch-inner-label-off-color;
+	color: $day__switch-inner-label-off-color;
  	right: $switch-inner-label-off-right;
+}
+
+.night .switch__on {
+	color: $ngt__switch-inner-label-on-color;
+}
+
+.night .switch__off {
+	color: $ngt__switch-inner-label-off-color;
 }
 
 /**

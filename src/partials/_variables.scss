@@ -625,21 +625,29 @@ $switch-checked-label-before-transition:    0.20s cubic-bezier(0, 0, 0, 0.1);
 
 // Switch with inner labels
 
-$switch-inner-label-font-size:      0.875em;
-$switch-inner-label-font-weight:    500;
+$switch-inner-label-font-size:      1em;
+$switch-inner-label-font-weight:    400;
+$switch-inner-label-letter-spacing: normal;
 $switch-inner-label-line-height:    1;
-$switch-inner-label-text-transform: uppercase;
+$switch-inner-label-text-transform: none;
 $switch-inner-label-top:            50%;
 $switch-inner-label-transform:      translateY(-50%);
 
-$switch-inner-label-on-color:       transparent;
+$day__switch-inner-label-on-color:       transparent;
+$ngt__switch-inner-label-on-color:       transparent;
+
 $switch-inner-label-on-left:        0.75em;
 
-$switch-inner-label-off-color:      #fff;
+$day__switch-inner-label-off-color: color('white');
+$ngt__switch-inner-label-off-color: color('white 50');
+
 $switch-inner-label-off-right:      1em;
 
-$switch-input-checked__switch-inner-label-on-color:  #fff;
-$switch-input-checked__switch-inner-label-off-color: transparent;
+$day__switch-input-checked__switch-inner-label-on-color:  color('white');
+$ngt__switch-input-checked__switch-inner-label-on-color:  color('white');
+
+$day__switch-input-checked__switch-inner-label-off-color: transparent;
+$ngt__switch-input-checked__switch-inner-label-off-color: transparent;
 
 
 // Small and large switch
@@ -657,8 +665,8 @@ $switch-sm-checked-label-after-left:        $switch-sm-label-width - $switch-sm-
 
 $switch-inner-label-sm-font-size:           $font-size-sm;
 
-$switch-inner-label-sm-on-left:             0.50em;
-$switch-inner-label-sm-off-right:           0.75em;
+$switch-inner-label-sm-on-left:             0.75em;
+$switch-inner-label-sm-off-right:           1em;
 
 
 $switch-lg-label-height:                    3.016em;
@@ -673,7 +681,7 @@ $switch-lg-checked-label-after-left:        $switch-lg-label-width - $switch-lg-
 
 $switch-inner-label-lg-font-size:           1.25em;
 
-$switch-inner-label-lg-on-left:             0.50em;
+$switch-inner-label-lg-on-left:             0.75em;
 $switch-inner-label-lg-off-right:           0.75em;
 
 
@@ -807,7 +815,7 @@ $margins: (
 // Opacity
 
 $opacities: (
-        0: 0,
+      0: 0,
      50: 0.5,
     100: 1
 );

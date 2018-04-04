@@ -2007,6 +2007,15 @@ th {
   .switch__input:checked + .switch__lbl .switch__off {
     color: transparent; }
 
+.night .switch__input:checked + .switch__lbl:before {
+  background-color: #009bef; }
+
+.night .switch__input:checked + .switch__lbl .switch__on {
+  color: #fff; }
+
+.night .switch__input:checked + .switch__lbl .switch__off {
+  color: transparent; }
+
 .switch__lbl {
   background-color: rgba(0, 0, 0, 0.2);
   border: none;
@@ -2042,20 +2051,17 @@ th {
     height: 1.625em;
     transition: 0.32s cubic-bezier(0.55, 1.5, 0.5, 1); }
 
+.night .switch__lbl {
+  background-color: rgba(255, 255, 255, 0.2); }
+  .night .switch__lbl:after {
+    background-color: #fff; }
+
 .switch__txt {
   height: 2.438em;
   line-height: 2.438em;
   margin-left: 4.876em;
   padding-left: 0.5em;
   white-space: nowrap; }
-
-.night .switch__input:checked + .switch__lbl:before {
-  background-color: #009bef; }
-
-.night .switch__lbl {
-  background-color: rgba(255, 255, 255, 0.2); }
-  .night .switch__lbl:after {
-    background-color: #fff; }
 
 /**
  * Switch with label text:
@@ -2080,11 +2086,12 @@ th {
  */
 .switch__on,
 .switch__off {
-  font-size: 0.875em;
-  font-weight: 500;
-  line-height: 2.438em;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
   position: absolute;
-  text-transform: uppercase;
+  text-transform: none;
   top: 50%;
   transform: translateY(-50%);
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
@@ -2100,6 +2107,12 @@ th {
 .switch__off {
   color: #fff;
   right: 1em; }
+
+.night .switch__on {
+  color: transparent; }
+
+.night .switch__off {
+  color: rgba(255, 255, 255, 0.5); }
 
 /**
  * Switch size:
@@ -2160,10 +2173,10 @@ th {
   font-size: 0.75em; }
 
 .switch--sm .switch__on {
-  left: 0.5em; }
+  left: 0.75em; }
 
 .switch--sm .switch__off {
-  right: 0.75em; }
+  right: 1em; }
 
 .switch--lg .switch__lbl {
   border-radius: 1.508em;
@@ -2193,7 +2206,7 @@ th {
   font-size: 1.25em; }
 
 .switch--lg .switch__on {
-  left: 0.5em; }
+  left: 0.75em; }
 
 .switch--lg .switch__off {
   right: 0.75em; }
