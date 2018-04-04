@@ -12,79 +12,27 @@
  *     @example
  *     div.cols
  *         div.md-col-6
- *             input(id='eg-switch', type='checkbox').switch
- *             label(for='eg-switch')
- *             input(id='eg-switch-checked', type='checkbox' checked).switch
- *             label(for='eg-switch-checked')
+ *             div.fld
+ *                 div.switch
+ *                     input(id='eg-switch', type='checkbox').switch__input
+ *                     label(for='eg-switch').switch__lbl
  *         div.md-col-6
- *             input(id='eg-switch-with-label', type='checkbox').switch
- *             label(for='eg-switch-with-label')
- *                 span Switch with label
+ *             div.fld
+ *                 div.switch
+ *                     input(id='eg-switch-checked', type='checkbox' checked).switch__input
+ *                     label(for='eg-switch-checked').switch__lbl
  */
 .switch {
+	display: flex;
+}
+
+.switch__input {
 	opacity: 0;
 	position: absolute;
 	z-index: -1;
 
-	& + label {
-		background-color: $day__switch-label-bg-color;
-		border: $switch-label-border;
-		border-radius: $switch-label-border-radius;
-		box-shadow: $switch-label-box-shadow;
-		display: inline-block;
-		position: relative;
-		user-select: none;
-
-		width: $switch-label-width;
-		height: $switch-label-height;
-
-		&:before {
-			background-color: transparent;
-			border-radius: $switch-label-border-radius;
-			content: '';
-			display: block;
-
-			position: absolute;
-			top: 0;
-			left: 0;
-
-			width: $switch-label-width;
-			height: $switch-label-height;
-
-			transition: $switch-label-before-transition;
-		}
-
-		// Toggle.
-		&:after {
-			background-color: $day__switch-label-after-bg-color;
-			box-shadow: $switch-label-after-box-shadow;
-			border-radius: $switch-label-border-radius;
-			content: '';
-			display: block;
-			margin-top: -($switch-label-after-height / 2);
-
-			position: absolute;
-			top: $switch-label-after-top;
-			left: $switch-label-after-left;
-
-			width: $switch-label-after-width;
-			height: $switch-label-after-height;
-
-			transition: $switch-label-after-transition;
-		}
-
-		// Label.
-		span {
-			height: $switch-label-height;
-			line-height: $switch-label-height;
-			margin-left: $switch-label-width;
-			padding-left: $spacing-unit-quarter;
-			white-space: nowrap;
-		}
-	}
-
 	&:checked {
-		& + label {
+		& + .switch__lbl {
 			&:before {
 				background-color: $day__switch-checked-label-before-bg-color;
 				box-shadow: $switch-label-box-shadow;
@@ -99,22 +47,78 @@
 			&:after {
 				left: $switch-checked-label-after-left;
 			}
+
+			.switch__on {
+				color: $switch-input-checked__switch-inner-label-on-color;
+			}
+
+			.switch__off {
+				color: $switch-input-checked__switch-inner-label-off-color;
+			}
 		}
 	}
 }
 
-.night .switch {
-	& + label {
-		background-color: $ngt__switch-label-bg-color;
+.switch__lbl {
+	background-color: $day__switch-label-bg-color;
+	border: $switch-label-border;
+	border-radius: $switch-label-border-radius;
+	box-shadow: $switch-label-box-shadow;
+	display: inline-block;
+	position: relative;
+	user-select: none;
 
-		// Toggle.
-		&:after {
-			background-color: $ngt__switch-label-after-bg-color;
-		}
+	width: $switch-label-width;
+	height: $switch-label-height;
+
+	&:before {
+		background-color: transparent;
+		border-radius: $switch-label-border-radius;
+		content: '';
+		display: block;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: $switch-label-width;
+		height: $switch-label-height;
+
+		transition: $switch-label-before-transition;
 	}
 
+	// Toggle.
+	&:after {
+		background-color: $day__switch-label-after-bg-color;
+		box-shadow: $switch-label-after-box-shadow;
+		border-radius: $switch-label-border-radius;
+		content: '';
+		display: block;
+		margin-top: -($switch-label-after-height / 2);
+
+		position: absolute;
+		top: $switch-label-after-top;
+		left: $switch-label-after-left;
+
+		width: $switch-label-after-width;
+		height: $switch-label-after-height;
+
+		transition: $switch-label-after-transition;
+	}
+}
+
+// Label.
+.switch__txt {
+	height: $switch-label-height;
+	line-height: $switch-label-height;
+	margin-left: $switch-label-width;
+	padding-left: $spacing-unit-quarter;
+	white-space: nowrap;
+}
+
+.night .switch__input {
 	&:checked {
-		& + label {
+		& + .switch__lbl {
 			&:before {
 				background-color: $ngt__switch-checked-label-before-bg-color;
 			}
@@ -122,18 +126,100 @@
 	}
 }
 
+
+.night .switch__lbl {
+	background-color: $ngt__switch-label-bg-color;
+
+	// Toggle.
+	&:after {
+		background-color: $ngt__switch-label-after-bg-color;
+	}
+}
+
+
+/**
+ * Switch with label text:
+ * `.switch`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.fld
+ *                 div.switch
+ *                     input(id='eg-switch-with-label', type='checkbox').switch__input
+ *                     label(for='eg-switch-with-label').switch__lbl
+ *                         span.switch__txt Switch with label
+ *         div.md-col-6
+ *             div.fld
+ *                 div.switch
+ *                     input(id='eg-switch-with-inner-labels', type='checkbox').switch__input
+ *                     label(for='eg-switch-with-inner-labels').switch__lbl
+ *                         span.switch__txt Switch with inner labels
+ *                         span.switch__on  Yes
+ *                         span.switch__off No
+ */
+.switch__on,
+.switch__off {
+	font-size: $switch-inner-label-font-size;
+	font-weight: $switch-inner-label-font-weight;
+	line-height: $switch-label-height;
+	position: absolute;
+	text-transform: $switch-inner-label-text-transform;
+	top: $switch-inner-label-top;
+	transform: $switch-inner-label-transform;
+	transition: $transition-base;
+
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+
+	// z-index: 2;
+}
+
+.switch__on {
+	color: $switch-inner-label-on-color;
+	left: $switch-inner-label-on-left;
+}
+
+.switch__off {
+	color: $switch-inner-label-off-color;
+ 	right: $switch-inner-label-off-right;
+}
+
 /**
  * Switch size:
  * `.switch--[size]`
  *
  *     @example
- *     input(id='eg-switch-sm', type='checkbox').switch.switch--sm
- *     label(for='eg-switch-sm')
- *     input(id='eg-switch-lg', type='checkbox').switch.switch--lg
- *     label(for='eg-switch-lg')
+ *     div.cols
+ *         div.md-col-6
+ *             div.fld
+ *                 div.switch.switch--sm
+ *                     input(id='eg-switch-sm', type='checkbox').switch__input
+ *                     label(for='eg-switch-sm').switch__lbl
+ *             div.fld
+ *                 div.switch.switch--lg
+ *                     input(id='eg-switch-lg', type='checkbox').switch__input
+ *                     label(for='eg-switch-lg').switch__lbl
+ *         div.md-col-6
+ *             div.fld
+ *                 div.switch.switch--sm
+ *                     input(id='eg-switch-with-inner-labels-sm', type='checkbox').switch__input
+ *                     label(for='eg-switch-with-inner-labels-sm').switch__lbl
+ *                         span.switch__txt Switch with inner labels
+ *                         span.switch__on  Yes
+ *                         span.switch__off No
+ *             div.fld
+ *                 div.switch.switch--lg
+ *                     input(id='eg-switch-with-inner-labels-lg', type='checkbox').switch__input
+ *                     label(for='eg-switch-with-inner-labels-lg').switch__lbl
+ *                         span.switch__txt Switch with inner labels
+ *                         span.switch__on  Yes
+ *                         span.switch__off No
  */
 .switch--sm {
-	& + label {
+	.switch__lbl {
 		border-radius: $switch-sm-label-border-radius;
 
 		width: $switch-sm-label-width;
@@ -156,25 +242,38 @@
 
 			left: $switch-sm-label-after-left;
 		}
-
-		span {
-			height: $switch-sm-label-height;
-			line-height: $switch-sm-label-height;
-			margin-left: $switch-sm-label-width;
-		}
 	}
 
-	&:checked {
-		& + label {
+	.switch__txt {
+		height: $switch-sm-label-height;
+		line-height: $switch-sm-label-height;
+		margin-left: $switch-sm-label-width;
+	}
+
+	.switch__input:checked {
+		& + .switch__lbl {
 			&:after {
 				left: $switch-sm-checked-label-after-left;
 			}
 		}
 	}
+
+	.switch__on,
+	.switch__off {
+		font-size: $switch-inner-label-sm-font-size;
+	}
+
+	.switch__on {
+		left: $switch-inner-label-sm-on-left;
+	}
+
+	.switch__off {
+	 	right: $switch-inner-label-sm-off-right;
+	}
 }
 
 .switch--lg {
-	& + label {
+	.switch__lbl {
 		border-radius: $switch-lg-label-border-radius;
 
 		width: $switch-lg-label-width;
@@ -197,19 +296,32 @@
 
 			left: $switch-lg-label-after-left;
 		}
-
-		span {
-			height: $switch-lg-label-height;
-			line-height: $switch-lg-label-height;
-			margin-left: $switch-lg-label-width;
-		}
 	}
 
-	&:checked {
-		& + label {
+	.switch__txt {
+		height: $switch-lg-label-height;
+		line-height: $switch-lg-label-height;
+		margin-left: $switch-lg-label-width;
+	}
+
+	.switch__input:checked {
+		& + .switch__lbl {
 			&:after {
 				left: $switch-lg-checked-label-after-left;
 			}
 		}
+	}
+
+	.switch__on,
+	.switch__off {
+		font-size: $switch-inner-label-lg-font-size;
+	}
+
+	.switch__on {
+		left: $switch-inner-label-lg-on-left;
+	}
+
+	.switch__off {
+	 	right: $switch-inner-label-lg-off-right;
 	}
 }

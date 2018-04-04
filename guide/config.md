@@ -163,10 +163,11 @@
 												a(href='components-tabs.html') Tabs
 
 								p.m-top-16
-									input(id='switch-night-mode', type='checkbox').switch.switch--sm
-									label(for='switch-night-mode', id='lbl-night-mode')
-										span
-											i(title='Night mode', id='icon-night-mode').ion-ios-moon-outline
+								    div.switch.switch--sm
+									    input(id='switch-night-mode', type='checkbox').switch__input
+									    label(for='switch-night-mode', id='lbl-night-mode').switch__lbl
+										    span.switch__txt
+											    i(title='Night mode', id='icon-night-mode').ion-ios-moon-outline
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='js/styledown.js')
