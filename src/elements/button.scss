@@ -304,17 +304,15 @@
 		}
 	}
 
-	.toggle,
-	.toggle [type='checkbox'],
-	.toggle [type='radio'] {
+	.btn-group--toggle,
+	.btn-group--toggle [type='checkbox'],
+	.btn-group--toggle [type='radio'] {
 		opacity: 0;
 		position: absolute;
 		z-index: -1;
 
-		&:checked {
-			& + .btn--#{$name_r} {
-				@extend .btn--#{$name_r}.active;
-			}
+		&:checked + .btn--#{$name_r} {
+			@extend .btn--#{$name_r}.active;
 		}
 	}
 }
@@ -414,16 +412,14 @@
 
 /**
  * Expanded button:
- * `.expanded`
+ * `.btn--expanded`
  *
  *     @example
- *     button.btn.btn--primary.btn--lg.expanded Expanded button
+ *     button.btn.btn--primary.btn--lg.btn--expanded Expanded button
  */
-.btn {
-	&.expanded {
-		display: block;
-		width: 100%;
-	}
+.btn--expanded {
+	display: block;
+	width: 100%;
 }
 
 /**
@@ -436,15 +432,15 @@
 
 /**
  * Disabled button:
- * `.disabled` `disabled`
+ * `.btn--disabled` `disabled`
  *
  *     @example
- *     button.btn.btn--primary.disabled Disabled button
+ *     button.btn.btn--primary.btn--disabled Disabled button
  *     button(disabled).btn.btn--primary Disabled button
  */
 .btn {
 	&[disabled],
-	&.disabled {
+	&--disabled {
 		opacity: $button-disabled-opacity;
 		pointer-events: none;
 
@@ -454,12 +450,3 @@
 		user-select: none;
 	}
 }
-
-/**
- * Toggle button:
- * `.toggle`
- *
- *     @example
- *     input(id='eg-toggle-btn', type='checkbox').toggle
- *     label(for='eg-toggle-btn').btn.btn--primary Toggle button
- */
