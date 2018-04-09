@@ -28,6 +28,9 @@
 	$name_ucf: str_ucfirst($name);
 	$name_r: str_replace(to_lower_case($name), ' ', '-');
 
+	$rule: ' !important';
+	$hex: $hex + unquote($rule);
+
 	.bgc-#{$name_r} {
 		background-color: $hex;
 	}
