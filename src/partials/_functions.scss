@@ -3,118 +3,195 @@
 
 
 // Slightly lighten a color.
-@function tint($background-color, $color, $percentage) {
-	@return mix($background-color, $color, $percentage);
+
+@function tint( $background-color, $color, $percentage ) {
+
+    @return mix( $background-color, $color, $percentage );
+
 }
 
 // Slightly darken a color.
-@function shade($background-color, $color, $percentage) {
-	@return mix($background-color, $color, $percentage);
+
+@function shade( $background-color, $color, $percentage ) {
+
+    @return mix( $background-color, $color, $percentage );
+
 }
 
 // Generar la lista completa de colores.
-@function colors($colors) {
-	$colors-list: ();
-	@each $name, $hex in $colors {
-		$colors-list: 
-			append(
-				$colors-list, 
-				'#{$name}' $hex, 
-				comma
-			);
-	}
-	@return $colors-list;
+
+@function colors( $colors ) {
+
+    $colors-list: ();
+    
+    @each $name, $hex in $colors {
+
+        $colors-list: 
+            append(
+                $colors-list, 
+                '#{ $name }' $hex, 
+                comma
+            );
+
+    }
+
+    @return $colors-list;
+
 }
 
 // Get one color from the list.
-@function color($color) {
-	@each $cp in $colors {
-		@if nth($cp, 1) == $color {
-			@return nth($cp, 2);
-		}
-	}
-	@return unquote('#000');
+
+@function color( $color ) {
+
+    @each $cp in $colors {
+
+        @if nth( $cp, 1 ) == $color {
+            
+            @return nth( $cp, 2 );
+
+        }
+
+    }
+
+    @return unquote( '#000' );
+
 }
 
 // Hepler. Remove unit from input number.
-@function clear_unit($value) {
-	@if type_of($value) == 'number' {
-		@if (unitless($value)) {
-			@return $value;
-		} @elseif unit($value) == 'em' {
-			@return $value / 1em;
-		} @elseif unit($value) == 'rem' {
-			@return $value / 1rem;
-		} @elseif unit($value) == 'px' {
-			@return $value / 1px;
-		} @elseif unit($value) == 'pt' {
-			@return $value / 1pt;
-		}
-	} @else {
-		@warn 'Not a number value: #{$value}';
-		@return $value;
-	}
+
+@function clear_unit( $value ) {
+
+    @if type_of( $value ) == 'number' {
+
+        @if ( unitless( $value ) ) {
+
+            @return $value;
+
+        } @elseif unit( $value ) == 'em' {
+
+            @return $value / 1em;
+
+        } @elseif unit( $value ) == 'rem' {
+
+            @return $value / 1rem;
+
+        } @elseif unit( $value ) == 'px' {
+
+            @return $value / 1px;
+
+        } @elseif unit( $value ) == 'pt' {
+
+            @return $value / 1pt;
+
+        }
+    } @else {
+
+        @warn 'Not a number value: #{$value}';
+
+        @return $value;
+
+    }
+
 }
 
 // Helper. Make unit from input number. 
 // Replace $value unit to target unit.
-@function make_unit($value, $unit: px) {
-	$value: clear_unit($value);
-	@if type_of($value) == 'number' {
-		@if $unit == 'em' {
-			@return $value * 1em;
-		} @elseif $unit == 'rem' {
-			@return $value * 1rem;
-		} @elseif $unit == 'px' {
-			@return $value * 1px;
-		} @elseif $unit == 'pt' {
-			@return $value * 1pt;
-		}
-	} @else {
-		@warn 'Not a number value: #{$value}';
-		@return $value;
-	}
+
+@function make_unit( $value, $unit: px ) {
+
+    $value: clear_unit( $value );
+
+    @if type_of( $value ) == 'number' {
+
+        @if $unit == 'em' {
+
+            @return $value * 1em;
+
+        } @elseif $unit == 'rem' {
+
+            @return $value * 1rem;
+
+        } @elseif $unit == 'px' {
+
+            @return $value * 1px;
+
+        } @elseif $unit == 'pt' {
+
+            @return $value * 1pt;
+
+        }
+
+    } @else {
+
+        @warn 'Not a number value: #{ $value }';
+
+        @return $value;
+
+    }
 }
 
 // Convert pixels to rems. $value = pixel size. $base = base pixel size.
-@function px_to_rem($value, $base: $font-size-base) {
-	@return ($value / $base) * 1rem;
+
+@function px_to_rem( $value, $base: $font-size-base ) {
+
+    @return ( $value / $base ) * 1rem;
+
 }
 
 // Convert rems to pixels.
-@function rem_to_px($value) {
-	$value: clear_unit($value);
-	$font-size-base: clear_unit($font-size-base);
-	@return make_unit($value * $font-size-base, px);
+
+@function rem_to_px( $value ) {
+
+    $value: clear_unit( $value );
+    $font-size-base: clear_unit( $font-size-base );
+
+    @return make_unit( $value * $font-size-base, px );
+
 }
 
 // Convert pixels to ems.
-@function px_to_em($value, $base: $font-size-base) {
-	@if $value == 0 { @return 0 }
-	@return ($value / $base) + 0em;
+
+@function px_to_em( $value, $base: $font-size-base ) {
+
+    @if $value == 0 { @return 0 }
+
+    @return ( $value / $base ) + 0em;
+
 }
 
 // Convert ems to pixels.
-@function em_to_px($value, $base: $font-size-base) {
-	$value: clear_unit($value);
-	$font-size: clear_unit($base);
-	@return make_unit($value * $font-size, px);
+
+@function em_to_px( $value, $base: $font-size-base ) {
+
+    $value: clear_unit( $value );
+    $font-size: clear_unit( $base );
+
+    @return make_unit( $value * $font-size, px );
+
 }
 
 // Convert ems to rems.
-@function em_to_rem($value, $base: $font-size-base) {
-	$value: clear_unit($value);
-	$font-size: clear_unit($base);
-	$font-size-base	: clear_unit($font-size-base);
-	@return make_unit($font-size * $value / $font-size-base, rem);
+
+@function em_to_rem( $value, $base: $font-size-base ) {
+
+    $value: clear_unit( $value );
+    $font-size: clear_unit( $base );
+    $font-size-base : clear_unit( $font-size-base );
+
+    @return make_unit( $font-size * $value / $font-size-base, rem );
+
 }
 
 // Convert rems to ems.
-@function rem_to_em($value, $base: $font-size-base) {
-	$value: clear_unit($value);
-	$font-size: clear_unit($base);
-	$font-size-base: clear_unit($font-size-base);
-	@return make_unit($value * $font-size-base / $font-size, em);
+
+@function rem_to_em( $value, $base: $font-size-base ) {
+
+    $value: clear_unit( $value );
+    $font-size: clear_unit( $base );
+    $font-size-base: clear_unit( $font-size-base );
+
+    @return make_unit( $value * $font-size-base / $font-size, em );
+
 }
 
 // Replace `$search` with `$replace` in `$string`
@@ -123,70 +200,116 @@
 // @param  {String} $search - Substring to replace
 // @param  {String} $replace ('') - New value
 // @return {String} - Updated string
-@function str_replace($string, $search, $replace: '') {
-	$index: str_index($string, $search);
-	@if $index {
-		@return str_slice($string, 1, $index - 1) + 
-			$replace + 
-			str_replace(
-				str_slice($string, $index + str_length($search)
-			), $search, $replace);
-	}
-	@return $string;
+
+@function str_replace( $string, $search, $replace: '' ) {
+    
+    $index: str_index( $string, $search );
+
+    @if $index {
+
+        @return str_slice( $string, 1, $index - 1 ) + 
+            $replace + 
+            str_replace(
+                str_slice( $string, $index + str_length( $search )
+            ), $search, $replace );
+    }
+
+    @return $string;
+
 }
 
 // Capitalize string
 // @param [string] $string
 // @return [string]
-@function capitalize($string) {
-	@return to_upper_case(str_slice($string, 1, 1)) + str_slice($string, 2);
+
+@function capitalize( $string ) {
+
+    @return to_upper_case( str_slice( $string, 1, 1 ) ) + str_slice( $string, 2 );
+
 }
 
 // Alias
-@function str_ucfirst($string) {
-	@return capitalize($string);
+
+@function str_ucfirst( $string ) {
+
+    @return capitalize( $string );
+
 }
 
-@function val_to_class_name($string) {
-	@if type_of($string) == 'string' {
-		// $string: str_replace($string, '-', '');
-		$string: str_replace($string, ' ', '-');
-	}
-	@return $string;
+@function val_to_class_name( $string ) {
+
+    @if type_of( $string ) == 'string' {
+
+        $string: str_replace( $string, ' ', '-' );
+
+    }
+
+    @return $string;
+
 }
 
-@function str_split($string, $separator) {
-	// Empty array/list.
-	$split-list: ();
-	// First index of separator in string.
-	$index: str_index($string, $separator);
-	// Loop through string.
-	@while $index != null {
-		// Get the substring from the first character to the separator.
-		$item: str_slice($string, 1, $index - 1);
-		// Push item to array
-		$split-list: append($split-list, $item);
-		// Remove item and separator from string.
-		$string: str_slice($string, $index + 1);
-		// Find new index of separator.
-		$index : str_index($string, $separator);
-	}
-	// Add the remaining string to list (the last item).
-	$split-list: append($split-list, $string);
-	@return $split-list;
+@function str_split( $string, $separator ) {
+
+    // Empty array/list.
+
+    $split-list: ();
+
+    // First index of separator in string.
+
+    $index: str_index( $string, $separator );
+    
+    // Loop through string.
+
+    @while $index != null {
+
+        // Get the substring from the first character to the separator.
+        
+        $item: str_slice( $string, 1, $index - 1 );
+
+        // Push item to array
+        
+        $split-list: append( $split-list, $item );
+        
+        // Remove item and separator from string.
+        
+        $string: str_slice( $string, $index + 1 );
+        
+        // Find new index of separator.
+        
+        $index : str_index( $string, $separator );
+    }
+    
+    // Add the remaining string to list (the last item).
+
+    $split-list: append( $split-list, $string );
+    
+    @return $split-list;
+
 }
 
-@function list_to_str($list) {
-	@if type_of($list) == 'list' {
-		$string: '';
-		$length: length($list);
-		@for $i from 1 through $length {
-			$string: $string + nth($list, $i);
-			@if $i < $length {
-				$string: $string + ' ';
-			}
-		}
-		$list: $string;
-	}
-	@return $list;
+@function list_to_str( $list ) {
+
+    @if type_of( $list ) == 'list' {
+
+        $string: '';
+        $length: length( $list );
+
+        @for $i from 1 through $length {
+
+            $string: $string + nth( $list, $i );
+
+            @if $i < $length {
+
+                $string: $string + ' ';
+
+            }
+
+        }
+
+        $list: $string;
+
+    }
+
+    @return $list;
+
 }

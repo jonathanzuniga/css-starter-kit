@@ -3,160 +3,251 @@
 
 
 // Button background gradient.
-@mixin button_gradient_bg($color-top, $color-bottom) {
-	background: #{$color-top};
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, #{$color-top}), color-stop(100%, #{$color-bottom}));
-	background: -webkit-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background:    -moz-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background:     -ms-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background:      -o-linear-gradient(top, #{$color-top} 0%, #{$color-bottom} 100%);
-	background:         linear-gradient(to bottom, #{$color-top} 0%, #{$color-bottom} 100%);
-	filter:      progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-top}', endColorstr='#{$color-bottom}', GradientType=0);
-}
+
+@mixin button_gradient_bg( $color-top, $color-bottom  ) {
+
+    background: #{ $color-top  };
+    background: -webkit-gradient( left top, left bottom, color-stop( 0%, #{ $color-top } ), color-stop( 100%, #{ $color-bottom } ) );
+    background: -webkit-linear-gradient( top, #{ $color-top } 0%, #{ $color-bottom } 100% );
+    background:    -moz-linear-gradient( top, #{ $color-top } 0%, #{ $color-bottom } 100% );
+    background:     -ms-linear-gradient( top, #{ $color-top } 0%, #{ $color-bottom } 100% );
+    background:      -o-linear-gradient( top, #{ $color-top } 0%, #{ $color-bottom } 100% );
+    background:         linear-gradient( to bottom, #{ $color-top } 0%, #{ $color-bottom } 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ $color-top }', endColorstr='#{ $color-bottom }', GradientType=0 );
+
+ }
 
 // Output vendor properties.
-@mixin vendor($property, $value) {
-	-webkit-#{$property}: $value;
-	   -moz-#{$property}: $value;
-		-ms-#{$property}: $value;
-		 -o-#{$property}: $value;
-			#{$property}: $value;
+
+@mixin vendor( $property, $value ) {
+
+    -webkit-#{ $property }: $value;
+       -moz-#{ $property }: $value;
+        -ms-#{ $property }: $value;
+         -o-#{ $property }: $value;
+            #{ $property }: $value;
+
+ }
+
+@mixin animation( $animate... ) {
+
+    $max: length( $animate );
+    $animations: '';
+
+    @for $i from 1 through $max {
+
+        $animations: #{ $animations + nth( $animate, $i )  };
+
+        @if $i < $max {
+
+            $animations: #{ $animations + ', '  };
+
+         }
+
+     }
+
+    -webkit-animation: $animations;
+       -moz-animation: $animations;
+         -o-animation: $animations;
+            animation: $animations;
+
+ }
+
+@mixin keyframes( $animation-name ) {
+
+    @-webkit-keyframes #{ $animation-name } {
+
+        @content;
+
+    }
+
+    @-moz-keyframes #{ $animation-name } {
+
+        @content;
+
+    }
+
+    @-o-keyframes #{ $animation-name } {
+
+        @content;
+
+    }
+
+    @keyframes #{ $animation-name } {
+
+        @content;
+
+    }
+
 }
 
-@mixin animation($animate...) {
-	$max: length($animate);
-	$animations: '';
+@mixin class_gen( $abbreviation, $property, $property-extended, $map ) {
 
-	@for $i from 1 through $max {
-		$animations: #{ $animations + nth($animate, $i) };
+    $example_title: '';
+    $selector: '';
 
-		@if $i < $max {
-			$animations: #{ $animations + ', ' };
-		}
-	}
-	-webkit-animation: $animations;
-	   -moz-animation: $animations;
-		 -o-animation: $animations;
-			animation: $animations;
+    @each $abbr, $prop in ( $abbreviation: $property ) {
+
+        $prop-ucf: str_ucfirst( $property );
+        $prop-r: str_replace( $prop-ucf, '-', ' ' );
+
+        @each $prop-ext in $property-extended {
+
+            $prop-ext-r: str_replace( $prop-ext, '-', ' ' );
+            $prop-ext-rename: val_to_class_name( $prop-ext );
+
+            @each $key, $value in $map {
+
+                $value-r: str_replace( #{ $value }, ' !important', '' );
+
+                @if $prop-ext == '' {
+
+                    $example_title:    #{ $prop-r } #{ $value-r };
+                    $selector:         #{ $abbr }-#{ $key };
+
+                }
+
+                @else if $prop-ext == 'y' or $prop-ext == 'x' {
+
+                    $example_title:    #{ $prop-r } #{ $value-r };
+                    $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
+
+                }
+
+                @else {
+
+                    $example_title:    #{ $prop-r } #{ $prop-ext-r } #{ $value-r };
+                    $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
+
+                }
+
+                /**
+                 * #{ $example_title }:
+                 * `.#{ $selector }` `.[size]-#{ $selector }` `.max[size]-#{ $selector }`
+                 *
+                 *     @example
+                 *     div.#{ $selector } Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 */
+                @include rule_set( $abbr, $property, $prop-ext, $key, $value );
+
+            }
+
+        }
+
+        @each $size, $length in $grid-breakpoints {
+
+            @if ( $length != 0 ) {
+
+                @media ( max-width: $length - 1 ) {
+
+                    @each $prop-ext in $property-extended {
+
+                        @each $key, $value in $map {
+
+                            @include rule_set( $abbr, $property, $prop-ext, $key, $value, 'max' + $size );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            @media ( min-width: $length ) {
+
+                @each $prop-ext in $property-extended {
+
+                    @each $key, $value in $map {
+
+                        @include rule_set( $abbr, $property, $prop-ext, $key, $value, $size );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
 }
 
-@mixin keyframes($animation-name) {
-	@-webkit-keyframes #{$animation-name} {
-		@content;
-	}
-	@-moz-keyframes #{$animation-name} {
-		@content;
-	}
-	@-o-keyframes #{$animation-name} {
-		@content;
-	}
-	@keyframes #{$animation-name} {
-		@content;
-	}
-}
+@mixin rule_set( $abbreviation, $property, $property-extended, $key, $value, $size: '' ) {
 
-@mixin class_gen($abbreviation, $property, $property-extended, $map) {
-	$example_title: '';
-	$selector: '';
-	@each $abbr, $prop in ($abbreviation: $property) {
-		$prop-ucf: str_ucfirst($property);
-		$prop-r: str_replace($prop-ucf, '-', ' ');
+    @if $size != '' {
 
-		@each $prop-ext in $property-extended {
-			$prop-ext-r: str_replace($prop-ext, '-', ' ');
-			$prop-ext-rename: val_to_class_name($prop-ext);
+        $size: $size + '-';
 
-			@each $key, $value in $map {
-				$value-r: str_replace(#{$value}, ' !important', '');
-				@if $prop-ext == '' {
-					$example_title:    #{$prop-r} #{$value-r};
-					$selector:         #{$abbr}-#{$key};
-				}
-				@else if $prop-ext == 'y' or $prop-ext == 'x' {
-					$example_title:    #{$prop-r} #{$value-r};
-					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
-				}
-				@else {
-					$example_title:    #{$prop-r} #{$prop-ext-r} #{$value-r};
-					$selector:         #{$abbr}-#{$prop-ext-rename}-#{$key};
-				}
+     }
 
-				/**
-				 * #{$example_title}:
-				 * `.#{$selector}` `.[size]-#{$selector}` `.max[size]-#{$selector}`
-				 *
-				 *     @example
-				 *     div.#{$selector} Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				 */
-				@include rule_set($abbr, $property, $prop-ext, $key, $value);
-			}
-		}
+    $selector: '';
+    $declaration_prop: '';
+    $prop-ext-rename: val_to_class_name( $property-extended );
 
-		@each $size, $length in $grid-breakpoints {
-			@if ($length != 0) {
-				@media (max-width: $length - 1) {
-					@each $prop-ext in $property-extended {
-						@each $key, $value in $map {
-							@include rule_set($abbr, $property, $prop-ext, $key, $value, 'max' + $size);
-						}
-					}
-				}
-			}
+    @if $property-extended == '' {
 
-			@media (min-width: $length) {
-				@each $prop-ext in $property-extended {
-					@each $key, $value in $map {
-						@include rule_set($abbr, $property, $prop-ext, $key, $value, $size);
-					}
-				}
-			}
-		}
-	}
-}
+        $selector:         #{ $size }#{ $abbreviation }-#{ $key };
+        $declaration_prop: #{ $property };
 
-@mixin rule_set($abbreviation, $property, $property-extended, $key, $value, $size: '') {
-	@if $size != '' {
-		$size: $size + '-';
-	}
+    }
 
-	$selector: '';
-	$declaration_prop: '';
-	$prop-ext-rename:  val_to_class_name($property-extended);
-	@if $property-extended == '' {
-		$selector:         #{$size}#{$abbreviation}-#{$key};
-		$declaration_prop: #{$property};
-	}
-	@else if $property-extended == 'y' or $property-extended == 'x' {
-		$selector:         #{$size}#{$abbreviation}-#{$prop-ext-rename}-#{$key};
-		$declaration_prop: #{$property};
-	}
-	@else {
-		$selector:         #{$size}#{$abbreviation}-#{$prop-ext-rename}-#{$key};
-		$declaration_prop: #{$property}-#{$property-extended};
-	}
+    @else if $property-extended == 'y' or $property-extended == 'x' {
 
-	$prop-contains-a-dash: str-index($property, '-');
-	$prop-split: ();
-	@if $prop-contains-a-dash {
-		$prop-split: str_split($property, '-');
-	}
+        $selector:         #{ $size }#{ $abbreviation }-#{ $prop-ext-rename }-#{ $key };
+        $declaration_prop: #{ $property };
 
-	.#{$selector} {
-		@if $property-extended == 'y' {
-			#{$declaration_prop}-top: #{$value};
-			#{$declaration_prop}-bottom: #{$value};
-		}
-		@else if $property-extended == 'x' {
-			#{$declaration_prop}-right: #{$value};
-			#{$declaration_prop}-left: #{$value};
-		}
-		@else {
-			@if $prop-contains-a-dash and $property-extended != '' {
-				#{nth($prop-split, 1)}-#{$property-extended}-#{nth($prop-split, 2)}: #{$value};
-			}
-			@else {
-				#{$declaration_prop}: #{$value};
-			}
-		}
-	}
+    }
+
+    @else {
+
+        $selector:         #{ $size }#{ $abbreviation }-#{ $prop-ext-rename }-#{ $key };
+        $declaration_prop: #{ $property }-#{ $property-extended };
+
+    }
+
+    $prop-contains-a-dash: str-index( $property, '-' );
+    $prop-split: ();
+
+    @if $prop-contains-a-dash {
+
+        $prop-split: str_split( $property, '-' );
+        
+    }
+
+    .#{ $selector } {
+
+        @if $property-extended == 'y' {
+
+            #{ $declaration_prop }-top: #{ $value };
+            #{ $declaration_prop }-bottom: #{ $value };
+
+        }
+
+        @else if $property-extended == 'x' {
+
+            #{ $declaration_prop }-right: #{ $value };
+            #{ $declaration_prop }-left: #{ $value };
+
+        }
+
+        @else {
+
+            @if $prop-contains-a-dash and $property-extended != '' {
+
+                #{ nth( $prop-split, 1 ) }-#{ $property-extended }-#{ nth( $prop-split, 2 ) }: #{ $value };
+
+            }
+
+            @else {
+
+                #{ $declaration_prop }: #{ $value };
+
+            }
+
+        }
+
+    }
+
 }
