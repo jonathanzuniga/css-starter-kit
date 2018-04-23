@@ -2,71 +2,159 @@
  * Horizontal modifier:
  */
 /**
- * Aligns columns to left:
- * `.cols--left`
- *
- *     @example
- *     div.cols.cols--left
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--left {
+				 * Justify content flex-start:
+				 * `.jc-flex-start` `.[size]-jc-flex-start` `.max[size]-jc-flex-start`
+				 *
+				 *     @example
+				 *     div.jc-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+.jc-flex-start {
   justify-content: flex-start; }
 
 /**
- * Aligns columns to center:
- * `.cols--center`
- *
- *     @example
- *     div.cols.cols--center
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--center {
+				 * Justify content center:
+				 * `.jc-center` `.[size]-jc-center` `.max[size]-jc-center`
+				 *
+				 *     @example
+				 *     div.jc-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+.jc-center {
   justify-content: center; }
 
 /**
- * Aligns columns to right:
- * `.cols--right`
- *
- *     @example
- *     div.cols.cols--right
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--right {
+				 * Justify content flex-end:
+				 * `.jc-flex-end` `.[size]-jc-flex-end` `.max[size]-jc-flex-end`
+				 *
+				 *     @example
+				 *     div.jc-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+.jc-flex-end {
   justify-content: flex-end; }
 
 /**
- * Space between columns:
- * `.cols--between`
- *
- *     @example
- *     div.cols.cols--between
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--between {
+				 * Justify content space-between:
+				 * `.jc-space-between` `.[size]-jc-space-between` `.max[size]-jc-space-between`
+				 *
+				 *     @example
+				 *     div.jc-space-between Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+.jc-space-between {
   justify-content: space-between; }
 
 /**
- * Space around columns:
- * `.cols--around`
- *
- *     @example
- *     div.cols.cols--around
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--around {
+				 * Justify content space-around:
+				 * `.jc-space-around` `.[size]-jc-space-around` `.max[size]-jc-space-around`
+				 *
+				 *     @example
+				 *     div.jc-space-around Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				 */
+.jc-space-around {
   justify-content: space-around; }
+
+@media (min-width: 0) {
+  .xs-jc-flex-start {
+    justify-content: flex-start; }
+  .xs-jc-center {
+    justify-content: center; }
+  .xs-jc-flex-end {
+    justify-content: flex-end; }
+  .xs-jc-space-between {
+    justify-content: space-between; }
+  .xs-jc-space-around {
+    justify-content: space-around; } }
+
+@media (max-width: 767px) {
+  .maxsm-jc-flex-start {
+    justify-content: flex-start; }
+  .maxsm-jc-center {
+    justify-content: center; }
+  .maxsm-jc-flex-end {
+    justify-content: flex-end; }
+  .maxsm-jc-space-between {
+    justify-content: space-between; }
+  .maxsm-jc-space-around {
+    justify-content: space-around; } }
+
+@media (min-width: 768px) {
+  .sm-jc-flex-start {
+    justify-content: flex-start; }
+  .sm-jc-center {
+    justify-content: center; }
+  .sm-jc-flex-end {
+    justify-content: flex-end; }
+  .sm-jc-space-between {
+    justify-content: space-between; }
+  .sm-jc-space-around {
+    justify-content: space-around; } }
+
+@media (max-width: 1023px) {
+  .maxmd-jc-flex-start {
+    justify-content: flex-start; }
+  .maxmd-jc-center {
+    justify-content: center; }
+  .maxmd-jc-flex-end {
+    justify-content: flex-end; }
+  .maxmd-jc-space-between {
+    justify-content: space-between; }
+  .maxmd-jc-space-around {
+    justify-content: space-around; } }
+
+@media (min-width: 1024px) {
+  .md-jc-flex-start {
+    justify-content: flex-start; }
+  .md-jc-center {
+    justify-content: center; }
+  .md-jc-flex-end {
+    justify-content: flex-end; }
+  .md-jc-space-between {
+    justify-content: space-between; }
+  .md-jc-space-around {
+    justify-content: space-around; } }
+
+@media (max-width: 1279px) {
+  .maxlg-jc-flex-start {
+    justify-content: flex-start; }
+  .maxlg-jc-center {
+    justify-content: center; }
+  .maxlg-jc-flex-end {
+    justify-content: flex-end; }
+  .maxlg-jc-space-between {
+    justify-content: space-between; }
+  .maxlg-jc-space-around {
+    justify-content: space-around; } }
+
+@media (min-width: 1280px) {
+  .lg-jc-flex-start {
+    justify-content: flex-start; }
+  .lg-jc-center {
+    justify-content: center; }
+  .lg-jc-flex-end {
+    justify-content: flex-end; }
+  .lg-jc-space-between {
+    justify-content: space-between; }
+  .lg-jc-space-around {
+    justify-content: space-around; } }
+
+@media (max-width: 1679px) {
+  .maxxl-jc-flex-start {
+    justify-content: flex-start; }
+  .maxxl-jc-center {
+    justify-content: center; }
+  .maxxl-jc-flex-end {
+    justify-content: flex-end; }
+  .maxxl-jc-space-between {
+    justify-content: space-between; }
+  .maxxl-jc-space-around {
+    justify-content: space-around; } }
+
+@media (min-width: 1680px) {
+  .xl-jc-flex-start {
+    justify-content: flex-start; }
+  .xl-jc-center {
+    justify-content: center; }
+  .xl-jc-flex-end {
+    justify-content: flex-end; }
+  .xl-jc-space-between {
+    justify-content: space-between; }
+  .xl-jc-space-around {
+    justify-content: space-around; } }

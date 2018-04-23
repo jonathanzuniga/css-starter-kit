@@ -13,9 +13,9 @@
 }
 
 // Generar la lista completa de colores.
-@function colors($light-background-color, $dark-background-color) {
+@function colors($colors) {
 	$colors-list: ();
-	@each $name, $hex in $color-palette {
+	@each $name, $hex in $colors {
 		$colors-list: 
 			append(
 				$colors-list, 

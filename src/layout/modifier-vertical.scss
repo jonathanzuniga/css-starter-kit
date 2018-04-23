@@ -5,104 +5,34 @@
  * Vertical modifier:
  */
 
-/**
- * Aligns columns to top:
- * `.cols--top`
- *
- *     @example
- *     div.cols.cols--top.doc-h-100px
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--top {
-	align-items: flex-start;
-}
+@include class_gen(
+	/* Abbreviation */
+	'ai',
 
-/**
- * Aligns columns to middle:
- * `.cols--middle`
- *
- *     @example
- *     div.cols.cols--middle.doc-h-100px
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--middle {
-	align-items: center;
-}
+	/* Property */
+	'align-items',
 
-/**
- * Aligns columns to bottom:
- * `.cols--bottom`
- *
- *     @example
- *     div.cols.cols--bottom.doc-h-100px
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.cols--bottom {
-	align-items: flex-end;
-}
+	/* Property extended */
+	(
+		''
+	),
 
-/**
- * Aligns column to top:
- * `.col--top`
- *
- *     @example
- *     div.cols.cols--bottom.doc-h-100px
- *         div.col-4.col--top
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.col--top {
-	align-self: flex-start;
-}
+	/* Map */
+	$align-items
+);
 
-/**
- * Aligns column to middle:
- * `.col--middle`
- *
- *     @example
- *     div.cols.doc-h-100px
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4.col--middle
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- */
-.col--middle {
-	align-self: center;
-}
+@include class_gen(
+	/* Abbreviation */
+	'as',
 
-/**
- * Aligns column to bottom:
- * `.col--bottom`
- *
- *     @example
- *     div.cols.doc-h-100px
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4
- *             div.bgc-teal-10 &nbsp;
- *         div.col-4.col--bottom
- *             div.bgc-teal-10 &nbsp;
- */
-.col--bottom {
-	align-self: flex-end;
-}
+	/* Property */
+	'align-self',
+
+	/* Property extended */
+	(
+		''
+	),
+
+	/* Map */
+	$align-items
+);

@@ -477,7 +477,7 @@
  * `.menu`
  *
  *     @example
- *     ul.menu.flex-col
+ *     ul.menu.flex-dir-col
  *         li.active
  *             a(href='#') Link 1
  *         li
@@ -509,7 +509,7 @@
  * `.menu--pills`
  *
  *     @example
- *     ul.menu.menu--pills.flex-col
+ *     ul.menu.menu--pills.flex-dir-col
  *         li.active
  *             a(href='#') Link 1
  *         li
@@ -560,7 +560,7 @@
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
+ *         div.navbar__collapse.collapse.flex-grow-1.jc-space-between
  *             ul.navbar__menu.maxsm-ta-center
  *                 li.navbar__item.active.maxsm-bd-top-1
  *                     a(href='').navbar__link Home
@@ -612,33 +612,11 @@
 .navbar__collapse,
 .navbar__no-collapse,
 .navbar__menu {
-  flex-grow: 1; }
+  flex-grow: 0; }
 
 .navbar__menu {
   margin: 0;
   padding: 0; }
-
-/**
- * Right align navbar menu:
- * `.navbar__menu--right`
- *
- *     @example
- *     nav.navbar.maxsm-navbar-responsive
- *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__link Brand
- *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.maxsm-ta-center
- *                 li.navbar__item.active.maxsm-bd-top
- *                     a(href='').navbar__link Home
- *                 li.navbar__item.maxsm-bd-top
- *                     a(href='').navbar__link Archive
- *                 li.navbar__item.maxsm-bd-top
- *                     a(href='').navbar__link About
- */
-.navbar__menu--right {
-  justify-content: flex-end; }
 
 .navbar__link,
 .navbar__toggler {
@@ -693,6 +671,24 @@
  *                 li.navbar__item
  *                     a(href='').navbar__link About
  */
+/**
+ * Right align navbar menu:
+ *
+ *     @example
+ *     nav.navbar.maxsm-navbar-responsive.jc-space-between
+ *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__link Brand
+ *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu.maxsm-ta-center
+ *                 li.navbar__item.active.maxsm-bd-top-1
+ *                     a(href='').navbar__link Home
+ *                 li.navbar__item.maxsm-bd-top-1
+ *                     a(href='').navbar__link Archive
+ *                 li.navbar__item.maxsm-bd-top-1
+ *                     a(href='').navbar__link About
+ */
 .navbar-responsive.navbar {
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -713,6 +709,11 @@
   cursor: pointer;
   display: flex;
   order: 2; }
+
+.navbar-responsive .navbar__collapse,
+.navbar-responsive .navbar__no-collapse,
+.navbar-responsive .navbar__menu {
+  flex-grow: 1; }
 
 .navbar-responsive .navbar__collapse {
   flex-wrap: wrap;
@@ -761,6 +762,10 @@
     cursor: pointer;
     display: flex;
     order: 2; }
+  .maxxs-navbar-responsive .navbar__collapse,
+  .maxxs-navbar-responsive .navbar__no-collapse,
+  .maxxs-navbar-responsive .navbar__menu {
+    flex-grow: 1; }
   .maxxs-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -807,6 +812,10 @@
     cursor: pointer;
     display: flex;
     order: 2; }
+  .maxsm-navbar-responsive .navbar__collapse,
+  .maxsm-navbar-responsive .navbar__no-collapse,
+  .maxsm-navbar-responsive .navbar__menu {
+    flex-grow: 1; }
   .maxsm-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -853,6 +862,10 @@
     cursor: pointer;
     display: flex;
     order: 2; }
+  .maxmd-navbar-responsive .navbar__collapse,
+  .maxmd-navbar-responsive .navbar__no-collapse,
+  .maxmd-navbar-responsive .navbar__menu {
+    flex-grow: 1; }
   .maxmd-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -899,6 +912,10 @@
     cursor: pointer;
     display: flex;
     order: 2; }
+  .maxlg-navbar-responsive .navbar__collapse,
+  .maxlg-navbar-responsive .navbar__no-collapse,
+  .maxlg-navbar-responsive .navbar__menu {
+    flex-grow: 1; }
   .maxlg-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -945,6 +962,10 @@
     cursor: pointer;
     display: flex;
     order: 2; }
+  .maxxl-navbar-responsive .navbar__collapse,
+  .maxxl-navbar-responsive .navbar__no-collapse,
+  .maxxl-navbar-responsive .navbar__menu {
+    flex-grow: 1; }
   .maxxl-navbar-responsive .navbar__collapse {
     flex-wrap: wrap;
     padding: 0 1rem;
@@ -1017,13 +1038,13 @@
  * Responsive navbar grid menu:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive
+ *     nav.navbar.maxlg-navbar-responsive.jc-space-between
  *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
+ *             ul.navbar__menu.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
  *                 li.navbar__item.active.xs-bd-bottom-1.lg-bd-bottom-0
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.xs-bd-bottom-1.xs-bd-left-1.md-bd-right-1.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
@@ -1037,7 +1058,7 @@
  * Navbar brand in the center:
  *
  *     @example
- *     nav.navbar.maxlg-navbar-responsive
+ *     nav.navbar.maxlg-navbar-responsive.jc-space-between
  *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
@@ -1049,7 +1070,7 @@
  *         div.navbar__brand
  *             a(href='').navbar__link Brand
  *         div.navbar__collapse.collapse
- *             ul.navbar__menu.navbar__menu--right.maxlg-ta-center
+ *             ul.navbar__menu.maxlg-ta-center
  *                 li.navbar__item.active.maxlg-bd-top-1
  *                     a(href='').navbar__link Home
  *                 li.navbar__item.maxlg-bd-top-1
