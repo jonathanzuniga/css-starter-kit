@@ -1,19 +1,24 @@
+
 var gulp      = require( 'gulp' );
 var sass      = require( 'gulp-sass' );
 var rename    = require( 'gulp-rename' );
 var styledown = require( 'gulp-styledown' );
 
 gulp.task( 'sass', function () {
+
     return gulp.src( 'src/**/*.scss' ) // Source files.
         .pipe( sass() )                // Using gulp-sass.
         .pipe( gulp.dest( 'dist' ) )   // Destination.
+
 } );
 
 gulp.task( 'sass-min', function () {
+
     return gulp.src( 'src/**/*.scss' )
         .pipe( sass( { outputStyle: 'compressed' } ) )
         .pipe( rename( { suffix: '.min' } ) )
         .pipe( gulp.dest( 'dist' ) )
+
 } );
 
 var config   = 'guide/config.md';
@@ -37,6 +42,7 @@ var prefix_helpers    = 'helpers-';
 var prefix_layout     = 'layout-';
 
 gulp.task( 'styledown', function () {
+
     gulp.src( 'guide/index.md' )    // /path/to/styledown/*.md
         .pipe( styledown( {
             config:   config,       // /path/to/config.md
@@ -62,6 +68,10 @@ gulp.task( 'styledown', function () {
 
     gulp.src( 'dist/components/menu.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_components + 'menu.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
+    gulp.src( 'dist/components/modal.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_components + 'modal.html' } ) )
         .pipe( gulp.dest( dest ) );
 
     gulp.src( 'dist/components/navbar.css' )
@@ -228,10 +238,14 @@ gulp.task( 'styledown', function () {
     gulp.src( 'dist/layout/grid.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_layout + 'grid.html' } ) )
         .pipe( gulp.dest( dest ) );
+
 } );
 
 // Watch task.
+
 gulp.task( 'default', function () {
+
     gulp.watch( 'src/**/*.scss', [ 'sass', 'sass-min', 'styledown' ] );
     gulp.watch( 'config.md', [ 'styledown' ] );
+
 } );

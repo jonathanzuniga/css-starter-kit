@@ -29,14 +29,14 @@
 				nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 					div.navbar__brand
-						a(href='index.html').navbar__link CSS Starter Kit
+						a(href='index.html').navbar__a CSS Starter Kit
 					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-d-none Menu
 					div.navbar__collapse.collapse.maxmd-d-none
 						ul.navbar__menu
 							li.navbar__item
-								a(href='index.html').navbar__link Preface
+								a(href='index.html').navbar__a Preface
 							li.navbar__item
-								a(href='layout-flex-grid.html').navbar__link Documentation
+								a(href='layout-flex-grid.html').navbar__a Documentation
 
 		div.cols
 			div.doc-main.xs-col-12.md-col-10.xl-col-11
@@ -155,6 +155,8 @@
 												a(href='components-drawer.html') Drawer
 											li
 												a(href='components-menu.html') Menu
+											li
+												a(href='components-modal.html') Modal
 											li
 												a(href='components-navbar.html') Navbar
 											li

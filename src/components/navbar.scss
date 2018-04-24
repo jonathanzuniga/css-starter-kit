@@ -25,16 +25,16 @@
  *     nav.navbar.maxsm-navbar-responsive
  *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse.flex-grow-1.jc-space-between
  *             ul.navbar__menu.maxsm-ta-center
  *                 li.navbar__item.active.maxsm-bd-top-1
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item.maxsm-bd-top-1
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item.maxsm-bd-top-1
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-1
  *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
  */
@@ -44,14 +44,14 @@
 .navbar__no-collapse,
 .navbar__menu,
 .navbar__item,
-.navbar__link,
+.navbar__a,
 .navbar__form {
 	display: flex;
 }
 
 .navbar__brand,
 .navbar__toggler,
-.navbar__link,
+.navbar__a,
 .navbar__form {
 	align-items: center;
 }
@@ -79,7 +79,7 @@
 }
 
 .navbar__toggler,
-.navbar__link,
+.navbar__a,
 .navbar__form {
 	padding: $navbar-padding-y $navbar-padding-x;
 }
@@ -95,7 +95,7 @@
 	padding: 0;
 }
 
-.navbar__link,
+.navbar__a,
 .navbar__toggler {
 	color: $day__navbar-a-color;
 
@@ -111,7 +111,7 @@
 
 .navbar__brand,
 .navbar__item.active {
-	.navbar__link {
+	.navbar__a {
 		&:link,
 		&:hover,
 		&:visited {
@@ -121,7 +121,7 @@
 }
 
 .night {
-	.navbar__link,
+	.navbar__a,
 	.navbar__toggler {
 		color: $ngt__navbar-a-color;
 
@@ -137,7 +137,7 @@
 
 	.navbar__brand,
 	.navbar__item.active {
-		.navbar__link {
+		.navbar__a {
 			&:link,
 			&:hover,
 			&:visited {
@@ -155,16 +155,16 @@
  *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-responsive-navbar-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 
 /**
@@ -174,16 +174,16 @@
  *     nav.navbar.maxsm-navbar-responsive.jc-space-between
  *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxsm-ta-center
  *                 li.navbar__item.active.maxsm-bd-top-1
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item.maxsm-bd-top-1
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item.maxsm-bd-top-1
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 @mixin navbar-responsive-collapse {
 	.navbar__toggler {
@@ -216,14 +216,14 @@
 			flex-direction: column;
 		}
 
-		.navbar__item .navbar__link,
+		.navbar__item .navbar__a,
 		.navbar__form {
 			display: block;
 			width: 100%;
 		}
 
 		.navbar__item {
-			.navbar__link {
+			.navbar__a {
 				padding-right: 0;
 				padding-left: 0;
 			}
@@ -299,16 +299,16 @@
  *     nav.navbar.navbar-responsive.navbar-responsive--top
  *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-responsive-navbar-menu-at-top-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu
  *                 li.navbar__item.active
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 
 /**
@@ -319,16 +319,16 @@
  *     nav.navbar.navbar-responsive
  *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-open-responsive-navbar-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse.open
  *             ul.navbar__menu
  *                 li.navbar__item.active
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 
 /**
@@ -338,18 +338,18 @@
  *     nav.navbar.maxlg-navbar-responsive.jc-space-between
  *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
  *                 li.navbar__item.active.xs-bd-bottom-1.lg-bd-bottom-0
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item.xs-bd-bottom-1.xs-bd-left-1.md-bd-right-1.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item.md-bd-bottom-1.lg-bd-bottom-0
- *                     a(href='').navbar__link Contact
+ *                     a(href='').navbar__a Contact
  *                 li.navbar__item.xs-bd-left-1.md-bd-right-1.lg-bd-right-0.lg-bd-left-0.md-gcol-2
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 
 /**
@@ -362,19 +362,19 @@
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-ta-center
  *                 li.navbar__item.maxlg-bd-top-1
- *                     a(href='').navbar__link RSS feed
+ *                     a(href='').navbar__a RSS feed
  *                 li.navbar__item.maxlg-bd-top-1
- *                     a(href='').navbar__link Follow me
+ *                     a(href='').navbar__a Follow me
  *         div.navbar__brand
- *             a(href='').navbar__link Brand
+ *             a(href='').navbar__a Brand
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-ta-center
  *                 li.navbar__item.active.maxlg-bd-top-1
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item.maxlg-bd-top-1
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item.maxlg-bd-top-1
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  */
 
  /**
@@ -383,19 +383,19 @@
  *     @example
  *     nav.navbar.maxmd-navbar-responsive
  *         div.navbar__brand.maxmd-d-block.maxmd-ta-center.maxmd-w-100
- *             a(href='').navbar__link.maxmd-d-block Brand
+ *             a(href='').navbar__a.maxmd-d-block Brand
  *         div.navbar__no-collapse
  *             ul.navbar__menu.navbar__menu--right
  *                 li.navbar__item.active
- *                     a(href='').navbar__link Home
+ *                     a(href='').navbar__a Home
  *                 li.navbar__item
- *                     a(href='').navbar__link Archive
+ *                     a(href='').navbar__a Archive
  *                 li.navbar__item
- *                     a(href='').navbar__link About
+ *                     a(href='').navbar__a About
  *                 li.navbar__item
- *                     a(href='').navbar__link Contact
+ *                     a(href='').navbar__a Contact
  *                 li.navbar__item
- *                     a(href='').navbar__link RSS
+ *                     a(href='').navbar__a RSS
  */
 
 /**
@@ -441,7 +441,7 @@
 }
 
 .navbar--dark {
-	.navbar__link,
+	.navbar__a,
 	.navbar__toggler {
 		color: $navbar-dark__a-color;
 
@@ -457,7 +457,7 @@
 
 	.navbar__brand,
 	.navbar__item.active {
-		.navbar__link {
+		.navbar__a {
 			&:link,
 			&:hover,
 			&:visited {
