@@ -117,6 +117,8 @@
 											li
 												a(href='helpers-border-width.html') Border width
 											li
+												a(href='helpers-box-shadow.html') Box shadow
+											li
 												a(href='helpers-clearfix.html') Clearfix
 											li
 												a(href='helpers-color.html') Color

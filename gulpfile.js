@@ -136,6 +136,10 @@ gulp.task( 'styledown', function () {
 
     // Helpers
 
+    gulp.src( 'dist/helpers/border.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'border.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
     gulp.src( 'dist/helpers/border-radius.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'border-radius.html' } ) )
         .pipe( gulp.dest( dest ) );
@@ -147,9 +151,9 @@ gulp.task( 'styledown', function () {
     gulp.src( 'dist/helpers/border-width.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'border-width.html' } ) )
         .pipe( gulp.dest( dest ) );
-        
-    gulp.src( 'dist/helpers/border.css' )
-        .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'border.html' } ) )
+ 
+    gulp.src( 'dist/helpers/box-shadow.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'box-shadow.html' } ) )
         .pipe( gulp.dest( dest ) );
         
     gulp.src( 'dist/helpers/clearfix.css' )

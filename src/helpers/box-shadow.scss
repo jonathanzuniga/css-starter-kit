@@ -1,0 +1,60 @@
+@import '../partials/_all';
+
+
+/***
+ * Box shadow:
+ */
+
+@include class_gen(
+	/* Abbreviation */
+	'bxsh',
+
+	/* Property */
+	'box-shadow',
+	
+	/* Property extended */
+	null,
+
+	/* Map */
+	$box-shadow-map
+);
+
+
+/**
+ * Box shadow on hover:
+ * `.bxsh-hover-[#]`
+ *
+ *     @example
+ *     div.bxsh-hover-16 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+
+@each $key, $value in $box-shadow-map {
+	.bxsh-hover-#{ $key } {
+		position: relative;
+
+		transition: opacity $transition-duration $transition-timing-function;
+
+		&:after {
+			box-shadow: #{ $value };
+
+			content: '';
+			opacity: 0;
+
+			position: absolute;
+			top: 0;
+	  		left: 0;
+
+			z-index: -1;
+
+			width: 100%;
+	  		height: 100%;
+
+			transition: opacity $transition-duration $transition-timing-function;
+		}
+
+		&:hover:after,
+		&:focus:after {
+			opacity: 1;
+		}
+	}
+}
