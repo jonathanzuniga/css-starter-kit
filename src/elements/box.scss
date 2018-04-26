@@ -1,0 +1,32 @@
+@import '../partials/_all';
+
+
+/***
+ * Box:
+ */
+
+/**
+ * Standard box:
+ * `.box`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.box
+ *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ */
+
+.box {
+	background-color: $day__box-bg-color;
+	border-width: $box-border-width;
+	border-style: $box-border-style;
+	border-color: $day__box-border-color;
+	border-radius: $box-border-radius;
+	display: block;
+	padding: $box-padding;
+}
+
+.night .box {
+	background-color: $ngt__box-bg-color;
+	border-color: $ngt__box-border-color;
+}

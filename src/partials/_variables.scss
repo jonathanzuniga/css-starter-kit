@@ -54,6 +54,9 @@ $colors:             colors( $color-palette );
 $day__body-color:    color( 'black 90' );
 $ngt__body-color:    color( 'white 90' );
 
+$day__border-color:  color( 'black 075' );
+$ngt__border-color:  color( 'white 075' );
+
 
 // Transition
 
@@ -165,6 +168,21 @@ $pre-border-radius:     $border-radius-base;
 
 $pre-padding-y:         1.5em;
 $pre-padding-x:         1.5em;
+
+
+// Box
+
+$day__box-bg-color:     $day__body-bg-color;
+$ngt__box-bg-color:     $ngt__body-bg-color;
+
+$box-border-width:      0.063rem;
+$box-border-style:      solid;
+
+$day__box-border-color: $day__border-color;
+$ngt__box-border-color: $ngt__border-color;
+
+$box-border-radius:     $border-radius-base;
+$box-padding:           1.25rem;
 
 
 // Se usan los mismo valores para los demas controles de las formas.
@@ -705,8 +723,8 @@ $table__th-text-align:            left;
 $table-border-width:              0.063rem;
 $table-border-style:              solid;
 $table-border-right-style:        none;
-$day__table-border-color:         color( 'black 075' );
-$ngt__table-border-color:         color( 'white 075' );
+$day__table-border-color:         $day__border-color;
+$ngt__table-border-color:         $ngt__border-color;
 
 $day__table__th-bg-color:         transparent;
 $ngt__table__th-bg-color:         transparent;
@@ -736,9 +754,6 @@ $border-map: (
     0: 0,
     1: '0.063rem solid'
 );
-
-$day__border-color: color( 'black 075' );
-$ngt__border-color: color( 'white 075' );
 
 
 // Border radius
@@ -994,7 +1009,8 @@ $flex-direction-map: (
 // Flex grow
 
 $flex-grow-map: (
-    0: 0
+    0: 0,
+    1: 1
 );
 
 
@@ -1188,8 +1204,8 @@ $fsmenu-open-all-transition: opacity          0.5s cubic-bezier( 0.8, 0, 0.55, 0
 
 $tabs-border-bottom-width:                      0.063rem; // 1px
 $tabs-border-bottom-style:                      solid;
-$day__tabs-border-bottom-color:                 color( 'black 075' );
-$ngt__tabs-border-bottom-color:                 color( 'white 075' );
+$day__tabs-border-bottom-color:                 $day__border-color;
+$ngt__tabs-border-bottom-color:                 $ngt__border-color;
 
 $tabs__item-margin:                             0;
 

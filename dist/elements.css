@@ -7,6 +7,14 @@
   padding: 0;
   outline: none; }
 
+*,
+:before,
+:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.9);
@@ -357,6 +365,32 @@ table {
 
 th {
   text-align: left; }
+
+/***
+ * Box:
+ */
+/**
+ * Standard box:
+ * `.box`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.box
+ *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ */
+.box {
+  background-color: #fff;
+  border-width: 0.063rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-radius: 0.25rem;
+  display: block;
+  padding: 1.25rem; }
+
+.night .box {
+  background-color: #272727;
+  border-color: rgba(255, 255, 255, 0.075); }
 
 /***
  * Button:

@@ -93,6 +93,10 @@ gulp.task( 'styledown', function () {
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'base.html' } ) )
         .pipe( gulp.dest( dest ) );
 
+    gulp.src( 'dist/elements/box.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'box.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
     gulp.src( 'dist/elements/button.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'button.html' } ) )
         .pipe( gulp.dest( dest ) );

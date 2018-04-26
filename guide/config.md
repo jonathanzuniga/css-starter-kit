@@ -82,6 +82,8 @@
 											li
 												a(href='elements-base.html') Base
 											li
+												a(href='elements-box.html') Box
+											li
 												a(href='elements-button.html') Button
 											li
 												a(href='elements-button-group.html') Button group
