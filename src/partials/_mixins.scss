@@ -81,7 +81,7 @@
 
 }
 
-@mixin class_gen( $abbreviation, $property, $property-extended, $map ) {
+@mixin class_gen( $abbreviation, $property, $property-extended, $map, $example: 'y' ) {
 
     $example_title: '';
     $selector: '';
@@ -128,13 +128,18 @@
 
                 }
 
-                /**
-                 * #{ $example_title }:
-                 * `.#{ $selector }` `.[size]-#{ $selector }` `.max[size]-#{ $selector }`
-                 *
-                 *     @example
-                 *     div.#{ $selector } Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                @if $example != 'n' {
+
+                    /**
+                     * #{ $example_title }:
+                     * `.#{ $selector }` `.[size]-#{ $selector }` `.max[size]-#{ $selector }`
+                     *
+                     *     @example
+                     *     div.#{ $selector } Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
+
+                }
+
                 @include rule_set( $abbr, $property, $prop-ext, $key, $value );
 
             }

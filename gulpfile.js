@@ -211,8 +211,16 @@ gulp.task( 'styledown', function () {
 
     // Layout
 
+    gulp.src( 'dist/layout/flex-direction.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_layout + 'flex-direction.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
     gulp.src( 'dist/layout/flex-grid.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_layout + 'flex-grid.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
+    gulp.src( 'dist/layout/flex-grow.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_layout + 'flex-grow.html' } ) )
         .pipe( gulp.dest( dest ) );
 
     gulp.src( 'dist/layout/gutter.css' )

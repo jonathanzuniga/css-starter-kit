@@ -2,12 +2,18 @@
  * Flex direction:
  */
 /**
-                 * Flex direction column:
-                 * `.flex-dir-col` `.[size]-flex-dir-col` `.max[size]-flex-dir-col`
-                 *
-                 *     @example
-                 *     div.flex-dir-col Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+ * Flex direction column:
+ * `.flex-dir-col` `.[size]-flex-dir-col` `.max[size]-flex-dir-col`
+ *
+ *     @example
+ *     div.cols.flex-dir-col
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ *         div.col
+ *             div.bgc-teal-20 &nbsp;
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
 .flex-dir-col {
   flex-direction: column; }
 
@@ -451,78 +457,54 @@ html, body {
  * Flex grow:
  */
 /**
-                 * Flex grow 0:
-                 * `.flex-grow-0` `.[size]-flex-grow-0` `.max[size]-flex-grow-0`
-                 *
-                 *     @example
-                 *     div.flex-grow-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+ * Flex grow 0:
+ * `.flex-grow-0` `.[size]-flex-grow-0` `.max[size]-flex-grow-0`
+ *
+ *     @example
+ *     div.cols
+ *         div.col.flex-grow-0
+ *             div.bgc-teal-10 &nbsp;
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
 .flex-grow-0 {
   flex-grow: 0; }
 
-/**
-                 * Flex grow 1:
-                 * `.flex-grow-1` `.[size]-flex-grow-1` `.max[size]-flex-grow-1`
-                 *
-                 *     @example
-                 *     div.flex-grow-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
-.flex-grow-1 {
-  flex-grow: 1; }
-
 @media (min-width: 0) {
   .xs-flex-grow-0 {
-    flex-grow: 0; }
-  .xs-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (max-width: 767px) {
   .maxsm-flex-grow-0 {
-    flex-grow: 0; }
-  .maxsm-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (min-width: 768px) {
   .sm-flex-grow-0 {
-    flex-grow: 0; }
-  .sm-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (max-width: 1023px) {
   .maxmd-flex-grow-0 {
-    flex-grow: 0; }
-  .maxmd-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (min-width: 1024px) {
   .md-flex-grow-0 {
-    flex-grow: 0; }
-  .md-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (max-width: 1279px) {
   .maxlg-flex-grow-0 {
-    flex-grow: 0; }
-  .maxlg-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (min-width: 1280px) {
   .lg-flex-grow-0 {
-    flex-grow: 0; }
-  .lg-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (max-width: 1679px) {
   .maxxl-flex-grow-0 {
-    flex-grow: 0; }
-  .maxxl-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 @media (min-width: 1680px) {
   .xl-flex-grow-0 {
-    flex-grow: 0; }
-  .xl-flex-grow-1 {
-    flex-grow: 1; } }
+    flex-grow: 0; } }
 
 /***
  * Grid:
@@ -2055,52 +2037,52 @@ html, body {
  * Horizontal modifier:
  */
 /**
-                 * Justify content flex-start:
-                 * `.jc-flex-start` `.[size]-jc-flex-start` `.max[size]-jc-flex-start`
-                 *
-                 *     @example
-                 *     div.jc-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Justify content flex-start:
+                     * `.jc-flex-start` `.[size]-jc-flex-start` `.max[size]-jc-flex-start`
+                     *
+                     *     @example
+                     *     div.jc-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .jc-flex-start {
   justify-content: flex-start; }
 
 /**
-                 * Justify content center:
-                 * `.jc-center` `.[size]-jc-center` `.max[size]-jc-center`
-                 *
-                 *     @example
-                 *     div.jc-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Justify content center:
+                     * `.jc-center` `.[size]-jc-center` `.max[size]-jc-center`
+                     *
+                     *     @example
+                     *     div.jc-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .jc-center {
   justify-content: center; }
 
 /**
-                 * Justify content flex-end:
-                 * `.jc-flex-end` `.[size]-jc-flex-end` `.max[size]-jc-flex-end`
-                 *
-                 *     @example
-                 *     div.jc-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Justify content flex-end:
+                     * `.jc-flex-end` `.[size]-jc-flex-end` `.max[size]-jc-flex-end`
+                     *
+                     *     @example
+                     *     div.jc-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .jc-flex-end {
   justify-content: flex-end; }
 
 /**
-                 * Justify content space-between:
-                 * `.jc-space-between` `.[size]-jc-space-between` `.max[size]-jc-space-between`
-                 *
-                 *     @example
-                 *     div.jc-space-between Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Justify content space-between:
+                     * `.jc-space-between` `.[size]-jc-space-between` `.max[size]-jc-space-between`
+                     *
+                     *     @example
+                     *     div.jc-space-between Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .jc-space-between {
   justify-content: space-between; }
 
 /**
-                 * Justify content space-around:
-                 * `.jc-space-around` `.[size]-jc-space-around` `.max[size]-jc-space-around`
-                 *
-                 *     @example
-                 *     div.jc-space-around Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Justify content space-around:
+                     * `.jc-space-around` `.[size]-jc-space-around` `.max[size]-jc-space-around`
+                     *
+                     *     @example
+                     *     div.jc-space-around Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .jc-space-around {
   justify-content: space-around; }
 
@@ -2216,32 +2198,32 @@ html, body {
  * Vertical modifier:
  */
 /**
-                 * Align items flex-start:
-                 * `.ai-flex-start` `.[size]-ai-flex-start` `.max[size]-ai-flex-start`
-                 *
-                 *     @example
-                 *     div.ai-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align items flex-start:
+                     * `.ai-flex-start` `.[size]-ai-flex-start` `.max[size]-ai-flex-start`
+                     *
+                     *     @example
+                     *     div.ai-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .ai-flex-start {
   align-items: flex-start; }
 
 /**
-                 * Align items center:
-                 * `.ai-center` `.[size]-ai-center` `.max[size]-ai-center`
-                 *
-                 *     @example
-                 *     div.ai-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align items center:
+                     * `.ai-center` `.[size]-ai-center` `.max[size]-ai-center`
+                     *
+                     *     @example
+                     *     div.ai-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .ai-center {
   align-items: center; }
 
 /**
-                 * Align items flex-end:
-                 * `.ai-flex-end` `.[size]-ai-flex-end` `.max[size]-ai-flex-end`
-                 *
-                 *     @example
-                 *     div.ai-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align items flex-end:
+                     * `.ai-flex-end` `.[size]-ai-flex-end` `.max[size]-ai-flex-end`
+                     *
+                     *     @example
+                     *     div.ai-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .ai-flex-end {
   align-items: flex-end; }
 
@@ -2318,32 +2300,32 @@ html, body {
     align-items: flex-end; } }
 
 /**
-                 * Align self flex-start:
-                 * `.as-flex-start` `.[size]-as-flex-start` `.max[size]-as-flex-start`
-                 *
-                 *     @example
-                 *     div.as-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align self flex-start:
+                     * `.as-flex-start` `.[size]-as-flex-start` `.max[size]-as-flex-start`
+                     *
+                     *     @example
+                     *     div.as-flex-start Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .as-flex-start {
   align-self: flex-start; }
 
 /**
-                 * Align self center:
-                 * `.as-center` `.[size]-as-center` `.max[size]-as-center`
-                 *
-                 *     @example
-                 *     div.as-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align self center:
+                     * `.as-center` `.[size]-as-center` `.max[size]-as-center`
+                     *
+                     *     @example
+                     *     div.as-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .as-center {
   align-self: center; }
 
 /**
-                 * Align self flex-end:
-                 * `.as-flex-end` `.[size]-as-flex-end` `.max[size]-as-flex-end`
-                 *
-                 *     @example
-                 *     div.as-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 */
+                     * Align self flex-end:
+                     * `.as-flex-end` `.[size]-as-flex-end` `.max[size]-as-flex-end`
+                     *
+                     *     @example
+                     *     div.as-flex-end Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     */
 .as-flex-end {
   align-self: flex-end; }
 

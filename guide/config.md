@@ -55,7 +55,11 @@
 									div.collapse
 										ul.ls-unstyled
 											li
+												a(href='layout-flex-direction.html') Flex direction
+											li
 												a(href='layout-flex-grid.html') Flex grid
+											li
+												a(href='layout-flex-grow.html') Flex grow
 											li
 												a(href='layout-grid.html') Grid
 											li

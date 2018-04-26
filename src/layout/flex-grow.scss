@@ -5,6 +5,18 @@
  * Flex grow:
  */
 
+/**
+ * Flex grow 0:
+ * `.flex-grow-0` `.[size]-flex-grow-0` `.max[size]-flex-grow-0`
+ *
+ *     @example
+ *     div.cols
+ *         div.col.flex-grow-0
+ *             div.bgc-teal-10 &nbsp;
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
+
 @include class_gen(
 	/* Abbreviation */
 	'flex-grow',
@@ -16,5 +28,8 @@
 	null,
 
 	/* Map */
-	$flex-grow-map
+	$flex-grow-map,
+
+	/* Generate example */
+	'n'
 );
