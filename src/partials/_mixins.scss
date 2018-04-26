@@ -93,14 +93,21 @@
 
         @each $prop-ext in $property-extended {
 
-            $prop-ext-r: str_replace( $prop-ext, '-', ' ' );
-            $prop-ext-rename: val_to_class_name( $prop-ext );
+            $prop-ext-r: '';
+            $prop-ext-rename: '';
+
+            @if $prop-ext != null {
+
+                $prop-ext-r: str_replace( $prop-ext, '-', ' ' );
+                $prop-ext-rename: val_to_class_name( $prop-ext );
+
+            }
 
             @each $key, $value in $map {
 
                 $value-r: str_replace( #{ $value }, ' !important', '' );
 
-                @if $prop-ext == '' {
+                @if $prop-ext == '' or $prop-ext == null {
 
                     $example_title:    #{ $prop-r } #{ $value-r };
                     $selector:         #{ $abbr }-#{ $key };
@@ -186,7 +193,7 @@
     $declaration_prop: '';
     $prop-ext-rename: val_to_class_name( $property-extended );
 
-    @if $property-extended == '' {
+    @if $property-extended == '' or $property-extended == null {
 
         $selector:         #{ $size }#{ $abbreviation }-#{ $key };
         $declaration_prop: #{ $property };
@@ -234,7 +241,7 @@
 
         @else {
 
-            @if $prop-contains-a-dash and $property-extended != '' {
+            @if $prop-contains-a-dash and $property-extended != '' and $property-extended != null {
 
                 #{ nth( $prop-split, 1 ) }-#{ $property-extended }-#{ nth( $prop-split, 2 ) }: #{ $value };
 

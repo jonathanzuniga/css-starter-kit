@@ -732,7 +732,7 @@ $ngt__table-striped-bg-color:     color( 'white 05' );
 
 // Border
 
-$borders: (
+$border-map: (
     0: 0,
     1: '0.063rem solid'
 );
@@ -743,7 +743,7 @@ $ngt__border-color: color( 'white 075' );
 
 // Border radius
 
-$border-radii: (
+$border-radius-map: (
     0: 0,
     4: 0.25rem
 );
@@ -751,7 +751,7 @@ $border-radii: (
 
 // Border style
 
-$border-styles: (
+$border-style-map: (
     none:  none,
     solid: solid
 );
@@ -759,7 +759,7 @@ $border-styles: (
 
 // Border width
 
-$border-widths: (
+$border-width-map: (
     0: 0,
     1: 0.063rem,
     2: 0.125rem
@@ -768,7 +768,7 @@ $border-widths: (
 
 // Display
 
-$displays: (
+$display-map: (
     block: block,
     none:  none
 );
@@ -776,7 +776,7 @@ $displays: (
 
 // Float
 
-$floats: (
+$float-map: (
     left:  left,
     right: right,
     none:  none,
@@ -785,7 +785,7 @@ $floats: (
 
 // Font size
 
-$font-sizes: (
+$font-size-map: (
     sm: $font-size-sm,
     lg: $font-size-lg
 );
@@ -793,7 +793,7 @@ $font-sizes: (
 
 // Font weight
 
-$font-weights: (
+$font-weight-map: (
     100: 100, // Thin (Hairline).
     200: 200, // Extra Light (Ultra Light).
     300: 300, // Light.
@@ -808,7 +808,7 @@ $font-weights: (
 
 // Margin
 
-$margins: (
+$margin-map: (
      0: 0       !important,
      4: 0.25rem !important,
      8: 0.50rem !important,
@@ -818,7 +818,7 @@ $margins: (
 
 // Opacity
 
-$opacities: (
+$opacity-map: (
       0: 0,
      50: 0.5,
     100: 1
@@ -827,7 +827,7 @@ $opacities: (
 
 // Padding
 
-$paddings: (
+$padding-map: (
      0: 0       !important,
      4: 0.25rem !important,
      8: 0.50rem !important,
@@ -837,7 +837,7 @@ $paddings: (
 
 // Position
 
-$positions: (
+$position-map: (
     absolute: absolute,
     sticky:   sticky
 );
@@ -845,7 +845,7 @@ $positions: (
 
 // Text align
 
-$text-aligns: (
+$text-align-map: (
     right:   right,
     center:  center,
     left:    left
@@ -854,7 +854,7 @@ $text-aligns: (
 
 // Text transform
 
-$text-transforms: (
+$text-transform-map: (
     capitalize: capitalize,
     lowercase:  lowercase,
     uppercase:  uppercase
@@ -863,7 +863,7 @@ $text-transforms: (
 
 // Visibility
 
-$visibilities: (
+$visibility-map: (
     visible: visible,
     hidden:  hidden
 );
@@ -871,7 +871,7 @@ $visibilities: (
 
 // Width
 
-$widths: (
+$width-map: (
      25:  '25%',
      50:  '50%',
     100: '100%'
@@ -964,7 +964,7 @@ $grid-gap: 1rem !default;
 
 // Horizontal modifier
 
-$justify-contents: (
+$justify-content-map: (
     flex-start:    'flex-start',
     center:        'center',
     flex-end:      'flex-end',
@@ -975,10 +975,27 @@ $justify-contents: (
 
 // Vertical modifier
 
-$align-items: (
+$align-items-map: (
     flex-start: 'flex-start',
     center:     'center',
     flex-end:   'flex-end'
+);
+
+$align-self-map: $align-items-map;
+
+
+// Flex direction
+
+$flex-direction-map: (
+    col: 'column'
+);
+
+
+// Flex grow
+
+$flex-grow-map: (
+    0: 0,
+    1: 1
 );
 
 
