@@ -6,17 +6,19 @@
  * `.modal`
  *
  *     @example
- *     div.doc-h-400px
- *         div.doc-modal.modal.active
- *             div.modal__overlay
- *             div.modal__content
- *                 div.modal__head
+ *     button(id='eg-btn-open-std-modal').btn.btn--secondary Launch standard modal
+ *     div(id='eg-std-modal').modal
+ *         div.modal__overlay
+ *         div.modal__content
+ *             div.bx.card
+ *                 div.card__head
  *                     h4.m-0 Modal title
- *                 div.modal__body
+ *                 div.card__body
  *                     p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.
- *                 div.modal__foot
- *                     button.btn.btn--primary Save changes
- *                     button.btn.btn--secondary Cancel
+ *                 div.card__foot
+ *                     div.card__foot-item.jc-flex-start
+ *                         button.btn.btn--primary Save changes
+ *                         button.btn.btn--secondary Cancel
  */
 .modal {
   display: none;
@@ -49,41 +51,11 @@
   max-width: 640px;
   max-height: calc(100vh - 40px);
   position: relative; }
-
-.modal__head {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  padding: 1rem 1.25rem; }
-
-.night .modal__head {
-  background-color: #272727; }
-
-.modal__head,
-.modal__foot {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative; }
-
-.modal__body {
-  background-color: #fff;
-  padding: 1rem 1.25rem;
-  overflow: auto; }
-
-.night .modal__body {
-  background-color: #272727; }
-
-.modal__foot {
-  background-color: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.075);
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  padding: 1rem 1.25rem; }
-  .modal__foot .btn:not(:last-child) {
-    margin-right: 0.625rem; }
-
-.night .modal__foot {
-  background-color: #272727; }
+  .modal__content .bx,
+  .modal__content .card {
+    display: flex;
+    flex-direction: column; }
+  .modal__content .bx {
+    overflow: auto; }
+  .modal__content .card {
+    overflow: hidden; }

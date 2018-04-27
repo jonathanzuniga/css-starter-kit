@@ -9,32 +9,151 @@
  *     @example
  *     div.cols
  *         div.md-col-6
- *             div.card
- *                 div.card__content.p-16
- *                     div.card__body
- *                         h4 Card title
- *                         p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                         ul.ls-inline.m-0
- *                             li
- *                                 a(href='') First link
- *                             li
- *                                 a(href='') Second link
+ *             div.bx.bxsh-1.card
+ *                 div.card__body
+ *                     h4 Card title
+ *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href='') First link
+ *                         li
+ *                             a(href='') Second link
  */
 .card {
+  max-width: 100%;
+  padding: 0 !important;
+  position: relative; }
+
+/**
+ * Card with an image:
+ * `.card__img`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__img
+ *                     img(src="http://via.placeholder.com/640x480")
+ *                 div.card__body
+ *                     h4 Card title
+ *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href='') First link
+ *                         li
+ *                             a(href='') Second link
+ */
+.card__img {
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  display: block; }
+  .card__img:first-child img {
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    display: block;
+    max-width: 100%; }
+
+/**
+ * Card head and card foot:
+ * `.card__head` `.card__foot` `card__foot-item`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__head
+ *                     h4.m-0 Card title
+ *                 div.card__body
+ *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                 div.card__foot
+ *                     div.card__foot-item
+ *                         a(href='') First link
+ *                     div.card__foot-item
+ *                         a(href='') Second link
+ */
+.card__head {
   background-color: #fff;
-  border-width: 0.063rem;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  box-shadow: 0 0.063em 0.063em rgba(0, 0, 0, 0.05);
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
-  .card:hover {
-    box-shadow: 0 0.063em 1em rgba(0, 0, 0, 0.15); }
+  border-bottom-width: 0.063rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.075);
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  padding: 1em 1.25em; }
 
-.night .card {
+.card__head-item,
+.card__foot-item {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center; }
+
+.night .card__head {
   background-color: #272727;
-  border-color: rgba(255, 255, 255, 0.1); }
+  border-bottom-color: rgba(255, 255, 255, 0.075); }
 
+.card__head,
+.card__foot {
+  display: flex;
+  align-items: stretch;
+  position: relative; }
+
+.card__body {
+  background-color: transparent;
+  padding: 1em 1.25em;
+  position: relative;
+  overflow: auto; }
+
+.night .card__body {
+  background-color: transparent; }
+
+.card__foot {
+  background-color: #fff;
+  border-top-width: 0.063rem;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.075);
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+  .card__foot .btn:not(:first-child) {
+    margin-left: 0.625rem; }
+
+.night .card__foot {
+  background-color: #272727;
+  border-top-color: rgba(255, 255, 255, 0.075); }
+
+.card__foot-item {
+  justify-content: center;
+  padding: 1em 1.25em; }
+  .card__foot-item:not(:first-child) {
+    border-left-width: 0.063rem;
+    border-left-style: solid;
+    border-left-color: rgba(0, 0, 0, 0.075); }
+
+.night .card__foot-item:not(:first-child) {
+  border-left-color: rgba(255, 255, 255, 0.075); }
+
+/**
+ * Card head with an icon:
+ * `.card__head-item`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__head
+ *                     div.card__head-item
+ *                         h4.m-0 Card title
+ *                     div.card__head-item.fxg-0
+ *                         a(href='#!')
+ *                             span.ion-ios-arrow-down
+ *                 div.card__body
+ *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                 div.card__foot
+ *                     div.card__foot-item
+ *                         a(href='') First link
+ *                     div.card__foot-item
+ *                         a(href='') Second link
+ */
 /***
  * Collapse:
  */
@@ -474,7 +593,7 @@
  * `.menu`
  *
  *     @example
- *     ul.menu.flex-dir-col
+ *     ul.menu.fxd-col
  *         li.active
  *             a(href='#') Link 1
  *         li
@@ -506,7 +625,7 @@
  * `.menu--pills`
  *
  *     @example
- *     ul.menu.menu--pills.flex-dir-col
+ *     ul.menu.menu--pills.fxd-col
  *         li.active
  *             a(href='#') Link 1
  *         li
@@ -547,17 +666,19 @@
  * `.modal`
  *
  *     @example
- *     div.doc-h-400px
- *         div.doc-modal.modal.active
- *             div.modal__overlay
- *             div.modal__content
- *                 div.modal__head
+ *     button(id='eg-btn-open-std-modal').btn.btn--secondary Launch standard modal
+ *     div(id='eg-std-modal').modal
+ *         div.modal__overlay
+ *         div.modal__content
+ *             div.bx.card
+ *                 div.card__head
  *                     h4.m-0 Modal title
- *                 div.modal__body
+ *                 div.card__body
  *                     p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.
- *                 div.modal__foot
- *                     button.btn.btn--primary Save changes
- *                     button.btn.btn--secondary Cancel
+ *                 div.card__foot
+ *                     div.card__foot-item.jc-flex-start
+ *                         button.btn.btn--primary Save changes
+ *                         button.btn.btn--secondary Cancel
  */
 .modal {
   display: none;
@@ -590,44 +711,14 @@
   max-width: 640px;
   max-height: calc(100vh - 40px);
   position: relative; }
-
-.modal__head {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  padding: 1rem 1.25rem; }
-
-.night .modal__head {
-  background-color: #272727; }
-
-.modal__head,
-.modal__foot {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative; }
-
-.modal__body {
-  background-color: #fff;
-  padding: 1rem 1.25rem;
-  overflow: auto; }
-
-.night .modal__body {
-  background-color: #272727; }
-
-.modal__foot {
-  background-color: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.075);
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  padding: 1rem 1.25rem; }
-  .modal__foot .btn:not(:last-child) {
-    margin-right: 0.625rem; }
-
-.night .modal__foot {
-  background-color: #272727; }
+  .modal__content .bx,
+  .modal__content .card {
+    display: flex;
+    flex-direction: column; }
+  .modal__content .bx {
+    overflow: auto; }
+  .modal__content .card {
+    overflow: hidden; }
 
 /***
  * Navbar:

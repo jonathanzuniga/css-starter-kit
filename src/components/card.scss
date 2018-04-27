@@ -12,34 +12,185 @@
  *     @example
  *     div.cols
  *         div.md-col-6
- *             div.card
- *                 div.card__content.p-16
- *                     div.card__body
- *                         h4 Card title
- *                         p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                         ul.ls-inline.m-0
- *                             li
- *                                 a(href='') First link
- *                             li
- *                                 a(href='') Second link
+ *             div.bx.bxsh-1.card
+ *                 div.card__body
+ *                     h4 Card title
+ *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href='') First link
+ *                         li
+ *                             a(href='') Second link
  */
+
 .card {
-	background-color: $day__card-bg-color;
-	border-width: $card-border-width;
-	border-style: $card-border-style;
-	border-color: $day__card-border-color;
-	border-radius: $card-border-radius;
+	max-width: 100%;
+	padding: 0 !important;
+	position: relative;
+}
+
+/**
+ * Card with an image:
+ * `.card__img`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__img
+ *                     img(src="http://via.placeholder.com/640x480")
+ *                 div.card__body
+ *                     h4 Card title
+ *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                     ul.ls-inline.m-0
+ *                         li
+ *                             a(href='') First link
+ *                         li
+ *                             a(href='') Second link
+ */
+
+.card__img {
+	border-top-right-radius: $border-radius-base;
+	border-top-left-radius: $border-radius-base;
 	
-	box-shadow: $card-box-shadow;
+	display: block;
 
-	transition: $card-transition;
+	&:first-child {
+		img {
+			border-top-right-radius: $border-radius-base;
+			border-top-left-radius: $border-radius-base;
+			
+			display: block;
 
-	&:hover {
-		box-shadow: $card-hover-box-shadow;
+			max-width: 100%;
+		}
 	}
 }
 
-.night .card {
-	background-color: $ngt__card-bg-color;
-	border-color: $ngt__card-border-color;
+/**
+ * Card head and card foot:
+ * `.card__head` `.card__foot` `card__foot-item`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__head
+ *                     h4.m-0 Card title
+ *                 div.card__body
+ *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                 div.card__foot
+ *                     div.card__foot-item
+ *                         a(href='') First link
+ *                     div.card__foot-item
+ *                         a(href='') Second link
+ */
+
+.card__head {
+    background-color: $day__card-head-bg-color;
+
+    border-bottom-width: $card-border-width;
+    border-bottom-style: $card-border-style;
+    border-bottom-color: $day__card-border-color;
+    
+    border-top-right-radius: $card-head-border-top-right-radius;
+    border-top-left-radius: $card-head-border-top-left-radius;
+    
+    padding: $card-head-padding;
 }
+
+.card__head-item,
+.card__foot-item {
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-items: center;
+}
+
+.night .card__head {
+    background-color: $ngt__card-head-bg-color;
+    border-bottom-color: $ngt__card-border-color;
+}
+
+.card__head,
+.card__foot {
+    display: flex;
+    // flex-shrink: 0;
+    // justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+}
+
+.card__body {
+    background-color: $day__card-body-bg-color;
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    padding: $card-body-padding;
+    position: relative;
+    overflow: auto;
+}
+
+.night .card__body {
+    background-color: $ngt__card-body-bg-color;
+}
+
+.card__foot {
+    background-color: $day__card-foot-bg-color;
+
+    border-top-width: $card-border-width;
+    border-top-style: $card-border-style;
+    border-top-color: $day__card-border-color;
+    
+    border-bottom-right-radius: $card-foot-border-bottom-right-radius;
+    border-bottom-left-radius: $card-foot-border-bottom-left-radius;
+
+    .btn:not(:first-child) {
+        margin-left: $card-foot-button-not-first-child-margin-left;
+    }
+}
+
+.night .card__foot {
+    background-color: $ngt__card-foot-bg-color;
+    border-top-color: $ngt__card-border-color;
+}
+
+.card__foot-item {
+	justify-content: center;
+    padding: $card-foot-item-padding;
+
+    &:not(:first-child) {
+    	border-left-width: $card-border-width;
+    	border-left-style: $card-border-style;
+    	border-left-color: $day__card-border-color;
+    }
+}
+
+.night .card__foot-item {
+    &:not(:first-child) {
+    	border-left-color: $ngt__card-border-color;
+    }
+}
+
+/**
+ * Card head with an icon:
+ * `.card__head-item`
+ *
+ *     @example
+ *     div.cols
+ *         div.md-col-6
+ *             div.bx.bxsh-1.card
+ *                 div.card__head
+ *                     div.card__head-item
+ *                         h4.m-0 Card title
+ *                     div.card__head-item.fxg-0
+ *                         a(href='#!')
+ *                             span.ion-ios-arrow-down
+ *                 div.card__body
+ *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
+ *                 div.card__foot
+ *                     div.card__foot-item
+ *                         a(href='') First link
+ *                     div.card__foot-item
+ *                         a(href='') Second link
+ */

@@ -63,40 +63,46 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <div class="doc-h-400px">
-                        <div class="doc-modal modal active">
-                          <div class="modal__overlay"></div>
-                          <div class="modal__content">
-                            <div class="modal__head">
+                      <button id="eg-btn-open-std-modal" class="btn btn--secondary">Launch standard modal</button>
+                      <div id="eg-std-modal" class="modal">
+                        <div class="modal__overlay"></div>
+                        <div class="modal__content">
+                          <div class="bx card">
+                            <div class="card__head">
                               <h4 class="m-0">Modal title</h4>
                             </div>
-                            <div class="modal__body">
+                            <div class="card__body">
                               <p>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.</p>
                             </div>
-                            <div class="modal__foot">
-                              <button class="btn btn--primary">Save changes</button>
-                              <button class="btn btn--secondary">Cancel</button>
+                            <div class="card__foot">
+                              <div class="card__foot-item jc-flex-start">
+                                <button class="btn btn--primary">Save changes</button>
+                                <button class="btn btn--secondary">Cancel</button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-h-400px&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;doc-modal modal active&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__overlay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__content&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__head&quot;</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-btn-open-std-modal&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Launch standard modal<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-std-modal&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__overlay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bx card&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__head&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;m-0&quot;</span>&gt;</span>Modal title<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__body&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__body&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis
           venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique
           convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod
           lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           Mauris vehicula pellentesque commodo.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;modal__foot&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__foot&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;card__foot-item jc-flex-start&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--secondary&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>

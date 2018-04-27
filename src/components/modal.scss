@@ -10,17 +10,19 @@
  * `.modal`
  *
  *     @example
- *     div.doc-h-400px
- *         div.doc-modal.modal.active
- *             div.modal__overlay
- *             div.modal__content
- *                 div.modal__head
+ *     button(id='eg-btn-open-std-modal').btn.btn--secondary Launch standard modal
+ *     div(id='eg-std-modal').modal
+ *         div.modal__overlay
+ *         div.modal__content
+ *             div.bx.card
+ *                 div.card__head
  *                     h4.m-0 Modal title
- *                 div.modal__body
+ *                 div.card__body
  *                     p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.
- *                 div.modal__foot
- *                     button.btn.btn--primary Save changes
- *                     button.btn.btn--secondary Cancel
+ *                 div.card__foot
+ *                     div.card__foot-item.jc-flex-start
+ *                         button.btn.btn--primary Save changes
+ *                         button.btn.btn--secondary Cancel
  */
 .modal {
     display: none;
@@ -64,53 +66,18 @@
     max-height: calc(100vh - 40px);
 
     position: relative;
-}
 
-.modal__head {
-    background-color: $day__modal-head-bg-color;
-    border-bottom: $modal-head-border-bottom;
-    border-top-right-radius: $modal-head-border-top-right-radius;
-    border-top-left-radius: $modal-head-border-top-left-radius;
-    padding: $modal-head-padding;
-}
-
-.night .modal__head {
-    background-color: $ngt__modal-head-bg-color;
-}
-
-.modal__head,
-.modal__foot {
-    display: flex;
-    flex-shrink: 0;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-}
-
-.modal__body {
-    background-color: $day__modal-body-bg-color;
-    // flex-grow: 1;
-    // flex-shrink: 1;
-    padding: $modal-body-padding;
-    overflow: auto;
-}
-
-.night .modal__body {
-    background-color: $ngt__modal-body-bg-color;
-}
-
-.modal__foot {
-    background-color: $day__modal-foot-bg-color;
-    border-top: $modal-foot-border-top;
-    border-bottom-right-radius: $modal-foot-border-bottom-right-radius;
-    border-bottom-left-radius: $modal-foot-border-bottom-left-radius;
-    padding: $modal-foot-padding;
-
-    .btn:not(:last-child) {
-        margin-right: $modal-foot-button-not-last-child-margin-right;
+    .bx,
+    .card {
+        display: flex;
+        flex-direction: column;
     }
-}
 
-.night .modal__foot {
-    background-color: $ngt__modal-foot-bg-color;
+    .bx {
+        overflow: auto;
+    }
+
+    .card {
+        overflow: hidden;
+    }
 }
