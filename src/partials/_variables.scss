@@ -1144,12 +1144,24 @@ $ngt__menu-pills__item-active-bg-color: color( 'cerulean 90' );
 
 // Modal
 
-$modal-z-index: 1000;
+$modal-z-index:                -1;
+$modal-active-z-index:          1000;
 
-$day__modal-overlay-bg-color: color( 'black 50' );
-$ngt__modal-overlay-bg-color: color( 'black 50' );
+$day__modal-overlay-bg-color:   color( 'black 50' );
+$ngt__modal-overlay-bg-color:   color( 'black 50' );
 
-$modal-content-max-width: 640px;
+$modal-content-max-width:       640px;
+
+$modal-overlay-transition:      opacity    0.3s $transition-timing-function,
+                                visibility 0.3s $transition-timing-function;
+
+$modal-content-transition:      opacity    0.1s $transition-timing-function,
+                                transform  0.1s $transition-timing-function,
+                                visibility 0.1s $transition-timing-function;
+
+$modal-show-content-transition: opacity    0.2s $transition-timing-function,
+                                transform  0.2s $transition-timing-function,
+                                visibility 0.2s $transition-timing-function;
 
 
 // Navbar
@@ -1183,19 +1195,21 @@ $navbar-dark__item-active__a-color: $ngt__body-color;
 
 // Full screen menu
 
-$fsmenu-transition:          opacity          0.5s step-end, 
-                             transform        0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 ), 
-                             visibility       0.5s step-end, 
+$fsmenu-transition:          opacity          0.5s step-end,
+                             transform        0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 ),
+                             visibility       0.5s step-end,
                              background-color 0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 );
+
 $fsmenu-all-transition:      opacity          0.4s cubic-bezier( 0.8, 0, 0.55, 0.94 );
 
 $day__fsmenu-open-bg-color:  $day__body-bg-color;
 $ngt__fsmenu-open-bg-color:  $ngt__body-bg-color;
 
-$fsmenu-open-transition:     opacity          0.5s step-start, 
-                             transform        0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 ), 
-                             visibility       0.5s step-start, 
+$fsmenu-open-transition:     opacity          0.5s step-start,
+                             transform        0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 ),
+                             visibility       0.5s step-start,
                              background-color 0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 );
+
 $fsmenu-open-all-transition: opacity          0.5s cubic-bezier( 0.8, 0, 0.55, 0.94 ) 0.5s;
 
 

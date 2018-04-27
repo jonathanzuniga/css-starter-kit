@@ -353,11 +353,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  width: 100%;
+  height: 100%;
   z-index: 100; }
 
 .night .drawer-overlay {
@@ -681,21 +681,34 @@
  *                         button.btn.btn--secondary Cancel
  */
 .modal {
-  display: none;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
-  position: fixed;
-  z-index: 1000; }
-  .modal.active {
-    display: flex; }
+  z-index: -1; }
+  .modal.show {
+    z-index: 1000; }
+    .modal.show .modal__overlay {
+      opacity: 0.5;
+      visibility: visible; }
+    .modal.show .modal__content {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s ease-out; }
 
 .modal__overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute; }
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  width: 100%;
+  height: 100%; }
 
 .modal,
 .modal__overlay {
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -710,7 +723,11 @@
   margin: 0 auto;
   max-width: 640px;
   max-height: calc(100vh - 40px);
-  position: relative; }
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  transform: scale(1.05);
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out, visibility 0.1s ease-out; }
   .modal__content .bx,
   .modal__content .card {
     display: flex;

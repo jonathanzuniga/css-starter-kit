@@ -25,28 +25,50 @@
  *                         button.btn.btn--secondary Cancel
  */
 .modal {
-    display: none;
-    
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
     overflow: hidden;
-    position: fixed;
 
     z-index: $modal-z-index;
 
-    &.active {
-        display: flex;
+    &.show {
+        z-index: $modal-active-z-index;
+
+        .modal__overlay {
+            opacity: 0.5;
+            visibility: visible;
+        }
+
+        .modal__content {
+            opacity: 1;
+            visibility: visible;
+
+            transform: scale(1);
+
+            transition: $modal-show-content-transition
+        }
     }
 }
 
 .modal__overlay {
     background-color: $day__modal-overlay-bg-color;
-    position: absolute;
+
+    opacity: 0;
+    visibility: hidden;
+
+    overflow: hidden;
+
+    transition: $modal-overlay-transition;
+
+    width: 100%;
+    height: 100%;
 }
 
 .modal,
 .modal__overlay {
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -65,7 +87,14 @@
     max-width: $modal-content-max-width;
     max-height: calc(100vh - 40px);
 
+    opacity: 0;
+    visibility: hidden;
+
     position: relative;
+
+    transform: scale(1.05);
+
+    transition: $modal-content-transition;
 
     .bx,
     .card {

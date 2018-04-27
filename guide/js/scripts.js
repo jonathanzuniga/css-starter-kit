@@ -27,7 +27,7 @@ $(function() {
 
 	$( '#eg-btn-open-std-modal, #eg-std-modal .btn, #eg-std-modal .modal__overlay' ).click( function () {
 
-		$( '#eg-std-modal' ).toggleClass( 'active' );
+		$( '#eg-std-modal' ).toggleClass( 'show' );
 
 	} );
 
