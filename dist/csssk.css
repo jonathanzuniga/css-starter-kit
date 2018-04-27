@@ -269,7 +269,7 @@
  * Standard drawer:
  *
  *     @example
- *     div.drawer-wrapper
+ *     div.drawer-wrap
  *         input(type='checkbox', id='eg-drawer-top').drawer-toggle.drawer-toggle--top
  *         input(type='checkbox', id='eg-drawer-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-bottom').drawer-toggle.drawer-toggle--bottom
@@ -296,7 +296,7 @@
  *                     label(for='eg-drawer-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-left').btn.btn--secondary Left
  */
-.drawer-wrapper {
+.drawer-wrap {
   overflow: hidden;
   position: relative; }
 
@@ -417,7 +417,7 @@
  * `.drawer--push`
  *
  *     @example
- *     div.drawer-wrapper
+ *     div.drawer-wrap
  *         input(type='checkbox', id='eg-drawer-with-push-top').drawer-toggle.drawer-toggle--top
  *         input(type='checkbox', id='eg-drawer-with-push-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-with-push-bottom').drawer-toggle.drawer-toggle--bottom
@@ -552,7 +552,7 @@
  * `.drawer--overlap`
  *
  *     @example
- *     div.drawer-wrapper
+ *     div.drawer-wrap
  *         input(type='checkbox', id='eg-drawer-with-overlap-top').drawer-toggle.drawer-toggle--top
  *         input(type='checkbox', id='eg-drawer-with-overlap-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-with-overlap-bottom').drawer-toggle.drawer-toggle--bottom
@@ -670,7 +670,7 @@
  *     div(id='eg-std-modal').modal
  *         div.modal__overlay
  *         div.modal__content
- *             div.bx.card
+ *             div.bx.card.bd-0
  *                 div.card__head
  *                     h4.m-0 Modal title
  *                 div.card__body
@@ -689,22 +689,14 @@
   .modal.show {
     z-index: 1000; }
     .modal.show .modal__overlay {
-      opacity: 0.5;
+      opacity: 0.5; }
+    .modal.show .modal__overlay,
+    .modal.show .modal__content {
       visibility: visible; }
     .modal.show .modal__content {
       opacity: 1;
-      visibility: visible;
       transform: scale(1);
       transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s ease-out; }
-
-.modal__overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
-  width: 100%;
-  height: 100%; }
 
 .modal,
 .modal__overlay {
@@ -713,6 +705,18 @@
   right: 0;
   bottom: 0;
   left: 0; }
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  width: 100%;
+  height: 100%; }
+
+.modal__overlay,
+.modal__content {
+  opacity: 0;
+  visibility: hidden; }
 
 .night .modal__overlay {
   background-color: rgba(0, 0, 0, 0.5); }
@@ -723,8 +727,6 @@
   margin: 0 auto;
   max-width: 640px;
   max-height: calc(100vh - 40px);
-  opacity: 0;
-  visibility: hidden;
   position: relative;
   transform: scale(1.05);
   transition: opacity 0.1s ease-out, transform 0.1s ease-out, visibility 0.1s ease-out; }
@@ -3667,7 +3669,7 @@ th {
  *                     label(for='eg-switch-checked').switch__lbl
  */
 .switch {
-  display: flex; }
+  display: inline-flex; }
 
 .switch__input {
   opacity: 0;

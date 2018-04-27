@@ -14,7 +14,7 @@
  *     div(id='eg-std-modal').modal
  *         div.modal__overlay
  *         div.modal__content
- *             div.bx.card
+ *             div.bx.card.bd-0
  *                 div.card__head
  *                     h4.m-0 Modal title
  *                 div.card__body
@@ -38,32 +38,21 @@
 
         .modal__overlay {
             opacity: 0.5;
+        }
+
+        .modal__overlay,
+        .modal__content {
             visibility: visible;
         }
 
         .modal__content {
             opacity: 1;
-            visibility: visible;
 
-            transform: scale(1);
+            transform: $modal-show-content-transform;
 
-            transition: $modal-show-content-transition
+            transition: $modal-show-content-transition;
         }
     }
-}
-
-.modal__overlay {
-    background-color: $day__modal-overlay-bg-color;
-
-    opacity: 0;
-    visibility: hidden;
-
-    overflow: hidden;
-
-    transition: $modal-overlay-transition;
-
-    width: 100%;
-    height: 100%;
 }
 
 .modal,
@@ -73,6 +62,23 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.modal__overlay {
+    background-color: $day__modal-overlay-bg-color;
+
+    overflow: hidden;
+
+    transition: $modal-overlay-transition;
+
+    width: 100%;
+    height: 100%;
+}
+
+.modal__overlay,
+.modal__content {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .night .modal__overlay {
@@ -85,14 +91,11 @@
 
     margin: 0 auto;
     max-width: $modal-content-max-width;
-    max-height: calc(100vh - 40px);
-
-    opacity: 0;
-    visibility: hidden;
+    max-height: $modal-content-max-height;
 
     position: relative;
 
-    transform: scale(1.05);
+    transform: $modal-content-transform;
 
     transition: $modal-content-transition;
 
