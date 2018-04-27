@@ -31,10 +31,14 @@
 
     overflow: hidden;
 
+    transition: $modal-transition;
+
     z-index: $modal-z-index;
 
     &.show {
-        z-index: $modal-active-z-index;
+        transition: $modal-show-transition;
+
+        z-index: $modal-show-z-index;
 
         .modal__overlay {
             opacity: 0.5;

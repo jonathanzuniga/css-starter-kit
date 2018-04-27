@@ -25,8 +25,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: z-index 0.3s step-end;
   z-index: -1; }
   .modal.show {
+    transition: z-index 0.3s step-start;
     z-index: 1000; }
     .modal.show .modal__overlay {
       opacity: 0.5; }
