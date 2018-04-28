@@ -94,6 +94,8 @@
 											li
 												a(href='elements-input-group.html') Input group
 											li
+												a(href='elements-item-group.html') Item group
+											li
 												a(href='elements-list.html') List
 											li
 												a(href='elements-switch.html') Switch
@@ -172,8 +174,8 @@
 											li
 												a(href='components-tabs.html') Tabs
 
-								p.m-top-16
-								    div.switch.switch--sm
+								div
+								    div.doc-switch-night-mode.switch.switch--sm
 									    input(id='switch-night-mode', type='checkbox').switch__input
 									    label(for='switch-night-mode', id='lbl-night-mode').switch__lbl
 										    span.switch__txt

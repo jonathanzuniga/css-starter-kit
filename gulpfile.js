@@ -117,6 +117,10 @@ gulp.task( 'styledown', function () {
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'input-group.html' } ) )
         .pipe( gulp.dest( dest ) );
 
+    gulp.src( 'dist/elements/item-group.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'item-group.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
     gulp.src( 'dist/elements/list.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'list.html' } ) )
         .pipe( gulp.dest( dest ) );

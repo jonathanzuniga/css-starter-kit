@@ -202,6 +202,7 @@ small {
   font-size: 0.75em; }
 
 img {
+  display: block;
   max-width: 100%; }
 
 /**
@@ -1957,6 +1958,98 @@ th {
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em; }
 
+/***
+ * Item group:
+ */
+/**
+ * Standard item group:
+ * `.item-group`
+ *
+ *     @example
+ *     div.item-group
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+.item-group {
+  display: flex;
+  align-items: flex-start;
+  padding: 0; }
+  .item-group:not(:last-child) {
+    border-bottom-width: 0.063rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.075);
+    margin-bottom: 1em;
+    padding-bottom: 1em; }
+
+.night .item-group:not(:last-child) {
+  border-bottom-color: rgba(255, 255, 255, 0.075); }
+
+.item-group__lbl {
+  background-color: inherit;
+  color: inherit;
+  padding: 1em 1.25em;
+  text-align: center; }
+
+.night .item-group__lbl {
+  background-color: inherit;
+  color: inherit; }
+
+.item {
+  display: block; }
+  .item:not(:first-child) {
+    margin-left: 0.625em; }
+
+/**
+ * Multiple item groups:
+ * `.item-group`
+ *
+ *     @example
+ *     div.item-group
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
+/**
+ * Vertical center item:
+ *
+ *     @example
+ *     div.item-group.ai-center
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group.ai-center
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group.ai-center
+ *         div.item
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ */
 /***
  * List:
  */
