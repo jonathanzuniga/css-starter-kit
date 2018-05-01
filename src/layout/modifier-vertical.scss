@@ -5,6 +5,36 @@
  * Vertical modifier:
  */
 
+/**
+ * Align items flex start:
+ * `.ai-flex-start` `.[size]-ai-flex-start` `.max[size]-ai-flex-start`
+ *
+ *     @example
+ *     div.cols.ai-flex-start.doc-h-100px
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Align items center:
+ * `.ai-center` `.[size]-ai-center` `.max[size]-ai-center`
+ *
+ *     @example
+ *     div.cols.ai-center.doc-h-100px
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Align items flex end:
+ * `.ai-flex-end` `.[size]-ai-flex-end` `.max[size]-ai-flex-end`
+ *
+ *     @example
+ *     div.cols.ai-flex-end.doc-h-100px
+ *         div.col
+ *             div.bgc-teal-10 &nbsp;
+ */
+
 @include class_gen(
 	/* Abbreviation */
 	'ai',
@@ -16,8 +46,41 @@
 	null,
 
 	/* Map */
-	$align-items-map
+	$align-items-map,
+
+	/* Generate example */
+	'n'
 );
+
+/**
+ * Align self flex start:
+ * `.as-flex-start` `.[size]-as-flex-start` `.max[size]-as-flex-start`
+ *
+ *     @example
+ *     div.cols.doc-h-100px
+ *         div.col.as-flex-start
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Align self center:
+ * `.as-center` `.[size]-as-center` `.max[size]-as-center`
+ *
+ *     @example
+ *     div.cols.doc-h-100px
+ *         div.col.as-center
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Align self flex end:
+ * `.as-flex-end` `.[size]-as-flex-end` `.max[size]-as-flex-end`
+ *
+ *     @example
+ *     div.cols.doc-h-100px
+ *         div.col.as-flex-end
+ *             div.bgc-teal-10 &nbsp;
+ */
 
 @include class_gen(
 	/* Abbreviation */
@@ -30,5 +93,8 @@
 	null,
 
 	/* Map */
-	$align-self-map
+	$align-self-map,
+
+	/* Generate example */
+	'n'
 );

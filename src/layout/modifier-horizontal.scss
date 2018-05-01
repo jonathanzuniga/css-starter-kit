@@ -5,6 +5,36 @@
  * Horizontal modifier:
  */
 
+/**
+ * Justify content flex start:
+ * `.jc-flex-start` `.[size]-jc-flex-start` `.max[size]-jc-flex-start`
+ *
+ *     @example
+ *     div.cols.jc-flex-start
+ *         div.col-4
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Justify content center:
+ * `.jc-center` `.[size]-jc-center` `.max[size]-jc-center`
+ *
+ *     @example
+ *     div.cols.jc-center
+ *         div.col-4
+ *             div.bgc-teal-10 &nbsp;
+ */
+
+/**
+ * Justify content flex end:
+ * `.jc-flex-end` `.[size]-jc-flex-end` `.max[size]-jc-flex-end`
+ *
+ *     @example
+ *     div.cols.jc-flex-end
+ *         div.col-4
+ *             div.bgc-teal-10 &nbsp;
+ */
+
 @include class_gen(
 	/* Abbreviation */
 	'jc',
@@ -16,5 +46,8 @@
 	null,
 
 	/* Map */
-	$justify-content-map
+	$justify-content-map,
+
+	/* Generate example */
+	'n'
 );
