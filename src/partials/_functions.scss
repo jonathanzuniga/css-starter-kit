@@ -155,7 +155,7 @@
 
     @if $value == 0 { @return 0 }
 
-    @return ( $value / $base ) + 0em;
+    @return make_unit( $value / $base, em );
 
 }
 
