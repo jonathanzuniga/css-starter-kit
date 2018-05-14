@@ -112,16 +112,12 @@
                     $example_title:    #{ $prop-r } #{ $value-r };
                     $selector:         #{ $abbr }-#{ $key };
 
-                }
-
-                @else if $prop-ext == 'y' or $prop-ext == 'x' {
+                } @else if $prop-ext == 'y' or $prop-ext == 'x' {
 
                     $example_title:    #{ $prop-r } #{ $value-r };
                     $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
 
-                }
-
-                @else {
+                } @else {
 
                     $example_title:    #{ $prop-r } #{ $prop-ext-r } #{ $value-r };
                     $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
