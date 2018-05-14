@@ -203,16 +203,12 @@
         $selector:         #{ $size }#{ $abbreviation }-#{ $key };
         $declaration_prop: #{ $property };
 
-    }
-
-    @else if $property-extended == 'y' or $property-extended == 'x' {
+    } @else if $property-extended == 'y' or $property-extended == 'x' {
 
         $selector:         #{ $size }#{ $abbreviation }-#{ $prop-ext-rename }-#{ $key };
         $declaration_prop: #{ $property };
 
-    }
-
-    @else {
+    } @else {
 
         $selector:         #{ $size }#{ $abbreviation }-#{ $prop-ext-rename }-#{ $key };
         $declaration_prop: #{ $property }-#{ $property-extended };
@@ -232,15 +228,31 @@
 
         @if $property-extended == 'y' {
 
-            #{ $declaration_prop }-top: #{ $value };
-            #{ $declaration_prop }-bottom: #{ $value };
+            @if $prop-contains-a-dash {
 
-        }
+                #{ nth( $prop-split, 1 ) }-top-#{ nth( $prop-split, 2 ) }: #{ $value };
+                #{ nth( $prop-split, 1 ) }-bottom-#{ nth( $prop-split, 2 ) }: #{ $value };
 
-        @else if $property-extended == 'x' {
+            } @else {
 
-            #{ $declaration_prop }-right: #{ $value };
-            #{ $declaration_prop }-left: #{ $value };
+                #{ $declaration_prop }-top: #{ $value };
+                #{ $declaration_prop }-bottom: #{ $value };
+
+            }
+
+        } @else if $property-extended == 'x' {
+
+            @if $prop-contains-a-dash {
+
+                #{ nth( $prop-split, 1 ) }-right-#{ nth( $prop-split, 2 ) }: #{ $value };
+                #{ nth( $prop-split, 1 ) }-left-#{ nth( $prop-split, 2 ) }: #{ $value };
+
+            } @else {
+
+                #{ $declaration_prop }-right: #{ $value };
+                #{ $declaration_prop }-left: #{ $value };
+
+            }
 
         }
 
@@ -250,9 +262,7 @@
 
                 #{ nth( $prop-split, 1 ) }-#{ $property-extended }-#{ nth( $prop-split, 2 ) }: #{ $value };
 
-            }
-
-            @else {
+            } @else {
 
                 #{ $declaration_prop }: #{ $value };
 
