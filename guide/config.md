@@ -24,7 +24,7 @@
 ### Body
 
 	div.container-fluid
-		div.cols
+		div.row
 			div.col
 				nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
 					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
@@ -38,16 +38,16 @@
 							li.navbar__item
 								a(href='layout-flex-grid.html').navbar__a Documentation
 
-		div.cols
+		div.row
 			div.doc-main.xs-col-12.md-col-10.xl-col-11
-				div.doc-main__content.cols
+				div.doc-main__content.row
 					div.md-col-12.xl-col-12
 						div(sg-content).sg-container
 
 			div.doc-sidebar.xs-col-12.md-col-2.xl-col-1.maxmd-fsmenu
-				div.doc-sidebar__content.cols
+				div.doc-sidebar__content.row
 					div.col
-						div.cols.maxmd-ta-center
+						div.row.maxmd-ta-center
 							div.col-12
 								div
 									input(id='doc-sidebar-collapse-toggle-1', name='doc-sidebar-collapse', type='radio').collapse-toggle

@@ -6,7 +6,7 @@
  * `.fxd-col` `.[size]-fxd-col` `.max[size]-fxd-col`
  *
  *     @example
- *     div.cols.fxd-col
+ *     div.row.fxd-col
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  *         div.col
@@ -60,7 +60,7 @@ html, body {
   margin: 0;
   padding: 0; }
 
-.cols {
+.row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -1rem;
@@ -139,7 +139,7 @@ html, body {
  *
  *     @example
  *     div.container.bd-1.p-y-16
- *         div.cols
+ *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
@@ -154,7 +154,7 @@ html, body {
  *
  *     @example
  *     div.container-fluid.bd-1.p-y-16
- *         div.cols
+ *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
@@ -169,15 +169,15 @@ html, body {
 
 /**
  * Columns:
- * Remember, wrap any of the `.*col*` classes inside of a `.cols` class.
+ * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
  *
  *     @example
- *     div.cols
+ *     div.row
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  *         div.col
  *             div.bgc-teal-10 &nbsp;
- *     div.cols.m-top-16
+ *     div.row.m-top-16
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  *         div.col
@@ -240,17 +240,17 @@ html, body {
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.cols
+ *     div.row
  *         div.xs-col-6
  *             div.bgc-teal-10 &nbsp;
  *         div.xs-col-6
  *             div.bgc-teal-10 &nbsp;
- *     div.cols.m-top-16
+ *     div.row.m-top-16
  *         div.sm-col-6.md-col-8
  *             div.bgc-teal-10 &nbsp;
  *         div.sm-col-6.md-col-4
  *             div.bgc-teal-10 &nbsp;
- *     div.cols.m-top-16
+ *     div.row.m-top-16
  *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
  *             div.bgc-teal-10 &nbsp;
  *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
@@ -458,7 +458,7 @@ html, body {
  * `.fxg-0` `.[size]-fxg-0` `.max[size]-fxg-0`
  *
  *     @example
- *     div.cols
+ *     div.row
  *         div.col.fxg-0
  *             div.bgc-teal-10 &nbsp;
  *         div.col
@@ -469,7 +469,7 @@ html, body {
  * `.fxg-1` `.[size]-fxg-1` `.max[size]-fxg-1`
  *
  *     @example
- *     div.cols
+ *     div.row
  *         div.col.fxg-1
  *             div.bgc-teal-10 &nbsp;
  *         div.col
@@ -1442,7 +1442,7 @@ html, body {
 	 *
 	 *     @example
 	 *     div.container.bd-1.p-y-16
-	 *         div.cols.gutters-0
+	 *         div.row.gutters-0
 	 *             div.col-8
 	 *                 div.bgc-teal-10 &nbsp;
 	 *             div.col-4
@@ -1451,8 +1451,8 @@ html, body {
 .gutters-0 {
   margin-right: -0;
   margin-left: -0; }
-  .gutters-0.cols > .col,
-  .gutters-0.cols > [class*='col-'] {
+  .gutters-0.row > .col,
+  .gutters-0.row > [class*='col-'] {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1465,7 +1465,7 @@ html, body {
 	 *
 	 *     @example
 	 *     div.container.bd-1.p-y-16
-	 *         div.cols.gutters-8
+	 *         div.row.gutters-8
 	 *             div.col-8
 	 *                 div.bgc-teal-10 &nbsp;
 	 *             div.col-4
@@ -1474,8 +1474,8 @@ html, body {
 .gutters-8 {
   margin-right: -0.5rem;
   margin-left: -0.5rem; }
-  .gutters-8.cols > .col,
-  .gutters-8.cols > [class*='col-'] {
+  .gutters-8.row > .col,
+  .gutters-8.row > [class*='col-'] {
     padding-right: 0.5rem;
     padding-left: 0.5rem; }
 
@@ -1488,7 +1488,7 @@ html, body {
 	 *
 	 *     @example
 	 *     div.container.bd-1.p-y-16
-	 *         div.cols.gutters-16
+	 *         div.row.gutters-16
 	 *             div.col-8
 	 *                 div.bgc-teal-10 &nbsp;
 	 *             div.col-4
@@ -1497,8 +1497,8 @@ html, body {
 .gutters-16 {
   margin-right: -1rem;
   margin-left: -1rem; }
-  .gutters-16.cols > .col,
-  .gutters-16.cols > [class*='col-'] {
+  .gutters-16.row > .col,
+  .gutters-16.row > [class*='col-'] {
     padding-right: 1rem;
     padding-left: 1rem; }
 
@@ -1509,8 +1509,8 @@ html, body {
   .xs-gutters-0 {
     margin-right: -0;
     margin-left: -0; }
-    .xs-gutters-0.cols > .col,
-    .xs-gutters-0.cols > [class*='col-'] {
+    .xs-gutters-0.row > .col,
+    .xs-gutters-0.row > [class*='col-'] {
       padding-right: 0;
       padding-left: 0; }
     .xs-gutters-0.xs-cols-0 {
@@ -1542,8 +1542,8 @@ html, body {
   .xs-gutters-8 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }
-    .xs-gutters-8.cols > .col,
-    .xs-gutters-8.cols > [class*='col-'] {
+    .xs-gutters-8.row > .col,
+    .xs-gutters-8.row > [class*='col-'] {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
     .xs-gutters-8.xs-cols-8 {
@@ -1575,8 +1575,8 @@ html, body {
   .xs-gutters-16 {
     margin-right: -1rem;
     margin-left: -1rem; }
-    .xs-gutters-16.cols > .col,
-    .xs-gutters-16.cols > [class*='col-'] {
+    .xs-gutters-16.row > .col,
+    .xs-gutters-16.row > [class*='col-'] {
       padding-right: 1rem;
       padding-left: 1rem; }
     .xs-gutters-16.xs-cols-16 {
@@ -1618,8 +1618,8 @@ html, body {
   .sm-gutters-0 {
     margin-right: -0;
     margin-left: -0; }
-    .sm-gutters-0.cols > .col,
-    .sm-gutters-0.cols > [class*='col-'] {
+    .sm-gutters-0.row > .col,
+    .sm-gutters-0.row > [class*='col-'] {
       padding-right: 0;
       padding-left: 0; }
     .sm-gutters-0.sm-cols-0 {
@@ -1651,8 +1651,8 @@ html, body {
   .sm-gutters-8 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }
-    .sm-gutters-8.cols > .col,
-    .sm-gutters-8.cols > [class*='col-'] {
+    .sm-gutters-8.row > .col,
+    .sm-gutters-8.row > [class*='col-'] {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
     .sm-gutters-8.sm-cols-8 {
@@ -1684,8 +1684,8 @@ html, body {
   .sm-gutters-16 {
     margin-right: -1rem;
     margin-left: -1rem; }
-    .sm-gutters-16.cols > .col,
-    .sm-gutters-16.cols > [class*='col-'] {
+    .sm-gutters-16.row > .col,
+    .sm-gutters-16.row > [class*='col-'] {
       padding-right: 1rem;
       padding-left: 1rem; }
     .sm-gutters-16.sm-cols-16 {
@@ -1727,8 +1727,8 @@ html, body {
   .md-gutters-0 {
     margin-right: -0;
     margin-left: -0; }
-    .md-gutters-0.cols > .col,
-    .md-gutters-0.cols > [class*='col-'] {
+    .md-gutters-0.row > .col,
+    .md-gutters-0.row > [class*='col-'] {
       padding-right: 0;
       padding-left: 0; }
     .md-gutters-0.md-cols-0 {
@@ -1760,8 +1760,8 @@ html, body {
   .md-gutters-8 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }
-    .md-gutters-8.cols > .col,
-    .md-gutters-8.cols > [class*='col-'] {
+    .md-gutters-8.row > .col,
+    .md-gutters-8.row > [class*='col-'] {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
     .md-gutters-8.md-cols-8 {
@@ -1793,8 +1793,8 @@ html, body {
   .md-gutters-16 {
     margin-right: -1rem;
     margin-left: -1rem; }
-    .md-gutters-16.cols > .col,
-    .md-gutters-16.cols > [class*='col-'] {
+    .md-gutters-16.row > .col,
+    .md-gutters-16.row > [class*='col-'] {
       padding-right: 1rem;
       padding-left: 1rem; }
     .md-gutters-16.md-cols-16 {
@@ -1836,8 +1836,8 @@ html, body {
   .lg-gutters-0 {
     margin-right: -0;
     margin-left: -0; }
-    .lg-gutters-0.cols > .col,
-    .lg-gutters-0.cols > [class*='col-'] {
+    .lg-gutters-0.row > .col,
+    .lg-gutters-0.row > [class*='col-'] {
       padding-right: 0;
       padding-left: 0; }
     .lg-gutters-0.lg-cols-0 {
@@ -1869,8 +1869,8 @@ html, body {
   .lg-gutters-8 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }
-    .lg-gutters-8.cols > .col,
-    .lg-gutters-8.cols > [class*='col-'] {
+    .lg-gutters-8.row > .col,
+    .lg-gutters-8.row > [class*='col-'] {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
     .lg-gutters-8.lg-cols-8 {
@@ -1902,8 +1902,8 @@ html, body {
   .lg-gutters-16 {
     margin-right: -1rem;
     margin-left: -1rem; }
-    .lg-gutters-16.cols > .col,
-    .lg-gutters-16.cols > [class*='col-'] {
+    .lg-gutters-16.row > .col,
+    .lg-gutters-16.row > [class*='col-'] {
       padding-right: 1rem;
       padding-left: 1rem; }
     .lg-gutters-16.lg-cols-16 {
@@ -1945,8 +1945,8 @@ html, body {
   .xl-gutters-0 {
     margin-right: -0;
     margin-left: -0; }
-    .xl-gutters-0.cols > .col,
-    .xl-gutters-0.cols > [class*='col-'] {
+    .xl-gutters-0.row > .col,
+    .xl-gutters-0.row > [class*='col-'] {
       padding-right: 0;
       padding-left: 0; }
     .xl-gutters-0.xl-cols-0 {
@@ -1978,8 +1978,8 @@ html, body {
   .xl-gutters-8 {
     margin-right: -0.5rem;
     margin-left: -0.5rem; }
-    .xl-gutters-8.cols > .col,
-    .xl-gutters-8.cols > [class*='col-'] {
+    .xl-gutters-8.row > .col,
+    .xl-gutters-8.row > [class*='col-'] {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
     .xl-gutters-8.xl-cols-8 {
@@ -2011,8 +2011,8 @@ html, body {
   .xl-gutters-16 {
     margin-right: -1rem;
     margin-left: -1rem; }
-    .xl-gutters-16.cols > .col,
-    .xl-gutters-16.cols > [class*='col-'] {
+    .xl-gutters-16.row > .col,
+    .xl-gutters-16.row > [class*='col-'] {
       padding-right: 1rem;
       padding-left: 1rem; }
     .xl-gutters-16.xl-cols-16 {
@@ -2056,7 +2056,7 @@ html, body {
  *
  *     @example
  *     div.container.bd-1.p-y-16
- *         div.cols.md-gutters-0
+ *         div.row.md-gutters-0
  *             div.col-8
  *                 div.bgc-teal-10 &nbsp;
  *             div.col-4
@@ -2070,7 +2070,7 @@ html, body {
  * `.jc-flex-start` `.[size]-jc-flex-start` `.max[size]-jc-flex-start`
  *
  *     @example
- *     div.cols.jc-flex-start
+ *     div.row.jc-flex-start
  *         div.col-4
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2079,7 +2079,7 @@ html, body {
  * `.jc-center` `.[size]-jc-center` `.max[size]-jc-center`
  *
  *     @example
- *     div.cols.jc-center
+ *     div.row.jc-center
  *         div.col-4
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2088,7 +2088,7 @@ html, body {
  * `.jc-flex-end` `.[size]-jc-flex-end` `.max[size]-jc-flex-end`
  *
  *     @example
- *     div.cols.jc-flex-end
+ *     div.row.jc-flex-end
  *         div.col-4
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2223,7 +2223,7 @@ html, body {
  * `.ai-flex-start` `.[size]-ai-flex-start` `.max[size]-ai-flex-start`
  *
  *     @example
- *     div.cols.ai-flex-start.doc-h-100px
+ *     div.row.ai-flex-start.doc-h-100px
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2232,7 +2232,7 @@ html, body {
  * `.ai-center` `.[size]-ai-center` `.max[size]-ai-center`
  *
  *     @example
- *     div.cols.ai-center.doc-h-100px
+ *     div.row.ai-center.doc-h-100px
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2241,7 +2241,7 @@ html, body {
  * `.ai-flex-end` `.[size]-ai-flex-end` `.max[size]-ai-flex-end`
  *
  *     @example
- *     div.cols.ai-flex-end.doc-h-100px
+ *     div.row.ai-flex-end.doc-h-100px
  *         div.col
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2331,7 +2331,7 @@ html, body {
  * `.as-flex-start` `.[size]-as-flex-start` `.max[size]-as-flex-start`
  *
  *     @example
- *     div.cols.doc-h-100px
+ *     div.row.doc-h-100px
  *         div.col.as-flex-start
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2340,7 +2340,7 @@ html, body {
  * `.as-center` `.[size]-as-center` `.max[size]-as-center`
  *
  *     @example
- *     div.cols.doc-h-100px
+ *     div.row.doc-h-100px
  *         div.col.as-center
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2349,7 +2349,7 @@ html, body {
  * `.as-flex-end` `.[size]-as-flex-end` `.max[size]-as-flex-end`
  *
  *     @example
- *     div.cols.doc-h-100px
+ *     div.row.doc-h-100px
  *         div.col.as-flex-end
  *             div.bgc-teal-10 &nbsp;
  */
@@ -2442,12 +2442,12 @@ html, body {
  * `.offset-[#]` `.[size]-offset-[#]`
  *
  *     @example
- *     div.cols
+ *     div.row
  *         div.col-4
  *             div.bgc-teal-10 &nbsp;
  *         div.col-4.offset-4
  *             div.bgc-teal-10 &nbsp;
- *     div.cols.m-top-16
+ *     div.row.m-top-16
  *         div.md-col-5
  *             div.bgc-teal-10 &nbsp;
  *         div.md-col-3.lg-offset-3
@@ -2651,7 +2651,7 @@ html, body {
  * `.order-[#]` `.[size]-order-[#]` `.max[size]-order-[#]`
  *
  *     @example
- *     div.cols.ta-center.c-teal-60
+ *     div.row.ta-center.c-teal-60
  *         div.col.order-2
  *             div.bgc-teal-10 1
  *         div.col
