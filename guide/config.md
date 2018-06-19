@@ -35,7 +35,7 @@
 				li.navbar__item
 					a(href='layout-flex-grid.html').navbar__a Documentation
 
-	div.container-fluid
+	div.cont-fluid
 		div.row
 			div.doc-main.xs-col-12.md-col-10.xl-col-11
 				div.doc-main__content.row

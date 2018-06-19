@@ -14,8 +14,8 @@ html, body {
 	display: flex;
 	flex-wrap: wrap;
 
-	margin-right: -#{$gutter-width};
-	margin-left: -#{$gutter-width};
+	margin-right: -#{ $gutter-width };
+	margin-left: -#{ $gutter-width };
 }
 
 @mixin column {
@@ -39,44 +39,48 @@ html, body {
 }
 
 @each $size, $length in $grid-breakpoints {
+
 	@for $i from 1 through $grid-columns {
-		.col-#{$i},
-		.#{$size}-col-#{$i} {
+
+		.col-#{ $i },
+		.#{ $size }-col-#{ $i } {
 			@extend %column;
 		}
+
 	}
+
 }
 
 /**
  * Container:
- * `.container` have a max. width of #{$container-max-width}.
+ * `.cont` have a max. width of #{ $container-max-width }.
  *
  *     @example
- *     div.container.bd-1.p-y-16
+ *     div.cont.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.container {
-	@extend .container-fluid;
+.cont {
+	@extend .cont-fluid;
 	max-width: $container-max-width;
 }
 
 /**
  * Fluid container:
- * `.container-fluid`
+ * `.cont-fluid`
  *
  *     @example
- *     div.container-fluid.bd-1.p-y-16
+ *     div.cont-fluid.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.container-fluid {
+.cont-fluid {
 	@include gutter;
 
 	margin-left: auto;
@@ -105,11 +109,13 @@ html, body {
  *             div.bgc-teal-10 &nbsp;
  */
 @for $i from 1 through $grid-columns {
-	.col-#{$i} {
-		$column-width: percentage($i / $grid-columns);
+
+	.col-#{ $i } {
+		$column-width: percentage( $i / $grid-columns );
 		flex-basis: $column-width;
 		max-width: $column-width;
 	}
+
 }
 
 /**
@@ -140,27 +146,47 @@ html, body {
 }
 
 @each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
+
+	@media ( min-width: $length ) {
+
 		@for $i from 1 through $grid-columns {
-			.#{$size}-col-#{$i} {
-				$column-width: percentage($i / $grid-columns);
+			
+			.#{ $size }-col-#{ $i } {
+				$column-width: percentage( $i / $grid-columns );
 				flex-basis: $column-width;
 				max-width: $column-width;
 			}
+
 		}
+
 	}
+
 }
 
 /**
  * Nested columns:
  *
  *     @example
- *     div.row
+ *     div.row.c-teal-60.ta-center
  *         div.col
- *             div.bgc-teal-10 &nbsp;
+ *             div.bgc-teal-10 Level 1
  *             div.row
  *                 div.col
- *                     div.bgc-teal-20 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
+ *                     div.bgc-teal-20 Level 2
+ *                     div.row
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                 div.col
+ *                     div.bgc-teal-20 Level 2
+ *                     div.row
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
  */

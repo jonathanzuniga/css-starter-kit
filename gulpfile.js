@@ -51,7 +51,6 @@ gulp.task( 'styledown', function () {
         } ) )
         .pipe( gulp.dest( dest ) ); // /path/to/
 
-
     // Components
 
     gulp.src( 'dist/components/card.css' )
@@ -85,7 +84,6 @@ gulp.task( 'styledown', function () {
     gulp.src( 'dist/components/tabs.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_components + 'tabs.html' } ) )
         .pipe( gulp.dest( dest ) );
-
 
     // Elements
 
@@ -136,7 +134,6 @@ gulp.task( 'styledown', function () {
     gulp.src( 'dist/elements/toolbar.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'toolbar.html' } ) )
         .pipe( gulp.dest( dest ) );
-
 
     // Helpers
 
@@ -219,7 +216,6 @@ gulp.task( 'styledown', function () {
     gulp.src( 'dist/helpers/width.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_helpers + 'width.html' } ) )
         .pipe( gulp.dest( dest ) );
-
 
     // Layout
 

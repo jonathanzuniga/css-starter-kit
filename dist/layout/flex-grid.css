@@ -80,32 +80,32 @@ html, body {
 
 /**
  * Container:
- * `.container` have a max. width of 1200px.
+ * `.cont` have a max. width of 1200px.
  *
  *     @example
- *     div.container.bd-1.p-y-16
+ *     div.cont.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.container {
+.cont {
   max-width: 1200px; }
 
 /**
  * Fluid container:
- * `.container-fluid`
+ * `.cont-fluid`
  *
  *     @example
- *     div.container-fluid.bd-1.p-y-16
+ *     div.cont-fluid.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.container-fluid, .container {
+.cont-fluid, .cont {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-left: auto;
@@ -399,12 +399,26 @@ html, body {
  * Nested columns:
  *
  *     @example
- *     div.row
+ *     div.row.c-teal-60.ta-center
  *         div.col
- *             div.bgc-teal-10 &nbsp;
+ *             div.bgc-teal-10 Level 1
  *             div.row
  *                 div.col
- *                     div.bgc-teal-20 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
+ *                     div.bgc-teal-20 Level 2
+ *                     div.row
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                 div.col
+ *                     div.bgc-teal-20 Level 2
+ *                     div.row
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
+ *                         div.col
+ *                             div.bgc-teal-10 Level 3
  */
