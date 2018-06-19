@@ -22,22 +22,20 @@
 		})(window, document);
 
 ### Body
+	
+	nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
+		input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
+		div.navbar__brand
+			a(href='index.html').navbar__a CSS Starter Kit
+		label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-d-none Menu
+		div.navbar__collapse.collapse.maxmd-d-none
+			ul.navbar__menu
+				li.navbar__item
+					a(href='index.html').navbar__a Preface
+				li.navbar__item
+					a(href='layout-flex-grid.html').navbar__a Documentation
 
 	div.container-fluid
-		div.row
-			div.col
-				nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
-					input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
-					div.navbar__brand
-						a(href='index.html').navbar__a CSS Starter Kit
-					label(for='doc-navbar-toggle', id='open-fsmenu').navbar__toggler.md-d-none Menu
-					div.navbar__collapse.collapse.maxmd-d-none
-						ul.navbar__menu
-							li.navbar__item
-								a(href='index.html').navbar__a Preface
-							li.navbar__item
-								a(href='layout-flex-grid.html').navbar__a Documentation
-
 		div.row
 			div.doc-main.xs-col-12.md-col-10.xl-col-11
 				div.doc-main__content.row
