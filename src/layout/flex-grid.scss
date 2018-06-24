@@ -53,34 +53,34 @@ html, body {
 
 /**
  * Container:
- * `.cont` have a max. width of #{ $container-max-width }.
+ * `.cntr` have a max. width of #{ $container-max-width }.
  *
  *     @example
- *     div.cont.bd-1.p-y-16
+ *     div.cntr.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.cont {
-	@extend .cont-fluid;
+.cntr {
+	@extend .cntr-fluid;
 	max-width: $container-max-width;
 }
 
 /**
  * Fluid container:
- * `.cont-fluid`
+ * `.cntr-fluid`
  *
  *     @example
- *     div.cont-fluid.bd-1.p-y-16
+ *     div.cntr-fluid.bd-1.p-y-16
  *         div.row
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  *             div.col
  *                 div.bgc-teal-10 &nbsp;
  */
-.cont-fluid {
+.cntr-fluid {
 	@include gutter;
 
 	margin-left: auto;
