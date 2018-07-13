@@ -11,7 +11,7 @@
  *
  *     @example
  *     div.item-group
- *         div.item
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
  *         div.item
  *             p.m-0
@@ -54,11 +54,24 @@
 }
 
 .item {
-	display: block;
+	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-items: center;
 
-	&:not(:first-child) {
-		margin-left: $item-not-first-child-margin-left;
+    padding-right: $item-padding-x;
+    padding-left: $item-padding-x;
+
+	&:first-child {
+		padding-left: 0;
 	}
+
+	// display: block;
+
+	// &:not(:first-child) {
+	// 	margin-left: $item-not-first-child-margin-left;
+	// }
 }
 
 /**
