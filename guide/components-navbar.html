@@ -12,14 +12,17 @@
   <script>
     ;
     (function(window, document, undefined) {
+
       'use strict';
 
       if (!('localStorage' in window)) return;
 
       var nightMode = localStorage.getItem('nightMode');
+
       if (!nightMode) return;
 
       document.documentElement.classList.add('night', 'fsmooth');
+
     })(window, document);
   </script>
 </head>

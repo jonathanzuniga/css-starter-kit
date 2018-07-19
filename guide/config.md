@@ -10,16 +10,19 @@
 	link(rel='stylesheet', href='css/doc.css')
 
 	script().
-		;(function (window, document, undefined) {
+		;( function ( window, document, undefined ) {
+
 			'use strict';
 
-			if (!('localStorage' in window)) return;
+			if ( ! ( 'localStorage' in window ) ) return;
 			
-			var nightMode = localStorage.getItem('nightMode');
-			if (!nightMode) return;
+			var nightMode = localStorage.getItem( 'nightMode' );
+
+			if ( ! nightMode ) return;
 			
-			document.documentElement.classList.add('night', 'fsmooth');
-		})(window, document);
+			document.documentElement.classList.add( 'night', 'fsmooth' );
+
+		} )( window, document );
 
 ### Body
 	
