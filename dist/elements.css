@@ -382,7 +382,7 @@ th {
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1
+ *             div.bx.bxsh-0063
  *                 p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  */
 .bx {
@@ -1975,41 +1975,20 @@ th {
  *     div.item-group
  *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
 .item-group {
   display: flex;
-  align-items: flex-start;
-  padding: 0; }
-  .item-group:not(:last-child) {
-    border-bottom-width: 0.063rem;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(0, 0, 0, 0.075);
-    margin-bottom: 1em;
-    padding-bottom: 1em; }
-
-.night .item-group:not(:last-child) {
-  border-bottom-color: rgba(255, 255, 255, 0.075); }
-
-.item-group__lbl {
-  background-color: inherit;
-  color: inherit;
-  padding: 1em 1.25em;
-  text-align: center; }
-
-.night .item-group__lbl {
-  background-color: inherit;
-  color: inherit; }
+  flex-grow: 1; }
 
 .item {
   display: flex;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 0;
-  align-items: center;
   padding-right: 0.5em;
   padding-left: 0.5em; }
   .item:first-child {
@@ -2020,24 +1999,24 @@ th {
  * `.item-group`
  *
  *     @example
- *     div.item-group
- *         div.item
+ *     div.item-group.m-bottom-1
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group.m-bottom-1
+ *         div.item.fxg-0
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  *     div.item-group
- *         div.item
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
- *             p.m-0
- *                 strong John Doe
- *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *     div.item-group
- *         div.item
- *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -2047,7 +2026,7 @@ th {
  *
  *     @example
  *     div.item-group.ai-center
- *         div.item
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
  *         div.item
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

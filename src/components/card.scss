@@ -12,8 +12,8 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
- *                 div.card__body
+ *             div.bx.bxsh-0063.card
+ *                 div.card__body.p-1
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -36,10 +36,10 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__img
  *                     img(src="http://via.placeholder.com/640x480")
- *                 div.card__body
+ *                 div.card__body.p-1
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -74,16 +74,17 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__head
- *                     h4.m-0 Card title
- *                 div.card__body
+ *                     h4.m-0.p-1 Card title
+ *                 div.card__body.p-1
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                 div.card__foot
- *                     div.card__foot-item
- *                         a(href='') First link
- *                     div.card__foot-item
- *                         a(href='') Second link
+ *                     div.item-group.ta-center
+ *                         div.item
+ *                             a(href='').p-1.w-100 First link
+ *                         div.item.bd-left-0063
+ *                             a(href='').p-1.w-100 Second link
  */
 
 .card__head {
@@ -95,17 +96,6 @@
     
     border-top-right-radius: $card-head-border-top-right-radius;
     border-top-left-radius: $card-head-border-top-left-radius;
-    
-    padding: $card-head-padding;
-}
-
-.card__head-item,
-.card__foot-item {
-	display: flex;
-	flex-basis: 0;
-	flex-grow: 1;
-	flex-shrink: 0;
-	align-items: center;
 }
 
 .night .card__head {
@@ -116,17 +106,17 @@
 .card__head,
 .card__foot {
     display: flex;
-    // flex-shrink: 0;
-    // justify-content: flex-start;
     align-items: stretch;
     position: relative;
+
+    .item {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .card__body {
     background-color: $day__card-body-bg-color;
-    // flex-grow: 1;
-    // flex-shrink: 1;
-    padding: $card-body-padding;
     position: relative;
     overflow: auto;
 }
@@ -155,23 +145,6 @@
     border-top-color: $ngt__card-border-color;
 }
 
-.card__foot-item {
-	justify-content: center;
-    padding: $card-foot-item-padding;
-
-    &:not(:first-child) {
-    	border-left-width: $card-border-width;
-    	border-left-style: $card-border-style;
-    	border-left-color: $day__card-border-color;
-    }
-}
-
-.night .card__foot-item {
-    &:not(:first-child) {
-    	border-left-color: $ngt__card-border-color;
-    }
-}
-
 /**
  * Card head with an icon:
  * `.card__head-item`
@@ -179,43 +152,20 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
- *                 div.card__head
- *                     div.card__head-item
- *                         h4.m-0 Card title
- *                     div.card__head-item.fxg-0
- *                         a(href='#!')
- *                             span.ion-ios-arrow-down
- *                 div.card__body
- *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 div.card__foot
- *                     div.card__foot-item
- *                         a(href='') First link
- *                     div.card__foot-item
- *                         a(href='') Second link
- */
-
-/**
- * Card and item group:
- * `.card__head-item`
- *
- *     @example
- *     div.row
- *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__head
  *                     div.item-group
  *                         div.item
- *                             h4.m-0 Card title
+ *                             h4.m-0.p-1 Card title
  *                         div.item.fxg-0
- *                             a(href='#!')
+ *                             a(href='#!').p-1
  *                                 span.ion-ios-arrow-down
- *                 div.card__body
+ *                 div.card__body.p-1
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                 div.card__foot
- *                     div.item-group
+ *                     div.item-group.ta-center
  *                         div.item
- *                             a(href='') First link
- *                         div.item
- *                             a(href='') Second link
+ *                             a(href='').p-1.w-100 First link
+ *                         div.item.bd-left-0063
+ *                             a(href='').p-1.w-100 Second link
  */

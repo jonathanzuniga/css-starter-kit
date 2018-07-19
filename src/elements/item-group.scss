@@ -13,7 +13,7 @@
  *     div.item-group
  *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -21,44 +21,26 @@
 
 .item-group {
 	display: flex;
-	align-items: flex-start;
-
-	padding: $item-group-padding;
-
-	&:not(:last-child) {
-		border-bottom-width: $item-group-border-width;
-		border-bottom-style: $item-group-border-style;
-		border-bottom-color: $day__item-group-border-color;
-
-		margin-bottom: $item-group-not-last-child-margin-bottom;
-		padding-bottom: $item-group-not-last-child-padding-bottom;
-	}
+	flex-grow: 1;
 }
 
-.night .item-group {
-	&:not(:last-child) {
-		border-bottom-color: $ngt__item-group-border-color;
-	}
-}
+// .item-group__lbl {
+// 	background-color: $day__item-group-label-bg-color;
+// 	color: $day__item-group-label-color;
+// 	padding: $item-group-label-padding;
+// 	text-align: $item-group-label-text-align;
+// }
 
-.item-group__lbl {
-	background-color: $day__item-group-label-bg-color;
-	color: $day__item-group-label-color;
-	padding: $item-group-label-padding;
-	text-align: $item-group-label-text-align;
-}
-
-.night .item-group__lbl {
-	background-color: $ngt__item-group-label-bg-color;
-	color: $ngt__item-group-label-color;
-}
+// .night .item-group__lbl {
+// 	background-color: $ngt__item-group-label-bg-color;
+// 	color: $ngt__item-group-label-color;
+// }
 
 .item {
 	display: flex;
 	flex-basis: 0;
 	flex-grow: 1;
 	flex-shrink: 0;
-	align-items: center;
 
     padding-right: $item-padding-x;
     padding-left: $item-padding-x;
@@ -66,12 +48,6 @@
 	&:first-child {
 		padding-left: 0;
 	}
-
-	// display: block;
-
-	// &:not(:first-child) {
-	// 	margin-left: $item-not-first-child-margin-left;
-	// }
 }
 
 /**
@@ -79,24 +55,24 @@
  * `.item-group`
  *
  *     @example
- *     div.item-group
- *         div.item
+ *     div.item-group.m-bottom-1
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
+ *             p.m-0
+ *                 strong John Doe
+ *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ *     div.item-group.m-bottom-1
+ *         div.item.fxg-0
+ *             img(src="http://via.placeholder.com/48x48")
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  *     div.item-group
- *         div.item
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
- *         div.item
- *             p.m-0
- *                 strong John Doe
- *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *     div.item-group
- *         div.item
- *             img(src="http://via.placeholder.com/48x48")
- *         div.item
+ *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -107,7 +83,7 @@
  *
  *     @example
  *     div.item-group.ai-center
- *         div.item
+ *         div.item.fxg-0
  *             img(src="http://via.placeholder.com/48x48")
  *         div.item
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

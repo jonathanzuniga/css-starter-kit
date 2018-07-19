@@ -612,24 +612,13 @@ $ngt__select-flat-hover-border-color: transparent;
 
 // Item group
 
-$item-group-padding:               0;
+// $day__item-group-label-bg-color:   inherit;
+// $ngt__item-group-label-bg-color:   inherit;
+// $day__item-group-label-color:      inherit;
+// $ngt__item-group-label-color:      inherit;
 
-$item-group-border-width:          0.063rem;
-$item-group-border-style:          solid;
-$day__item-group-border-color:     $day__border-color;
-$ngt__item-group-border-color:     $ngt__border-color;
-
-$item-group-not-last-child-margin-bottom:  1em;
-$item-group-not-last-child-padding-bottom: 1em;
-
-$day__item-group-label-bg-color:   inherit;
-$ngt__item-group-label-bg-color:   inherit;
-$day__item-group-label-color:      inherit;
-$ngt__item-group-label-color:      inherit;
-
-$item-group-label-padding:         1em 1.25em;
-$item-group-label-text-align:      center;
-$item-not-first-child-margin-left: 0.625em;
+// $item-group-label-padding:         1em 1.25em;
+// $item-group-label-text-align:      center;
 
 $item-padding-x:                   0.5em;
 
@@ -778,24 +767,24 @@ $ngt__table-striped-bg-color:     color( 'white 05' );
 // Border
 
 $border-map: (
-    0: 0,
-    1: '0.063rem solid'
+    0:      0,
+    '0063': '0.063rem solid'
 );
 
 
 // Box shadow
 
 $box-shadow-map: (
-     1: '0 0.063em 0.063em #{ rgba( black, 0.05 ) }',
-    16: '0 0.063em 1em     #{ rgba( black, 0.15 ) }'
+    '0063': '0 0.063em 0.063em #{ rgba( black, 0.05 ) }',
+    1:      '0 0.063em 1em     #{ rgba( black, 0.15 ) }'
 );
 
 
 // Border radius
 
 $border-radius-map: (
-    0: 0,
-    4: 0.25rem
+    0:     0,
+    '025': 0.25rem
 );
 
 
@@ -810,9 +799,9 @@ $border-style-map: (
 // Border width
 
 $border-width-map: (
-    0: 0,
-    1: 0.063rem,
-    2: 0.125rem
+    0:      0,
+    '0063': 0.063rem,
+    '0125': 0.125rem
 );
 
 
@@ -859,10 +848,10 @@ $font-weight-map: (
 // Margin
 
 $margin-map: (
-     0: 0       !important,
-     4: 0.25rem !important,
-     8: 0.50rem !important,
-    16: 1rem    !important
+    0:     0       !important,
+    '025': 0.25rem !important,
+    '05':  0.5rem  !important,
+    1:     1rem    !important
 );
 
 
@@ -878,10 +867,10 @@ $opacity-map: (
 // Padding
 
 $padding-map: (
-     0: 0       !important,
-     4: 0.25rem !important,
-     8: 0.50rem !important,
-    16: 1rem    !important
+    0:     0       !important,
+    '025': 0.25rem !important,
+    '05':  0.5rem  !important,
+    1:     1rem    !important
 );
 
 
@@ -1078,11 +1067,9 @@ $day__card-head-bg-color:           #fff;
 $ngt__card-head-bg-color:           #272727;
 $card-head-border-top-right-radius: $border-radius-base;
 $card-head-border-top-left-radius:  $border-radius-base;
-$card-head-padding:                 1em 1.25em;
 
 $day__card-body-bg-color: transparent;
 $ngt__card-body-bg-color: transparent;
-$card-body-padding:       1em 1.25em;
 
 $day__card-foot-bg-color:              #fff;
 $ngt__card-foot-bg-color:              #272727;
@@ -1090,9 +1077,6 @@ $card-foot-border-bottom-right-radius: $border-radius-base;
 $card-foot-border-bottom-left-radius:  $border-radius-base;
 
 $card-foot-button-not-first-child-margin-left: 0.625rem;
-
-$card-foot-item-padding: 1em 1.25em;
-$card-foot-item-padding: 1em 1.25em;
 
 
 // Collapse
@@ -1172,7 +1156,7 @@ $ngt__menu-pills__item-active-bg-color: color( 'cerulean 90' );
 // Modal
 
 $modal-transition:              z-index 0.3s step-end;
-$modal-z-index:                -1;
+$modal-z-index:                 -1;
 
 $modal-show-transition:         z-index 0.3s step-start;
 $modal-show-z-index:            1000;

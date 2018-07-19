@@ -9,8 +9,8 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
- *                 div.card__body
+ *             div.bx.bxsh-0063.card
+ *                 div.card__body.p-1
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -31,10 +31,10 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__img
  *                     img(src="http://via.placeholder.com/640x480")
- *                 div.card__body
+ *                 div.card__body.p-1
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -60,16 +60,17 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__head
- *                     h4.m-0 Card title
- *                 div.card__body
+ *                     h4.m-0.p-1 Card title
+ *                 div.card__body.p-1
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                 div.card__foot
- *                     div.card__foot-item
- *                         a(href='') First link
- *                     div.card__foot-item
- *                         a(href='') Second link
+ *                     div.item-group.ta-center
+ *                         div.item
+ *                             a(href='').p-1.w-100 First link
+ *                         div.item.bd-left-0063
+ *                             a(href='').p-1.w-100 Second link
  */
 .card__head {
   background-color: #fff;
@@ -77,16 +78,7 @@
   border-bottom-style: solid;
   border-bottom-color: rgba(0, 0, 0, 0.075);
   border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-  padding: 1em 1.25em; }
-
-.card__head-item,
-.card__foot-item {
-  display: flex;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-  align-items: center; }
+  border-top-left-radius: 0.25rem; }
 
 .night .card__head {
   background-color: #272727;
@@ -97,10 +89,13 @@
   display: flex;
   align-items: stretch;
   position: relative; }
+  .card__head .item,
+  .card__foot .item {
+    padding-right: 0;
+    padding-left: 0; }
 
 .card__body {
   background-color: transparent;
-  padding: 1em 1.25em;
   position: relative;
   overflow: auto; }
 
@@ -121,17 +116,6 @@
   background-color: #272727;
   border-top-color: rgba(255, 255, 255, 0.075); }
 
-.card__foot-item {
-  justify-content: center;
-  padding: 1em 1.25em; }
-  .card__foot-item:not(:first-child) {
-    border-left-width: 0.063rem;
-    border-left-style: solid;
-    border-left-color: rgba(0, 0, 0, 0.075); }
-
-.night .card__foot-item:not(:first-child) {
-  border-left-color: rgba(255, 255, 255, 0.075); }
-
 /**
  * Card head with an icon:
  * `.card__head-item`
@@ -139,44 +123,22 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-1.card
- *                 div.card__head
- *                     div.card__head-item
- *                         h4.m-0 Card title
- *                     div.card__head-item.fxg-0
- *                         a(href='#!')
- *                             span.ion-ios-arrow-down
- *                 div.card__body
- *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 div.card__foot
- *                     div.card__foot-item
- *                         a(href='') First link
- *                     div.card__foot-item
- *                         a(href='') Second link
- */
-/**
- * Card and item group:
- * `.card__head-item`
- *
- *     @example
- *     div.row
- *         div.md-col-6
- *             div.bx.bxsh-1.card
+ *             div.bx.bxsh-0063.card
  *                 div.card__head
  *                     div.item-group
  *                         div.item
- *                             h4.m-0 Card title
+ *                             h4.m-0.p-1 Card title
  *                         div.item.fxg-0
- *                             a(href='#!')
+ *                             a(href='#!').p-1
  *                                 span.ion-ios-arrow-down
- *                 div.card__body
+ *                 div.card__body.p-1
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                 div.card__foot
- *                     div.item-group
+ *                     div.item-group.ta-center
  *                         div.item
- *                             a(href='') First link
- *                         div.item
- *                             a(href='') Second link
+ *                             a(href='').p-1.w-100 First link
+ *                         div.item.bd-left-0063
+ *                             a(href='').p-1.w-100 Second link
  */
 /***
  * Collapse:
@@ -695,14 +657,13 @@
  *         div.modal__overlay
  *         div.modal__content
  *             div.bx.card.bd-0
- *                 div.card__head
+ *                 div.card__head.p-1
  *                     h4.m-0 Modal title
- *                 div.card__body
+ *                 div.card__body.p-1
  *                     p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.
- *                 div.card__foot
- *                     div.card__foot-item.jc-flex-start
- *                         button.btn.btn--primary Save changes
- *                         button.btn.btn--secondary Cancel
+ *                 div.card__foot.p-1
+ *                     button.btn.btn--primary Save changes
+ *                     button.btn.btn--secondary Cancel
  */
 .modal {
   display: flex;
@@ -780,13 +741,13 @@
  *         label(for='eg-navbar-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse.fxg-1.jc-space-between
  *             ul.navbar__menu.maxsm-ta-center
- *                 li.navbar__item.active.maxsm-bd-top-1
+ *                 li.navbar__item.active.maxsm-bd-top-0063
  *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxsm-bd-top-1
+ *                 li.navbar__item.maxsm-bd-top-0063
  *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxsm-bd-top-1
+ *                 li.navbar__item.maxsm-bd-top-0063
  *                     a(href='').navbar__a About
- *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-1
+ *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-0063
  *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
  */
 .navbar,
@@ -900,11 +861,11 @@
  *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxsm-ta-center
- *                 li.navbar__item.active.maxsm-bd-top-1
+ *                 li.navbar__item.active.maxsm-bd-top-0063
  *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxsm-bd-top-1
+ *                 li.navbar__item.maxsm-bd-top-0063
  *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxsm-bd-top-1
+ *                 li.navbar__item.maxsm-bd-top-0063
  *                     a(href='').navbar__a About
  */
 .navbar-responsive.navbar {
@@ -1263,13 +1224,13 @@
  *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
- *                 li.navbar__item.active.xs-bd-bottom-1.lg-bd-bottom-0
+ *                 li.navbar__item.active.xs-bd-bottom-0063.lg-bd-bottom-0
  *                     a(href='').navbar__a Home
- *                 li.navbar__item.xs-bd-bottom-1.xs-bd-left-1.md-bd-right-1.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
+ *                 li.navbar__item.xs-bd-bottom-0063.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
  *                     a(href='').navbar__a Archive
- *                 li.navbar__item.md-bd-bottom-1.lg-bd-bottom-0
+ *                 li.navbar__item.md-bd-bottom-0063.lg-bd-bottom-0
  *                     a(href='').navbar__a Contact
- *                 li.navbar__item.xs-bd-left-1.md-bd-right-1.lg-bd-right-0.lg-bd-left-0.md-gcol-2
+ *                 li.navbar__item.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-left-0.md-gcol-2
  *                     a(href='').navbar__a About
  */
 /**
@@ -1281,19 +1242,19 @@
  *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-ta-center
- *                 li.navbar__item.maxlg-bd-top-1
+ *                 li.navbar__item.maxlg-bd-top-0063
  *                     a(href='').navbar__a RSS feed
- *                 li.navbar__item.maxlg-bd-top-1
+ *                 li.navbar__item.maxlg-bd-top-0063
  *                     a(href='').navbar__a Follow me
  *         div.navbar__brand
  *             a(href='').navbar__a Brand
  *         div.navbar__collapse.collapse
  *             ul.navbar__menu.maxlg-ta-center
- *                 li.navbar__item.active.maxlg-bd-top-1
+ *                 li.navbar__item.active.maxlg-bd-top-0063
  *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxlg-bd-top-1
+ *                 li.navbar__item.maxlg-bd-top-0063
  *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxlg-bd-top-1
+ *                 li.navbar__item.maxlg-bd-top-0063
  *                     a(href='').navbar__a About
  */
 /**
