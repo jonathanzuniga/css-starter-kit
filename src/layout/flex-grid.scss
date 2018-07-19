@@ -1,3 +1,4 @@
+
 @import '../partials/_all';
 
 
@@ -51,12 +52,7 @@
  * `.cntr` have a max. width of #{ $container-max-width }.
  *
  *     @example
- *     div.cntr.bd-1.p-y-1
- *         div.row
- *             div.col
- *                 div.bgc-teal-10 &nbsp;
- *             div.col
- *                 div.bgc-teal-10 &nbsp;
+ *     div.cntr.bgc-aqua-1.p-1 &nbsp;
  */
 .cntr {
 	@extend .cntr-fluid;
@@ -68,12 +64,7 @@
  * `.cntr-fluid`
  *
  *     @example
- *     div.cntr-fluid.bd-1.p-y-1
- *         div.row
- *             div.col
- *                 div.bgc-teal-10 &nbsp;
- *             div.col
- *                 div.bgc-teal-10 &nbsp;
+ *     div.cntr-fluid.bgc-aqua-1.p-1 &nbsp;
  */
 .cntr-fluid {
 	@include gutter;
@@ -83,27 +74,18 @@
 	width: 100%;
 }
 
-/**
- * Columns:
- * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
- *
- *     @example
- *     div.row
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- *     div.row.m-top-1
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- *         div.col
- *             div.bgc-teal-10 &nbsp;
- */
 @for $i from 1 through $grid-columns {
+
+	/**
+	 * Column #{ $i } of #{ $grid-columns }:
+	 * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
+	 *
+	 *     @example
+	 *     div.cntr-fluid
+	 *         div.row.c-white.ta-center.bgc-aqua-1.p-y-1
+	 *             div.col-#{ $i }
+	 *                 div.bgc-teal-20.p-1 #{ $i }
+	 */
 
 	.col-#{ $i } {
 		$column-width: percentage( $i / $grid-columns );
@@ -118,23 +100,16 @@
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.row
- *         div.xs-col-6
- *             div.bgc-teal-10 &nbsp;
- *         div.xs-col-6
- *             div.bgc-teal-10 &nbsp;
- *     div.row.m-top-1
- *         div.sm-col-6.md-col-8
- *             div.bgc-teal-10 &nbsp;
- *         div.sm-col-6.md-col-4
- *             div.bgc-teal-10 &nbsp;
- *     div.row.m-top-1
- *         div.xs-col-12.sm-col-3.md-col-5.lg-col-7.xl-col-9
- *             div.bgc-teal-10 &nbsp;
- *         div.xs-col-12.sm-col-9.md-col-7.lg-col-5.xl-col-3
- *             div.bgc-teal-10 &nbsp;
+ *     div.cntr-fluid
+ *         div.row.bgc-aqua-1.p-y-1
+ *             div.xs-col-4.md-col-6.xl-col-8
+ *                 div.bgc-teal-20 &nbsp;
+ *             div.xs-col-8.md-col-6.xl-col-4
+ *                 div.bgc-teal-20 &nbsp;
  */
-// Si no se escriben los primeros tamaños de una clase [size]-col-[#], que entonces sean 100% de ancho.
+
+// Si no se escriben los primeros tamaños de una clase [size]-col-[#], entonces serán 100% de ancho.
+
 [class*='-col-'] {
 	flex-basis: 100%;
 	max-width: 100%;
@@ -162,26 +137,12 @@
  * Nested columns:
  *
  *     @example
- *     div.row.c-teal-60.ta-center
- *         div.col
- *             div.bgc-teal-10 Level 1
- *             div.row
- *                 div.col
- *                     div.bgc-teal-20 Level 2
- *                     div.row
- *                         div.col
- *                             div.bgc-teal-10 Level 3
- *                         div.col
- *                             div.bgc-teal-10 Level 3
- *                         div.col
- *                             div.bgc-teal-10 Level 3
- *                 div.col
- *                     div.bgc-teal-20 Level 2
- *                     div.row
- *                         div.col
- *                             div.bgc-teal-10 Level 3
- *                         div.col
- *                             div.bgc-teal-10 Level 3
- *                         div.col
- *                             div.bgc-teal-10 Level 3
+ *     div.cntr-fluid
+ *         div.row.c-white.ta-center.bgc-aqua-1.p-top-1
+ *             div.col-6
+ *                 div.bgc-teal-20.p-1 6
+ *             div.col-6
+ *                 div.row.bgc-aqua-10.p-y-1
+ *                     div.col
+ *                         div.bgc-teal-20.p-1 Nested column
  */

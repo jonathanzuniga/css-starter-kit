@@ -1,3 +1,4 @@
+
 @import '../partials/_all';
 
 
@@ -6,21 +7,23 @@
  */
 
 @each $key, $width in $gutters {
+
 	/**
-	 * Gutters width #{$width}:
-	 * `.gutters-#{$key}`
+	 * Gutters width #{ $width }:
+	 * `.gutters-#{ $key }` `.[size]-gutters-#{ $key }` `.max[size]-gutters-#{ $key }`
 	 *
 	 *     @example
-	 *     div.cntr.bd-1.p-y-16
-	 *         div.row.gutters-#{$key}
-	 *             div.col-8
-	 *                 div.bgc-teal-10 &nbsp;
-	 *             div.col-4
-	 *                 div.bgc-teal-10 &nbsp;
+	 *     div.cntr-fluid
+	 *         div.row.gutters-#{ $key }.c-white.ta-center.bgc-aqua-1.p-y-1
+	 *             div.col-6
+	 *                 div.bgc-teal-20.p-1 6
+	 *             div.col-6
+	 *                 div.bgc-teal-20.p-1 6
 	 */
-	.gutters-#{$key} {
-		margin-right: -#{$width};
-		margin-left: -#{$width};
+
+	.gutters-#{ $key } {
+		// margin-right: -#{ $width };
+		// margin-left: -#{ $width };
 
 		&.row {
 			> .col,
@@ -32,7 +35,8 @@
 	}
 
 	// Grid gap.
-	.gap-#{$key} {
+	
+	.gap-#{ $key } {
 		&[class*='gcols-'] {
 			grid-gap: $width;
 		}
@@ -40,11 +44,14 @@
 }
 
 @each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
+
+	@media ( min-width: $length ) {
+
 		@each $key, $width in $gutters {
-			.#{$size}-gutters-#{$key} {
-				margin-right: -#{$width};
-				margin-left: -#{$width};
+
+			.#{ $size }-gutters-#{ $key } {
+				// margin-right: -#{ $width };
+				// margin-left: -#{ $width };
 
 				&.row {
 					> .col,
@@ -55,15 +62,19 @@
 				}
 
 				// Para la división del contenido en cols.
+
 				@for $i from 1 through $grid-columns {
-					&.#{$size}-cols-#{$key} {
+
+					&.#{ $size }-cols-#{ $key } {
 						column-gap: $width;
 					}
+
 				}
 			}
 
 			// Grid gap.
-			.#{$size}-gap-#{$key} {
+
+			.#{ $size }-gap-#{ $key } {
 				&[class*='gcols-'] {
 					grid-gap: $width;
 				}
@@ -71,27 +82,20 @@
 		}
 	}
 
-	@media (max-width: $length - 1) {
+	@media ( max-width: $length - 1 ) {
+
 		@each $key, $width in $gutters {
+
 			// Grid gap.
-			.max#{$size}-gap-#{$key} {
+
+			.max#{ $size }-gap-#{ $key } {
 				&[class*='gcols-'] {
 					grid-gap: $width;
 				}
 			}
-		}
-	}
-}
 
-/**
- * Responsive gutters:
- * `.[size]-gutters-[width]` `.max[size]-gutters-[width]`
- *
- *     @example
- *     div.cntr.bd-1.p-y-16
- *         div.row.md-gutters-0
- *             div.col-8
- *                 div.bgc-teal-10 &nbsp;
- *             div.col-4
- *                 div.bgc-teal-20 &nbsp;
- */
+		}
+
+	}
+
+}
