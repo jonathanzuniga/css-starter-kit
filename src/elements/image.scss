@@ -1,3 +1,4 @@
+
 @import '../partials/_all';
 
 
@@ -8,4 +9,18 @@
 .img-responsive {
 	max-width: 100%;
 	height: auto;
+}
+
+.img {
+	display: block;
+	position: relative;
+
+	@each $key, $value in $fixed-square-images {
+
+		&--#{ $key }x#{ $key } {
+			width: #{ $value };
+			height: #{ $value };
+		}
+
+	}
 }

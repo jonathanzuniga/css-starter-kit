@@ -1848,6 +1848,10 @@ mark {
 small {
   font-size: 0.75em; }
 
+img {
+  border-style: none;
+  vertical-align: middle; }
+
 /**
  * Blockquote:
  * `blockquote` `.bq`
@@ -3484,6 +3488,13 @@ th {
   max-width: 100%;
   height: auto; }
 
+.img {
+  display: block;
+  position: relative; }
+  .img--4x4 {
+    width: 4rem;
+    height: 4rem; }
+
 /***
  * Input group:
  */
@@ -3612,7 +3623,8 @@ th {
  *     @example
  *     div.item-group
  *         div.item.fxg-0
- *             img(src="http://via.placeholder.com/48x48")
+ *             div.img.img--4x4
+ *                 img(src="http://via.placeholder.com/64x64").bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -3639,21 +3651,24 @@ th {
  *     @example
  *     div.item-group.m-bottom-1
  *         div.item.fxg-0
- *             img(src="http://via.placeholder.com/48x48")
+ *             div.img.img--4x4
+ *                 img(src="http://via.placeholder.com/64x64").bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  *     div.item-group.m-bottom-1
  *         div.item.fxg-0
- *             img(src="http://via.placeholder.com/48x48")
+ *             div.img.img--4x4
+ *                 img(src="http://via.placeholder.com/64x64").bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  *     div.item-group
  *         div.item.fxg-0
- *             img(src="http://via.placeholder.com/48x48")
+ *             div.img.img--4x4
+ *                 img(src="http://via.placeholder.com/64x64").bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -3665,7 +3680,8 @@ th {
  *     @example
  *     div.item-group.ai-center
  *         div.item.fxg-0
- *             img(src="http://via.placeholder.com/48x48")
+ *             div.img.img--4x4
+ *                 img(src="http://via.placeholder.com/64x64").bdr-025
  *         div.item
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
@@ -13738,8 +13754,10 @@ p.ac-c a:not(.btn) {
 .xl-col-10,
 .xl-col-11,
 .xl-col-12 {
+  display: block;
   flex-basis: 0;
   flex-grow: 1;
+  flex-shrink: 1;
   width: 100%;
   padding-right: 1rem;
   padding-left: 1rem; }
