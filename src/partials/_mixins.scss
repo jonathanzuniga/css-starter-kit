@@ -81,7 +81,7 @@
 
 }
 
-@mixin class_gen( $abbreviation, $property, $property-extended, $map, $example: 'y' ) {
+@mixin class_gen( $abbreviation, $property, $property-extended, $map, $example: null ) {
 
     $example_title: '';
     $selector: '';
@@ -109,22 +109,22 @@
 
                 @if $prop-ext == '' or $prop-ext == null {
 
-                    $example_title:    #{ $prop-r } #{ $value-r };
-                    $selector:         #{ $abbr }-#{ $key };
+                    $example_title: #{ $prop-r } #{ $value-r };
+                    $selector:      #{ $abbr }-#{ $key };
 
                 } @else if $prop-ext == 'y' or $prop-ext == 'x' {
 
-                    $example_title:    #{ $prop-r } #{ $value-r };
-                    $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
+                    $example_title: #{ $prop-r } #{ $value-r };
+                    $selector:      #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
 
                 } @else {
 
-                    $example_title:    #{ $prop-r } #{ $prop-ext-r } #{ $value-r };
-                    $selector:         #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
+                    $example_title: #{ $prop-r } #{ $prop-ext-r } #{ $value-r };
+                    $selector:      #{ $abbr }-#{ $prop-ext-rename }-#{ $key };
 
                 }
 
-                @if $example != 'n' {
+                @if $example != null and $example != '' {
 
                     /**
                      * #{ $example_title }:
@@ -217,7 +217,7 @@
     @if $prop-contains-a-dash {
 
         $prop-split: str_split( $property, '-' );
-        
+
     }
 
     .#{ $selector } {

@@ -36,18 +36,20 @@
 }
 
 @each $name, $background-color, $night-background-color, $text-color, $night-text-color, $state-light-color in $buttons {
-	$name_ucf: str_ucfirst($name);
-	$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+	$name_ucf: str_ucfirst( $name );
+	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
 
 	/**
-	 * #{$name_ucf} button:
-	 * `.btn--#{$name_r}`
+	 * #{ $name_ucf } button:
+	 * `.btn--#{ $name_r }`
 	 *
 	 *     @example
-	 *     button.btn.btn--#{$name_r} Button
-     *     button.btn.btn--#{$name_r}.btn--outline Outline button
+	 *     button.btn.btn--#{ $name_r } Button
+     *     button.btn.btn--#{ $name_r }.btn--outline Outline button
 	 */
-	.btn--#{$name_r} {
+
+	.btn--#{ $name_r } {
 		background-color: $background-color;
 		border-color: $button-border-color;
 		color: $text-color;
@@ -59,88 +61,103 @@
 
 		&:hover {
 			@if not ($state-light-color == '') {
-				background-color: 
+
+				background-color:
 					tint(
-						$day__body-bg-color, 
-						$background-color, 
+						$day__body-bg-color,
+						$background-color,
 						$button-hover-bg-color-amount
 					);
-			}
-			@else {
-				background-color: 
+
+			} @else {
+
+				background-color:
 					shade(
-						$ngt__body-bg-color, 
-						$background-color, 
+						$ngt__body-bg-color,
+						$background-color,
 						$button-hover-bg-color-amount
 					);
 			}
+
 			color: $text-color;
 		}
 
 		&:active,
 		&.active {
-			@if not ($state-light-color == '') {
-				background-color: 
+			@if not ( $state-light-color == '' ) {
+
+				background-color:
 					tint(
-						$day__body-bg-color, 
-						$background-color, 
+						$day__body-bg-color,
+						$background-color,
 						$button-active-bg-color-amount
 					);
-			}
-			@else {
-				background-color: 
+
+			} @else {
+
+				background-color:
 					shade(
-						$ngt__body-bg-color, 
-						$background-color, 
+						$ngt__body-bg-color,
+						$background-color,
 						$button-active-bg-color-amount
 					);
+
 			}
+
 			color: $text-color;
 		}
 	}
 
-	.night .btn--#{$name_r} {
+	.night .btn--#{ $name_r } {
 		background-color: $night-background-color;
 		color: $night-text-color;
 
 		&:hover {
-			@if not ($state-light-color == '') {
-				background-color: 
+			@if not ( $state-light-color == '' ) {
+
+				background-color:
 					tint(
-						$day__body-bg-color, 
-						$night-background-color, 
+						$day__body-bg-color,
+						$night-background-color,
 						$button-hover-bg-color-amount
 					);
-			}
-			@else {
-				background-color: 
+
+			} @else {
+
+				background-color:
 					shade(
-						$ngt__body-bg-color, 
-						$night-background-color, 
+						$ngt__body-bg-color,
+						$night-background-color,
 						$button-hover-bg-color-amount
 					);
+
 			}
+
 			color: $night-text-color;
 		}
 
 		&:active,
 		&.active {
-			@if not ($state-light-color == '') {
-				background-color: 
+			@if not ( $state-light-color == '' ) {
+
+				background-color:
 					tint(
-						$day__body-bg-color, 
-						$night-background-color, 
+						$day__body-bg-color,
+						$night-background-color,
 						$button-active-bg-color-amount
 					);
-			}
-			@else {
-				background-color: 
+
+			} @else {
+
+				background-color:
 					shade(
-						$ngt__body-bg-color, 
-						$night-background-color, 
+						$ngt__body-bg-color,
+						$night-background-color,
 						$button-active-bg-color-amount
 					);
+
 			}
+
 			color: $night-text-color;
 		}
 	}
@@ -148,12 +165,13 @@
 	.btn--outline {
 		background-color: transparent;
 
-		&.btn--#{$name_r} {
-			border-color: 
+		&.btn--#{ $name_r } {
+			border-color:
 				transparentize(
-					$background-color, 
+					$background-color,
 					$button-outline-border-transparentize-amount
 				);
+
 			color: $background-color;
 
 			&:link,
@@ -162,64 +180,73 @@
 			}
 
 			&:hover {
-				@if not ($state-light-color == '') {
-					background-color: 
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
 						tint(
-							$day__body-bg-color, 
-							$background-color, 
+							$day__body-bg-color,
+							$background-color,
 							$button-hover-bg-color-amount
 						);
-				}
-				@else {
-					background-color: 
+
+				} @else {
+
+					background-color:
 						shade(
-							$ngt__body-bg-color, 
-							$background-color, 
+							$ngt__body-bg-color,
+							$background-color,
 							$button-hover-bg-color-amount
 						);
+
 				}
-				border-color: 
+
+				border-color:
 					transparentize(
-						$background-color, 
+						$background-color,
 						$button-outline-border-transparentize-amount
 					);
+
 				color: $text-color;
 			}
 
 			&:active,
 			&.active {
-				@if not ($state-light-color == '') {
-					background-color: 
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
 						tint(
-							$day__body-bg-color, 
-							$background-color, 
+							$day__body-bg-color,
+							$background-color,
 							$button-active-bg-color-amount
 						);
 					border-color: transparentize(
 						tint(
-							$day__body-bg-color, 
-							$background-color, 
+							$day__body-bg-color,
+							$background-color,
 							$button-active-bg-color-amount
-						), 
+						),
 						$button-outline-border-transparentize-amount
 					);
-				}
-				@else {
-					background-color: 
+
+				} @else {
+
+					background-color:
 						shade(
-							$ngt__body-bg-color, 
-							$background-color, 
+							$ngt__body-bg-color,
+							$background-color,
 							$button-active-bg-color-amount
 						);
 					border-color: transparentize(
 						shade(
-							$ngt__body-bg-color, 
-							$background-color, 
+							$ngt__body-bg-color,
+							$background-color,
 							$button-active-bg-color-amount
-						), 
+						),
 						$button-outline-border-transparentize-amount
 					);
+
 				}
+
 				color: $text-color;
 			}
 		}
@@ -228,10 +255,10 @@
 	.night .btn--outline {
 		background-color: transparent;
 
-		&.btn--#{$name_r} {
-			border-color: 
+		&.btn--#{ $name_r } {
+			border-color:
 				transparentize(
-					$night-background-color, 
+					$night-background-color,
 					$button-outline-border-transparentize-amount
 				);
 			color: $night-background-color;
@@ -242,64 +269,73 @@
 			}
 
 			&:hover {
-				@if not ($state-light-color == '') {
-					background-color: 
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
 						tint(
-							$day__body-bg-color, 
-							$night-background-color, 
+							$day__body-bg-color,
+							$night-background-color,
 							$button-hover-bg-color-amount
 						);
-				}
-				@else {
-					background-color: 
+
+				} @else {
+
+					background-color:
 						shade(
-							$ngt__body-bg-color, 
-							$night-background-color, 
+							$ngt__body-bg-color,
+							$night-background-color,
 							$button-hover-bg-color-amount
 						);
+
 				}
-				border-color: 
+
+				border-color:
 					transparentize(
-						$night-background-color, 
+						$night-background-color,
 						$button-outline-border-transparentize-amount
 					);
+
 				color: $night-text-color;
 			}
 
 			&:active,
 			&.active {
-				@if not ($state-light-color == '') {
-					background-color: 
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
 						tint(
-							$day__body-bg-color, 
-							$night-background-color, 
+							$day__body-bg-color,
+							$night-background-color,
 							$button-active-bg-color-amount
 						);
 					border-color: transparentize(
 						tint(
-							$day__body-bg-color, 
-							$night-background-color, 
+							$day__body-bg-color,
+							$night-background-color,
 							$button-active-bg-color-amount
-						), 
+						),
 						$button-outline-border-transparentize-amount
 					);
-				}
-				@else {
-					background-color: 
+
+				} @else {
+
+					background-color:
 						shade(
-							$ngt__body-bg-color, 
-							$night-background-color, 
+							$ngt__body-bg-color,
+							$night-background-color,
 							$button-active-bg-color-amount
 						);
 					border-color: transparentize(
 						shade(
-							$ngt__body-bg-color, 
-							$night-background-color, 
+							$ngt__body-bg-color,
+							$night-background-color,
 							$button-active-bg-color-amount
-						), 
+						),
 						$button-outline-border-transparentize-amount
 					);
+
 				}
+
 				color: $night-text-color;
 			}
 		}
@@ -312,8 +348,8 @@
 		position: absolute;
 		z-index: -1;
 
-		&:checked + .btn--#{$name_r} {
-			@extend .btn--#{$name_r}.active;
+		&:checked + .btn--#{ $name_r } {
+			@extend .btn--#{ $name_r }.active;
 		}
 	}
 }
