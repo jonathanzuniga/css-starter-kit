@@ -86,6 +86,29 @@
 
 		@each $key, $width in $gutters {
 
+			.max#{ $size }-gutters-#{ $key } {
+				// margin-right: -#{ $width };
+				// margin-left: -#{ $width };
+
+				&.row {
+					> .col,
+					> [class*='col-'] {
+						padding-right: $width;
+						padding-left: $width;
+					}
+				}
+
+				// Para la división del contenido en cols.
+
+				@for $i from 1 through $grid-columns {
+
+					&.#{ $size }-cols-#{ $key } {
+						column-gap: $width;
+					}
+
+				}
+			}
+
 			// Grid gap.
 
 			.max#{ $size }-gap-#{ $key } {

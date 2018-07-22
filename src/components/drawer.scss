@@ -48,7 +48,7 @@
 	// opacity: 0;
 	position: fixed;
 	// visibility: hidden;
-	width: $drawer-width;
+	width: $drawer-max-width;
 	z-index: $drawer-z-index;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .drawer--right {
-	margin-right: -#{$drawer-width};
+	margin-right: -#{$drawer-max-width};
 	
 	top: 0;
 	right: 0;
@@ -89,7 +89,7 @@
 }
 
 .drawer--left {
-	margin-left: -#{$drawer-width};
+	margin-left: -#{$drawer-max-width};
 	
 	top: 0;
 	bottom: 0;
@@ -164,7 +164,7 @@
 		margin-right: 0;
 		
 		& ~ .drawer-outside {
-			margin-right: $drawer-width;
+			margin-right: $drawer-max-width;
 		}
 	}
 }
@@ -184,7 +184,7 @@
 		margin-left: 0;
 		
 		& ~ .drawer-outside {
-			margin-left: $drawer-width;
+			margin-left: $drawer-max-width;
 		}
 	}
 }
@@ -207,7 +207,7 @@
 		margin-right: 0;
 		
 		& ~ .drawer-outside {
-			margin-right: $drawer-width;
+			margin-right: $drawer-max-width;
 		}
 	}
 
@@ -223,8 +223,15 @@
 		margin-left: 0;
 		
 		& ~ .drawer-outside {
-			margin-left: $drawer-width;
+			margin-left: $drawer-max-width;
 		}
+	}
+
+	& ~ .drawer-overlay {
+		display: block;
+
+		opacity: 0.5;
+		visibility: visible;
 	}
 }
 
@@ -270,7 +277,13 @@
 
 	&.drawer--right {
 		margin-right: 0;
-		transform: translateX($drawer-width);
+		transform: translateX($drawer-max-width);
+	}
+
+	&.drawer--right,
+	&.drawer--left {
+		width: $drawer-width;
+		max-width: $drawer-max-width;
 	}
 
 	&.drawer--bottom {
@@ -280,7 +293,7 @@
 
 	&.drawer--left {
 		margin-left: 0;
-		transform: translateX(-#{$drawer-width});
+		transform: translateX(-#{$drawer-max-width});
 	}
 }
 
@@ -306,7 +319,7 @@
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-width);
+			transform: translateX($drawer-max-width);
 		}
 
 		&.drawer--bottom {
@@ -314,7 +327,7 @@
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-width});
+			transform: translateX(-#{$drawer-max-width});
 		}
 	}
 }
@@ -329,7 +342,7 @@
 			transform: translate(0, 0);
 			
 			& ~ .drawer-outside {
-				transform: translateX(-#{$drawer-width});
+				transform: translateX(-#{$drawer-max-width});
 			}
 		}
 
@@ -338,7 +351,7 @@
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-width});
+			transform: translateX(-#{$drawer-max-width});
 		}
 	}
 }
@@ -350,7 +363,7 @@
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-width);
+			transform: translateX($drawer-max-width);
 		}
 
 		&.drawer--bottom {
@@ -362,7 +375,7 @@
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-width});
+			transform: translateX(-#{$drawer-max-width});
 		}
 	}
 }
@@ -374,7 +387,7 @@
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-width);
+			transform: translateX($drawer-max-width);
 		}
 
 		&.drawer--bottom {
@@ -385,7 +398,7 @@
 			transform: translate(0, 0);
 			
 			& ~ .drawer-outside {
-				transform: translateX($drawer-width);
+				transform: translateX($drawer-max-width);
 			}
 		}
 	}
@@ -403,7 +416,7 @@
 
 		&.drawer--right {
 			& ~ .drawer-outside {
-				transform: translateX(-#{$drawer-width});
+				transform: translateX(-#{$drawer-max-width});
 			}
 		}
 
@@ -415,7 +428,7 @@
 
 		&.drawer--left {
 			& ~ .drawer-outside {
-				transform: translateX($drawer-width);
+				transform: translateX($drawer-max-width);
 			}
 		}
 
@@ -432,7 +445,7 @@
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-width);
+			transform: translateX($drawer-max-width);
 		}
 
 		&.drawer--bottom {
@@ -440,7 +453,7 @@
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-width});
+			transform: translateX(-#{$drawer-max-width});
 		}
 	}
 }

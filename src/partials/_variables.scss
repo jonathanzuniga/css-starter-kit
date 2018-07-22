@@ -821,7 +821,7 @@ $border-width-map: (
 
 $display-map: (
     block: block,
-    none:  none
+    none:  none !important
 );
 
 
@@ -1119,7 +1119,8 @@ $ngt__collapse__list-unstyled__item-active__a-color:  $ngt__body-color;
 $day__drawer-bg-color:           $day__body-bg-color;
 $ngt__drawer-bg-color:           $ngt__body-bg-color;
 
-$drawer-width:                   260px;
+$drawer-width:                   calc( 100% - 56px );
+$drawer-max-width:               320px;
 $drawer-height:                  200px;
 $drawer-z-index:                 110;
 
