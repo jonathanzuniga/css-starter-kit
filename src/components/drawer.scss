@@ -37,6 +37,7 @@
  *                     label(for='eg-drawer-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-left').btn.btn--secondary Left
  */
+
 .drawer-wrap {
 	overflow: hidden;
 	position: relative;
@@ -65,7 +66,7 @@
 }
 
 .drawer--top {
-	margin-top: -#{$drawer-height};
+	margin-top: -#{ $drawer-height };
 
 	top: 0;
 	right: 0;
@@ -73,15 +74,15 @@
 }
 
 .drawer--right {
-	margin-right: -#{$drawer-max-width};
-	
+	margin-right: -#{ $drawer-max-width };
+
 	top: 0;
 	right: 0;
 	bottom: 0;
 }
 
 .drawer--bottom {
-	margin-bottom: -#{$drawer-height};
+	margin-bottom: -#{ $drawer-height };
 
 	right: 0;
 	bottom: 0;
@@ -89,8 +90,8 @@
 }
 
 .drawer--left {
-	margin-left: -#{$drawer-max-width};
-	
+	margin-left: -#{ $drawer-max-width };
+
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -109,7 +110,7 @@
 	background-color: $day__drawer-overlay-bg-color;
 	cursor: pointer;
 	overflow: hidden;
-	
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -152,7 +153,7 @@
 .drawer-toggle--top:checked {
 	~ .drawer--top {
 		margin-top: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-top: $drawer-height;
 		}
@@ -162,7 +163,7 @@
 .drawer-toggle--right:checked {
 	~ .drawer--right {
 		margin-right: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-right: $drawer-max-width;
 		}
@@ -172,7 +173,7 @@
 .drawer-toggle--bottom:checked {
 	~ .drawer--bottom {
 		margin-bottom: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-bottom: $drawer-height;
 		}
@@ -182,7 +183,7 @@
 .drawer-toggle--left:checked {
 	~ .drawer--left {
 		margin-left: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-left: $drawer-max-width;
 		}
@@ -197,7 +198,7 @@
 
 	&.drawer--top {
 		margin-top: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-top: $drawer-height;
 		}
@@ -205,7 +206,7 @@
 
 	&.drawer--right {
 		margin-right: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-right: $drawer-max-width;
 		}
@@ -213,7 +214,7 @@
 
 	&.drawer--bottom {
 		margin-bottom: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-bottom: $drawer-height;
 		}
@@ -221,7 +222,7 @@
 
 	&.drawer--left {
 		margin-left: 0;
-		
+
 		& ~ .drawer-outside {
 			margin-left: $drawer-max-width;
 		}
@@ -267,17 +268,19 @@
  *                     label(for='eg-drawer-with-push-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-with-push-left').btn.btn--secondary Left
  */
-.drawer--push {
+
+.drawer--push,
+.drawer--overlap {
 	will-change: transform;
 
 	&.drawer--top {
 		margin-top: 0;
-		transform: translateY(-#{$drawer-height});
+		transform: translateY( -#{ $drawer-height } );
 	}
 
 	&.drawer--right {
 		margin-right: 0;
-		transform: translateX($drawer-max-width);
+		transform: translateX( $drawer-max-width );
 	}
 
 	&.drawer--right,
@@ -288,147 +291,155 @@
 
 	&.drawer--bottom {
 		margin-bottom: 0;
-		transform: translateY($drawer-height);
+		transform: translateY( $drawer-height );
 	}
 
 	&.drawer--left {
 		margin-left: 0;
-		transform: translateX(-#{$drawer-max-width});
+		transform: translateX( -#{ $drawer-max-width } );
 	}
 }
 
 .drawer--push,
 .drawer--push ~ .drawer-outside {
-	transition: $drawer-push-outside-transition;
+	transition: $drawer-push-transition;
 }
 
 .drawer-toggle:checked {
-	~ .drawer--push ~ .drawer-outside {
+	~ .drawer--push ~ .drawer-outside,
+	~ .drawer--overlap ~ .drawer-outside {
 		margin: 0;
 	}
 }
 
 .drawer-toggle--top:checked {
-	~ .drawer--push {
+	~ .drawer--push,
+	~ .drawer--overlap {
 		&.drawer--top {
-			transform: translate(0, 0);
-			
-			& ~ .drawer-outside {
-				transform: translateY($drawer-height);
-			}
+			transform: translateY( 0 );
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-max-width);
+			transform: translateX( $drawer-max-width );
 		}
 
 		&.drawer--bottom {
-			transform: translateY($drawer-height);
+			transform: translateY( $drawer-height );
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-max-width});
+			transform: translateX( -#{ $drawer-max-width } );
 		}
+	}
+
+	~ .drawer--push.drawer--top ~ .drawer-outside {
+		transform: translateY( $drawer-height );
 	}
 }
 
 .drawer-toggle--right:checked {
-	~ .drawer--push {
+	~ .drawer--push,
+	~ .drawer--overlap {
 		&.drawer--top {
-			transform: translateY(-#{$drawer-height});
+			transform: translateY( -#{ $drawer-height } );
 		}
 
 		&.drawer--right {
-			transform: translate(0, 0);
-			
-			& ~ .drawer-outside {
-				transform: translateX(-#{$drawer-max-width});
-			}
+			transform: translateX( 0 );
 		}
 
 		&.drawer--bottom {
-			transform: translateY($drawer-height);
+			transform: translateY( $drawer-height );
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-max-width});
+			transform: translateX( -#{ $drawer-max-width } );
 		}
+	}
+
+	~ .drawer--push.drawer--right ~ .drawer-outside {
+		transform: translateX( -#{ $drawer-max-width } );
 	}
 }
 
 .drawer-toggle--bottom:checked {
-	~ .drawer--push {
+	~ .drawer--push,
+	~ .drawer--overlap {
 		&.drawer--top {
-			transform: translateY(-#{$drawer-height});
+			transform: translateY( -#{ $drawer-height } );
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-max-width);
+			transform: translateX( $drawer-max-width );
 		}
 
 		&.drawer--bottom {
-			transform: translate(0, 0);
-			
-			& ~ .drawer-outside {
-				transform: translateY(-#{$drawer-height});
-			}
+			transform: translateY( 0 );
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-max-width});
+			transform: translateX( -#{ $drawer-max-width } );
 		}
+	}
+
+	~ .drawer--push.drawer--bottom ~ .drawer-outside {
+		transform: translateY( -#{ $drawer-height } );
 	}
 }
 
 .drawer-toggle--left:checked {
-	~ .drawer--push {
+	~ .drawer--push,
+	~ .drawer--overlap {
 		&.drawer--top {
-			transform: translateY(-#{$drawer-height});
+			transform: translateY( -#{ $drawer-height } );
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-max-width);
+			transform: translateX( $drawer-max-width );
 		}
 
 		&.drawer--bottom {
-			transform: translateY($drawer-height);
+			transform: translateY( $drawer-height );
 		}
 
 		&.drawer--left {
-			transform: translate(0, 0);
-			
-			& ~ .drawer-outside {
-				transform: translateX($drawer-max-width);
-			}
+			transform: translateX( 0 );
 		}
+	}
+
+	~ .drawer--push.drawer--left ~ .drawer-outside {
+		transform: translateX( $drawer-max-width );
 	}
 }
 
 .open {
-	&.drawer--push {
-		transform: translate(0, 0);
+	&.drawer--push,
+	&.drawer--overlap {
+		transform: translate( 0, 0 );
+	}
 
+	&.drawer--push {
 		&.drawer--top {
 			& ~ .drawer-outside {
-				transform: translateY($drawer-height);
+				transform: translateY( $drawer-height );
 			}
 		}
 
 		&.drawer--right {
 			& ~ .drawer-outside {
-				transform: translateX(-#{$drawer-max-width});
+				transform: translateX( -#{ $drawer-max-width } );
 			}
 		}
 
 		&.drawer--bottom {
 			& ~ .drawer-outside {
-				transform: translateY(-#{$drawer-height});
+				transform: translateY( -#{ $drawer-height } );
 			}
 		}
 
 		&.drawer--left {
 			& ~ .drawer-outside {
-				transform: translateX($drawer-max-width);
+				transform: translateX( $drawer-max-width );
 			}
 		}
 
@@ -439,21 +450,22 @@
 }
 
 .close {
-	&.drawer--push {
+	&.drawer--push,
+	&.drawer--overlap {
 		&.drawer--top {
-			transform: translateY(-#{$drawer-height});
+			transform: translateY( -#{ $drawer-height } );
 		}
 
 		&.drawer--right {
-			transform: translateX($drawer-max-width);
+			transform: translateX( $drawer-max-width );
 		}
 
 		&.drawer--bottom {
-			transform: translateY($drawer-height);
+			transform: translateY( $drawer-height );
 		}
 
 		&.drawer--left {
-			transform: translateX(-#{$drawer-max-width});
+			transform: translateX( -#{ $drawer-max-width } );
 		}
 	}
 }
@@ -490,14 +502,7 @@
  *                     label(for='eg-drawer-with-overlap-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-with-overlap-left').btn.btn--secondary Left
  */
-.drawer-toggle:checked {
-	~ .drawer--overlap ~ .drawer-outside {
-		margin: 0;
-	}
-}
 
-.open {
-	&.drawer--overlap ~ .drawer-outside {
-		margin: 0;
-	}
+.drawer--overlap {
+	transition: $drawer-overlap-transition;
 }
