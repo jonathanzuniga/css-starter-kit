@@ -211,7 +211,8 @@
     transform: translateX(-320px); }
 
 .drawer--push,
-.drawer--push ~ .drawer-outside {
+.drawer--push ~ .drawer-outside,
+.drawer--overlap {
   transition: transform 0.32s ease-out; }
 
 .drawer-toggle:checked ~ .drawer--push ~ .drawer-outside,
@@ -296,6 +297,8 @@
 
 .open.drawer--push, .open.drawer--overlap {
   transform: translate(0, 0); }
+  .open.drawer--push ~ .drawer-outside, .open.drawer--overlap ~ .drawer-outside {
+    margin: 0; }
 
 .open.drawer--push.drawer--top ~ .drawer-outside {
   transform: translateY(200px); }
@@ -309,9 +312,6 @@
 .open.drawer--push.drawer--left ~ .drawer-outside {
   transform: translateX(320px); }
 
-.open.drawer--push ~ .drawer-outside {
-  margin: 0; }
-
 .close.drawer--push.drawer--top, .close.drawer--overlap.drawer--top {
   transform: translateY(-200px); }
 
@@ -323,6 +323,18 @@
 
 .close.drawer--push.drawer--left, .close.drawer--overlap.drawer--left {
   transform: translateX(-320px); }
+
+.open.drawer--push,
+.open.drawer--push ~ .drawer-outside,
+.open.drawer--overlap,
+.open.drawer--overlap ~ .drawer-outside {
+  transition: transform 0.24s cubic-bezier(0, 0, 0.2, 1); }
+
+.close.drawer--push,
+.close.drawer--push ~ .drawer-outside,
+.close.drawer--overlap,
+.close.drawer--overlap ~ .drawer-outside {
+  transition: transform 0.24s cubic-bezier(0.4, 0, 1, 1); }
 
 /**
  * Drawer with overlap:
@@ -356,5 +368,3 @@
  *                     label(for='eg-drawer-with-overlap-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-with-overlap-left').btn.btn--secondary Left
  */
-.drawer--overlap {
-  transition: transform 0.32s ease-out; }

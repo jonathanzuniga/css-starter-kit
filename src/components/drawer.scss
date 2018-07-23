@@ -99,7 +99,7 @@
 
 .drawer,
 .drawer ~ .drawer-outside {
-	transition: $drawer-outside-transition;
+	transition: $drawer-transition;
 }
 
 .drawer-outside {
@@ -301,7 +301,8 @@
 }
 
 .drawer--push,
-.drawer--push ~ .drawer-outside {
+.drawer--push ~ .drawer-outside,
+.drawer--overlap {
 	transition: $drawer-push-transition;
 }
 
@@ -416,6 +417,10 @@
 	&.drawer--push,
 	&.drawer--overlap {
 		transform: translate( 0, 0 );
+
+		& ~ .drawer-outside {
+			margin: 0;
+		}
 	}
 
 	&.drawer--push {
@@ -442,10 +447,6 @@
 				transform: translateX( $drawer-max-width );
 			}
 		}
-
-		& ~ .drawer-outside {
-			margin: 0;
-		}
 	}
 }
 
@@ -468,6 +469,20 @@
 			transform: translateX( -#{ $drawer-max-width } );
 		}
 	}
+}
+
+.open.drawer--push,
+.open.drawer--push ~ .drawer-outside,
+.open.drawer--overlap,
+.open.drawer--overlap ~ .drawer-outside {
+	transition: $drawer-push-open-transition;
+}
+
+.close.drawer--push,
+.close.drawer--push ~ .drawer-outside,
+.close.drawer--overlap,
+.close.drawer--overlap ~ .drawer-outside {
+	transition: $drawer-push-close-transition;
 }
 
 /**
@@ -502,7 +517,3 @@
  *                     label(for='eg-drawer-with-overlap-bottom').btn.btn--secondary Bottom
  *                     label(for='eg-drawer-with-overlap-left').btn.btn--secondary Left
  */
-
-.drawer--overlap {
-	transition: $drawer-overlap-transition;
-}

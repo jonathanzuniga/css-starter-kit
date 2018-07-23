@@ -1124,7 +1124,7 @@ $drawer-max-width:             320px;
 $drawer-height:                200px;
 $drawer-z-index:               110;
 
-$drawer-outside-transition:    margin 0.32s $transition-timing-function;
+$drawer-transition:            margin 0.32s $transition-timing-function;
 
 $day__drawer-overlay-bg-color: color( 'black 50' );
 $ngt__drawer-overlay-bg-color: color( 'black 50' );
@@ -1134,9 +1134,12 @@ $drawer-overlay-transition:    opacity    0.32s $transition-timing-function,
 
 $drawer-overlay-z-index:       100;
 
+// The same transitions are used for the .drawer--overlap class.
+
 $drawer-push-transition:       transform 0.32s $transition-timing-function;
 
-$drawer-overlap-transition:    transform 0.32s $transition-timing-function;
+$drawer-push-open-transition:  transform 0.24s cubic-bezier( 0, 0, 0.2, 1 );
+$drawer-push-close-transition: transform 0.24s cubic-bezier( 0.4, 0, 1, 1 );
 
 
 // Menu
