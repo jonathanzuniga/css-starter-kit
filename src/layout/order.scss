@@ -33,6 +33,22 @@
 
 @each $size, $length in $grid-breakpoints {
 
+	@if ( $length != 0 ) {
+
+		@media ( max-width: $length - 1 ) {
+
+			@for $i from 1 through $grid-columns {
+
+				.max#{ $size }-order-#{ $i } {
+					order: #{ $i };
+				}
+
+			}
+
+		}
+
+	}
+
 	@media ( min-width: $length ) {
 
 		@for $i from 1 through $grid-columns {
@@ -44,16 +60,4 @@
 
 	}
 
-	@media ( max-width: $length - 1 ) {
-
-		@for $i from 1 through $grid-columns {
-
-			.max#{ $size }-order-#{ $i } {
-				order: #{ $i };
-			}
-
-		}
-
-	}
-	
 }

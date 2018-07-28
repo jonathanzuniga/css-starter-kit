@@ -119,10 +119,28 @@
 
 @each $size, $length in $grid-breakpoints {
 
+	@if ( $length != 0 ) {
+
+		@media ( max-width: $length - 1 ) {
+
+			@for $i from 1 through $grid-columns {
+
+				.max#{ $size }-col-#{ $i } {
+					$column-width: percentage( $i / $grid-columns );
+					flex-basis: $column-width;
+					max-width: $column-width;
+				}
+
+			}
+
+		}
+
+	}
+
 	@media ( min-width: $length ) {
 
 		@for $i from 1 through $grid-columns {
-			
+
 			.#{ $size }-col-#{ $i } {
 				$column-width: percentage( $i / $grid-columns );
 				flex-basis: $column-width;
