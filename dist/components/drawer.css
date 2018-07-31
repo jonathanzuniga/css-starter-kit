@@ -38,7 +38,9 @@
 
 .drawer {
   background-color: #fff;
+  box-shadow: none;
   display: block;
+  overflow-y: auto;
   position: fixed;
   width: 320px;
   z-index: 110; }
@@ -77,7 +79,7 @@
 
 .drawer,
 .drawer ~ .drawer-outside {
-  transition: margin 0.32s ease-out; }
+  transition: box-shadow 0.24s ease-out, margin 0.32s ease-out; }
 
 .drawer-outside {
   transform: none; }
@@ -109,24 +111,31 @@
     visibility: visible; }
 
 .drawer-toggle--top:checked ~ .drawer--top {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
   margin-top: 0; }
   .drawer-toggle--top:checked ~ .drawer--top ~ .drawer-outside {
     margin-top: 200px; }
 
 .drawer-toggle--right:checked ~ .drawer--right {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
   margin-right: 0; }
   .drawer-toggle--right:checked ~ .drawer--right ~ .drawer-outside {
     margin-right: 320px; }
 
 .drawer-toggle--bottom:checked ~ .drawer--bottom {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
   margin-bottom: 0; }
   .drawer-toggle--bottom:checked ~ .drawer--bottom ~ .drawer-outside {
     margin-bottom: 200px; }
 
 .drawer-toggle--left:checked ~ .drawer--left {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
   margin-left: 0; }
   .drawer-toggle--left:checked ~ .drawer--left ~ .drawer-outside {
     margin-left: 320px; }
+
+.open.drawer {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12); }
 
 .open.drawer--top {
   margin-top: 0; }
