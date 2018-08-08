@@ -19,6 +19,7 @@
  *                 li Caramel
  *                 li Ice cream
  */
+
 .ls-unstyled {
 	list-style: none;
 	padding-left: 0;
@@ -34,13 +35,14 @@
  *         li Banana
  *         li Cherry
  */
+
 .ls-inline {
 	@extend .ls-unstyled;
 
 	li {
 		display: inline-block;
 
-		&:not(:last-child) {
+		&:not( :last-child ) {
 			margin-right: $spacing-unit-half;
 		}
 	}

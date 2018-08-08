@@ -23,6 +23,7 @@
  *                     input(id='eg-switch-checked', type='checkbox' checked).switch__input
  *                     label(for='eg-switch-checked').switch__lbl
  */
+
 .switch {
 	display: inline-flex;
 }
@@ -39,7 +40,9 @@
 				box-shadow: $switch-label-box-shadow;
 
 				@if $switch-label-border != none {
-					top: -$control-border-width;
+
+					top: -#{ $control-border-width };
+
 				}
 
 				transition: $switch-checked-label-before-transition;
@@ -107,13 +110,14 @@
 	}
 
 	// Toggle.
+
 	&:after {
 		background-color: $day__switch-label-after-bg-color;
 		box-shadow: $switch-label-after-box-shadow;
 		border-radius: $switch-label-border-radius;
 		content: '';
 		display: block;
-		margin-top: -($switch-label-after-height / 2);
+		margin-top: -( $switch-label-after-height / 2 );
 
 		position: absolute;
 		top: $switch-label-after-top;
@@ -130,6 +134,7 @@
 	background-color: $ngt__switch-label-bg-color;
 
 	// Toggle.
+
 	&:after {
 		background-color: $ngt__switch-label-after-bg-color;
 	}
@@ -165,6 +170,7 @@
  *                         span.switch__on  Yes
  *                         span.switch__off No
  */
+
 .switch__on,
 .switch__off {
 	font-size: $switch-inner-label-font-size;
@@ -232,6 +238,7 @@
  *                         span.switch__on  Yes
  *                         span.switch__off No
  */
+
 .switch--sm {
 	.switch__lbl {
 		border-radius: $switch-sm-label-border-radius;
@@ -247,9 +254,10 @@
 		}
 
 		// Toggle.
+
 		&:after {
 			border-radius: $switch-sm-label-border-radius;
-			margin-top: -($switch-sm-label-after-height / 2);
+			margin-top: -( $switch-sm-label-after-height / 2 );
 
 			width: $switch-sm-label-after-width;
 			height: $switch-sm-label-after-height;
@@ -301,9 +309,10 @@
 		}
 
 		// Toggle.
+
 		&:after {
 			border-radius: $switch-lg-label-border-radius;
-			margin-top: -($switch-lg-label-after-height / 2);
+			margin-top: -( $switch-lg-label-after-height / 2 );
 
 			width: $switch-lg-label-after-width;
 			height: $switch-lg-label-after-height;

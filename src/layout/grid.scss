@@ -21,25 +21,32 @@
  *         div
  *             div.bgc-teal-10 &nbsp;
  */
+
 %gcols {
 	display: grid;
 	grid-gap: $grid-gap;
 }
 
 @each $size, $length in $grid-breakpoints {
+
 	@for $i from 1 through $grid-columns {
-		.gcols-#{$i},
-		.max#{$size}-gcols-#{$i},
-		.#{$size}-gcols-#{$i} {
+
+		.gcols-#{ $i },
+		.max#{ $size }-gcols-#{ $i },
+		.#{ $size }-gcols-#{ $i } {
 			@extend %gcols;
 		}
+
 	}
+
 }
 
 @for $i from 1 through $grid-columns {
-	.gcols-#{$i} {
-		grid-template-columns: repeat($i, 1fr);
+
+	.gcols-#{ $i } {
+		grid-template-columns: repeat( $i, 1fr );
 	}
+
 }
 
 /**
@@ -61,50 +68,63 @@
  *         div
  *             div.bgc-teal-20 &nbsp;
  */
+
 @each $size, $length in $grid-breakpoints {
-	@if ($length != 0) {
-		@media (max-width: $length - 1) {
+
+	@if ( $length != 0 ) {
+
+		@media ( max-width: $length - 1 ) {
+
 			@for $i from 1 through $grid-columns {
-				.max#{$size}-gcols-#{$i} {
-					grid-template-columns: repeat($i, 1fr);
+
+				.max#{ $size }-gcols-#{ $i } {
+					grid-template-columns: repeat( $i, 1fr );
 				}
 
-				.max#{$size}-gcol-#{$i} {
-					grid-column: #{$i};
+				.max#{ $size }-gcol-#{ $i } {
+					grid-column: #{ $i };
 				}
 
-				.#{$size}-gcols-0 {
-					.max#{$size}-gcol-#{$i} {
+				.#{ $size }-gcols-0 {
+					.max#{ $size }-gcol-#{ $i } {
 						grid-column: auto;
 					}
 				}
+
 			}
+
 		}
+
 	}
 
-	@media (min-width: $length) {
-		.#{$size}-gcols-0 {
+	@media ( min-width: $length ) {
+
+		.#{ $size }-gcols-0 {
 			display: inherit;
 			grid-gap: initial;
 			grid-template-columns: none;
 		}
 
 		@for $i from 1 through $grid-columns {
-			.#{$size}-gcols-#{$i} {
-				grid-template-columns: repeat($i, 1fr);
+
+			.#{ $size }-gcols-#{ $i } {
+				grid-template-columns: repeat( $i, 1fr );
 			}
 
-			.#{$size}-gcol-#{$i} {
-				grid-column: #{$i};
+			.#{ $size }-gcol-#{ $i } {
+				grid-column: #{ $i };
 			}
 
-			.#{$size}-gcols-0 {
-				.#{$size}-gcol-#{$i} {
+			.#{ $size }-gcols-0 {
+				.#{ $size }-gcol-#{ $i } {
 					grid-column: auto;
 				}
 			}
+
 		}
+
 	}
+
 }
 
 /**

@@ -24,7 +24,7 @@
 .input,
 .txtarea {
 	-webkit-appearance: none;
-	
+
 	background-color: $day__input-bg-color;
 	border-width: $input-border-width;
 	border-style: $input-border-style;
@@ -337,7 +337,7 @@
 .ctrl-check--inline {
 	display: inline-flex;
 
-	&:not(:last-child) {
+	&:not( :last-child ) {
 		margin-right: $control-check-inline-margin-right;
 	}
 }
@@ -374,7 +374,7 @@
  */
 
 .ctrl-check--custom {
-	&:not(:last-child) {
+	&:not( :last-child ) {
 		margin-bottom: $control-check-custom-margin-bottom;
 	}
 }
@@ -400,7 +400,7 @@
 					border-width: $control-check-input-custom-checked__indic-checkbox-after-border-width;
 					border-style: $control-check-input-custom-checked__indic-checkbox-after-border-style;
 					border-color: $day__control-check-input-custom-checked__indic-checkbox-after-border-color;
-					
+
 					top: $control-check-input-custom-checked__indic-checkbox-after-top;
 					left: $control-check-input-custom-checked__indic-checkbox-after-left;
 
@@ -415,7 +415,7 @@
 				&:after {
 					background-color: $day__control-check-input-custom-checked__indic-radio-after-bg-color;
 					border-radius: $control-check-input-custom-checked__indic-radio-after-border-radius;
-					
+
 					top: $control-check-input-custom-checked__indic-radio-after-top;
 					left: $control-check-input-custom-checked__indic-radio-after-left;
 
@@ -566,7 +566,7 @@
  */
 
 .ctrl-check--inline.ctrl-check--custom {
-	&:not(:last-child) {
+	&:not( :last-child ) {
 		margin-right: $control-check-inline-custom-margin-right;
 	}
 }
@@ -688,8 +688,9 @@
 }
 
 @if $select-icon-bg-image != none {
+
 	.sel--icn {
-		background-image: url($select-icon-bg-image);
+		background-image: url( $select-icon-bg-image );
 		background-position: $select-icon-bg-position;
 		background-size: $select-icon-bg-size;
 		background-repeat: no-repeat;
@@ -700,11 +701,14 @@
 		-moz-appearance: none;
 
 		@if $select-icon-focus-bg-image != none {
+
 			&:focus {
-				background-image: url($select-icon-focus-bg-image);
+				background-image: url( $select-icon-focus-bg-image );
 			}
+
 		}
 	}
+
 }
 
 .night .sel {
@@ -748,14 +752,14 @@
 
 		padding-right: $select-custom-padding-right;
 	}
-	
+
 	&:after {
 		border-width: $select-custom-after-border-width;
 		border-style: $select-custom-after-border-style;
 		border-color: $day__select-custom-after-border-color;
 		border-right: 0;
 		border-top: 0;
-		
+
 		content: '';
 		display: block;
 
@@ -816,8 +820,11 @@
 	padding: $select-sm-padding-y $select-sm-padding-x;
 
 	// Arrow icon.
+
 	@if $select-icon-bg-image != none {
+
 		padding-right: $select-icon-sm-padding-right;
+
 	}
 }
 
@@ -827,8 +834,11 @@
 	padding: $select-lg-padding-y $select-lg-padding-x;
 
 	// Arrow icon.
+
 	@if $select-icon-bg-image != none {
+
 		padding-right: $select-icon-lg-padding-right;
+
 	}
 }
 

@@ -27,6 +27,7 @@
  *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-0063
  *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
  */
+
 .navbar,
 .navbar__brand,
 .navbar__collapse,
@@ -174,7 +175,9 @@
  *                 li.navbar__item.maxsm-bd-top-0063
  *                     a(href='').navbar__a About
  */
+
 @mixin navbar-responsive-collapse {
+
 	.navbar__toggler {
 		cursor: $navbar-toggler-cursor;
 		display: flex;
@@ -237,9 +240,11 @@
 			justify-content: center;
 		}
 	}
+
 }
 
 @mixin navbar-responsive {
+
 	&.navbar {
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -266,6 +271,7 @@
 	}
 
 	@include navbar-responsive-collapse;
+
 }
 
 .navbar-responsive {
@@ -281,7 +287,7 @@
 		}
 
 	}
-	
+
 }
 
 /**
@@ -409,6 +415,7 @@
  *                 td <code>.scrolled</code>
  *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
  */
+
 .navbar {
 	&.navbar--fixed {
 		position: fixed;
@@ -417,19 +424,13 @@
 	}
 
 	&.navbar--shadow {
-		box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
-					0 4px 5px 0 rgba(0, 0, 0, 0.06),
-					0 1px 10px 0 rgba(0, 0, 0, 0.08);
+		box-shadow: $day__navbar-shadow;
 	}
 }
 
-.night {
-	.navbar {
-		&.navbar--shadow {
-			box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 
-						0 4px 5px 0 rgba(0, 0, 0, 0.14), 
-						0 1px 10px 0 rgba(0, 0, 0, 0.12);
-		}
+.night .navbar {
+	&.navbar--shadow {
+		box-shadow: $ngt__navbar-shadow;
 	}
 }
 
@@ -459,5 +460,3 @@
 		}
 	}
 }
-
-

@@ -31,6 +31,7 @@
  *                 td Table data
  *                 td Table data
  */
+
 .tbl {
 	// border-spacing: 0;
 
@@ -62,7 +63,7 @@
 	}
 
 	th, td {
-		&:not(:last-child) {
+		&:not( :last-child ) {
 			border-right-width: $table-border-width;
 			border-right-style: $table-border-right-style;
 		}
@@ -132,6 +133,7 @@
  *                 td Table data
  *                 td Table data
  */
+
 .tbl--bordered {
 	border-width: $table-border-width;
 	border-style: $table-border-style;
@@ -158,7 +160,7 @@
 	}
 
 	td, th {
-		&:not(:last-child) {
+		&:not( :last-child ) {
 			border-right-style: $table-border-style;
 		}
 	}
@@ -209,16 +211,19 @@
  *                 td Table data
  *                 td Table data
  */
+
 .tbl--responsive {
 	overflow-x: auto;
 }
 
-@media screen and (max-width: $breakpoint-sm-min-width - 1) {
+@media screen and ( max-width: $breakpoint-sm-min-width - 1 ) {
+
 	.tbl--responsive {
 		display: block;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		overflow-y: hidden;
 	}
+
 }
 
 /**
@@ -247,6 +252,7 @@
  *                     td Table data
  *                     td Table data
  */
+
 .tbl-scroll {
 	overflow-x: auto;
 
@@ -280,9 +286,10 @@
  *                 td Table data
  *                 td Table data
  */
+
 .tbl--striped {
 	tbody {
-		tr:nth-child(#{$table-striped-index}) {
+		tr:nth-child( #{ $table-striped-index } ) {
 			td, th {
 				background-color: $day__table-striped-bg-color;
 			}
@@ -298,7 +305,7 @@
 
 .night .tbl--striped {
 	tbody {
-		tr:nth-child(#{$table-striped-index}) {
+		tr:nth-child( #{ $table-striped-index } ) {
 			td, th {
 				background-color: $ngt__table-striped-bg-color;
 			}

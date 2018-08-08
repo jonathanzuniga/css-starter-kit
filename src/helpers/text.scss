@@ -16,12 +16,15 @@
  *     div.dh3.hyp-auto Display heading
  *     div.dh4.hyp-auto Display heading
  */
+
 @each $key, $size in $display-headings {
-	.#{$key} {
+
+	.#{ $key } {
 		font-size: $size;
 		font-weight: $display-heading-font-weight;
 		line-height: $display-heading-line-height;
 	}
+
 }
 
 /**
@@ -31,6 +34,7 @@
  *     @example
  *     p.dcap Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
+
 .dcap:first-letter {
 	background-color: $day__dropcap-bg-color;
 	border: $dropcap-border;
@@ -71,6 +75,7 @@
  *     @example
  *     p.smcaps-1ln Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  */
+
 .smcaps {
 	font-variant: small-caps;
 	letter-spacing: $smcaps-letter-spacing;
@@ -93,6 +98,7 @@
  *
  *         p Donec in dapibus turpis. Curabitur iaculis tellus at ipsum sagittis aliquet. In vehicula, massa sit amet sagittis venenatis, odio est ultricies nunc, ac ultricies leo tortor eget urna. Integer sollicitudin, purus id tristique convallis, nisl magna ornare lacus, eu elementum tellus odio nec sem. Curabitur dapibus diam ligula, vitae euismod lectus faucibus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vehicula pellentesque commodo.
  */
+
 .tindent {
 	blockquote, pre,
 	ul, ol, dl, figure, img {
@@ -107,10 +113,10 @@
 		}
 	}
 
-	p:not([class*="cols-"]) {
+	p:not( [class*="cols-"] ) {
 		margin-bottom: 0;
 
-		& + p:not([class*="cols-"]) {
+		& + p:not( [class*="cols-"] ) {
 			text-indent: $spacing-unit-half + 0.5;
 		}
 	}
@@ -123,15 +129,22 @@
  *     @example
  *     p.xs-cols-1.sm-cols-2.md-cols-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
+
 @each $size, $length in $grid-breakpoints {
-	@media (min-width: $length) {
+
+	@media ( min-width: $length ) {
+
 		@for $i from 1 through $grid-columns {
-			.#{$size}-cols-#{$i} {
+
+			.#{ $size }-cols-#{ $i } {
 				column-count: $i;
 				column-gap: $gutter-width;
 			}
+
 		}
+
 	}
+
 }
 
 .fsmooth {
@@ -144,36 +157,36 @@
 }
 
 .a-underline-alt a {
-	background-image: -webkit-linear-gradient(top, transparent 50%, $day__a-color 50%);
-	background-image: linear-gradient(to bottom, transparent 50%, $day__a-color 50%);
+	background-image: -webkit-linear-gradient( top, transparent 50%, $day__a-color 50% );
+	background-image: linear-gradient( to bottom, transparent 50%, $day__a-color 50% );
 	background-repeat: repeat-x;
 	background-size: 0.125rem 0.125rem;
 	background-position: 0 90%;
-	text-shadow: 0.063rem 0 $day__body-bg-color, 
-				 0.125rem 0 $day__body-bg-color, 
-				-0.063rem 0 $day__body-bg-color, 
+	text-shadow: 0.063rem 0 $day__body-bg-color,
+				 0.125rem 0 $day__body-bg-color,
+				-0.063rem 0 $day__body-bg-color,
 				-0.125rem 0 $day__body-bg-color;
 
 	&:hover {
-		background-image: -webkit-linear-gradient(top, transparent 50%, $day__body-color 50%);
-		background-image: linear-gradient(to bottom, transparent 50%, $day__body-color 50%);
+		background-image: -webkit-linear-gradient( top, transparent 50%, $day__body-color 50% );
+		background-image: linear-gradient( to bottom, transparent 50%, $day__body-color 50% );
 	}
 }
 
 .night .a-underline-alt a {
-	background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__a-color 50%);
-	background-image: linear-gradient(to bottom, transparent 50%, $ngt__a-color 50%);
+	background-image: -webkit-linear-gradient( top, transparent 50%, $ngt__a-color 50% );
+	background-image: linear-gradient( to bottom, transparent 50%, $ngt__a-color 50% );
 	background-repeat: repeat-x;
 	background-size: 0.125rem 0.125rem;
 	background-position: 0 90%;
-	text-shadow: 0.063rem 0 $ngt__body-bg-color, 
-				 0.125rem 0 $ngt__body-bg-color, 
-				-0.063rem 0 $ngt__body-bg-color, 
+	text-shadow: 0.063rem 0 $ngt__body-bg-color,
+				 0.125rem 0 $ngt__body-bg-color,
+				-0.063rem 0 $ngt__body-bg-color,
 				-0.125rem 0 $ngt__body-bg-color;
 
 	&:hover {
-		background-image: -webkit-linear-gradient(top, transparent 50%, $ngt__body-color 50%);
-		background-image: linear-gradient(to bottom, transparent 50%, $ngt__body-color 50%);
+		background-image: -webkit-linear-gradient( top, transparent 50%, $ngt__body-color 50% );
+		background-image: linear-gradient( to bottom, transparent 50%, $ngt__body-color 50% );
 	}
 }
 
@@ -188,6 +201,7 @@
  *     @example
  *     p.us-all Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
+
 .us-all {
 	-webkit-user-select: all; /* Chrome, Opera, Safari */
 	-moz-user-select: all; /* Firefox 2+ */

@@ -15,13 +15,15 @@
  */
 
 @each $size, $length in $grid-breakpoints {
-	@media (max-width: $length - 1) {
-		.max#{$size}-fsmenu {
+
+	@media ( max-width: $length - 1 ) {
+
+		.max#{ $size }-fsmenu {
 			background-color: transparent;
 
 			opacity: 0;
 			visibility: hidden;
-			transform: translate3d(0, -100%, 0);
+			transform: translate3d( 0, -100%, 0 );
 
 			overflow-y: auto;
 			position: fixed;
@@ -45,7 +47,7 @@
 				background-color: $day__fsmenu-open-bg-color;
 				opacity: 1;
 				visibility: visible;
-				transform: translate3d(0, 0, 0);
+				transform: translate3d( 0, 0, 0 );
 
 				transition: $fsmenu-open-transition;
 
@@ -57,9 +59,11 @@
 		}
 
 		.night {
-			.max#{$size}-fsmenu.open {
+			.max#{ $size }-fsmenu.open {
 				background-color: $ngt__fsmenu-open-bg-color;
 			}
 		}
+
 	}
+
 }

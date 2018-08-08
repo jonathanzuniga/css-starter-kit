@@ -22,6 +22,7 @@
  *             li
  *                 a(href='#!') Tab 4
  */
+
 .tabs {
 	align-items: stretch;
 	display: flex;
@@ -144,6 +145,7 @@
  *             li
  *                 a(href='#!') Tab 4
  */
+
 .tabs--center {
 	ul {
 		justify-content: center;
@@ -166,6 +168,7 @@
  *             li
  *                 a(href='#!') Tab 4
  */
+
 .tabs--right {
 	ul {
 		justify-content: right;
@@ -187,8 +190,9 @@
  *                 a(href='#!') Tab 3
  *             li
  *                 a(href='#!') Tab 4
- *             li(style='transform: translateX(71px); width: 73px;').active-underline
+ *             li(style='transform: translate3d( 71px, 0, 0 ); width: 73px;').active-underline
  */
+
 .active-underline {
 	background-color: $day__tabs__item-active__a-border-bottom-color;
 	height: $tabs__item-active__a-border-bottom-width;
@@ -200,7 +204,8 @@
 	will-change: transform, width;
 
 	// Modify with js:
-	transform: translateX(0); // X position, 
+
+	transform: translate3d( 0 ); // X position,
 	width: 71px; // item width.
 }
 
@@ -210,7 +215,7 @@
 
 
 .tabs-details {
-	> div:not(.active) {
+	> div:not( .active ) {
 		display: none;
 	}
 }

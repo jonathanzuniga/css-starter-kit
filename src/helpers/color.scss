@@ -7,42 +7,47 @@
  */
 
 @each $name, $hex, $gen in $color-palette {
-	$name_ucf: str_ucfirst($name);
-	$name_r: str_replace(to_lower_case($name), ' ', '-');
-	$rgb: unquote('rgb(#{red($hex)}, #{green($hex)}, #{blue($hex)})');
+
+	$name_ucf: str_ucfirst( $name );
+	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
+	$rgb: unquote( 'rgb( #{ red( $hex ) }, #{ green( $hex ) }, #{ blue( $hex ) } )' );
+
 	/**
-	 * #{$name_ucf} color:
-	 * `.bgc-#{$name_r}` `.c-#{$name_r}` `.bdc-#{$name_r}`
+	 * #{ $name_ucf } color:
+	 * `.bgc-#{ $name_r }` `.c-#{ $name_r }` `.bdc-#{ $name_r }`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-#{$name_r}
-	 *             td.w-25.us-all.c-#{$name_r}.maxsm-d-none #{$name_r}
-	 *             td.w-25.us-all.c-#{$name_r} #{$hex}
-	 *             td.w-25.us-all.c-#{$name_r} #{$rgb}
+	 *                 div.doc-color-swatch.bgc-#{ $name_r }
+	 *             td.w-25.us-all.c-#{ $name_r }.maxsm-d-none #{ $name_r }
+	 *             td.w-25.us-all.c-#{ $name_r } #{ $hex }
+	 *             td.w-25.us-all.c-#{ $name_r } #{ $rgb }
 	 */
+
 }
 
 @each $name, $hex in $colors {
-	$name_ucf: str_ucfirst($name);
-	$name_r: str_replace(to_lower_case($name), ' ', '-');
+
+	$name_ucf: str_ucfirst( $name );
+	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
 
 	$rule: ' !important';
-	$hex: $hex + unquote($rule);
+	$hex: $hex + unquote( $rule );
 
-	.bgc-#{$name_r} {
+	.bgc-#{ $name_r } {
 		background-color: $hex;
 	}
 
-	.bdc-#{$name_r} {
+	.bdc-#{ $name_r } {
 		border-color: $hex;
 	}
 
-	.c-#{$name_r} {
+	.c-#{ $name_r } {
 		color: $hex;
 	}
+
 }
 
 /**
@@ -53,7 +58,8 @@
  *     p.ac-c
  *         a(href='') Link with text color
  */
-.ac-c a:not(.btn) {
+
+.ac-c a:not( .btn ) {
 	&:link,
 	&:visited {
 		color: $day__body-color;
@@ -64,15 +70,15 @@
 	}
 }
 
-p.ac-c a:not(.btn) {
-	border-bottom-color: rgba($day__body-color, 0.2);
+p.ac-c a:not( .btn ) {
+	border-bottom-color: rgba( $day__body-color, 0.2 );
 
 	&:hover {
 		border-bottom-color: $day__a-color;
 	}
 }
 
-.night .ac-c a:not(.btn) {
+.night .ac-c a:not( .btn ) {
 	&:link,
 	&:visited {
 		color: $ngt__body-color;
@@ -81,10 +87,10 @@ p.ac-c a:not(.btn) {
 	&:hover {
 		color: $ngt__a-color;
 	}
-}	
+}
 
-.night p.ac-c a:not(.btn) {
-	border-bottom-color: rgba($ngt__body-color, 0.2);
+.night p.ac-c a:not( .btn ) {
+	border-bottom-color: rgba( $ngt__body-color, 0.2 );
 
 	&:hover {
 		border-bottom-color: $ngt__a-color;

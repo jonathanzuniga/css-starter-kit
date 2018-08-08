@@ -16,24 +16,25 @@
  *         button.btn.btn--secondary Second
  *         button.btn.btn--secondary Third
  */
+
 .btn-group {
 	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	
+
 	> .btn {
 		flex: 0 1 auto;
 
-		&:not(:first-of-type) {
+		&:not( :first-of-type ) {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}
 
-		&:not(:last-of-type) {
+		&:not( :last-of-type ) {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 
-			margin-right: -#{$control-border-width};
+			margin-right: -#{ $control-border-width };
 		}
 	}
 }
@@ -49,6 +50,7 @@
  *         button.btn.btn--secondary Third
  *         button.btn.btn--secondary Fourth
  */
+
 .btn-group--expanded {
 	display: flex;
 
@@ -71,6 +73,7 @@
  *         button.btn.btn--secondary Second
  *         button.btn.btn--secondary Third
  */
+
 .btn-group--sm {
 	> .btn {
 		border-radius: $button-sm-border-radius;
@@ -97,6 +100,7 @@
  *         button.btn.btn--secondary Second
  *         button.btn.btn--secondary Third
  */
+
 .btn-group--pill {
 	> :first-child {
 		border-top-left-radius: 2em;
@@ -132,6 +136,7 @@
  *                 input(id='eg-btn-group-toggle-6', name='toggle-btn-group', type='radio')
  *                 label(for='eg-btn-group-toggle-6').btn.btn--secondary Third
  */
+
 .btn-group--toggle {
 	opacity: 1;
 	position: initial;

@@ -68,10 +68,11 @@ ul, ol, dl, figure {
  *             p
  *                 a(href='#!') Click me more!
  */
+
 a {
 	text-decoration: $a-text-decoration;
 	transition: $transition-base;
-		
+
 	&:link {
 		color: $day__a-color;
 	}
@@ -87,7 +88,7 @@ a {
 	}
 }
 
-.night a {		
+.night a {
 	&:link {
 		color: $ngt__a-color;
 	}
@@ -101,7 +102,7 @@ a {
 	}
 }
 
-.a-bd-bottom p > a:not(.btn) {
+.a-bd-bottom p > a:not( .btn ) {
 	border-bottom: $a-border-bottom-width $a-border-bottom-style $day__a-border-bottom-color;
 
 	&:hover {
@@ -110,7 +111,7 @@ a {
 	}
 }
 
-.night .a-bd-bottom p > a:not(.btn) {
+.night .a-bd-bottom p > a:not( .btn ) {
 	border-bottom-color: $ngt__a-border-bottom-color;
 
 	&:hover {
@@ -140,17 +141,20 @@ a {
  *             p.h5 Heading
  *             p.h6 Heading
  */
+
 @each $key, $size in $headings {
-	#{$key},
-	.#{$key} {
+
+	#{ $key },
+	.#{ $key } {
 		font-size: $size;
 		font-weight: $heading-font-weight;
 		line-height: $heading-line-height;
 
-		&:not(:first-child) {
+		&:not( :first-child ) {
 			margin-top: $size - 0.25;
 		}
 	}
+
 }
 
 /**
@@ -179,6 +183,7 @@ a {
  *     p
  *         small Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
+
 b,
 strong {
 	font-weight: 700;
@@ -221,9 +226,10 @@ img {
  *         p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  *     blockquote.bq
  *         p.m-bottom-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- *         footer A common form of 
+ *         footer A common form of
  *             cite lorem ipsum
  */
+
 blockquote {
 	padding: $blockquote-padding;
 
@@ -276,6 +282,7 @@ blockquote {
  *     @example
  *     p Use <code>&lt;code&gt;</code> for inline code that can wrap.
  */
+
 code {
 	background-color: $day__code-bg-color;
 	border-radius: $code-border-radius;
@@ -298,12 +305,13 @@ code {
  *     pre
  *         code
  *             | th.degF {
- *             |     transform: translate(5.14em, -2em) rotate(-60deg);
+ *             |     transform: translate( 5.14em, -2em ) rotate( -60deg );
  *             | }
  */
+
 pre {
 	background-color: $day__pre-bg-color;
-	
+
 	border-top: $pre-border-top;
 	border-right: $pre-border-right;
 	border-bottom: $pre-border-bottom;
@@ -368,11 +376,12 @@ figure {
  *                 li List item
  *                 li List item
  */
+
 ol, ul {
 	list-style-position: outside;
 	padding-left: $spacing-unit-half * 2.5;
 
-	&:not(:last-of-type) {
+	&:not( :last-of-type ) {
 		margin-bottom: $spacing-unit-half;
 	}
 }
@@ -406,6 +415,7 @@ ul {
  *                 td Table data
  *                 td Table data
  */
+
 table {
 	border-collapse: collapse;
 	margin-bottom: $spacing-unit-half;
