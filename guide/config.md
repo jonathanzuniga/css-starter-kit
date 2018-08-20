@@ -15,17 +15,17 @@
 			'use strict';
 
 			if ( ! ( 'localStorage' in window ) ) return;
-			
+
 			var nightMode = localStorage.getItem( 'nightMode' );
 
 			if ( ! nightMode ) return;
-			
+
 			document.documentElement.classList.add( 'night', 'fsmooth' );
 
 		} )( window, document );
 
 ### Body
-	
+
 	nav.doc-navbar.navbar.maxmd-navbar-responsive.navbar--fixed
 		input(type='checkbox', id='doc-navbar-toggle').collapse-toggle
 		div.navbar__brand
@@ -185,3 +185,4 @@
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='js/styledown.js')
 	script(src='js/scripts.js')
+	script(src='js/components/modal.js')

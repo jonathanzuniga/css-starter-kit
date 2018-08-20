@@ -1,3 +1,4 @@
+
 $( function () {
 
 	var url = window.location.pathname;
@@ -19,7 +20,7 @@ $( function () {
 
 	$( '.doc-sidebar a[href="' + page + '"]' ).parent().addClass( 'active' );
 
-	sbCollapse();
+	sidebarCollapse();
 	fsMenuToggle();
 	switchNightMode();
 
@@ -30,17 +31,9 @@ $( function () {
 	if ( ! $( '.doc-navbar .navbar__item:first' ).hasClass( 'active' ) )
 		$( '.doc-navbar .navbar__item:last' ).addClass( 'active' );
 
-	// Launch and close standard modal.
-
-	$( '#eg-btn-open-std-modal, #eg-std-modal .btn, #eg-std-modal .modal__overlay' ).click( function () {
-
-		$( '#eg-std-modal' ).toggleClass( 'show' );
-
-	} );
-
 } );
 
-function sbCollapse() {
+function sidebarCollapse() {
 
 	$( '.doc-sidebar .collapse' ).each( function () {
 
