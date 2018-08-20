@@ -13,8 +13,8 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-0063.card
- *                 div.card__body.p-1
+ *             div.bx.bxsh-0063.bd-0063.card
+ *                 div.card__body.p-125
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -26,7 +26,6 @@
 
 .card {
 	max-width: 100%;
-	padding: 0 !important;
 	position: relative;
 }
 
@@ -37,10 +36,10 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-0063.card
+ *             div.bx.bxsh-0063.bd-0063.card
  *                 div.card__img
  *                     img(src="http://via.placeholder.com/640x480")
- *                 div.card__body.p-1
+ *                 div.card__body.p-125
  *                     h4 Card title
  *                     p Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
  *                     ul.ls-inline.m-0
@@ -75,25 +74,21 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-0063.card
- *                 div.card__head
- *                     h4.m-0.p-1 Card title
- *                 div.card__body.p-1
+ *             div.bx.bxsh-0063.bd-0063.card
+ *                 div.card__head.bd-bottom-0063
+ *                     h4.m-0.p-125 Card title
+ *                 div.card__body.p-125
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 div.card__foot
+ *                 div.card__foot.bd-top-0063
  *                     div.item-group.ta-center
  *                         div.item
- *                             a(href='').p-1.w-100 First link
+ *                             a(href='').p-125.w-100 First link
  *                         div.item.bd-left-0063
- *                             a(href='').p-1.w-100 Second link
+ *                             a(href='').p-125.w-100 Second link
  */
 
 .card__head {
     background-color: $day__card-head-bg-color;
-
-    border-bottom-width: $card-border-width;
-    border-bottom-style: $card-border-style;
-    border-bottom-color: $day__card-border-color;
 
     border-top-right-radius: $card-head-border-top-right-radius;
     border-top-left-radius: $card-head-border-top-left-radius;
@@ -101,7 +96,6 @@
 
 .night .card__head {
     background-color: $ngt__card-head-bg-color;
-    border-bottom-color: $ngt__card-border-color;
 }
 
 .card__head,
@@ -129,10 +123,6 @@
 .card__foot {
     background-color: $day__card-foot-bg-color;
 
-    border-top-width: $card-border-width;
-    border-top-style: $card-border-style;
-    border-top-color: $day__card-border-color;
-
     border-bottom-right-radius: $card-foot-border-bottom-right-radius;
     border-bottom-left-radius: $card-foot-border-bottom-left-radius;
 
@@ -143,7 +133,6 @@
 
 .night .card__foot {
     background-color: $ngt__card-foot-bg-color;
-    border-top-color: $ngt__card-border-color;
 }
 
 /**
@@ -153,20 +142,20 @@
  *     @example
  *     div.row
  *         div.md-col-6
- *             div.bx.bxsh-0063.card
- *                 div.card__head
+ *             div.bx.bxsh-0063.bd-0063.card
+ *                 div.card__head.bd-bottom-0063
  *                     div.item-group
  *                         div.item
- *                             h4.m-0.p-1 Card title
+ *                             h4.m-0.p-125 Card title
  *                         div.item.fxg-0
- *                             a(href='#!').p-1
+ *                             a(href='#!').p-125
  *                                 span.ion-ios-arrow-down
- *                 div.card__body.p-1
+ *                 div.card__body.p-125
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
- *                 div.card__foot
+ *                 div.card__foot.bd-top-0063
  *                     div.item-group.ta-center
  *                         div.item
- *                             a(href='').p-1.w-100 First link
+ *                             a(href='').p-125.w-100 First link
  *                         div.item.bd-left-0063
- *                             a(href='').p-1.w-100 Second link
+ *                             a(href='').p-125.w-100 Second link
  */
