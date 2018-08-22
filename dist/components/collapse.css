@@ -6,102 +6,81 @@
  * `.collapse`
  *
  *     @example
- *     div
- *         input(checked, id='eg-open-one-toggle-1', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-1').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- *     div
- *         input(id='eg-open-one-toggle-2', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-2').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- */
-/**
- * Open multiple items:
+ *     p
+ *         button(data-target='#eg-collapse-1', data-toggle='collapse').btn.btn--primary Item 1
+ *         button(data-target='#eg-collapse-2', data-toggle='collapse').btn.btn--primary Item 2
  *
- *     @example
- *     div
- *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- *     div
- *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div.row
+ *         div.col-6
+ *             div(id='eg-collapse-1').collapse.show
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *
+ *         div.col-6
+ *             div(id='eg-collapse-2').collapse
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
 .collapse {
-  height: initial;
-  max-height: 0;
-  opacity: 0;
+  height: auto;
+  opacity: 1;
   overflow: hidden;
   position: relative;
-  transform: translate3d(0, -0.5em, 0);
-  transition: height 0.32s ease-out, max-height 0.32s ease-out, opacity 0.32s ease-out, transform 0.32s ease-out; }
-  .collapse.open, .collapse-toggle:checked ~ .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); }
+  transition: height 0.24s ease-out, opacity 0.24s ease-out; }
+  .collapse:not(.show) {
+    display: none; }
+  .collapse:not([data-collapsed='false']) {
+    opacity: 0; }
 
-.collapse-toggle {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
-@media (min-width: 0) {
-  .maxxs-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 768px) {
-  .maxsm-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1024px) {
-  .maxmd-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1280px) {
-  .maxlg-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1680px) {
-  .maxxl-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.collapse .ls-unstyled a:link, .collapse .ls-unstyled a:visited {
+/**
+ * Open multiple items:
+ * `.collapse--multiple`
+ *
+ *     @example
+ *     p
+ *         button(data-target='#eg-collapse-multiple-1', data-toggle='collapse').btn.btn--primary Item 1
+ *         button(data-target='#eg-collapse-multiple-2', data-toggle='collapse').btn.btn--primary Item 2
+ *         button(data-target='.collapse--multiple', data-toggle='collapse').btn.btn--primary Item 1 & 2
+ *
+ *     div.row
+ *         div.col-6
+ *             div(id='eg-collapse-multiple-1').collapse.collapse--multiple.show
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *
+ *         div.col-6
+ *             div(id='eg-collapse-multiple-2').collapse.collapse--multiple
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+/**
+ * Accordion:
+ *
+ *     @example
+ *     div(id='eg-accordion')
+ *         div.card.bx.bd-0063
+ *             div.card__head.p-y-1.p-x-125.bd-bottom-0063
+ *                 a(href='#eg-accordion-collapse-1', data-toggle='collapse') Item 1
+ *             div(id='eg-accordion-collapse-1', data-parent='#eg-accordion').collapse.show
+ *                 div.card__body.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *         div.card.bx.bd-0063
+ *             div.card__head.p-y-1.p-x-125.bd-bottom-0063
+ *                 a(href='#eg-accordion-collapse-2', data-toggle='collapse') Item 2
+ *             div(id='eg-accordion-collapse-2', data-parent='#eg-accordion').collapse
+ *                 div.card__body.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+.collapse .ls a:link, .collapse .ls a:visited {
   color: rgba(0, 0, 0, 0.6); }
 
-.collapse .ls-unstyled a:hover {
+.collapse .ls a:hover {
   color: rgba(0, 0, 0, 0.9); }
 
-.collapse .ls-unstyled .active a {
+.collapse .ls .active a {
   font-weight: 500; }
-  .collapse .ls-unstyled .active a:link, .collapse .ls-unstyled .active a:hover, .collapse .ls-unstyled .active a:visited {
+  .collapse .ls .active a:link, .collapse .ls .active a:hover, .collapse .ls .active a:visited {
     color: rgba(0, 0, 0, 0.9); }
 
-.night .collapse .ls-unstyled a:link, .night .collapse .ls-unstyled a:visited {
+.night .collapse .ls a:link, .night .collapse .ls a:visited {
   color: rgba(255, 255, 255, 0.6); }
 
-.night .collapse .ls-unstyled a:hover {
+.night .collapse .ls a:hover {
   color: rgba(255, 255, 255, 0.9); }
 
-.night .collapse .ls-unstyled .active a:link, .night .collapse .ls-unstyled .active a:hover, .night .collapse .ls-unstyled .active a:visited {
+.night .collapse .ls .active a:link, .night .collapse .ls .active a:hover, .night .collapse .ls .active a:visited {
   color: rgba(255, 255, 255, 0.9); }

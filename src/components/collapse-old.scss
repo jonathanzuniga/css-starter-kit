@@ -1,0 +1,140 @@
+
+@import '../partials/_all';
+
+
+/***
+ * Collapse:
+ */
+
+/**
+ * Open one item:
+ * `.collapse`
+ *
+ *     @example
+ *     div
+ *         input(checked, id='eg-open-one-toggle-1', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggle-1').btn.btn--link Collapse item
+ *         div.collapse
+ *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-one-toggle-2', name='open-one', type='radio').collapse-toggle
+ *         label(for='eg-open-one-toggle-2').btn.btn--link Collapse item
+ *         div.collapse
+ *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+
+/**
+ * Open multiple items:
+ *
+ *     @example
+ *     div
+ *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
+ *         div.collapse
+ *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div
+ *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
+ *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
+ *         div.collapse
+ *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ */
+
+/* @mixin collapse-open {
+	height: $collapse-open-height;
+	max-height: $collapse-open-max-height;
+	opacity: 1;
+	transform: translate3d( 0, 0, 0 );
+}
+
+.collapse {
+	height: $collapse-height;
+	max-height: $collapse-max-height;
+	opacity: 0;
+	overflow: hidden;
+	position: relative;
+	transform: translate3d( 0, -{ $spacing-unit-quarter }, 0 );
+	transition: $collapse-transition;
+
+	&.open {
+		@include collapse-open;
+	}
+}
+
+.collapse-toggle {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+
+	&:checked {
+		~ .collapse {
+			@extend .collapse.open;
+		}
+	}
+}
+
+@each $size, $length in $grid-breakpoints {
+
+	@media ( min-width: $length ) {
+
+		.max{ $size }-navbar-responsive {
+			.collapse {
+				@include collapse-open;
+			}
+		}
+
+	}
+
+}
+
+.collapse {
+	.ls {
+		a {
+			&:link,
+			&:visited {
+				color: $day__collapse__list-unstyled__a-color;
+			}
+
+			&:hover {
+				color: $day__collapse__list-unstyled__a-hover-color;
+			}
+		}
+
+		.active {
+			a {
+				font-weight: $collapse__list-unstyled__item-active__a-font-weight;
+
+				&:link,
+				&:hover,
+				&:visited {
+					color: $day__collapse__list-unstyled__item-active__a-color;
+				}
+			}
+		}
+	}
+}
+
+.night .collapse {
+	.ls {
+		a {
+			&:link,
+			&:visited {
+				color: $ngt__collapse__list-unstyled__a-color;
+			}
+
+			&:hover {
+				color: $ngt__collapse__list-unstyled__a-hover-color;
+			}
+		}
+
+		.active {
+			a {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $ngt__collapse__list-unstyled__item-active__a-color;
+				}
+			}
+		}
+	}
+}
+ */

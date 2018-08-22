@@ -7,63 +7,34 @@ $( function () {
 	var section = pagename.substring( 0, pagename.indexOf( '-' ) );
 	var subsection = pagename.substring( pagename.indexOf( '-' ) + 1 );
 
-	// Comparar cada texto de .collapse__toggler y si es el mismo checar el radio button.
+	// Agregar clase .active al item del menu del navbar.
 
-	$( '.doc-sidebar .collapse__toggler' ).each( function () {
+	$( '.doc-navbar .navbar__items a[ href="' + page + '" ]' ).parent().addClass( 'active' );
 
-		if ( $( this ).text().trim().toLowerCase() == section )
-			$( this ).prev( '.collapse-toggle' ).prop( 'checked', true );
+	if ( ! $( '.doc-navbar .navbar__items .navbar__item:first' ).hasClass( 'active' ) )
+		$( '.doc-navbar .navbar__items .navbar__item:last' ).addClass( 'active' );
+
+	// Comparar cada texto de [ data-toggle="collapse" ] y si es el mismo agregar la clase show.
+
+	$( '.doc-sidebar [ data-toggle="collapse" ]' ).each( function () {
+
+		if ( $( this ).text().trim().toLowerCase() == section ) {
+
+			$( '.collapse' ).removeClass( 'show' );
+			$( this ).next( '.collapse' ).addClass( 'show' );
+
+		}
 
 	} );
 
 	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
 
-	$( '.doc-sidebar a[href="' + page + '"]' ).parent().addClass( 'active' );
+	$( '.doc-sidebar a[ href="' + page + '" ]' ).parent().addClass( 'active' );
 
-	sidebarCollapse();
 	fsMenuToggle();
 	switchNightMode();
 
-	// Agregar clase .active al item del menu del navbar.
-
-	$( '.doc-navbar .navbar__link[href="' + page + '"]' ).parent().addClass( 'active' );
-
-	if ( ! $( '.doc-navbar .navbar__item:first' ).hasClass( 'active' ) )
-		$( '.doc-navbar .navbar__item:last' ).addClass( 'active' );
-
 } );
-
-function sidebarCollapse() {
-
-	$( '.doc-sidebar .collapse' ).each( function () {
-
-		var collapse_height = $( this ).css( {
-			'height': 'auto',
-			'max-height': 'none',
-			'overflow': 'auto'
-		} ).height();
-
-		$( this )
-			.data( 'collapse-open-height', collapse_height )
-			.removeAttr( 'style' )
-			.css( 'height', $( this ).height() );
-
-	} );
-
-	$( '.doc-sidebar .collapse__toggler' ).click( function () {
-
-		$( '.doc-sidebar .collapse-toggle' ).prop( 'checked', false );
-		$( '.doc-sidebar .collapse' ).css( 'height', 0 );
-
-		$( this )
-			.next( '.collapse' )
-			.css( 'height', $( this )
-				.next( '.collapse' )
-				.data( 'collapse-open-height' ) );
-
-	} );
-
-}
 
 function fsMenuToggle() {
 

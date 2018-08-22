@@ -139,104 +139,83 @@
  * `.collapse`
  *
  *     @example
- *     div
- *         input(checked, id='eg-open-one-toggle-1', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-1').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- *     div
- *         input(id='eg-open-one-toggle-2', name='open-one', type='radio').collapse-toggle
- *         label(for='eg-open-one-toggle-2').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- */
-/**
- * Open multiple items:
+ *     p
+ *         button(data-target='#eg-collapse-1', data-toggle='collapse').btn.btn--primary Item 1
+ *         button(data-target='#eg-collapse-2', data-toggle='collapse').btn.btn--primary Item 2
  *
- *     @example
- *     div
- *         input(id='eg-open-multiple-toggle-1', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-1').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
- *     div
- *         input(id='eg-open-multiple-toggle-2', type='checkbox').collapse-toggle
- *         label(for='eg-open-multiple-toggle-2').btn.btn--link Collapse item
- *         div.collapse
- *             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
+ *     div.row
+ *         div.col-6
+ *             div(id='eg-collapse-1').collapse.show
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *
+ *         div.col-6
+ *             div(id='eg-collapse-2').collapse
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
 .collapse {
-  height: initial;
-  max-height: 0;
-  opacity: 0;
+  height: auto;
+  opacity: 1;
   overflow: hidden;
   position: relative;
-  transform: translate3d(0, -0.5em, 0);
-  transition: height 0.32s ease-out, max-height 0.32s ease-out, opacity 0.32s ease-out, transform 0.32s ease-out; }
-  .collapse.open, .collapse-toggle:checked ~ .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); }
+  transition: height 0.24s ease-out, opacity 0.24s ease-out; }
+  .collapse:not(.show) {
+    display: none; }
+  .collapse:not([data-collapsed='false']) {
+    opacity: 0; }
 
-.collapse-toggle {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
-@media (min-width: 0) {
-  .maxxs-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 768px) {
-  .maxsm-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1024px) {
-  .maxmd-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1280px) {
-  .maxlg-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@media (min-width: 1680px) {
-  .maxxl-navbar-responsive .collapse {
-    height: auto;
-    max-height: 100vh;
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.collapse .ls-unstyled a:link, .collapse .ls-unstyled a:visited {
+/**
+ * Open multiple items:
+ * `.collapse--multiple`
+ *
+ *     @example
+ *     p
+ *         button(data-target='#eg-collapse-multiple-1', data-toggle='collapse').btn.btn--primary Item 1
+ *         button(data-target='#eg-collapse-multiple-2', data-toggle='collapse').btn.btn--primary Item 2
+ *         button(data-target='.collapse--multiple', data-toggle='collapse').btn.btn--primary Item 1 & 2
+ *
+ *     div.row
+ *         div.col-6
+ *             div(id='eg-collapse-multiple-1').collapse.collapse--multiple.show
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *
+ *         div.col-6
+ *             div(id='eg-collapse-multiple-2').collapse.collapse--multiple
+ *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+/**
+ * Accordion:
+ *
+ *     @example
+ *     div(id='eg-accordion')
+ *         div.card.bx.bd-0063
+ *             div.card__head.p-y-1.p-x-125.bd-bottom-0063
+ *                 a(href='#eg-accordion-collapse-1', data-toggle='collapse') Item 1
+ *             div(id='eg-accordion-collapse-1', data-parent='#eg-accordion').collapse.show
+ *                 div.card__body.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ *         div.card.bx.bd-0063
+ *             div.card__head.p-y-1.p-x-125.bd-bottom-0063
+ *                 a(href='#eg-accordion-collapse-2', data-toggle='collapse') Item 2
+ *             div(id='eg-accordion-collapse-2', data-parent='#eg-accordion').collapse
+ *                 div.card__body.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
+ */
+.collapse .ls a:link, .collapse .ls a:visited {
   color: rgba(0, 0, 0, 0.6); }
 
-.collapse .ls-unstyled a:hover {
+.collapse .ls a:hover {
   color: rgba(0, 0, 0, 0.9); }
 
-.collapse .ls-unstyled .active a {
+.collapse .ls .active a {
   font-weight: 500; }
-  .collapse .ls-unstyled .active a:link, .collapse .ls-unstyled .active a:hover, .collapse .ls-unstyled .active a:visited {
+  .collapse .ls .active a:link, .collapse .ls .active a:hover, .collapse .ls .active a:visited {
     color: rgba(0, 0, 0, 0.9); }
 
-.night .collapse .ls-unstyled a:link, .night .collapse .ls-unstyled a:visited {
+.night .collapse .ls a:link, .night .collapse .ls a:visited {
   color: rgba(255, 255, 255, 0.6); }
 
-.night .collapse .ls-unstyled a:hover {
+.night .collapse .ls a:hover {
   color: rgba(255, 255, 255, 0.9); }
 
-.night .collapse .ls-unstyled .active a:link, .night .collapse .ls-unstyled .active a:hover, .night .collapse .ls-unstyled .active a:visited {
+.night .collapse .ls .active a:link, .night .collapse .ls .active a:hover, .night .collapse .ls .active a:visited {
   color: rgba(255, 255, 255, 0.9); }
 
 /***
@@ -251,20 +230,20 @@
  *         input(type='checkbox', id='eg-drawer-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-bottom').drawer-toggle.drawer-toggle--bottom
  *         input(type='checkbox', id='eg-drawer-left').drawer-toggle.drawer-toggle--left
- *         div.doc-drawer.drawer.drawer--top
+ *         div.eg-drawer.drawer.drawer--top
  *             div
  *                 label(for='eg-drawer-top').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--right
+ *         div.eg-drawer.drawer.drawer--right
  *             div
  *                 label(for='eg-drawer-right').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--bottom
+ *         div.eg-drawer.drawer.drawer--bottom
  *             div
  *                 label(for='eg-drawer-bottom').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--left
+ *         div.eg-drawer.drawer.drawer--left
  *             div
  *                 label(for='eg-drawer-left').btn.btn--link Close
- *         div.doc-drawer-overlay.drawer-overlay
- *         div.doc-drawer-outside.drawer-outside
+ *         div.eg-drawer-overlay.drawer-overlay
+ *         div.eg-drawer-outside.drawer-outside
  *             div.ta-center
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  *                 div.btn-group
@@ -408,20 +387,20 @@
  *         input(type='checkbox', id='eg-drawer-with-push-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-with-push-bottom').drawer-toggle.drawer-toggle--bottom
  *         input(type='checkbox', id='eg-drawer-with-push-left').drawer-toggle.drawer-toggle--left
- *         div.doc-drawer.drawer.drawer--top.drawer--push
+ *         div.eg-drawer.drawer.drawer--top.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-top').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--right.drawer--push
+ *         div.eg-drawer.drawer.drawer--right.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-right').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--bottom.drawer--push
+ *         div.eg-drawer.drawer.drawer--bottom.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-bottom').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--left.drawer--push
+ *         div.eg-drawer.drawer.drawer--left.drawer--push
  *             div
  *                 label(for='eg-drawer-with-push-left').btn.btn--link Close
- *         div.doc-drawer-overlay.drawer-overlay
- *         div.doc-drawer-outside.drawer-outside
+ *         div.eg-drawer-overlay.drawer-overlay
+ *         div.eg-drawer-outside.drawer-outside
  *             div.ta-center
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  *                 div.btn-group
@@ -591,20 +570,20 @@
  *         input(type='checkbox', id='eg-drawer-with-overlap-right').drawer-toggle.drawer-toggle--right
  *         input(type='checkbox', id='eg-drawer-with-overlap-bottom').drawer-toggle.drawer-toggle--bottom
  *         input(type='checkbox', id='eg-drawer-with-overlap-left').drawer-toggle.drawer-toggle--left
- *         div.doc-drawer.drawer.drawer--top.drawer--overlap
+ *         div.eg-drawer.drawer.drawer--top.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-top').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--right.drawer--overlap
+ *         div.eg-drawer.drawer.drawer--right.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-right').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--bottom.drawer--overlap
+ *         div.eg-drawer.drawer.drawer--bottom.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-bottom').btn.btn--link Close
- *         div.doc-drawer.drawer.drawer--left.drawer--overlap
+ *         div.eg-drawer.drawer.drawer--left.drawer--overlap
  *             div
  *                 label(for='eg-drawer-with-overlap-left').btn.btn--link Close
- *         div.doc-drawer-overlay.drawer-overlay
- *         div.doc-drawer-outside.drawer-outside
+ *         div.eg-drawer-overlay.drawer-overlay
+ *         div.eg-drawer-outside.drawer-outside
  *             div.ta-center
  *                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim.
  *                 div.btn-group
@@ -776,594 +755,77 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.maxsm-navbar-responsive
- *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
+ *     nav.navbar.maxmd-navbar-responsive.bgc-black-025
  *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-navbar-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse.fxg-1.jc-space-between
- *             ul.navbar__menu.maxsm-ta-center
- *                 li.navbar__item.active.maxsm-bd-top-0063
- *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxsm-bd-top-0063
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxsm-bd-top-0063
- *                     a(href='').navbar__a About
- *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-0063
- *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
+ *             a(href='#!').navbar__item Brand
+ *         div.navbar__toggler
+ *             a(href="#!").navbar__item Menu
+ *         div.navbar__collapse.fxg-1
+ *             ul.navbar__items
+ *                 li.navbar__item.active
+ *                     a(href='#!') Home
+ *                 li.navbar__item
+ *                     a(href='#!') Archive
+ *                 li.navbar__item
+ *                     a(href='#!') About
+ *         div.navbar__items
+ *             form.navbar__item
+ *                 input.input.m-right-05
+ *                 button.btn.btn--primary Search
  */
-.navbar,
-.navbar__brand,
-.navbar__collapse,
-.navbar__no-collapse,
-.navbar__menu,
-.navbar__item,
-.navbar__a,
-.navbar__form {
-  display: flex; }
-
-.navbar__brand,
-.navbar__toggler,
-.navbar__a,
-.navbar__form {
-  align-items: center; }
-
 .navbar {
-  background-color: #fff;
-  justify-content: flex-start; }
+  display: flex;
+  align-items: stretch;
+  position: relative; }
+  .navbar a {
+    color: rgba(0, 0, 0, 0.6); }
+    .navbar a:link, .navbar a:visited {
+      color: rgba(0, 0, 0, 0.6); }
+    .navbar a:hover {
+      color: rgba(0, 0, 0, 0.9); }
 
-.night .navbar {
-  background-color: #272727; }
-
-.navbar__brand,
-.navbar__item {
-  align-items: stretch; }
+.night .navbar a {
+  color: rgba(255, 255, 255, 0.6); }
+  .night .navbar a:link, .night .navbar a:visited {
+    color: rgba(255, 255, 255, 0.6); }
+  .night .navbar a:hover {
+    color: rgba(255, 255, 255, 0.9); }
 
 .navbar__brand {
+  display: flex;
+  align-items: stretch;
   font-size: 1.25em; }
 
 .navbar__toggler {
-  display: none; }
+  display: none;
+  align-items: stretch; }
 
-.navbar__toggler,
-.navbar__a,
-.navbar__form {
-  padding: 0.5rem 1rem; }
-
-.navbar__collapse,
-.navbar__no-collapse,
-.navbar__menu {
-  flex-grow: 0; }
-
-.navbar__menu {
-  margin: 0;
-  padding: 0; }
-
-.navbar__a,
-.navbar__toggler {
-  color: rgba(0, 0, 0, 0.6); }
-  .navbar__a:link, .navbar__a:visited,
-  .navbar__toggler:link,
-  .navbar__toggler:visited {
-    color: rgba(0, 0, 0, 0.6); }
-  .navbar__a:hover,
-  .navbar__toggler:hover {
-    color: rgba(0, 0, 0, 0.9); }
-
-.navbar__brand .navbar__a:link, .navbar__brand .navbar__a:hover, .navbar__brand .navbar__a:visited,
-.navbar__item.active .navbar__a:link,
-.navbar__item.active .navbar__a:hover,
-.navbar__item.active .navbar__a:visited {
-  color: rgba(0, 0, 0, 0.9); }
-
-.night .navbar__a,
-.night .navbar__toggler {
-  color: rgba(255, 255, 255, 0.6); }
-  .night .navbar__a:link, .night .navbar__a:visited,
-  .night .navbar__toggler:link,
-  .night .navbar__toggler:visited {
-    color: rgba(255, 255, 255, 0.6); }
-  .night .navbar__a:hover,
-  .night .navbar__toggler:hover {
-    color: rgba(255, 255, 255, 0.9); }
-
-.night .navbar__brand .navbar__a:link, .night .navbar__brand .navbar__a:hover, .night .navbar__brand .navbar__a:visited,
-.night .navbar__item.active .navbar__a:link,
-.night .navbar__item.active .navbar__a:hover,
-.night .navbar__item.active .navbar__a:visited {
-  color: rgba(255, 255, 255, 0.9); }
-
-/**
- * Responsive navbar menu:
- * `.navbar-responsive` `.max[size]-navbar-responsive`
- *
- *     @example
- *     nav.navbar.navbar-responsive
- *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu
- *                 li.navbar__item.active
- *                     a(href='').navbar__a Home
- *                 li.navbar__item
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item
- *                     a(href='').navbar__a About
- */
-/**
- * Right align navbar menu:
- *
- *     @example
- *     nav.navbar.maxsm-navbar-responsive.jc-space-between
- *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu.maxsm-ta-center
- *                 li.navbar__item.active.maxsm-bd-top-0063
- *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxsm-bd-top-0063
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxsm-bd-top-0063
- *                     a(href='').navbar__a About
- */
-.navbar-responsive.navbar {
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-.navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-  order: 2; }
-
-.navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-  order: 1; }
-
-.navbar-responsive.navbar-responsive--top .navbar__brand {
-  order: 3; }
-
-.navbar-responsive.navbar-responsive--top .navbar__toggler {
-  order: 4; }
-
-.navbar-responsive .navbar__toggler {
-  cursor: pointer;
+.navbar__items {
   display: flex;
-  order: 2; }
+  align-items: stretch;
+  margin-bottom: 0;
+  padding-left: 0; }
 
-.navbar-responsive .navbar__collapse,
-.navbar-responsive .navbar__no-collapse,
-.navbar-responsive .navbar__menu {
-  flex-grow: 1; }
+.navbar__item {
+  display: flex;
+  align-items: center;
+  padding: 0.25em 0.75em; }
+  .navbar__item.active a {
+    color: rgba(0, 0, 0, 0.9); }
+    .navbar__item.active a:link, .navbar__item.active a:visited, .navbar__item.active a:hover {
+      color: rgba(0, 0, 0, 0.9); }
 
-.navbar-responsive .navbar__collapse {
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  width: 100%; }
-  .navbar-responsive .navbar__collapse:first-of-type {
-    order: 4; }
-  .navbar-responsive .navbar__collapse:last-of-type {
-    order: 3; }
-  .navbar-responsive .navbar__collapse .navbar__menu,
-  .navbar-responsive .navbar__collapse .navbar__item {
-    flex-direction: column; }
-  .navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-  .navbar-responsive .navbar__collapse .navbar__form {
-    display: block;
-    width: 100%; }
-  .navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-    padding-right: 0;
-    padding-left: 0; }
-  .navbar-responsive .navbar__collapse .navbar__form {
-    padding-right: 0;
-    padding-left: 0; }
-  .navbar-responsive .navbar__collapse .input,
-  .navbar-responsive .navbar__collapse .btn {
-    line-height: inherit; }
-
-.navbar-responsive .navbar__no-collapse {
-  overflow-x: auto;
-  width: 100%; }
-  .navbar-responsive .navbar__no-collapse .navbar__menu {
-    justify-content: center; }
-
-@media (max-width: -1) {
-  .maxxs-navbar-responsive.navbar {
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .maxxs-navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-    order: 2; }
-  .maxxs-navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-    order: 1; }
-  .maxxs-navbar-responsive.navbar-responsive--top .navbar__brand {
-    order: 3; }
-  .maxxs-navbar-responsive.navbar-responsive--top .navbar__toggler {
-    order: 4; }
-  .maxxs-navbar-responsive .navbar__toggler {
-    cursor: pointer;
-    display: flex;
-    order: 2; }
-  .maxxs-navbar-responsive .navbar__collapse,
-  .maxxs-navbar-responsive .navbar__no-collapse,
-  .maxxs-navbar-responsive .navbar__menu {
-    flex-grow: 1; }
-  .maxxs-navbar-responsive .navbar__collapse {
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    width: 100%; }
-    .maxxs-navbar-responsive .navbar__collapse:first-of-type {
-      order: 4; }
-    .maxxs-navbar-responsive .navbar__collapse:last-of-type {
-      order: 3; }
-    .maxxs-navbar-responsive .navbar__collapse .navbar__menu,
-    .maxxs-navbar-responsive .navbar__collapse .navbar__item {
-      flex-direction: column; }
-    .maxxs-navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-    .maxxs-navbar-responsive .navbar__collapse .navbar__form {
-      display: block;
-      width: 100%; }
-    .maxxs-navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxxs-navbar-responsive .navbar__collapse .navbar__form {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxxs-navbar-responsive .navbar__collapse .input,
-    .maxxs-navbar-responsive .navbar__collapse .btn {
-      line-height: inherit; }
-  .maxxs-navbar-responsive .navbar__no-collapse {
-    overflow-x: auto;
-    width: 100%; }
-    .maxxs-navbar-responsive .navbar__no-collapse .navbar__menu {
-      justify-content: center; } }
-
-@media (max-width: 767px) {
-  .maxsm-navbar-responsive.navbar {
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .maxsm-navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-    order: 2; }
-  .maxsm-navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-    order: 1; }
-  .maxsm-navbar-responsive.navbar-responsive--top .navbar__brand {
-    order: 3; }
-  .maxsm-navbar-responsive.navbar-responsive--top .navbar__toggler {
-    order: 4; }
-  .maxsm-navbar-responsive .navbar__toggler {
-    cursor: pointer;
-    display: flex;
-    order: 2; }
-  .maxsm-navbar-responsive .navbar__collapse,
-  .maxsm-navbar-responsive .navbar__no-collapse,
-  .maxsm-navbar-responsive .navbar__menu {
-    flex-grow: 1; }
-  .maxsm-navbar-responsive .navbar__collapse {
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    width: 100%; }
-    .maxsm-navbar-responsive .navbar__collapse:first-of-type {
-      order: 4; }
-    .maxsm-navbar-responsive .navbar__collapse:last-of-type {
-      order: 3; }
-    .maxsm-navbar-responsive .navbar__collapse .navbar__menu,
-    .maxsm-navbar-responsive .navbar__collapse .navbar__item {
-      flex-direction: column; }
-    .maxsm-navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-    .maxsm-navbar-responsive .navbar__collapse .navbar__form {
-      display: block;
-      width: 100%; }
-    .maxsm-navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxsm-navbar-responsive .navbar__collapse .navbar__form {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxsm-navbar-responsive .navbar__collapse .input,
-    .maxsm-navbar-responsive .navbar__collapse .btn {
-      line-height: inherit; }
-  .maxsm-navbar-responsive .navbar__no-collapse {
-    overflow-x: auto;
-    width: 100%; }
-    .maxsm-navbar-responsive .navbar__no-collapse .navbar__menu {
-      justify-content: center; } }
-
-@media (max-width: 1023px) {
-  .maxmd-navbar-responsive.navbar {
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .maxmd-navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-    order: 2; }
-  .maxmd-navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-    order: 1; }
-  .maxmd-navbar-responsive.navbar-responsive--top .navbar__brand {
-    order: 3; }
-  .maxmd-navbar-responsive.navbar-responsive--top .navbar__toggler {
-    order: 4; }
-  .maxmd-navbar-responsive .navbar__toggler {
-    cursor: pointer;
-    display: flex;
-    order: 2; }
-  .maxmd-navbar-responsive .navbar__collapse,
-  .maxmd-navbar-responsive .navbar__no-collapse,
-  .maxmd-navbar-responsive .navbar__menu {
-    flex-grow: 1; }
-  .maxmd-navbar-responsive .navbar__collapse {
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    width: 100%; }
-    .maxmd-navbar-responsive .navbar__collapse:first-of-type {
-      order: 4; }
-    .maxmd-navbar-responsive .navbar__collapse:last-of-type {
-      order: 3; }
-    .maxmd-navbar-responsive .navbar__collapse .navbar__menu,
-    .maxmd-navbar-responsive .navbar__collapse .navbar__item {
-      flex-direction: column; }
-    .maxmd-navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-    .maxmd-navbar-responsive .navbar__collapse .navbar__form {
-      display: block;
-      width: 100%; }
-    .maxmd-navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxmd-navbar-responsive .navbar__collapse .navbar__form {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxmd-navbar-responsive .navbar__collapse .input,
-    .maxmd-navbar-responsive .navbar__collapse .btn {
-      line-height: inherit; }
-  .maxmd-navbar-responsive .navbar__no-collapse {
-    overflow-x: auto;
-    width: 100%; }
-    .maxmd-navbar-responsive .navbar__no-collapse .navbar__menu {
-      justify-content: center; } }
-
-@media (max-width: 1279px) {
-  .maxlg-navbar-responsive.navbar {
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .maxlg-navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-    order: 2; }
-  .maxlg-navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-    order: 1; }
-  .maxlg-navbar-responsive.navbar-responsive--top .navbar__brand {
-    order: 3; }
-  .maxlg-navbar-responsive.navbar-responsive--top .navbar__toggler {
-    order: 4; }
-  .maxlg-navbar-responsive .navbar__toggler {
-    cursor: pointer;
-    display: flex;
-    order: 2; }
-  .maxlg-navbar-responsive .navbar__collapse,
-  .maxlg-navbar-responsive .navbar__no-collapse,
-  .maxlg-navbar-responsive .navbar__menu {
-    flex-grow: 1; }
-  .maxlg-navbar-responsive .navbar__collapse {
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    width: 100%; }
-    .maxlg-navbar-responsive .navbar__collapse:first-of-type {
-      order: 4; }
-    .maxlg-navbar-responsive .navbar__collapse:last-of-type {
-      order: 3; }
-    .maxlg-navbar-responsive .navbar__collapse .navbar__menu,
-    .maxlg-navbar-responsive .navbar__collapse .navbar__item {
-      flex-direction: column; }
-    .maxlg-navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-    .maxlg-navbar-responsive .navbar__collapse .navbar__form {
-      display: block;
-      width: 100%; }
-    .maxlg-navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxlg-navbar-responsive .navbar__collapse .navbar__form {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxlg-navbar-responsive .navbar__collapse .input,
-    .maxlg-navbar-responsive .navbar__collapse .btn {
-      line-height: inherit; }
-  .maxlg-navbar-responsive .navbar__no-collapse {
-    overflow-x: auto;
-    width: 100%; }
-    .maxlg-navbar-responsive .navbar__no-collapse .navbar__menu {
-      justify-content: center; } }
-
-@media (max-width: 1679px) {
-  .maxxl-navbar-responsive.navbar {
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .maxxl-navbar-responsive.navbar-responsive--top .navbar__collapse:first-of-type {
-    order: 2; }
-  .maxxl-navbar-responsive.navbar-responsive--top .navbar__collapse:last-of-type {
-    order: 1; }
-  .maxxl-navbar-responsive.navbar-responsive--top .navbar__brand {
-    order: 3; }
-  .maxxl-navbar-responsive.navbar-responsive--top .navbar__toggler {
-    order: 4; }
-  .maxxl-navbar-responsive .navbar__toggler {
-    cursor: pointer;
-    display: flex;
-    order: 2; }
-  .maxxl-navbar-responsive .navbar__collapse,
-  .maxxl-navbar-responsive .navbar__no-collapse,
-  .maxxl-navbar-responsive .navbar__menu {
-    flex-grow: 1; }
-  .maxxl-navbar-responsive .navbar__collapse {
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    width: 100%; }
-    .maxxl-navbar-responsive .navbar__collapse:first-of-type {
-      order: 4; }
-    .maxxl-navbar-responsive .navbar__collapse:last-of-type {
-      order: 3; }
-    .maxxl-navbar-responsive .navbar__collapse .navbar__menu,
-    .maxxl-navbar-responsive .navbar__collapse .navbar__item {
-      flex-direction: column; }
-    .maxxl-navbar-responsive .navbar__collapse .navbar__item .navbar__a,
-    .maxxl-navbar-responsive .navbar__collapse .navbar__form {
-      display: block;
-      width: 100%; }
-    .maxxl-navbar-responsive .navbar__collapse .navbar__item .navbar__a {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxxl-navbar-responsive .navbar__collapse .navbar__form {
-      padding-right: 0;
-      padding-left: 0; }
-    .maxxl-navbar-responsive .navbar__collapse .input,
-    .maxxl-navbar-responsive .navbar__collapse .btn {
-      line-height: inherit; }
-  .maxxl-navbar-responsive .navbar__no-collapse {
-    overflow-x: auto;
-    width: 100%; }
-    .maxxl-navbar-responsive .navbar__no-collapse .navbar__menu {
-      justify-content: center; } }
-
-/**
- * Responsive navbar menu at top:
- * `.navbar-responsive--top`
- *
- *     @example
- *     nav.navbar.navbar-responsive.navbar-responsive--top
- *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-responsive-navbar-menu-at-top-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu
- *                 li.navbar__item.active
- *                     a(href='').navbar__a Home
- *                 li.navbar__item
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item
- *                     a(href='').navbar__a About
- */
-/**
- * Open responsive navbar menu:
- * `.open`
- *
- *     @example
- *     nav.navbar.navbar-responsive
- *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-open-responsive-navbar-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse.open
- *             ul.navbar__menu
- *                 li.navbar__item.active
- *                     a(href='').navbar__a Home
- *                 li.navbar__item
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item
- *                     a(href='').navbar__a About
- */
-/**
- * Responsive navbar grid menu:
- *
- *     @example
- *     nav.navbar.maxlg-navbar-responsive.jc-space-between
- *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
- *                 li.navbar__item.active.xs-bd-bottom-0063.lg-bd-bottom-0
- *                     a(href='').navbar__a Home
- *                 li.navbar__item.xs-bd-bottom-0063.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item.md-bd-bottom-0063.lg-bd-bottom-0
- *                     a(href='').navbar__a Contact
- *                 li.navbar__item.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-left-0.md-gcol-2
- *                     a(href='').navbar__a About
- */
-/**
- * Navbar brand in the center:
- *
- *     @example
- *     nav.navbar.maxlg-navbar-responsive.jc-space-between
- *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
- *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu.maxlg-ta-center
- *                 li.navbar__item.maxlg-bd-top-0063
- *                     a(href='').navbar__a RSS feed
- *                 li.navbar__item.maxlg-bd-top-0063
- *                     a(href='').navbar__a Follow me
- *         div.navbar__brand
- *             a(href='').navbar__a Brand
- *         div.navbar__collapse.collapse
- *             ul.navbar__menu.maxlg-ta-center
- *                 li.navbar__item.active.maxlg-bd-top-0063
- *                     a(href='').navbar__a Home
- *                 li.navbar__item.maxlg-bd-top-0063
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item.maxlg-bd-top-0063
- *                     a(href='').navbar__a About
- */
-/**
- * Responsive navbar horizontal menu:
- *
- *     @example
- *     nav.navbar.maxmd-navbar-responsive
- *         div.navbar__brand.maxmd-d-block.maxmd-ta-center.maxmd-w-100
- *             a(href='').navbar__a.maxmd-d-block Brand
- *         div.navbar__no-collapse
- *             ul.navbar__menu.navbar__menu--right
- *                 li.navbar__item.active
- *                     a(href='').navbar__a Home
- *                 li.navbar__item
- *                     a(href='').navbar__a Archive
- *                 li.navbar__item
- *                     a(href='').navbar__a About
- *                 li.navbar__item
- *                     a(href='').navbar__a Contact
- *                 li.navbar__item
- *                     a(href='').navbar__a RSS
- */
-/**
- * Navbar optional classes:
- * `.navbar--fixed` `.navbar--shadow`
- *
- *     @example
- *     table.tbl
- *         thead
- *             tr
- *                 th Class
- *                 th Description
- *         tbody
- *             tr
- *                 td <code>.fixed</code>
- *                 td Fija el <code>.navbar</code> en la parte superior de la página.
- *             tr
- *                 td <code>.scrolled</code>
- *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
- */
-.navbar.navbar--fixed {
-  position: fixed;
-  width: 100%;
-  z-index: 1000; }
-
-.navbar.navbar--shadow {
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
-
-.night .navbar.navbar--shadow {
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
-
-.navbar--dark .navbar__a,
-.navbar--dark .navbar__toggler {
-  color: rgba(255, 255, 255, 0.6); }
-  .navbar--dark .navbar__a:link, .navbar--dark .navbar__a:visited,
-  .navbar--dark .navbar__toggler:link,
-  .navbar--dark .navbar__toggler:visited {
-    color: rgba(255, 255, 255, 0.6); }
-  .navbar--dark .navbar__a:hover,
-  .navbar--dark .navbar__toggler:hover {
-    color: rgba(255, 255, 255, 0.9); }
-
-.navbar--dark .navbar__brand .navbar__a:link, .navbar--dark .navbar__brand .navbar__a:hover, .navbar--dark .navbar__brand .navbar__a:visited,
-.navbar--dark .navbar__item.active .navbar__a:link,
-.navbar--dark .navbar__item.active .navbar__a:hover,
-.navbar--dark .navbar__item.active .navbar__a:visited {
+.night .navbar__item.active a {
   color: rgba(255, 255, 255, 0.9); }
+
+.navbar__collapse {
+  display: flex;
+  align-items: stretch; }
+
+.col > .navbar,
+[class*='-col-'] > .navbar {
+  margin-right: -0.75em;
+  margin-left: -0.75em; }
 
 /***
  * Navmenu:

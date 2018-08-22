@@ -28,26 +28,32 @@
 </head>
 
 <body class="sg">
-  <nav class="doc-navbar navbar maxmd-navbar-responsive navbar--fixed">
-    <input type="checkbox" id="doc-navbar-toggle" class="collapse-toggle">
-    <div class="navbar__brand">
-      <a href="index.html" class="navbar__a">CSS Starter Kit</a>
+  <header class="doc-header">
+    <div class="cntr">
+      <div class="row">
+        <div class="col">
+          <nav class="doc-navbar navbar maxmd-navbar-responsive">
+            <div class="navbar__brand">
+              <a href="index.html" class="navbar__item">CSS Starter Kit</a>
+            </div>
+            <div class="navbar__collapse maxmd-d-none">
+              <ul class="navbar__items">
+                <li class="navbar__item">
+                  <a href="index.html">Preface</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="layout-flex-grid.html">Documentation</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
     </div>
-    <label for="doc-navbar-toggle" id="open-fsmenu" class="navbar__toggler md-d-none">Menu</label>
-    <div class="navbar__collapse collapse maxmd-d-none">
-      <ul class="navbar__menu">
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__a">Preface</a>
-        </li>
-        <li class="navbar__item">
-          <a href="layout-flex-grid.html" class="navbar__a">Documentation</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="cntr-fluid">
+  </header>
+  <div class="cntr">
     <div class="row">
-      <div class="doc-main xs-col-12 md-col-10 xl-col-11">
+      <div class="doc-main xs-col-12 md-col-10">
         <div class="doc-main__content row">
           <div class="md-col-12 xl-col-12">
             <div class="sg-container">
@@ -242,205 +248,193 @@
           </div>
         </div>
       </div>
-      <div class="doc-sidebar xs-col-12 md-col-2 xl-col-1 maxmd-fsmenu">
+      <div class="doc-sidebar xs-col-12 md-col-2 maxmd-fsmenu">
         <div class="doc-sidebar__content row">
           <div class="col">
-            <div class="row maxmd-ta-center">
+            <div id="doc-accordion" class="row maxmd-ta-center">
               <div class="col-12">
-                <div>
-                  <input id="doc-sidebar-collapse-toggle-1" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="doc-sidebar-collapse-toggle-1" class="collapse__toggler h5">Layout</label>
-                  <div class="collapse">
-                    <ul class="ls-unstyled">
-                      <li>
-                        <a href="layout-flex-direction.html">Flex direction</a>
-                      </li>
-                      <li>
-                        <a href="layout-flex-grid.html">Flex grid</a>
-                      </li>
-                      <li>
-                        <a href="layout-flex-grow.html">Flex grow</a>
-                      </li>
-                      <li>
-                        <a href="layout-grid.html">Grid</a>
-                      </li>
-                      <li>
-                        <a href="layout-gutter.html">Gutter</a>
-                      </li>
-                      <li>
-                        <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
-                      </li>
-                      <li>
-                        <a href="layout-modifier-vertical.html">Vertical modifier</a>
-                      </li>
-                      <li>
-                        <a href="layout-offset.html">Offset</a>
-                      </li>
-                      <li>
-                        <a href="layout-order.html">Order</a>
-                      </li>
-                    </ul>
-                  </div>
+                <a href="#doc-accordion-collapse-layout" data-toggle="collapse" class="h5 ac-c">Layout</a>
+                <div id="doc-accordion-collapse-layout" data-parent="#doc-accordion" class="collapse show">
+                  <ul class="ls">
+                    <li>
+                      <a href="layout-flex-direction.html">Flex direction</a>
+                    </li>
+                    <li>
+                      <a href="layout-flex-grid.html">Flex grid</a>
+                    </li>
+                    <li>
+                      <a href="layout-flex-grow.html">Flex grow</a>
+                    </li>
+                    <li>
+                      <a href="layout-grid.html">Grid</a>
+                    </li>
+                    <li>
+                      <a href="layout-gutter.html">Gutter</a>
+                    </li>
+                    <li>
+                      <a href="layout-modifier-horizontal.html">Horizontal modifier</a>
+                    </li>
+                    <li>
+                      <a href="layout-modifier-vertical.html">Vertical modifier</a>
+                    </li>
+                    <li>
+                      <a href="layout-offset.html">Offset</a>
+                    </li>
+                    <li>
+                      <a href="layout-order.html">Order</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="col-12">
-                <div>
-                  <input id="doc-sidebar-collapse-toggle-2" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="doc-sidebar-collapse-toggle-2" class="collapse__toggler h5">Elements</label>
-                  <div class="collapse">
-                    <ul class="ls-unstyled">
-                      <li>
-                        <a href="elements-base.html">Base</a>
-                      </li>
-                      <li>
-                        <a href="elements-box.html">Box</a>
-                      </li>
-                      <li>
-                        <a href="elements-button.html">Button</a>
-                      </li>
-                      <li>
-                        <a href="elements-button-group.html">Button group</a>
-                      </li>
-                      <li>
-                        <a href="elements-file-area.html">File area</a>
-                      </li>
-                      <li>
-                        <a href="elements-form.html">Form</a>
-                      </li>
-                      <li>
-                        <a href="elements-input-group.html">Input group</a>
-                      </li>
-                      <li>
-                        <a href="elements-item-group.html">Item group</a>
-                      </li>
-                      <li>
-                        <a href="elements-list.html">List</a>
-                      </li>
-                      <li>
-                        <a href="elements-switch.html">Switch</a>
-                      </li>
-                      <li>
-                        <a href="elements-table.html">Table</a>
-                      </li>
-                      <li>
-                        <a href="elements-toolbar.html">Toolbar</a>
-                      </li>
-                    </ul>
-                  </div>
+                <a href="#doc-accordion-collapse-elements" data-toggle="collapse" class="h5 ac-c">Elements</a>
+                <div id="doc-accordion-collapse-elements" data-parent="#doc-accordion" class="collapse">
+                  <ul class="ls">
+                    <li>
+                      <a href="elements-base.html">Base</a>
+                    </li>
+                    <li>
+                      <a href="elements-box.html">Box</a>
+                    </li>
+                    <li>
+                      <a href="elements-button.html">Button</a>
+                    </li>
+                    <li>
+                      <a href="elements-button-group.html">Button group</a>
+                    </li>
+                    <li>
+                      <a href="elements-file-area.html">File area</a>
+                    </li>
+                    <li>
+                      <a href="elements-form.html">Form</a>
+                    </li>
+                    <li>
+                      <a href="elements-input-group.html">Input group</a>
+                    </li>
+                    <li>
+                      <a href="elements-item-group.html">Item group</a>
+                    </li>
+                    <li>
+                      <a href="elements-list.html">List</a>
+                    </li>
+                    <li>
+                      <a href="elements-switch.html">Switch</a>
+                    </li>
+                    <li>
+                      <a href="elements-table.html">Table</a>
+                    </li>
+                    <li>
+                      <a href="elements-toolbar.html">Toolbar</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="col-12">
-                <div>
-                  <input id="doc-sidebar-collapse-toggle-3" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="doc-sidebar-collapse-toggle-3" class="collapse__toggler h5">Helpers</label>
-                  <div class="collapse">
-                    <ul class="ls-unstyled">
-                      <li>
-                        <a href="helpers-border.html">Border</a>
-                      </li>
-                      <li>
-                        <a href="helpers-border-radius.html">Border radius</a>
-                      </li>
-                      <li>
-                        <a href="helpers-border-style.html">Border style</a>
-                      </li>
-                      <li>
-                        <a href="helpers-border-width.html">Border width</a>
-                      </li>
-                      <li>
-                        <a href="helpers-box-shadow.html">Box shadow</a>
-                      </li>
-                      <li>
-                        <a href="helpers-clearfix.html">Clearfix</a>
-                      </li>
-                      <li>
-                        <a href="helpers-color.html">Color</a>
-                      </li>
-                      <li>
-                        <a href="helpers-display.html">Display</a>
-                      </li>
-                      <li>
-                        <a href="helpers-float.html">Float</a>
-                      </li>
-                      <li>
-                        <a href="helpers-font-size.html">Font size</a>
-                      </li>
-                      <li>
-                        <a href="helpers-font-weight.html">Font weight</a>
-                      </li>
-                      <li>
-                        <a href="helpers-margin.html">Margin</a>
-                      </li>
-                      <li>
-                        <a href="helpers-opacity.html">Opacity</a>
-                      </li>
-                      <li>
-                        <a href="helpers-padding.html">Padding</a>
-                      </li>
-                      <li>
-                        <a href="helpers-position.html">Position</a>
-                      </li>
-                      <li>
-                        <a href="helpers-text.html">Text</a>
-                      </li>
-                      <li>
-                        <a href="helpers-text-align.html">Text align</a>
-                      </li>
-                      <li>
-                        <a href="helpers-text-transform.html">Text transform</a>
-                      </li>
-                      <li>
-                        <a href="helpers-visibility.html">Visibility</a>
-                      </li>
-                      <li>
-                        <a href="helpers-width.html">Width</a>
-                      </li>
-                    </ul>
-                  </div>
+                <a href="#doc-accordion-collapse-helpers" data-toggle="collapse" class="h5 ac-c">Helpers</a>
+                <div id="doc-accordion-collapse-helpers" data-parent="#doc-accordion" class="collapse">
+                  <ul class="ls">
+                    <li>
+                      <a href="helpers-border.html">Border</a>
+                    </li>
+                    <li>
+                      <a href="helpers-border-radius.html">Border radius</a>
+                    </li>
+                    <li>
+                      <a href="helpers-border-style.html">Border style</a>
+                    </li>
+                    <li>
+                      <a href="helpers-border-width.html">Border width</a>
+                    </li>
+                    <li>
+                      <a href="helpers-box-shadow.html">Box shadow</a>
+                    </li>
+                    <li>
+                      <a href="helpers-clearfix.html">Clearfix</a>
+                    </li>
+                    <li>
+                      <a href="helpers-color.html">Color</a>
+                    </li>
+                    <li>
+                      <a href="helpers-display.html">Display</a>
+                    </li>
+                    <li>
+                      <a href="helpers-float.html">Float</a>
+                    </li>
+                    <li>
+                      <a href="helpers-font-size.html">Font size</a>
+                    </li>
+                    <li>
+                      <a href="helpers-font-weight.html">Font weight</a>
+                    </li>
+                    <li>
+                      <a href="helpers-margin.html">Margin</a>
+                    </li>
+                    <li>
+                      <a href="helpers-opacity.html">Opacity</a>
+                    </li>
+                    <li>
+                      <a href="helpers-padding.html">Padding</a>
+                    </li>
+                    <li>
+                      <a href="helpers-position.html">Position</a>
+                    </li>
+                    <li>
+                      <a href="helpers-text.html">Text</a>
+                    </li>
+                    <li>
+                      <a href="helpers-text-align.html">Text align</a>
+                    </li>
+                    <li>
+                      <a href="helpers-text-transform.html">Text transform</a>
+                    </li>
+                    <li>
+                      <a href="helpers-visibility.html">Visibility</a>
+                    </li>
+                    <li>
+                      <a href="helpers-width.html">Width</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="col-12">
-                <div>
-                  <input id="doc-sidebar-collapse-toggle-4" name="doc-sidebar-collapse" type="radio" class="collapse-toggle">
-                  <label for="doc-sidebar-collapse-toggle-4" class="collapse__toggler h5">Components</label>
-                  <div class="collapse">
-                    <ul class="ls-unstyled">
-                      <li>
-                        <a href="components-card.html">Card</a>
-                      </li>
-                      <li>
-                        <a href="components-collapse.html">Collapse</a>
-                      </li>
-                      <li>
-                        <a href="components-drawer.html">Drawer</a>
-                      </li>
-                      <li>
-                        <a href="components-menu.html">Menu</a>
-                      </li>
-                      <li>
-                        <a href="components-modal.html">Modal</a>
-                      </li>
-                      <li>
-                        <a href="components-navbar.html">Navbar</a>
-                      </li>
-                      <li>
-                        <a href="components-navmenu.html">Navmenu</a>
-                      </li>
-                      <li>
-                        <a href="components-tabs.html">Tabs</a>
-                      </li>
-                    </ul>
-                  </div>
+                <a href="#doc-accordion-collapse-components" data-toggle="collapse" class="h5 ac-c">Components</a>
+                <div id="doc-accordion-collapse-components" data-parent="#doc-accordion" class="collapse">
+                  <ul class="ls">
+                    <li>
+                      <a href="components-card.html">Card</a>
+                    </li>
+                    <li>
+                      <a href="components-collapse.html">Collapse</a>
+                    </li>
+                    <li>
+                      <a href="components-drawer.html">Drawer</a>
+                    </li>
+                    <li>
+                      <a href="components-menu.html">Menu</a>
+                    </li>
+                    <li>
+                      <a href="components-modal.html">Modal</a>
+                    </li>
+                    <li>
+                      <a href="components-navbar.html">Navbar</a>
+                    </li>
+                    <li>
+                      <a href="components-navmenu.html">Navmenu</a>
+                    </li>
+                    <li>
+                      <a href="components-tabs.html">Tabs</a>
+                    </li>
+                  </ul>
                 </div>
-                <div>
-                  <div class="doc-switch-night-mode switch switch--sm">
-                    <input id="switch-night-mode" type="checkbox" class="switch__input">
-                    <label for="switch-night-mode" id="lbl-night-mode" class="switch__lbl">
-                      <span class="switch__txt">
-                        <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
-                      </span>
-                    </label>
-                  </div>
+              </div>
+              <div class="col-12">
+                <div class="doc-switch-night-mode switch switch--sm">
+                  <input id="switch-night-mode" type="checkbox" class="switch__input">
+                  <label for="switch-night-mode" id="lbl-night-mode" class="switch__lbl">
+                    <span class="switch__txt">
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                    </span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -452,6 +446,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/styledown.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/components/collapse.js"></script>
   <script src="js/components/modal.js"></script>
 </body>
 

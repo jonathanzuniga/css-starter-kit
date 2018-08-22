@@ -1,0 +1,462 @@
+
+// @import '../partials/_all';
+
+
+/***
+ * Navbar:
+ */
+
+/**
+ * Navbar:
+ * `.navbar`
+ *
+ *     @example
+ *     nav.navbar.maxsm-navbar-responsive
+ *         input(type='checkbox', id='eg-navbar-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-navbar-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse.fxg-1.jc-space-between
+ *             ul.navbar__menu.maxsm-ta-center
+ *                 li.navbar__item.active.maxsm-bd-top-0063
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item.maxsm-bd-top-0063
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item.maxsm-bd-top-0063
+ *                     a(href='').navbar__a About
+ *             form.navbar__form.maxsm-ta-center.maxsm-bd-top-0063
+ *                 input(type='search', placeholder='Search').input.input--line.maxsm-ta-center
+ */
+
+/* .navbar,
+.navbar__brand,
+.navbar__collapse,
+.navbar__no-collapse,
+.navbar__menu,
+.navbar__item,
+.navbar__a,
+.navbar__form {
+	display: flex;
+}
+
+.navbar__brand,
+.navbar__toggler,
+.navbar__a,
+.navbar__form {
+	align-items: center;
+}
+
+.navbar {
+	background-color: $day__navbar-bg-color;
+	justify-content: flex-start;
+}
+
+.night .navbar {
+	background-color: $ngt__navbar-bg-color;
+}
+
+.navbar__brand,
+.navbar__item {
+	align-items: stretch;
+}
+
+.navbar__brand {
+	font-size: $navbar-brand-font-size;
+}
+
+.navbar__toggler {
+	display: none;
+}
+
+.navbar__toggler,
+.navbar__a,
+.navbar__form {
+	padding: $navbar-padding-y $navbar-padding-x;
+}
+
+.navbar__collapse,
+.navbar__no-collapse,
+.navbar__menu {
+	flex-grow: 0;
+}
+
+.navbar__menu {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar__a,
+.navbar__toggler {
+	color: $day__navbar-a-color;
+
+	&:link,
+	&:visited {
+		color: $day__navbar-a-color;
+	}
+
+	&:hover {
+		color: $day__navbar-a-hover-color;
+	}
+}
+
+.navbar__brand,
+.navbar__item.active {
+	.navbar__a {
+		&:link,
+		&:hover,
+		&:visited {
+			color: $day__navbar-item-active__a-color;
+		}
+	}
+}
+
+.night {
+	.navbar__a,
+	.navbar__toggler {
+		color: $ngt__navbar-a-color;
+
+		&:link,
+		&:visited {
+			color: $ngt__navbar-a-color;
+		}
+
+		&:hover {
+			color: $ngt__navbar-a-hover-color;
+		}
+	}
+
+	.navbar__brand,
+	.navbar__item.active {
+		.navbar__a {
+			&:link,
+			&:hover,
+			&:visited {
+				color: $ngt__navbar-item-active__a-color;
+			}
+		}
+	}
+} */
+
+/**
+ * Responsive navbar menu:
+ * `.navbar-responsive` `.max[size]-navbar-responsive`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-responsive-navbar-menu-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__a About
+ */
+
+/**
+ * Right align navbar menu:
+ *
+ *     @example
+ *     nav.navbar.maxsm-navbar-responsive.jc-space-between
+ *         input(type='checkbox', id='eg-right-align-navbar-menu-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-right-align-navbar-menu-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu.maxsm-ta-center
+ *                 li.navbar__item.active.maxsm-bd-top-0063
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item.maxsm-bd-top-0063
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item.maxsm-bd-top-0063
+ *                     a(href='').navbar__a About
+ */
+
+/* @mixin navbar-responsive-collapse {
+
+	.navbar__toggler {
+		cursor: $navbar-toggler-cursor;
+		display: flex;
+		order: 2;
+	}
+
+	.navbar__collapse,
+	.navbar__no-collapse,
+	.navbar__menu {
+		flex-grow: 1;
+	}
+
+	.navbar__collapse {
+		flex-wrap: wrap;
+		padding: 0 $navbar-padding-x;
+		width: 100%;
+
+		&:first-of-type {
+			order: 4;
+		}
+
+		&:last-of-type {
+			order: 3;
+		}
+
+		.navbar__menu,
+		.navbar__item {
+			flex-direction: column;
+		}
+
+		.navbar__item .navbar__a,
+		.navbar__form {
+			display: block;
+			width: 100%;
+		}
+
+		.navbar__item {
+			.navbar__a {
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+
+		.navbar__form {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.input,
+		.btn {
+			line-height: inherit;
+		}
+	}
+
+	.navbar__no-collapse {
+		overflow-x: auto;
+		width: 100%;
+
+		.navbar__menu {
+			justify-content: center;
+		}
+	}
+
+}
+
+@mixin navbar-responsive {
+
+	&.navbar {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&.navbar-responsive--top {
+		.navbar__collapse {
+			&:first-of-type {
+				order: 2;
+			}
+
+			&:last-of-type {
+				order: 1;
+			}
+		}
+
+		.navbar__brand {
+			order: 3;
+		}
+
+		.navbar__toggler {
+			order: 4;
+		}
+	}
+
+	@include navbar-responsive-collapse;
+
+}
+
+.navbar-responsive {
+	@include navbar-responsive;
+}
+
+@each $size, $length in $grid-breakpoints {
+
+	@media ( max-width: $length - 1 ) {
+
+		.max{ $size }-navbar-responsive {
+			@include navbar-responsive;
+		}
+
+	}
+
+} */
+
+/**
+ * Responsive navbar menu at top:
+ * `.navbar-responsive--top`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive.navbar-responsive--top
+ *         input(type='checkbox', id='eg-responsive-navbar-menu-at-top-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-responsive-navbar-menu-at-top-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__a About
+ */
+
+/**
+ * Open responsive navbar menu:
+ * `.open`
+ *
+ *     @example
+ *     nav.navbar.navbar-responsive
+ *         input(type='checkbox', id='eg-open-responsive-navbar-menu-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-open-responsive-navbar-menu-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse.open
+ *             ul.navbar__menu
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__a About
+ */
+
+/**
+ * Responsive navbar grid menu:
+ *
+ *     @example
+ *     nav.navbar.maxlg-navbar-responsive.jc-space-between
+ *         input(type='checkbox', id='eg-responsive-navbar-grid-menu-toggle').collapse-toggle
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         label(for='eg-responsive-navbar-grid-menu-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu.xs-gcols-2.md-gcols-3.lg-gcols-0.maxlg-gap-0.maxlg-ta-center
+ *                 li.navbar__item.active.xs-bd-bottom-0063.lg-bd-bottom-0
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item.xs-bd-bottom-0063.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-bottom-0.lg-bd-left-0
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item.md-bd-bottom-0063.lg-bd-bottom-0
+ *                     a(href='').navbar__a Contact
+ *                 li.navbar__item.xs-bd-left-0063.md-bd-right-0063.lg-bd-right-0.lg-bd-left-0.md-gcol-2
+ *                     a(href='').navbar__a About
+ */
+
+/**
+ * Navbar brand in the center:
+ *
+ *     @example
+ *     nav.navbar.maxlg-navbar-responsive.jc-space-between
+ *         input(type='checkbox', id='eg-navbar-brand-in-the-center-toggle').collapse-toggle
+ *         label(for='eg-navbar-brand-in-the-center-toggle').navbar__toggler Menu
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu.maxlg-ta-center
+ *                 li.navbar__item.maxlg-bd-top-0063
+ *                     a(href='').navbar__a RSS feed
+ *                 li.navbar__item.maxlg-bd-top-0063
+ *                     a(href='').navbar__a Follow me
+ *         div.navbar__brand
+ *             a(href='').navbar__a Brand
+ *         div.navbar__collapse.collapse
+ *             ul.navbar__menu.maxlg-ta-center
+ *                 li.navbar__item.active.maxlg-bd-top-0063
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item.maxlg-bd-top-0063
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item.maxlg-bd-top-0063
+ *                     a(href='').navbar__a About
+ */
+
+ /**
+ * Responsive navbar horizontal menu:
+ *
+ *     @example
+ *     nav.navbar.maxmd-navbar-responsive
+ *         div.navbar__brand.maxmd-d-block.maxmd-ta-center.maxmd-w-100
+ *             a(href='').navbar__a.maxmd-d-block Brand
+ *         div.navbar__no-collapse
+ *             ul.navbar__menu.navbar__menu--right
+ *                 li.navbar__item.active
+ *                     a(href='').navbar__a Home
+ *                 li.navbar__item
+ *                     a(href='').navbar__a Archive
+ *                 li.navbar__item
+ *                     a(href='').navbar__a About
+ *                 li.navbar__item
+ *                     a(href='').navbar__a Contact
+ *                 li.navbar__item
+ *                     a(href='').navbar__a RSS
+ */
+
+/**
+ * Navbar optional classes:
+ * `.navbar--fixed` `.navbar--shadow`
+ *
+ *     @example
+ *     table.tbl
+ *         thead
+ *             tr
+ *                 th Class
+ *                 th Description
+ *         tbody
+ *             tr
+ *                 td <code>.fixed</code>
+ *                 td Fija el <code>.navbar</code> en la parte superior de la página.
+ *             tr
+ *                 td <code>.scrolled</code>
+ *                 td Agrega una sombra al <code>.navbar</code> cuando se desplaza la scrollbar vertical.
+ */
+
+/* .navbar {
+	&.navbar--fixed {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	&.navbar--shadow {
+		box-shadow: $day__navbar-shadow;
+	}
+}
+
+.night .navbar {
+	&.navbar--shadow {
+		box-shadow: $ngt__navbar-shadow;
+	}
+}
+
+.navbar--dark {
+	.navbar__a,
+	.navbar__toggler {
+		color: $navbar-dark__a-color;
+
+		&:link,
+		&:visited {
+			color: $navbar-dark__a-color;
+		}
+
+		&:hover {
+			color: $navbar-dark__a-hover-color;
+		}
+	}
+
+	.navbar__brand,
+	.navbar__item.active {
+		.navbar__a {
+			&:link,
+			&:hover,
+			&:visited {
+				color: $navbar-dark__item-active__a-color;
+			}
+		}
+	}
+} */

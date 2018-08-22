@@ -35,7 +35,6 @@ body {
   background-color: #272727;
   color: rgba(255, 255, 255, 0.9); }
 
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
   font-family: inherit;
@@ -110,54 +109,66 @@ a {
  */
 h1,
 .h1 {
+  font-family: inherit;
   font-size: 2.5em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h1:not(:first-child),
   .h1:not(:first-child) {
     margin-top: 2.25em; }
 
 h2,
 .h2 {
+  font-family: inherit;
   font-size: 2em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h2:not(:first-child),
   .h2:not(:first-child) {
     margin-top: 1.75em; }
 
 h3,
 .h3 {
+  font-family: inherit;
   font-size: 1.75em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h3:not(:first-child),
   .h3:not(:first-child) {
     margin-top: 1.5em; }
 
 h4,
 .h4 {
+  font-family: inherit;
   font-size: 1.5em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h4:not(:first-child),
   .h4:not(:first-child) {
     margin-top: 1.25em; }
 
 h5,
 .h5 {
+  font-family: inherit;
   font-size: 1.25em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h5:not(:first-child),
   .h5:not(:first-child) {
     margin-top: 1em; }
 
 h6,
 .h6 {
+  font-family: inherit;
   font-size: 1em;
   font-weight: 300;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 0.5em; }
   h6:not(:first-child),
   .h6:not(:first-child) {
     margin-top: 0.75em; }
@@ -2059,10 +2070,10 @@ th {
  */
 /**
  * Unstyled list:
- * `.ls-unstyled`
+ * `.ls`
  *
  *     @example
- *     ul.ls-unstyled
+ *     ul.ls
  *         li Apricot
  *         li Banana
  *         li Cherry
@@ -2070,23 +2081,23 @@ th {
  *                 li Caramel
  *                 li Ice cream
  */
-.ls-unstyled, .ls-inline {
+.ls {
   list-style: none;
   padding-left: 0; }
 
 /**
  * Inline list:
- * `.ls-inline`
+ * `.ls--inline`
  *
  *     @example
- *     ul.ls-inline
+ *     ul.ls--inline
  *         li Apricot
  *         li Banana
  *         li Cherry
  */
-.ls-inline li {
+.ls--inline li {
   display: inline-block; }
-  .ls-inline li:not(:last-child) {
+  .ls--inline li:not(:last-child) {
     margin-right: 1em; }
 
 /***

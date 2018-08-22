@@ -48,7 +48,6 @@ body {
 	color: $ngt__body-color;
 }
 
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
 	font-family: inherit;
@@ -146,9 +145,11 @@ a {
 
 	#{ $key },
 	.#{ $key } {
+		font-family: inherit;
 		font-size: $size;
 		font-weight: $heading-font-weight;
 		line-height: $heading-line-height;
+		margin-bottom: $spacing-unit-quarter;
 
 		&:not( :first-child ) {
 			margin-top: $size - 0.25;

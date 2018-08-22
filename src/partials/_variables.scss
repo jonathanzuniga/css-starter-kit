@@ -627,6 +627,13 @@ $fixed-square-images: (
 $item-padding-x:                   0.5em;
 
 
+// List
+//
+// Inline list
+
+$ls-inline__item-not-last-margin-right: $spacing-unit-half;
+
+
 // Switch
 
 $switch-label-height:                       2.438em;
@@ -1082,25 +1089,39 @@ $card-foot-button-not-first-child-margin-left: 0.625rem;
 
 // Collapse
 
-$collapse-height:                                     initial;
-$collapse-max-height:                                 0;
-$collapse-open-height:                                auto;
-$collapse-open-max-height:                            100vh;
-$collapse-transition:                                 height     0.32s $transition-timing-function,
-                                                      max-height 0.32s $transition-timing-function,
-                                                      opacity    0.32s $transition-timing-function,
-                                                      transform  0.32s $transition-timing-function;
+$collapse-transition: height  0.24s $transition-timing-function,
+                      opacity 0.24s $transition-timing-function;
 
-$collapse__list-unstyled__item-active__a-font-weight: 500;
+$collapse__ls__item-active__a-font-weight: 500;
 
-$day__collapse__list-unstyled__a-color:               color( 'black 60' );
-$ngt__collapse__list-unstyled__a-color:               color( 'white 60' );
+$day__collapse__ls__a-color:               color( 'black 60' );
+$ngt__collapse__ls__a-color:               color( 'white 60' );
 
-$day__collapse__list-unstyled__a-hover-color:         color( 'black 90' );
-$ngt__collapse__list-unstyled__a-hover-color:         color( 'white 90' );
+$day__collapse__ls__a-hover-color:         color( 'black 90' );
+$ngt__collapse__ls__a-hover-color:         color( 'white 90' );
 
-$day__collapse__list-unstyled__item-active__a-color:  $day__body-color;
-$ngt__collapse__list-unstyled__item-active__a-color:  $ngt__body-color;
+$day__collapse__ls__item-active__a-color:  $day__body-color;
+$ngt__collapse__ls__item-active__a-color:  $ngt__body-color;
+
+// $collapse-height:                                     initial;
+// $collapse-max-height:                                 0;
+// $collapse-open-height:                                auto;
+// $collapse-open-max-height:                            100vh;
+// $collapse-transition:                                 height     0.32s $transition-timing-function,
+//                                                       max-height 0.32s $transition-timing-function,
+//                                                       opacity    0.32s $transition-timing-function,
+//                                                       transform  0.32s $transition-timing-function;
+
+// $collapse__list-unstyled__item-active__a-font-weight: 500;
+
+// $day__collapse__list-unstyled__a-color:               color( 'black 60' );
+// $ngt__collapse__list-unstyled__a-color:               color( 'white 60' );
+
+// $day__collapse__list-unstyled__a-hover-color:         color( 'black 90' );
+// $ngt__collapse__list-unstyled__a-hover-color:         color( 'white 90' );
+
+// $day__collapse__list-unstyled__item-active__a-color:  $day__body-color;
+// $ngt__collapse__list-unstyled__item-active__a-color:  $ngt__body-color;
 
 
 // Drawer
@@ -1197,37 +1218,49 @@ $modal-show-content-transition: opacity    0.16s $transition-timing-function,
 
 // Navbar
 
-// Navbar brand
+$navbar-brand-font-size:           1.25em;
 
-$day__navbar-bg-color:              $day__body-bg-color;
-$ngt__navbar-bg-color:              $ngt__body-bg-color;
+$navbar-item-padding-y:            $control-padding-y;
+$navbar-item-padding-x:            $control-padding-x;
 
-$navbar-padding-y:                  em_to_rem( $spacing-unit-quarter );
-$navbar-padding-x:                  em_to_rem( $spacing-unit-half );
+$day__navbar-a-color:              color( 'black 60' );
+$ngt__navbar-a-color:              color( 'white 60' );
 
-$navbar-brand-font-size:            1.25em;
-$navbar-toggler-cursor:             pointer;
+$day__navbar-a-hover-color:        color( 'black 90' );
+$ngt__navbar-a-hover-color:        color( 'white 90' );
 
-$day__navbar-a-color:               color( 'black 60' );
-$ngt__navbar-a-color:               color( 'white 60' );
+$day__navbar-item-active__a-color: $day__body-color;
+$ngt__navbar-item-active__a-color: $ngt__body-color;
 
-$day__navbar-a-hover-color:         color( 'black 90' );
-$ngt__navbar-a-hover-color:         color( 'white 90' );
+// $day__navbar-bg-color:              $day__body-bg-color;
+// $ngt__navbar-bg-color:              $ngt__body-bg-color;
 
-$day__navbar-item-active__a-color:  $day__body-color;
-$ngt__navbar-item-active__a-color:  $ngt__body-color;
+// $navbar-padding-y:                  em_to_rem( $spacing-unit-quarter );
+// $navbar-padding-x:                  em_to_rem( $spacing-unit-half );
 
-$navbar-dark__a-color:              color( 'white 60' );
-$navbar-dark__a-hover-color:        color( 'white 90' );
-$navbar-dark__item-active__a-color: $ngt__body-color;
+// $navbar-brand-font-size:            1.25em;
+// $navbar-toggler-cursor:             pointer;
 
-$day__navbar-shadow:                0 2px  4px -1px rgba( 0, 0, 0, 0.06 ),
-                                    0 4px  5px  0   rgba( 0, 0, 0, 0.06 ),
-                                    0 1px 10px  0   rgba( 0, 0, 0, 0.08 );
+// $day__navbar-a-color:               color( 'black 60' );
+// $ngt__navbar-a-color:               color( 'white 60' );
 
-$ngt__navbar-shadow:                0 2px  4px -1px rgba( 0, 0, 0, 0.2 ),
-                                    0 4px  5px  0   rgba( 0, 0, 0, 0.14 ),
-                                    0 1px 10px  0   rgba( 0, 0, 0, 0.12 );
+// $day__navbar-a-hover-color:         color( 'black 90' );
+// $ngt__navbar-a-hover-color:         color( 'white 90' );
+
+// $day__navbar-item-active__a-color:  $day__body-color;
+// $ngt__navbar-item-active__a-color:  $ngt__body-color;
+
+// $navbar-dark__a-color:              color( 'white 60' );
+// $navbar-dark__a-hover-color:        color( 'white 90' );
+// $navbar-dark__item-active__a-color: $ngt__body-color;
+
+// $day__navbar-shadow:                0 2px  4px -1px rgba( 0, 0, 0, 0.06 ),
+//                                     0 4px  5px  0   rgba( 0, 0, 0, 0.06 ),
+//                                     0 1px 10px  0   rgba( 0, 0, 0, 0.08 );
+
+// $ngt__navbar-shadow:                0 2px  4px -1px rgba( 0, 0, 0, 0.2 ),
+//                                     0 4px  5px  0   rgba( 0, 0, 0, 0.14 ),
+//                                     0 1px 10px  0   rgba( 0, 0, 0, 0.12 );
 
 
 // Navmenu

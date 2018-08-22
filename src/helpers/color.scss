@@ -59,6 +59,7 @@
  *         a(href='') Link with text color
  */
 
+a.ac-c:not( .btn ),
 .ac-c a:not( .btn ) {
 	&:link,
 	&:visited {
@@ -70,7 +71,8 @@
 	}
 }
 
-p.ac-c a:not( .btn ) {
+a.ac-c:not( .btn ),
+.ac-c a:not( .btn ) {
 	border-bottom-color: rgba( $day__body-color, 0.2 );
 
 	&:hover {
@@ -78,6 +80,7 @@ p.ac-c a:not( .btn ) {
 	}
 }
 
+.night a.ac-c:not( .btn ),
 .night .ac-c a:not( .btn ) {
 	&:link,
 	&:visited {
@@ -89,7 +92,8 @@ p.ac-c a:not( .btn ) {
 	}
 }
 
-.night p.ac-c a:not( .btn ) {
+.night a.ac-c:not( .btn ),
+.night .ac-c a:not( .btn ) {
 	border-bottom-color: rgba( $ngt__body-color, 0.2 );
 
 	&:hover {

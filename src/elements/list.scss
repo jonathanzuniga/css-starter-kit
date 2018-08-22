@@ -8,10 +8,10 @@
 
  /**
  * Unstyled list:
- * `.ls-unstyled`
+ * `.ls`
  *
  *     @example
- *     ul.ls-unstyled
+ *     ul.ls
  *         li Apricot
  *         li Banana
  *         li Cherry
@@ -20,30 +20,28 @@
  *                 li Ice cream
  */
 
-.ls-unstyled {
+.ls {
 	list-style: none;
 	padding-left: 0;
 }
 
  /**
  * Inline list:
- * `.ls-inline`
+ * `.ls--inline`
  *
  *     @example
- *     ul.ls-inline
+ *     ul.ls--inline
  *         li Apricot
  *         li Banana
  *         li Cherry
  */
 
-.ls-inline {
-	@extend .ls-unstyled;
-
+.ls--inline {
 	li {
 		display: inline-block;
 
 		&:not( :last-child ) {
-			margin-right: $spacing-unit-half;
+			margin-right: $ls-inline__item-not-last-margin-right;
 		}
 	}
 }
