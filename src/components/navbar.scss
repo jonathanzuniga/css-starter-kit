@@ -10,12 +10,12 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.maxmd-navbar-responsive.bgc-black-025
+ *     nav.navbar.md-navbar--expand.bgc-black-025.maxmd-jc-space-between
  *         div.navbar__brand
  *             a(href='#!').navbar__item Brand
  *         div.navbar__toggler
- *             a(href="#!").navbar__item Menu
- *         div.navbar__collapse.fxg-1
+ *             a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item Menu
+ *         div(id='eg-navbar-collapse').navbar__collapse.collapse.fxg-1
  *             ul.navbar__items
  *                 li.navbar__item.active
  *                     a(href='#!') Home
@@ -23,16 +23,18 @@
  *                     a(href='#!') Archive
  *                 li.navbar__item
  *                     a(href='#!') About
- *         div.navbar__items
- *             form.navbar__item
- *                 input.input.m-right-05
- *                 button.btn.btn--primary Search
+ *             div.navbar__items.md-fxg-1.jc-flex-end
+ *                 form.navbar__item
+ *                     input.input.m-right-05
+ *                     button.btn.btn--primary Search
  */
 
 .navbar {
 	display: flex;
 	align-items: stretch;
+	flex-wrap: wrap;
 
+	min-height: $navbar-min-height;
 	position: relative;
 
 	a {
@@ -72,7 +74,7 @@
 }
 
 .navbar__toggler {
-	display: none;
+	display: flex;
 	align-items: stretch;
 }
 
@@ -115,8 +117,19 @@
 }
 
 .navbar__collapse {
-	display: flex;
 	align-items: stretch;
+	flex-basis: 100%;
+	flex-grow: 1;
+	flex-wrap: wrap;
+
+	.navbar__items {
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+
+	.navbar__item {
+		display: block;
+	}
 }
 
 // Si el .navbar está dentro de una col. remover el espacio de los lados p/alinearlo.
@@ -125,4 +138,42 @@
 [ class*='-col-' ] > .navbar {
 	margin-right: -#{ $navbar-item-padding-x };
 	margin-left: -#{ $navbar-item-padding-x };
+}
+
+// .[size]-navbar--expand
+
+@each $size, $length in $grid-breakpoints {
+
+	@media ( min-width: $length ) {
+
+		.#{ $size }-navbar--expand {
+			.navbar__toggler {
+				display: none;
+			}
+
+			.navbar__collapse {
+				display: flex;
+				flex-basis: auto;
+				flex-grow: 0;
+				// flex-wrap: nowrap;
+				width: auto;
+				height: auto !important;
+
+				.navbar__items {
+					flex-direction: row;
+					flex-basis: auto;
+				}
+
+				.navbar__item {
+					display: flex;
+				}
+			}
+
+			.navbar__collapse[ data-collapsed="true" ] {
+			    opacity: 1;
+			}
+		}
+
+	}
+
 }

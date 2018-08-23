@@ -26,18 +26,20 @@
  */
 
 .collapse {
-	height: auto;
-	opacity: 1;
+	display: none;
+	height: 0;
+	opacity: 0;
 	overflow: hidden;
 	position: relative;
 	transition: $collapse-transition;
 
-	&:not( .show ) {
-		display: none;
+	&.show {
+		display: flex;
+		height: auto;
 	}
 
-	&:not( [ data-collapsed='false' ] ) {
-		opacity: 0;
+	&[ data-collapsed='false' ] {
+		opacity: 1;
 	}
 }
 

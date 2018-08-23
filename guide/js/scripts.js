@@ -54,7 +54,7 @@ function fsMenuToggle() {
 
 	} );
 
-	$( '[class*="-fsmenu"] a, #lbl-night-mode' ).click( function () {
+	$( '[class*="-fsmenu"] li a, #lbl-night-mode' ).click( function () {
 
 		fsMenuClose();
 

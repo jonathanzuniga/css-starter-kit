@@ -99,8 +99,6 @@ $( function () {
 
 					if ( ! $( children ).data( 'collapsed' ) ) {
 
-						console.log( children );
-
 						collapseSection( $( children ) );
 
 						$( children ).attr( 'data-collapsed', true );
@@ -148,7 +146,7 @@ $( function () {
 	} );
 
 	$( '.collapse' )
-		.css( 'display', 'block' )
+		.css( 'display', 'flex' )
 		.attr( 'data-collapsed', false )
 		.not( '.show' )
 		.css( 'height', 0 )

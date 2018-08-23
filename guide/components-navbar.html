@@ -32,11 +32,14 @@
     <div class="cntr">
       <div class="row">
         <div class="col">
-          <nav class="doc-navbar navbar maxmd-navbar-responsive">
+          <nav class="doc-navbar navbar md-navbar--expand maxmd-jc-space-between">
             <div class="navbar__brand">
               <a href="index.html" class="navbar__item">CSS Starter Kit</a>
             </div>
-            <div class="navbar__collapse maxmd-d-none">
+            <div class="navbar__toggler">
+              <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="navbar__item">Menu</a>
+            </div>
+            <div id="doc-navbar-collapse" class="navbar__collapse maxmd-d-none">
               <ul class="navbar__items">
                 <li class="navbar__item">
                   <a href="index.html">Preface</a>
@@ -68,14 +71,14 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <nav class="navbar maxmd-navbar-responsive bgc-black-025">
+                      <nav class="navbar md-navbar--expand bgc-black-025 maxmd-jc-space-between">
                         <div class="navbar__brand">
                           <a href="#!" class="navbar__item">Brand</a>
                         </div>
                         <div class="navbar__toggler">
-                          <a href="#!" class="navbar__item">Menu</a>
+                          <a href="#!" data-target="#eg-navbar-collapse" data-toggle="collapse" class="navbar__item">Menu</a>
                         </div>
-                        <div class="navbar__collapse fxg-1">
+                        <div id="eg-navbar-collapse" class="navbar__collapse collapse fxg-1">
                           <ul class="navbar__items">
                             <li class="navbar__item active">
                               <a href="#!">Home</a>
@@ -87,22 +90,22 @@
                               <a href="#!">About</a>
                             </li>
                           </ul>
-                        </div>
-                        <div class="navbar__items">
-                          <form class="navbar__item">
-                            <input class="input m-right-05">
-                            <button class="btn btn--primary">Search</button>
-                          </form>
+                          <div class="navbar__items md-fxg-1 jc-flex-end">
+                            <form class="navbar__item">
+                              <input class="input m-right-05">
+                              <button class="btn btn--primary">Search</button>
+                            </form>
+                          </div>
                         </div>
                       </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar maxmd-navbar-responsive bgc-black-025&quot;</span>&gt;</span>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar md-navbar--expand bgc-black-025 maxmd-jc-space-between&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">&quot;#eg-navbar-collapse&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse fxg-1&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-navbar-collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse collapse fxg-1&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -114,12 +117,12 @@
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input m-right-05&quot;</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items md-fxg-1 jc-flex-end&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input m-right-05&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
                   </div>
@@ -136,7 +139,7 @@
             <div id="doc-accordion" class="row maxmd-ta-center">
               <div class="col-12">
                 <a href="#doc-accordion-collapse-layout" data-toggle="collapse" class="h5 ac-c">Layout</a>
-                <div id="doc-accordion-collapse-layout" data-parent="#doc-accordion" class="collapse show">
+                <div id="doc-accordion-collapse-layout" data-parent="#doc-accordion" class="maxmd-jc-center collapse show">
                   <ul class="ls">
                     <li>
                       <a href="layout-flex-direction.html">Flex direction</a>
@@ -170,7 +173,7 @@
               </div>
               <div class="col-12">
                 <a href="#doc-accordion-collapse-elements" data-toggle="collapse" class="h5 ac-c">Elements</a>
-                <div id="doc-accordion-collapse-elements" data-parent="#doc-accordion" class="collapse">
+                <div id="doc-accordion-collapse-elements" data-parent="#doc-accordion" class="maxmd-jc-center collapse">
                   <ul class="ls">
                     <li>
                       <a href="elements-base.html">Base</a>
@@ -213,7 +216,7 @@
               </div>
               <div class="col-12">
                 <a href="#doc-accordion-collapse-helpers" data-toggle="collapse" class="h5 ac-c">Helpers</a>
-                <div id="doc-accordion-collapse-helpers" data-parent="#doc-accordion" class="collapse">
+                <div id="doc-accordion-collapse-helpers" data-parent="#doc-accordion" class="maxmd-jc-center collapse">
                   <ul class="ls">
                     <li>
                       <a href="helpers-border.html">Border</a>
@@ -280,7 +283,7 @@
               </div>
               <div class="col-12">
                 <a href="#doc-accordion-collapse-components" data-toggle="collapse" class="h5 ac-c">Components</a>
-                <div id="doc-accordion-collapse-components" data-parent="#doc-accordion" class="collapse">
+                <div id="doc-accordion-collapse-components" data-parent="#doc-accordion" class="maxmd-jc-center collapse">
                   <ul class="ls">
                     <li>
                       <a href="components-card.html">Card</a>

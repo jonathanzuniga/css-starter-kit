@@ -30,10 +30,12 @@
 		div.cntr
 			div.row
 				div.col
-					nav.doc-navbar.navbar.maxmd-navbar-responsive
+					nav.doc-navbar.navbar.md-navbar--expand.maxmd-jc-space-between
 						div.navbar__brand
 							a(href='index.html').navbar__item CSS Starter Kit
-						div.navbar__collapse.maxmd-d-none
+						div.navbar__toggler
+							a(href="#!", id='open-fsmenu', data-target='#doc-navbar-collapse', data-toggle='collapse').navbar__item Menu
+						div(id='doc-navbar-collapse').navbar__collapse.maxmd-d-none
 							ul.navbar__items
 								li.navbar__item
 									a(href='index.html') Preface
@@ -53,7 +55,7 @@
 						div(id='doc-accordion').row.maxmd-ta-center
 							div.col-12
 								a(href='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
-								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').collapse.show
+								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').maxmd-jc-center.collapse.show
 									ul.ls
 										li
 											a(href='layout-flex-direction.html') Flex direction
@@ -76,7 +78,7 @@
 
 							div.col-12
 								a(href='#doc-accordion-collapse-elements', data-toggle='collapse').h5.ac-c Elements
-								div(id='doc-accordion-collapse-elements', data-parent='#doc-accordion').collapse
+								div(id='doc-accordion-collapse-elements', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
 											a(href='elements-base.html') Base
@@ -105,7 +107,7 @@
 
 							div.col-12
 								a(href='#doc-accordion-collapse-helpers', data-toggle='collapse').h5.ac-c Helpers
-								div(id='doc-accordion-collapse-helpers', data-parent='#doc-accordion').collapse
+								div(id='doc-accordion-collapse-helpers', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
 											a(href='helpers-border.html') Border
@@ -150,7 +152,7 @@
 
 							div.col-12
 								a(href='#doc-accordion-collapse-components', data-toggle='collapse').h5.ac-c Components
-								div(id='doc-accordion-collapse-components', data-parent='#doc-accordion').collapse
+								div(id='doc-accordion-collapse-components', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
 											a(href='components-card.html') Card

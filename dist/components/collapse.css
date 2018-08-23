@@ -20,15 +20,17 @@
  *                 div.bx.bd-0063.p-125 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis malesuada orci vitae maximus. Nunc bibendum gravida nisi sit amet varius. Ut non dolor a erat rhoncus lobortis et in enim. Vestibulum turpis tortor, vulputate a pharetra vel, viverra ut nisi. Integer tincidunt efficitur turpis eget finibus. Ut sed eleifend nulla, tincidunt vulputate mi. Curabitur cursus facilisis dui ut consectetur. Nulla sed tortor eu mauris ultricies euismod.
  */
 .collapse {
-  height: auto;
-  opacity: 1;
+  display: none;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
   position: relative;
   transition: height 0.24s ease-out, opacity 0.24s ease-out; }
-  .collapse:not(.show) {
-    display: none; }
-  .collapse:not([data-collapsed='false']) {
-    opacity: 0; }
+  .collapse.show {
+    display: flex;
+    height: auto; }
+  .collapse[data-collapsed='false'] {
+    opacity: 1; }
 
 /**
  * Open multiple items:
