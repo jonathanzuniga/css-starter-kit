@@ -132,3 +132,20 @@ code {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
+
+.doc-sidebar [ data-toggle='collapse' ] {
+	margin-bottom: 0;
+
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.doc-sidebar .collapse {
+	height: 0;
+	display: block !important;
+	transition: all 0.3s ease-out;
+}
+
+.doc-sidebar .open + .collapse {
+	height: auto;
+}

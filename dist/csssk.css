@@ -154,16 +154,13 @@
  */
 .collapse {
   display: none;
-  height: 0;
-  opacity: 0;
   overflow: hidden;
-  position: relative;
-  transition: height 0.24s ease-out, opacity 0.24s ease-out; }
+  position: relative; }
   .collapse.show {
-    display: flex;
-    height: auto; }
-  .collapse[data-collapsed='false'] {
-    opacity: 1; }
+    display: flex; }
+
+[data-toggle='collapse'] {
+  cursor: pointer; }
 
 /**
  * Open multiple items:
@@ -759,7 +756,8 @@
  *     @example
  *     nav.navbar.md-navbar--expand.bgc-black-025.maxmd-jc-space-between
  *         div.navbar__brand
- *             a(href='#!').navbar__item Brand
+ *             div.navbar__item
+ *                 a(href='#!').p-left-0 Brand
  *         div.navbar__toggler
  *             a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item Menu
  *         div(id='eg-navbar-collapse').navbar__collapse.collapse.fxg-1
@@ -779,7 +777,7 @@
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  min-height: 42px;
+  padding: 0 1rem;
   position: relative; }
   .navbar a {
     color: rgba(0, 0, 0, 0.6); }
@@ -804,6 +802,18 @@
   display: flex;
   align-items: stretch; }
 
+.navbar__collapse {
+  align-items: stretch;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
+  .navbar__collapse .navbar__items {
+    flex-direction: column;
+    flex-basis: 100%; }
+  .navbar__collapse .navbar__item a {
+    flex-basis: 100%; }
+
 .navbar__items {
   display: flex;
   align-items: stretch;
@@ -812,8 +822,10 @@
 
 .navbar__item {
   display: flex;
-  align-items: center;
-  padding: 0.25em 0.75em; }
+  align-items: center; }
+  .navbar__item a {
+    display: flex;
+    padding: 0.5rem 0; }
   .navbar__item.active a {
     color: rgba(0, 0, 0, 0.9); }
     .navbar__item.active a:link, .navbar__item.active a:visited, .navbar__item.active a:hover {
@@ -822,106 +834,110 @@
 .night .navbar__item.active a {
   color: rgba(255, 255, 255, 0.9); }
 
-.navbar__collapse {
-  align-items: stretch;
-  flex-basis: 100%;
-  flex-grow: 1;
-  flex-wrap: wrap; }
-  .navbar__collapse .navbar__items {
-    flex-direction: column;
-    flex-basis: 100%; }
-  .navbar__collapse .navbar__item {
-    display: block; }
-
 .col > .navbar,
 [class*='-col-'] > .navbar {
-  margin-right: -0.75em;
-  margin-left: -0.75em; }
+  margin-right: -1rem;
+  margin-left: -1rem; }
 
 @media (min-width: 0) {
-  .xs-navbar--expand .navbar__toggler {
-    display: none; }
-  .xs-navbar--expand .navbar__collapse {
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    width: auto;
-    height: auto !important; }
-    .xs-navbar--expand .navbar__collapse .navbar__items {
-      flex-direction: row;
-      flex-basis: auto; }
-    .xs-navbar--expand .navbar__collapse .navbar__item {
-      display: flex; }
-  .xs-navbar--expand .navbar__collapse[data-collapsed="true"] {
-    opacity: 1; } }
+  .xs-navbar--expand {
+    min-height: 42px; }
+    .xs-navbar--expand .navbar__toggler {
+      display: none; }
+    .xs-navbar--expand .navbar__collapse {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 0;
+      margin-bottom: 0;
+      width: auto;
+      height: auto; }
+      .xs-navbar--expand .navbar__collapse .navbar__items {
+        flex-direction: row;
+        flex-basis: auto; }
+      .xs-navbar--expand .navbar__collapse .navbar__item a {
+        flex-basis: auto; }
+    .xs-navbar--expand .navbar__item a {
+      padding: 0.5rem 0.75rem; } }
 
 @media (min-width: 768px) {
-  .sm-navbar--expand .navbar__toggler {
-    display: none; }
-  .sm-navbar--expand .navbar__collapse {
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    width: auto;
-    height: auto !important; }
-    .sm-navbar--expand .navbar__collapse .navbar__items {
-      flex-direction: row;
-      flex-basis: auto; }
-    .sm-navbar--expand .navbar__collapse .navbar__item {
-      display: flex; }
-  .sm-navbar--expand .navbar__collapse[data-collapsed="true"] {
-    opacity: 1; } }
+  .sm-navbar--expand {
+    min-height: 42px; }
+    .sm-navbar--expand .navbar__toggler {
+      display: none; }
+    .sm-navbar--expand .navbar__collapse {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 0;
+      margin-bottom: 0;
+      width: auto;
+      height: auto; }
+      .sm-navbar--expand .navbar__collapse .navbar__items {
+        flex-direction: row;
+        flex-basis: auto; }
+      .sm-navbar--expand .navbar__collapse .navbar__item a {
+        flex-basis: auto; }
+    .sm-navbar--expand .navbar__item a {
+      padding: 0.5rem 0.75rem; } }
 
 @media (min-width: 1024px) {
-  .md-navbar--expand .navbar__toggler {
-    display: none; }
-  .md-navbar--expand .navbar__collapse {
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    width: auto;
-    height: auto !important; }
-    .md-navbar--expand .navbar__collapse .navbar__items {
-      flex-direction: row;
-      flex-basis: auto; }
-    .md-navbar--expand .navbar__collapse .navbar__item {
-      display: flex; }
-  .md-navbar--expand .navbar__collapse[data-collapsed="true"] {
-    opacity: 1; } }
+  .md-navbar--expand {
+    min-height: 42px; }
+    .md-navbar--expand .navbar__toggler {
+      display: none; }
+    .md-navbar--expand .navbar__collapse {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 0;
+      margin-bottom: 0;
+      width: auto;
+      height: auto; }
+      .md-navbar--expand .navbar__collapse .navbar__items {
+        flex-direction: row;
+        flex-basis: auto; }
+      .md-navbar--expand .navbar__collapse .navbar__item a {
+        flex-basis: auto; }
+    .md-navbar--expand .navbar__item a {
+      padding: 0.5rem 0.75rem; } }
 
 @media (min-width: 1280px) {
-  .lg-navbar--expand .navbar__toggler {
-    display: none; }
-  .lg-navbar--expand .navbar__collapse {
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    width: auto;
-    height: auto !important; }
-    .lg-navbar--expand .navbar__collapse .navbar__items {
-      flex-direction: row;
-      flex-basis: auto; }
-    .lg-navbar--expand .navbar__collapse .navbar__item {
-      display: flex; }
-  .lg-navbar--expand .navbar__collapse[data-collapsed="true"] {
-    opacity: 1; } }
+  .lg-navbar--expand {
+    min-height: 42px; }
+    .lg-navbar--expand .navbar__toggler {
+      display: none; }
+    .lg-navbar--expand .navbar__collapse {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 0;
+      margin-bottom: 0;
+      width: auto;
+      height: auto; }
+      .lg-navbar--expand .navbar__collapse .navbar__items {
+        flex-direction: row;
+        flex-basis: auto; }
+      .lg-navbar--expand .navbar__collapse .navbar__item a {
+        flex-basis: auto; }
+    .lg-navbar--expand .navbar__item a {
+      padding: 0.5rem 0.75rem; } }
 
 @media (min-width: 1680px) {
-  .xl-navbar--expand .navbar__toggler {
-    display: none; }
-  .xl-navbar--expand .navbar__collapse {
-    display: flex;
-    flex-basis: auto;
-    flex-grow: 0;
-    width: auto;
-    height: auto !important; }
-    .xl-navbar--expand .navbar__collapse .navbar__items {
-      flex-direction: row;
-      flex-basis: auto; }
-    .xl-navbar--expand .navbar__collapse .navbar__item {
-      display: flex; }
-  .xl-navbar--expand .navbar__collapse[data-collapsed="true"] {
-    opacity: 1; } }
+  .xl-navbar--expand {
+    min-height: 42px; }
+    .xl-navbar--expand .navbar__toggler {
+      display: none; }
+    .xl-navbar--expand .navbar__collapse {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 0;
+      margin-bottom: 0;
+      width: auto;
+      height: auto; }
+      .xl-navbar--expand .navbar__collapse .navbar__items {
+        flex-direction: row;
+        flex-basis: auto; }
+      .xl-navbar--expand .navbar__collapse .navbar__item a {
+        flex-basis: auto; }
+    .xl-navbar--expand .navbar__item a {
+      padding: 0.5rem 0.75rem; } }
 
 /***
  * Navmenu:
@@ -13824,13 +13840,13 @@ a.ac-c:not(.btn),
 
 /**
  * Container:
- * `.cntr` have a max. width of 1200px.
+ * `.cntr` have a max. width of 1880px.
  *
  *     @example
  *     div.cntr.bgc-aqua-1.p-1 &nbsp;
  */
 .cntr {
-  max-width: 1200px; }
+  max-width: 1880px; }
 
 /**
  * Fluid container:

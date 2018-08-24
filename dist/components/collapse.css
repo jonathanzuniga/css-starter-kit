@@ -21,16 +21,13 @@
  */
 .collapse {
   display: none;
-  height: 0;
-  opacity: 0;
   overflow: hidden;
-  position: relative;
-  transition: height 0.24s ease-out, opacity 0.24s ease-out; }
+  position: relative; }
   .collapse.show {
-    display: flex;
-    height: auto; }
-  .collapse[data-collapsed='false'] {
-    opacity: 1; }
+    display: flex; }
+
+[data-toggle='collapse'] {
+  cursor: pointer; }
 
 /**
  * Open multiple items:

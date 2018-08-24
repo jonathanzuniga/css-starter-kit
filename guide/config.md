@@ -32,7 +32,8 @@
 				div.col
 					nav.doc-navbar.navbar.md-navbar--expand.maxmd-jc-space-between
 						div.navbar__brand
-							a(href='index.html').navbar__item CSS Starter Kit
+							div.navbar__item
+								a(href='index.html').p-left-0 CSS Starter Kit
 						div.navbar__toggler
 							a(href="#!", id='open-fsmenu', data-target='#doc-navbar-collapse', data-toggle='collapse').navbar__item Menu
 						div(id='doc-navbar-collapse').navbar__collapse.maxmd-d-none
@@ -54,7 +55,7 @@
 					div.col
 						div(id='doc-accordion').row.maxmd-ta-center
 							div.col-12
-								a(href='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
+								p(data-target='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
 								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').maxmd-jc-center.collapse.show
 									ul.ls
 										li
@@ -77,7 +78,7 @@
 											a(href='layout-order.html') Order
 
 							div.col-12
-								a(href='#doc-accordion-collapse-elements', data-toggle='collapse').h5.ac-c Elements
+								p(data-target='#doc-accordion-collapse-elements', data-toggle='collapse').h5.ac-c Elements
 								div(id='doc-accordion-collapse-elements', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
@@ -106,7 +107,7 @@
 											a(href='elements-toolbar.html') Toolbar
 
 							div.col-12
-								a(href='#doc-accordion-collapse-helpers', data-toggle='collapse').h5.ac-c Helpers
+								p(data-target='#doc-accordion-collapse-helpers', data-toggle='collapse').h5.ac-c Helpers
 								div(id='doc-accordion-collapse-helpers', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
@@ -151,7 +152,7 @@
 											a(href='helpers-width.html') Width
 
 							div.col-12
-								a(href='#doc-accordion-collapse-components', data-toggle='collapse').h5.ac-c Components
+								p(data-target='#doc-accordion-collapse-components', data-toggle='collapse').h5.ac-c Components
 								div(id='doc-accordion-collapse-components', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
@@ -179,6 +180,8 @@
 										    i(title='Night mode', id='icon-night-mode').ion-ios-moon-outline
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(src='js/jquery.collapse.js')
+	script(src='js/jquery.collapse_storage.js')
 	script(src='js/styledown.js')
 	script(src='js/scripts.js')
 	script(src='js/components/collapse.js')

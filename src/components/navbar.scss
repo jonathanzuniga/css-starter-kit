@@ -12,7 +12,8 @@
  *     @example
  *     nav.navbar.md-navbar--expand.bgc-black-025.maxmd-jc-space-between
  *         div.navbar__brand
- *             a(href='#!').navbar__item Brand
+ *             div.navbar__item
+ *                 a(href='#!').p-left-0 Brand
  *         div.navbar__toggler
  *             a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item Menu
  *         div(id='eg-navbar-collapse').navbar__collapse.collapse.fxg-1
@@ -34,7 +35,7 @@
 	align-items: stretch;
 	flex-wrap: wrap;
 
-	min-height: $navbar-min-height;
+	padding: $navbar-padding-y $navbar-padding-x;
 	position: relative;
 
 	a {
@@ -78,6 +79,24 @@
 	align-items: stretch;
 }
 
+.navbar__collapse {
+	align-items: stretch;
+	flex-basis: 100%;
+	flex-grow: 1;
+	flex-wrap: wrap;
+
+	margin-bottom: 1rem;
+
+	.navbar__items {
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+
+	.navbar__item a {
+		flex-basis: 100%;
+	}
+}
+
 .navbar__items {
 	display: flex;
 	align-items: stretch;
@@ -92,7 +111,10 @@
 	display: flex;
 	align-items: center;
 
-	padding: $navbar-item-padding-y $navbar-item-padding-x;
+	a {
+		display: flex;
+		padding: $navbar-item__a-padding-y 0;
+	}
 
 	&.active a {
 		color: $day__navbar-item-active__a-color;
@@ -116,28 +138,12 @@
 	}
 }
 
-.navbar__collapse {
-	align-items: stretch;
-	flex-basis: 100%;
-	flex-grow: 1;
-	flex-wrap: wrap;
-
-	.navbar__items {
-		flex-direction: column;
-		flex-basis: 100%;
-	}
-
-	.navbar__item {
-		display: block;
-	}
-}
-
 // Si el .navbar está dentro de una col. remover el espacio de los lados p/alinearlo.
 
 .col > .navbar,
 [ class*='-col-' ] > .navbar {
-	margin-right: -#{ $navbar-item-padding-x };
-	margin-left: -#{ $navbar-item-padding-x };
+	margin-right: -#{ $navbar-padding-x };
+	margin-left: -#{ $navbar-padding-x };
 }
 
 // .[size]-navbar--expand
@@ -147,6 +153,8 @@
 	@media ( min-width: $length ) {
 
 		.#{ $size }-navbar--expand {
+			min-height: $navbar-min-height;
+
 			.navbar__toggler {
 				display: none;
 			}
@@ -155,22 +163,26 @@
 				display: flex;
 				flex-basis: auto;
 				flex-grow: 0;
-				// flex-wrap: nowrap;
+
+				margin-bottom: 0;
+
 				width: auto;
-				height: auto !important;
+				height: auto;
 
 				.navbar__items {
 					flex-direction: row;
 					flex-basis: auto;
 				}
 
-				.navbar__item {
-					display: flex;
+				.navbar__item a {
+					flex-basis: auto;
 				}
 			}
 
-			.navbar__collapse[ data-collapsed="true" ] {
-			    opacity: 1;
+			.navbar__item {
+				a {
+					padding: $navbar-item__a-padding-y $navbar-item__a-padding-x;
+				}
 			}
 		}
 

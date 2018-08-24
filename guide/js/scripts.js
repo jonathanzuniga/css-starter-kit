@@ -14,22 +14,39 @@ $( function () {
 	if ( ! $( '.doc-navbar .navbar__items .navbar__item:first' ).hasClass( 'active' ) )
 		$( '.doc-navbar .navbar__items .navbar__item:last' ).addClass( 'active' );
 
-	// Comparar cada texto de [ data-toggle="collapse" ] y si es el mismo agregar la clase show.
+	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
 
-	$( '.doc-sidebar [ data-toggle="collapse" ]' ).each( function () {
+	$( '.doc-sidebar a[ href="' + page + '" ]' ).parent().addClass( 'active' );
 
-		if ( $( this ).text().trim().toLowerCase() == section ) {
+	// jQuery Collapse
 
-			$( '.collapse' ).removeClass( 'show' );
-			$( this ).next( '.collapse' ).addClass( 'show' );
+	$( '#doc-accordion' ).collapse( {
+
+		query: '[ data-toggle="collapse" ]',
+		accordion: true,
+		persist: true,
+
+		open: function () {
+
+			this.addClass( 'open' )
+				.css( { height: this.children().outerHeight() } );
+
+		},
+
+		close: function () {
+
+			this.css( { height: 0 } )
+				.removeClass( 'open' );
 
 		}
 
 	} );
 
-	// Agregar la clase .active al item de la lista del sidebar menu que coincida con el anchor.
+	let expandedItem = $( '.doc-sidebar .collapse[ aria-hidden="false" ]' )
 
-	$( '.doc-sidebar a[ href="' + page + '" ]' ).parent().addClass( 'active' );
+	$( '.doc-sidebar .collapse[ aria-hidden="false" ]' )
+		.addClass( 'open' )
+		.css( { height: expandedItem.children().outerHeight() } );
 
 	fsMenuToggle();
 	switchNightMode();

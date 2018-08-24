@@ -27,20 +27,16 @@
 
 .collapse {
 	display: none;
-	height: 0;
-	opacity: 0;
 	overflow: hidden;
 	position: relative;
-	transition: $collapse-transition;
 
 	&.show {
 		display: flex;
-		height: auto;
 	}
+}
 
-	&[ data-collapsed='false' ] {
-		opacity: 1;
-	}
+[ data-toggle='collapse' ] {
+	cursor: pointer;
 }
 
 /**
