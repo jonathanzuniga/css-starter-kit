@@ -69,6 +69,7 @@ ul, ol, dl, figure {
  */
 
 a {
+	font-weight: $a-font-weight;
 	text-decoration: $a-text-decoration;
 	transition: $transition-base;
 
@@ -153,6 +154,10 @@ a {
 
 		&:not( :first-child ) {
 			margin-top: $size - 0.25;
+		}
+
+		a {
+			font-weight: inherit;
 		}
 	}
 

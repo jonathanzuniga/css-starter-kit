@@ -50,7 +50,7 @@ $border-radius-base:     0.25rem;
 // Color
 
 $day__body-bg-color: #fff;
-$ngt__body-bg-color: #272727;
+$ngt__body-bg-color: #1d1b20;
 
 $colors:             colors( $color-palette );
 
@@ -73,16 +73,17 @@ $transition-base:            background-color $transition-duration $transition-t
 
 // Hyperlink
 
-$day__a-color:                     color( 'cerulean 40' );
-$ngt__a-color:                     color( 'cerulean 30' );
+$day__a-color:                     color( 'purple 50' );
+$ngt__a-color:                     color( 'purple 30' );
+$a-font-weight:                    500;
 $a-text-decoration:                none;
 
 $day__a-visited-color:             $day__a-color;
 $ngt__a-visited-color:             $ngt__a-color;
 $a-visited-text-decoration:        none;
 
-$day__a-hover-color:               color( 'cerulean 50' );
-$ngt__a-hover-color:               color( 'cerulean 40' );
+$day__a-hover-color:               color( 'purple 80' );
+$ngt__a-hover-color:               color( 'purple 60' );
 $a-hover-text-decoration:          none;
 
 
@@ -109,7 +110,7 @@ $headings: (
     'h6': 1.00em  // 16px
 ) !default;
 
-$heading-font-weight: 300;
+$heading-font-weight: 700;
 $heading-line-height: 1.2;
 
 
@@ -211,14 +212,14 @@ $control-lg-font-size:              1.25em;
 $day__control-invalid-border-color: color( 'red 30' );
 $ngt__control-invalid-border-color: color( 'red 30' );
 
-$day__control-focus-border-color:   color( 'cerulean 30' );
-$ngt__control-focus-border-color:   color( 'cerulean 30' );
+$day__control-focus-border-color:   color( 'purple 30' );
+$ngt__control-focus-border-color:   color( 'purple 30' );
 
 $day__control-focus-box-shadow:     inset 0 0 0 0.063rem $day__control-focus-border-color;
 $ngt__control-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__control-focus-border-color;
 
-$day__control-active-border-color:  color( 'cerulean 30' );
-$ngt__control-active-border-color:  color( 'cerulean 30' );
+$day__control-active-border-color:  color( 'purple 30' );
+$ngt__control-active-border-color:  color( 'purple 30' );
 
 
 // Button
@@ -250,12 +251,8 @@ $button-active-bg-color-amount: 20%;
 // - light colors on hover/active state.
 
 $buttons: (
-    'primary'   color( 'cerulean' )  color( 'cerulean' )     color( 'white' ) color( 'white' ) '',
+    'primary'   color( 'purple' )    color( 'purple' )       color( 'white' ) color( 'white' ) '',
     'secondary' color( 'cool gray' ) color( 'cool gray 60' ) color( 'white' ) color( 'white' ) '',
-    'success'   color( 'green' )     color( 'green' )        color( 'white' ) color( 'white' ) '',
-    'danger'    color( 'red' )       color( 'red' )          color( 'white' ) color( 'white' ) '',
-    'light'     color( 'white' )     color( 'white' )        color( 'black' ) color( 'black' ) '',
-    'dark'      color( 'black' )     color( 'black' )        color( 'white' ) color( 'white' ) 'y'
 );
 
 
@@ -267,6 +264,12 @@ $button-outline-border-transparentize-amount: 0;
 // Disabled button
 
 $button-disabled-opacity: 0.6;
+
+
+// Button link
+
+$day__button-link-hover-bg-color: color( 'black 05' );
+$ngt__button-link-hover-bg-color: color( 'white 05' );
 
 
 // Small button
@@ -336,11 +339,11 @@ $ngt__input-focus-border-color:      $ngt__control-focus-border-color;
 $day__input-focus-box-shadow:        $day__control-focus-box-shadow;
 $ngt__input-focus-box-shadow:        $ngt__control-focus-box-shadow;
 
-$day__input-placeholder-color:       color( 'black 20' );
-$ngt__input-placeholder-color:       color( 'white 20' );
+$day__input-placeholder-color:       color( 'black 30' );
+$ngt__input-placeholder-color:       color( 'white 30' );
 
-$day__input-focus-placeholder-color: color( 'cerulean 20' );
-$ngt__input-focus-placeholder-color: color( 'cerulean 20' );
+$day__input-focus-placeholder-color: color( 'purple 20' );
+$ngt__input-focus-placeholder-color: color( 'purple 40' );
 
 $input-placeholder-opacity:          1;
 
@@ -374,13 +377,13 @@ $form-field-margin-bottom: $spacing-unit-half;
 
 // Flat input
 
-$day__input-flat-bg-color:           color( 'black 025' );
-$ngt__input-flat-bg-color:           color( 'white 025' );
+$day__input-flat-bg-color:           color( 'black 05' );
+$ngt__input-flat-bg-color:           color( 'white 05' );
 $day__input-flat-border-color:       transparent;
 $ngt__input-flat-border-color:       transparent;
 
-$day__input-flat-hover-bg-color:     color( 'black 05' );
-$ngt__input-flat-hover-bg-color:     color( 'white 05' );
+$day__input-flat-hover-bg-color:     color( 'black 075' );
+$ngt__input-flat-hover-bg-color:     color( 'white 075' );
 $day__input-flat-hover-border-color: transparent;
 $ngt__input-flat-hover-border-color: transparent;
 
@@ -407,11 +410,11 @@ $control-check-inline-margin-right: 1.25em;
 $control-check-custom-margin-bottom:      0.5em;
 $control-check-label-custom-padding-left: 2em;
 
-$day__control-check-input-custom-checked__indic-bg-color:        color( 'cerulean' );
-$ngt__control-check-input-custom-checked__indic-bg-color:        color( 'cerulean' );
+$day__control-check-input-custom-checked__indic-bg-color:        color( 'purple' );
+$ngt__control-check-input-custom-checked__indic-bg-color:        color( 'purple' );
 
-$day__control-check-input-custom-checked__indic-border-color:    color( 'cerulean' );
-$ngt__control-check-input-custom-checked__indic-border-color:    color( 'cerulean' );
+$day__control-check-input-custom-checked__indic-border-color:    color( 'purple' );
+$ngt__control-check-input-custom-checked__indic-border-color:    color( 'purple' );
 
 $day__control-check-input-custom-checked-hover__indic-bg-color:  shade(
                                                                      $ngt__body-bg-color,
@@ -594,11 +597,11 @@ $select-icon-margin-right:   $spacing-unit-half;
 
 // Flat select menu
 
-$day__select-flat-bg-color:           color( 'black 025' );
-$ngt__select-flat-bg-color:           color( 'white 025' );
+$day__select-flat-bg-color:           color( 'black 05' );
+$ngt__select-flat-bg-color:           color( 'white 05' );
 
-$day__select-flat-hover-bg-color:     color( 'black 05' );
-$ngt__select-flat-hover-bg-color:     color( 'white 05' );
+$day__select-flat-hover-bg-color:     color( 'black 075' );
+$ngt__select-flat-hover-bg-color:     color( 'white 075' );
 
 $day__select-flat-border-color:       transparent;
 $ngt__select-flat-border-color:       transparent;
@@ -659,8 +662,8 @@ $switch-label-after-height:                 $switch-label-height - ( $spacing-un
 $switch-label-after-top:                    50%;
 $switch-label-after-left:                   $spacing-unit-quarter;
 
-$day__switch-checked-label-before-bg-color: color( 'cerulean' );
-$ngt__switch-checked-label-before-bg-color: color( 'cerulean' );
+$day__switch-checked-label-before-bg-color: color( 'purple' );
+$ngt__switch-checked-label-before-bg-color: color( 'purple' );
 
 $switch-checked-label-after-left:           $switch-label-width - $switch-label-height + 0.313;
 
@@ -1179,8 +1182,8 @@ $ngt__menu-pills__item-active__a-color: $ngt__a-color;
 $day__menu-pills__a-hover-bg-color:     color( 'black 05' );
 $ngt__menu-pills__a-hover-bg-color:     color( 'white 05' );
 
-$day__menu-pills__item-active-bg-color: color( 'cerulean 1' );
-$ngt__menu-pills__item-active-bg-color: color( 'cerulean 90' );
+$day__menu-pills__item-active-bg-color: color( 'purple 1' );
+$ngt__menu-pills__item-active-bg-color: color( 'purple 90' );
 
 
 // Modal
@@ -1215,23 +1218,36 @@ $modal-show-content-transition: opacity    0.16s $transition-timing-function,
 
 // Navbar
 
-$navbar-min-height:                42px;
-$navbar-padding-y:                 0;
+$navbar-padding-y:                 0.25rem;
 $navbar-padding-x:                 $gutter-width;
 
 $navbar-brand-font-size:           1.25em;
 
-$navbar-item__a-padding-y:         0.5rem;
+$navbar-a-border-radius:           2em;
+
+$day__navbar-a-hover-bg-color:     color( 'black 05' );
+$ngt__navbar-a-hover-bg-color:     color( 'white 05' );
+
+$navbar-a-font-weight:             700;
+
+$navbar-item__a-padding-y:         0.25rem;
 $navbar-item__a-padding-x:         0.75rem;
 
-$day__navbar-a-color:              color( 'black 60' );
-$ngt__navbar-a-color:              color( 'white 60' );
+$day__navbar-a-color:              color( 'black 50' );
+$ngt__navbar-a-color:              color( 'white 50' );
 
-$day__navbar-a-hover-color:        color( 'black 90' );
-$ngt__navbar-a-hover-color:        color( 'white 90' );
+$day__navbar-a-hover-color:        color( 'black 80' );
+$ngt__navbar-a-hover-color:        color( 'white 80' );
 
 $day__navbar-item-active__a-color: $day__body-color;
 $ngt__navbar-item-active__a-color: $ngt__body-color;
+
+$navbar-svg-width:                 1.5rem;
+$navbar-svg-height:                1.5rem;
+
+$navbar-collapse-show-padding-y:   0.75rem;
+$navbar-collapse-show-padding-x:   0;
+
 
 // $day__navbar-bg-color:              $day__body-bg-color;
 // $ngt__navbar-bg-color:              $ngt__body-bg-color;

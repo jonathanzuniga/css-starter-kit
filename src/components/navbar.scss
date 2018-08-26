@@ -39,7 +39,9 @@
 	position: relative;
 
 	a {
+		border-radius: $navbar-a-border-radius;
 		color: $day__navbar-a-color;
+		font-weight: $navbar-a-font-weight;
 
 		&:link,
 		&:visited {
@@ -47,12 +49,51 @@
 		}
 
 		&:hover {
+			background-color: $day__navbar-a-hover-bg-color;
 			color: $day__navbar-a-hover-color;
+		}
+	}
+
+	.active a,
+	a.active {
+		color: $day__navbar-item-active__a-color;
+
+		&:link,
+		&:visited,
+		&:hover {
+			color: $day__navbar-item-active__a-color;
+		}
+	}
+
+	.input {
+		font-weight: $navbar-a-font-weight;
+	}
+
+	svg {
+		transition: $transition-base;
+		vertical-align: middle;
+
+		width: $navbar-svg-width;
+		height: $navbar-svg-height;
+	}
+
+	a, .btn {
+		svg {
+			fill: $day__navbar-a-color;
+		}
+
+		&:hover svg {
+			fill: $day__navbar-a-hover-color;
+		}
+
+		&.active svg {
+			fill: $day__navbar-item-active__a-color;
 		}
 	}
 }
 
-.night .navbar {
+.night .navbar,
+.navbar--dark {
 	a {
 		color: $ngt__navbar-a-color;
 
@@ -62,7 +103,33 @@
 		}
 
 		&:hover {
+			background-color: $ngt__navbar-a-hover-bg-color;
 			color: $ngt__navbar-a-hover-color;
+		}
+	}
+
+	.active a,
+	a.active {
+		color: $ngt__navbar-item-active__a-color;
+
+		&:link,
+		&:visited,
+		&:hover {
+			color: $ngt__navbar-item-active__a-color;
+		}
+	}
+
+	a, .btn {
+		svg {
+			fill: $ngt__navbar-a-color;
+		}
+
+		&:hover svg {
+			fill: $ngt__navbar-a-hover-color;
+		}
+
+		&.active svg {
+			fill: $ngt__navbar-item-active__a-color;
 		}
 	}
 }
@@ -72,6 +139,29 @@
 	align-items: stretch;
 
 	font-size: $navbar-brand-font-size;
+
+	a {
+		color: $day__navbar-item-active__a-color;
+
+		&:link,
+		&:visited,
+		&:hover {
+			color: $day__navbar-item-active__a-color;
+		}
+	}
+}
+
+.night .navbar__brand,
+.navbar--dark .navbar__brand {
+	a {
+		color: $ngt__navbar-item-active__a-color;
+
+		&:link,
+		&:visited,
+		&:hover {
+			color: $ngt__navbar-item-active__a-color;
+		}
+	}
 }
 
 .navbar__toggler {
@@ -85,14 +175,17 @@
 	flex-grow: 1;
 	flex-wrap: wrap;
 
-	margin-bottom: 1rem;
+	&.show {
+		padding: $navbar-collapse-show-padding-y $navbar-collapse-show-padding-x;
+	}
 
 	.navbar__items {
 		flex-direction: column;
 		flex-basis: 100%;
 	}
 
-	.navbar__item a {
+	.navbar__item a,
+	a.navbar__item {
 		flex-basis: 100%;
 	}
 }
@@ -110,32 +203,12 @@
 .navbar__item {
 	display: flex;
 	align-items: center;
-
-	a {
-		display: flex;
-		padding: $navbar-item__a-padding-y 0;
-	}
-
-	&.active a {
-		color: $day__navbar-item-active__a-color;
-
-		&:link,
-		&:visited,
-		&:hover {
-			color: $day__navbar-item-active__a-color;
-		}
-	}
 }
 
-.night .navbar__item {
-	&.active a {
-		color: $ngt__navbar-item-active__a-color;
-
-		&:link,
-		&:visited,
-		&:hover {
-		}
-	}
+.navbar__item a,
+a.navbar__item {
+	display: flex;
+	padding: $navbar-item__a-padding-y $navbar-item__a-padding-x;
 }
 
 // Si el .navbar está dentro de una col. remover el espacio de los lados p/alinearlo.
@@ -153,7 +226,9 @@
 	@media ( min-width: $length ) {
 
 		.#{ $size }-navbar--expand {
-			min-height: $navbar-min-height;
+			.navbar__brand {
+				margin-left: -#{ $navbar-item__a-padding-x };
+			}
 
 			.navbar__toggler {
 				display: none;
@@ -164,24 +239,21 @@
 				flex-basis: auto;
 				flex-grow: 0;
 
-				margin-bottom: 0;
-
 				width: auto;
 				height: auto;
+
+				&.show {
+					padding: 0;
+				}
 
 				.navbar__items {
 					flex-direction: row;
 					flex-basis: auto;
 				}
 
-				.navbar__item a {
+				.navbar__item a,
+				a.navbar__item {
 					flex-basis: auto;
-				}
-			}
-
-			.navbar__item {
-				a {
-					padding: $navbar-item__a-padding-y $navbar-item__a-padding-x;
 				}
 			}
 		}
