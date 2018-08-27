@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>CSS Starter Kit Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/csssk.css">
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="css/doc.css">
@@ -38,8 +38,12 @@
                 <a href="index.html" class="p-left-0">CSS Starter Kit</a>
               </div>
             </div>
-            <div class="navbar__toggler">
-              <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="navbar__item">Menu</a>
+            <div id="navbar__toggler" class="navbar__toggler">
+              <div class="navbar__item navbar__item--icn">
+                <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="p-right-0">
+                  <i class="icon ion-md-menu navbar__icn"></i>
+                </a>
+              </div>
             </div>
             <div id="doc-navbar-collapse" class="navbar__collapse maxmd-d-none">
               <ul class="navbar__items">
@@ -644,7 +648,7 @@
                   <input id="switch-night-mode" type="checkbox" class="switch__input">
                   <label for="switch-night-mode" id="lbl-night-mode" class="switch__lbl">
                     <span class="switch__txt">
-                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon doc-icn"></i>
                     </span>
                   </label>
                 </div>

@@ -4,7 +4,7 @@
 
 	meta(name='viewport', content='width=device-width, initial-scale=1')
 
-	link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+	link(rel='stylesheet', href='https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css')
 	link(rel='stylesheet', href='../dist/csssk.css')
 	link(rel='stylesheet', href='css/styledown.css')
 	link(rel='stylesheet', href='css/doc.css')
@@ -34,8 +34,10 @@
 						div.navbar__brand
 							div.navbar__item
 								a(href='index.html').p-left-0 CSS Starter Kit
-						div.navbar__toggler
-							a(href="#!", id='open-fsmenu', data-target='#doc-navbar-collapse', data-toggle='collapse').navbar__item Menu
+						div(id='navbar__toggler').navbar__toggler
+							div.navbar__item.navbar__item--icn
+								a(href="#!", id='open-fsmenu', data-target='#doc-navbar-collapse', data-toggle='collapse').p-right-0
+									i.icon.ion-md-menu.navbar__icn
 						div(id='doc-navbar-collapse').navbar__collapse.maxmd-d-none
 							ul.navbar__items
 								li.navbar__item
@@ -173,11 +175,11 @@
 											a(href='components-tabs.html') Tabs
 
 							div.col-12
-							    div.doc-switch-night-mode.switch.switch--sm
-								    input(id='switch-night-mode', type='checkbox').switch__input
-								    label(for='switch-night-mode', id='lbl-night-mode').switch__lbl
-									    span.switch__txt
-										    i(title='Night mode', id='icon-night-mode').ion-ios-moon-outline
+								div.doc-switch-night-mode.switch.switch--sm
+									input(id='switch-night-mode', type='checkbox').switch__input
+									label(for='switch-night-mode', id='lbl-night-mode').switch__lbl
+										span.switch__txt
+											i(title='Night mode', id='icon-night-mode').ion-ios-moon.doc-icn
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='js/jquery.collapse.js')

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>CSS Starter Kit Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/csssk.css">
   <link rel="stylesheet" href="css/styledown.css">
   <link rel="stylesheet" href="css/doc.css">
@@ -38,8 +38,12 @@
                 <a href="index.html" class="p-left-0">CSS Starter Kit</a>
               </div>
             </div>
-            <div class="navbar__toggler">
-              <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="navbar__item">Menu</a>
+            <div id="navbar__toggler" class="navbar__toggler">
+              <div class="navbar__item navbar__item--icn">
+                <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="p-right-0">
+                  <i class="icon ion-md-menu navbar__icn"></i>
+                </a>
+              </div>
             </div>
             <div id="doc-navbar-collapse" class="navbar__collapse maxmd-d-none">
               <ul class="navbar__items">
@@ -73,64 +77,100 @@
                   </div>
                   <div class="sg-example">
                     <div class="sg-canvas">
-                      <nav class="navbar md-navbar--expand bgc-black-025 maxmd-jc-space-between">
-                        <div class="navbar__brand">
-                          <div class="navbar__item">
-                            <a href="#!" class="p-left-0">Brand</a>
+                      <div class="cntr-fluid">
+                        <div class="row">
+                          <div class="col">
+                            <nav class="navbar md-navbar--expand bgc-black-025">
+                              <div class="navbar__items fxg-1">
+                                <div class="navbar__brand">
+                                  <div class="navbar__item">
+                                    <a href="#!" class="p-left-0">Brand</a>
+                                  </div>
+                                </div>
+                                <div class="navbar__items fxg-1">
+                                  <form class="navbar__item fxg-1 p-x-05">
+                                    <input placeholder="Search..." class="input input--flat">
+                                  </form>
+                                </div>
+                                <div class="navbar__items">
+                                  <div class="navbar__item navbar__item--icn">
+                                    <button class="btn btn--link">
+                                      <i class="icon ion-md-moon navbar__icn"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="navbar__toggler">
+                                  <div class="navbar__item navbar__item--icn">
+                                    <a href="#!" data-target="#eg-navbar-collapse" data-toggle="collapse" class="p-right-0">
+                                      <i class="icon ion-md-menu navbar__icn"></i>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="eg-navbar-collapse" class="navbar__collapse collapse">
+                                <ul class="navbar__items ta-right">
+                                  <li class="navbar__item active">
+                                    <a href="#!">Home</a>
+                                  </li>
+                                  <li class="navbar__item">
+                                    <a href="#!">Archive</a>
+                                  </li>
+                                  <li class="navbar__item">
+                                    <a href="#!" class="p-right-0">About</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </nav>
                           </div>
                         </div>
-                        <div class="navbar__toggler">
-                          <a href="#!" data-target="#eg-navbar-collapse" data-toggle="collapse" class="navbar__item">Menu</a>
-                        </div>
-                        <div id="eg-navbar-collapse" class="navbar__collapse collapse fxg-1">
-                          <ul class="navbar__items">
-                            <li class="navbar__item active">
-                              <a href="#!">Home</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="#!">Archive</a>
-                            </li>
-                            <li class="navbar__item">
-                              <a href="#!">About</a>
-                            </li>
-                          </ul>
-                          <div class="navbar__items md-fxg-1 jc-flex-end">
-                            <form class="navbar__item">
-                              <input class="input m-right-05">
-                              <button class="btn btn--primary">Search</button>
-                            </form>
-                          </div>
-                        </div>
-                      </nav>
-                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar md-navbar--expand bgc-black-025 maxmd-jc-space-between&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-0&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;cntr-fluid&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar md-navbar--expand bgc-black-025&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items fxg-1&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__brand&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-left-0&quot;</span>&gt;</span>Brand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items fxg-1&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item fxg-1 p-x-05&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Search...&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--flat&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item navbar__item--icn&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--link&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon ion-md-moon navbar__icn&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item navbar__item--icn&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">&quot;#eg-navbar-collapse&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-0&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon ion-md-menu navbar__icn&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-navbar-collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse collapse&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items ta-right&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;p-right-0&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__toggler&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">&quot;#eg-navbar-collapse&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;eg-navbar-collapse&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__collapse collapse fxg-1&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item active&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>Archive<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#!&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__items md-fxg-1 jc-flex-end&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar__item&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input m-right-05&quot;</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn--primary&quot;</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
               </section>
@@ -323,7 +363,7 @@
                   <input id="switch-night-mode" type="checkbox" class="switch__input">
                   <label for="switch-night-mode" id="lbl-night-mode" class="switch__lbl">
                     <span class="switch__txt">
-                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon-outline"></i>
+                      <i title="Night mode" id="icon-night-mode" class="ion-ios-moon doc-icn"></i>
                     </span>
                   </label>
                 </div>

@@ -83,7 +83,7 @@ function fsMenuClose() {
 
 	$( 'body' ).css( 'overflow', 'initial' );
 	$( '[class*="-fsmenu"]' ).removeClass( 'open' );
-	$( '.navbar__toggler' ).text( 'Menu' );
+	$( '#navbar__toggler' ).text( 'Menu' );
 
 }
 
@@ -96,7 +96,7 @@ function switchNightMode() {
 	if ( nightMode ) {
 
 		$( '#switch-night-mode' ).prop( 'checked', true );
-		$( '#icon-night-mode' ).removeClass( 'ion-ios-moon-outline' ).addClass( 'ion-ios-moon' );
+		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 	}
 
@@ -115,14 +115,14 @@ function switchNightModeStart( element ) {
 	if ( $( element ).is( ':checked' ) ) {
 
 		$( 'html' ).addClass( 'night fsmooth' );
-		$( '#icon-night-mode' ).removeClass( 'ion-ios-moon-outline' ).addClass( 'ion-ios-moon' );
+		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 		localStorage.setItem( 'nightMode', true );
 
 	} else {
 
 		$( 'html' ).removeClass( 'night fsmooth' );
-		$( '#icon-night-mode' ).removeClass( 'ion-ios-moon' ).addClass( 'ion-ios-moon-outline' );
+		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 		localStorage.removeItem( 'nightMode' );
 	}

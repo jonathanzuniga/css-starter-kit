@@ -4,17 +4,17 @@
 
 // Slightly lighten a color.
 
-@function tint( $background-color, $color, $percentage ) {
+@function tint( $color, $percentage ) {
 
-    @return mix( $background-color, $color, $percentage );
+    @return mix( white, $color, $percentage );
 
 }
 
 // Slightly darken a color.
 
-@function shade( $background-color, $color, $percentage ) {
+@function shade( $color, $percentage ) {
 
-    @return mix( $background-color, $color, $percentage );
+    @return mix( black, $color, $percentage );
 
 }
 
@@ -23,13 +23,13 @@
 @function colors( $colors ) {
 
     $colors-list: ();
-    
+
     @each $name, $hex in $colors {
 
-        $colors-list: 
+        $colors-list:
             append(
-                $colors-list, 
-                '#{ $name }' $hex, 
+                $colors-list,
+                '#{ $name }' $hex,
                 comma
             );
 
@@ -46,7 +46,7 @@
     @each $cp in $colors {
 
         @if nth( $cp, 1 ) == $color {
-            
+
             @return nth( $cp, 2 );
 
         }
@@ -94,7 +94,7 @@
 
 }
 
-// Helper. Make unit from input number. 
+// Helper. Make unit from input number.
 // Replace $value unit to target unit.
 
 @function make_unit( $value, $unit: px ) {
@@ -202,13 +202,13 @@
 // @return {String} - Updated string
 
 @function str_replace( $string, $search, $replace: '' ) {
-    
+
     $index: str_index( $string, $search );
 
     @if $index {
 
-        @return str_slice( $string, 1, $index - 1 ) + 
-            $replace + 
+        @return str_slice( $string, 1, $index - 1 ) +
+            $replace +
             str_replace(
                 str_slice( $string, $index + str_length( $search )
             ), $search, $replace );
@@ -257,32 +257,32 @@
     // First index of separator in string.
 
     $index: str_index( $string, $separator );
-    
+
     // Loop through string.
 
     @while $index != null {
 
         // Get the substring from the first character to the separator.
-        
+
         $item: str_slice( $string, 1, $index - 1 );
 
         // Push item to array
-        
+
         $split-list: append( $split-list, $item );
-        
+
         // Remove item and separator from string.
-        
+
         $string: str_slice( $string, $index + 1 );
-        
+
         // Find new index of separator.
-        
+
         $index : str_index( $string, $separator );
     }
-    
+
     // Add the remaining string to list (the last item).
 
     $split-list: append( $split-list, $string );
-    
+
     @return $split-list;
 
 }

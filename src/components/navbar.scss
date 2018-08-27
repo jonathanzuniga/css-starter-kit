@@ -10,24 +10,33 @@
  * `.navbar`
  *
  *     @example
- *     nav.navbar.md-navbar--expand.bgc-black-025.maxmd-jc-space-between
- *         div.navbar__brand
- *             div.navbar__item
- *                 a(href='#!').p-left-0 Brand
- *         div.navbar__toggler
- *             a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item Menu
- *         div(id='eg-navbar-collapse').navbar__collapse.collapse.fxg-1
- *             ul.navbar__items
- *                 li.navbar__item.active
- *                     a(href='#!') Home
- *                 li.navbar__item
- *                     a(href='#!') Archive
- *                 li.navbar__item
- *                     a(href='#!') About
- *             div.navbar__items.md-fxg-1.jc-flex-end
- *                 form.navbar__item
- *                     input.input.m-right-05
- *                     button.btn.btn--primary Search
+ *     div.cntr-fluid
+ *         div.row
+ *             div.col
+ *                 nav.navbar.md-navbar--expand.bgc-black-025
+ *                     div.navbar__items.fxg-1
+ *                         div.navbar__brand
+ *                             div.navbar__item
+ *                                 a(href='#!').p-left-0 Brand
+ *                         div.navbar__items.fxg-1
+ *                             form.navbar__item.fxg-1.p-x-05
+ *                                 input(placeholder='Search...').input.input--flat
+ *                         div.navbar__items
+ *                             div.navbar__item.navbar__item--icn
+ *                                 button.btn.btn--link
+ *                                     i.icon.ion-md-moon.navbar__icn
+ *                         div.navbar__toggler
+ *                             div.navbar__item.navbar__item--icn
+ *                                 a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').p-right-0
+ *                                     i.icon.ion-md-menu.navbar__icn
+ *                     div(id='eg-navbar-collapse').navbar__collapse.collapse
+ *                         ul.navbar__items.ta-right
+ *                             li.navbar__item.active
+ *                                 a(href='#!') Home
+ *                             li.navbar__item
+ *                                 a(href='#!') Archive
+ *                             li.navbar__item
+ *                                 a(href='#!').p-right-0 About
  */
 
 .navbar {
@@ -38,7 +47,7 @@
 	padding: $navbar-padding-y $navbar-padding-x;
 	position: relative;
 
-	a {
+	a, .btn--link {
 		border-radius: $navbar-a-border-radius;
 		color: $day__navbar-a-color;
 		font-weight: $navbar-a-font-weight;
@@ -69,6 +78,20 @@
 		font-weight: $navbar-a-font-weight;
 	}
 
+	a, .btn {
+		.navbar__icn {
+			fill: $day__navbar-a-color;
+		}
+
+		&:hover .navbar__icn {
+			fill: $day__navbar-a-hover-color;
+		}
+
+		&.active .navbar__icn {
+			fill: $day__navbar-item-active__a-color;
+		}
+	}
+
 	svg {
 		transition: $transition-base;
 		vertical-align: middle;
@@ -76,25 +99,11 @@
 		width: $navbar-svg-width;
 		height: $navbar-svg-height;
 	}
-
-	a, .btn {
-		svg {
-			fill: $day__navbar-a-color;
-		}
-
-		&:hover svg {
-			fill: $day__navbar-a-hover-color;
-		}
-
-		&.active svg {
-			fill: $day__navbar-item-active__a-color;
-		}
-	}
 }
 
 .night .navbar,
 .navbar--dark {
-	a {
+	a, .btn--link {
 		color: $ngt__navbar-a-color;
 
 		&:link,
@@ -186,7 +195,10 @@
 
 	.navbar__item a,
 	a.navbar__item {
-		flex-basis: 100%;
+		padding-right: 0;
+		padding-left: 0;
+
+		width: 100%;
 	}
 }
 
@@ -207,8 +219,17 @@
 
 .navbar__item a,
 a.navbar__item {
-	display: flex;
+	display: block;
 	padding: $navbar-item__a-padding-y $navbar-item__a-padding-x;
+}
+
+.navbar__item--icn a,
+a.navbar__item--icn {
+	padding: $navbar-item-icon__a-padding-y $navbar-item-icon__a-padding-x;
+}
+
+.navbar__icn {
+	font-size: $navbar-icon-font-size;
 }
 
 // Si el .navbar está dentro de una col. remover el espacio de los lados p/alinearlo.
@@ -226,9 +247,7 @@ a.navbar__item {
 	@media ( min-width: $length ) {
 
 		.#{ $size }-navbar--expand {
-			.navbar__brand {
-				margin-left: -#{ $navbar-item__a-padding-x };
-			}
+			flex-wrap: nowrap;
 
 			.navbar__toggler {
 				display: none;
@@ -253,7 +272,8 @@ a.navbar__item {
 
 				.navbar__item a,
 				a.navbar__item {
-					flex-basis: auto;
+					padding: $navbar-item-icon__a-padding-y $navbar-item-icon__a-padding-x;
+					width: auto;
 				}
 			}
 		}
