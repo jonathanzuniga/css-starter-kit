@@ -38,7 +38,7 @@
                 <a href="index.html" class="p-left-0">CSS Starter Kit</a>
               </div>
             </div>
-            <div id="navbar__toggler" class="navbar__toggler">
+            <div class="navbar__toggler">
               <div class="navbar__item navbar__item--icn">
                 <a href="#!" id="open-fsmenu" data-target="#doc-navbar-collapse" data-toggle="collapse" class="p-right-0">
                   <i class="icon ion-md-menu navbar__icn"></i>
@@ -171,6 +171,29 @@
                     <div class="sg-canvas">
                       <input type="text" placeholder="Pill input" class="input input--pill">
                     </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Pill input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input input--pill&quot;</span> /&gt;</span></pre>
+                  </div>
+                </section>
+                <section class="sg-block sg-section-input-with-icon">
+                  <div class="sg-text">
+                    <h3 id="input-with-icon" class="sg">Input with icon</h3>
+                    <p class="sg">
+                      <code class="sg">.ctrl--icn-left</code>
+                    </p>
+                  </div>
+                  <div class="sg-example">
+                    <div class="sg-canvas">
+                      <div class="ctrl ctrl--icn-left">
+                        <input type="text" placeholder="Pill input" class="input">
+                        <span class="icn-wrap">
+                          <i class="icon ion-md-search icn-wrap__icn"></i>
+                        </span>
+                      </div>
+                    </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ctrl ctrl--icn-left&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;Pill input&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;input&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icn-wrap&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon ion-md-search icn-wrap__icn&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
                   </div>
                 </section>
                 <section class="sg-block sg-section-textarea">
@@ -752,6 +775,11 @@
         <div class="doc-sidebar__content row">
           <div class="col">
             <div id="doc-accordion" class="row maxmd-ta-center">
+              <div class="col-12 md-d-none">
+                <p>
+                  <i id="close-fsmenu" class="btn btn--link icon ion-md-close close-fsmenu"></i>
+                </p>
+              </div>
               <div class="col-12">
                 <p data-target="#doc-accordion-collapse-layout" data-toggle="collapse" class="h5 ac-c">Layout</p>
                 <div id="doc-accordion-collapse-layout" data-parent="#doc-accordion" class="maxmd-jc-center collapse show">

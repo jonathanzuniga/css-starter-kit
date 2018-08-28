@@ -34,7 +34,7 @@
 						div.navbar__brand
 							div.navbar__item
 								a(href='index.html').p-left-0 CSS Starter Kit
-						div(id='navbar__toggler').navbar__toggler
+						div.navbar__toggler
 							div.navbar__item.navbar__item--icn
 								a(href="#!", id='open-fsmenu', data-target='#doc-navbar-collapse', data-toggle='collapse').p-right-0
 									i.icon.ion-md-menu.navbar__icn
@@ -56,6 +56,10 @@
 				div.doc-sidebar__content.row
 					div.col
 						div(id='doc-accordion').row.maxmd-ta-center
+							div.col-12.md-d-none
+								p
+									i(id="close-fsmenu").btn.btn--link.icon.ion-md-close.close-fsmenu
+
 							div.col-12
 								p(data-target='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
 								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').maxmd-jc-center.collapse.show

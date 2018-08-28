@@ -257,6 +257,56 @@
 }
 
 /**
+ * Input with icon:
+ * `.ctrl--icn-left`
+ *
+ *     @example
+ *     div.ctrl.ctrl--icn-left
+ *         input(type='text', placeholder='Pill input').input
+ *         span.icn-wrap
+ *             i.icon.ion-md-search.icn-wrap__icn
+ */
+
+.ctrl {
+	display: flex;
+	flex-grow: 1;
+
+	position: relative;
+}
+
+.ctrl--icn-left {
+	.input {
+		padding-left: $control-icon-left__icon-wrap-width;
+
+	}
+
+	.icn-wrap {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		pointer-events: none;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: $control-icon-left__icon-wrap-width;
+		height: auto;
+	}
+
+	.icn-wrap__icn {
+		color: $day__control-icon-left__icon-wrap__icon-color;
+		font-size: $control-icon-left__icon-wrap__icon-font-size;
+	}
+}
+
+.night .ctrl--icn-left {
+	.icn-wrap__icn {
+		color: $ngt__control-icon-left__icon-wrap__icon-color;
+	}
+}
+
+/**
  * Textarea:
  * `.txtarea`
  *

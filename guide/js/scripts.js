@@ -61,7 +61,6 @@ function fsMenuToggle() {
 
 			$( 'body' ).css( 'overflow', 'hidden' );
 			$( '[class*="-fsmenu"]' ).addClass( 'open' );
-			$( this ).text( 'Close' );
 
 		} else {
 
@@ -71,7 +70,7 @@ function fsMenuToggle() {
 
 	} );
 
-	$( '[class*="-fsmenu"] li a, #lbl-night-mode' ).click( function () {
+	$( '#close-fsmenu, #lbl-night-mode' ).click( function () {
 
 		fsMenuClose();
 
@@ -83,7 +82,6 @@ function fsMenuClose() {
 
 	$( 'body' ).css( 'overflow', 'initial' );
 	$( '[class*="-fsmenu"]' ).removeClass( 'open' );
-	$( '#navbar__toggler' ).text( 'Menu' );
 
 }
 
@@ -96,7 +94,6 @@ function switchNightMode() {
 	if ( nightMode ) {
 
 		$( '#switch-night-mode' ).prop( 'checked', true );
-		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 	}
 
@@ -115,16 +112,15 @@ function switchNightModeStart( element ) {
 	if ( $( element ).is( ':checked' ) ) {
 
 		$( 'html' ).addClass( 'night fsmooth' );
-		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 		localStorage.setItem( 'nightMode', true );
 
 	} else {
 
 		$( 'html' ).removeClass( 'night fsmooth' );
-		$( '#icon-night-mode' ).removeClass( 'ion-md-moon' ).addClass( 'ion-md-moon' );
 
 		localStorage.removeItem( 'nightMode' );
+
 	}
 
 }

@@ -1093,6 +1093,42 @@ th {
   border-radius: 2em; }
 
 /**
+ * Input with icon:
+ * `.ctrl--icn-left`
+ *
+ *     @example
+ *     div.ctrl.ctrl--icn-left
+ *         input(type='text', placeholder='Pill input').input
+ *         span.icn-wrap
+ *             i.icon.ion-md-search.icn-wrap__icn
+ */
+.ctrl {
+  display: flex;
+  flex-grow: 1;
+  position: relative; }
+
+.ctrl--icn-left .input {
+  padding-left: 2.75em; }
+
+.ctrl--icn-left .icn-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.75em;
+  height: auto; }
+
+.ctrl--icn-left .icn-wrap__icn {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5em; }
+
+.night .ctrl--icn-left .icn-wrap__icn {
+  color: rgba(255, 255, 255, 0.5); }
+
+/**
  * Textarea:
  * `.txtarea`
  *
