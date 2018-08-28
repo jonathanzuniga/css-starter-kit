@@ -204,11 +204,46 @@
 
 .us-all {
 	-webkit-user-select: all; /* Chrome, Opera, Safari */
-	-moz-user-select: all; /* Firefox 2+ */
-	-ms-user-select: all; /* IE 10+ */
-	user-select: all; /* Standard syntax */
+	   -moz-user-select: all; /* Firefox 2+ */
+	    -ms-user-select: all; /* IE 10+ */
+	        user-select: all; /* Standard syntax */
 }
 
 .wb-break-all {
 	word-break: break-all;
+}
+
+/**
+ * Horizontal rule in the middle of a row:
+ * `.hr-middle`
+ *
+ *     @example
+ *     div.hr-middle Lorem ipsum
+ */
+
+.hr-middle {
+	display: flex;
+	align-items: center;
+	flex-basis: 100%;
+}
+
+.hr-middle {
+	&::before,
+	&::after {
+		flex-grow: 1;
+		height: $hr-middle-before-after-height;
+		margin: $hr-middle-before-after-margin-y $hr-middle-before-after-margin-x;
+
+		background: $day__hr-middle-before-after-bg-color;
+		content: '';
+		font-size: 0;
+		line-height: 0;
+	}
+}
+
+.night .hr-middle {
+	&::before,
+	&::after {
+		background: $ngt__hr-middle-before-after-bg-color;
+	}
 }

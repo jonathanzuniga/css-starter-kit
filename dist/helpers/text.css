@@ -349,3 +349,27 @@
 
 .wb-break-all {
   word-break: break-all; }
+
+/**
+ * Horizontal rule in the middle of a row:
+ * `.hr-middle`
+ *
+ *     @example
+ *     div.hr-middle Lorem ipsum
+ */
+.hr-middle {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%; }
+
+.hr-middle::before, .hr-middle::after {
+  flex-grow: 1;
+  height: 0.063rem;
+  margin: 0 1%;
+  background: rgba(0, 0, 0, 0.1);
+  content: '';
+  font-size: 0;
+  line-height: 0; }
+
+.night .hr-middle::before, .night .hr-middle::after {
+  background: rgba(255, 255, 255, 0.1); }
