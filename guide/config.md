@@ -65,9 +65,9 @@
 								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').maxmd-jc-center.collapse.show
 									ul.ls
 										li
-											a(href='layout-flex-direction.html') Flex direction
-										li
 											a(href='layout-flex-grid.html') Flex grid
+										li
+											a(href='layout-flex-direction.html') Flex direction
 										li
 											a(href='layout-flex-grow.html') Flex grow
 										li
