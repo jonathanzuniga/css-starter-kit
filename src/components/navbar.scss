@@ -176,6 +176,13 @@
 	}
 }
 
+.navbar__logo {
+	border-radius: $border-radius-base;
+
+	width: $navbar-logo-width;
+	height: $navbar-logo-height;
+}
+
 .navbar__toggler {
 	display: flex;
 	align-items: stretch;
@@ -197,7 +204,9 @@
 	}
 
 	.navbar__item a,
-	a.navbar__item {
+	a.navbar__item,
+	.navbar__item .btn,
+	.btn.navbar__item {
 		padding-right: 0;
 		padding-left: 0;
 
@@ -274,7 +283,9 @@ a.navbar__item--icn {
 				}
 
 				.navbar__item a,
-				a.navbar__item {
+				a.navbar__item,
+				.navbar__item .btn,
+				.btn.navbar__item {
 					padding: $navbar-item-icon__a-padding-y $navbar-item-icon__a-padding-x;
 					width: auto;
 				}

@@ -789,12 +789,12 @@
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   position: relative; }
   .navbar a, .navbar .btn--link {
     border-radius: 2em;
     color: rgba(0, 0, 0, 0.5);
-    font-weight: 700; }
+    font-weight: 500; }
     .navbar a:link, .navbar a:visited, .navbar .btn--link:link, .navbar .btn--link:visited {
       color: rgba(0, 0, 0, 0.5); }
     .navbar a:hover, .navbar .btn--link:hover {
@@ -809,7 +809,7 @@
     .navbar a.active:hover {
       color: rgba(0, 0, 0, 0.9); }
   .navbar .input {
-    font-weight: 700; }
+    font-weight: 500; }
   .navbar a .navbar__icn, .navbar .btn .navbar__icn {
     fill: rgba(0, 0, 0, 0.5); }
   .navbar a:hover .navbar__icn, .navbar .btn:hover .navbar__icn {
@@ -888,6 +888,11 @@
   .navbar--dark .navbar__brand a:hover {
     color: rgba(255, 255, 255, 0.9); }
 
+.navbar__logo {
+  border-radius: 0.25rem;
+  width: 32px;
+  height: 32px; }
+
 .navbar__toggler {
   display: flex;
   align-items: stretch; }
@@ -903,7 +908,9 @@
     flex-direction: column;
     flex-basis: 100%; }
   .navbar__collapse .navbar__item a,
-  .navbar__collapse a.navbar__item {
+  .navbar__collapse a.navbar__item,
+  .navbar__collapse .navbar__item .btn,
+  .navbar__collapse .btn.navbar__item {
     padding-right: 0;
     padding-left: 0;
     width: 100%; }
@@ -952,7 +959,9 @@ a.navbar__item--icn {
         flex-direction: row;
         flex-basis: auto; }
       .xs-navbar--expand .navbar__collapse .navbar__item a,
-      .xs-navbar--expand .navbar__collapse a.navbar__item {
+      .xs-navbar--expand .navbar__collapse a.navbar__item,
+      .xs-navbar--expand .navbar__collapse .navbar__item .btn,
+      .xs-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
         width: auto; } }
 
@@ -973,7 +982,9 @@ a.navbar__item--icn {
         flex-direction: row;
         flex-basis: auto; }
       .sm-navbar--expand .navbar__collapse .navbar__item a,
-      .sm-navbar--expand .navbar__collapse a.navbar__item {
+      .sm-navbar--expand .navbar__collapse a.navbar__item,
+      .sm-navbar--expand .navbar__collapse .navbar__item .btn,
+      .sm-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
         width: auto; } }
 
@@ -994,7 +1005,9 @@ a.navbar__item--icn {
         flex-direction: row;
         flex-basis: auto; }
       .md-navbar--expand .navbar__collapse .navbar__item a,
-      .md-navbar--expand .navbar__collapse a.navbar__item {
+      .md-navbar--expand .navbar__collapse a.navbar__item,
+      .md-navbar--expand .navbar__collapse .navbar__item .btn,
+      .md-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
         width: auto; } }
 
@@ -1015,7 +1028,9 @@ a.navbar__item--icn {
         flex-direction: row;
         flex-basis: auto; }
       .lg-navbar--expand .navbar__collapse .navbar__item a,
-      .lg-navbar--expand .navbar__collapse a.navbar__item {
+      .lg-navbar--expand .navbar__collapse a.navbar__item,
+      .lg-navbar--expand .navbar__collapse .navbar__item .btn,
+      .lg-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
         width: auto; } }
 
@@ -1036,7 +1051,9 @@ a.navbar__item--icn {
         flex-direction: row;
         flex-basis: auto; }
       .xl-navbar--expand .navbar__collapse .navbar__item a,
-      .xl-navbar--expand .navbar__collapse a.navbar__item {
+      .xl-navbar--expand .navbar__collapse a.navbar__item,
+      .xl-navbar--expand .navbar__collapse .navbar__item .btn,
+      .xl-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
         width: auto; } }
 

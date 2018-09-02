@@ -232,12 +232,25 @@
 	&::after {
 		flex-grow: 1;
 		height: $hr-middle-before-after-height;
-		margin: $hr-middle-before-after-margin-y $hr-middle-before-after-margin-x;
 
 		background: $day__hr-middle-before-after-bg-color;
 		content: '';
 		font-size: 0;
 		line-height: 0;
+	}
+
+	&::before {
+		margin: $hr-middle-before-after-margin-y
+				$hr-middle-before-after-margin-x
+				$hr-middle-before-after-margin-y
+				0;
+	}
+
+	&::after {
+		margin: $hr-middle-before-after-margin-y
+				0
+				$hr-middle-before-after-margin-y
+				$hr-middle-before-after-margin-x;
 	}
 }
 

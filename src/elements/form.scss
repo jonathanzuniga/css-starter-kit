@@ -276,7 +276,7 @@
 
 .ctrl--icn-left {
 	.input {
-		padding-left: $control-icon-left__icon-wrap-width;
+		padding-left: $control-icon__icon-wrap-width;
 
 	}
 
@@ -290,19 +290,33 @@
 		top: 0;
 		left: 0;
 
-		width: $control-icon-left__icon-wrap-width;
-		height: auto;
+		width: $control-icon__icon-wrap-width;
+		height: 100%;
+
+		svg {
+			fill: $day__control-icon__icon-wrap__icon-color;
+			vertical-align: middle;
+
+			width: $control-icon__icon-wrap__svg-width;
+			height: $control-icon__icon-wrap__svg-height;
+		}
 	}
 
 	.icn-wrap__icn {
-		color: $day__control-icon-left__icon-wrap__icon-color;
-		font-size: $control-icon-left__icon-wrap__icon-font-size;
+		color: $day__control-icon__icon-wrap__icon-color;
+		font-size: $control-icon__icon-wrap__icon-font-size;
 	}
 }
 
 .night .ctrl--icn-left {
+	.icn-wrap {
+		svg {
+			fill: $ngt__control-icon__icon-wrap__icon-color;
+		}
+	}
+
 	.icn-wrap__icn {
-		color: $ngt__control-icon-left__icon-wrap__icon-color;
+		color: $ngt__control-icon__icon-wrap__icon-color;
 	}
 }
 

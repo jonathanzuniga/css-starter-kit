@@ -365,11 +365,16 @@
 .hr-middle::before, .hr-middle::after {
   flex-grow: 1;
   height: 0.063rem;
-  margin: 0 1%;
   background: rgba(0, 0, 0, 0.1);
   content: '';
   font-size: 0;
   line-height: 0; }
+
+.hr-middle::before {
+  margin: 0 1% 0 0; }
+
+.hr-middle::after {
+  margin: 0 0 0 1%; }
 
 .night .hr-middle::before, .night .hr-middle::after {
   background: rgba(255, 255, 255, 0.1); }
