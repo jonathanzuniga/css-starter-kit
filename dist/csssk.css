@@ -3604,6 +3604,7 @@ ul, ol, dl, figure {
  *                 a(href='#!') Click me more!
  */
 a {
+  color: #768fe1;
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
@@ -3616,14 +3617,14 @@ a {
     color: #4f66bd;
     text-decoration: none; }
 
-.night a:link {
+.night a {
   color: #9fb1ea; }
-
-.night a:visited {
-  color: #9fb1ea; }
-
-.night a:hover {
-  color: #7f95e1; }
+  .night a:link {
+    color: #9fb1ea; }
+  .night a:visited {
+    color: #9fb1ea; }
+  .night a:hover {
+    color: #7f95e1; }
 
 .a-bd-bottom p > a:not(.btn) {
   border-bottom: 0.063rem solid #768fe1; }
@@ -4454,7 +4455,7 @@ th {
   margin-bottom: 0.5em; }
 
 .input,
-.txtarea {
+.tarea {
   -webkit-appearance: none;
   background-color: transparent;
   border-width: 0.063rem;
@@ -4471,73 +4472,73 @@ th {
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
   width: 100%; }
   .input::-moz-placeholder,
-  .txtarea::-moz-placeholder {
+  .tarea::-moz-placeholder {
     opacity: 1; }
   .input::placeholder,
-  .txtarea::placeholder {
+  .tarea::placeholder {
     color: rgba(0, 0, 0, 0.3);
     opacity: 1; }
   .input:invalid,
-  .txtarea:invalid {
+  .tarea:invalid {
     border-color: #fd9190; }
   .input:valid,
-  .txtarea:valid {
+  .tarea:valid {
     border-color: rgba(0, 0, 0, 0.2); }
   .input:focus, .input:focus:hover,
-  .txtarea:focus,
-  .txtarea:focus:hover {
+  .tarea:focus,
+  .tarea:focus:hover {
     background-color: transparent;
     border-color: #9fb1ea;
     box-shadow: inset 0 0 0 0.063rem #9fb1ea; }
     .input:focus::placeholder, .input:focus:hover::placeholder,
-    .txtarea:focus::placeholder,
-    .txtarea:focus:hover::placeholder {
+    .tarea:focus::placeholder,
+    .tarea:focus:hover::placeholder {
       color: rgba(118, 143, 225, 0.5); }
   .input:hover,
-  .txtarea:hover {
+  .tarea:hover {
     border-color: rgba(0, 0, 0, 0.3); }
   .input:active,
-  .txtarea:active {
+  .tarea:active {
     border-color: #9fb1ea; }
 
 .night .input,
-.night .txtarea,
+.night .tarea,
 .navbar--dark .input {
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.9); }
   .night .input::placeholder,
-  .night .txtarea::placeholder,
+  .night .tarea::placeholder,
   .navbar--dark .input::placeholder {
     color: rgba(255, 255, 255, 0.3); }
   .night .input:invalid,
-  .night .txtarea:invalid,
+  .night .tarea:invalid,
   .navbar--dark .input:invalid {
     border-color: #fd9190; }
   .night .input:valid,
-  .night .txtarea:valid,
+  .night .tarea:valid,
   .navbar--dark .input:valid {
     border-color: rgba(255, 255, 255, 0.2); }
   .night .input:focus, .night .input:focus:hover,
-  .night .txtarea:focus,
-  .night .txtarea:focus:hover,
+  .night .tarea:focus,
+  .night .tarea:focus:hover,
   .navbar--dark .input:focus,
   .navbar--dark .input:focus:hover {
     background-color: transparent;
     border-color: #9fb1ea;
     box-shadow: inset 0 0 0 0.063rem #9fb1ea; }
     .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
-    .night .txtarea:focus::placeholder,
-    .night .txtarea:focus:hover::placeholder,
+    .night .tarea:focus::placeholder,
+    .night .tarea:focus:hover::placeholder,
     .navbar--dark .input:focus::placeholder,
     .navbar--dark .input:focus:hover::placeholder {
       color: rgba(118, 143, 225, 0.5); }
   .night .input:hover,
-  .night .txtarea:hover,
+  .night .tarea:hover,
   .navbar--dark .input:hover {
     border-color: rgba(255, 255, 255, 0.3); }
   .night .input:active,
-  .night .txtarea:active,
+  .night .tarea:active,
   .navbar--dark .input:active {
     border-color: #9fb1ea; }
 
@@ -4645,7 +4646,7 @@ th {
   border-radius: 2em; }
 
 /**
- * Input with icon:
+ * Input with a left icon:
  * `.ctrl--icn-left`
  *
  *     @example
@@ -4658,42 +4659,58 @@ th {
   display: flex;
   flex-grow: 1;
   position: relative; }
+  .ctrl .icn-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 2.75rem;
+    height: 100%; }
+    .ctrl .icn-wrap svg {
+      fill: rgba(0, 0, 0, 0.3);
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem; }
+  .ctrl .icn-wrap__icn {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.5em; }
+
+.night .ctrl .icn-wrap svg {
+  fill: rgba(255, 255, 255, 0.3); }
+
+.night .ctrl .icn-wrap__icn {
+  color: rgba(255, 255, 255, 0.3); }
 
 .ctrl--icn-left .input {
   padding-left: 2.75rem; }
 
 .ctrl--icn-left .icn-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.75rem;
-  height: 100%; }
-  .ctrl--icn-left .icn-wrap svg {
-    fill: rgba(0, 0, 0, 0.3);
-    vertical-align: middle;
-    width: 1.5rem;
-    height: 1.5rem; }
+  left: 0; }
 
-.ctrl--icn-left .icn-wrap__icn {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 1.5em; }
+/**
+ * Input with a right icon:
+ * `.ctrl--icn-right`
+ *
+ *     @example
+ *     div.ctrl.ctrl--icn-right
+ *         input(type='text', placeholder='Pill input').input
+ *         span.icn-wrap
+ *             i.icon.ion-md-search.icn-wrap__icn
+ */
+.ctrl--icn-right .input {
+  padding-right: 2.75rem; }
 
-.night .ctrl--icn-left .icn-wrap svg {
-  fill: rgba(255, 255, 255, 0.3); }
-
-.night .ctrl--icn-left .icn-wrap__icn {
-  color: rgba(255, 255, 255, 0.3); }
+.ctrl--icn-right .icn-wrap {
+  right: 0; }
 
 /**
  * Textarea:
- * `.txtarea`
+ * `.tarea`
  *
  *     @example
- *     textarea(placeholder='Textarea', rows='5').txtarea
+ *     textarea(placeholder='Textarea', rows='5').tarea
  */
 /**
  * Checkbox and radio:
@@ -4805,7 +4822,8 @@ th {
     border-color: #768fe1; }
     .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic:after {
       display: block; }
-  .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--checkbox:after {
+  .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--checkbox:after,
+  .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--radio:after {
     border-width: 0 0.125em 0.125em 0;
     border-style: solid;
     border-color: #fff;
@@ -4814,13 +4832,6 @@ th {
     transform: rotate(45deg);
     width: 0.313em;
     height: 0.625em; }
-  .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--radio:after {
-    background-color: #fff;
-    border-radius: 50%;
-    top: 0.375em;
-    left: 0.375em;
-    width: 0.375em;
-    height: 0.375em; }
   .ctrl-check__input-custom:checked:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
     background-color: #697fc7; }
   .ctrl-check__input-custom:checked:active ~ .ctrl-check__lbl-custom .ctrl-check__indic {
@@ -4830,11 +4841,9 @@ th {
   background-color: #768fe1;
   border-color: #768fe1; }
 
-.night .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--checkbox:after {
-  border-color: #fff; }
-
+.night .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--checkbox:after,
 .night .ctrl-check__input-custom:checked ~ .ctrl-check__lbl-custom .ctrl-check__indic--radio:after {
-  background-color: #fff; }
+  border-color: #fff; }
 
 .night .ctrl-check__input-custom:checked:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
   background-color: #697fc7; }

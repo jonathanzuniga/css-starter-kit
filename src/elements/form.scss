@@ -17,12 +17,12 @@
 
 .lbl {
 	display: inline-block;
-	font-size: $label-font-size;
+	font-size: $lbl-font-size;
 	margin-bottom: $spacing-unit-quarter;
 }
 
 .input,
-.txtarea {
+.tarea {
 	-webkit-appearance: none;
 
 	background-color: $day__input-bg-color;
@@ -83,7 +83,7 @@
 }
 
 .night .input,
-.night .txtarea,
+.night .tarea,
 .navbar--dark .input {
 	background-color: $ngt__input-bg-color;
 	border-color: $ngt__input-border-color;
@@ -135,7 +135,7 @@
  */
 
 .fld {
-	margin-bottom: $form-field-margin-bottom;
+	margin-bottom: $fld-margin-bottom;
 }
 
 /**
@@ -150,15 +150,15 @@
  */
 
 .input--sm {
-	border-radius: $input-sm-border-radius;
-	font-size: $input-sm-font-size;
-	padding: $input-sm-padding-y $input-sm-padding-x;
+	border-radius: $input--sm-border-radius;
+	font-size: $input--sm-font-size;
+	padding: $input--sm-padding-y $input--sm-padding-x;
 }
 
 .input--lg {
-	border-radius: $input-lg-border-radius;
-	font-size: $input-lg-font-size;
-	padding: $input-lg-padding-y $input-lg-padding-x;
+	border-radius: $input--lg-border-radius;
+	font-size: $input--lg-font-size;
+	padding: $input--lg-padding-y $input--lg-padding-x;
 }
 
 /**
@@ -170,11 +170,11 @@
  */
 
 .input--flat {
-	background-color: $day__input-flat-bg-color;
-	border-color: $day__input-flat-border-color;
+	background-color: $day__input--flat-bg-color;
+	border-color: $day__input--flat-border-color;
 
 	&:valid {
-		border-color: $day__input-flat-border-color;
+		border-color: $day__input--flat-border-color;
 	}
 
 	&:focus,
@@ -183,18 +183,18 @@
 	}
 
 	&:hover {
-		background-color: $day__input-flat-hover-bg-color;
-		border-color: $day__input-flat-hover-border-color;
+		background-color: $day__input--flat-hover-bg-color;
+		border-color: $day__input--flat-hover-border-color;
 	}
 }
 
 .night .input--flat,
 .navbar--dark .input--flat {
-	background-color: $ngt__input-flat-bg-color;
-	border-color: $ngt__input-flat-border-color;
+	background-color: $ngt__input--flat-bg-color;
+	border-color: $ngt__input--flat-border-color;
 
 	&:valid {
-		border-color: $ngt__input-flat-border-color;
+		border-color: $ngt__input--flat-border-color;
 	}
 
 	&:focus,
@@ -203,8 +203,8 @@
 	}
 
 	&:hover {
-		background-color: $ngt__input-flat-hover-bg-color;
-		border-color: $ngt__input-flat-hover-border-color;
+		background-color: $ngt__input--flat-hover-bg-color;
+		border-color: $ngt__input--flat-hover-border-color;
 	}
 }
 
@@ -233,14 +233,14 @@
 
 	&:focus,
 	&:focus:hover {
-		box-shadow: $day__input-line-focus-box-shadow;
+		box-shadow: $day__input--line-focus-box-shadow;
 	}
 }
 
 .night .input--line {
 	&:focus,
 	&:focus:hover {
-		box-shadow: $ngt__input-line-focus-box-shadow;
+		box-shadow: $ngt__input--line-focus-box-shadow;
 	}
 }
 
@@ -257,7 +257,7 @@
 }
 
 /**
- * Input with icon:
+ * Input with a left icon:
  * `.ctrl--icn-left`
  *
  *     @example
@@ -272,13 +272,6 @@
 	flex-grow: 1;
 
 	position: relative;
-}
-
-.ctrl--icn-left {
-	.input {
-		padding-left: $control-icon__icon-wrap-width;
-
-	}
 
 	.icn-wrap {
 		display: inline-flex;
@@ -288,44 +281,74 @@
 
 		position: absolute;
 		top: 0;
-		left: 0;
 
-		width: $control-icon__icon-wrap-width;
+		width: $ctrl__icn-wrap-width;
 		height: 100%;
 
 		svg {
-			fill: $day__control-icon__icon-wrap__icon-color;
+			fill: $day__ctrl__icn-wrap__icn-color;
 			vertical-align: middle;
 
-			width: $control-icon__icon-wrap__svg-width;
-			height: $control-icon__icon-wrap__svg-height;
+			width: $ctrl__icn-wrap__svg-width;
+			height: $ctrl__icn-wrap__svg-height;
 		}
 	}
 
 	.icn-wrap__icn {
-		color: $day__control-icon__icon-wrap__icon-color;
-		font-size: $control-icon__icon-wrap__icon-font-size;
+		color: $day__ctrl__icn-wrap__icn-color;
+		font-size: $ctrl__icn-wrap__icn-font-size;
 	}
 }
 
-.night .ctrl--icn-left {
+.night .ctrl {
 	.icn-wrap {
 		svg {
-			fill: $ngt__control-icon__icon-wrap__icon-color;
+			fill: $ngt__ctrl__icn-wrap__icn-color;
 		}
 	}
 
 	.icn-wrap__icn {
-		color: $ngt__control-icon__icon-wrap__icon-color;
+		color: $ngt__ctrl__icn-wrap__icn-color;
+	}
+}
+
+.ctrl--icn-left {
+	.input {
+		padding-left: $ctrl__icn-wrap-width;
+	}
+
+	.icn-wrap {
+		left: 0;
+	}
+}
+
+/**
+ * Input with a right icon:
+ * `.ctrl--icn-right`
+ *
+ *     @example
+ *     div.ctrl.ctrl--icn-right
+ *         input(type='text', placeholder='Pill input').input
+ *         span.icn-wrap
+ *             i.icon.ion-md-search.icn-wrap__icn
+ */
+
+.ctrl--icn-right {
+	.input {
+		padding-right: $ctrl__icn-wrap-width;
+	}
+
+	.icn-wrap {
+		right: 0;
 	}
 }
 
 /**
  * Textarea:
- * `.txtarea`
+ * `.tarea`
  *
  *     @example
- *     textarea(placeholder='Textarea', rows='5').txtarea
+ *     textarea(placeholder='Textarea', rows='5').tarea
  */
 
  /**
@@ -357,7 +380,7 @@
 }
 
 .ctrl-check__input {
-	margin-top: $control-check-input-margin-top;
+	margin-top: $ctrl-check__input-margin-top;
 
 	position: absolute;
 
@@ -366,7 +389,7 @@
 }
 
 .ctrl-check__lbl {
-	padding-left: $control-check-label-padding-left;
+	padding-left: $ctrl-check__lbl-padding-left;
 }
 
 /**
@@ -402,7 +425,7 @@
 	display: inline-flex;
 
 	&:not( :last-child ) {
-		margin-right: $control-check-inline-margin-right;
+		margin-right: $ctrl-check--inline-margin-right;
 	}
 }
 
@@ -439,7 +462,7 @@
 
 .ctrl-check--custom {
 	&:not( :last-child ) {
-		margin-bottom: $control-check-custom-margin-bottom;
+		margin-bottom: $ctrl-check--custom-margin-bottom;
 	}
 }
 
@@ -451,50 +474,38 @@
 	&:checked {
 		~ .ctrl-check__lbl-custom {
 			.ctrl-check__indic {
-				background-color: $day__control-check-input-custom-checked__indic-bg-color;
-				border-color: $day__control-check-input-custom-checked__indic-border-color;
+				background-color: $day__color-primary;
+				border-color: $day__color-primary;
 
 				&:after {
 					display: block;
 				}
 			}
 
-			.ctrl-check__indic--checkbox {
-				&:after {
-					border-width: $control-check-input-custom-checked__indic-checkbox-after-border-width;
-					border-style: $control-check-input-custom-checked__indic-checkbox-after-border-style;
-					border-color: $day__control-check-input-custom-checked__indic-checkbox-after-border-color;
-
-					top: $control-check-input-custom-checked__indic-checkbox-after-top;
-					left: $control-check-input-custom-checked__indic-checkbox-after-left;
-
-					transform: $control-check-input-custom-checked__indic-checkbox-after-transform;
-
-					width: $control-check-input-custom-checked__indic-checkbox-after-width;
-					height: $control-check-input-custom-checked__indic-checkbox-after-height;
-				}
-			}
-
+			.ctrl-check__indic--checkbox,
 			.ctrl-check__indic--radio {
 				&:after {
-					background-color: $day__control-check-input-custom-checked__indic-radio-after-bg-color;
-					border-radius: $control-check-input-custom-checked__indic-radio-after-border-radius;
+					border-width: $tick-border-width;
+					border-style: $tick-border-style;
+					border-color: $day__tick-border-color;
 
-					top: $control-check-input-custom-checked__indic-radio-after-top;
-					left: $control-check-input-custom-checked__indic-radio-after-left;
+					top: $tick-top;
+					left: $tick-left;
 
-					width: $control-check-input-custom-checked__indic-radio-after-width;
-					height: $control-check-input-custom-checked__indic-radio-after-height;
+					transform: $tick-transform;
+
+					width: $tick-width;
+					height: $tick-height;
 				}
 			}
 		}
 
 		&:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: $day__control-check-input-custom-checked-hover__indic-bg-color;
+			background-color: shade( $day__color-primary, $gen-hover-amount );
 		}
 
 		&:active ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: $day__control-check-input-custom-checked-active__indic-bg-color;
+			background-color: shade( $day__color-primary, $gen-active-amount );
 		}
 	}
 }
@@ -503,48 +514,43 @@
 	&:checked {
 		~ .ctrl-check__lbl-custom {
 			.ctrl-check__indic {
-				background-color: $ngt__control-check-input-custom-checked__indic-bg-color;
-				border-color: $ngt__control-check-input-custom-checked__indic-border-color;
+				background-color: $ngt__color-primary;
+				border-color: $ngt__color-primary;
 			}
 
-			.ctrl-check__indic--checkbox {
-				&:after {
-					border-color: $ngt__control-check-input-custom-checked__indic-checkbox-after-border-color;
-				}
-			}
-
+			.ctrl-check__indic--checkbox,
 			.ctrl-check__indic--radio {
 				&:after {
-					background-color: $ngt__control-check-input-custom-checked__indic-radio-after-bg-color;
+					border-color: $ngt__tick-border-color;
 				}
 			}
 		}
 
 		&:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: $ngt__control-check-input-custom-checked-hover__indic-bg-color;
+			background-color: shade( $day__color-primary, $gen-hover-amount );
 		}
 
 		&:active ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: $ngt__control-check-input-custom-checked-active__indic-bg-color;
+			background-color: shade( $day__color-primary, $gen-active-amount );
 		}
 	}
 }
 
 .ctrl-check__indic {
-	background-color: $day__control-check-indic-bg-color;
+	background-color: $day__ctrl-check__indic-bg-color;
 
-	border-width: $control-check-indic-border-width;
-	border-style: $control-check-indic-border-style;
-	border-color: $day__control-check-indic-border-color;
+	border-width: $ctrl-check__indic-border-width;
+	border-style: $ctrl-check__indic-border-style;
+	border-color: $day__ctrl-check__indic-border-color;
 
-	margin-top: $control-check-indic-margin-top;
+	margin-top: $ctrl-check__indic-margin-top;
 
 	position: absolute;
 	top: 0;
 	left: 0;
 
-	width: $control-check-indic-width;
-	height: $control-check-indic-height;
+	width: $ctrl-check__indic-width;
+	height: $ctrl-check__indic-height;
 
 	transition: $transition-base;
 
@@ -556,25 +562,25 @@
 }
 
 .night .ctrl-check__indic {
-	background-color: $ngt__control-check-indic-bg-color;
-	border-color: $ngt__control-check-indic-border-color;
+	background-color: $ngt__ctrl-check__indic-bg-color;
+	border-color: $ngt__ctrl-check__indic-border-color;
 }
 
 .ctrl-check__indic--checkbox {
-	border-radius: $control-check-indic-checkbox-border-radius;
+	border-radius: $ctrl-check__indic--checkbox-border-radius;
 }
 
 .ctrl-check__indic--radio {
-	border-radius: $control-check-indic-radio-border-radius;
+	border-radius: 50%;
 }
 
 .ctrl-check__lbl-custom {
-	padding-left: $control-check-label-custom-padding-left;
+	padding-left: $ctrl-check-label-custom-padding-left;
 
 	&:hover {
 		.ctrl-check__indic {
-			background-color: $day__control-check-label-custom-hover__indic-bg-color;
-			border-color: $day__control-check-label-custom-hover__indic-border-color;
+			background-color: $day__gen-hover-bg-color;
+			border-color: $day__gen-hover-border-color;
 		}
 	}
 }
@@ -582,8 +588,8 @@
 .night .ctrl-check__lbl-custom {
 	&:hover {
 		.ctrl-check__indic {
-			background-color: $ngt__control-check-label-custom-hover__indic-bg-color;
-			border-color: $ngt__control-check-label-custom-hover__indic-border-color;
+			background-color: $ngt__gen-hover-bg-color;
+			border-color: $ngt__gen-hover-border-color;
 		}
 	}
 }
@@ -631,7 +637,7 @@
 
 .ctrl-check--inline.ctrl-check--custom {
 	&:not( :last-child ) {
-		margin-right: $control-check-inline-custom-margin-right;
+		margin-right: $ctrl-check-inline-custom-margin-right;
 	}
 }
 
@@ -667,13 +673,13 @@
  */
 
 .ctrl-check__indic--flat {
-	background-color: $day__control-check-indic-flat-bg-color;
-	border-color: $day__control-check-indic-flat-border-color;
+	background-color: $day__ctrl-check__indic--flat-bg-color;
+	border-color: $day__ctrl-check__indic--flat-border-color;
 }
 
 .night .ctrl-check__indic--flat {
-	background-color: $ngt__control-check-indic-flat-bg-color;
-	border-color: $ngt__control-check-indic-flat-border-color;
+	background-color: $ngt__ctrl-check__indic--flat-bg-color;
+	border-color: $ngt__ctrl-check__indic--flat-border-color;
 }
 
 .ctrl-check__lbl-custom {

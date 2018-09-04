@@ -51,6 +51,9 @@ $ngt__body-bg-color: #070a0c;
 
 $colors:             colors( $color-palette );
 
+$day__color-primary: color( 'orchid' );
+$ngt__color-primary: color( 'orchid' );
+
 $day__body-color:    color( 'black 90' );
 $ngt__body-color:    color( 'white 90' );
 
@@ -178,74 +181,73 @@ $ngt__box-bg-color:     $ngt__body-bg-color;
 $box-border-radius:     $border-radius-base;
 
 
-// Se usan estos valores comunes para los controles de las formas.
+// Generic values, used by form elements.
 
-$control-border-width:              0.063rem;
-$control-border-style:              solid;
-$day__control-border-color:         color( 'black 20' );
-$ngt__control-border-color:         color( 'white 20' );
+$gen-hover-amount:              12%;
+$gen-active-amount:             22%;
 
-$day__control-hover-border-color:   color( 'black 30' );
-$ngt__control-hover-border-color:   color( 'white 30' );
+$gen-border-width:              0.063rem;
+$gen-border-style:              solid;
+$day__gen-border-color:         color( 'black 20' );
+$ngt__gen-border-color:         color( 'white 20' );
 
-$control-border-radius:             $border-radius-base;
+$day__gen-hover-border-color:   color( 'black 30' );
+$ngt__gen-hover-border-color:   color( 'white 30' );
 
-$day__control-color:                $day__body-color;
-$ngt__control-color:                $ngt__body-color;
+$day__gen-hover-bg-color:       transparent;
+$ngt__gen-hover-bg-color:       transparent;
+
+$gen-border-radius:             $border-radius-base;
+
+$day__gen-color:                $day__body-color;
+$ngt__gen-color:                $ngt__body-color;
 
 $control-line-height:               inherit;
 
-$control-padding-y:                 0.250em;
-$control-padding-x:                 0.750em;
+$gen-padding-y:                 0.250em;
+$gen-padding-x:                 0.750em;
 
-$control-sm-padding-y:              $control-padding-y;
-$control-sm-padding-x:              $control-padding-x;
+$gen-sm-padding-y:              $gen-padding-y;
+$gen-sm-padding-x:              $gen-padding-x;
 
-$control-lg-padding-y:              $control-padding-y;
-$control-lg-padding-x:              $control-padding-x;
+$gen-lg-padding-y:              $gen-padding-y;
+$gen-lg-padding-x:              $gen-padding-x;
 
-$control-lg-font-size:              1.25em;
+$control-lg-font-size:          1.25em;
 
-$day__control-invalid-border-color: color( 'pomegranate 30' );
-$ngt__control-invalid-border-color: color( 'pomegranate 30' );
+$day__gen-invalid-border-color: color( 'pomegranate 30' );
+$ngt__gen-invalid-border-color: color( 'pomegranate 30' );
 
-$day__control-focus-border-color:   color( 'orchid 30' );
-$ngt__control-focus-border-color:   color( 'orchid 30' );
+$day__gen-focus-border-color:   color( 'orchid 30' );
+$ngt__gen-focus-border-color:   color( 'orchid 30' );
 
-$day__control-focus-box-shadow:     inset 0 0 0 0.063rem $day__control-focus-border-color;
-$ngt__control-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__control-focus-border-color;
+$day__gen-focus-box-shadow:     inset 0 0 0 0.063rem $day__gen-focus-border-color;
+$ngt__gen-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__gen-focus-border-color;
 
-$day__control-active-border-color:  color( 'orchid 30' );
-$ngt__control-active-border-color:  color( 'orchid 30' );
+$day__gen-active-border-color:  color( 'orchid 30' );
+$ngt__gen-active-border-color:  color( 'orchid 30' );
 
 
 // Button
 
-$button-border-width:           $control-border-width;
-$button-border-style:           $control-border-style;
+$button-border-width:           $gen-border-width;
+$button-border-style:           $gen-border-style;
 $button-border-color:           transparent;
 
-$button-border-radius:          $control-border-radius;
+$button-border-radius:          $gen-border-radius;
 $button-font-size:              $font-size-base;
 $button-font-weight:            500;
 $button-line-height:            $control-line-height;
 
-$button-padding-y:              $control-padding-y;
-$button-padding-x:              $control-padding-x;
+$button-padding-y:              $gen-padding-y;
+$button-padding-x:              $gen-padding-x;
 
 $button-transition:             $transition-base;
 
-$button-hover-bg-color-amount:  12%;
-$button-active-bg-color-amount: 22%;
 
-
-// Estilo de los botones:
-// - Name,
-// - background color,
-// - night background color,
-// - text color,
-// - night text color,
-// - light colors on hover/active state.
+// Buttons style
+//
+// name, bg color, night bg color, text color, night text color, light colors on hover/active state?
 
 $buttons: (
     'primary'   color( 'orchid' )   color( 'orchid' )   color( 'white' ) color( 'white' ) '',
@@ -271,18 +273,18 @@ $ngt__button-link-hover-bg-color: color( 'white 05' );
 
 // Small button
 
-$button-sm-border-radius: $control-border-radius;
+$button-sm-border-radius: $gen-border-radius;
 $button-sm-font-size:     $font-size-sm;
-$button-sm-padding-y:     $control-sm-padding-y;
-$button-sm-padding-x:     $control-sm-padding-x;
+$button-sm-padding-y:     $gen-sm-padding-y;
+$button-sm-padding-x:     $gen-sm-padding-x;
 
 
 // Large button
 
-$button-lg-border-radius: $control-border-radius;
+$button-lg-border-radius: $gen-border-radius;
 $button-lg-font-size:     $control-lg-font-size;
-$button-lg-padding-y:     $control-lg-padding-y;
-$button-lg-padding-x:     $control-lg-padding-x;
+$button-lg-padding-y:     $gen-lg-padding-y;
+$button-lg-padding-x:     $gen-lg-padding-x;
 
 
 // File area
@@ -306,8 +308,7 @@ $file-area-transition:          $transition-base;
 
 // Label
 
-$label-font-size: px_to_em( $font-size-base );
-$label-padding:   ( $control-padding-y / 2 ) 0;
+$lbl-font-size: px_to_em( $font-size-base );
 
 
 // Input
@@ -315,26 +316,26 @@ $label-padding:   ( $control-padding-y / 2 ) 0;
 $day__input-bg-color:                transparent;
 $ngt__input-bg-color:                transparent;
 
-$input-border-width:                 $control-border-width;
-$input-border-style:                 $control-border-style;
-$day__input-border-color:            $day__control-border-color;
-$ngt__input-border-color:            $ngt__control-border-color;
+$input-border-width:                 $gen-border-width;
+$input-border-style:                 $gen-border-style;
+$day__input-border-color:            $day__gen-border-color;
+$ngt__input-border-color:            $ngt__gen-border-color;
 
-$input-border-radius:                $control-border-radius;
-$day__input-color:                   $day__control-color;
-$ngt__input-color:                   $ngt__control-color;
+$input-border-radius:                $gen-border-radius;
+$day__input-color:                   $day__gen-color;
+$ngt__input-color:                   $ngt__gen-color;
 $input-font-size:                    $font-size-base;
 $input-line-height:                  $control-line-height;
-$input-padding-y:                    $control-padding-y;
-$input-padding-x:                    $control-padding-x;
+$input-padding-y:                    $gen-padding-y;
+$input-padding-x:                    $gen-padding-x;
 $input-transition:                   $transition-base;
 
 $day__input-focus-bg-color:          transparent;
 $ngt__input-focus-bg-color:          transparent;
-$day__input-focus-border-color:      $day__control-focus-border-color;
-$ngt__input-focus-border-color:      $ngt__control-focus-border-color;
-$day__input-focus-box-shadow:        $day__control-focus-box-shadow;
-$ngt__input-focus-box-shadow:        $ngt__control-focus-box-shadow;
+$day__input-focus-border-color:      $day__gen-focus-border-color;
+$ngt__input-focus-border-color:      $ngt__gen-focus-border-color;
+$day__input-focus-box-shadow:        $day__gen-focus-box-shadow;
+$ngt__input-focus-box-shadow:        $ngt__gen-focus-box-shadow;
 
 $day__input-placeholder-color:       color( 'black 30' );
 $ngt__input-placeholder-color:       color( 'white 30' );
@@ -344,166 +345,128 @@ $ngt__input-focus-placeholder-color: rgba( color( 'orchid 50' ), 0.5 );
 
 $input-placeholder-opacity:          1;
 
-$day__input-invalid-border-color:    $day__control-invalid-border-color;
-$ngt__input-invalid-border-color:    $ngt__control-invalid-border-color;
+$day__input-invalid-border-color:    $day__gen-invalid-border-color;
+$ngt__input-invalid-border-color:    $ngt__gen-invalid-border-color;
 
 $day__input-valid-border-color:      $day__input-border-color;
 $ngt__input-valid-border-color:      $ngt__input-border-color;
 
-$day__input-hover-border-color:      $day__control-hover-border-color;
-$ngt__input-hover-border-color:      $ngt__control-hover-border-color;
+$day__input-hover-border-color:      $day__gen-hover-border-color;
+$ngt__input-hover-border-color:      $ngt__gen-hover-border-color;
 
-$day__input-active-border-color:     $day__control-active-border-color;
-$ngt__input-active-border-color:     $ngt__control-active-border-color;
+$day__input-active-border-color:     $day__gen-active-border-color;
+$ngt__input-active-border-color:     $ngt__gen-active-border-color;
 
-$input-sm-border-radius:             $control-border-radius;
-$input-sm-font-size:                 $font-size-sm;
-$input-sm-padding-y:                 $control-sm-padding-y;
-$input-sm-padding-x:                 $control-sm-padding-x;
+$input--sm-border-radius:             $gen-border-radius;
+$input--sm-font-size:                 $font-size-sm;
+$input--sm-padding-y:                 $gen-sm-padding-y;
+$input--sm-padding-x:                 $gen-sm-padding-x;
 
-$input-lg-border-radius:             $control-border-radius;
-$input-lg-font-size:                 $control-lg-font-size;
-$input-lg-padding-y:                 $control-lg-padding-y;
-$input-lg-padding-x:                 $control-lg-padding-x;
+$input--lg-border-radius:             $gen-border-radius;
+$input--lg-font-size:                 $control-lg-font-size;
+$input--lg-padding-y:                 $gen-lg-padding-y;
+$input--lg-padding-x:                 $gen-lg-padding-x;
 
 
 // Form field
 
-$form-field-margin-bottom: $spacing-unit-half;
+$fld-margin-bottom: $spacing-unit-half;
 
 
 // Flat input
 
-$day__input-flat-bg-color:           color( 'black 05' );
-$ngt__input-flat-bg-color:           color( 'white 05' );
-$day__input-flat-border-color:       transparent;
-$ngt__input-flat-border-color:       transparent;
+$day__input--flat-bg-color:           color( 'black 05' );
+$ngt__input--flat-bg-color:           color( 'white 05' );
+$day__input--flat-border-color:       transparent;
+$ngt__input--flat-border-color:       transparent;
 
-$day__input-flat-hover-bg-color:     color( 'black 075' );
-$ngt__input-flat-hover-bg-color:     color( 'white 075' );
-$day__input-flat-hover-border-color: transparent;
-$ngt__input-flat-hover-border-color: transparent;
+$day__input--flat-hover-bg-color:     color( 'black 075' );
+$ngt__input--flat-hover-bg-color:     color( 'white 075' );
+$day__input--flat-hover-border-color: transparent;
+$ngt__input--flat-hover-border-color: transparent;
 
 
 // Line input
 
-$day__input-line-focus-box-shadow: inset 0 -0.063rem 0 0 $day__input-focus-border-color;
-$ngt__input-line-focus-box-shadow: inset 0 -0.063rem 0 0 $ngt__input-focus-border-color;
+$day__input--line-focus-box-shadow: inset 0 -0.063rem 0 0 $day__input-focus-border-color;
+$ngt__input--line-focus-box-shadow: inset 0 -0.063rem 0 0 $ngt__input-focus-border-color;
 
 
 // Input with icon
 
-$control-icon__icon-wrap-width:            2.75rem;
+$ctrl__icn-wrap-width:           2.75rem;
 
-$day__control-icon__icon-wrap__icon-color: color( 'black 30' );
-$ngt__control-icon__icon-wrap__icon-color: color( 'white 30' );
+$day__ctrl__icn-wrap__icn-color: color( 'black 30' );
+$ngt__ctrl__icn-wrap__icn-color: color( 'white 30' );
 
-$control-icon__icon-wrap__icon-font-size:  1.5em;
+$ctrl__icn-wrap__icn-font-size:  1.5em;
 
-$control-icon__icon-wrap__svg-width:       1.5rem;
-$control-icon__icon-wrap__svg-height:      1.5rem;
+$ctrl__icn-wrap__svg-width:      1.5rem;
+$ctrl__icn-wrap__svg-height:     1.5rem;
 
 
 // Checkbox and radio
 
-$control-check-input-margin-top:   0.5em;
-$control-check-label-padding-left: 1.25em;
+$ctrl-check__input-margin-top: 0.5em;
+$ctrl-check__lbl-padding-left: 1.25em;
 
 
 // Inline checkbox and radio
 
-$control-check-inline-margin-right: 1.25em;
+$ctrl-check--inline-margin-right: 1.25em;
 
 
 // Custom checkbox and radio
 
-$control-check-custom-margin-bottom:      0.5em;
-$control-check-label-custom-padding-left: 2em;
+$ctrl-check--custom-margin-bottom:      0.5em;
 
-$day__control-check-input-custom-checked__indic-bg-color:        color( 'orchid' );
-$ngt__control-check-input-custom-checked__indic-bg-color:        color( 'orchid' );
-
-$day__control-check-input-custom-checked__indic-border-color:    color( 'orchid' );
-$ngt__control-check-input-custom-checked__indic-border-color:    color( 'orchid' );
-
-$day__control-check-input-custom-checked-hover__indic-bg-color:  shade(
-                                                                     $day__control-check-input-custom-checked__indic-bg-color,
-                                                                     $button-hover-bg-color-amount);
-$ngt__control-check-input-custom-checked-hover__indic-bg-color:  shade(
-                                                                     $ngt__control-check-input-custom-checked__indic-bg-color,
-                                                                     $button-hover-bg-color-amount);
-$day__control-check-input-custom-checked-active__indic-bg-color: shade(
-                                                                     $day__control-check-input-custom-checked__indic-bg-color,
-                                                                     $button-active-bg-color-amount);
-$ngt__control-check-input-custom-checked-active__indic-bg-color: shade(
-                                                                     $ngt__control-check-input-custom-checked__indic-bg-color,
-                                                                     $button-active-bg-color-amount);
-
-// Custom checkbox indicator
-
-$control-check-input-custom-checked__indic-checkbox-after-border-width:      0 0.125em 0.125em 0;
-$control-check-input-custom-checked__indic-checkbox-after-border-style:      solid;
-$day__control-check-input-custom-checked__indic-checkbox-after-border-color: color( 'white' );
-$ngt__control-check-input-custom-checked__indic-checkbox-after-border-color: color( 'white' );
-
-$control-check-input-custom-checked__indic-checkbox-after-top:               0.188em;
-$control-check-input-custom-checked__indic-checkbox-after-left:              0.375em;
-
-$control-check-input-custom-checked__indic-checkbox-after-transform:         rotate(45deg);
-
-$control-check-input-custom-checked__indic-checkbox-after-width:             0.313em; //  5px
-$control-check-input-custom-checked__indic-checkbox-after-height:            0.625em; // 10px
+$ctrl-check-label-custom-padding-left: 2em;
 
 
-// Custom radio indicator
+// Custom checked indicator
 
-$day__control-check-input-custom-checked__indic-radio-after-bg-color: color( 'white' );
-$ngt__control-check-input-custom-checked__indic-radio-after-bg-color: color( 'white' );
-$control-check-input-custom-checked__indic-radio-after-border-radius: 50%;
+$tick-border-width:      0 0.125em 0.125em 0;
+$tick-border-style:      solid;
+$day__tick-border-color: color( 'white' );
+$ngt__tick-border-color: color( 'white' );
 
-$control-check-input-custom-checked__indic-radio-after-top:           0.375em; // 6px
-$control-check-input-custom-checked__indic-radio-after-left:          0.375em;
+$tick-top:               0.188em;
+$tick-left:              0.375em;
 
-$control-check-input-custom-checked__indic-radio-after-width:         0.375em;
-$control-check-input-custom-checked__indic-radio-after-height:        0.375em;
+$tick-transform:         rotate(45deg);
 
+$tick-width:             0.313em; //  5px
+$tick-height:            0.625em; // 10px
 
-$day__control-check-indic-bg-color:          transparent;
-$ngt__control-check-indic-bg-color:          transparent;
+$day__ctrl-check__indic-bg-color:          transparent;
+$ngt__ctrl-check__indic-bg-color:          transparent;
 
-$control-check-indic-border-width:           $control-border-width;
-$control-check-indic-border-style:           $control-border-style;
+$ctrl-check__indic-border-width:           $gen-border-width;
+$ctrl-check__indic-border-style:           $gen-border-style;
 
-$day__control-check-indic-border-color:      $day__control-border-color;
-$ngt__control-check-indic-border-color:      $ngt__control-border-color;
+$day__ctrl-check__indic-border-color:      $day__gen-border-color;
+$ngt__ctrl-check__indic-border-color:      $ngt__gen-border-color;
 
-$control-check-indic-margin-top:             0.125em;
+$ctrl-check__indic-margin-top:             0.125em;
 
-$control-check-indic-width:                  1.25em;
-$control-check-indic-height:                 1.25em;
+$ctrl-check__indic-width:                  1.25em;
+$ctrl-check__indic-height:                 1.25em;
 
-$control-check-indic-checkbox-border-radius: $control-border-radius;
-$control-check-indic-radio-border-radius:    50%;
-
-$day__control-check-label-custom-hover__indic-bg-color:     transparent;
-$ngt__control-check-label-custom-hover__indic-bg-color:     transparent;
-
-$day__control-check-label-custom-hover__indic-border-color: $day__control-hover-border-color;
-$ngt__control-check-label-custom-hover__indic-border-color: $ngt__control-hover-border-color;
+$ctrl-check__indic--checkbox-border-radius: $gen-border-radius;
 
 
 // Inline custom checkbox and radio
 
-$control-check-inline-custom-margin-right: 1.5em;
+$ctrl-check-inline-custom-margin-right: 1.5em;
 
 
 // Flat custom indicator
 
-$day__control-check-indic-flat-bg-color:                          color( 'black 10' );
-$ngt__control-check-indic-flat-bg-color:                          color( 'white 10' );
+$day__ctrl-check__indic--flat-bg-color:                          color( 'black 10' );
+$ngt__ctrl-check__indic--flat-bg-color:                          color( 'white 10' );
 
-$day__control-check-indic-flat-border-color:                      transparent;
-$ngt__control-check-indic-flat-border-color:                      transparent;
+$day__ctrl-check__indic--flat-border-color:                      transparent;
+$ngt__ctrl-check__indic--flat-border-color:                      transparent;
 
 $day__control-check-label-custom-hover__indic-flat-bg-color:      color( 'black 20' );
 $ngt__control-check-label-custom-hover__indic-flat-bg-color:      color( 'white 20' );
@@ -523,42 +486,42 @@ $ngt__control-check-label-custom-active__indic-flat-border-color: transparent;
 $day__select-bg-color:           transparent;
 $ngt__select-bg-color:           transparent;
 
-$select-border-width:            $control-border-width;
-$select-border-style:            $control-border-style;
-$select-border-color:            $day__control-border-color;
-$ngt__select-border-color:       $ngt__control-border-color;
+$select-border-width:            $gen-border-width;
+$select-border-style:            $gen-border-style;
+$select-border-color:            $day__gen-border-color;
+$ngt__select-border-color:       $ngt__gen-border-color;
 
-$select-border-radius:           $control-border-radius;
+$select-border-radius:           $gen-border-radius;
 
-$day__select-color:              $day__control-color;
-$ngt__select-color:              $ngt__control-color;
+$day__select-color:              $day__gen-color;
+$ngt__select-color:              $ngt__gen-color;
 
 $select-font-size:               $font-size-base;
 $select-line-height:             $control-line-height;
-$select-padding-y:               $control-padding-y;
-$select-padding-x:               $control-padding-x;
+$select-padding-y:               $gen-padding-y;
+$select-padding-x:               $gen-padding-x;
 
-$day__select-focus-border-color: $day__control-focus-border-color;
-$ngt__select-focus-border-color: $ngt__control-focus-border-color;
+$day__select-focus-border-color: $day__gen-focus-border-color;
+$ngt__select-focus-border-color: $ngt__gen-focus-border-color;
 
-$day__select-focus-box-shadow:   $day__control-focus-box-shadow;
-$ngt__select-focus-box-shadow:   $ngt__control-focus-box-shadow;
+$day__select-focus-box-shadow:   $day__gen-focus-box-shadow;
+$ngt__select-focus-box-shadow:   $ngt__gen-focus-box-shadow;
 
-$day__select-hover-border-color: $day__control-hover-border-color;
-$ngt__select-hover-border-color: $ngt__control-hover-border-color;
+$day__select-hover-border-color: $day__gen-hover-border-color;
+$ngt__select-hover-border-color: $ngt__gen-hover-border-color;
 
-$select-sm-border-radius:        $control-border-radius;
+$select-sm-border-radius:        $gen-border-radius;
 $select-sm-font-size:            $font-size-sm;
-$select-sm-padding-y:            $control-sm-padding-y;
-$select-sm-padding-x:            $control-sm-padding-x;
+$select-sm-padding-y:            $gen-sm-padding-y;
+$select-sm-padding-x:            $gen-sm-padding-x;
 
-$select-lg-border-radius:        $control-border-radius;
+$select-lg-border-radius:        $gen-border-radius;
 $select-lg-font-size:            $control-lg-font-size;
-$select-lg-padding-y:            $control-lg-padding-y;
-$select-lg-padding-x:            $control-lg-padding-x;
+$select-lg-padding-y:            $gen-lg-padding-y;
+$select-lg-padding-x:            $gen-lg-padding-x;
 
-$day__select__option-color:      $day__control-color;
-$ngt__select__option-color:      $day__control-color;
+$day__select__option-color:      $day__gen-color;
+$ngt__select__option-color:      $day__gen-color;
 
 
 // Custom select menu.
@@ -574,19 +537,19 @@ $select-custom-after-height:            0.4em;
 $select-custom-after-top:               50%;
 $select-custom-after-right:             1em;
 $select-custom-after-transform:         rotate( -45deg );
-$select-custom-padding-right:           $select-custom-after-width + ( $control-padding-x * 2 );
+$select-custom-padding-right:           $select-custom-after-width + ( $gen-padding-x * 2 );
 
 $select-custom-sm-after-margin-top:     $select-custom-after-margin-top / 1.25;
 $select-custom-sm-after-width:          $select-custom-after-width / 1.25;
 $select-custom-sm-after-height:         $select-custom-after-height / 1.25;
 $select-custom-sm-after-right:          $select-custom-after-right - 0.25;
-$select-custom-sm-padding-right:        $select-custom-sm-after-width + ( $control-sm-padding-x * 2 );
+$select-custom-sm-padding-right:        $select-custom-sm-after-width + ( $gen-sm-padding-x * 2 );
 
 $select-custom-lg-after-margin-top:     $select-custom-after-margin-top * 1.5;
 $select-custom-lg-after-width:          $select-custom-after-width * 1.5;
 $select-custom-lg-after-height:         $select-custom-after-height * 1.5;
 $select-custom-lg-after-right:          $select-custom-after-right + 0.25;
-$select-custom-lg-padding-right:        $select-custom-lg-after-width + ( $control-lg-padding-x * 2 );
+$select-custom-lg-padding-right:        $select-custom-lg-after-width + ( $gen-lg-padding-x * 2 );
 
 
 // Select menu arrow icon.
@@ -648,8 +611,8 @@ $ls-inline__item-not-last-margin-right: $spacing-unit-half;
 $switch-label-height:                       2.438em;
 $switch-label-width:                        $switch-label-height * 2;
 
-$day__switch-label-bg-color:                $day__control-border-color;
-$ngt__switch-label-bg-color:                $ngt__control-border-color;
+$day__switch-label-bg-color:                $day__gen-border-color;
+$ngt__switch-label-bg-color:                $ngt__gen-border-color;
 
 $switch-label-border:                       none;
 $switch-label-border-radius:                $switch-label-height / 2;
@@ -1179,8 +1142,8 @@ $drawer-open-box-shadow:       0  8px 10px -5px rgba( 0, 0, 0, 0.2 ),
 $menu__item-margin:                     0 0 0.125em;
 $menu__item-padding-y:                  0;
 $menu__item-padding-x:                  0;
-$menu__a-padding-y:                     $control-padding-y;
-$menu__a-padding-x:                     $control-padding-x;
+$menu__a-padding-y:                     $gen-padding-y;
+$menu__a-padding-x:                     $gen-padding-x;
 
 $day__menu__item-active__a-color:       $day__body-color;
 $ngt__menu__item-active__a-color:       $ngt__body-color;
