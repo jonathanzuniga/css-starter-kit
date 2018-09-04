@@ -132,7 +132,19 @@ function updateMobileMenuWrapSize() {
 
 	wrap.css( 'overflow', 'hidden' );
 
-	let bigWrap = wrap.width() * 2.5;
+	let wrapWidth = wrap.width();
+	let wrapHeight = wrap.height();
+	let bigWrap = 0;
+
+	if ( wrapWidth > wrapHeight ) {
+
+		bigWrap = wrapWidth * 3;
+
+	} else {
+
+		bigWrap = wrapHeight * 3;
+
+	}
 
 	$( '.burger__circle' ).css( {
 		'width': bigWrap,
