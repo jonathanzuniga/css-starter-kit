@@ -94,7 +94,7 @@
 
 .mobile-menu {
 	position: relative;
-	z-index: 1000;
+	z-index: $mobile-menu-z-index;
 }
 
 .burger {
@@ -104,8 +104,8 @@
 
 	display: flex;
 
-	width: 4.5rem;
-	height: 4.5rem;
+	width: $burger-width;
+	height: $burger-height;
 	padding: 0;
 
 	cursor: pointer;
@@ -121,7 +121,7 @@
 
 	&::after {
 		position: absolute;
-		z-index: 999;
+		z-index: #{ $mobile-menu-z-index - 1 };
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -141,8 +141,8 @@
 
 	display: flex;
 
-	width: 4.5rem;
-	height: 4.5rem;
+	width: $burger-width;
+	height: $burger-width;
 
 	align-items: center;
 	justify-content: center;
@@ -181,7 +181,7 @@
 				-webkit-transform 0.5s cubic-bezier( 0.19, 1, 0.22, 1 );
 	transition:         transform 0.5s cubic-bezier( 0.19, 1, 0.22, 1 );
 
-	background-color: #fff;
+	background-color: $burger__line-bg-color;
 
 	will-change: transform;
 
@@ -227,7 +227,7 @@
 			transform: scale( 0 );
 
 	border-radius: 50%;
-	background-color: color( 'orchid' );
+	background-color: $burger__circle-bg-color;
 
 	will-change: transform;
 }
@@ -243,13 +243,13 @@
 
 	display: block;
 
-	width: 4.5rem;
-	height: 4.5rem;
+	width: $burger__img-wrap-width;
+	height: $burger__img-wrap-height;
 
 	// Si se agregara una imagen de fondo comentar el css code de abajo
 
 	border-radius: 50%;
-	background-color: color( 'orchid' );
+	background-color: $burger__img-wrap-bg-color;
 
 	// y reemplazar html por el siguiente:
 	// img(src='https://twinsoul.studio/menu-circle-blue.d423a17d.png', aria-hidden='true').burger__img
@@ -274,7 +274,7 @@
 .mobile-menu__nav {
 	position: fixed;
 	z-index: 2;
-	top: 40%;
+	top: $mobile-menu__nav-top;
 	left: 0;
 
 	width: 100%;
@@ -288,11 +288,11 @@
 }
 
 .mobile-menu__a {
-	font-size: 2.50em;
+	font-size: $mobile-menu__a-font-size;
 
 	display: block;
 
-	margin-bottom: 0.5em;
+	margin-bottom: $mobile-menu__a-margin-bottom;
 
 	transition:           opacity 0.5s cubic-bezier( 0.23, 1, 0.32, 1 ),
 				-webkit-transform 0.6s cubic-bezier( 0.23, 1, 0.32, 1 );
@@ -304,7 +304,7 @@
 	-webkit-transform: translateX( 25px );
 			transform: translateX( 25px );
 	text-decoration: none;
-	letter-spacing: 0.06em;
+	// letter-spacing: 0.06em;
 	text-transform: uppercase;
 
 	opacity: 0;
