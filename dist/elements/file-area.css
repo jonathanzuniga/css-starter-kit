@@ -1,21 +1,21 @@
 @charset "UTF-8";
 /**
  * File area:
- * `.file-area`
+ * `.farea`
  *
  *     @example
- *     div.file-area
+ *     div.farea
  *         input(id='eg-file', title='Add a file', type='file', required)
- *         div.file-area__bg
+ *         div.farea__bg
  *         p.h2.m-top-0.txtc-gray-25 Drag file here
  *         p.txtc-gray-25 – or –
  *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
  */
-.file-area {
+.farea {
   padding: 6.25em 1em;
   position: relative;
   text-align: center; }
-  .file-area [type=file] {
+  .farea [type=file] {
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -25,13 +25,13 @@
     bottom: 0;
     left: 0;
     z-index: 1; }
-    .file-area [type=file]:focus + .file-area__bg {
+    .farea [type=file]:focus + .farea__bg {
       background-color: none; }
-    .file-area [type=file]:valid + .file-area__bg {
+    .farea [type=file]:valid + .farea__bg {
       background-color: rgba(0, 0, 0, 0.1); }
-    .file-area [type=file]:hover + .file-area__bg {
+    .farea [type=file]:hover + .farea__bg {
       background-color: rgba(0, 0, 0, 0.05); }
-  .file-area .file-area__bg {
+  .farea .farea__bg {
     background-color: rgba(0, 0, 0, 0.025);
     border-radius: 0.25rem;
     position: absolute;
@@ -43,23 +43,23 @@
     left: 0;
     transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
     z-index: -1; }
-  .file-area:hover .file-area__bg {
+  .farea:hover .farea__bg {
     background-color: rgba(0, 0, 0, 0.05); }
-  .file-area label {
+  .farea label {
     position: relative;
     z-index: 1; }
 
-.night .file-area [type=file]:focus + .file-area__bg {
+.night .farea [type=file]:focus + .farea__bg {
   background-color: none; }
 
-.night .file-area [type=file]:valid + .file-area__bg {
+.night .farea [type=file]:valid + .farea__bg {
   background-color: rgba(255, 255, 255, 0.1); }
 
-.night .file-area [type=file]:hover + .file-area__bg {
+.night .farea [type=file]:hover + .farea__bg {
   background-color: rgba(255, 255, 255, 0.05); }
 
-.night .file-area .file-area__bg {
+.night .farea .farea__bg {
   background-color: rgba(255, 255, 255, 0.025); }
 
-.night .file-area:hover .file-area__bg {
+.night .farea:hover .farea__bg {
   background-color: rgba(255, 255, 255, 0.05); }

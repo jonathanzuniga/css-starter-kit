@@ -36,7 +36,7 @@ $font-weight-base:       400;
 $line-height-base:       25px !default;
 
 $spacing-unit-base:      2em; // 32px
-$spacing-unit-half:      $spacing-unit-base / 2; // 1.0em (16px)
+$spacing-unit-half:      $spacing-unit-base / 2; // 1em   (16px)
 $spacing-unit-quarter:   $spacing-unit-base / 4; // 0.5em  (8px)
 
 $line-height-ratio:      $line-height-base / $font-size-base;
@@ -183,73 +183,73 @@ $box-border-radius:     $border-radius-base;
 
 // Generic values, used by form elements.
 
-$gen-hover-amount:              12%;
-$gen-active-amount:             22%;
+$el-hover-amount:              12%;
+$el-active-amount:             22%;
 
-$gen-border-width:              0.063rem;
-$gen-border-style:              solid;
-$day__gen-border-color:         color( 'black 20' );
-$ngt__gen-border-color:         color( 'white 20' );
+$el-border-width:              0.063rem;
+$el-border-style:              solid;
+$day__el-border-color:         color( 'black 20' );
+$ngt__el-border-color:         color( 'white 20' );
 
-$day__gen-hover-border-color:   color( 'black 30' );
-$ngt__gen-hover-border-color:   color( 'white 30' );
+$day__el-hover-border-color:   color( 'black 30' );
+$ngt__el-hover-border-color:   color( 'white 30' );
 
-$day__gen-hover-bg-color:       transparent;
-$ngt__gen-hover-bg-color:       transparent;
+$day__el-hover-bg-color:       transparent;
+$ngt__el-hover-bg-color:       transparent;
 
-$gen-border-radius:             $border-radius-base;
+$el-border-radius:             $border-radius-base;
 
-$day__gen-color:                $day__body-color;
-$ngt__gen-color:                $ngt__body-color;
+$day__el-color:                $day__body-color;
+$ngt__el-color:                $ngt__body-color;
 
 $control-line-height:               inherit;
 
-$gen-padding-y:                 0.250em;
-$gen-padding-x:                 0.750em;
+$el-padding-y:                 0.250em;
+$el-padding-x:                 0.750em;
 
-$gen-sm-padding-y:              $gen-padding-y;
-$gen-sm-padding-x:              $gen-padding-x;
+$el-sm-padding-y:              $el-padding-y;
+$el-sm-padding-x:              $el-padding-x;
 
-$gen-lg-padding-y:              $gen-padding-y;
-$gen-lg-padding-x:              $gen-padding-x;
+$el-lg-padding-y:              $el-padding-y;
+$el-lg-padding-x:              $el-padding-x;
 
 $control-lg-font-size:          1.25em;
 
-$day__gen-invalid-border-color: color( 'pomegranate 30' );
-$ngt__gen-invalid-border-color: color( 'pomegranate 30' );
+$day__el-invalid-border-color: color( 'pomegranate 30' );
+$ngt__el-invalid-border-color: color( 'pomegranate 30' );
 
-$day__gen-focus-border-color:   color( 'orchid 30' );
-$ngt__gen-focus-border-color:   color( 'orchid 30' );
+$day__el-focus-border-color:   color( 'orchid 30' );
+$ngt__el-focus-border-color:   color( 'orchid 30' );
 
-$day__gen-focus-box-shadow:     inset 0 0 0 0.063rem $day__gen-focus-border-color;
-$ngt__gen-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__gen-focus-border-color;
+$day__el-focus-box-shadow:     inset 0 0 0 0.063rem $day__el-focus-border-color;
+$ngt__el-focus-box-shadow:     inset 0 0 0 0.063rem $ngt__el-focus-border-color;
 
-$day__gen-active-border-color:  color( 'orchid 30' );
-$ngt__gen-active-border-color:  color( 'orchid 30' );
+$day__el-active-border-color:  color( 'orchid 30' );
+$ngt__el-active-border-color:  color( 'orchid 30' );
 
 
 // Button
 
-$button-border-width:           $gen-border-width;
-$button-border-style:           $gen-border-style;
-$button-border-color:           transparent;
+$btn-border-width:           $el-border-width;
+$btn-border-style:           $el-border-style;
+$btn-border-color:           transparent;
 
-$button-border-radius:          $gen-border-radius;
-$button-font-size:              $font-size-base;
-$button-font-weight:            500;
-$button-line-height:            $control-line-height;
+$btn-border-radius:          $el-border-radius;
+$btn-font-size:              $font-size-base;
+$btn-font-weight:            500;
+$btn-line-height:            $control-line-height;
 
-$button-padding-y:              $gen-padding-y;
-$button-padding-x:              $gen-padding-x;
+$btn-padding-y:              $el-padding-y;
+$btn-padding-x:              $el-padding-x;
 
-$button-transition:             $transition-base;
+$btn-transition:             $transition-base;
 
 
 // Buttons style
 //
 // name, bg color, night bg color, text color, night text color, light colors on hover/active state?
 
-$buttons: (
+$btns: (
     'primary'   color( 'orchid' )   color( 'orchid' )   color( 'white' ) color( 'white' ) '',
     'secondary' color( 'black 40' ) color( 'white 20' ) color( 'white' ) color( 'white' ) ''
 );
@@ -257,53 +257,53 @@ $buttons: (
 
 // Outline button
 
-$button-outline-border-transparentize-amount: 0;
+$btn-outline-border-transparentize-amount: 0;
 
 
 // Disabled button
 
-$button-disabled-opacity: 0.6;
+$btn-disabled-opacity: 0.6;
 
 
 // Button link
 
-$day__button-link-hover-bg-color: color( 'black 05' );
-$ngt__button-link-hover-bg-color: color( 'white 05' );
+$day__btn-link-hover-bg-color: color( 'black 05' );
+$ngt__btn-link-hover-bg-color: color( 'white 05' );
 
 
 // Small button
 
-$button-sm-border-radius: $gen-border-radius;
-$button-sm-font-size:     $font-size-sm;
-$button-sm-padding-y:     $gen-sm-padding-y;
-$button-sm-padding-x:     $gen-sm-padding-x;
+$btn-sm-border-radius: $el-border-radius;
+$btn-sm-font-size:     $font-size-sm;
+$btn-sm-padding-y:     $el-sm-padding-y;
+$btn-sm-padding-x:     $el-sm-padding-x;
 
 
 // Large button
 
-$button-lg-border-radius: $gen-border-radius;
-$button-lg-font-size:     $control-lg-font-size;
-$button-lg-padding-y:     $gen-lg-padding-y;
-$button-lg-padding-x:     $gen-lg-padding-x;
+$btn-lg-border-radius: $el-border-radius;
+$btn-lg-font-size:     $control-lg-font-size;
+$btn-lg-padding-y:     $el-lg-padding-y;
+$btn-lg-padding-x:     $el-lg-padding-x;
 
 
 // File area
 
-$day__file-area-bg-color:       color( 'black 025' );
-$ngt__file-area-bg-color:       color( 'white 025' );
+$day__farea-bg-color:       color( 'black 025' );
+$ngt__farea-bg-color:       color( 'white 025' );
 
-$day__file-area-focus-bg-color: none;
-$ngt__file-area-focus-bg-color: none;
+$day__farea-focus-bg-color: none;
+$ngt__farea-focus-bg-color: none;
 
-$day__file-area-valid-bg-color: color( 'black 10' );
-$ngt__file-area-valid-bg-color: color( 'white 10' );
+$day__farea-valid-bg-color: color( 'black 10' );
+$ngt__farea-valid-bg-color: color( 'white 10' );
 
-$day__file-area-hover-bg-color: color( 'black 05' );
-$ngt__file-area-hover-bg-color: color( 'white 05' );
+$day__farea-hover-bg-color: color( 'black 05' );
+$ngt__farea-hover-bg-color: color( 'white 05' );
 
-$file-area-border-radius:       $border-radius-base;
-$file-area-padding:             6.25em $spacing-unit-half;
-$file-area-transition:          $transition-base;
+$farea-border-radius:       $border-radius-base;
+$farea-padding:             6.25em $spacing-unit-half;
+$farea-transition:          $transition-base;
 
 
 // Label
@@ -316,26 +316,26 @@ $lbl-font-size: px_to_em( $font-size-base );
 $day__input-bg-color:                transparent;
 $ngt__input-bg-color:                transparent;
 
-$input-border-width:                 $gen-border-width;
-$input-border-style:                 $gen-border-style;
-$day__input-border-color:            $day__gen-border-color;
-$ngt__input-border-color:            $ngt__gen-border-color;
+$input-border-width:                 $el-border-width;
+$input-border-style:                 $el-border-style;
+$day__input-border-color:            $day__el-border-color;
+$ngt__input-border-color:            $ngt__el-border-color;
 
-$input-border-radius:                $gen-border-radius;
-$day__input-color:                   $day__gen-color;
-$ngt__input-color:                   $ngt__gen-color;
+$input-border-radius:                $el-border-radius;
+$day__input-color:                   $day__el-color;
+$ngt__input-color:                   $ngt__el-color;
 $input-font-size:                    $font-size-base;
 $input-line-height:                  $control-line-height;
-$input-padding-y:                    $gen-padding-y;
-$input-padding-x:                    $gen-padding-x;
+$input-padding-y:                    $el-padding-y;
+$input-padding-x:                    $el-padding-x;
 $input-transition:                   $transition-base;
 
 $day__input-focus-bg-color:          transparent;
 $ngt__input-focus-bg-color:          transparent;
-$day__input-focus-border-color:      $day__gen-focus-border-color;
-$ngt__input-focus-border-color:      $ngt__gen-focus-border-color;
-$day__input-focus-box-shadow:        $day__gen-focus-box-shadow;
-$ngt__input-focus-box-shadow:        $ngt__gen-focus-box-shadow;
+$day__input-focus-border-color:      $day__el-focus-border-color;
+$ngt__input-focus-border-color:      $ngt__el-focus-border-color;
+$day__input-focus-box-shadow:        $day__el-focus-box-shadow;
+$ngt__input-focus-box-shadow:        $ngt__el-focus-box-shadow;
 
 $day__input-placeholder-color:       color( 'black 30' );
 $ngt__input-placeholder-color:       color( 'white 30' );
@@ -345,32 +345,32 @@ $ngt__input-focus-placeholder-color: rgba( color( 'orchid 50' ), 0.5 );
 
 $input-placeholder-opacity:          1;
 
-$day__input-invalid-border-color:    $day__gen-invalid-border-color;
-$ngt__input-invalid-border-color:    $ngt__gen-invalid-border-color;
+$day__input-invalid-border-color:    $day__el-invalid-border-color;
+$ngt__input-invalid-border-color:    $ngt__el-invalid-border-color;
 
 $day__input-valid-border-color:      $day__input-border-color;
 $ngt__input-valid-border-color:      $ngt__input-border-color;
 
-$day__input-hover-border-color:      $day__gen-hover-border-color;
-$ngt__input-hover-border-color:      $ngt__gen-hover-border-color;
+$day__input-hover-border-color:      $day__el-hover-border-color;
+$ngt__input-hover-border-color:      $ngt__el-hover-border-color;
 
-$day__input-active-border-color:     $day__gen-active-border-color;
-$ngt__input-active-border-color:     $ngt__gen-active-border-color;
+$day__input-active-border-color:     $day__el-active-border-color;
+$ngt__input-active-border-color:     $ngt__el-active-border-color;
 
-$input--sm-border-radius:             $gen-border-radius;
+$input--sm-border-radius:             $el-border-radius;
 $input--sm-font-size:                 $font-size-sm;
-$input--sm-padding-y:                 $gen-sm-padding-y;
-$input--sm-padding-x:                 $gen-sm-padding-x;
+$input--sm-padding-y:                 $el-sm-padding-y;
+$input--sm-padding-x:                 $el-sm-padding-x;
 
-$input--lg-border-radius:             $gen-border-radius;
+$input--lg-border-radius:             $el-border-radius;
 $input--lg-font-size:                 $control-lg-font-size;
-$input--lg-padding-y:                 $gen-lg-padding-y;
-$input--lg-padding-x:                 $gen-lg-padding-x;
+$input--lg-padding-y:                 $el-lg-padding-y;
+$input--lg-padding-x:                 $el-lg-padding-x;
 
 
 // Form field
 
-$fld-margin-bottom: $spacing-unit-half;
+$fld-margin-bottom: 1em;
 
 
 // Flat input
@@ -407,161 +407,132 @@ $ctrl__icn-wrap__svg-height:     1.5rem;
 
 // Checkbox and radio
 
-$ctrl-check__input-margin-top: 0.5em;
-$ctrl-check__lbl-padding-left: 1.25em;
-
-
-// Inline checkbox and radio
-
-$ctrl-check--inline-margin-right: 1.25em;
+$ctrl--check__input-margin-top:   0.6em;
+$ctrl--check__label-padding-left: 1.25em;
 
 
 // Custom checkbox and radio
 
-$ctrl-check--custom-margin-bottom:                 0.5em;
-
-$ctrl-check--custom__ctrl-check__lbl-padding-left: 2em;
+$ctrl--custom-check-margin-bottom:                     0.5em;
+$ctrl--custom-check-margin-bottom__label-padding-left: 2em;
 
 
 // Custom checked indicator
 
-$tick-border-width:      0 0.125em 0.125em 0;
-$tick-border-style:      solid;
-$day__tick-border-color: color( 'white' );
-$ngt__tick-border-color: color( 'white' );
+$tick-border-width:             0 0.125em 0.125em 0;
+$tick-border-style:             solid;
+$day__tick-border-color:        color( 'white' );
+$ngt__tick-border-color:        color( 'white' );
 
-$tick-top:               0.188em;
-$tick-left:              0.375em;
+$tick-top:                      0.188em;
+$tick-left:                     0.375em;
 
-$tick-transform:         rotate(45deg);
+$tick-transform:                rotate(45deg);
 
-$tick-width:             0.313em; //  5px
-$tick-height:            0.625em; // 10px
+$tick-width:                    0.313em; //  5px
+$tick-height:                   0.625em; // 10px
 
-$day__ctrl-check__indic-bg-color:          transparent;
-$ngt__ctrl-check__indic-bg-color:          transparent;
+$day__indic-bg-color:           transparent;
+$ngt__indic-bg-color:           transparent;
 
-$ctrl-check__indic-border-width:           $gen-border-width;
-$ctrl-check__indic-border-style:           $gen-border-style;
+$indic-border-width:            $el-border-width;
+$indic-border-style:            $el-border-style;
 
-$day__ctrl-check__indic-border-color:      $day__gen-border-color;
-$ngt__ctrl-check__indic-border-color:      $ngt__gen-border-color;
+$day__indic-border-color:       $day__el-border-color;
+$ngt__indic-border-color:       $ngt__el-border-color;
 
-$ctrl-check__indic-margin-top:             0.125em;
+$indic-margin-top:              0.125em;
 
-$ctrl-check__indic-width:                  1.25em;
-$ctrl-check__indic-height:                 1.25em;
+$indic-width:                   1.25em;
+$indic-height:                  1.25em;
 
-$ctrl-check__indic--checkbox-border-radius: $gen-border-radius;
+$indic--checkbox-border-radius: $el-border-radius;
 
 
 // Flat custom indicator
 
-$day__ctrl-check__indic--flat-bg-color: color( 'black 10' );
-$ngt__ctrl-check__indic--flat-bg-color: color( 'white 10' );
-
-
-// Inline custom checkbox and radio
-
-$ctrl-check-inline-custom-margin-right: 1.5em;
+$day__ctrl--custom-check--flat__indic-bg-color: color( 'black 10' );
+$ngt__ctrl--custom-check--flat__indic-bg-color: color( 'white 10' );
 
 
 // Select menu
 
-$day__select-bg-color:           transparent;
-$ngt__select-bg-color:           transparent;
+$day__sel-bg-color:           transparent;
+$ngt__sel-bg-color:           transparent;
 
-$select-border-width:            $gen-border-width;
-$select-border-style:            $gen-border-style;
-$select-border-color:            $day__gen-border-color;
-$ngt__select-border-color:       $ngt__gen-border-color;
+$sel-border-width:            $el-border-width;
+$sel-border-style:            $el-border-style;
+$sel-border-color:            $day__el-border-color;
+$ngt__sel-border-color:       $ngt__el-border-color;
 
-$select-border-radius:           $gen-border-radius;
+$sel-border-radius:           $el-border-radius;
 
-$day__select-color:              $day__gen-color;
-$ngt__select-color:              $ngt__gen-color;
+$day__sel-color:              $day__el-color;
+$ngt__sel-color:              $ngt__el-color;
 
-$select-font-size:               $font-size-base;
-$select-line-height:             $control-line-height;
-$select-padding-y:               $gen-padding-y;
-$select-padding-x:               $gen-padding-x;
+$sel-font-size:               $font-size-base;
+$sel-line-height:             $control-line-height;
+$sel-padding-y:               $el-padding-y;
+$sel-padding-x:               $el-padding-x;
 
-$day__select-focus-border-color: $day__gen-focus-border-color;
-$ngt__select-focus-border-color: $ngt__gen-focus-border-color;
+$day__sel-focus-border-color: $day__el-focus-border-color;
+$ngt__sel-focus-border-color: $ngt__el-focus-border-color;
 
-$day__select-focus-box-shadow:   $day__gen-focus-box-shadow;
-$ngt__select-focus-box-shadow:   $ngt__gen-focus-box-shadow;
+$day__sel-focus-box-shadow:   $day__el-focus-box-shadow;
+$ngt__sel-focus-box-shadow:   $ngt__el-focus-box-shadow;
 
-$day__select-hover-border-color: $day__gen-hover-border-color;
-$ngt__select-hover-border-color: $ngt__gen-hover-border-color;
+$day__sel-hover-border-color: $day__el-hover-border-color;
+$ngt__sel-hover-border-color: $ngt__el-hover-border-color;
 
-$select-sm-border-radius:        $gen-border-radius;
-$select-sm-font-size:            $font-size-sm;
-$select-sm-padding-y:            $gen-sm-padding-y;
-$select-sm-padding-x:            $gen-sm-padding-x;
+$sel--sm-border-radius:       $el-border-radius;
+$sel--sm-font-size:           $font-size-sm;
+$sel--sm-padding-y:           $el-sm-padding-y;
+$sel--sm-padding-x:           $el-sm-padding-x;
 
-$select-lg-border-radius:        $gen-border-radius;
-$select-lg-font-size:            $control-lg-font-size;
-$select-lg-padding-y:            $gen-lg-padding-y;
-$select-lg-padding-x:            $gen-lg-padding-x;
+$sel--lg-border-radius:       $el-border-radius;
+$sel--lg-font-size:           $control-lg-font-size;
+$sel--lg-padding-y:           $el-lg-padding-y;
+$sel--lg-padding-x:           $el-lg-padding-x;
 
-$day__select__option-color:      $day__gen-color;
-$ngt__select__option-color:      $day__gen-color;
+$day__sel__option-color:      $day__el-color;
+$ngt__sel__option-color:      $day__el-color;
 
 
 // Custom select menu.
 
-$select-custom-after-border-width:      0.125em;
-$select-custom-after-border-style:      solid;
-$day__select-custom-after-border-color: $day__body-color;
-$ngt__select-custom-after-border-color: $ngt__body-color;
+$ctrl--custom-sel-after-border-width:      0.125em;
+$ctrl--custom-sel-after-border-style:      solid;
+$day__ctrl--custom-sel-after-border-color: $day__body-color;
+$ngt__ctrl--custom-sel-after-border-color: $ngt__body-color;
 
-$select-custom-after-margin-top:       -0.3em;
-$select-custom-after-width:             0.4em;
-$select-custom-after-height:            0.4em;
-$select-custom-after-top:               50%;
-$select-custom-after-right:             1em;
-$select-custom-after-transform:         rotate( -45deg );
-$select-custom-padding-right:           $select-custom-after-width + ( $gen-padding-x * 2 );
+$ctrl--custom-sel-after-margin-top:       -0.3em;
+$ctrl--custom-sel-after-width:             0.4em;
+$ctrl--custom-sel-after-height:            0.4em;
+$ctrl--custom-sel-after-top:               50%;
+$ctrl--custom-sel-after-right:             1em;
+$ctrl--custom-sel-after-transform:         rotate( -45deg );
+$ctrl--custom-sel__sel-padding-right:      $ctrl--custom-sel-after-width + ( $el-padding-x * 2 );
 
-$select-custom-sm-after-margin-top:     $select-custom-after-margin-top / 1.25;
-$select-custom-sm-after-width:          $select-custom-after-width / 1.25;
-$select-custom-sm-after-height:         $select-custom-after-height / 1.25;
-$select-custom-sm-after-right:          $select-custom-after-right - 0.25;
-$select-custom-sm-padding-right:        $select-custom-sm-after-width + ( $gen-sm-padding-x * 2 );
+$sel-custom-sm-after-margin-top:     $ctrl--custom-sel-after-margin-top / 1.25;
+$sel-custom-sm-after-width:          $ctrl--custom-sel-after-width / 1.25;
+$sel-custom-sm-after-height:         $ctrl--custom-sel-after-height / 1.25;
+$sel-custom-sm-after-right:          $ctrl--custom-sel-after-right - 0.25;
+$sel-custom-sm-padding-right:        $sel-custom-sm-after-width + ( $el-sm-padding-x * 2 );
 
-$select-custom-lg-after-margin-top:     $select-custom-after-margin-top * 1.5;
-$select-custom-lg-after-width:          $select-custom-after-width * 1.5;
-$select-custom-lg-after-height:         $select-custom-after-height * 1.5;
-$select-custom-lg-after-right:          $select-custom-after-right + 0.25;
-$select-custom-lg-padding-right:        $select-custom-lg-after-width + ( $gen-lg-padding-x * 2 );
-
-
-// Select menu arrow icon.
-
-// Se habilita si se agrega la url del icono, se recomienda en formato svg.
-
-$select-icon-bg-image:       none;
-$select-icon-focus-bg-image: none;
-
-$select-icon-bg-position:    calc( 100% - #{ $spacing-unit-quarter / 2 } ) center;
-$select-icon-bg-size:        $spacing-unit-base;
-$select-icon-margin-right:   $spacing-unit-half;
+$sel-custom-lg-after-margin-top:     $ctrl--custom-sel-after-margin-top * 1.5;
+$sel-custom-lg-after-width:          $ctrl--custom-sel-after-width * 1.5;
+$sel-custom-lg-after-height:         $ctrl--custom-sel-after-height * 1.5;
+$sel-custom-lg-after-right:          $ctrl--custom-sel-after-right + 0.25;
+$sel-custom-lg-padding-right:        $sel-custom-lg-after-width + ( $el-lg-padding-x * 2 );
 
 
 // Flat select menu
 
-$day__select-flat-bg-color:           color( 'black 05' );
-$ngt__select-flat-bg-color:           color( 'white 05' );
+$day__sel--flat-bg-color:           color( 'black 05' );
+$ngt__sel--flat-bg-color:           color( 'white 05' );
 
-$day__select-flat-hover-bg-color:     color( 'black 075' );
-$ngt__select-flat-hover-bg-color:     color( 'white 075' );
-
-$day__select-flat-border-color:       transparent;
-$ngt__select-flat-border-color:       transparent;
-
-$day__select-flat-hover-border-color: transparent;
-$ngt__select-flat-hover-border-color: transparent;
+$day__sel--flat-hover-bg-color:     color( 'black 075' );
+$ngt__sel--flat-hover-bg-color:     color( 'white 075' );
 
 
 // Image
@@ -596,8 +567,8 @@ $ls-inline__item-not-last-margin-right: $spacing-unit-half;
 $switch-label-height:                       2.438em;
 $switch-label-width:                        $switch-label-height * 2;
 
-$day__switch-label-bg-color:                $day__gen-border-color;
-$ngt__switch-label-bg-color:                $ngt__gen-border-color;
+$day__switch-label-bg-color:                $day__el-border-color;
+$ngt__switch-label-bg-color:                $ngt__el-border-color;
 
 $switch-label-border:                       none;
 $switch-label-border-radius:                $switch-label-height / 2;
@@ -1052,7 +1023,7 @@ $ngt__card-foot-bg-color:              #272727;
 $card-foot-border-bottom-right-radius: $border-radius-base;
 $card-foot-border-bottom-left-radius:  $border-radius-base;
 
-$card-foot-button-not-first-child-margin-left: 0.625rem;
+$card-foot-btn-not-first-child-margin-left: 0.625rem;
 
 
 // Collapse
@@ -1127,8 +1098,8 @@ $drawer-open-box-shadow:       0  8px 10px -5px rgba( 0, 0, 0, 0.2 ),
 $menu__item-margin:                     0 0 0.125em;
 $menu__item-padding-y:                  0;
 $menu__item-padding-x:                  0;
-$menu__a-padding-y:                     $gen-padding-y;
-$menu__a-padding-x:                     $gen-padding-x;
+$menu__a-padding-y:                     $el-padding-y;
+$menu__a-padding-x:                     $el-padding-x;
 
 $day__menu__item-active__a-color:       $day__body-color;
 $ngt__menu__item-active__a-color:       $ngt__body-color;

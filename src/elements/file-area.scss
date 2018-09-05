@@ -4,19 +4,19 @@
 
 /**
  * File area:
- * `.file-area`
+ * `.farea`
  *
  *     @example
- *     div.file-area
+ *     div.farea
  *         input(id='eg-file', title='Add a file', type='file', required)
- *         div.file-area__bg
+ *         div.farea__bg
  *         p.h2.m-top-0.txtc-gray-25 Drag file here
  *         p.txtc-gray-25 – or –
  *         label(for='eg-file').btn.btn--primary.btn--pill Choose file
  */
 
-.file-area {
-	padding: $file-area-padding;
+.farea {
+	padding: $farea-padding;
 	position: relative;
 	text-align: center;
 
@@ -34,22 +34,22 @@
 
 		z-index: 1;
 
-		&:focus + .file-area__bg {
-			background-color: $day__file-area-focus-bg-color;
+		&:focus + .farea__bg {
+			background-color: $day__farea-focus-bg-color;
 		}
 
-		&:valid + .file-area__bg {
-			background-color: $day__file-area-valid-bg-color;
+		&:valid + .farea__bg {
+			background-color: $day__farea-valid-bg-color;
 		}
 
-		&:hover + .file-area__bg {
-			background-color: $day__file-area-hover-bg-color;
+		&:hover + .farea__bg {
+			background-color: $day__farea-hover-bg-color;
 		}
 	}
 
-	.file-area__bg {
-		background-color: $day__file-area-bg-color;
-		border-radius: $file-area-border-radius;
+	.farea__bg {
+		background-color: $day__farea-bg-color;
+		border-radius: $farea-border-radius;
 
 		position: absolute;
 
@@ -61,12 +61,12 @@
 		bottom: 0;
 		left: 0;
 
-		transition: $file-area-transition;
+		transition: $farea-transition;
 		z-index: -1;
 	}
 
-	&:hover .file-area__bg {
-		background-color: $day__file-area-hover-bg-color;
+	&:hover .farea__bg {
+		background-color: $day__farea-hover-bg-color;
 	}
 
 	label {
@@ -75,26 +75,26 @@
 	}
 }
 
-.night .file-area {
+.night .farea {
 	[type=file] {
-		&:focus + .file-area__bg {
-			background-color: $ngt__file-area-focus-bg-color;
+		&:focus + .farea__bg {
+			background-color: $ngt__farea-focus-bg-color;
 		}
 
-		&:valid + .file-area__bg {
-			background-color: $ngt__file-area-valid-bg-color;
+		&:valid + .farea__bg {
+			background-color: $ngt__farea-valid-bg-color;
 		}
 
-		&:hover + .file-area__bg {
-			background-color: $ngt__file-area-hover-bg-color;
+		&:hover + .farea__bg {
+			background-color: $ngt__farea-hover-bg-color;
 		}
 	}
 
-	.file-area__bg {
-		background-color: $ngt__file-area-bg-color;
+	.farea__bg {
+		background-color: $ngt__farea-bg-color;
 	}
 
-	&:hover .file-area__bg {
-		background-color: $ngt__file-area-hover-bg-color;
+	&:hover .farea__bg {
+		background-color: $ngt__farea-hover-bg-color;
 	}
 }

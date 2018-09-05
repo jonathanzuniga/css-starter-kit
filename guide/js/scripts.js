@@ -128,7 +128,7 @@ function switchNightModeStart( element ) {
 
 function updateMobileMenuWrapSize() {
 
-	let wrap = $( '.doc-mobile-menu' ).closest( '.sg-canvas' );
+	let wrap = $( '.eg-mobile-menu' ).closest( '.sg-canvas' );
 
 	wrap.css( 'overflow', 'hidden' );
 

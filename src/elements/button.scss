@@ -7,18 +7,18 @@
  */
 
 .btn {
-	border-width: $button-border-width;
-	border-style: $button-border-style;
-	border-color: $button-border-color;
-	border-radius: $button-border-radius;
+	border-width: $btn-border-width;
+	border-style: $btn-border-style;
+	border-color: $btn-border-color;
+	border-radius: $btn-border-radius;
 	box-shadow: none;
 	display: inline-block;
-	font-size: $button-font-size;
-	font-weight: $button-font-weight;
-	line-height: $button-line-height;
-	padding: $button-padding-y $button-padding-x;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	padding: $btn-padding-y $btn-padding-x;
 	text-align: center;
-	transition: $button-transition;
+	transition: $btn-transition;
 	vertical-align: middle;
 	white-space: nowrap;
 
@@ -35,7 +35,7 @@
 	}
 }
 
-@each $name, $background-color, $night-background-color, $text-color, $night-text-color, $state-light-color in $buttons {
+@each $name, $background-color, $night-background-color, $text-color, $night-text-color, $state-light-color in $btns {
 
 	$name_ucf: str_ucfirst( $name );
 	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
@@ -51,7 +51,7 @@
 
 	.btn--#{ $name_r } {
 		background-color: $background-color;
-		border-color: $button-border-color;
+		border-color: $btn-border-color;
 		color: $text-color;
 
 		&:link,
@@ -65,7 +65,7 @@
 				background-color:
 					tint(
 						$background-color,
-						$gen-hover-amount
+						$el-hover-amount
 					);
 
 			} @else {
@@ -73,7 +73,7 @@
 				background-color:
 					shade(
 						$background-color,
-						$gen-hover-amount
+						$el-hover-amount
 					);
 			}
 
@@ -87,7 +87,7 @@
 				background-color:
 					tint(
 						$background-color,
-						$gen-active-amount
+						$el-active-amount
 					);
 
 			} @else {
@@ -95,7 +95,7 @@
 				background-color:
 					shade(
 						$background-color,
-						$gen-active-amount
+						$el-active-amount
 					);
 
 			}
@@ -114,7 +114,7 @@
 				background-color:
 					tint(
 						$night-background-color,
-						$gen-hover-amount
+						$el-hover-amount
 					);
 
 			} @else {
@@ -122,7 +122,7 @@
 				background-color:
 					shade(
 						$night-background-color,
-						$gen-hover-amount
+						$el-hover-amount
 					);
 
 			}
@@ -137,7 +137,7 @@
 				background-color:
 					tint(
 						$night-background-color,
-						$gen-active-amount
+						$el-active-amount
 					);
 
 			} @else {
@@ -145,7 +145,7 @@
 				background-color:
 					shade(
 						$night-background-color,
-						$gen-active-amount
+						$el-active-amount
 					);
 
 			}
@@ -161,7 +161,7 @@
 			border-color:
 				transparentize(
 					$background-color,
-					$button-outline-border-transparentize-amount
+					$btn-outline-border-transparentize-amount
 				);
 
 			color: $background-color;
@@ -177,7 +177,7 @@
 					background-color:
 						tint(
 							$background-color,
-							$gen-hover-amount
+							$el-hover-amount
 						);
 
 				} @else {
@@ -185,7 +185,7 @@
 					background-color:
 						shade(
 							$background-color,
-							$gen-hover-amount
+							$el-hover-amount
 						);
 
 				}
@@ -202,14 +202,14 @@
 					background-color:
 						tint(
 							$background-color,
-							$gen-active-amount
+							$el-active-amount
 						);
 					border-color: transparentize(
 						tint(
 							$background-color,
-							$gen-active-amount
+							$el-active-amount
 						),
-						$button-outline-border-transparentize-amount
+						$btn-outline-border-transparentize-amount
 					);
 
 				} @else {
@@ -217,7 +217,7 @@
 					background-color:
 						shade(
 							$background-color,
-							$gen-active-amount
+							$el-active-amount
 						);
 					border-color: transparent;
 
@@ -235,7 +235,7 @@
 			border-color:
 				transparentize(
 					$night-background-color,
-					$button-outline-border-transparentize-amount
+					$btn-outline-border-transparentize-amount
 				);
 			color: $night-background-color;
 
@@ -250,7 +250,7 @@
 					background-color:
 						tint(
 							$night-background-color,
-							$gen-hover-amount
+							$el-hover-amount
 						);
 
 				} @else {
@@ -258,7 +258,7 @@
 					background-color:
 						shade(
 							$night-background-color,
-							$gen-hover-amount
+							$el-hover-amount
 						);
 
 				}
@@ -275,14 +275,14 @@
 					background-color:
 						tint(
 							$night-background-color,
-							$gen-active-amount
+							$el-active-amount
 						);
 					border-color: transparentize(
 						tint(
 							$night-background-color,
-							$gen-active-amount
+							$el-active-amount
 						),
-						$button-outline-border-transparentize-amount
+						$btn-outline-border-transparentize-amount
 					);
 
 				} @else {
@@ -290,7 +290,7 @@
 					background-color:
 						shade(
 							$night-background-color,
-							$gen-active-amount
+							$el-active-amount
 						);
 					border-color: transparent;
 
@@ -344,7 +344,7 @@
 	}
 
 	&:hover {
-		background-color: $day__button-link-hover-bg-color;
+		background-color: $day__btn-link-hover-bg-color;
 		color: $day__a-hover-color;
 		text-decoration: $a-hover-text-decoration;
 	}
@@ -365,7 +365,7 @@
 	}
 
 	&:hover {
-		background-color: $ngt__button-link-hover-bg-color;
+		background-color: $ngt__btn-link-hover-bg-color;
 		color: $ngt__a-hover-color;
 	}
 
@@ -385,15 +385,15 @@
  */
 
 .btn--sm {
-	border-radius: $button-sm-border-radius;
-	font-size: $button-sm-font-size;
-	padding: $button-sm-padding-y $button-sm-padding-x;
+	border-radius: $btn-sm-border-radius;
+	font-size: $btn-sm-font-size;
+	padding: $btn-sm-padding-y $btn-sm-padding-x;
 }
 
 .btn--lg {
-	border-radius: $button-lg-border-radius;
-	font-size: $button-lg-font-size;
-	padding: $button-lg-padding-y $button-lg-padding-x;
+	border-radius: $btn-lg-border-radius;
+	font-size: $btn-lg-font-size;
+	padding: $btn-lg-padding-y $btn-lg-padding-x;
 }
 
 /**
@@ -441,7 +441,7 @@
 .btn {
 	&[disabled],
 	&--disabled {
-		opacity: $button-disabled-opacity;
+		opacity: $btn-disabled-opacity;
 		pointer-events: none;
 
 		-webkit-user-select: none;
