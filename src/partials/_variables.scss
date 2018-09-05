@@ -202,7 +202,7 @@ $el-border-radius:             $border-radius-base;
 $day__el-color:                $day__body-color;
 $ngt__el-color:                $ngt__body-color;
 
-$control-line-height:               inherit;
+$el-line-height:               inherit;
 
 $el-padding-y:                 0.250em;
 $el-padding-x:                 0.750em;
@@ -213,7 +213,7 @@ $el-sm-padding-x:              $el-padding-x;
 $el-lg-padding-y:              $el-padding-y;
 $el-lg-padding-x:              $el-padding-x;
 
-$control-lg-font-size:          1.25em;
+$el-lg-font-size:          1.25em;
 
 $day__el-invalid-border-color: color( 'pomegranate 30' );
 $ngt__el-invalid-border-color: color( 'pomegranate 30' );
@@ -237,7 +237,7 @@ $btn-border-color:           transparent;
 $btn-border-radius:          $el-border-radius;
 $btn-font-size:              $font-size-base;
 $btn-font-weight:            500;
-$btn-line-height:            $control-line-height;
+$btn-line-height:            $el-line-height;
 
 $btn-padding-y:              $el-padding-y;
 $btn-padding-x:              $el-padding-x;
@@ -250,8 +250,8 @@ $btn-transition:             $transition-base;
 // name, bg color, night bg color, text color, night text color, light colors on hover/active state?
 
 $btns: (
-    'primary'   color( 'orchid' )   color( 'orchid' )   color( 'white' ) color( 'white' ) '',
-    'secondary' color( 'black 40' ) color( 'white 20' ) color( 'white' ) color( 'white' ) ''
+    'primary'   color( 'orchid' )   color( 'orchid' )   #fff #fff '',
+    'secondary' color( 'black 40' ) color( 'white 20' ) #fff #fff ''
 );
 
 
@@ -282,7 +282,7 @@ $btn-sm-padding-x:     $el-sm-padding-x;
 // Large button
 
 $btn-lg-border-radius: $el-border-radius;
-$btn-lg-font-size:     $control-lg-font-size;
+$btn-lg-font-size:     $el-lg-font-size;
 $btn-lg-padding-y:     $el-lg-padding-y;
 $btn-lg-padding-x:     $el-lg-padding-x;
 
@@ -325,7 +325,7 @@ $input-border-radius:                $el-border-radius;
 $day__input-color:                   $day__el-color;
 $ngt__input-color:                   $ngt__el-color;
 $input-font-size:                    $font-size-base;
-$input-line-height:                  $control-line-height;
+$input-line-height:                  $el-line-height;
 $input-padding-y:                    $el-padding-y;
 $input-padding-x:                    $el-padding-x;
 $input-transition:                   $transition-base;
@@ -363,7 +363,7 @@ $input--sm-padding-y:                 $el-sm-padding-y;
 $input--sm-padding-x:                 $el-sm-padding-x;
 
 $input--lg-border-radius:             $el-border-radius;
-$input--lg-font-size:                 $control-lg-font-size;
+$input--lg-font-size:                 $el-lg-font-size;
 $input--lg-padding-y:                 $el-lg-padding-y;
 $input--lg-padding-x:                 $el-lg-padding-x;
 
@@ -421,8 +421,8 @@ $ctrl--custom-check-margin-bottom__label-padding-left: 2em;
 
 $tick-border-width:             0 0.125em 0.125em 0;
 $tick-border-style:             solid;
-$day__tick-border-color:        color( 'white' );
-$ngt__tick-border-color:        color( 'white' );
+$day__tick-border-color:        #fff;
+$ngt__tick-border-color:        #fff;
 
 $tick-top:                      0.188em;
 $tick-left:                     0.375em;
@@ -471,7 +471,7 @@ $day__sel-color:              $day__el-color;
 $ngt__sel-color:              $ngt__el-color;
 
 $sel-font-size:               $font-size-base;
-$sel-line-height:             $control-line-height;
+$sel-line-height:             $el-line-height;
 $sel-padding-y:               $el-padding-y;
 $sel-padding-x:               $el-padding-x;
 
@@ -490,7 +490,7 @@ $sel--sm-padding-y:           $el-sm-padding-y;
 $sel--sm-padding-x:           $el-sm-padding-x;
 
 $sel--lg-border-radius:       $el-border-radius;
-$sel--lg-font-size:           $control-lg-font-size;
+$sel--lg-font-size:           $el-lg-font-size;
 $sel--lg-padding-y:           $el-lg-padding-y;
 $sel--lg-padding-x:           $el-lg-padding-x;
 
@@ -505,7 +505,7 @@ $ctrl--custom-sel-after-border-style:      solid;
 $day__ctrl--custom-sel-after-border-color: $day__body-color;
 $ngt__ctrl--custom-sel-after-border-color: $ngt__body-color;
 
-$ctrl--custom-sel-after-margin-top:       -0.3em;
+$ctrl--custom-sel-after-margin-top:        -0.3em;
 $ctrl--custom-sel-after-width:             0.4em;
 $ctrl--custom-sel-after-height:            0.4em;
 $ctrl--custom-sel-after-top:               50%;
@@ -513,17 +513,17 @@ $ctrl--custom-sel-after-right:             1em;
 $ctrl--custom-sel-after-transform:         rotate( -45deg );
 $ctrl--custom-sel__sel-padding-right:      $ctrl--custom-sel-after-width + ( $el-padding-x * 2 );
 
-$sel-custom-sm-after-margin-top:     $ctrl--custom-sel-after-margin-top / 1.25;
-$sel-custom-sm-after-width:          $ctrl--custom-sel-after-width / 1.25;
-$sel-custom-sm-after-height:         $ctrl--custom-sel-after-height / 1.25;
-$sel-custom-sm-after-right:          $ctrl--custom-sel-after-right - 0.25;
-$sel-custom-sm-padding-right:        $sel-custom-sm-after-width + ( $el-sm-padding-x * 2 );
+$ctrl--custom-sel--sm-after-margin-top:    $ctrl--custom-sel-after-margin-top / 1.25;
+$ctrl--custom-sel--sm-after-width:         $ctrl--custom-sel-after-width / 1.25;
+$ctrl--custom-sel--sm-after-height:        $ctrl--custom-sel-after-height / 1.25;
+$ctrl--custom-sel--sm-after-right:         $ctrl--custom-sel-after-right - 0.25;
+$ctrl--custom-sel--sm-padding-right:       $ctrl--custom-sel--sm-after-width + ( $el-sm-padding-x * 2 );
 
-$sel-custom-lg-after-margin-top:     $ctrl--custom-sel-after-margin-top * 1.5;
-$sel-custom-lg-after-width:          $ctrl--custom-sel-after-width * 1.5;
-$sel-custom-lg-after-height:         $ctrl--custom-sel-after-height * 1.5;
-$sel-custom-lg-after-right:          $ctrl--custom-sel-after-right + 0.25;
-$sel-custom-lg-padding-right:        $sel-custom-lg-after-width + ( $el-lg-padding-x * 2 );
+$ctrl--custom-sel--lg-after-margin-top:    $ctrl--custom-sel-after-margin-top * 1.5;
+$ctrl--custom-sel--lg-after-width:         $ctrl--custom-sel-after-width * 1.5;
+$ctrl--custom-sel--lg-after-height:        $ctrl--custom-sel-after-height * 1.5;
+$ctrl--custom-sel--lg-after-right:         $ctrl--custom-sel-after-right + 0.25;
+$ctrl--custom-sel--lg-padding-right:       $ctrl--custom-sel--lg-after-width + ( $el-lg-padding-x * 2 );
 
 
 // Flat select menu
@@ -537,126 +537,119 @@ $ngt__sel--flat-hover-bg-color:     color( 'white 075' );
 
 // Image
 
-$fixed-square-images: (
+$fixed-sq-imgs: (
     4: 4rem
 );
 
 
 // Item group
 
-// $day__item-group-label-bg-color:   inherit;
-// $ngt__item-group-label-bg-color:   inherit;
-// $day__item-group-label-color:      inherit;
-// $ngt__item-group-label-color:      inherit;
-
-// $item-group-label-padding:         1em 1.25em;
-// $item-group-label-text-align:      center;
-
-$item-padding-x:                   0.5em;
+$item-padding-x: 0.5em;
 
 
 // List
 //
 // Inline list
 
-$ls-inline__item-not-last-margin-right: $spacing-unit-half;
+$ls--inline__li-margin-right: 1em;
 
 
 // Switch
 
-$switch-label-height:                       2.438em;
-$switch-label-width:                        $switch-label-height * 2;
+$day__sw__checked__label-before-bg-color: color( 'orchid' );
+$ngt__sw__checked__label-before-bg-color: color( 'orchid' );
 
-$day__switch-label-bg-color:                $day__el-border-color;
-$ngt__switch-label-bg-color:                $ngt__el-border-color;
+$sw__label-box-shadow:                    none;
+$sw__label-border:                        none;
 
-$switch-label-border:                       none;
-$switch-label-border-radius:                $switch-label-height / 2;
-$switch-label-box-shadow:                   none;
+$sw__checked__label-before-transition:    0.20s cubic-bezier( 0, 0, 0, 0.1 );
 
+$sw__label-height:                        2.438em;
+$sw__label-width:                         $sw__label-height * 2;
+
+$sw__checked__label-after-left:           $sw__label-width - $sw__label-height + 0.313;
+
+$day__sw__checked__label__sw__on-color:   #fff;
+$ngt__sw__checked__label__sw__on-color:   #fff;
+
+$day__sw__checked__label__sw__off-color:  transparent;
+$ngt__sw__checked__label__sw__off-color:  transparent;
+
+$day__sw__label-bg-color:                 $day__el-border-color;
+$ngt__sw__label-bg-color:                 $ngt__el-border-color;
+
+$sw__label-before-transition:             0.20s cubic-bezier( 0.25, 0, 0.5, 1 );
 
 // Switch toggle
 
-$day__switch-label-after-bg-color:          color( 'white' );
-$ngt__switch-label-after-bg-color:          color( 'white' );
+$day__sw__label-after-bg-color: #fff;
+$ngt__sw__label-after-bg-color: #fff;
 
-$switch-label-after-box-shadow:             0 0.063em 0.063em rgba( 0, 0, 0, 0.1 );
+$sw__label-after-box-shadow:    0 0.063em 0.063em rgba( 0, 0, 0, 0.1 );
+$sw__label-border-radius:       $sw__label-height / 2;
 
-$switch-label-after-width:                  $switch-label-height - ( $spacing-unit-quarter + 0.313 );
-$switch-label-after-height:                 $switch-label-height - ( $spacing-unit-quarter + 0.313 );
-$switch-label-after-top:                    50%;
-$switch-label-after-left:                   $spacing-unit-quarter;
+$sw__label-after-top:           50%;
+$sw__label-after-left:          0.5em;
 
-$day__switch-checked-label-before-bg-color: color( 'orchid' );
-$ngt__switch-checked-label-before-bg-color: color( 'orchid' );
+$sw__label-after-width:         $sw__label-height - ( 0.5 + 0.313 );
+$sw__label-after-height:        $sw__label-height - ( 0.5 + 0.313 );
 
-$switch-checked-label-after-left:           $switch-label-width - $switch-label-height + 0.313;
-
-$switch-label-before-transition:            0.20s cubic-bezier( 0.25, 0, 0.5, 1 );
-$switch-label-after-transition:             0.32s cubic-bezier( 0.55, 1.5, 0.5, 1 );
-$switch-checked-label-before-transition:    0.20s cubic-bezier( 0, 0, 0, 0.1 );
-
+$sw__label-after-transition:    0.32s cubic-bezier( 0.55, 1.5, 0.5, 1 );
 
 // Switch with inner labels
 
-$switch-inner-label-font-size:      1em;
-$switch-inner-label-font-weight:    400;
-$switch-inner-label-letter-spacing: normal;
-$switch-inner-label-line-height:    1;
-$switch-inner-label-text-transform: none;
-$switch-inner-label-top:            50%;
-$switch-inner-label-transform:      translate3d( 0, -50%, 0 );
+$sw__inner-label-font-size:      1em;
+$sw__inner-label-font-weight:    400;
+$sw__inner-label-letter-spacing: normal;
+$sw__inner-label-line-height:    1;
+$sw__inner-label-text-transform: none;
+$sw__inner-label-top:            50%;
+$sw__inner-label-transform:      translate3d( 0, -50%, 0 );
 
-$day__switch-inner-label-on-color:  transparent;
-$ngt__switch-inner-label-on-color:  transparent;
+$day__sw__on-color:              transparent;
+$ngt__sw__on-color:              transparent;
 
-$switch-inner-label-on-left:        0.75em;
+$sw__on-left:                    0.75em;
 
-$day__switch-inner-label-off-color: color( 'white' );
-$ngt__switch-inner-label-off-color: color( 'white 50' );
+$day__sw__off-color:             #fff;
+$ngt__sw__off-color:             #fff;
 
-$switch-inner-label-off-right:      1em;
+$sw__off-right:                  1em;
 
-$day__switch-input-checked__switch-inner-label-on-color:  color( 'white' );
-$ngt__switch-input-checked__switch-inner-label-on-color:  color( 'white' );
+// Small switch
 
-$day__switch-input-checked__switch-inner-label-off-color: transparent;
-$ngt__switch-input-checked__switch-inner-label-off-color: transparent;
+$sw--sm__label-height:            1.859em;
+$sw--sm__label-width:             $sw--sm__label-height * 2;
 
+$sw--sm__label-border-radius:     $sw--sm__label-height / 2;
 
-// Small and large switch
+$sw--sm__label-after-width:       $sw--sm__label-height - ( $spacing-unit-quarter + 0.188 );
+$sw--sm__label-after-height:      $sw--sm__label-height - ( $spacing-unit-quarter + 0.188 );
+$sw--sm__label-after-left:        ( $spacing-unit-quarter - 0.063 );
 
-$switch-sm-label-height:                    1.859em;
-$switch-sm-label-width:                     $switch-sm-label-height * 2;
+$sw--sm-checked-label-after-left: $sw--sm__label-width - $sw--sm__label-height + 0.25;
 
-$switch-sm-label-border-radius:             $switch-sm-label-height / 2;
+$sw--sm__inner-label-font-size:   $font-size-sm;
 
-$switch-sm-label-after-width:               $switch-sm-label-height - ( $spacing-unit-quarter + 0.188 );
-$switch-sm-label-after-height:              $switch-sm-label-height - ( $spacing-unit-quarter + 0.188 );
-$switch-sm-label-after-left:                ( $spacing-unit-quarter - 0.063 );
+$sw--sm__sw__on-left:             0.75em;
+$sw--sm__sw__off-right:           1em;
 
-$switch-sm-checked-label-after-left:        $switch-sm-label-width - $switch-sm-label-height + 0.25;
+// Large switch
 
-$switch-inner-label-sm-font-size:           $font-size-sm;
+$sw--lg__label-height:            3.016em;
+$sw--lg__label-width:             $sw--lg__label-height * 2;
+$sw--lg__label-border-radius:     $sw--lg__label-height / 2;
 
-$switch-inner-label-sm-on-left:             0.75em;
-$switch-inner-label-sm-off-right:           1em;
+$sw--lg__label-after-width:       $sw--lg__label-height - ( $spacing-unit-quarter + 0.375 );
+$sw--lg__label-after-height:      $sw--lg__label-height - ( $spacing-unit-quarter + 0.375 );
+$sw--lg__label-after-left:        ( $spacing-unit-quarter + 0.063 );
 
+$sw--lg-checked-label-after-left: $sw--lg__label-width - $sw--lg__label-height + 0.375;
 
-$switch-lg-label-height:                    3.016em;
-$switch-lg-label-width:                     $switch-lg-label-height * 2;
-$switch-lg-label-border-radius:             $switch-lg-label-height / 2;
+$sw--lg__inner-label-font-size:   1.25em;
 
-$switch-lg-label-after-width:               $switch-lg-label-height - ( $spacing-unit-quarter + 0.375 );
-$switch-lg-label-after-height:              $switch-lg-label-height - ( $spacing-unit-quarter + 0.375 );
-$switch-lg-label-after-left:                ( $spacing-unit-quarter + 0.063 );
-
-$switch-lg-checked-label-after-left:        $switch-lg-label-width - $switch-lg-label-height + 0.375;
-
-$switch-inner-label-lg-font-size:           1.25em;
-
-$switch-inner-label-lg-on-left:             0.75em;
-$switch-inner-label-lg-off-right:           0.75em;
+$sw--lg__sw__on-left:             0.75em;
+$sw--lg__sw__off-right:           0.75em;
 
 
 // Table

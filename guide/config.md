@@ -179,10 +179,13 @@
 											a(href='components-tabs.html') Tabs
 
 							div.col-12
-								div.doc-switch-night-mode.switch.switch--sm
-									input(id='switch-night-mode', type='checkbox').switch__input
-									label(for='switch-night-mode', id='lbl-night-mode').switch__lbl
-										span.switch__txt
+								div.item-group.ai-center
+									div.item.fxg-0
+										div.doc-switch-night-mode.sw.sw--sm
+											input(id='switch-night-mode', type='checkbox')
+											label(for='switch-night-mode', id='lbl-night-mode')
+									div.item
+										span
 											i(title='Night mode', id='icon-night-mode').ion-ios-moon.doc-icn
 
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
