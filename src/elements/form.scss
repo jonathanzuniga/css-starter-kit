@@ -431,6 +431,7 @@
 
 /**
  * Custom checkbox and radio:
+ * `.ctrl-check--custom`
  *
  *     @example
  *     div.row
@@ -597,53 +598,6 @@
 }
 
 /**
- * Inline custom checkbox and radio:
- *
- *     @example
- *     div.row
- *         div.sm-col-6
- *             div.fld
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-1', type='checkbox', value='').ctrl-check__input
- *                     label(for='eg-checkbox-inline-custom-1').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
- *                         | Checkbox
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-2', type='checkbox', value='').ctrl-check__input
- *                     label(for='eg-checkbox-inline-custom-2').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
- *                         | Checkbox
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-3', type='checkbox', value='').ctrl-check__input
- *                     label(for='eg-checkbox-inline-custom-3').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
- *                         | Checkbox
- *         div.sm-col-6
- *             div.fld
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(checked, id='eg-radio-inline-custom-1', name='radio-inline-custom', type='radio', value='').ctrl-check__input
- *                     label(for='eg-radio-inline-custom-1').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--radio
- *                         | Radio
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-radio-inline-custom-2', name='radio-inline-custom', type='radio', value='').ctrl-check__input
- *                     label(for='eg-radio-inline-custom-2').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--radio
- *                         | Radio
- *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-radio-inline-custom-3', name='radio-inline-custom', type='radio', value='').ctrl-check__input
- *                     label(for='eg-radio-inline-custom-3').ctrl-check__lbl
- *                         div.ctrl-check__indic.ctrl-check__indic--radio
- *                         | Radio
- */
-
-.ctrl-check--inline.ctrl-check--custom {
-	&:not( :last-child ) {
-		margin-right: $ctrl-check-inline-custom-margin-right;
-	}
-}
-
-/**
  * Custom flat checkbox and radio:
  *
  *     @example
@@ -713,6 +667,53 @@
 			background-color: tint( $ngt__ctrl-check__indic--flat-bg-color, $gen-active-amount );
 			border-color: transparent;
 		}
+	}
+}
+
+/**
+ * Inline custom checkbox and radio:
+ *
+ *     @example
+ *     div.row
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(id='eg-checkbox-inline-custom-1', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-1').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
+ *                         | Checkbox
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(id='eg-checkbox-inline-custom-2', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-2').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
+ *                         | Checkbox
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(id='eg-checkbox-inline-custom-3', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-3').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
+ *                         | Checkbox
+ *         div.sm-col-6
+ *             div.fld
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(checked, id='eg-radio-inline-custom-1', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-1').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--radio
+ *                         | Radio
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(id='eg-radio-inline-custom-2', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-2').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--radio
+ *                         | Radio
+ *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
+ *                     input(id='eg-radio-inline-custom-3', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-3').ctrl-check__lbl
+ *                         div.ctrl-check__indic.ctrl-check__indic--radio
+ *                         | Radio
+ */
+
+.ctrl-check--inline.ctrl-check--custom {
+	&:not( :last-child ) {
+		margin-right: $ctrl-check-inline-custom-margin-right;
 	}
 }
 
