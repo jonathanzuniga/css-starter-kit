@@ -54,27 +54,29 @@
  * `.cntr` have a max. width of #{ $container-max-width }.
  *
  *     @example
- *     div.cntr.bgc-aqua-1.p-1 &nbsp;
+ *     div.cntr.bgc-orchid-10.p-1 &nbsp;
  */
 
 .cntr {
-	@extend .cntr-fluid;
+	@include gutter;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 100%;
 	max-width: $container-max-width;
 }
 
 /**
  * Fluid container:
- * `.cntr-fluid`
+ * `.cntr--fluid`
  *
  *     @example
- *     div.cntr-fluid.bgc-aqua-1.p-1 &nbsp;
+ *     div.cntr.cntr--fluid.bgc-orchid-10.p-1 &nbsp;
  */
-.cntr-fluid {
-	@include gutter;
 
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+.cntr--fluid {
+	max-width: 100%;
 }
 
 @for $i from 1 through $grid-columns {
@@ -84,10 +86,10 @@
 	 * Remember, wrap any of the `.*col*` classes inside of a `.row` class.
 	 *
 	 *     @example
-	 *     div.cntr-fluid
-	 *         div.row.c-white.ta-center.bgc-aqua-1.p-y-1
+	 *     div.cntr.cntr--fluid
+	 *         div.row.c-white.ta-center.bgc-orchid-10.p-y-1
 	 *             div.col-#{ $i }
-	 *                 div.bgc-teal-20.p-1 #{ $i }
+	 *                 div.bgc-orchid-20.p-1 #{ $i }
 	 */
 
 	.col-#{ $i } {
@@ -103,12 +105,12 @@
  * Resize the window to see how grid columns behave on the different breakpoints.
  *
  *     @example
- *     div.cntr-fluid
- *         div.row.bgc-aqua-1.p-y-1
+ *     div.cntr.cntr--fluid
+ *         div.row.bgc-orchid-10.p-y-1
  *             div.xs-col-4.md-col-6.xl-col-8
- *                 div.bgc-teal-20 &nbsp;
+ *                 div.bgc-orchid-20 &nbsp;
  *             div.xs-col-8.md-col-6.xl-col-4
- *                 div.bgc-teal-20 &nbsp;
+ *                 div.bgc-orchid-20 &nbsp;
  */
 
 // Si no se escriben los primeros tamaños de una clase [size]-col-[#], entonces serán 100% de ancho.
@@ -158,12 +160,12 @@
  * Nested columns:
  *
  *     @example
- *     div.cntr-fluid
- *         div.row.c-white.ta-center.bgc-aqua-1.p-top-1
+ *     div.cntr.cntr--fluid
+ *         div.row.c-white.ta-center.bgc-orchid-10.p-top-1
  *             div.col-6
- *                 div.bgc-teal-20.p-1 6
+ *                 div.bgc-orchid-20.p-1 6
  *             div.col-6
- *                 div.row.bgc-aqua-10.p-y-1
+ *                 div.row.bgc-orchid-20.p-y-1
  *                     div.col
- *                         div.bgc-teal-20.p-1 Nested column
+ *                         div.bgc-orchid-20.p-1 Nested column
  */
