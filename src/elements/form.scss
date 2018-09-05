@@ -437,25 +437,25 @@
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-checkbox-custom-1', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-custom-1').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-custom-1', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-custom-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
  *                         | Checkbox
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-checkbox-custom-2', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-custom-2').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-custom-2', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-custom-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
  *                         | Checkbox
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(checked, id='eg-radio-custom-1', name='radio-custom', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-custom-1').ctrl-check__lbl-custom
+ *                     input(checked, id='eg-radio-custom-1', name='radio-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-custom-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio
  *                         | Radio
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-radio-custom-2', name='radio-custom', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-custom-2').ctrl-check__lbl-custom
+ *                     input(id='eg-radio-custom-2', name='radio-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-custom-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio
  *                         | Radio
  */
@@ -464,74 +464,96 @@
 	&:not( :last-child ) {
 		margin-bottom: $ctrl-check--custom-margin-bottom;
 	}
-}
 
-.ctrl-check__input-custom {
-	opacity: 0;
-	position: absolute;
-	z-index: -1;
+	.ctrl-check__input {
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
 
-	&:checked {
-		~ .ctrl-check__lbl-custom {
+		&:checked {
+			~ .ctrl-check__lbl {
+				.ctrl-check__indic {
+					background-color: $day__color-primary;
+					border-color: $day__color-primary;
+
+					&:after {
+						display: block;
+					}
+				}
+
+				.ctrl-check__indic--checkbox,
+				.ctrl-check__indic--radio {
+					&:after {
+						border-width: $tick-border-width;
+						border-style: $tick-border-style;
+						border-color: $day__tick-border-color;
+
+						top: $tick-top;
+						left: $tick-left;
+
+						transform: $tick-transform;
+
+						width: $tick-width;
+						height: $tick-height;
+					}
+				}
+			}
+
+			&:hover ~ .ctrl-check__lbl .ctrl-check__indic {
+				background-color: shade( $day__color-primary, $gen-hover-amount );
+			}
+
+			&:active ~ .ctrl-check__lbl .ctrl-check__indic {
+				background-color: shade( $day__color-primary, $gen-active-amount );
+			}
+		}
+	}
+
+	.ctrl-check__lbl {
+		padding-left: $ctrl-check--custom__ctrl-check__lbl-padding-left;
+
+		&:hover {
 			.ctrl-check__indic {
-				background-color: $day__color-primary;
-				border-color: $day__color-primary;
-
-				&:after {
-					display: block;
-				}
+				background-color: $day__gen-hover-bg-color;
+				border-color: $day__gen-hover-border-color;
 			}
-
-			.ctrl-check__indic--checkbox,
-			.ctrl-check__indic--radio {
-				&:after {
-					border-width: $tick-border-width;
-					border-style: $tick-border-style;
-					border-color: $day__tick-border-color;
-
-					top: $tick-top;
-					left: $tick-left;
-
-					transform: $tick-transform;
-
-					width: $tick-width;
-					height: $tick-height;
-				}
-			}
-		}
-
-		&:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: shade( $day__color-primary, $gen-hover-amount );
-		}
-
-		&:active ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: shade( $day__color-primary, $gen-active-amount );
 		}
 	}
 }
 
-.night .ctrl-check__input-custom {
-	&:checked {
-		~ .ctrl-check__lbl-custom {
-			.ctrl-check__indic {
-				background-color: $ngt__color-primary;
-				border-color: $ngt__color-primary;
-			}
+.night .ctrl-check--custom {
+	.ctrl-check__input {
+		&:checked {
+			~ .ctrl-check__lbl {
+				.ctrl-check__indic {
+					background-color: $ngt__color-primary;
+					border-color: $ngt__color-primary;
+				}
 
-			.ctrl-check__indic--checkbox,
-			.ctrl-check__indic--radio {
-				&:after {
-					border-color: $ngt__tick-border-color;
+				.ctrl-check__indic--checkbox,
+				.ctrl-check__indic--radio {
+					&:after {
+						border-color: $ngt__tick-border-color;
+					}
 				}
 			}
-		}
 
-		&:hover ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: shade( $day__color-primary, $gen-hover-amount );
-		}
+			&:hover ~ .ctrl-check__lbl .ctrl-check__indic {
+				background-color: shade( $day__color-primary, $gen-hover-amount );
+			}
 
-		&:active ~ .ctrl-check__lbl-custom .ctrl-check__indic {
-			background-color: shade( $day__color-primary, $gen-active-amount );
+			&:active ~ .ctrl-check__lbl .ctrl-check__indic {
+				background-color: shade( $day__color-primary, $gen-active-amount );
+			}
+		}
+	}
+
+	.ctrl-check__lbl {
+		&:hover {
+			.ctrl-check__indic {
+				background-color: $ngt__gen-hover-bg-color;
+				border-color: $ngt__gen-hover-border-color;
+			}
 		}
 	}
 }
@@ -574,26 +596,6 @@
 	border-radius: 50%;
 }
 
-.ctrl-check__lbl-custom {
-	padding-left: $ctrl-check-label-custom-padding-left;
-
-	&:hover {
-		.ctrl-check__indic {
-			background-color: $day__gen-hover-bg-color;
-			border-color: $day__gen-hover-border-color;
-		}
-	}
-}
-
-.night .ctrl-check__lbl-custom {
-	&:hover {
-		.ctrl-check__indic {
-			background-color: $ngt__gen-hover-bg-color;
-			border-color: $ngt__gen-hover-border-color;
-		}
-	}
-}
-
 /**
  * Inline custom checkbox and radio:
  *
@@ -602,35 +604,35 @@
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-1', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-inline-custom-1').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-inline-custom-1', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
  *                         | Checkbox
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-2', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-inline-custom-2').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-inline-custom-2', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
  *                         | Checkbox
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-checkbox-inline-custom-3', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-inline-custom-3').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-inline-custom-3', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-inline-custom-3').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox
  *                         | Checkbox
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(checked, id='eg-radio-inline-custom-1', name='radio-inline-custom', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-inline-custom-1').ctrl-check__lbl-custom
+ *                     input(checked, id='eg-radio-inline-custom-1', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio
  *                         | Radio
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-radio-inline-custom-2', name='radio-inline-custom', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-inline-custom-2').ctrl-check__lbl-custom
+ *                     input(id='eg-radio-inline-custom-2', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio
  *                         | Radio
  *                 div.ctrl-check.ctrl-check--custom.ctrl-check--inline
- *                     input(id='eg-radio-inline-custom-3', name='radio-inline-custom', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-inline-custom-3').ctrl-check__lbl-custom
+ *                     input(id='eg-radio-inline-custom-3', name='radio-inline-custom', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-inline-custom-3').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio
  *                         | Radio
  */
@@ -649,67 +651,67 @@
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-checkbox-custom-flat-1', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-custom-flat-1').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-custom-flat-1', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-custom-flat-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox.ctrl-check__indic--flat
  *                         | Checkbox
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-checkbox-custom-flat-2', type='checkbox', value='').ctrl-check__input-custom
- *                     label(for='eg-checkbox-custom-flat-2').ctrl-check__lbl-custom
+ *                     input(id='eg-checkbox-custom-flat-2', type='checkbox', value='').ctrl-check__input
+ *                     label(for='eg-checkbox-custom-flat-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--checkbox.ctrl-check__indic--flat
  *                         | Checkbox
  *         div.sm-col-6
  *             div.fld
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(checked, id='eg-radio-custom-flat-1', name='radio-custom-flat', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-custom-flat-1').ctrl-check__lbl-custom
+ *                     input(checked, id='eg-radio-custom-flat-1', name='radio-custom-flat', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-custom-flat-1').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio.ctrl-check__indic--flat
  *                         | Radio
  *                 div.ctrl-check.ctrl-check--custom
- *                     input(id='eg-radio-custom-flat-2', name='radio-custom-flat', type='radio', value='').ctrl-check__input-custom
- *                     label(for='eg-radio-custom-flat-2').ctrl-check__lbl-custom
+ *                     input(id='eg-radio-custom-flat-2', name='radio-custom-flat', type='radio', value='').ctrl-check__input
+ *                     label(for='eg-radio-custom-flat-2').ctrl-check__lbl
  *                         div.ctrl-check__indic.ctrl-check__indic--radio.ctrl-check__indic--flat
  *                         | Radio
  */
 
 .ctrl-check__indic--flat {
 	background-color: $day__ctrl-check__indic--flat-bg-color;
-	border-color: $day__ctrl-check__indic--flat-border-color;
+	border-color: transparent;
 }
 
 .night .ctrl-check__indic--flat {
 	background-color: $ngt__ctrl-check__indic--flat-bg-color;
-	border-color: $ngt__ctrl-check__indic--flat-border-color;
+	border-color: transparent;
 }
 
-.ctrl-check__lbl-custom {
+.ctrl-check--custom .ctrl-check__lbl {
 	&:hover {
 		.ctrl-check__indic--flat {
-			background-color: $day__control-check-label-custom-hover__indic-flat-bg-color;
-			border-color: $day__control-check-label-custom-hover__indic-flat-border-color;
+			background-color: shade( $day__ctrl-check__indic--flat-bg-color, $gen-hover-amount );
+			border-color: transparent;
 		}
 	}
 
 	&:active {
 		.ctrl-check__indic--flat {
-			background-color: $day__control-check-label-custom-active__indic-flat-bg-color;
-			border-color: $day__control-check-label-custom-active__indic-flat-border-color;
+			background-color: shade( $day__ctrl-check__indic--flat-bg-color, $gen-active-amount );
+			border-color: transparent;
 		}
 	}
 }
 
-.night .ctrl-check__lbl-custom {
+.night .ctrl-check--custom .ctrl-check__lbl {
 	&:hover {
 		.ctrl-check__indic--flat {
-			background-color: $ngt__control-check-label-custom-hover__indic-flat-bg-color;
-			border-color: $ngt__control-check-label-custom-hover__indic-flat-border-color;
+			background-color: tint( $ngt__ctrl-check__indic--flat-bg-color, $gen-hover-amount );
+			border-color: transparent;
 		}
 	}
 
 	&:active {
 		.ctrl-check__indic--flat {
-			background-color: $ngt__control-check-label-custom-active__indic-flat-bg-color;
-			border-color: $ngt__control-check-label-custom-active__indic-flat-border-color;
+			background-color: tint( $ngt__ctrl-check__indic--flat-bg-color, $gen-active-amount );
+			border-color: transparent;
 		}
 	}
 }
