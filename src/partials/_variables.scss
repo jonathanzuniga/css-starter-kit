@@ -47,7 +47,7 @@ $border-radius-base:     0.25rem;
 // Color
 
 $day__body-bg-color: #fff;
-$ngt__body-bg-color: #070a0c;
+$ngt__body-bg-color: #060b0b;
 
 $colors:             colors( $color-palette );
 
@@ -136,9 +136,9 @@ $blockquote-padding:                     0 0 0 ( 1.5 - $blockquote-border-width 
 $blockquote__p-font-size:                1.125em;
 $blockquote__p-before-after-font-weight: 700;
 $blockquote__p-before-content:           '«'; // '“';
-$blockquote__p-before-margin-right:       $spacing-unit-quarter / 2;
+$blockquote__p-before-margin-right:      0.25rem;
 $blockquote__p-after-content:            '»'; // '”';
-$blockquote__p-after-margin-left:        $spacing-unit-quarter / 2;
+$blockquote__p-after-margin-left:        0.25rem;
 
 $blockquote__footer-font-size:           $font-size-sm;
 $blockquote__footer-before-content:      '— ';
@@ -177,7 +177,8 @@ $pre-padding-x:         1.5rem;
 // Box
 
 $day__box-bg-color:     $day__body-bg-color;
-$ngt__box-bg-color:     $ngt__body-bg-color;
+$ngt__box-bg-color:     #202225;
+
 $box-border-radius:     $border-radius-base;
 
 
@@ -213,7 +214,7 @@ $el-sm-padding-x:              $el-padding-x;
 $el-lg-padding-y:              $el-padding-y;
 $el-lg-padding-x:              $el-padding-x;
 
-$el-lg-font-size:          1.25em;
+$el-lg-font-size:              1.25em;
 
 $day__el-invalid-border-color: color( 'pomegranate 30' );
 $ngt__el-invalid-border-color: color( 'pomegranate 30' );
@@ -425,7 +426,7 @@ $day__tick-border-color:        #fff;
 $ngt__tick-border-color:        #fff;
 
 $tick-top:                      18%;
-$tick-transform:                rotate(45deg);
+$tick-transform:                rotate( 45deg );
 
 $tick-width:                    0.313em; //  5px
 $tick-height:                   0.625em; // 10px
@@ -665,8 +666,8 @@ $ngt__tbl-border-color:         $ngt__border-color;
 $day__tbl__th-bg-color:         transparent;
 $ngt__tbl__th-bg-color:         transparent;
 
-$tbl__cell-padding-y:           0.5em;
-$tbl__cell-padding-x:           1em;
+$tbl__cell-padding-y:           0.5rem;
+$tbl__cell-padding-x:           1rem;
 
 $tbl__cell-vertical-align:      top;
 
@@ -991,18 +992,20 @@ $gutters: (
 
 // Card
 
-$day__card-head-bg-color:           #fff;
-$ngt__card-head-bg-color:           #272727;
-$card-head-border-top-right-radius: $border-radius-base;
-$card-head-border-top-left-radius:  $border-radius-base;
+$day__card-head-bg-color:                   $day__box-bg-color;
+$ngt__card-head-bg-color:                   $ngt__box-bg-color;
 
-$day__card-body-bg-color: transparent;
-$ngt__card-body-bg-color: transparent;
+$card-head-border-top-right-radius:         $border-radius-base;
+$card-head-border-top-left-radius:          $border-radius-base;
 
-$day__card-foot-bg-color:              #fff;
-$ngt__card-foot-bg-color:              #272727;
-$card-foot-border-bottom-right-radius: $border-radius-base;
-$card-foot-border-bottom-left-radius:  $border-radius-base;
+$day__card-body-bg-color:                   transparent;
+$ngt__card-body-bg-color:                   transparent;
+
+$day__card-foot-bg-color:                   $day__box-bg-color;
+$ngt__card-foot-bg-color:                   $ngt__box-bg-color;
+
+$card-foot-border-bottom-right-radius:      $border-radius-base;
+$card-foot-border-bottom-left-radius:       $border-radius-base;
 
 $card-foot-btn-not-first-child-margin-left: 0.625rem;
 
