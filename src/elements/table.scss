@@ -35,76 +35,40 @@
 .tbl {
 	// border-spacing: 0;
 
-	thead {
-		tr:first-child {
-			th, td {
-				border-top-width: $table__thead__tr-first__cell-border-top-width;
-				border-top-style: $table__thead__tr-first__cell-border-top-style;
-				border-top-color: $day__table__thead__tr-first__cell-border-top-color;
-			}
-		}
-	}
-
-	tbody {
-		tr:last-child {
-			th, td {
-				border-bottom-width: $table__thead__tr-first__cell-border-bottom-width;
-				border-bottom-style: $table__thead__tr-first__cell-border-bottom-style;
-				border-bottom-color: $day__table__thead__tr-first__cell-border-bottom-color;
-			}
-		}
-	}
-
 	tr {
 		th, td {
-			border-top-width: $table-border-width;
-			border-top-style: $table-border-style;
+			border-top-width: $tbl-border-width;
+			border-top-style: $tbl-border-style;
 		}
 	}
 
 	th, td {
 		&:not( :last-child ) {
-			border-right-width: $table-border-width;
-			border-right-style: $table-border-right-style;
+			border-right-width: $tbl-border-width;
+			border-right-style: none;
 		}
 	}
 
 	th {
-		background-color: $day__table__th-bg-color;
-		font-size: $table__th-font-size;
-		font-weight: $table__th-font-weight;
+		background-color: $day__tbl__th-bg-color;
+		font-size: $tbl__th-font-size;
+		font-weight: $tbl__th-font-weight;
 	}
 
 	th, td {
-		border-color: $day__table-border-color;
-		padding: $table__cell-padding-y $table__cell-padding-x;
-		vertical-align: $table__cell-vertical-align;
+		border-color: $day__tbl-border-color;
+		padding: $tbl__cell-padding-y $tbl__cell-padding-x;
+		vertical-align: $tbl__cell-vertical-align;
 	}
 }
 
 .night .tbl {
-	thead {
-		tr:first-child {
-			th, td {
-				border-top-color: $ngt__table__thead__tr-first__cell-border-top-color;
-			}
-		}
-	}
-
-	tbody {
-		tr:last-child {
-			th, td {
-				border-bottom-color: $ngt__table__thead__tr-first__cell-border-bottom-color;
-			}
-		}
-	}
-
 	th {
-		background-color: $ngt__table__th-bg-color;
+		background-color: $ngt__tbl__th-bg-color;
 	}
 
 	th, td {
-		border-color: $ngt__table-border-color;
+		border-color: $ngt__tbl-border-color;
 	}
 }
 
@@ -135,16 +99,16 @@
  */
 
 .tbl--bordered {
-	border-width: $table-border-width;
-	border-style: $table-border-style;
-	border-color: $day__table-border-color;
+	border-width: $tbl-border-width;
+	border-style: $tbl-border-style;
+	border-color: $day__tbl-border-color;
 
 	thead {
 		tr:first-child {
 			th, td {
-				border-top-width: $table-border-width;
-				border-top-style: $table-border-style;
-				border-top-color: $day__table-border-color;
+				border-top-width: $tbl-border-width;
+				border-top-style: $tbl-border-style;
+				border-top-color: $day__tbl-border-color;
 			}
 		}
 	}
@@ -152,27 +116,27 @@
 	tbody {
 		tr:last-child {
 			th, td {
-				border-bottom-width: $table-border-width;
-				border-bottom-style: $table-border-style;
-				border-bottom-color: $day__table-border-color;
+				border-bottom-width: $tbl-border-width;
+				border-bottom-style: $tbl-border-style;
+				border-bottom-color: $day__tbl-border-color;
 			}
 		}
 	}
 
 	td, th {
 		&:not( :last-child ) {
-			border-right-style: $table-border-style;
+			border-right-style: $tbl-border-style;
 		}
 	}
 }
 
 .night .tbl--bordered {
-	border-color: $ngt__table-border-color;
+	border-color: $ngt__tbl-border-color;
 
 	thead {
 		tr:first-child {
 			th, td {
-				border-top-color: $ngt__table-border-color;
+				border-top-color: $ngt__tbl-border-color;
 			}
 		}
 	}
@@ -180,7 +144,7 @@
 	tbody {
 		tr:last-child {
 			th, td {
-				border-bottom-color: $ngt__table-border-color;
+				border-bottom-color: $ngt__tbl-border-color;
 			}
 		}
 	}
@@ -289,32 +253,32 @@
 
 .tbl--striped {
 	tbody {
-		tr:nth-child( #{ $table-striped-index } ) {
+		tr:nth-child( #{ $tbl-striped-index } ) {
 			td, th {
-				background-color: $day__table-striped-bg-color;
+				background-color: $day__tbl-striped-bg-color;
 			}
 		}
 	}
 
 	tr {
 		th, td {
-			border-top-color: $day__table-striped-border-color;
+			border-top-color: $day__tbl-striped-border-color;
 		}
 	}
 }
 
 .night .tbl--striped {
 	tbody {
-		tr:nth-child( #{ $table-striped-index } ) {
+		tr:nth-child( #{ $tbl-striped-index } ) {
 			td, th {
-				background-color: $ngt__table-striped-bg-color;
+				background-color: $ngt__tbl-striped-bg-color;
 			}
 		}
 	}
 
 	tr {
 		th, td {
-			border-top-color: $ngt__table-striped-border-color;
+			border-top-color: $ngt__tbl-striped-border-color;
 		}
 	}
 }
