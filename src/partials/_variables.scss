@@ -615,6 +615,24 @@ $ngt__sw__off-color:             #fff;
 
 $sw__off-right:                  1em;
 
+// Extra small switch
+
+$sw--xs__label-height:            1em;
+$sw--xs__label-width:             $sw--xs__label-height * 2;
+
+$sw--xs__label-border-radius:     $sw--xs__label-height / 2;
+
+$sw--xs__label-after-width:       $sw--xs__label-height - 0.5;
+$sw--xs__label-after-height:      $sw--xs__label-height - 0.5;
+$sw--xs__label-after-left:        0.313em; // 5px
+
+$sw--xs-checked-label-after-left: $sw--xs__label-width - $sw--xs__label-after-width - $sw--xs__label-after-left;
+
+$sw--xs__inner-label-font-size:   $font-size-sm;
+
+$sw--xs__sw__on-left:             0.75em;
+$sw--xs__sw__off-right:           1em;
+
 // Small switch
 
 $sw--sm__label-height:            1.859em;
@@ -622,11 +640,11 @@ $sw--sm__label-width:             $sw--sm__label-height * 2;
 
 $sw--sm__label-border-radius:     $sw--sm__label-height / 2;
 
-$sw--sm__label-after-width:       $sw--sm__label-height - ( $spacing-unit-quarter + 0.188 );
-$sw--sm__label-after-height:      $sw--sm__label-height - ( $spacing-unit-quarter + 0.188 );
-$sw--sm__label-after-left:        ( $spacing-unit-quarter - 0.063 );
+$sw--sm__label-after-width:       $sw--sm__label-height - ( 0.5 + 0.188 );
+$sw--sm__label-after-height:      $sw--sm__label-height - ( 0.5 + 0.188 );
+$sw--sm__label-after-left:        0.438em; // 7px
 
-$sw--sm-checked-label-after-left: $sw--sm__label-width - $sw--sm__label-height + 0.25;
+$sw--sm-checked-label-after-left: $sw--sm__label-width - $sw--sm__label-after-width - $sw--sm__label-after-left;
 
 $sw--sm__inner-label-font-size:   $font-size-sm;
 
@@ -639,11 +657,11 @@ $sw--lg__label-height:            3.016em;
 $sw--lg__label-width:             $sw--lg__label-height * 2;
 $sw--lg__label-border-radius:     $sw--lg__label-height / 2;
 
-$sw--lg__label-after-width:       $sw--lg__label-height - ( $spacing-unit-quarter + 0.375 );
-$sw--lg__label-after-height:      $sw--lg__label-height - ( $spacing-unit-quarter + 0.375 );
-$sw--lg__label-after-left:        ( $spacing-unit-quarter + 0.063 );
+$sw--lg__label-after-width:       $sw--lg__label-height - ( 0.5 + 0.375 );
+$sw--lg__label-after-height:      $sw--lg__label-height - ( 0.5 + 0.375 );
+$sw--lg__label-after-left:        0.563em; // 9px
 
-$sw--lg-checked-label-after-left: $sw--lg__label-width - $sw--lg__label-height + 0.375;
+$sw--lg-checked-label-after-left: $sw--lg__label-width - $sw--lg__label-after-width - $sw--lg__label-after-left;
 
 $sw--lg__inner-label-font-size:   1.25em;
 

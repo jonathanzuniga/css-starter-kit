@@ -142,37 +142,50 @@
  *
  *     @example
  *     div.row
- *         div.md-col-6
+ *         div.md-col-4
+ *             div.fld
+ *                 div.sw.sw--xs
+ *                     input(id='eg-sw-xs', type='checkbox')
+ *                     label(for='eg-sw-xs')
+ *         div.md-col-4
  *             div.fld
  *                 div.sw.sw--sm
  *                     input(id='eg-sw-sm', type='checkbox')
  *                     label(for='eg-sw-sm')
+ *         div.md-col-4
  *             div.fld
  *                 div.sw.sw--lg
  *                     input(id='eg-sw-lg', type='checkbox')
  *                     label(for='eg-sw-lg')
- *         div.md-col-6
- *             div.fld
- *                 div.item-group.ai-center
- *                     div.item.fxg-0
- *                         div.sw.sw--sm
- *                             input(id='eg-sw-with-inner-labels-sm', type='checkbox')
- *                             label(for='eg-sw-with-inner-labels-sm')
- *                                 span.sw__on  Yes
- *                                 span.sw__off
- *                     div.item
- *                         span Small switch
- *             div.fld
- *                 div.item-group.ai-center
- *                     div.item.fxg-0
- *                         div.sw.sw--lg
- *                             input(id='eg-sw-with-inner-labels-lg', type='checkbox')
- *                             label(for='eg-sw-with-inner-labels-lg')
- *                                 span.sw__on  Yes
- *                                 span.sw__off
- *                     div.item
- *                         span Large switch
  */
+.sw--xs label {
+  border-radius: 0.5em;
+  width: 2em;
+  height: 1em; }
+  .sw--xs label:before {
+    border-radius: 0.5em;
+    width: 2em;
+    height: 1em; }
+  .sw--xs label:after {
+    border-radius: 0.5em;
+    margin-top: -0.25em;
+    width: 0.5em;
+    height: 0.5em;
+    left: 0.313em; }
+
+.sw--xs [type='checkbox']:checked + label:after {
+  left: 1.187em; }
+
+.sw--xs .sw__on,
+.sw--xs .sw__off {
+  font-size: 0.813em; }
+
+.sw--xs .sw__on {
+  left: 0.75em; }
+
+.sw--xs .sw__off {
+  right: 1em; }
+
 .sw--sm label {
   border-radius: 0.9295em;
   width: 3.718em;
@@ -186,7 +199,7 @@
     margin-top: -0.5855em;
     width: 1.171em;
     height: 1.171em;
-    left: 0.437em; }
+    left: 0.438em; }
 
 .sw--sm [type='checkbox']:checked + label:after {
   left: 2.109em; }
@@ -217,7 +230,7 @@
     left: 0.563em; }
 
 .sw--lg [type='checkbox']:checked + label:after {
-  left: 3.391em; }
+  left: 3.328em; }
 
 .sw--lg .sw__on,
 .sw--lg .sw__off {

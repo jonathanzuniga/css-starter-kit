@@ -212,37 +212,71 @@
  *
  *     @example
  *     div.row
- *         div.md-col-6
+ *         div.md-col-4
+ *             div.fld
+ *                 div.sw.sw--xs
+ *                     input(id='eg-sw-xs', type='checkbox')
+ *                     label(for='eg-sw-xs')
+ *         div.md-col-4
  *             div.fld
  *                 div.sw.sw--sm
  *                     input(id='eg-sw-sm', type='checkbox')
  *                     label(for='eg-sw-sm')
+ *         div.md-col-4
  *             div.fld
  *                 div.sw.sw--lg
  *                     input(id='eg-sw-lg', type='checkbox')
  *                     label(for='eg-sw-lg')
- *         div.md-col-6
- *             div.fld
- *                 div.item-group.ai-center
- *                     div.item.fxg-0
- *                         div.sw.sw--sm
- *                             input(id='eg-sw-with-inner-labels-sm', type='checkbox')
- *                             label(for='eg-sw-with-inner-labels-sm')
- *                                 span.sw__on  Yes
- *                                 span.sw__off
- *                     div.item
- *                         span Small switch
- *             div.fld
- *                 div.item-group.ai-center
- *                     div.item.fxg-0
- *                         div.sw.sw--lg
- *                             input(id='eg-sw-with-inner-labels-lg', type='checkbox')
- *                             label(for='eg-sw-with-inner-labels-lg')
- *                                 span.sw__on  Yes
- *                                 span.sw__off
- *                     div.item
- *                         span Large switch
  */
+
+.sw--xs {
+	label {
+		border-radius: $sw--xs__label-border-radius;
+
+		width: $sw--xs__label-width;
+		height: $sw--xs__label-height;
+
+		&:before {
+			border-radius: $sw--xs__label-border-radius;
+
+			width: $sw--xs__label-width;
+			height: $sw--xs__label-height;
+		}
+
+		// Toggle.
+
+		&:after {
+			border-radius: $sw--xs__label-border-radius;
+			margin-top: -( $sw--xs__label-after-height / 2 );
+
+			width: $sw--xs__label-after-width;
+			height: $sw--xs__label-after-height;
+
+			left: $sw--xs__label-after-left;
+		}
+	}
+
+	[ type='checkbox' ]:checked {
+		& + label {
+			&:after {
+				left: $sw--xs-checked-label-after-left;
+			}
+		}
+	}
+
+	.sw__on,
+	.sw__off {
+		font-size: $sw--xs__inner-label-font-size;
+	}
+
+	.sw__on {
+		left: $sw--xs__sw__on-left;
+	}
+
+	.sw__off {
+	 	right: $sw--xs__sw__off-right;
+	}
+}
 
 .sw--sm {
 	label {
