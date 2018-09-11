@@ -57,7 +57,7 @@
 				}
 
 				.sw__off {
-					color: $day__sw__checked__label__sw__off-color;
+					color: transparent;
 					transform: translate3d( #{ $sw__off-right * 3 }, -50%, 0 );
 				}
 			}
@@ -102,7 +102,7 @@
 			border-radius: $sw__label-border-radius;
 			content: '';
 			display: block;
-			margin-top: -( $sw__label-after-height / 2 );
+			margin-top: -#{ $sw__label-after-width / 2 };
 
 			position: absolute;
 			top: $sw__label-after-top;
@@ -129,7 +129,7 @@
 				}
 
 				.sw__off {
-					color: $ngt__sw__checked__label__sw__off-color;
+					color: transparent;
 				}
 			}
 		}
@@ -185,7 +185,7 @@
 }
 
 .sw__on {
-	color: $day__sw__on-color;
+	color: transparent;
 	left: $sw__on-left;
 
 	transform: translate3d( -#{ $sw__on-left * 3 }, -50%, 0 );
@@ -199,7 +199,7 @@
 }
 
 .night .sw__on {
-	color: $ngt__sw__on-color;
+	color: transparent;
 }
 
 .night .sw__off {
@@ -247,20 +247,6 @@
 
 		&:after {
 			border-radius: $sw--xs__label-border-radius;
-			margin-top: -( $sw--xs__label-after-height / 2 );
-
-			width: $sw--xs__label-after-width;
-			height: $sw--xs__label-after-height;
-
-			left: $sw--xs__label-after-left;
-		}
-	}
-
-	[ type='checkbox' ]:checked {
-		& + label {
-			&:after {
-				left: $sw--xs-checked-label-after-left;
-			}
 		}
 	}
 
@@ -296,20 +282,6 @@
 
 		&:after {
 			border-radius: $sw--sm__label-border-radius;
-			margin-top: -( $sw--sm__label-after-height / 2 );
-
-			width: $sw--sm__label-after-width;
-			height: $sw--sm__label-after-height;
-
-			left: $sw--sm__label-after-left;
-		}
-	}
-
-	[ type='checkbox' ]:checked {
-		& + label {
-			&:after {
-				left: $sw--sm-checked-label-after-left;
-			}
 		}
 	}
 
@@ -345,20 +317,6 @@
 
 		&:after {
 			border-radius: $sw--lg__label-border-radius;
-			margin-top: -( $sw--lg__label-after-height / 2 );
-
-			width: $sw--lg__label-after-width;
-			height: $sw--lg__label-after-height;
-
-			left: $sw--lg__label-after-left;
-		}
-	}
-
-	[ type='checkbox' ]:checked {
-		& + label {
-			&:after {
-				left: $sw--lg-checked-label-after-left;
-			}
 		}
 	}
 
