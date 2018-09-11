@@ -73,8 +73,8 @@ $transition-base:            background-color $transition-duration $transition-t
 
 // Hyperlink
 
-$day__a-color:                     color( 'orchid 50' );
-$ngt__a-color:                     color( 'orchid 30' );
+$day__a-color:                     $day__color-primary;
+$ngt__a-color:                     $ngt__color-primary;
 $a-font-weight:                    500;
 $a-text-decoration:                none;
 
@@ -82,7 +82,7 @@ $day__a-visited-color:             $day__a-color;
 $ngt__a-visited-color:             $ngt__a-color;
 $a-visited-text-decoration:        none;
 
-$day__a-hover-color:               shade( color( 'orchid 80' ), 12% );
+$day__a-hover-color:               shade( color( 'orchid 60' ), 12% );
 $ngt__a-hover-color:               tint( color( 'orchid 60' ), 12% );
 $a-hover-text-decoration:          none;
 
@@ -119,8 +119,8 @@ $heading-text-transform: none;
 // Marked text
 
 $mark-border-radius: 0;
-$day__mark-bg-color: rgba( color('gold 20' ), 0.1 );
-$ngt__mark-bg-color: color( 'white 05' );
+$day__mark-bg-color: rgba( color( 'apricot 1' ), 0.5 );
+$ngt__mark-bg-color: rgba( color( 'apricot 1' ), 0.5 );
 $day__mark-bg-image: none;
 $ngt__mark-bg-image: none;
 $mark-padding:       0.2em;
@@ -563,12 +563,10 @@ $ngt__sw__checked__label-before-bg-color: color( 'orchid' );
 $sw__label-box-shadow:                    none;
 $sw__label-border:                        none;
 
-$sw__checked__label-before-transition:    0.20s cubic-bezier( 0, 0, 0, 0.1 );
+$sw__checked__label-before-transition:    0.2s cubic-bezier( 0, 0, 0, 0.1 );
 
-$sw__label-height:                        2.438em;
+$sw__label-height:                        2.188em;
 $sw__label-width:                         $sw__label-height * 2;
-
-$sw__checked__label-after-left:           $sw__label-width - $sw__label-height + 0.313;
 
 $day__sw__checked__label__sw__on-color:   #fff;
 $ngt__sw__checked__label__sw__on-color:   #fff;
@@ -579,14 +577,14 @@ $ngt__sw__checked__label__sw__off-color:  transparent;
 $day__sw__label-bg-color:                 $day__el-border-color;
 $ngt__sw__label-bg-color:                 $ngt__el-border-color;
 
-$sw__label-before-transition:             0.20s cubic-bezier( 0.25, 0, 0.5, 1 );
+$sw__label-before-transition:             0.2s cubic-bezier( 0.25, 0, 0.5, 1 );
 
 // Switch toggle
 
 $day__sw__label-after-bg-color: #fff;
 $ngt__sw__label-after-bg-color: #fff;
 
-$sw__label-after-box-shadow:    0 0.063em 0.063em rgba( 0, 0, 0, 0.1 );
+$sw__label-after-box-shadow:    none; // 0 0.063em 0.063em rgba( 0, 0, 0, 0.1 );
 $sw__label-border-radius:       $sw__label-height / 2;
 
 $sw__label-after-top:           50%;
@@ -594,6 +592,8 @@ $sw__label-after-left:          0.5em;
 
 $sw__label-after-width:         $sw__label-height - ( 0.5 + 0.313 );
 $sw__label-after-height:        $sw__label-height - ( 0.5 + 0.313 );
+
+$sw__checked__label-after-left: $sw__label-width - $sw__label-after-width - $sw__label-after-left;
 
 $sw__label-after-transition:    0.32s cubic-bezier( 0.55, 1.5, 0.5, 1 );
 
@@ -624,9 +624,10 @@ $sw--xs__label-width:             $sw--xs__label-height * 2;
 
 $sw--xs__label-border-radius:     $sw--xs__label-height / 2;
 
+$sw--xs__label-after-left:        0.313em; // 5px
+
 $sw--xs__label-after-width:       $sw--xs__label-height - 0.5;
 $sw--xs__label-after-height:      $sw--xs__label-height - 0.5;
-$sw--xs__label-after-left:        0.313em; // 5px
 
 $sw--xs-checked-label-after-left: $sw--xs__label-width - $sw--xs__label-after-width - $sw--xs__label-after-left;
 
@@ -642,9 +643,10 @@ $sw--sm__label-width:             $sw--sm__label-height * 2;
 
 $sw--sm__label-border-radius:     $sw--sm__label-height / 2;
 
+$sw--sm__label-after-left:        0.438em; // 7px
+
 $sw--sm__label-after-width:       $sw--sm__label-height - ( 0.5 + 0.188 );
 $sw--sm__label-after-height:      $sw--sm__label-height - ( 0.5 + 0.188 );
-$sw--sm__label-after-left:        0.438em; // 7px
 
 $sw--sm-checked-label-after-left: $sw--sm__label-width - $sw--sm__label-after-width - $sw--sm__label-after-left;
 
@@ -659,9 +661,10 @@ $sw--lg__label-height:            3.016em;
 $sw--lg__label-width:             $sw--lg__label-height * 2;
 $sw--lg__label-border-radius:     $sw--lg__label-height / 2;
 
+$sw--lg__label-after-left:        0.563em; // 9px
+
 $sw--lg__label-after-width:       $sw--lg__label-height - ( 0.5 + 0.375 );
 $sw--lg__label-after-height:      $sw--lg__label-height - ( 0.5 + 0.375 );
-$sw--lg__label-after-left:        0.563em; // 9px
 
 $sw--lg-checked-label-after-left: $sw--lg__label-width - $sw--lg__label-after-width - $sw--lg__label-after-left;
 
