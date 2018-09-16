@@ -50,12 +50,21 @@
 	padding: $navbar-padding-y $navbar-padding-x;
 	position: relative;
 
+	min-height: $navbar-min-height;
+	background-color: $day__body-bg-color;
+	transition: $transition-base;
+
 	a, .btn--link {
-		border-radius: $navbar-a-border-radius;
-		color: $day__navbar-a-color;
+		font-size: $navbar-a-font-size;
 		font-weight: $navbar-a-font-weight;
+
+		position: relative;
+
 		letter-spacing: $navbar-letter-spacing;
 		text-transform: $navbar-text-transform;
+
+		color: $day__navbar-a-color;
+		border-radius: $navbar-a-border-radius;
 
 		&:link,
 		&:visited {
@@ -63,14 +72,30 @@
 		}
 
 		&:hover {
-			background-color: $day__navbar-a-hover-bg-color;
 			color: $day__navbar-a-hover-color;
+			background-color: $day__navbar-a-hover-bg-color;
+			text-decoration: none;
 		}
 	}
 
 	.active a,
 	a.active {
 		color: $day__navbar-item-active__a-color;
+
+		&::after {
+			position: absolute;
+			right: $navbar-item-active__a-after-right;
+			bottom: $navbar-item-active__a-after-bottom;
+			left: $navbar-item-active__a-after-left;
+
+			display: block;
+
+			height: $navbar-item-active__a-after-height;
+
+			content: '';
+
+			background: $day__a-color;
+		}
 
 		&:link,
 		&:visited,
@@ -108,6 +133,8 @@
 
 .night .navbar,
 .navbar--dark {
+	background-color: $ngt__body-bg-color;
+
 	a, .btn--link {
 		color: $ngt__navbar-a-color;
 
@@ -117,14 +144,19 @@
 		}
 
 		&:hover {
-			background-color: $ngt__navbar-a-hover-bg-color;
 			color: $ngt__navbar-a-hover-color;
+			background-color: $ngt__navbar-a-hover-bg-color;
 		}
 	}
+
 
 	.active a,
 	a.active {
 		color: $ngt__navbar-item-active__a-color;
+
+		&::after {
+			background: $ngt__a-color;
+		}
 
 		&:link,
 		&:visited,
@@ -155,12 +187,12 @@
 	font-size: $navbar-brand-font-size;
 
 	a {
-		color: $day__navbar-item-active__a-color;
+		color: $day__navbar-a-color;
 
 		&:link,
 		&:visited,
 		&:hover {
-			color: $day__navbar-item-active__a-color;
+			color: $day__navbar-a-color;
 		}
 	}
 }
@@ -168,12 +200,12 @@
 .night .navbar__brand,
 .navbar--dark .navbar__brand {
 	a {
-		color: $ngt__navbar-item-active__a-color;
+		color: $ngt__navbar-a-color;
 
 		&:link,
 		&:visited,
 		&:hover {
-			color: $ngt__navbar-item-active__a-color;
+			color: $ngt__navbar-a-color;
 		}
 	}
 }
@@ -291,6 +323,11 @@ a.navbar__item--icn {
 					padding: $navbar-item-icon__a-padding-y $navbar-item-icon__a-padding-x;
 					width: auto;
 				}
+			}
+
+			.navbar__item a,
+			a.navbar__item {
+				display: flex;
 			}
 		}
 

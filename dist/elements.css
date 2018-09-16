@@ -29,7 +29,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5625; }
+  line-height: 1.5625;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
 
 .night body {
   background-color: #060b0b;
@@ -65,7 +66,7 @@ a {
     text-decoration: none; }
   a:hover {
     color: #6e3791;
-    text-decoration: none; }
+    text-decoration: underline; }
 
 .night a {
   color: #a87dc2; }
@@ -124,11 +125,14 @@ h1,
   h1 a,
   .h1 a {
     font-weight: inherit; }
+    h1 a:hover,
+    .h1 a:hover {
+      text-decoration: none; }
 
 h2,
 .h2 {
   font-family: inherit;
-  font-size: 1.875em;
+  font-size: 2em;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.2;
@@ -136,15 +140,18 @@ h2,
   text-transform: none; }
   h2:not(:first-child),
   .h2:not(:first-child) {
-    margin-top: 1.625em; }
+    margin-top: 1.75em; }
   h2 a,
   .h2 a {
     font-weight: inherit; }
+    h2 a:hover,
+    .h2 a:hover {
+      text-decoration: none; }
 
 h3,
 .h3 {
   font-family: inherit;
-  font-size: 1.625em;
+  font-size: 1.75em;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.2;
@@ -152,15 +159,18 @@ h3,
   text-transform: none; }
   h3:not(:first-child),
   .h3:not(:first-child) {
-    margin-top: 1.375em; }
+    margin-top: 1.5em; }
   h3 a,
   .h3 a {
     font-weight: inherit; }
+    h3 a:hover,
+    .h3 a:hover {
+      text-decoration: none; }
 
 h4,
 .h4 {
   font-family: inherit;
-  font-size: 1.375em;
+  font-size: 1.5em;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.2;
@@ -168,15 +178,18 @@ h4,
   text-transform: none; }
   h4:not(:first-child),
   .h4:not(:first-child) {
-    margin-top: 1.125em; }
+    margin-top: 1.25em; }
   h4 a,
   .h4 a {
     font-weight: inherit; }
+    h4 a:hover,
+    .h4 a:hover {
+      text-decoration: none; }
 
 h5,
 .h5 {
   font-family: inherit;
-  font-size: 1.125em;
+  font-size: 1.25em;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.2;
@@ -184,10 +197,13 @@ h5,
   text-transform: none; }
   h5:not(:first-child),
   .h5:not(:first-child) {
-    margin-top: 0.875em; }
+    margin-top: 1em; }
   h5 a,
   .h5 a {
     font-weight: inherit; }
+    h5 a:hover,
+    .h5 a:hover {
+      text-decoration: none; }
 
 h6,
 .h6 {
@@ -204,6 +220,9 @@ h6,
   h6 a,
   .h6 a {
     font-weight: inherit; }
+    h6 a:hover,
+    .h6 a:hover {
+      text-decoration: none; }
 
 /**
  * Inline elements:
@@ -454,7 +473,7 @@ th {
   box-shadow: none;
   display: inline-block;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: inherit;
   padding: 0.25em 0.75em;
   text-align: center;
@@ -647,7 +666,7 @@ th {
   .btn--link:hover {
     background-color: rgba(0, 0, 0, 0.05);
     color: #6e3791;
-    text-decoration: none; }
+    text-decoration: underline; }
   .btn--link:active, .btn--link.active {
     color: #6e3791; }
 

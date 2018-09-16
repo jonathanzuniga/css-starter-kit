@@ -84,7 +84,7 @@ $a-visited-text-decoration:        none;
 
 $day__a-hover-color:               shade( color( 'orchid 60' ), 12% );
 $ngt__a-hover-color:               tint( color( 'orchid 60' ), 12% );
-$a-hover-text-decoration:          none;
+$a-hover-text-decoration:          underline;
 
 
 // Nota: Borde para los enlaces que estan dentro de los parrafos.
@@ -103,10 +103,10 @@ $ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
 
 $headings: (
     'h1': 2.250em, // 36px
-    'h2': 1.875em, // 30px
-    'h3': 1.625em, // 26px
-    'h4': 1.375em, // 22px
-    'h5': 1.125em, // 18px
+    'h2': 2em,     // 32px
+    'h3': 1.750em, // 28px
+    'h4': 1.5em,   // 24px
+    'h5': 1.25em,  // 20px
     'h6': 1em      // 16px
 ) !default;
 
@@ -239,7 +239,7 @@ $btn-border-color:           transparent;
 
 $btn-border-radius:          $el-border-radius;
 $btn-font-size:              $font-size-base;
-$btn-font-weight:            500;
+$btn-font-weight:            700;
 $btn-line-height:            $el-line-height;
 
 $btn-padding-y:              $el-padding-y;
@@ -903,7 +903,7 @@ $hr-middle-before-after-margin-x:      1%;
 
 // Tamaño máximo de anchura del contenedor.
 
-$container-max-width: 1200px;
+$container-max-width: 1880px;
 
 // Número de columnas.
 
@@ -1134,45 +1134,53 @@ $modal-show-content-transition: opacity    0.16s $transition-timing-function,
 
 // Navbar
 
-$navbar-padding-y:                 0.5rem;
-$navbar-padding-x:                 $gutter-width;
+$navbar-min-height:                  3.750rem; // 60px
 
-$navbar-brand-font-size:           1.25em;
+$navbar-padding-y:                   0;
+$navbar-padding-x:                   $gutter-width;
 
-$navbar-logo-width:                32px;
-$navbar-logo-height:               32px;
+$navbar-brand-font-size:             1.25em;
 
-$navbar-a-border-radius:           2em;
+$navbar-logo-width:                  32px;
+$navbar-logo-height:                 32px;
 
-$day__navbar-a-hover-bg-color:     transparent;
-$ngt__navbar-a-hover-bg-color:     transparent;
+$navbar-a-border-radius:             0;
 
-$navbar-a-font-weight:             500;
-$navbar-letter-spacing:            normal; // 0.15em;
-$navbar-text-transform:            none;
+$day__navbar-a-hover-bg-color:       color( 'black 025' );
+$ngt__navbar-a-hover-bg-color:       color( 'white 025' );
 
-$navbar-item__a-padding-y:         0.25rem;
-$navbar-item__a-padding-x:         0.75rem;
+$navbar-a-font-size:                 0.813em; // 13px
+$navbar-a-font-weight:               700;
+$navbar-letter-spacing:              normal;
+$navbar-text-transform:              none;
 
-$navbar-item-icon__a-padding-y:    0.25rem;
-$navbar-item-icon__a-padding-x:    0.75rem;
+$navbar-item__a-padding-y:           0.25rem;
+$navbar-item__a-padding-x:           1.5rem;
 
-$day__navbar-a-color:              color( 'black 50' );
-$ngt__navbar-a-color:              color( 'white 50' );
+$navbar-item-icon__a-padding-y:      0.25rem;
+$navbar-item-icon__a-padding-x:      0.75rem;
 
-$day__navbar-a-hover-color:        color( 'black 80' );
-$ngt__navbar-a-hover-color:        color( 'white 80' );
+$day__navbar-a-color:                $day__body-color;
+$ngt__navbar-a-color:                $ngt__body-color;
 
-$navbar-collapse__ul-padding-y:    0.5rem;
-$navbar-collapse__ul-padding-x:    0;
+$day__navbar-a-hover-color:          $day__body-color;
+$ngt__navbar-a-hover-color:          $ngt__body-color;
 
-$day__navbar-item-active__a-color: $day__body-color;
-$ngt__navbar-item-active__a-color: $ngt__body-color;
+$navbar-collapse__ul-padding-y:      0.5rem;
+$navbar-collapse__ul-padding-x:      0;
 
-$navbar-icon-font-size:            1.5em;
+$day__navbar-item-active__a-color:   $day__a-color;
+$ngt__navbar-item-active__a-color:   $ngt__a-color;
 
-$navbar-svg-width:                 1.5rem;
-$navbar-svg-height:                1.5rem;
+$navbar-item-active__a-after-right:  1.125rem;
+$navbar-item-active__a-after-bottom: 0;
+$navbar-item-active__a-after-left:   1.125rem;
+$navbar-item-active__a-after-height: 0.188rem; // 3px
+
+$navbar-icon-font-size:              1.5em;
+
+$navbar-svg-width:                   1.5rem;
+$navbar-svg-height:                  1.5rem;
 
 
 // $day__navbar-bg-color:              $day__body-bg-color;

@@ -41,88 +41,108 @@
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  padding: 0.5rem 1rem;
-  position: relative; }
+  padding: 0 1rem;
+  position: relative;
+  min-height: 3.75rem;
+  background-color: #fff;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   .navbar a, .navbar .btn--link {
-    border-radius: 2em;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 500;
+    font-size: 0.813em;
+    font-weight: 700;
+    position: relative;
     letter-spacing: normal;
-    text-transform: none; }
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 0; }
     .navbar a:link, .navbar a:visited, .navbar .btn--link:link, .navbar .btn--link:visited {
-      color: rgba(0, 0, 0, 0.5); }
+      color: rgba(0, 0, 0, 0.9); }
     .navbar a:hover, .navbar .btn--link:hover {
-      background-color: transparent;
-      color: rgba(0, 0, 0, 0.8); }
+      color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.025);
+      text-decoration: none; }
   .navbar .active a,
   .navbar a.active {
-    color: rgba(0, 0, 0, 0.9); }
+    color: #a87dc2; }
+    .navbar .active a::after,
+    .navbar a.active::after {
+      position: absolute;
+      right: 1.125rem;
+      bottom: 0;
+      left: 1.125rem;
+      display: block;
+      height: 0.188rem;
+      content: '';
+      background: #a87dc2; }
     .navbar .active a:link, .navbar .active a:visited, .navbar .active a:hover,
     .navbar a.active:link,
     .navbar a.active:visited,
     .navbar a.active:hover {
-      color: rgba(0, 0, 0, 0.9); }
+      color: #a87dc2; }
   .navbar .input {
-    font-weight: 500; }
+    font-weight: 700; }
   .navbar a .navbar__icn, .navbar .btn .navbar__icn {
-    fill: rgba(0, 0, 0, 0.5); }
-  .navbar a:hover .navbar__icn, .navbar .btn:hover .navbar__icn {
-    fill: rgba(0, 0, 0, 0.8); }
-  .navbar a.active .navbar__icn, .navbar .btn.active .navbar__icn {
     fill: rgba(0, 0, 0, 0.9); }
+  .navbar a:hover .navbar__icn, .navbar .btn:hover .navbar__icn {
+    fill: rgba(0, 0, 0, 0.9); }
+  .navbar a.active .navbar__icn, .navbar .btn.active .navbar__icn {
+    fill: #a87dc2; }
   .navbar svg {
     transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
     vertical-align: middle;
     width: 1.5rem;
     height: 1.5rem; }
 
-.night .navbar a, .night .navbar .btn--link,
-.navbar--dark a,
-.navbar--dark .btn--link {
-  color: rgba(255, 255, 255, 0.5); }
-  .night .navbar a:link, .night .navbar a:visited, .night .navbar .btn--link:link, .night .navbar .btn--link:visited,
-  .navbar--dark a:link,
-  .navbar--dark a:visited,
-  .navbar--dark .btn--link:link,
-  .navbar--dark .btn--link:visited {
-    color: rgba(255, 255, 255, 0.5); }
-  .night .navbar a:hover, .night .navbar .btn--link:hover,
-  .navbar--dark a:hover,
-  .navbar--dark .btn--link:hover {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.8); }
-
-.night .navbar .active a,
-.night .navbar a.active,
-.navbar--dark .active a,
-.navbar--dark a.active {
-  color: rgba(255, 255, 255, 0.9); }
-  .night .navbar .active a:link, .night .navbar .active a:visited, .night .navbar .active a:hover,
-  .night .navbar a.active:link,
-  .night .navbar a.active:visited,
-  .night .navbar a.active:hover,
-  .navbar--dark .active a:link,
-  .navbar--dark .active a:visited,
-  .navbar--dark .active a:hover,
-  .navbar--dark a.active:link,
-  .navbar--dark a.active:visited,
-  .navbar--dark a.active:hover {
+.night .navbar,
+.navbar--dark {
+  background-color: #060b0b; }
+  .night .navbar a, .night .navbar .btn--link,
+  .navbar--dark a,
+  .navbar--dark .btn--link {
     color: rgba(255, 255, 255, 0.9); }
-
-.night .navbar a svg, .night .navbar .btn svg,
-.navbar--dark a svg,
-.navbar--dark .btn svg {
-  fill: rgba(255, 255, 255, 0.5); }
-
-.night .navbar a:hover svg, .night .navbar .btn:hover svg,
-.navbar--dark a:hover svg,
-.navbar--dark .btn:hover svg {
-  fill: rgba(255, 255, 255, 0.8); }
-
-.night .navbar a.active svg, .night .navbar .btn.active svg,
-.navbar--dark a.active svg,
-.navbar--dark .btn.active svg {
-  fill: rgba(255, 255, 255, 0.9); }
+    .night .navbar a:link, .night .navbar a:visited, .night .navbar .btn--link:link, .night .navbar .btn--link:visited,
+    .navbar--dark a:link,
+    .navbar--dark a:visited,
+    .navbar--dark .btn--link:link,
+    .navbar--dark .btn--link:visited {
+      color: rgba(255, 255, 255, 0.9); }
+    .night .navbar a:hover, .night .navbar .btn--link:hover,
+    .navbar--dark a:hover,
+    .navbar--dark .btn--link:hover {
+      color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.025); }
+  .night .navbar .active a,
+  .night .navbar a.active,
+  .navbar--dark .active a,
+  .navbar--dark a.active {
+    color: #a87dc2; }
+    .night .navbar .active a::after,
+    .night .navbar a.active::after,
+    .navbar--dark .active a::after,
+    .navbar--dark a.active::after {
+      background: #a87dc2; }
+    .night .navbar .active a:link, .night .navbar .active a:visited, .night .navbar .active a:hover,
+    .night .navbar a.active:link,
+    .night .navbar a.active:visited,
+    .night .navbar a.active:hover,
+    .navbar--dark .active a:link,
+    .navbar--dark .active a:visited,
+    .navbar--dark .active a:hover,
+    .navbar--dark a.active:link,
+    .navbar--dark a.active:visited,
+    .navbar--dark a.active:hover {
+      color: #a87dc2; }
+  .night .navbar a svg, .night .navbar .btn svg,
+  .navbar--dark a svg,
+  .navbar--dark .btn svg {
+    fill: rgba(255, 255, 255, 0.9); }
+  .night .navbar a:hover svg, .night .navbar .btn:hover svg,
+  .navbar--dark a:hover svg,
+  .navbar--dark .btn:hover svg {
+    fill: rgba(255, 255, 255, 0.9); }
+  .night .navbar a.active svg, .night .navbar .btn.active svg,
+  .navbar--dark a.active svg,
+  .navbar--dark .btn.active svg {
+    fill: #a87dc2; }
 
 .navbar__brand {
   display: flex;
@@ -182,7 +202,7 @@
 .navbar__item a,
 a.navbar__item {
   display: block;
-  padding: 0.25rem 0.75rem; }
+  padding: 0.25rem 1.5rem; }
 
 .navbar__item--icn a,
 a.navbar__item--icn {
@@ -217,7 +237,10 @@ a.navbar__item--icn {
       .xs-navbar--expand .navbar__collapse .navbar__item .btn,
       .xs-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
-        width: auto; } }
+        width: auto; }
+    .xs-navbar--expand .navbar__item a,
+    .xs-navbar--expand a.navbar__item {
+      display: flex; } }
 
 @media (min-width: 768px) {
   .sm-navbar--expand {
@@ -240,7 +263,10 @@ a.navbar__item--icn {
       .sm-navbar--expand .navbar__collapse .navbar__item .btn,
       .sm-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
-        width: auto; } }
+        width: auto; }
+    .sm-navbar--expand .navbar__item a,
+    .sm-navbar--expand a.navbar__item {
+      display: flex; } }
 
 @media (min-width: 1024px) {
   .md-navbar--expand {
@@ -263,7 +289,10 @@ a.navbar__item--icn {
       .md-navbar--expand .navbar__collapse .navbar__item .btn,
       .md-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
-        width: auto; } }
+        width: auto; }
+    .md-navbar--expand .navbar__item a,
+    .md-navbar--expand a.navbar__item {
+      display: flex; } }
 
 @media (min-width: 1280px) {
   .lg-navbar--expand {
@@ -286,7 +315,10 @@ a.navbar__item--icn {
       .lg-navbar--expand .navbar__collapse .navbar__item .btn,
       .lg-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
-        width: auto; } }
+        width: auto; }
+    .lg-navbar--expand .navbar__item a,
+    .lg-navbar--expand a.navbar__item {
+      display: flex; } }
 
 @media (min-width: 1680px) {
   .xl-navbar--expand {
@@ -309,4 +341,7 @@ a.navbar__item--icn {
       .xl-navbar--expand .navbar__collapse .navbar__item .btn,
       .xl-navbar--expand .navbar__collapse .btn.navbar__item {
         padding: 0.25rem 0.75rem;
-        width: auto; } }
+        width: auto; }
+    .xl-navbar--expand .navbar__item a,
+    .xl-navbar--expand a.navbar__item {
+      display: flex; } }
