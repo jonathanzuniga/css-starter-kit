@@ -6,6 +6,83 @@
  * Menu:
  */
 
+ /**
+  * Horizontal menu:
+  * `.menu-x`
+  *
+  *     @example
+  *     div.scroll-wrap
+  *         ul.menu-x
+  *             li.active
+  *                 a(href='#') Link 1
+  *             li
+  *                 a(href='#') Link 2
+  *             li
+  *                 a(href='#') Link 3
+  *             li
+  *                 a(href='#') Link 4
+  *             li
+  *                 a(href='#') Link 5
+  *             li
+  *                 a(href='#') Link 6
+  */
+
+.scroll-wrap {
+	display: flex;
+	align-items: baseline;
+
+	overflow-y: hidden;
+	overflow-x: auto;
+	padding: 10px 20px;
+	white-space: nowrap;
+	width: 100%;
+
+	&:after {
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 80%, white 100%);
+		bottom: 0;
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 25px;
+	}
+}
+
+.menu-x {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0 25px 0 0;
+
+	li {
+		margin-left: 32px;
+		position: relative;
+
+		&::after {
+			border-left: 1px solid $day__body-color;
+			bottom: 1px;
+			content: '';
+			display: block;
+			left: -16px;
+			position: absolute;
+			top: -1px;
+		}
+
+		&:first-child {
+			margin-left: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+	}
+}
+
 /**
  * Vertical menu:
  * `.menu`

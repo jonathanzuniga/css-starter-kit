@@ -47,6 +47,10 @@
 		grid-template-columns: repeat( $i, 1fr );
 	}
 
+	.gcol-span-#{ $i } {
+		grid-column: span #{ $i };
+	}
+
 }
 
 /**
@@ -91,6 +95,10 @@
 					}
 				}
 
+				.max#{ $size }-gcol-span-#{ $i } {
+					grid-column: span #{ $i };
+				}
+
 			}
 
 		}
@@ -121,6 +129,10 @@
 				}
 			}
 
+			.#{ $size }-gcol-span-#{ $i } {
+				grid-column: span #{ $i };
+			}
+
 		}
 
 	}
@@ -141,4 +153,20 @@
  *             div.bgc-orchid-10 &nbsp;
  *         div.md-gcol-2.maxmd-hide
  *             div.bgc-orchid-20 &nbsp;
+ */
+
+/**
+ * Span columns:
+ * `.gcol-span-[#]` `.[size]-gcol-span-[#]` `.max[size]-gcol-span-[#]`
+ *
+ *     @example
+ *     div.xs-gcols-2.md-gcols-3
+ *         div.gcol-span-2.md-gcol-span-3
+ *             div.bgc-blue-10 &nbsp;
+ *         div
+ *             div.bgc-blue-20 &nbsp;
+ *         div
+ *             div.bgc-blue-10 &nbsp;
+ *         div
+ *             div.bgc-blue-20 &nbsp;
  */

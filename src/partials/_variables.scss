@@ -60,6 +60,9 @@ $ngt__body-color:    color( 'white 90' );
 $day__border-color:  color( 'black 10' );
 $ngt__border-color:  color( 'white 10' );
 
+$day__border-dark-color: color( 'black 90' );
+$ngt__border-dark-color: color( 'white 90' );
+
 
 // Transition
 
@@ -684,8 +687,10 @@ $ngt__tbl-striped-bg-color:     color( 'white 05' );
 // Border
 
 $border-map: (
-    0:      0,
-    '0063': '0.063rem solid'
+    0: 0,
+    '0063': '0.063rem solid #{ $day__border-color }',
+    'dark-0063': '0.063rem solid #{ $day__border-dark-color }',
+    'dark-0125': '0.125rem solid #{ $day__border-dark-color }'
 );
 
 
