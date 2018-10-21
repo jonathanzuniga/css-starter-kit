@@ -14,6 +14,7 @@ $font-family-sans-serif: -apple-system,
                          'Segoe UI',
                          Roboto,
                          'Helvetica Neue',
+                         Helvetica,
                          Arial,
                          sans-serif,
                          'Apple Color Emoji',
@@ -33,7 +34,7 @@ $font-size-base:         16px !default;
 $font-size-sm:           0.813em; // 13px
 $font-size-lg:           1.5em;   // 24px
 $font-weight-base:       400;
-$line-height-base:       25px !default;
+$line-height-base:       22px !default;
 
 $spacing-unit-base:      2em; // 32px
 $spacing-unit-half:      $spacing-unit-base / 2; // 1em   (16px)
@@ -47,7 +48,7 @@ $border-radius-base:     0.25rem;
 // Color
 
 $day__body-bg-color: #fff;
-$ngt__body-bg-color: #060b0b;
+$ngt__body-bg-color: #1e1b1a;
 
 $colors:             colors( $color-palette );
 
@@ -57,8 +58,8 @@ $ngt__color-primary: color( 'black 90' );
 $day__body-color:    color( 'black 90' );
 $ngt__body-color:    color( 'white 90' );
 
-$day__border-color:  color( 'black 10' );
-$ngt__border-color:  color( 'white 10' );
+$day__border-color:  color( 'black 20' );
+$ngt__border-color:  color( 'white 20' );
 
 $day__border-dark-color: color( 'black 90' );
 $ngt__border-dark-color: color( 'white 90' );
@@ -105,17 +106,18 @@ $ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
 // Heading
 
 $headings: (
-    'h1': 2.250em, // 36px
+    'h1': 2.50em,  // 40px
     'h2': 2em,     // 32px
-    'h3': 1.750em, // 28px
+    'h3': 1.75em,  // 28px
     'h4': 1.5em,   // 24px
     'h5': 1.25em,  // 20px
     'h6': 1em      // 16px
 ) !default;
 
 $heading-font-weight:    500;
-$heading-letter-spacing: normal; // 0.15em;
-$heading-line-height:    1.2;
+$heading-letter-spacing: -0.063rem;
+$heading-line-height:    1.1;
+$heading-margin-bottom:  0.5em;
 $heading-text-transform: none;
 
 
@@ -690,7 +692,8 @@ $border-map: (
     0: 0,
     '0063': '0.063rem solid #{ $day__border-color }',
     'dark-0063': '0.063rem solid #{ $day__border-dark-color }',
-    'dark-0125': '0.125rem solid #{ $day__border-dark-color }'
+    'dark-0125': '0.125rem solid #{ $day__border-dark-color }',
+    'double-0188': '0.188rem double #{ $day__border-color }'
 );
 
 
@@ -841,15 +844,22 @@ $width-map: (
 );
 
 
+// Max width
+
+$max-width-map: (
+    100: '100%'
+);
+
+
 // Text
 
 // Display heading
 
 $display-headings: (
-    'dh1': 6.0em, // 96px
-    'dh2': 5.5em, // 88px
-    'dh3': 5.0em, // 80px
-    'dh4': 4.5em  // 72px
+    'dh1': 4.5em, // 72px
+    'dh2': 4em,   // 64px
+    'dh3': 3.5em, // 56px
+    'dh4': 3em    // 48px
 ) !default;
 
 $display-heading-font-weight: $heading-font-weight;
@@ -867,7 +877,7 @@ $ngt__dropcap-color:     $ngt__body-color;
 
 $dropcap-font-size:      3.5em;
 $dropcap-font-style:     normal;
-$dropcap-font-weight:    normal;
+$dropcap-font-weight:    700;
 $dropcap-letter-spacing: 0;
 $dropcap-line-height:    inherit;
 $dropcap-margin-top:     0.063em;

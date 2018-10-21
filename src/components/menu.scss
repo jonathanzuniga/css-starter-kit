@@ -38,7 +38,12 @@
 	width: 100%;
 
 	&:after {
-		background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 80%, white 100%);
+		background: linear-gradient(
+			to right,
+			rgba( $day__body-bg-color , 0 ) 0%,
+			$day__body-bg-color 80%,
+			$day__body-bg-color 100%
+		);
 		bottom: 0;
 		content: '';
 		position: absolute;
@@ -59,7 +64,7 @@
 		position: relative;
 
 		&::after {
-			border-left: 1px solid $day__body-color;
+			border-left: 1px solid $day__border-color;
 			bottom: 1px;
 			content: '';
 			display: block;
