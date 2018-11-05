@@ -51,7 +51,7 @@
 	position: relative;
 
 	min-height: $navbar-min-height;
-	background-color: $day__body-bg-color;
+	background-color: $day__navbar-bg-color;
 	transition: $transition-base;
 
 	a, .btn--link {
@@ -80,10 +80,13 @@
 
 	.active a,
 	a.active {
+		background-color: $day__navbar-item-active__a-bg-color;
 		color: $day__navbar-item-active__a-color;
+		font-weight: $navbar-item-active__a-font-weight;
 
 		&::after {
 			position: absolute;
+			top: $navbar-item-active__a-after-top;
 			right: $navbar-item-active__a-after-right;
 			bottom: $navbar-item-active__a-after-bottom;
 			left: $navbar-item-active__a-after-left;
@@ -94,7 +97,7 @@
 
 			content: '';
 
-			background: $day__a-color;
+			background-color: $day__navbar-item-active__a-after-bg-color;
 		}
 
 		&:link,
@@ -133,7 +136,7 @@
 
 .night .navbar,
 .navbar--dark {
-	background-color: $ngt__body-bg-color;
+	background-color: $ngt__navbar-bg-color;
 
 	a, .btn--link {
 		color: $ngt__navbar-a-color;
@@ -152,10 +155,11 @@
 
 	.active a,
 	a.active {
+		background-color: $ngt__navbar-item-active__a-bg-color;
 		color: $ngt__navbar-item-active__a-color;
 
 		&::after {
-			background: $ngt__a-color;
+			background-color: $ngt__navbar-item-active__a-after-bg-color;
 		}
 
 		&:link,
@@ -184,15 +188,16 @@
 	display: flex;
 	align-items: stretch;
 
-	font-size: $navbar-brand-font-size;
-
 	a {
-		color: $day__navbar-a-color;
+		color: $day__navbar-item-active__a-color;
+
+		font-size: $navbar-brand-font-size;
+		font-weight: $navbar-brand-font-weight;
 
 		&:link,
 		&:visited,
 		&:hover {
-			color: $day__navbar-a-color;
+			color: $day__navbar-item-active__a-color;
 		}
 	}
 }
@@ -200,12 +205,12 @@
 .night .navbar__brand,
 .navbar--dark .navbar__brand {
 	a {
-		color: $ngt__navbar-a-color;
+		color: $ngt__navbar-item-active__a-color;
 
 		&:link,
 		&:visited,
 		&:hover {
-			color: $ngt__navbar-a-color;
+			color: $ngt__navbar-item-active__a-color;
 		}
 	}
 }

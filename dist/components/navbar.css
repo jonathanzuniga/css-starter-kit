@@ -41,51 +41,54 @@
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 0.5rem 0;
   position: relative;
   min-height: 3.75rem;
-  background-color: #fff;
+  background-color: #425389;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
   .navbar a, .navbar .btn--link {
-    font-size: 0.813em;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 400;
     position: relative;
     letter-spacing: normal;
     text-transform: none;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.5);
     border-radius: 0; }
     .navbar a:link, .navbar a:visited, .navbar .btn--link:link, .navbar .btn--link:visited {
-      color: rgba(0, 0, 0, 0.9); }
+      color: rgba(255, 255, 255, 0.5); }
     .navbar a:hover, .navbar .btn--link:hover {
-      color: rgba(0, 0, 0, 0.9);
-      background-color: rgba(0, 0, 0, 0.025);
+      color: #fff;
+      background-color: transparent;
       text-decoration: none; }
   .navbar .active a,
   .navbar a.active {
-    color: rgba(0, 0, 0, 0.9); }
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500; }
     .navbar .active a::after,
     .navbar a.active::after {
       position: absolute;
-      right: 1.125rem;
-      bottom: 0;
-      left: 1.125rem;
+      top: 0;
+      right: 0;
+      bottom: inherit;
+      left: 0;
       display: block;
       height: 0.188rem;
       content: '';
-      background: rgba(0, 0, 0, 0.9); }
+      background-color: transparent; }
     .navbar .active a:link, .navbar .active a:visited, .navbar .active a:hover,
     .navbar a.active:link,
     .navbar a.active:visited,
     .navbar a.active:hover {
-      color: rgba(0, 0, 0, 0.9); }
+      color: #fff; }
   .navbar .input {
-    font-weight: 700; }
+    font-weight: 400; }
   .navbar a .navbar__icn, .navbar .btn .navbar__icn {
-    fill: rgba(0, 0, 0, 0.9); }
+    fill: rgba(255, 255, 255, 0.5); }
   .navbar a:hover .navbar__icn, .navbar .btn:hover .navbar__icn {
-    fill: rgba(0, 0, 0, 0.9); }
+    fill: #fff; }
   .navbar a.active .navbar__icn, .navbar .btn.active .navbar__icn {
-    fill: rgba(0, 0, 0, 0.9); }
+    fill: #fff; }
   .navbar svg {
     transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out;
     vertical-align: middle;
@@ -98,28 +101,29 @@
   .night .navbar a, .night .navbar .btn--link,
   .navbar--dark a,
   .navbar--dark .btn--link {
-    color: rgba(255, 255, 255, 0.9); }
+    color: rgba(255, 255, 255, 0.5); }
     .night .navbar a:link, .night .navbar a:visited, .night .navbar .btn--link:link, .night .navbar .btn--link:visited,
     .navbar--dark a:link,
     .navbar--dark a:visited,
     .navbar--dark .btn--link:link,
     .navbar--dark .btn--link:visited {
-      color: rgba(255, 255, 255, 0.9); }
+      color: rgba(255, 255, 255, 0.5); }
     .night .navbar a:hover, .night .navbar .btn--link:hover,
     .navbar--dark a:hover,
     .navbar--dark .btn--link:hover {
       color: rgba(255, 255, 255, 0.9);
-      background-color: rgba(255, 255, 255, 0.025); }
+      background-color: transparent; }
   .night .navbar .active a,
   .night .navbar a.active,
   .navbar--dark .active a,
   .navbar--dark a.active {
-    color: rgba(0, 0, 0, 0.9); }
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9); }
     .night .navbar .active a::after,
     .night .navbar a.active::after,
     .navbar--dark .active a::after,
     .navbar--dark a.active::after {
-      background: rgba(0, 0, 0, 0.9); }
+      background-color: transparent; }
     .night .navbar .active a:link, .night .navbar .active a:visited, .night .navbar .active a:hover,
     .night .navbar a.active:link,
     .night .navbar a.active:visited,
@@ -130,11 +134,11 @@
     .navbar--dark a.active:link,
     .navbar--dark a.active:visited,
     .navbar--dark a.active:hover {
-      color: rgba(0, 0, 0, 0.9); }
+      color: rgba(255, 255, 255, 0.9); }
   .night .navbar a svg, .night .navbar .btn svg,
   .navbar--dark a svg,
   .navbar--dark .btn svg {
-    fill: rgba(255, 255, 255, 0.9); }
+    fill: rgba(255, 255, 255, 0.5); }
   .night .navbar a:hover svg, .night .navbar .btn:hover svg,
   .navbar--dark a:hover svg,
   .navbar--dark .btn:hover svg {
@@ -142,16 +146,17 @@
   .night .navbar a.active svg, .night .navbar .btn.active svg,
   .navbar--dark a.active svg,
   .navbar--dark .btn.active svg {
-    fill: rgba(0, 0, 0, 0.9); }
+    fill: rgba(255, 255, 255, 0.9); }
 
 .navbar__brand {
   display: flex;
-  align-items: stretch;
-  font-size: 1.25em; }
+  align-items: stretch; }
   .navbar__brand a {
-    color: rgba(0, 0, 0, 0.9); }
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 500; }
     .navbar__brand a:link, .navbar__brand a:visited, .navbar__brand a:hover {
-      color: rgba(0, 0, 0, 0.9); }
+      color: #fff; }
 
 .night .navbar__brand a,
 .navbar--dark .navbar__brand a {
@@ -202,7 +207,7 @@
 .navbar__item a,
 a.navbar__item {
   display: block;
-  padding: 0.25rem 1.5rem; }
+  padding: 0.25rem 1rem; }
 
 .navbar__item--icn a,
 a.navbar__item--icn {
@@ -213,8 +218,8 @@ a.navbar__item--icn {
 
 .col > .navbar,
 [class*='-col-'] > .navbar {
-  margin-right: -1rem;
-  margin-left: -1rem; }
+  margin-right: -0;
+  margin-left: -0; }
 
 @media (min-width: 0) {
   .xs-navbar--expand {

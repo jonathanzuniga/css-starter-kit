@@ -52,10 +52,10 @@ $ngt__body-bg-color: #1e1b1a;
 
 $colors:             colors( $color-palette );
 
-$day__color-primary: color( 'black 90' );
-$ngt__color-primary: color( 'black 90' );
+$day__color-primary: color( 'blue' );
+$ngt__color-primary: color( 'blue' );
 
-$day__body-color:    color( 'black 90' );
+$day__body-color:    color( 'black 80' );
 $ngt__body-color:    color( 'white 90' );
 
 $day__border-color:  color( 'black 20' );
@@ -114,7 +114,7 @@ $headings: (
     'h6': 1em      // 16px
 ) !default;
 
-$heading-font-weight:    500;
+$heading-font-weight:    700;
 $heading-letter-spacing: -0.063rem;
 $heading-line-height:    1.1;
 $heading-margin-bottom:  0.5em;
@@ -693,7 +693,8 @@ $border-map: (
     '0063': '0.063rem solid #{ $day__border-color }',
     'dark-0063': '0.063rem solid #{ $day__border-dark-color }',
     'dark-0125': '0.125rem solid #{ $day__border-dark-color }',
-    'double-0188': '0.188rem double #{ $day__border-color }'
+    'double-0188': '0.188rem double #{ $day__border-color }',
+    'dark-025': '0.25rem solid #{ $day__border-dark-color }'
 );
 
 
@@ -1149,48 +1150,61 @@ $modal-show-content-transition: opacity    0.16s $transition-timing-function,
 
 // Navbar
 
+$day__navbar-bg-color:               color( 'blue 50' );
+$ngt__navbar-bg-color:               $ngt__body-bg-color;
+
 $navbar-min-height:                  3.750rem; // 60px
 
-$navbar-padding-y:                   0;
-$navbar-padding-x:                   $gutter-width;
+$navbar-padding-y:                   0.5rem;
+$navbar-padding-x:                   0;
 
 $navbar-brand-font-size:             1.25em;
+$navbar-brand-font-weight:           500;
 
 $navbar-logo-width:                  32px;
 $navbar-logo-height:                 32px;
 
 $navbar-a-border-radius:             0;
 
-$day__navbar-a-hover-bg-color:       color( 'black 025' );
-$ngt__navbar-a-hover-bg-color:       color( 'white 025' );
+$day__navbar-a-hover-bg-color:       transparent;
+$ngt__navbar-a-hover-bg-color:       transparent;
 
-$navbar-a-font-size:                 0.813em; // 13px
-$navbar-a-font-weight:               700;
+$navbar-a-font-size:                 1em;
+$navbar-a-font-weight:               400;
 $navbar-letter-spacing:              normal;
 $navbar-text-transform:              none;
 
 $navbar-item__a-padding-y:           0.25rem;
-$navbar-item__a-padding-x:           1.5rem;
+$navbar-item__a-padding-x:           1rem;
 
 $navbar-item-icon__a-padding-y:      0.25rem;
 $navbar-item-icon__a-padding-x:      0.75rem;
 
-$day__navbar-a-color:                $day__body-color;
-$ngt__navbar-a-color:                $ngt__body-color;
+$day__navbar-a-color:                rgba( $day__body-bg-color, 0.5 );
+$ngt__navbar-a-color:                rgba( $ngt__body-color, 0.5 );
 
-$day__navbar-a-hover-color:          $day__body-color;
+$day__navbar-a-hover-color:          $day__body-bg-color;
 $ngt__navbar-a-hover-color:          $ngt__body-color;
 
 $navbar-collapse__ul-padding-y:      0.5rem;
 $navbar-collapse__ul-padding-x:      0;
 
-$day__navbar-item-active__a-color:   $day__a-color;
-$ngt__navbar-item-active__a-color:   $ngt__a-color;
+$day__navbar-item-active__a-color:   $day__body-bg-color;
+$ngt__navbar-item-active__a-color:   $ngt__body-color;
 
-$navbar-item-active__a-after-right:  1.125rem;
-$navbar-item-active__a-after-bottom: 0;
-$navbar-item-active__a-after-left:   1.125rem;
+$day__navbar-item-active__a-bg-color: transparent;
+$ngt__navbar-item-active__a-bg-color: transparent;
+
+$navbar-item-active__a-after-top:    0;
+$navbar-item-active__a-after-right:  0;
+$navbar-item-active__a-after-bottom: inherit;
+$navbar-item-active__a-after-left:   0;
 $navbar-item-active__a-after-height: 0.188rem; // 3px
+
+$navbar-item-active__a-font-weight:  500;
+
+$day__navbar-item-active__a-after-bg-color: transparent;
+$ngt__navbar-item-active__a-after-bg-color: transparent;
 
 $navbar-icon-font-size:              1.5em;
 
