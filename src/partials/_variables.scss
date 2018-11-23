@@ -52,10 +52,10 @@ $ngt__body-bg-color: #1e1b1a;
 
 $colors:             colors( $color-palette );
 
-$day__color-primary: color( 'blue 40' );
-$ngt__color-primary: color( 'blue 40' );
+$day__color-primary: color( 'black 90' );
+$ngt__color-primary: color( 'white 90' );
 
-$day__body-color:    color( 'black 80' );
+$day__body-color:    color( 'black 90' );
 $ngt__body-color:    color( 'white 90' );
 
 $day__border-color:  color( 'black 20' );
@@ -184,7 +184,7 @@ $pre-padding-x:         1.5rem;
 // Box
 
 $day__box-bg-color:     $day__body-bg-color;
-$ngt__box-bg-color:     #202225;
+$ngt__box-bg-color:     $ngt__body-bg-color;
 
 $box-border-radius:     $border-radius-base;
 
@@ -258,8 +258,9 @@ $btn-transition:             $transition-base;
 // name, bg color, night bg color, text color, night text color, light colors on hover/active state?
 
 $btns: (
-    'primary'   color( 'blue 40' )  color( 'blue 40' )  #fff #fff '',
-    'secondary' color( 'black 40' ) color( 'white 20' ) #fff #fff ''
+    'primary'   $day__color-primary  $ngt__color-primary  $ngt__body-color $day__body-color '',
+    'secondary' color( 'black 50' )  color( 'white 20' )  $ngt__body-color $ngt__body-color '',
+    'light'     color( 'black 075' ) color( 'white 075' ) $day__body-color $ngt__body-color ''
 );
 
 
@@ -429,8 +430,8 @@ $ctrl--custom-check__label-padding-left: 2em;
 
 $tick-border-width:             0 0.125em 0.125em 0;
 $tick-border-style:             solid;
-$day__tick-border-color:        #fff;
-$ngt__tick-border-color:        #fff;
+$day__tick-border-color:        $ngt__color-primary;
+$ngt__tick-border-color:        $day__color-primary;
 
 $tick-top:                      18%;
 $tick-transform:                rotate( 45deg );
@@ -562,8 +563,8 @@ $ls--inline__li-margin-right: 1em;
 
 // Switch
 
-$day__sw__checked__label-before-bg-color: color( 'blue 40' );
-$ngt__sw__checked__label-before-bg-color: color( 'blue 40' );
+$day__sw__checked__label-before-bg-color: $day__color-primary;
+$ngt__sw__checked__label-before-bg-color: $ngt__color-primary;
 
 $sw__label-box-shadow:                    none;
 $sw__label-border:                        none;
@@ -583,8 +584,8 @@ $sw__label-before-transition:             0.2s cubic-bezier( 0.25, 0, 0.5, 1 );
 
 // Switch toggle
 
-$day__sw__label-after-bg-color: #fff;
-$ngt__sw__label-after-bg-color: #fff;
+$day__sw__label-after-bg-color: $ngt__color-primary;
+$ngt__sw__label-after-bg-color: $day__color-primary;
 
 $sw__label-after-box-shadow:    none;
 $sw__label-border-radius:       $sw__label-height / 2;
@@ -1151,8 +1152,8 @@ $modal-show-content-transition: opacity    0.16s $transition-timing-function,
 
 // Navbar
 
-$day__navbar-bg-color:               color( 'blue 50' );
-$ngt__navbar-bg-color:               $ngt__body-bg-color;
+$day__navbar-bg-color:               transparent;
+$ngt__navbar-bg-color:               transparent;
 
 $navbar-min-height:                  3.750rem; // 60px
 
@@ -1181,16 +1182,16 @@ $navbar-item__a-padding-x:           1rem;
 $navbar-item-icon__a-padding-y:      0.25rem;
 $navbar-item-icon__a-padding-x:      0.75rem;
 
-$day__navbar-a-color:                rgba( $day__body-bg-color, 0.5 );
+$day__navbar-a-color:                rgba( $day__body-color, 0.5 );
 $ngt__navbar-a-color:                rgba( $ngt__body-color, 0.5 );
 
-$day__navbar-a-hover-color:          $day__body-bg-color;
+$day__navbar-a-hover-color:          $day__body-color;
 $ngt__navbar-a-hover-color:          $ngt__body-color;
 
 $navbar-collapse__ul-padding-y:      0.5rem;
 $navbar-collapse__ul-padding-x:      0;
 
-$day__navbar-item-active__a-color:   $day__body-bg-color;
+$day__navbar-item-active__a-color:   $day__body-color;
 $ngt__navbar-item-active__a-color:   $ngt__body-color;
 
 $day__navbar-item-active__a-bg-color: transparent;

@@ -35,7 +35,7 @@
 	}
 }
 
-@each $name, $background-color, $night-background-color, $text-color, $night-text-color, $state-light-color in $btns {
+@each $name, $day-background-color, $ngt-background-color, $day-text-color, $ngt-text-color, $state-light-color in $btns {
 
 	$name_ucf: str_ucfirst( $name );
 	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
@@ -46,17 +46,17 @@
 	 *
 	 *     @example
 	 *     button.btn.btn--#{ $name_r } Button
-     *     button.btn.btn--#{ $name_r }.btn--outline Outline button
+	 *     button.btn.btn--#{ $name_r }.btn--outline Outline button
 	 */
 
 	.btn--#{ $name_r } {
-		background-color: $background-color;
+		background-color: $day-background-color;
 		border-color: $btn-border-color;
-		color: $text-color;
+		color: $day-text-color;
 
 		&:link,
 		&:visited {
-			color: $text-color;
+			color: $day-text-color;
 		}
 
 		&:hover {
@@ -64,7 +64,7 @@
 
 				background-color:
 					tint(
-						$background-color,
+						$day-background-color,
 						$el-hover-amount
 					);
 
@@ -72,12 +72,12 @@
 
 				background-color:
 					shade(
-						$background-color,
+						$day-background-color,
 						$el-hover-amount
 					);
 			}
 
-			color: $text-color;
+			color: $day-text-color;
 		}
 
 		&:active,
@@ -86,7 +86,7 @@
 
 				background-color:
 					tint(
-						$background-color,
+						$day-background-color,
 						$el-active-amount
 					);
 
@@ -94,26 +94,26 @@
 
 				background-color:
 					shade(
-						$background-color,
+						$day-background-color,
 						$el-active-amount
 					);
 
 			}
 
-			color: $text-color;
+			color: $day-text-color;
 		}
 	}
 
 	.night .btn--#{ $name_r } {
-		background-color: $night-background-color;
-		color: $night-text-color;
+		background-color: $ngt-background-color;
+		color: $ngt-text-color;
 
 		&:hover {
 			@if not ( $state-light-color == '' ) {
 
 				background-color:
 					tint(
-						$night-background-color,
+						$ngt-background-color,
 						$el-hover-amount
 					);
 
@@ -121,13 +121,13 @@
 
 				background-color:
 					shade(
-						$night-background-color,
+						$ngt-background-color,
 						$el-hover-amount
 					);
 
 			}
 
-			color: $night-text-color;
+			color: $ngt-text-color;
 		}
 
 		&:active,
@@ -136,7 +136,7 @@
 
 				background-color:
 					tint(
-						$night-background-color,
+						$ngt-background-color,
 						$el-active-amount
 					);
 
@@ -144,13 +144,13 @@
 
 				background-color:
 					shade(
-						$night-background-color,
+						$ngt-background-color,
 						$el-active-amount
 					);
 
 			}
 
-			color: $night-text-color;
+			color: $ngt-text-color;
 		}
 	}
 
@@ -160,15 +160,15 @@
 		&.btn--#{ $name_r } {
 			border-color:
 				transparentize(
-					$background-color,
+					$day-background-color,
 					$btn-outline-border-transparentize-amount
 				);
 
-			color: $background-color;
+			color: $day-background-color;
 
 			&:link,
 			&:visited {
-				color: $background-color;
+				color: $day-background-color;
 			}
 
 			&:hover {
@@ -176,7 +176,7 @@
 
 					background-color:
 						tint(
-							$background-color,
+							$day-background-color,
 							$el-hover-amount
 						);
 
@@ -184,7 +184,7 @@
 
 					background-color:
 						shade(
-							$background-color,
+							$day-background-color,
 							$el-hover-amount
 						);
 
@@ -192,7 +192,7 @@
 
 				border-color: transparent;
 
-				color: $text-color;
+				color: $day-text-color;
 			}
 
 			&:active,
@@ -201,12 +201,12 @@
 
 					background-color:
 						tint(
-							$background-color,
+							$day-background-color,
 							$el-active-amount
 						);
 					border-color: transparentize(
 						tint(
-							$background-color,
+							$day-background-color,
 							$el-active-amount
 						),
 						$btn-outline-border-transparentize-amount
@@ -216,14 +216,14 @@
 
 					background-color:
 						shade(
-							$background-color,
+							$day-background-color,
 							$el-active-amount
 						);
 					border-color: transparent;
 
 				}
 
-				color: $text-color;
+				color: $day-text-color;
 			}
 		}
 	}
@@ -234,14 +234,14 @@
 		&.btn--#{ $name_r } {
 			border-color:
 				transparentize(
-					$night-background-color,
+					$ngt-background-color,
 					$btn-outline-border-transparentize-amount
 				);
-			color: $night-background-color;
+			color: $ngt-background-color;
 
 			&:link,
 			&:visited {
-				color: $night-background-color;
+				color: $ngt-background-color;
 			}
 
 			&:hover {
@@ -249,7 +249,7 @@
 
 					background-color:
 						tint(
-							$night-background-color,
+							$ngt-background-color,
 							$el-hover-amount
 						);
 
@@ -257,7 +257,7 @@
 
 					background-color:
 						shade(
-							$night-background-color,
+							$ngt-background-color,
 							$el-hover-amount
 						);
 
@@ -265,7 +265,7 @@
 
 				border-color: transparent;
 
-				color: $night-text-color;
+				color: $ngt-text-color;
 			}
 
 			&:active,
@@ -274,12 +274,12 @@
 
 					background-color:
 						tint(
-							$night-background-color,
+							$ngt-background-color,
 							$el-active-amount
 						);
 					border-color: transparentize(
 						tint(
-							$night-background-color,
+							$ngt-background-color,
 							$el-active-amount
 						),
 						$btn-outline-border-transparentize-amount
@@ -289,14 +289,14 @@
 
 					background-color:
 						shade(
-							$night-background-color,
+							$ngt-background-color,
 							$el-active-amount
 						);
 					border-color: transparent;
 
 				}
 
-				color: $night-text-color;
+				color: $ngt-text-color;
 			}
 		}
 	}
@@ -306,10 +306,142 @@
 	.btn-group--toggle [type='radio'] {
 		opacity: 0;
 		position: absolute;
-		z-index: -1;
+		// z-index: -1;
 
 		&:checked + .btn--#{ $name_r } {
 			@extend .btn--#{ $name_r }.active;
+		}
+	}
+
+	.btn--#{ $name_r }.btn--hover-scale {
+		background-color: transparent;
+		position: relative;
+
+		&::before {
+			// display: inline-block;
+
+			height: 100%;
+
+			content: '';
+			vertical-align: middle;
+		}
+
+
+		&::after {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			content: '';
+			transition: transform 0.3s cubic-bezier( 0.4, 0, 0, 1 );
+
+			border-radius: inherit;
+			background-color: $day-background-color;
+		}
+
+
+		&:hover {
+			background-color: transparent;
+
+			&::after {
+				transform: scale( 1.2 );
+
+				@if not ($state-light-color == '') {
+
+					background-color:
+						tint(
+							$day-background-color,
+							$el-hover-amount
+						);
+
+				} @else {
+
+					background-color:
+						shade(
+							$day-background-color,
+							$el-hover-amount
+						);
+				}
+			}
+		}
+
+		&:active,
+		.active {
+			background-color: transparent;
+
+			&::after {
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
+						tint(
+							$day-background-color,
+							$el-active-amount
+						);
+
+				} @else {
+
+					background-color:
+						shade(
+							$day-background-color,
+							$el-active-amount
+						);
+
+				}
+			}
+		}
+	}
+
+	.night .btn--#{ $name_r }.btn--hover-scale {
+		&::after {
+			background-color: $ngt-background-color;
+		}
+
+		&:hover {
+			&::after {
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
+						tint(
+							$ngt-background-color,
+							$el-hover-amount
+						);
+
+				} @else {
+
+					background-color:
+						shade(
+							$ngt-background-color,
+							$el-hover-amount
+						);
+
+				}
+			}
+		}
+
+		&:active,
+		&.active {
+			&::after {
+				@if not ( $state-light-color == '' ) {
+
+					background-color:
+						tint(
+							$ngt-background-color,
+							$el-active-amount
+						);
+
+				} @else {
+
+					background-color:
+						shade(
+							$ngt-background-color,
+							$el-active-amount
+						);
+
+				}
+			}
 		}
 	}
 }
@@ -450,3 +582,12 @@
 		user-select: none;
 	}
 }
+
+/**
+ * Scale button on hover:
+ * `.btn--hover-scale`
+ *
+ *     @example
+ *     button.btn.btn--primary.btn--hover-scale
+ *         span Hover me
+ */
