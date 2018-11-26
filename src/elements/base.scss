@@ -38,7 +38,10 @@ body {
 	background-color: $day__body-bg-color;
 	color: $day__body-color;
 	font-family: $font-family-base;
+	font-feature-settings: normal;
 	font-size: $font-size-base;
+	font-variant-ligatures: common-ligatures;
+	font-variant-numeric: oldstyle-nums;
 	font-weight: $font-weight-base;
 	line-height: $line-height-ratio;
 
@@ -124,7 +127,7 @@ a {
 	}
 }
 
-.a-custom p a:not( .btn ) {
+.a-custom a:not( .btn ) {
 	background-color: transparent;
 	border-bottom: 0.063em solid color( 'blue 10' );
 	box-shadow: inset 0 -0.25em 0 color( 'blue 10' );
@@ -462,4 +465,28 @@ th {
 
 [ role='button' ], a, button, input, label, select, textarea {
     touch-action: manipulation;
+}
+
+hr {
+    clear: both;
+    display: block;
+    margin: $hr-margin-y $hr-margin-x;
+    padding: $hr-padding-y $hr-padding-x;
+    height: $hr-height;
+    border: 0;
+    border-bottom-width: $hr-border-bottom-width;
+    border-bottom-style: $hr-border-bottom-style;
+    border-bottom-color: $day__hr-border-bottom-color;
+}
+
+.night hr {
+    border-bottom-color: $ngt__hr-border-bottom-color;
+}
+
+@media ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi ) {
+
+	hr {
+		border-bottom-width: $hr-border-bottom-width / 2;
+	}
+
 }

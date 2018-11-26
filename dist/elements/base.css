@@ -27,7 +27,10 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.9);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-feature-settings: normal;
   font-size: 16px;
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums;
   font-weight: 400;
   line-height: 1.5;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
@@ -65,7 +68,7 @@ a {
     color: rgba(0, 0, 0, 0.9);
     text-decoration: none; }
   a:hover {
-    color: #374674;
+    color: #337cd1;
     text-decoration: underline; }
 
 .night a {
@@ -75,30 +78,30 @@ a {
   .night a:visited {
     color: rgba(255, 255, 255, 0.9); }
   .night a:hover {
-    color: #53618f; }
+    color: #4e98ed; }
 
 .a-bd-bottom p > a:not(.btn) {
   border-bottom: 0.063rem solid rgba(0, 0, 0, 0.9); }
   .a-bd-bottom p > a:not(.btn):hover {
     border-bottom-width: 0.125rem;
-    border-bottom-color: #374674; }
+    border-bottom-color: #337cd1; }
 
 .night .a-bd-bottom p > a:not(.btn) {
   border-bottom-color: rgba(255, 255, 255, 0.9); }
   .night .a-bd-bottom p > a:not(.btn):hover {
-    border-bottom-color: #53618f; }
+    border-bottom-color: #4e98ed; }
 
-.a-custom p a:not(.btn) {
+.a-custom a:not(.btn) {
   background-color: transparent;
-  border-bottom: 0.063em solid #c3cadb;
-  box-shadow: inset 0 -0.25em 0 #c3cadb;
+  border-bottom: 0.063em solid #bedffd;
+  box-shadow: inset 0 -0.25em 0 #bedffd;
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
   transition: background 0.16s cubic-bezier(0.33, 0.66, 0.66, 1);
   word-wrap: break-word; }
-  .a-custom p a:not(.btn):hover {
-    background-color: #c3cadb; }
+  .a-custom a:not(.btn):hover {
+    background-color: #bedffd; }
 
 /**
  * Heading:
@@ -317,7 +320,7 @@ blockquote {
  */
 code {
   background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 0.25rem;
+  border-radius: 0.375em;
   color: inherit;
   font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Courier, monospace;
   font-size: 0.875em;
@@ -345,7 +348,7 @@ pre {
   border-bottom: none;
   border-left: none;
   border-color: transparent;
-  border-radius: 0.25rem;
+  border-radius: 0.375em;
   overflow-x: auto;
   padding: 1.5rem 1.5rem; }
   pre code {
@@ -435,3 +438,21 @@ th {
 
 [role='button'], a, button, input, label, select, textarea {
   touch-action: manipulation; }
+
+hr {
+  clear: both;
+  display: block;
+  margin: 2rem 0;
+  padding: 0 0;
+  height: 0.063rem;
+  border: 0;
+  border-bottom-width: 0.063rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+
+.night hr {
+  border-bottom-color: rgba(0, 0, 0, 0.2); }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  hr {
+    border-bottom-width: 0.0315rem; } }
