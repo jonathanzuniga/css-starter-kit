@@ -19,6 +19,26 @@
 	box-sizing: inherit;
 }
 
+::-moz-selection {
+	background-color: $day__bg-color-selection;
+	text-shadow:none;
+}
+
+::selection {
+	background-color: $day__bg-color-selection;
+	text-shadow:none;
+}
+
+.night ::-moz-selection {
+	background-color: $ngt__bg-color-selection;
+	text-shadow:none;
+}
+
+.night ::selection {
+	background-color: $ngt__bg-color-selection;
+	text-shadow:none;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -61,16 +81,11 @@ ul, ol, dl, figure {
 
 /**
  * Hyperlink:
- * `a` `.a-bd-bottom`
+ * `a` `.a-custom`
  *
  *     @example
- *     div.row
- *         div.col
- *             p
- *                 a(href='#!') Click me!
- *         div.col.a-bd-bottom
- *             p
- *                 a(href='#!') Click me more!
+ *     p Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     p.a-custom Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 
 a {
@@ -92,6 +107,15 @@ a {
 		color: $day__a-hover-color;
 		text-decoration: $a-hover-text-decoration;
 	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
 }
 
 .night a {
@@ -110,35 +134,61 @@ a {
 	}
 }
 
-.a-bd-bottom p > a:not( .btn ) {
-	border-bottom: $a-border-bottom-width $a-border-bottom-style $day__a-border-bottom-color;
-
-	&:hover {
-		border-bottom-width: $a-hover-border-bottom-width;
-		border-bottom-color: $day__a-hover-border-bottom-color;
-	}
-}
-
-.night .a-bd-bottom p > a:not( .btn ) {
-	border-bottom-color: $ngt__a-border-bottom-color;
-
-	&:hover {
-		border-bottom-color: $ngt__a-hover-border-bottom-color;
-	}
-}
-
 .a-custom a:not( .btn ) {
-	background-color: transparent;
-	border-bottom: 0.063em solid color( 'blue 10' );
-	box-shadow: inset 0 -0.25em 0 color( 'blue 10' );
-	color: inherit;
-	font-weight: inherit;
+	background-image: linear-gradient( $day__a-hover-color, $day__a-hover-color );
+	background-origin: padding-box;
+	background-position: $a-custom-bg-position;
+	background-repeat: no-repeat;
+	background-size: $a-custom-bg-size;
+	color: $day__a-custom-color;
+	padding: $a-custom-padding;
 	text-decoration: none;
-	transition: background 0.16s cubic-bezier( 0.33, 0.66, 0.66, 1 );
-	word-wrap: break-word;
+	text-shadow: $day__a-custom-text-shadow;
+
+	transition: $transition-base;
+
+	&:link {
+		color: $day__a-custom-color;
+	}
+
+	&:visited {
+		color: $day__a-custom-visited-color;
+		text-decoration: none;
+	}
 
 	&:hover {
-		background-color: color( 'blue 10' );
+		color: $day__a-custom-hover-color;
+		text-decoration: none;
+	}
+
+	// background-color: transparent;
+	// border-bottom: 0.063em solid color( 'blue 10' );
+	// box-shadow: inset 0 -0.25em 0 color( 'blue 10' );
+	// color: inherit;
+	// font-weight: inherit;
+	// text-decoration: none;
+	// transition: background 0.16s cubic-bezier( 0.33, 0.66, 0.66, 1 );
+	// word-wrap: break-word;
+
+	// &:hover {
+	// 	background-color: color( 'blue 10' );
+	// }
+}
+
+.night .a-custom a:not( .btn ) {
+	color: $ngt__a-custom-color;
+	text-shadow: $ngt__a-custom-text-shadow;
+
+	&:link {
+		color: $ngt__a-custom-color;
+	}
+
+	&:visited {
+		color: $ngt__a-custom-visited-color;
+	}
+
+	&:hover {
+		color: $ngt__a-custom-hover-color;
 	}
 }
 

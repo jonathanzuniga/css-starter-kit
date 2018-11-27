@@ -12,6 +12,22 @@
 :after {
   box-sizing: inherit; }
 
+::-moz-selection {
+  background-color: #e4f2fe;
+  text-shadow: none; }
+
+::selection {
+  background-color: #e4f2fe;
+  text-shadow: none; }
+
+.night ::-moz-selection {
+  background-color: #e4f2fe;
+  text-shadow: none; }
+
+.night ::selection {
+  background-color: #e4f2fe;
+  text-shadow: none; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -33,7 +49,7 @@ body {
   font-variant-numeric: oldstyle-nums;
   font-weight: 400;
   line-height: 1.5;
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out; }
 
 .night body {
   background-color: #191919;
@@ -46,62 +62,68 @@ ul, ol, dl, figure {
 
 /**
  * Hyperlink:
- * `a` `.a-bd-bottom`
+ * `a` `.a-custom`
  *
  *     @example
- *     div.row
- *         div.col
- *             p
- *                 a(href='#!') Click me!
- *         div.col.a-bd-bottom
- *             p
- *                 a(href='#!') Click me more!
+ *     p Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     p.a-custom Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 a {
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: 500;
+  color: #2d67c4;
+  font-weight: 400;
   text-decoration: none;
-  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out; }
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out; }
   a:link {
-    color: rgba(0, 0, 0, 0.9); }
+    color: #2d67c4; }
   a:visited {
-    color: rgba(0, 0, 0, 0.9);
+    color: #2d67c4;
     text-decoration: none; }
   a:hover {
-    color: #337cd1;
-    text-decoration: underline; }
+    color: #368aea;
+    text-decoration: none; }
+  a:hover, a:active {
+    outline: 0; }
+  a:focus {
+    outline: thin dotted; }
 
 .night a {
-  color: rgba(255, 255, 255, 0.9); }
+  color: #2d67c4; }
   .night a:link {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #2d67c4; }
   .night a:visited {
-    color: rgba(255, 255, 255, 0.9); }
+    color: #2d67c4; }
   .night a:hover {
-    color: #4e98ed; }
-
-.a-bd-bottom p > a:not(.btn) {
-  border-bottom: 0.063rem solid rgba(0, 0, 0, 0.9); }
-  .a-bd-bottom p > a:not(.btn):hover {
-    border-bottom-width: 0.125rem;
-    border-bottom-color: #337cd1; }
-
-.night .a-bd-bottom p > a:not(.btn) {
-  border-bottom-color: rgba(255, 255, 255, 0.9); }
-  .night .a-bd-bottom p > a:not(.btn):hover {
-    border-bottom-color: #4e98ed; }
+    color: #368aea; }
 
 .a-custom a:not(.btn) {
-  background-color: transparent;
-  border-bottom: 0.063em solid #bedffd;
-  box-shadow: inset 0 -0.25em 0 #bedffd;
-  color: inherit;
-  font-weight: inherit;
+  background-image: linear-gradient(#368aea, #368aea);
+  background-origin: padding-box;
+  background-position: center bottom 28%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.063rem;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 0.625em 0;
   text-decoration: none;
-  transition: background 0.16s cubic-bezier(0.33, 0.66, 0.66, 1);
-  word-wrap: break-word; }
+  text-shadow: 0.188em 0 #fff, 0.125em 0 #fff, 0.063em 0 #fff, -0.063em 0 #fff, -0.125em 0 #fff, -0.188em 0 #fff;
+  transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out; }
+  .a-custom a:not(.btn):link {
+    color: rgba(0, 0, 0, 0.9); }
+  .a-custom a:not(.btn):visited {
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none; }
   .a-custom a:not(.btn):hover {
-    background-color: #bedffd; }
+    color: #368aea;
+    text-decoration: none; }
+
+.night .a-custom a:not(.btn) {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0.188em 0 #191919, 0.125em 0 #191919, 0.063em 0 #191919, -0.063em 0 #191919, -0.125em 0 #191919, -0.188em 0 #191919; }
+  .night .a-custom a:not(.btn):link {
+    color: rgba(255, 255, 255, 0.9); }
+  .night .a-custom a:not(.btn):visited {
+    color: rgba(255, 255, 255, 0.9); }
+  .night .a-custom a:not(.btn):hover {
+    color: #368aea; }
 
 /**
  * Heading:

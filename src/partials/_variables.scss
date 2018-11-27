@@ -64,6 +64,9 @@ $ngt__border-color:  color( 'white 20' );
 $day__border-dark-color: color( 'black 90' );
 $ngt__border-dark-color: color( 'white 90' );
 
+$day__bg-color-selection: color( 'blue 1' );
+$ngt__bg-color-selection: color( 'blue 1' );
+
 
 // Transition
 
@@ -72,35 +75,57 @@ $transition-timing-function: ease-out;
 $transition-base:            background-color $transition-duration $transition-timing-function,
                              border-color     $transition-duration $transition-timing-function,
                              box-shadow       $transition-duration $transition-timing-function,
-                             color            $transition-duration $transition-timing-function;
+                             color            $transition-duration $transition-timing-function,
+                             text-shadow      $transition-duration $transition-timing-function;
 
 
 // Hyperlink
 
-$day__a-color:                     $day__color-primary;
-$ngt__a-color:                     $ngt__color-primary;
-$a-font-weight:                    500;
+$day__a-color:                     color( 'blue' );
+$ngt__a-color:                     color( 'blue' );
+$a-font-weight:                    400;
 $a-text-decoration:                none;
 
 $day__a-visited-color:             $day__a-color;
 $ngt__a-visited-color:             $ngt__a-color;
 $a-visited-text-decoration:        none;
 
-$day__a-hover-color:               shade( color( 'blue 60' ), 12% );
-$ngt__a-hover-color:               tint( color( 'blue 60' ), 12% );
-$a-hover-text-decoration:          underline;
+$day__a-hover-color:               color( 'blue 60' );
+$ngt__a-hover-color:               color( 'blue 60' );
+$a-hover-text-decoration:          none;
 
+// border bottom fx
 
-// Nota: Borde para los enlaces que estan dentro de los parrafos.
+$a-custom-bg-position: center bottom 28%;
+$a-custom-bg-size: 100% 0.063rem;
 
-$a-border-bottom-width:            0.063rem;
-$a-border-bottom-style:            solid;
-$day__a-border-bottom-color:       $day__a-color;
-$ngt__a-border-bottom-color:       $ngt__a-color;
+$day__a-custom-color: $day__body-color;
+$ngt__a-custom-color: $ngt__body-color;
 
-$a-hover-border-bottom-width:      0.125rem;
-$day__a-hover-border-bottom-color: $day__a-hover-color;
-$ngt__a-hover-border-bottom-color: $ngt__a-hover-color;
+$a-custom-padding: 0.625em 0;
+
+$day__a-custom-text-shadow: 0.188em 0 $day__body-bg-color,
+                            0.125em 0 $day__body-bg-color,
+                            0.063em 0 $day__body-bg-color,
+                           -0.063em 0 $day__body-bg-color,
+                           -0.125em 0 $day__body-bg-color,
+                           -0.188em 0 $day__body-bg-color;
+
+$ngt__a-custom-text-shadow: 0.188em 0 $ngt__body-bg-color,
+                            0.125em 0 $ngt__body-bg-color,
+                            0.063em 0 $ngt__body-bg-color,
+                           -0.063em 0 $ngt__body-bg-color,
+                           -0.125em 0 $ngt__body-bg-color,
+                           -0.188em 0 $ngt__body-bg-color;
+
+$day__a-custom-color: $day__body-color;
+$ngt__a-custom-color: $ngt__body-color;
+
+$day__a-custom-visited-color: $day__body-color;
+$ngt__a-custom-visited-color: $ngt__body-color;
+
+$day__a-custom-hover-color: $day__a-hover-color;
+$ngt__a-custom-hover-color: $ngt__a-hover-color;
 
 
 // Heading
@@ -210,7 +235,7 @@ $box-border-radius:     $border-radius-base;
 $el-hover-amount:              12%;
 $el-active-amount:             22%;
 
-$el-border-width:              0.125rem;
+$el-border-width:              0.063rem;
 $el-border-style:              solid;
 $day__el-border-color:         color( 'black 20' );
 $ngt__el-border-color:         color( 'white 20' );
