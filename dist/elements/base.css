@@ -62,11 +62,12 @@ ul, ol, dl, figure {
 
 /**
  * Hyperlink:
- * `a` `.a-bd-bottom`
+ * `a` `.a-bd-bottom` `.ac-c`
  *
  *     @example
  *     div.m-bottom-1 Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  *     p Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     p.ac-c Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 a {
   color: #2d67c4;
@@ -95,10 +96,45 @@ a {
   .night a:hover {
     color: #368aea; }
 
-p > a:not(.btn),
+p:not(.ac-c) > a:not(.btn),
 .a-bd-bottom a:not(.btn) {
   border-bottom-width: 0.063rem;
-  border-bottom-style: solid; }
+  border-bottom-style: solid;
+  border-bottom-color: #2d67c4; }
+  p:not(.ac-c) > a:not(.btn):visited,
+  .a-bd-bottom a:not(.btn):visited {
+    border-bottom-color: #2d67c4; }
+  p:not(.ac-c) > a:not(.btn):hover,
+  .a-bd-bottom a:not(.btn):hover {
+    border-bottom-color: #368aea; }
+
+.night p:not(.ac-c) > a:not(.btn),
+.night .a-bd-bottom a:not(.btn) {
+  border-bottom-color: #2d67c4; }
+  .night p:not(.ac-c) > a:not(.btn):visited,
+  .night .a-bd-bottom a:not(.btn):visited {
+    border-bottom-color: #2d67c4; }
+  .night p:not(.ac-c) > a:not(.btn):hover,
+  .night .a-bd-bottom a:not(.btn):hover {
+    border-bottom-color: #368aea; }
+
+a.ac-c:not(.btn):link, a.ac-c:not(.btn):visited,
+.ac-c a:not(.btn):link,
+.ac-c a:not(.btn):visited {
+  color: rgba(0, 0, 0, 0.9); }
+
+a.ac-c:not(.btn):hover,
+.ac-c a:not(.btn):hover {
+  color: #2d67c4; }
+
+.night a.ac-c:not(.btn):link, .night a.ac-c:not(.btn):visited,
+.night .ac-c a:not(.btn):link,
+.night .ac-c a:not(.btn):visited {
+  color: rgba(255, 255, 255, 0.9); }
+
+.night a.ac-c:not(.btn):hover,
+.night .ac-c a:not(.btn):hover {
+  color: #2d67c4; }
 
 /**
  * Heading:
