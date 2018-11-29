@@ -81,11 +81,11 @@ ul, ol, dl, figure {
 
 /**
  * Hyperlink:
- * `a` `.a-custom`
+ * `a` `.a-bd-bottom`
  *
  *     @example
+ *     div.m-bottom-1 Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  *     p Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
- *     p.a-custom Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 
 a {
@@ -134,63 +134,69 @@ a {
 	}
 }
 
-.a-custom a:not( .btn ) {
-	background-image: linear-gradient( $day__a-hover-color, $day__a-hover-color );
-	background-origin: padding-box;
-	background-position: $a-custom-bg-position;
-	background-repeat: no-repeat;
-	background-size: $a-custom-bg-size;
-	color: $day__a-custom-color;
-	padding: $a-custom-padding;
-	text-decoration: none;
-	text-shadow: $day__a-custom-text-shadow;
-
-	transition: $transition-base;
-
-	&:link {
-		color: $day__a-custom-color;
-	}
-
-	&:visited {
-		color: $day__a-custom-visited-color;
-		text-decoration: none;
-	}
-
-	&:hover {
-		color: $day__a-custom-hover-color;
-		text-decoration: none;
-	}
-
-	// background-color: transparent;
-	// border-bottom: 0.063em solid color( 'blue 10' );
-	// box-shadow: inset 0 -0.25em 0 color( 'blue 10' );
-	// color: inherit;
-	// font-weight: inherit;
-	// text-decoration: none;
-	// transition: background 0.16s cubic-bezier( 0.33, 0.66, 0.66, 1 );
-	// word-wrap: break-word;
-
-	// &:hover {
-	// 	background-color: color( 'blue 10' );
-	// }
+p > a:not( .btn ),
+.a-bd-bottom a:not( .btn ) {
+	border-bottom-width: $a-bd-bottom-border-bottom-width;
+	border-bottom-style: $a-bd-bottom-border-bottom-style;
 }
 
-.night .a-custom a:not( .btn ) {
-	color: $ngt__a-custom-color;
-	text-shadow: $ngt__a-custom-text-shadow;
+// .a-custom a:not( .btn ) {
+// 	background-image: linear-gradient( $day__a-hover-color, $day__a-hover-color );
+// 	background-origin: padding-box;
+// 	background-position: $a-custom-bg-position;
+// 	background-repeat: no-repeat;
+// 	background-size: $a-custom-bg-size;
+// 	color: $day__a-custom-color;
+// 	padding: $a-custom-padding;
+// 	text-decoration: none;
+// 	text-shadow: $day__a-custom-text-shadow;
 
-	&:link {
-		color: $ngt__a-custom-color;
-	}
+// 	transition: $transition-base;
 
-	&:visited {
-		color: $ngt__a-custom-visited-color;
-	}
+// 	&:link {
+// 		color: $day__a-custom-color;
+// 	}
 
-	&:hover {
-		color: $ngt__a-custom-hover-color;
-	}
-}
+// 	&:visited {
+// 		color: $day__a-custom-visited-color;
+// 		text-decoration: none;
+// 	}
+
+// 	&:hover {
+// 		color: $day__a-custom-hover-color;
+// 		text-decoration: none;
+// 	}
+
+// 	// background-color: transparent;
+// 	// border-bottom: 0.063em solid color( 'blue 10' );
+// 	// box-shadow: inset 0 -0.25em 0 color( 'blue 10' );
+// 	// color: inherit;
+// 	// font-weight: inherit;
+// 	// text-decoration: none;
+// 	// transition: background 0.16s cubic-bezier( 0.33, 0.66, 0.66, 1 );
+// 	// word-wrap: break-word;
+
+// 	// &:hover {
+// 	// 	background-color: color( 'blue 10' );
+// 	// }
+// }
+
+// .night .a-custom a:not( .btn ) {
+// 	color: $ngt__a-custom-color;
+// 	text-shadow: $ngt__a-custom-text-shadow;
+
+// 	&:link {
+// 		color: $ngt__a-custom-color;
+// 	}
+
+// 	&:visited {
+// 		color: $ngt__a-custom-visited-color;
+// 	}
+
+// 	&:hover {
+// 		color: $ngt__a-custom-hover-color;
+// 	}
+// }
 
 /**
  * Heading:

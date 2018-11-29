@@ -61,7 +61,7 @@
 									i(id="close-fsmenu").btn.btn--link.icon.ion-md-close.close-fsmenu
 
 							div.col-12
-								p(data-target='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
+								h3(data-target='#doc-accordion-collapse-layout', data-toggle='collapse').h5.ac-c Layout
 								div(id='doc-accordion-collapse-layout', data-parent='#doc-accordion').maxmd-jc-center.collapse.show
 									ul.ls
 										li
@@ -84,7 +84,7 @@
 											a(href='layout-order.html') Order
 
 							div.col-12
-								p(data-target='#doc-accordion-collapse-elements', data-toggle='collapse').h5.ac-c Elements
+								h3(data-target='#doc-accordion-collapse-elements', data-toggle='collapse').h5.ac-c Elements
 								div(id='doc-accordion-collapse-elements', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
@@ -113,7 +113,7 @@
 											a(href='elements-toolbar.html') Toolbar
 
 							div.col-12
-								p(data-target='#doc-accordion-collapse-helpers', data-toggle='collapse').h5.ac-c Helpers
+								h3(data-target='#doc-accordion-collapse-helpers', data-toggle='collapse').h5.ac-c Helpers
 								div(id='doc-accordion-collapse-helpers', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
@@ -158,7 +158,7 @@
 											a(href='helpers-width.html') Width
 
 							div.col-12
-								p(data-target='#doc-accordion-collapse-components', data-toggle='collapse').h5.ac-c Components
+								h3(data-target='#doc-accordion-collapse-components', data-toggle='collapse').h5.ac-c Components
 								div(id='doc-accordion-collapse-components', data-parent='#doc-accordion').maxmd-jc-center.collapse
 									ul.ls
 										li
