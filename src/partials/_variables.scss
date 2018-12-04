@@ -52,8 +52,8 @@ $ngt__body-bg-color: #191919;
 
 $colors:             colors( $color-palette );
 
-$day__color-primary: color( 'black 90' );
-$ngt__color-primary: color( 'white 90' );
+$day__color-primary: color( 'cyan' );
+$ngt__color-primary: color( 'cyan' );
 
 $day__body-color:    color( 'black 90' );
 $ngt__body-color:    color( 'white 90' );
@@ -64,8 +64,8 @@ $ngt__border-color:  color( 'white 20' );
 $day__border-dark-color: color( 'black 90' );
 $ngt__border-dark-color: color( 'white 90' );
 
-$day__bg-color-selection: color( 'cyan 1' );
-$ngt__bg-color-selection: color( 'cyan 1' );
+$day__bg-color-selection: tint( color( 'red' ), 85% );
+$ngt__bg-color-selection: shade( color( 'red' ), 85% );
 
 
 // Transition
@@ -90,8 +90,8 @@ $day__a-visited-color:             $day__a-color;
 $ngt__a-visited-color:             $ngt__a-color;
 $a-visited-text-decoration:        none;
 
-$day__a-hover-color:               color( 'cyan 60' );
-$ngt__a-hover-color:               color( 'cyan 60' );
+$day__a-hover-color:               color( 'cyan 90' );
+$ngt__a-hover-color:               color( 'cyan 90' );
 $a-hover-text-decoration:          none;
 
 
@@ -283,14 +283,14 @@ $el-lg-font-size:              1.25em;
 $day__el-invalid-border-color: color( 'red 30' );
 $ngt__el-invalid-border-color: color( 'red 30' );
 
-$day__el-focus-border-color:   color( 'cyan 30' );
-$ngt__el-focus-border-color:   color( 'cyan 30' );
+$day__el-focus-border-color:   color( 'cyan' );
+$ngt__el-focus-border-color:   color( 'cyan' );
 
 $day__el-focus-box-shadow:     none; // inset 0 0 0 0.063rem $day__el-focus-border-color;
 $ngt__el-focus-box-shadow:     none; // inset 0 0 0 0.063rem $ngt__el-focus-border-color;
 
-$day__el-active-border-color:  color( 'cyan 30' );
-$ngt__el-active-border-color:  color( 'cyan 30' );
+$day__el-active-border-color:  color( 'cyan' );
+$ngt__el-active-border-color:  color( 'cyan' );
 
 
 // Button
@@ -300,6 +300,7 @@ $btn-border-style:           $el-border-style;
 $btn-border-color:           transparent;
 
 $btn-border-radius:          $el-border-radius;
+$btn-box-shadow:             none; //0 0.063em 0.188em rgba( 0, 0, 0, 0.1 );
 $btn-font-size:              $font-size-base;
 $btn-font-weight:            500;
 $btn-line-height:            $el-line-height;
@@ -406,8 +407,8 @@ $ngt__input-focus-box-shadow:        $ngt__el-focus-box-shadow;
 $day__input-placeholder-color:       color( 'black 30' );
 $ngt__input-placeholder-color:       color( 'white 30' );
 
-$day__input-focus-placeholder-color: rgba( color( 'cyan 50' ), 0.5 );
-$ngt__input-focus-placeholder-color: rgba( color( 'cyan 50' ), 0.5 );
+$day__input-focus-placeholder-color: rgba( color( 'cyan' ), 0.5 );
+$ngt__input-focus-placeholder-color: rgba( color( 'cyan' ), 0.5 );
 
 $input-placeholder-opacity:          1;
 
@@ -487,8 +488,8 @@ $ctrl--custom-check__label-padding-left: 2em;
 
 $tick-border-width:             0 0.125em 0.125em 0;
 $tick-border-style:             solid;
-$day__tick-border-color:        $ngt__color-primary;
-$ngt__tick-border-color:        $day__color-primary;
+$day__tick-border-color:        $day__body-bg-color;
+$ngt__tick-border-color:        $ngt__body-bg-color;
 
 $tick-top:                      18%;
 $tick-transform:                rotate( 45deg );
@@ -749,10 +750,10 @@ $ngt__tbl-striped-bg-color:     color( 'white 05' );
 $border-map: (
     0: 0,
     '0063': '0.063rem solid #{ $day__border-color }',
-    'dark-0063': '0.063rem solid #{ $day__border-dark-color }',
-    'dark-0125': '0.125rem solid #{ $day__border-dark-color }',
-    'double-0188': '0.188rem double #{ $day__border-color }',
-    'dark-025': '0.25rem solid #{ $day__border-dark-color }'
+    // 'dark-0063': '0.063rem solid #{ $day__border-dark-color }',
+    // 'dark-0125': '0.125rem solid #{ $day__border-dark-color }',
+    // 'double-0188': '0.188rem double #{ $day__border-color }',
+    // 'dark-025': '0.25rem solid #{ $day__border-dark-color }'
 );
 
 
@@ -793,7 +794,7 @@ $border-width-map: (
 
 $display-map: (
     block: block,
-    none:  none !important
+    none:  none
 );
 
 
@@ -832,11 +833,11 @@ $font-weight-map: (
 // Margin
 
 $margin-map: (
-    0:     0       !important,
-    '025': 0.25rem !important,
-    '05':  0.5rem  !important,
-    1:     1rem    !important,
-    '125': 1.25rem !important
+    0:     0,
+    '025': 0.25rem,
+    '05':  0.5rem,
+    1:     1rem,
+    '125': 1.25rem
 );
 
 
@@ -852,12 +853,12 @@ $opacity-map: (
 // Padding
 
 $padding-map: (
-    0:     0       !important,
-    '025': 0.25rem !important,
-    '05':  0.5rem  !important,
-    '075': 0.75rem !important,
-    1:     1rem    !important,
-    '125': 1.25rem !important
+    0:     0,
+    '025': 0.25rem,
+    '05':  0.5rem,
+    '075': 0.75rem,
+    1:     1rem,
+    '125': 1.25rem
 );
 
 
@@ -1038,8 +1039,8 @@ $flex-direction-map: (
 // Flex grow
 
 $flex-grow-map: (
-    0: 0 !important,
-    1: 1 !important
+    0: 0,
+    1: 1
 );
 
 
@@ -1173,8 +1174,8 @@ $ngt__menu-pills__item-active__a-color: $ngt__a-color;
 $day__menu-pills__a-hover-bg-color:     color( 'black 05' );
 $ngt__menu-pills__a-hover-bg-color:     color( 'white 05' );
 
-$day__menu-pills__item-active-bg-color: color( 'cyan 1' );
-$ngt__menu-pills__item-active-bg-color: color( 'cyan 90' );
+$day__menu-pills__item-active-bg-color: tint( color( 'cyan' ), 90% );
+$ngt__menu-pills__item-active-bg-color: shade( color( 'cyan' ), 90% );
 
 
 // Modal

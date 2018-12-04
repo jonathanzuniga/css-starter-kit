@@ -220,19 +220,21 @@
 
     }
 
+    $rules: !important;
+
     .#{ $selector } {
 
         @if $property-extended == 'y' {
 
             @if $prop-contains-a-dash {
 
-                #{ nth( $prop-split, 1 ) }-top-#{ nth( $prop-split, 2 ) }: #{ $value };
-                #{ nth( $prop-split, 1 ) }-bottom-#{ nth( $prop-split, 2 ) }: #{ $value };
+                #{ nth( $prop-split, 1 ) }-top-#{ nth( $prop-split, 2 ) }: #{ $value } $rules;
+                #{ nth( $prop-split, 1 ) }-bottom-#{ nth( $prop-split, 2 ) }: #{ $value } $rules;
 
             } @else {
 
-                #{ $declaration_prop }-top: #{ $value };
-                #{ $declaration_prop }-bottom: #{ $value };
+                #{ $declaration_prop }-top: #{ $value } $rules;
+                #{ $declaration_prop }-bottom: #{ $value } $rules;
 
             }
 
@@ -240,13 +242,13 @@
 
             @if $prop-contains-a-dash {
 
-                #{ nth( $prop-split, 1 ) }-right-#{ nth( $prop-split, 2 ) }: #{ $value };
-                #{ nth( $prop-split, 1 ) }-left-#{ nth( $prop-split, 2 ) }: #{ $value };
+                #{ nth( $prop-split, 1 ) }-right-#{ nth( $prop-split, 2 ) }: #{ $value } $rules;
+                #{ nth( $prop-split, 1 ) }-left-#{ nth( $prop-split, 2 ) }: #{ $value } $rules;
 
             } @else {
 
-                #{ $declaration_prop }-right: #{ $value };
-                #{ $declaration_prop }-left: #{ $value };
+                #{ $declaration_prop }-right: #{ $value } $rules;
+                #{ $declaration_prop }-left: #{ $value } $rules;
 
             }
 
@@ -254,11 +256,11 @@
 
             @if $prop-contains-a-dash and $property-extended != '' and $property-extended != null {
 
-                #{ nth( $prop-split, 1 ) }-#{ $property-extended }-#{ nth( $prop-split, 2 ) }: #{ $value };
+                #{ nth( $prop-split, 1 ) }-#{ $property-extended }-#{ nth( $prop-split, 2 ) }: #{ $value } $rules;
 
             } @else {
 
-                #{ $declaration_prop }: #{ $value };
+                #{ $declaration_prop }: #{ $value } $rules;
 
             }
 

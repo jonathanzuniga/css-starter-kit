@@ -53,6 +53,17 @@
 	}
 }
 
+.night .scroll-wrap {
+	&:after {
+		background: linear-gradient(
+			to right,
+			rgba( $ngt__body-bg-color , 0 ) 0%,
+			$ngt__body-bg-color 80%,
+			$ngt__body-bg-color 100%
+		);
+	}
+}
+
 .menu-x {
 	display: flex;
 	list-style: none;
@@ -86,6 +97,14 @@
 			// font-size: 0.750em;
 			// letter-spacing: 1px;
 			text-decoration: none;
+		}
+	}
+}
+
+.night .menu-x {
+	li {
+		&::after {
+			border-left-color: $ngt__border-color;
 		}
 	}
 }

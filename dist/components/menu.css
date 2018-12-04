@@ -38,6 +38,9 @@
     top: 0;
     width: 25px; }
 
+.night .scroll-wrap:after {
+  background: linear-gradient(to right, rgba(25, 25, 25, 0) 0%, #191919 80%, #191919 100%); }
+
 .menu-x {
   display: flex;
   list-style: none;
@@ -61,6 +64,9 @@
     .menu-x li a {
       display: block;
       text-decoration: none; }
+
+.night .menu-x li::after {
+  border-left-color: rgba(255, 255, 255, 0.2); }
 
 /**
  * Vertical menu:
@@ -117,8 +123,8 @@
 
 .menu.menu--pills li.active a,
 .menu.menu--pills li.active a:hover {
-  background-color: #def9fb;
-  color: #00d9e8; }
+  background-color: #e6f6f7;
+  color: #00a1b1; }
 
 .night .menu.menu--pills li a {
   color: rgba(255, 255, 255, 0.9); }
@@ -129,5 +135,5 @@
 
 .night .menu.menu--pills li.active a,
 .night .menu.menu--pills li.active a:hover {
-  background-color: #00696b;
-  color: #00d9e8; }
+  background-color: #172728;
+  color: #00a1b1; }
