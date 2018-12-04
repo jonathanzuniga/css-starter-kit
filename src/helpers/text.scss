@@ -20,9 +20,22 @@
 @each $key, $size in $display-headings {
 
 	.#{ $key } {
+		font-family: $heading-font-family;
 		font-size: $size;
-		font-weight: $display-heading-font-weight;
-		line-height: $display-heading-line-height;
+		font-weight: $heading-font-weight;
+		letter-spacing: $heading-letter-spacing;
+		line-height: $heading-line-height;
+		margin-bottom: $heading-margin-bottom;
+		text-transform: $heading-text-transform;
+		word-spacing: $heading-word-spacing;
+
+		a {
+			font-weight: inherit;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 }
