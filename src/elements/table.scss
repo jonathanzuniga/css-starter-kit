@@ -57,8 +57,11 @@
 
 	th, td {
 		border-color: $day__tbl-border-color;
-		padding: $tbl__cell-padding-y $tbl__cell-padding-x;
 		vertical-align: $tbl__cell-vertical-align;
+
+		&:first-child {
+			padding-left: $table__cell-padding-x;
+		}
 	}
 }
 

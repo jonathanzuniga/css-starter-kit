@@ -17,6 +17,11 @@
 .ls {
   list-style: none;
   padding-left: 0; }
+  .ls > li {
+    margin: 0 0 0.5rem 0;
+    padding-left: 0; }
+    .ls > li::before {
+      content: normal; }
 
 /**
  * Inline list:
@@ -28,7 +33,7 @@
  *         li Banana
  *         li Cherry
  */
-.ls--inline li {
+.ls--inline > li {
   display: inline-block; }
-  .ls--inline li:not(:last-child) {
+  .ls--inline > li:not(:last-child) {
     margin-right: 1em; }

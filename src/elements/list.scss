@@ -6,7 +6,7 @@
  * List:
  */
 
- /**
+/**
  * Unstyled list:
  * `.ls`
  *
@@ -23,9 +23,18 @@
 .ls {
 	list-style: none;
 	padding-left: 0;
+
+	> li {
+		margin: $list__li-margin;
+		padding-left: 0;
+
+		&::before {
+			content: normal;
+		}
+	}
 }
 
- /**
+/**
  * Inline list:
  * `.ls--inline`
  *
@@ -37,7 +46,7 @@
  */
 
 .ls--inline {
-	li {
+	> li {
 		display: inline-block;
 
 		&:not( :last-child ) {
