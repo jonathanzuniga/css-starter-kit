@@ -370,25 +370,16 @@ img {
  */
 
 blockquote {
-	padding: $blockquote-padding;
+	background-color: $day__blockquote-bg-color;
+	padding: $blockquote-padding-y $blockquote-padding-x;
 
 	p {
 		font-size: $blockquote__p-font-size;
-	}
+		font-weight: $blockquote__p-font-weight;
 
-	footer {
-		font-size: $blockquote__footer-font-size;
-	}
-}
-
-.bq {
-	border-left-width: $blockquote-border-width;
-	border-left-style: $blockquote-border-style;
-	border-left-color: $day__blockquote-border-color;
-
-	p {
 		&:before,
 		&:after {
+			color: $day__blockquote__p-before-after-color;
 			font-weight: $blockquote__p-before-after-font-weight;
 		}
 
@@ -404,13 +395,42 @@ blockquote {
 	}
 
 	footer {
+		font-size: $blockquote__footer-font-size;
+
 		&:before {
 			content: $blockquote__footer-before-content;
 		}
 	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.night blockquote {
+	background-color: $ngt__blockquote-bg-color;
+
+	p {
+		&:before,
+		&:after {
+			color: $ngt__blockquote__p-before-after-color;
+		}
+	}
+}
+
+.bq {
+	background-color: transparent;
+
+	border-left-width: $blockquote-border-width;
+	border-left-style: $blockquote-border-style;
+	border-left-color: $day__blockquote-border-color;
+
+	padding: 0 $blockquote-padding-x;
+	padding-left: ( $blockquote-border-width - $blockquote-padding-x );
 }
 
 .night .bq {
+	background-color: transparent;
 	border-left-color: $ngt__blockquote-border-color;
 }
 
