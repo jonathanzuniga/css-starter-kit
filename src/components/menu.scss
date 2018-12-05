@@ -6,13 +6,148 @@
  * Menu:
  */
 
- /**
+.menu {
+	display: flex;
+	list-style: none;
+
+	li {
+		a {
+			display: block;
+			font-weight: $menu__a-font-weight;
+			text-decoration: none;
+		}
+	}
+}
+
+/**
+ * Vertical menu:
+ * `.menu`
+ *
+ *     @example
+ *     ul.menu.fxd-col
+ *         li.active
+ *             a(href='#') Link 1
+ *         li
+ *             a(href='#') Link 2
+ *         li
+ *             a(href='#') Link 3
+ */
+
+.menu {
+	flex-wrap: wrap;
+	padding-left: 0;
+
+	li {
+		display: block;
+		margin: $menu__item-margin;
+		padding: $menu__item-padding-y $menu__item-padding-x;
+
+		&.active {
+			a {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $day__menu__item-active__a-color;
+				}
+			}
+		}
+
+		a {
+			padding: $menu__a-padding-y $menu__a-padding-x;
+		}
+	}
+}
+
+.night .menu {
+	li {
+		&.active {
+			a {
+				&:link,
+				&:hover,
+				&:visited {
+					color: $ngt__menu__item-active__a-color;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Vertical menu pills:
+ * `.menu--pills`
+ *
+ *     @example
+ *     ul.menu.menu--pills.fxd-col
+ *         li.active
+ *             a(href='#') Link 1
+ *         li
+ *             a(href='#') Link 2
+ *         li
+ *             a(href='#') Link 3
+ */
+
+.menu--pills {
+	li {
+		a {
+			border-radius: $menu-pills__item__a-border-radius;
+			color: $day__menu-pills__item__a-color;
+
+			&:link,
+			&:visited,
+			&:hover,
+			&:active {
+				color: $day__menu-pills__item__a-color;
+			}
+
+			&:hover {
+				background-color: $day__menu-pills__a-hover-bg-color;
+			}
+		}
+
+		&.active {
+			a,
+			a:hover {
+				background-color: $day__menu-pills__item-active-bg-color;
+				color: $day__menu-pills__item-active__a-color
+			}
+		}
+	}
+}
+
+.night .menu--pills {
+	li {
+		a {
+			color: $ngt__menu-pills__item__a-color;
+
+			&:link,
+			&:visited,
+			&:hover,
+			&:active {
+				color: $ngt__menu-pills__item__a-color;
+			}
+
+			&:hover {
+				background-color: $ngt__menu-pills__a-hover-bg-color;
+			}
+		}
+
+		&.active {
+			a,
+			a:hover {
+				background-color: $ngt__menu-pills__item-active-bg-color;
+				color: $ngt__menu-pills__item-active__a-color;
+			}
+		}
+	}
+}
+
+/**
   * Horizontal menu:
   * `.menu-x`
   *
   *     @example
   *     div.scroll-wrap
-  *         ul.menu-x
+  *         ul.menu.menu--x
   *             li.active
   *                 a(href='#') Link 1
   *             li
@@ -64,9 +199,8 @@
 	}
 }
 
-.menu-x {
-	display: flex;
-	list-style: none;
+.menu--x {
+	flex-wrap: nowrap;
 	margin: 0;
 	padding: 0 25px 0 0;
 
@@ -91,148 +225,13 @@
 				display: none;
 			}
 		}
-
-		a {
-			display: block;
-			// font-size: 0.750em;
-			// letter-spacing: 1px;
-			text-decoration: none;
-		}
 	}
 }
 
-.night .menu-x {
+.night .menu--x {
 	li {
 		&::after {
 			border-left-color: $ngt__border-color;
-		}
-	}
-}
-
-/**
- * Vertical menu:
- * `.menu`
- *
- *     @example
- *     ul.menu.fxd-col
- *         li.active
- *             a(href='#') Link 1
- *         li
- *             a(href='#') Link 2
- *         li
- *             a(href='#') Link 3
- */
-
-.menu {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding-left: 0;
-
-	li {
-		display: block;
-		margin: $menu__item-margin;
-		padding: $menu__item-padding-y $menu__item-padding-x;
-
-		&.active {
-			a {
-				&:link,
-				&:hover,
-				&:visited {
-					color: $day__menu__item-active__a-color;
-				}
-			}
-		}
-
-		a {
-			display: block;
-			padding: $menu__a-padding-y $menu__a-padding-x;
-			text-decoration: none;
-		}
-	}
-}
-
-.night {
-	.menu {
-		li {
-			&.active {
-				a {
-					&:link,
-					&:hover,
-					&:visited {
-						color: $ngt__menu__item-active__a-color;
-					}
-				}
-			}
-		}
-	}
-}
-
-/**
- * Vertical menu pills:
- * `.menu--pills`
- *
- *     @example
- *     ul.menu.menu--pills.fxd-col
- *         li.active
- *             a(href='#') Link 1
- *         li
- *             a(href='#') Link 2
- *         li
- *             a(href='#') Link 3
- */
-
-.menu.menu--pills {
-	li {
-		a {
-			border-radius: $menu-pills__item__a-border-radius;
-			color: $day__menu-pills__item__a-color;
-
-			&:link,
-			&:visited,
-			&:hover,
-			&:active {
-				color: $day__menu-pills__item__a-color;
-			}
-
-			&:hover {
-				background-color: $day__menu-pills__a-hover-bg-color;
-			}
-		}
-
-		&.active {
-			a,
-			a:hover {
-				background-color: $day__menu-pills__item-active-bg-color;
-				color: $day__menu-pills__item-active__a-color
-			}
-		}
-	}
-}
-
-.night .menu.menu--pills {
-	li {
-		a {
-			color: $ngt__menu-pills__item__a-color;
-
-			&:link,
-			&:visited,
-			&:hover,
-			&:active {
-				color: $ngt__menu-pills__item__a-color;
-			}
-
-			&:hover {
-				background-color: $ngt__menu-pills__a-hover-bg-color;
-			}
-		}
-
-		&.active {
-			a,
-			a:hover {
-				background-color: $ngt__menu-pills__item-active-bg-color;
-				color: $ngt__menu-pills__item-active__a-color;
-			}
 		}
 	}
 }

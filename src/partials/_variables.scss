@@ -9,28 +9,9 @@
 
 // Base
 
-$font-family-sans-serif: -apple-system,
-                         BlinkMacSystemFont,
-                         'Segoe UI',
-                         Roboto,
-                         'Helvetica Neue',
-                         Helvetica,
-                         Arial,
-                         sans-serif,
-                         'Apple Color Emoji',
-                         'Segoe UI Emoji',
-                         'Segoe UI Symbol' !default;
-
-$font-family-monospace:  'SF Mono',
-                         'Segoe UI Mono',
-                         'Roboto Mono',
-                         'Ubuntu Mono',
-                         Menlo,
-                         Courier,
-                         monospace !default;
-
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
+$font-family-monospace:  'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
 $font-family-serif:      Georgia, serif;
-
 $font-family-base:       $font-family-sans-serif;
 $font-size-base:         16px !default;
 $font-size-sm:           0.813em; // 13px
@@ -85,7 +66,7 @@ $transition-base:            background-color $transition-duration $transition-t
 
 $day__a-color:                     color( 'cyan' );
 $ngt__a-color:                     color( 'cyan' );
-$a-font-weight:                    400;
+$a-font-weight:                    700;
 $a-text-decoration:                none;
 
 $day__a-visited-color:             $day__a-color;
@@ -201,13 +182,14 @@ $blockquote__footer-before-content:      '— ';
 
 // Code
 
-$day__code-bg-color:    color( 'black 05' );
-$ngt__code-bg-color:    color( 'white 05' );
+$day__code-bg-color:    color( 'black 025' );
+$ngt__code-bg-color:    color( 'white 025' );
 $day__code-color:       inherit;
 $ngt__code-color:       inherit;
 $code-border-radius:    $border-radius-base;
 $code-font-size:        0.875em; // 14px
-$code-padding:          0.125em 0.313em; // 2px 5px
+$code-font-weight:      300;
+$code-padding:          0.2em;
 
 
 // Pre
@@ -309,7 +291,7 @@ $btn-border-color:           transparent;
 $btn-border-radius:          $el-border-radius;
 $btn-box-shadow:             none; //0 0.063em 0.188em rgba( 0, 0, 0, 0.1 );
 $btn-font-size:              $font-size-base;
-$btn-font-weight:            500;
+$btn-font-weight:            700;
 $btn-line-height:            $el-line-height;
 
 $btn-padding-y:              $el-padding-y;
@@ -942,7 +924,7 @@ $ngt__dropcap-color:     $ngt__body-color;
 
 $dropcap-font-size:      3.5em;
 $dropcap-font-style:     normal;
-$dropcap-font-weight:    500;
+$dropcap-font-weight:    700;
 $dropcap-letter-spacing: 0;
 $dropcap-line-height:    inherit;
 $dropcap-margin-top:     0.063em;
@@ -1088,7 +1070,7 @@ $card-foot-btn-not-first-child-margin-left: 0.625rem;
 
 // Collapse
 
-$collapse__ls__item-active__a-font-weight: 500;
+$collapse__ls__item-active__a-font-weight: 700;
 
 $day__collapse__ls__a-color:               color( 'black 60' );
 $ngt__collapse__ls__a-color:               color( 'white 60' );
@@ -1158,6 +1140,7 @@ $drawer-open-box-shadow:       0  8px 10px -5px rgba( 0, 0, 0, 0.2 ),
 $menu__item-margin:                     0 0 0.125em;
 $menu__item-padding-y:                  0;
 $menu__item-padding-x:                  0;
+$menu__a-font-weight:                   400;
 $menu__a-padding-y:                     $el-padding-y;
 $menu__a-padding-x:                     $el-padding-x;
 
@@ -1234,7 +1217,7 @@ $day__navbar-a-hover-bg-color:       transparent;
 $ngt__navbar-a-hover-bg-color:       transparent;
 
 $navbar-a-font-size:                 1em;
-$navbar-a-font-weight:               500;
+$navbar-a-font-weight:               700;
 $navbar-letter-spacing:              normal;
 $navbar-text-transform:              none;
 

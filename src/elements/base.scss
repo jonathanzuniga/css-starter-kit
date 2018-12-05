@@ -51,7 +51,7 @@ html {
 	-webkit-tap-highlight-color: transparent;
 
 	-webkit-text-size-adjust: 100%;
-	    -ms-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -84,9 +84,9 @@ ul, ol, dl, figure {
  * `a` `.a-bd-bottom` `.ac-c`
  *
  *     @example
- *     div.m-bottom-1 Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
- *     p Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
- *     p.ac-c Lorem ipsum dolor sit amet, <a href="#!">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     div.m-bottom-1 Lorem ipsum dolor sit amet, <a href="#!" target="_blank">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     p Lorem ipsum dolor sit amet, <a href="#!" target="_blank">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
+ *     p.ac-c Lorem ipsum dolor sit amet, <a href="#!" target="_blank">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 
 a {
@@ -116,6 +116,10 @@ a {
 
 	&:focus {
 		outline: thin dotted;
+	}
+
+	&[ target='_blank' ]::after {
+		content: ' ↗';
 	}
 }
 
@@ -424,7 +428,14 @@ code {
 	color: $day__code-color;
 	font-family: $font-family-monospace;
 	font-size: $code-font-size;
+	font-weight: $code-font-weight;
 	padding: $code-padding;
+
+	&::before,
+	&::after {
+		letter-spacing: -0.2em;
+		content: '\00a0';
+	}
 }
 
 .night code {
@@ -461,6 +472,12 @@ pre {
 	code {
 		background-color: transparent;
 		color: inherit;
+		padding: 0;
+
+		&::before,
+		&::after {
+			content: normal;
+		}
 	}
 }
 
@@ -564,23 +581,23 @@ th {
 }
 
 [ role='button' ], a, button, input, label, select, textarea {
-    touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 hr {
-    clear: both;
-    display: block;
-    margin: $hr-margin-y $hr-margin-x;
-    padding: $hr-padding-y $hr-padding-x;
-    height: $hr-height;
-    border: 0;
-    border-bottom-width: $hr-border-bottom-width;
-    border-bottom-style: $hr-border-bottom-style;
-    border-bottom-color: $day__hr-border-bottom-color;
+	clear: both;
+	display: block;
+	margin: $hr-margin-y $hr-margin-x;
+	padding: $hr-padding-y $hr-padding-x;
+	height: $hr-height;
+	border: 0;
+	border-bottom-width: $hr-border-bottom-width;
+	border-bottom-style: $hr-border-bottom-style;
+	border-bottom-color: $day__hr-border-bottom-color;
 }
 
 .night hr {
-    border-bottom-color: $ngt__hr-border-bottom-color;
+	border-bottom-color: $ngt__hr-border-bottom-color;
 }
 
 @media ( -webkit-min-device-pixel-ratio: 2 ), ( min-resolution: 192dpi ) {
