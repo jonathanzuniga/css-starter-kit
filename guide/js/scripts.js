@@ -9,7 +9,7 @@ $( function () {
 
 	// Agregar clase .active al item del menu del navbar.
 
-	$( '.doc-navbar .navbar__items a[ href="' + page + '" ]' ).parent().addClass( 'active' );
+	$( '.doc-navbar .navbar__items a[ href="' + page + '" ]' ).addClass( 'active' );
 
 	if ( ! $( '.doc-navbar .navbar__items .navbar__item:first' ).hasClass( 'active' ) )
 		$( '.doc-navbar .navbar__items .navbar__item:last' ).addClass( 'active' );

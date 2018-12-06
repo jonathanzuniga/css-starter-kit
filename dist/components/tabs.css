@@ -49,13 +49,13 @@
       .tabs li a:hover {
         border-bottom-color: transparent;
         color: rgba(0, 0, 0, 0.9); }
-    .tabs li.active a {
-      border-bottom-width: 0.188rem;
-      border-bottom-color: #28a0a5; }
-      .tabs li.active a:link, .tabs li.active a:visited {
-        color: rgba(0, 0, 0, 0.9); }
-      .tabs li.active a:hover {
-        color: rgba(0, 0, 0, 0.9); }
+  .tabs .active a {
+    border-bottom-width: 0.188rem;
+    border-bottom-color: #28a0a5; }
+    .tabs .active a:link, .tabs .active a:visited {
+      color: rgba(0, 0, 0, 0.9); }
+    .tabs .active a:hover {
+      color: rgba(0, 0, 0, 0.9); }
 
 .night .tabs ul, .night .tabs a {
   border-bottom-color: rgba(255, 255, 255, 0.2); }
@@ -68,11 +68,11 @@
     border-bottom-color: transparent;
     color: rgba(255, 255, 255, 0.9); }
 
-.night .tabs li.active a {
+.night .tabs .active a {
   border-bottom-color: #28a0a5; }
-  .night .tabs li.active a:link, .night .tabs li.active a:visited {
+  .night .tabs .active a:link, .night .tabs .active a:visited {
     color: rgba(255, 255, 255, 0.9); }
-  .night .tabs li.active a:hover {
+  .night .tabs .active a:hover {
     color: rgba(255, 255, 255, 0.9); }
 
 /**
@@ -122,8 +122,8 @@
  *         ul
  *             li
  *                 a(href='#!') Tab 1
- *             li
- *                 a(href='#!').c-black-90 Tab 2
+ *             li.active.active--underline
+ *                 a(href='#!') Tab 2
  *             li
  *                 a(href='#!') Tab 3
  *             li
@@ -143,6 +143,9 @@
 
 .night .active-underline {
   background-color: #28a0a5; }
+
+.tabs .active--underline a {
+  border-bottom: none; }
 
 .tabs-details > div:not(.active) {
   display: none; }

@@ -73,20 +73,20 @@
 
 			padding: $tabs__a-padding-y $tabs__a-padding-x;
 		}
+	}
 
-		&.active {
-			a {
-				border-bottom-width: $tabs__item-active__a-border-bottom-width;
-				border-bottom-color: $day__tabs__item-active__a-border-bottom-color;
+	.active {
+		a {
+			border-bottom-width: $tabs__item-active__a-border-bottom-width;
+			border-bottom-color: $day__tabs__item-active__a-border-bottom-color;
 
-				&:link,
-				&:visited {
-					color: $day__tabs__item-active__a-color;
-				}
+			&:link,
+			&:visited {
+				color: $day__tabs__item-active__a-color;
+			}
 
-				&:hover {
-					color: $day__tabs__item-active__a-hover-color;
-				}
+			&:hover {
+				color: $day__tabs__item-active__a-hover-color;
 			}
 		}
 	}
@@ -111,19 +111,19 @@
 				color: $ngt__tabs__a-hover-color;
 			}
 		}
+	}
 
-		&.active {
-			a {
-				border-bottom-color: $ngt__tabs__item-active__a-border-bottom-color;
+	.active {
+		a {
+			border-bottom-color: $ngt__tabs__item-active__a-border-bottom-color;
 
-				&:link,
-				&:visited {
-					color: $ngt__tabs__item-active__a-color;
-				}
+			&:link,
+			&:visited {
+				color: $ngt__tabs__item-active__a-color;
+			}
 
-				&:hover {
-					color: $ngt__tabs__item-active__a-hover-color;
-				}
+			&:hover {
+				color: $ngt__tabs__item-active__a-hover-color;
 			}
 		}
 	}
@@ -184,8 +184,8 @@
  *         ul
  *             li
  *                 a(href='#!') Tab 1
- *             li
- *                 a(href='#!').c-black-90 Tab 2
+ *             li.active.active--underline
+ *                 a(href='#!') Tab 2
  *             li
  *                 a(href='#!') Tab 3
  *             li
@@ -213,6 +213,13 @@
 	background-color: $ngt__tabs__item-active__a-border-bottom-color;
 }
 
+.tabs {
+	.active--underline {
+		a {
+			border-bottom: none;
+		}
+	}
+}
 
 .tabs-details {
 	> div:not( .active ) {
