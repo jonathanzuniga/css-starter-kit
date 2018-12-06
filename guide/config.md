@@ -56,7 +56,8 @@
 						div( id='doc-accordion' ).row.maxmd-ta-center
 							div.col-12.md-d-none
 								p
-									i( id='close-fsmenu' ).btn.btn--link.icon.ion-md-close.close-fsmenu
+									button( id='close-fsmenu' ).btn.btn--link.close-fsmenu
+										i.icon.ion-md-close
 
 							div.col-12
 								h3( data-target='#doc-accordion-collapse-layout', data-toggle='collapse' ).h5.ac-c Layout
@@ -177,12 +178,12 @@
 											a( href='components-tabs.html' ) Tabs
 
 							div.col-12
-								div.item-group.ai-center
+								div.item-group.ai-center.maxmd-jc-center
 									div.item.fxg-0
 										div.doc-switch-night-mode.sw.sw--sm
 											input( id='switch-night-mode', type='checkbox' )
 											label( for='switch-night-mode', id='lbl-night-mode' )
-									div.item
+									div.item.fxg-0
 										span
 											i( title='Night mode', id='icon-night-mode' ).ion-ios-moon.doc-icn
 

@@ -3810,19 +3810,19 @@
   box-sizing: inherit; }
 
 ::-moz-selection {
-  background-color: rgba(0, 140, 152, 0.2);
+  background-color: rgba(75, 156, 214, 0.2);
   text-shadow: none; }
 
 ::selection {
-  background-color: rgba(0, 140, 152, 0.2);
+  background-color: rgba(75, 156, 214, 0.2);
   text-shadow: none; }
 
 .night ::-moz-selection {
-  background-color: rgba(0, 140, 152, 0.2);
+  background-color: rgba(75, 156, 214, 0.2);
   text-shadow: none; }
 
 .night ::selection {
-  background-color: rgba(0, 140, 152, 0.2);
+  background-color: rgba(75, 156, 214, 0.2);
   text-shadow: none; }
 
 html, body {
@@ -3867,17 +3867,17 @@ ul, ol, dl, figure {
  *     p.ac-c Lorem ipsum dolor sit amet, <a href="#!" target="_blank">consectetur adipiscing elit</a>. Mauris sagittis malesuada orci vitae maximus.
  */
 a {
-  color: #008c98;
+  color: #4b9cd6;
   font-weight: 700;
   text-decoration: none;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out; }
   a:link {
-    color: #008c98; }
+    color: #4b9cd6; }
   a:visited {
-    color: #008c98;
+    color: #4b9cd6;
     text-decoration: none; }
   a:hover {
-    color: #00696b;
+    color: #3e78ad;
     text-decoration: none; }
   a:hover, a:active {
     outline: 0; }
@@ -3887,35 +3887,35 @@ a {
     content: ' ↗'; }
 
 .night a {
-  color: #008c98; }
+  color: #4b9cd6; }
   .night a:link {
-    color: #008c98; }
+    color: #4b9cd6; }
   .night a:visited {
-    color: #008c98; }
+    color: #4b9cd6; }
   .night a:hover {
-    color: #00696b; }
+    color: #3e78ad; }
 
 p:not(.ac-c) > a:not(.btn),
 .a-bd-bottom a:not(.btn) {
   border-bottom-width: 0.063rem;
   border-bottom-style: solid;
-  border-bottom-color: #008c98; }
+  border-bottom-color: #4b9cd6; }
   p:not(.ac-c) > a:not(.btn):visited,
   .a-bd-bottom a:not(.btn):visited {
-    border-bottom-color: #008c98; }
+    border-bottom-color: #4b9cd6; }
   p:not(.ac-c) > a:not(.btn):hover,
   .a-bd-bottom a:not(.btn):hover {
-    border-bottom-color: #00696b; }
+    border-bottom-color: #3e78ad; }
 
 .night p:not(.ac-c) > a:not(.btn),
 .night .a-bd-bottom a:not(.btn) {
-  border-bottom-color: #008c98; }
+  border-bottom-color: #4b9cd6; }
   .night p:not(.ac-c) > a:not(.btn):visited,
   .night .a-bd-bottom a:not(.btn):visited {
-    border-bottom-color: #008c98; }
+    border-bottom-color: #4b9cd6; }
   .night p:not(.ac-c) > a:not(.btn):hover,
   .night .a-bd-bottom a:not(.btn):hover {
-    border-bottom-color: #00696b; }
+    border-bottom-color: #3e78ad; }
 
 a.ac-c:not(.btn):link, a.ac-c:not(.btn):visited,
 .ac-c a:not(.btn):link,
@@ -3924,7 +3924,7 @@ a.ac-c:not(.btn):link, a.ac-c:not(.btn):visited,
 
 a.ac-c:not(.btn):hover,
 .ac-c a:not(.btn):hover {
-  color: #008c98; }
+  color: #4b9cd6; }
 
 .night a.ac-c:not(.btn):link, .night a.ac-c:not(.btn):visited,
 .night .ac-c a:not(.btn):link,
@@ -3933,7 +3933,7 @@ a.ac-c:not(.btn):hover,
 
 .night a.ac-c:not(.btn):hover,
 .night .ac-c a:not(.btn):hover {
-  color: #008c98; }
+  color: #4b9cd6; }
 
 /**
  * Heading:
@@ -4095,13 +4095,13 @@ i {
 
 mark {
   border-radius: 0;
-  background-color: #fef2dc;
+  background-color: #fbeddf;
   background-image: none;
   color: inherit;
   padding: 0.2em; }
 
 .night mark {
-  background-color: #3a2e18;
+  background-color: #37291c;
   background-image: none; }
 
 small {
@@ -4272,10 +4272,19 @@ ul {
       height: 0.5em;
       content: '';
       transform: rotate(-45deg);
-      background-color: #f8d526; }
+      background-color: #edc862; }
+
+.ls > li,
+.menu > li,
+.tabs ul > li {
+  padding-left: 0; }
+  .ls > li::before,
+  .menu > li::before,
+  .tabs ul > li::before {
+    content: normal; }
 
 .night ul li::before {
-  background-color: #f8d526; }
+  background-color: #edc862; }
 
 /**
  * Standard table:
@@ -4394,65 +4403,65 @@ hr {
 	 *     button.btn.btn--primary.btn--outline Outline button
 	 */
 .btn--primary {
-  background-color: #008c98;
+  background-color: #4b9cd6;
   border-color: transparent;
   color: rgba(255, 255, 255, 0.9); }
   .btn--primary:link, .btn--primary:visited {
     color: rgba(255, 255, 255, 0.9); }
   .btn--primary:hover {
-    background-color: #037e89;
+    background-color: #458cbf;
     color: rgba(255, 255, 255, 0.9); }
   .btn--primary:active, .btn--primary.active, .btn-group--toggle:checked + .btn--primary,
   .btn-group--toggle [type='checkbox']:checked + .btn--primary,
   .btn-group--toggle [type='radio']:checked + .btn--primary {
-    background-color: #06737c;
+    background-color: #407fac;
     color: rgba(255, 255, 255, 0.9); }
 
 .night .btn--primary {
-  background-color: #008c98;
+  background-color: #4b9cd6;
   color: rgba(0, 0, 0, 0.9); }
   .night .btn--primary:hover {
-    background-color: #037e89;
+    background-color: #458cbf;
     color: rgba(0, 0, 0, 0.9); }
   .night .btn--primary:active, .night .btn--primary.active, .night .btn-group--toggle:checked + .btn--primary,
   .night .btn-group--toggle [type='checkbox']:checked + .btn--primary, .btn-group--toggle .night [type='checkbox']:checked + .btn--primary,
   .night .btn-group--toggle [type='radio']:checked + .btn--primary, .btn-group--toggle .night [type='radio']:checked + .btn--primary {
-    background-color: #06737c;
+    background-color: #407fac;
     color: rgba(0, 0, 0, 0.9); }
 
 .btn--outline {
   background-color: transparent; }
   .btn--outline.btn--primary {
-    border-color: rgba(0, 140, 152, 0.75);
-    color: #008c98; }
+    border-color: rgba(75, 156, 214, 0.75);
+    color: #4b9cd6; }
     .btn--outline.btn--primary:link, .btn--outline.btn--primary:visited {
-      color: #008c98; }
+      color: #4b9cd6; }
     .btn--outline.btn--primary:hover {
-      background-color: #037e89;
+      background-color: #458cbf;
       border-color: transparent;
       color: rgba(255, 255, 255, 0.9); }
     .btn--outline.btn--primary:active, .btn--outline.btn--primary.active, .btn-group--toggle:checked + .btn--outline.btn--primary,
     .btn-group--toggle [type='checkbox']:checked + .btn--outline.btn--primary,
     .btn-group--toggle [type='radio']:checked + .btn--outline.btn--primary {
-      background-color: #06737c;
+      background-color: #407fac;
       border-color: transparent;
       color: rgba(255, 255, 255, 0.9); }
 
 .night .btn--outline {
   background-color: transparent; }
   .night .btn--outline.btn--primary {
-    border-color: rgba(0, 140, 152, 0.75);
-    color: #008c98; }
+    border-color: rgba(75, 156, 214, 0.75);
+    color: #4b9cd6; }
     .night .btn--outline.btn--primary:link, .night .btn--outline.btn--primary:visited {
-      color: #008c98; }
+      color: #4b9cd6; }
     .night .btn--outline.btn--primary:hover {
-      background-color: #037e89;
+      background-color: #458cbf;
       border-color: transparent;
       color: rgba(0, 0, 0, 0.9); }
     .night .btn--outline.btn--primary:active, .night .btn--outline.btn--primary.active, .night .btn-group--toggle:checked + .btn--outline.btn--primary,
     .night .btn-group--toggle [type='checkbox']:checked + .btn--outline.btn--primary, .btn-group--toggle .night [type='checkbox']:checked + .btn--outline.btn--primary,
     .night .btn-group--toggle [type='radio']:checked + .btn--outline.btn--primary, .btn-group--toggle .night [type='radio']:checked + .btn--outline.btn--primary {
-      background-color: #06737c;
+      background-color: #407fac;
       border-color: transparent;
       color: rgba(0, 0, 0, 0.9); }
 
@@ -4479,29 +4488,29 @@ hr {
     content: '';
     transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1);
     border-radius: inherit;
-    background-color: #008c98; }
+    background-color: #4b9cd6; }
   .btn--primary.btn--hover-scale:hover {
     background-color: transparent; }
     .btn--primary.btn--hover-scale:hover::after {
       transform: scale(1.2);
-      background-color: #037e89; }
+      background-color: #458cbf; }
   .btn--primary.btn--hover-scale:active,
   .btn--primary.btn--hover-scale .active {
     background-color: transparent; }
     .btn--primary.btn--hover-scale:active::after,
     .btn--primary.btn--hover-scale .active::after {
-      background-color: #06737c; }
+      background-color: #407fac; }
 
 .night .btn--primary.btn--hover-scale::after {
-  background-color: #008c98; }
+  background-color: #4b9cd6; }
 
 .night .btn--primary.btn--hover-scale:hover::after {
-  background-color: #037e89; }
+  background-color: #458cbf; }
 
 .night .btn--primary.btn--hover-scale:active::after, .night .btn--primary.btn--hover-scale.active::after, .night .btn-group--toggle:checked + .btn--hover-scale.btn--primary::after,
 .night .btn-group--toggle [type='checkbox']:checked + .btn--hover-scale.btn--primary::after, .btn-group--toggle .night [type='checkbox']:checked + .btn--hover-scale.btn--primary::after,
 .night .btn-group--toggle [type='radio']:checked + .btn--hover-scale.btn--primary::after, .btn-group--toggle .night [type='radio']:checked + .btn--hover-scale.btn--primary::after {
-  background-color: #06737c; }
+  background-color: #407fac; }
 
 /**
 	 * Secondary button:
@@ -4749,31 +4758,31 @@ hr {
 .btn--link {
   background-color: transparent;
   border-color: transparent;
-  color: #008c98;
+  color: #4b9cd6;
   cursor: pointer; }
   .btn--link:link {
     text-decoration: none; }
   .btn--link:link, .btn--link:visited {
-    color: #008c98; }
+    color: #4b9cd6; }
   .btn--link:visited {
     text-decoration: none; }
   .btn--link:hover {
     background-color: rgba(0, 0, 0, 0.05);
-    color: #00696b;
+    color: #3e78ad;
     text-decoration: none; }
   .btn--link:active, .btn--link.active {
-    color: #00696b; }
+    color: #3e78ad; }
 
 .night .btn--link {
   background-color: transparent;
-  color: #008c98; }
+  color: #4b9cd6; }
   .night .btn--link:link, .night .btn--link:visited {
-    color: #008c98; }
+    color: #4b9cd6; }
   .night .btn--link:hover {
     background-color: rgba(255, 255, 255, 0.05);
-    color: #00696b; }
+    color: #3e78ad; }
   .night .btn--link:active, .night .btn--link.active {
-    color: #00696b; }
+    color: #3e78ad; }
 
 /**
  * Button size:
@@ -5063,7 +5072,7 @@ hr {
     opacity: 1; }
   .input:invalid,
   .tarea:invalid {
-    border-color: #ff9267; }
+    border-color: #d37b7b; }
   .input:valid,
   .tarea:valid {
     border-color: rgba(0, 0, 0, 0.2); }
@@ -5071,18 +5080,18 @@ hr {
   .tarea:focus,
   .tarea:focus:hover {
     background-color: transparent;
-    border-color: #008c98;
+    border-color: #4b9cd6;
     box-shadow: none; }
     .input:focus::placeholder, .input:focus:hover::placeholder,
     .tarea:focus::placeholder,
     .tarea:focus:hover::placeholder {
-      color: rgba(0, 140, 152, 0.5); }
+      color: rgba(75, 156, 214, 0.5); }
   .input:hover,
   .tarea:hover {
     border-color: rgba(0, 0, 0, 0.3); }
   .input:active,
   .tarea:active {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
 
 .night .input,
 .night .tarea,
@@ -5097,7 +5106,7 @@ hr {
   .night .input:invalid,
   .night .tarea:invalid,
   .navbar--dark .input:invalid {
-    border-color: #ff9267; }
+    border-color: #d37b7b; }
   .night .input:valid,
   .night .tarea:valid,
   .navbar--dark .input:valid {
@@ -5108,14 +5117,14 @@ hr {
   .navbar--dark .input:focus,
   .navbar--dark .input:focus:hover {
     background-color: transparent;
-    border-color: #008c98;
+    border-color: #4b9cd6;
     box-shadow: none; }
     .night .input:focus::placeholder, .night .input:focus:hover::placeholder,
     .night .tarea:focus::placeholder,
     .night .tarea:focus:hover::placeholder,
     .navbar--dark .input:focus::placeholder,
     .navbar--dark .input:focus:hover::placeholder {
-      color: rgba(0, 140, 152, 0.5); }
+      color: rgba(75, 156, 214, 0.5); }
   .night .input:hover,
   .night .tarea:hover,
   .navbar--dark .input:hover {
@@ -5123,7 +5132,7 @@ hr {
   .night .input:active,
   .night .tarea:active,
   .navbar--dark .input:active {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
 
 /**
  * Form field:
@@ -5176,7 +5185,7 @@ hr {
   .input--flat:valid {
     border-color: transparent; }
   .input--flat:focus, .input--flat:focus:hover {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
   .input--flat:hover {
     background-color: rgba(0, 0, 0, 0.075);
     border-color: transparent; }
@@ -5191,7 +5200,7 @@ hr {
   .night .input--flat:focus, .night .input--flat:focus:hover,
   .navbar--dark .input--flat:focus,
   .navbar--dark .input--flat:focus:hover {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
   .night .input--flat:hover,
   .navbar--dark .input--flat:hover {
     background-color: rgba(255, 255, 255, 0.075);
@@ -5404,8 +5413,8 @@ hr {
   z-index: -1; }
   .ctrl--custom-check [type='checkbox']:checked ~ label .indic,
   .ctrl--custom-check [type='radio']:checked ~ label .indic {
-    background-color: #008c98;
-    border-color: #008c98; }
+    background-color: #4b9cd6;
+    border-color: #4b9cd6; }
     .ctrl--custom-check [type='checkbox']:checked ~ label .indic:after,
     .ctrl--custom-check [type='radio']:checked ~ label .indic:after {
       display: block; }
@@ -5422,10 +5431,10 @@ hr {
     height: 0.625em; }
   .ctrl--custom-check [type='checkbox']:checked:hover ~ label .indic,
   .ctrl--custom-check [type='radio']:checked:hover ~ label .indic {
-    background-color: #037e89; }
+    background-color: #458cbf; }
   .ctrl--custom-check [type='checkbox']:checked:active ~ label .indic,
   .ctrl--custom-check [type='radio']:checked:active ~ label .indic {
-    background-color: #06737c; }
+    background-color: #407fac; }
 
 .ctrl--custom-check label {
   padding-left: 2em; }
@@ -5435,8 +5444,8 @@ hr {
 
 .night .ctrl--custom-check [type='checkbox']:checked ~ label .indic,
 .night .ctrl--custom-check [type='radio']:checked ~ label .indic {
-  background-color: #008c98;
-  border-color: #008c98; }
+  background-color: #4b9cd6;
+  border-color: #4b9cd6; }
 
 .night .ctrl--custom-check [type='checkbox']:checked ~ label .indic--checkbox:after,
 .night .ctrl--custom-check [type='checkbox']:checked ~ label .indic--radio:after,
@@ -5446,11 +5455,11 @@ hr {
 
 .night .ctrl--custom-check [type='checkbox']:checked:hover ~ label .indic,
 .night .ctrl--custom-check [type='radio']:checked:hover ~ label .indic {
-  background-color: #037e89; }
+  background-color: #458cbf; }
 
 .night .ctrl--custom-check [type='checkbox']:checked:active ~ label .indic,
 .night .ctrl--custom-check [type='radio']:checked:active ~ label .indic {
-  background-color: #06737c; }
+  background-color: #407fac; }
 
 .night .ctrl--custom-check label:hover .indic {
   background-color: transparent;
@@ -5608,7 +5617,7 @@ hr {
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out;
   width: 100%; }
   .sel:focus, .sel:focus:hover {
-    border-color: #008c98;
+    border-color: #4b9cd6;
     box-shadow: none; }
   .sel:hover {
     border-color: rgba(0, 0, 0, 0.3); }
@@ -5620,7 +5629,7 @@ hr {
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.9); }
   .night .sel:focus, .night .sel:focus:hover {
-    border-color: #008c98;
+    border-color: #4b9cd6;
     box-shadow: none; }
   .night .sel:hover {
     border-color: rgba(255, 255, 255, 0.3); }
@@ -5748,7 +5757,7 @@ hr {
   .sel--flat:valid {
     border-color: transparent; }
   .sel--flat:focus, .sel--flat:focus:hover {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
   .sel--flat:hover {
     background-color: rgba(0, 0, 0, 0.075);
     border-color: transparent; }
@@ -5763,7 +5772,7 @@ hr {
   .night .sel--flat:focus, .night .sel--flat:focus:hover,
   .navbar--dark .sel--flat:focus,
   .navbar--dark .sel--flat:focus:hover {
-    border-color: #008c98; }
+    border-color: #4b9cd6; }
   .night .sel--flat:hover,
   .navbar--dark .sel--flat:hover {
     background-color: rgba(255, 255, 255, 0.075);
@@ -5999,10 +6008,7 @@ svg {
   list-style: none;
   padding-left: 0; }
   .ls > li {
-    margin: 0 0 0.5rem 0;
-    padding-left: 0; }
-    .ls > li::before {
-      content: normal; }
+    margin: 0 0 0.5rem 0; }
 
 /**
  * Inline list:
@@ -6046,7 +6052,7 @@ svg {
     position: absolute;
     z-index: -1; }
     .sw [type='checkbox']:checked + label:before {
-      background-color: #008c98;
+      background-color: #4b9cd6;
       box-shadow: none;
       transition: 0.2s cubic-bezier(0, 0, 0, 0.1); }
     .sw [type='checkbox']:checked + label:after {
@@ -6094,7 +6100,7 @@ svg {
       transition: 0.32s cubic-bezier(0.55, 1.5, 0.5, 1); }
 
 .night .sw [type='checkbox']:checked + label:before {
-  background-color: #008c98; }
+  background-color: #4b9cd6; }
 
 .night .sw [type='checkbox']:checked + label .sw__on {
   color: rgba(255, 255, 255, 0.9); }
@@ -8720,1345 +8726,1345 @@ svg {
  * Color:
  */
 /**
-	 * Cyan color:
-	 * `.bgc-cyan` `.c-cyan` `.bdc-cyan`
+	 * Sky color:
+	 * `.bgc-sky` `.c-sky` `.bdc-sky`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan
-	 *             td.w-25.us-all.c-cyan.maxsm-d-none cyan
-	 *             td.w-25.us-all.c-cyan #008c98
-	 *             td.w-25.us-all.c-cyan rgb( 0, 140, 152 )
+	 *                 div.doc-color-swatch.bgc-sky
+	 *             td.w-25.us-all.c-sky.maxsm-d-none sky
+	 *             td.w-25.us-all.c-sky #4b9cd6
+	 *             td.w-25.us-all.c-sky rgb( 75, 156, 214 )
 	 */
 /**
-	 * Red color:
-	 * `.bgc-red` `.c-red` `.bdc-red`
+	 * Cherry color:
+	 * `.bgc-cherry` `.c-cherry` `.bdc-cherry`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red
-	 *             td.w-25.us-all.c-red.maxsm-d-none red
-	 *             td.w-25.us-all.c-red #e65719
-	 *             td.w-25.us-all.c-red rgb( 230, 87, 25 )
+	 *                 div.doc-color-swatch.bgc-cherry
+	 *             td.w-25.us-all.c-cherry.maxsm-d-none cherry
+	 *             td.w-25.us-all.c-cherry #dc605c
+	 *             td.w-25.us-all.c-cherry rgb( 220, 96, 92 )
 	 */
 /**
-	 * Yellow color:
-	 * `.bgc-yellow` `.c-yellow` `.bdc-yellow`
+	 * Gold color:
+	 * `.bgc-gold` `.c-gold` `.bdc-gold`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow
-	 *             td.w-25.us-all.c-yellow.maxsm-d-none yellow
-	 *             td.w-25.us-all.c-yellow #f8d526
-	 *             td.w-25.us-all.c-yellow rgb( 248, 213, 38 )
+	 *                 div.doc-color-swatch.bgc-gold
+	 *             td.w-25.us-all.c-gold.maxsm-d-none gold
+	 *             td.w-25.us-all.c-gold #edc862
+	 *             td.w-25.us-all.c-gold rgb( 237, 200, 98 )
 	 */
 /**
-	 * Black color:
-	 * `.bgc-black` `.c-black` `.bdc-black`
+	 * Carbon color:
+	 * `.bgc-carbon` `.c-carbon` `.bdc-carbon`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black
-	 *             td.w-25.us-all.c-black.maxsm-d-none black
-	 *             td.w-25.us-all.c-black #000
-	 *             td.w-25.us-all.c-black rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon
+	 *             td.w-25.us-all.c-carbon.maxsm-d-none carbon
+	 *             td.w-25.us-all.c-carbon #000
+	 *             td.w-25.us-all.c-carbon rgb( 0, 0, 0 )
 	 */
 /**
-	 * White color:
-	 * `.bgc-white` `.c-white` `.bdc-white`
+	 * Coconut color:
+	 * `.bgc-coconut` `.c-coconut` `.bdc-coconut`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white
-	 *             td.w-25.us-all.c-white.maxsm-d-none white
-	 *             td.w-25.us-all.c-white #fff
-	 *             td.w-25.us-all.c-white rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut
+	 *             td.w-25.us-all.c-coconut.maxsm-d-none coconut
+	 *             td.w-25.us-all.c-coconut #fff
+	 *             td.w-25.us-all.c-coconut rgb( 255, 255, 255 )
 	 */
 /**
-	 * Cyan 1 color:
-	 * `.bgc-cyan-1` `.c-cyan-1` `.bdc-cyan-1`
+	 * Sky 1 color:
+	 * `.bgc-sky-1` `.c-sky-1` `.bdc-sky-1`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-1
-	 *             td.w-25.us-all.c-cyan-1.maxsm-d-none cyan-1
-	 *             td.w-25.us-all.c-cyan-1 #def9fb
-	 *             td.w-25.us-all.c-cyan-1 rgb( 222, 249, 251 )
+	 *                 div.doc-color-swatch.bgc-sky-1
+	 *             td.w-25.us-all.c-sky-1.maxsm-d-none sky-1
+	 *             td.w-25.us-all.c-sky-1 #e3f5fc
+	 *             td.w-25.us-all.c-sky-1 rgb( 227, 245, 252 )
 	 */
 /**
-	 * Cyan 10 color:
-	 * `.bgc-cyan-10` `.c-cyan-10` `.bdc-cyan-10`
+	 * Sky 10 color:
+	 * `.bgc-sky-10` `.c-sky-10` `.bdc-sky-10`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-10
-	 *             td.w-25.us-all.c-cyan-10.maxsm-d-none cyan-10
-	 *             td.w-25.us-all.c-cyan-10 #aceff4
-	 *             td.w-25.us-all.c-cyan-10 rgb( 172, 239, 244 )
+	 *                 div.doc-color-swatch.bgc-sky-10
+	 *             td.w-25.us-all.c-sky-10.maxsm-d-none sky-10
+	 *             td.w-25.us-all.c-sky-10 #bae5f8
+	 *             td.w-25.us-all.c-sky-10 rgb( 186, 229, 248 )
 	 */
 /**
-	 * Cyan 20 color:
-	 * `.bgc-cyan-20` `.c-cyan-20` `.bdc-cyan-20`
+	 * Sky 20 color:
+	 * `.bgc-sky-20` `.c-sky-20` `.bdc-sky-20`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-20
-	 *             td.w-25.us-all.c-cyan-20.maxsm-d-none cyan-20
-	 *             td.w-25.us-all.c-cyan-20 #70e4ee
-	 *             td.w-25.us-all.c-cyan-20 rgb( 112, 228, 238 )
+	 *                 div.doc-color-swatch.bgc-sky-20
+	 *             td.w-25.us-all.c-sky-20.maxsm-d-none sky-20
+	 *             td.w-25.us-all.c-sky-20 #8fd4f4
+	 *             td.w-25.us-all.c-sky-20 rgb( 143, 212, 244 )
 	 */
 /**
-	 * Cyan 30 color:
-	 * `.bgc-cyan-30` `.c-cyan-30` `.bdc-cyan-30`
+	 * Sky 30 color:
+	 * `.bgc-sky-30` `.c-sky-30` `.bdc-sky-30`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-30
-	 *             td.w-25.us-all.c-cyan-30.maxsm-d-none cyan-30
-	 *             td.w-25.us-all.c-cyan-30 #00d9e8
-	 *             td.w-25.us-all.c-cyan-30 rgb( 0, 217, 232 )
+	 *                 div.doc-color-swatch.bgc-sky-30
+	 *             td.w-25.us-all.c-sky-30.maxsm-d-none sky-30
+	 *             td.w-25.us-all.c-sky-30 #6cc3ed
+	 *             td.w-25.us-all.c-sky-30 rgb( 108, 195, 237 )
 	 */
 /**
-	 * Cyan 40 color:
-	 * `.bgc-cyan-40` `.c-cyan-40` `.bdc-cyan-40`
+	 * Sky 40 color:
+	 * `.bgc-sky-40` `.c-sky-40` `.bdc-sky-40`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-40
-	 *             td.w-25.us-all.c-cyan-40.maxsm-d-none cyan-40
-	 *             td.w-25.us-all.c-cyan-40 #00d0e3
-	 *             td.w-25.us-all.c-cyan-40 rgb( 0, 208, 227 )
+	 *                 div.doc-color-swatch.bgc-sky-40
+	 *             td.w-25.us-all.c-sky-40.maxsm-d-none sky-40
+	 *             td.w-25.us-all.c-sky-40 #5ab7e9
+	 *             td.w-25.us-all.c-sky-40 rgb( 90, 183, 233 )
 	 */
 /**
-	 * Cyan 50 color:
-	 * `.bgc-cyan-50` `.c-cyan-50` `.bdc-cyan-50`
+	 * Sky 50 color:
+	 * `.bgc-sky-50` `.c-sky-50` `.bdc-sky-50`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-50
-	 *             td.w-25.us-all.c-cyan-50.maxsm-d-none cyan-50
-	 *             td.w-25.us-all.c-cyan-50 #00c7df
-	 *             td.w-25.us-all.c-cyan-50 rgb( 0, 199, 223 )
+	 *                 div.doc-color-swatch.bgc-sky-50
+	 *             td.w-25.us-all.c-sky-50.maxsm-d-none sky-50
+	 *             td.w-25.us-all.c-sky-50 #51aae5
+	 *             td.w-25.us-all.c-sky-50 rgb( 81, 170, 229 )
 	 */
 /**
-	 * Cyan 60 color:
-	 * `.bgc-cyan-60` `.c-cyan-60` `.bdc-cyan-60`
+	 * Sky 60 color:
+	 * `.bgc-sky-60` `.c-sky-60` `.bdc-sky-60`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-60
-	 *             td.w-25.us-all.c-cyan-60.maxsm-d-none cyan-60
-	 *             td.w-25.us-all.c-cyan-60 #00b6cc
-	 *             td.w-25.us-all.c-cyan-60 rgb( 0, 182, 204 )
+	 *                 div.doc-color-swatch.bgc-sky-60
+	 *             td.w-25.us-all.c-sky-60.maxsm-d-none sky-60
+	 *             td.w-25.us-all.c-sky-60 #4b9cd6
+	 *             td.w-25.us-all.c-sky-60 rgb( 75, 156, 214 )
 	 */
 /**
-	 * Cyan 70 color:
-	 * `.bgc-cyan-70` `.c-cyan-70` `.bdc-cyan-70`
+	 * Sky 70 color:
+	 * `.bgc-sky-70` `.c-sky-70` `.bdc-sky-70`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-70
-	 *             td.w-25.us-all.c-cyan-70.maxsm-d-none cyan-70
-	 *             td.w-25.us-all.c-cyan-70 #00a1b1
-	 *             td.w-25.us-all.c-cyan-70 rgb( 0, 161, 177 )
+	 *                 div.doc-color-swatch.bgc-sky-70
+	 *             td.w-25.us-all.c-sky-70.maxsm-d-none sky-70
+	 *             td.w-25.us-all.c-sky-70 #4489c2
+	 *             td.w-25.us-all.c-sky-70 rgb( 68, 137, 194 )
 	 */
 /**
-	 * Cyan 80 color:
-	 * `.bgc-cyan-80` `.c-cyan-80` `.bdc-cyan-80`
+	 * Sky 80 color:
+	 * `.bgc-sky-80` `.c-sky-80` `.bdc-sky-80`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-80
-	 *             td.w-25.us-all.c-cyan-80.maxsm-d-none cyan-80
-	 *             td.w-25.us-all.c-cyan-80 #008c98
-	 *             td.w-25.us-all.c-cyan-80 rgb( 0, 140, 152 )
+	 *                 div.doc-color-swatch.bgc-sky-80
+	 *             td.w-25.us-all.c-sky-80.maxsm-d-none sky-80
+	 *             td.w-25.us-all.c-sky-80 #3e78ad
+	 *             td.w-25.us-all.c-sky-80 rgb( 62, 120, 173 )
 	 */
 /**
-	 * Cyan 90 color:
-	 * `.bgc-cyan-90` `.c-cyan-90` `.bdc-cyan-90`
+	 * Sky 90 color:
+	 * `.bgc-sky-90` `.c-sky-90` `.bdc-sky-90`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-cyan-90
-	 *             td.w-25.us-all.c-cyan-90.maxsm-d-none cyan-90
-	 *             td.w-25.us-all.c-cyan-90 #00696b
-	 *             td.w-25.us-all.c-cyan-90 rgb( 0, 105, 107 )
+	 *                 div.doc-color-swatch.bgc-sky-90
+	 *             td.w-25.us-all.c-sky-90.maxsm-d-none sky-90
+	 *             td.w-25.us-all.c-sky-90 #33598a
+	 *             td.w-25.us-all.c-sky-90 rgb( 51, 89, 138 )
 	 */
 /**
-	 * Red 1 color:
-	 * `.bgc-red-1` `.c-red-1` `.bdc-red-1`
+	 * Cherry 1 color:
+	 * `.bgc-cherry-1` `.c-cherry-1` `.bdc-cherry-1`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-1
-	 *             td.w-25.us-all.c-red-1.maxsm-d-none red-1
-	 *             td.w-25.us-all.c-red-1 #fbeae7
-	 *             td.w-25.us-all.c-red-1 rgb( 251, 234, 231 )
+	 *                 div.doc-color-swatch.bgc-cherry-1
+	 *             td.w-25.us-all.c-cherry-1.maxsm-d-none cherry-1
+	 *             td.w-25.us-all.c-cherry-1 #fbecee
+	 *             td.w-25.us-all.c-cherry-1 rgb( 251, 236, 238 )
 	 */
 /**
-	 * Red 10 color:
-	 * `.bgc-red-10` `.c-red-10` `.bdc-red-10`
+	 * Cherry 10 color:
+	 * `.bgc-cherry-10` `.c-cherry-10` `.bdc-cherry-10`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-10
-	 *             td.w-25.us-all.c-red-10.maxsm-d-none red-10
-	 *             td.w-25.us-all.c-red-10 #ffcfbd
-	 *             td.w-25.us-all.c-red-10 rgb( 255, 207, 189 )
+	 *                 div.doc-color-swatch.bgc-cherry-10
+	 *             td.w-25.us-all.c-cherry-10.maxsm-d-none cherry-10
+	 *             td.w-25.us-all.c-cherry-10 #f6cfd4
+	 *             td.w-25.us-all.c-cherry-10 rgb( 246, 207, 212 )
 	 */
 /**
-	 * Red 20 color:
-	 * `.bgc-red-20` `.c-red-20` `.bdc-red-20`
+	 * Cherry 20 color:
+	 * `.bgc-cherry-20` `.c-cherry-20` `.bdc-cherry-20`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-20
-	 *             td.w-25.us-all.c-red-20.maxsm-d-none red-20
-	 *             td.w-25.us-all.c-red-20 #ffb093
-	 *             td.w-25.us-all.c-red-20 rgb( 255, 176, 147 )
+	 *                 div.doc-color-swatch.bgc-cherry-20
+	 *             td.w-25.us-all.c-cherry-20.maxsm-d-none cherry-20
+	 *             td.w-25.us-all.c-cherry-20 #e29e9f
+	 *             td.w-25.us-all.c-cherry-20 rgb( 226, 158, 159 )
 	 */
 /**
-	 * Red 30 color:
-	 * `.bgc-red-30` `.c-red-30` `.bdc-red-30`
+	 * Cherry 30 color:
+	 * `.bgc-cherry-30` `.c-cherry-30` `.bdc-cherry-30`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-30
-	 *             td.w-25.us-all.c-red-30.maxsm-d-none red-30
-	 *             td.w-25.us-all.c-red-30 #ff9267
-	 *             td.w-25.us-all.c-red-30 rgb( 255, 146, 103 )
+	 *                 div.doc-color-swatch.bgc-cherry-30
+	 *             td.w-25.us-all.c-cherry-30.maxsm-d-none cherry-30
+	 *             td.w-25.us-all.c-cherry-30 #d37b7b
+	 *             td.w-25.us-all.c-cherry-30 rgb( 211, 123, 123 )
 	 */
 /**
-	 * Red 40 color:
-	 * `.bgc-red-40` `.c-red-40` `.bdc-red-40`
+	 * Cherry 40 color:
+	 * `.bgc-cherry-40` `.c-cherry-40` `.bdc-cherry-40`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-40
-	 *             td.w-25.us-all.c-red-40.maxsm-d-none red-40
-	 *             td.w-25.us-all.c-red-40 #ff7b45
-	 *             td.w-25.us-all.c-red-40 rgb( 255, 123, 69 )
+	 *                 div.doc-color-swatch.bgc-cherry-40
+	 *             td.w-25.us-all.c-cherry-40.maxsm-d-none cherry-40
+	 *             td.w-25.us-all.c-cherry-40 #dc605c
+	 *             td.w-25.us-all.c-cherry-40 rgb( 220, 96, 92 )
 	 */
 /**
-	 * Red 50 color:
-	 * `.bgc-red-50` `.c-red-50` `.bdc-red-50`
+	 * Cherry 50 color:
+	 * `.bgc-cherry-50` `.c-cherry-50` `.bdc-cherry-50`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-50
-	 *             td.w-25.us-all.c-red-50.maxsm-d-none red-50
-	 *             td.w-25.us-all.c-red-50 #ff6522
-	 *             td.w-25.us-all.c-red-50 rgb( 255, 101, 34 )
+	 *                 div.doc-color-swatch.bgc-cherry-50
+	 *             td.w-25.us-all.c-cherry-50.maxsm-d-none cherry-50
+	 *             td.w-25.us-all.c-cherry-50 #e05547
+	 *             td.w-25.us-all.c-cherry-50 rgb( 224, 85, 71 )
 	 */
 /**
-	 * Red 60 color:
-	 * `.bgc-red-60` `.c-red-60` `.bdc-red-60`
+	 * Cherry 60 color:
+	 * `.bgc-cherry-60` `.c-cherry-60` `.bdc-cherry-60`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-60
-	 *             td.w-25.us-all.c-red-60.maxsm-d-none red-60
-	 *             td.w-25.us-all.c-red-60 #f45f1e
-	 *             td.w-25.us-all.c-red-60 rgb( 244, 95, 30 )
+	 *                 div.doc-color-swatch.bgc-cherry-60
+	 *             td.w-25.us-all.c-cherry-60.maxsm-d-none cherry-60
+	 *             td.w-25.us-all.c-cherry-60 #d14c44
+	 *             td.w-25.us-all.c-cherry-60 rgb( 209, 76, 68 )
 	 */
 /**
-	 * Red 70 color:
-	 * `.bgc-red-70` `.c-red-70` `.bdc-red-70`
+	 * Cherry 70 color:
+	 * `.bgc-cherry-70` `.c-cherry-70` `.bdc-cherry-70`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-70
-	 *             td.w-25.us-all.c-red-70.maxsm-d-none red-70
-	 *             td.w-25.us-all.c-red-70 #e65719
-	 *             td.w-25.us-all.c-red-70 rgb( 230, 87, 25 )
+	 *                 div.doc-color-swatch.bgc-cherry-70
+	 *             td.w-25.us-all.c-cherry-70.maxsm-d-none cherry-70
+	 *             td.w-25.us-all.c-cherry-70 #bf443e
+	 *             td.w-25.us-all.c-cherry-70 rgb( 191, 68, 62 )
 	 */
 /**
-	 * Red 80 color:
-	 * `.bgc-red-80` `.c-red-80` `.bdc-red-80`
+	 * Cherry 80 color:
+	 * `.bgc-cherry-80` `.c-cherry-80` `.bdc-cherry-80`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-80
-	 *             td.w-25.us-all.c-red-80.maxsm-d-none red-80
-	 *             td.w-25.us-all.c-red-80 #d85015
-	 *             td.w-25.us-all.c-red-80 rgb( 216, 80, 21 )
+	 *                 div.doc-color-swatch.bgc-cherry-80
+	 *             td.w-25.us-all.c-cherry-80.maxsm-d-none cherry-80
+	 *             td.w-25.us-all.c-cherry-80 #b13e38
+	 *             td.w-25.us-all.c-cherry-80 rgb( 177, 62, 56 )
 	 */
 /**
-	 * Red 90 color:
-	 * `.bgc-red-90` `.c-red-90` `.bdc-red-90`
+	 * Cherry 90 color:
+	 * `.bgc-cherry-90` `.c-cherry-90` `.bdc-cherry-90`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-red-90
-	 *             td.w-25.us-all.c-red-90.maxsm-d-none red-90
-	 *             td.w-25.us-all.c-red-90 #c0430c
-	 *             td.w-25.us-all.c-red-90 rgb( 192, 67, 12 )
+	 *                 div.doc-color-swatch.bgc-cherry-90
+	 *             td.w-25.us-all.c-cherry-90.maxsm-d-none cherry-90
+	 *             td.w-25.us-all.c-cherry-90 #a3352d
+	 *             td.w-25.us-all.c-cherry-90 rgb( 163, 53, 45 )
 	 */
 /**
-	 * Yellow 1 color:
-	 * `.bgc-yellow-1` `.c-yellow-1` `.bdc-yellow-1`
+	 * Gold 1 color:
+	 * `.bgc-gold-1` `.c-gold-1` `.bdc-gold-1`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-1
-	 *             td.w-25.us-all.c-yellow-1.maxsm-d-none yellow-1
-	 *             td.w-25.us-all.c-yellow-1 #fefde6
-	 *             td.w-25.us-all.c-yellow-1 rgb( 254, 253, 230 )
+	 *                 div.doc-color-swatch.bgc-gold-1
+	 *             td.w-25.us-all.c-gold-1.maxsm-d-none gold-1
+	 *             td.w-25.us-all.c-gold-1 #fcf6e3
+	 *             td.w-25.us-all.c-gold-1 rgb( 252, 246, 227 )
 	 */
 /**
-	 * Yellow 10 color:
-	 * `.bgc-yellow-10` `.c-yellow-10` `.bdc-yellow-10`
+	 * Gold 10 color:
+	 * `.bgc-gold-10` `.c-gold-10` `.bdc-gold-10`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-10
-	 *             td.w-25.us-all.c-yellow-10.maxsm-d-none yellow-10
-	 *             td.w-25.us-all.c-yellow-10 #fdf8c2
-	 *             td.w-25.us-all.c-yellow-10 rgb( 253, 248, 194 )
+	 *                 div.doc-color-swatch.bgc-gold-10
+	 *             td.w-25.us-all.c-gold-10.maxsm-d-none gold-10
+	 *             td.w-25.us-all.c-gold-10 #f7e6b8
+	 *             td.w-25.us-all.c-gold-10 rgb( 247, 230, 184 )
 	 */
 /**
-	 * Yellow 20 color:
-	 * `.bgc-yellow-20` `.c-yellow-20` `.bdc-yellow-20`
+	 * Gold 20 color:
+	 * `.bgc-gold-20` `.c-gold-20` `.bdc-gold-20`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-20
-	 *             td.w-25.us-all.c-yellow-20.maxsm-d-none yellow-20
-	 *             td.w-25.us-all.c-yellow-20 #fcf399
-	 *             td.w-25.us-all.c-yellow-20 rgb( 252, 243, 153 )
+	 *                 div.doc-color-swatch.bgc-gold-20
+	 *             td.w-25.us-all.c-gold-20.maxsm-d-none gold-20
+	 *             td.w-25.us-all.c-gold-20 #f2d68b
+	 *             td.w-25.us-all.c-gold-20 rgb( 242, 214, 139 )
 	 */
 /**
-	 * Yellow 30 color:
-	 * `.bgc-yellow-30` `.c-yellow-30` `.bdc-yellow-30`
+	 * Gold 30 color:
+	 * `.bgc-gold-30` `.c-gold-30` `.bdc-gold-30`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-30
-	 *             td.w-25.us-all.c-yellow-30.maxsm-d-none yellow-30
-	 *             td.w-25.us-all.c-yellow-30 #fbef70
-	 *             td.w-25.us-all.c-yellow-30 rgb( 251, 239, 112 )
+	 *                 div.doc-color-swatch.bgc-gold-30
+	 *             td.w-25.us-all.c-gold-30.maxsm-d-none gold-30
+	 *             td.w-25.us-all.c-gold-30 #edc862
+	 *             td.w-25.us-all.c-gold-30 rgb( 237, 200, 98 )
 	 */
 /**
-	 * Yellow 40 color:
-	 * `.bgc-yellow-40` `.c-yellow-40` `.bdc-yellow-40`
+	 * Gold 40 color:
+	 * `.bgc-gold-40` `.c-gold-40` `.bdc-gold-40`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-40
-	 *             td.w-25.us-all.c-yellow-40.maxsm-d-none yellow-40
-	 *             td.w-25.us-all.c-yellow-40 #f8ea4e
-	 *             td.w-25.us-all.c-yellow-40 rgb( 248, 234, 78 )
+	 *                 div.doc-color-swatch.bgc-gold-40
+	 *             td.w-25.us-all.c-gold-40.maxsm-d-none gold-40
+	 *             td.w-25.us-all.c-gold-40 #e9bc4a
+	 *             td.w-25.us-all.c-gold-40 rgb( 233, 188, 74 )
 	 */
 /**
-	 * Yellow 50 color:
-	 * `.bgc-yellow-50` `.c-yellow-50` `.bdc-yellow-50`
+	 * Gold 50 color:
+	 * `.bgc-gold-50` `.c-gold-50` `.bdc-gold-50`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-50
-	 *             td.w-25.us-all.c-yellow-50.maxsm-d-none yellow-50
-	 *             td.w-25.us-all.c-yellow-50 #f9e82d
-	 *             td.w-25.us-all.c-yellow-50 rgb( 249, 232, 45 )
+	 *                 div.doc-color-swatch.bgc-gold-50
+	 *             td.w-25.us-all.c-gold-50.maxsm-d-none gold-50
+	 *             td.w-25.us-all.c-gold-50 #e6b138
+	 *             td.w-25.us-all.c-gold-50 rgb( 230, 177, 56 )
 	 */
 /**
-	 * Yellow 60 color:
-	 * `.bgc-yellow-60` `.c-yellow-60` `.bdc-yellow-60`
+	 * Gold 60 color:
+	 * `.bgc-gold-60` `.c-gold-60` `.bdc-gold-60`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-60
-	 *             td.w-25.us-all.c-yellow-60.maxsm-d-none yellow-60
-	 *             td.w-25.us-all.c-yellow-60 #f8d526
-	 *             td.w-25.us-all.c-yellow-60 rgb( 248, 213, 38 )
+	 *                 div.doc-color-swatch.bgc-gold-60
+	 *             td.w-25.us-all.c-gold-60.maxsm-d-none gold-60
+	 *             td.w-25.us-all.c-gold-60 #e5a534
+	 *             td.w-25.us-all.c-gold-60 rgb( 229, 165, 52 )
 	 */
 /**
-	 * Yellow 70 color:
-	 * `.bgc-yellow-70` `.c-yellow-70` `.bdc-yellow-70`
+	 * Gold 70 color:
+	 * `.bgc-gold-70` `.c-gold-70` `.bdc-gold-70`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-70
-	 *             td.w-25.us-all.c-yellow-70.maxsm-d-none yellow-70
-	 *             td.w-25.us-all.c-yellow-70 #f6bd1d
-	 *             td.w-25.us-all.c-yellow-70 rgb( 246, 189, 29 )
+	 *                 div.doc-color-swatch.bgc-gold-70
+	 *             td.w-25.us-all.c-gold-70.maxsm-d-none gold-70
+	 *             td.w-25.us-all.c-gold-70 #e3942f
+	 *             td.w-25.us-all.c-gold-70 rgb( 227, 148, 47 )
 	 */
 /**
-	 * Yellow 80 color:
-	 * `.bgc-yellow-80` `.c-yellow-80` `.bdc-yellow-80`
+	 * Gold 80 color:
+	 * `.bgc-gold-80` `.c-gold-80` `.bdc-gold-80`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-80
-	 *             td.w-25.us-all.c-yellow-80.maxsm-d-none yellow-80
-	 *             td.w-25.us-all.c-yellow-80 #f5a513
-	 *             td.w-25.us-all.c-yellow-80 rgb( 245, 165, 19 )
+	 *                 div.doc-color-swatch.bgc-gold-80
+	 *             td.w-25.us-all.c-gold-80.maxsm-d-none gold-80
+	 *             td.w-25.us-all.c-gold-80 #e1852b
+	 *             td.w-25.us-all.c-gold-80 rgb( 225, 133, 43 )
 	 */
 /**
-	 * Yellow 90 color:
-	 * `.bgc-yellow-90` `.c-yellow-90` `.bdc-yellow-90`
+	 * Gold 90 color:
+	 * `.bgc-gold-90` `.c-gold-90` `.bdc-gold-90`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-yellow-90
-	 *             td.w-25.us-all.c-yellow-90.maxsm-d-none yellow-90
-	 *             td.w-25.us-all.c-yellow-90 #f27b00
-	 *             td.w-25.us-all.c-yellow-90 rgb( 242, 123, 0 )
+	 *                 div.doc-color-swatch.bgc-gold-90
+	 *             td.w-25.us-all.c-gold-90.maxsm-d-none gold-90
+	 *             td.w-25.us-all.c-gold-90 #de6922
+	 *             td.w-25.us-all.c-gold-90 rgb( 222, 105, 34 )
 	 */
 /**
-	 * Black 0125 color:
-	 * `.bgc-black-0125` `.c-black-0125` `.bdc-black-0125`
+	 * Carbon 0125 color:
+	 * `.bgc-carbon-0125` `.c-carbon-0125` `.bdc-carbon-0125`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-0125
-	 *             td.w-25.us-all.c-black-0125.maxsm-d-none black-0125
-	 *             td.w-25.us-all.c-black-0125 rgba(0, 0, 0, 0.0125)
-	 *             td.w-25.us-all.c-black-0125 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-0125
+	 *             td.w-25.us-all.c-carbon-0125.maxsm-d-none carbon-0125
+	 *             td.w-25.us-all.c-carbon-0125 rgba(0, 0, 0, 0.0125)
+	 *             td.w-25.us-all.c-carbon-0125 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 025 color:
-	 * `.bgc-black-025` `.c-black-025` `.bdc-black-025`
+	 * Carbon 025 color:
+	 * `.bgc-carbon-025` `.c-carbon-025` `.bdc-carbon-025`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-025
-	 *             td.w-25.us-all.c-black-025.maxsm-d-none black-025
-	 *             td.w-25.us-all.c-black-025 rgba(0, 0, 0, 0.025)
-	 *             td.w-25.us-all.c-black-025 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-025
+	 *             td.w-25.us-all.c-carbon-025.maxsm-d-none carbon-025
+	 *             td.w-25.us-all.c-carbon-025 rgba(0, 0, 0, 0.025)
+	 *             td.w-25.us-all.c-carbon-025 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 05 color:
-	 * `.bgc-black-05` `.c-black-05` `.bdc-black-05`
+	 * Carbon 05 color:
+	 * `.bgc-carbon-05` `.c-carbon-05` `.bdc-carbon-05`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-05
-	 *             td.w-25.us-all.c-black-05.maxsm-d-none black-05
-	 *             td.w-25.us-all.c-black-05 rgba(0, 0, 0, 0.05)
-	 *             td.w-25.us-all.c-black-05 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-05
+	 *             td.w-25.us-all.c-carbon-05.maxsm-d-none carbon-05
+	 *             td.w-25.us-all.c-carbon-05 rgba(0, 0, 0, 0.05)
+	 *             td.w-25.us-all.c-carbon-05 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 075 color:
-	 * `.bgc-black-075` `.c-black-075` `.bdc-black-075`
+	 * Carbon 075 color:
+	 * `.bgc-carbon-075` `.c-carbon-075` `.bdc-carbon-075`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-075
-	 *             td.w-25.us-all.c-black-075.maxsm-d-none black-075
-	 *             td.w-25.us-all.c-black-075 rgba(0, 0, 0, 0.075)
-	 *             td.w-25.us-all.c-black-075 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-075
+	 *             td.w-25.us-all.c-carbon-075.maxsm-d-none carbon-075
+	 *             td.w-25.us-all.c-carbon-075 rgba(0, 0, 0, 0.075)
+	 *             td.w-25.us-all.c-carbon-075 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 10 color:
-	 * `.bgc-black-10` `.c-black-10` `.bdc-black-10`
+	 * Carbon 10 color:
+	 * `.bgc-carbon-10` `.c-carbon-10` `.bdc-carbon-10`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-10
-	 *             td.w-25.us-all.c-black-10.maxsm-d-none black-10
-	 *             td.w-25.us-all.c-black-10 rgba(0, 0, 0, 0.1)
-	 *             td.w-25.us-all.c-black-10 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-10
+	 *             td.w-25.us-all.c-carbon-10.maxsm-d-none carbon-10
+	 *             td.w-25.us-all.c-carbon-10 rgba(0, 0, 0, 0.1)
+	 *             td.w-25.us-all.c-carbon-10 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 20 color:
-	 * `.bgc-black-20` `.c-black-20` `.bdc-black-20`
+	 * Carbon 20 color:
+	 * `.bgc-carbon-20` `.c-carbon-20` `.bdc-carbon-20`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-20
-	 *             td.w-25.us-all.c-black-20.maxsm-d-none black-20
-	 *             td.w-25.us-all.c-black-20 rgba(0, 0, 0, 0.2)
-	 *             td.w-25.us-all.c-black-20 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-20
+	 *             td.w-25.us-all.c-carbon-20.maxsm-d-none carbon-20
+	 *             td.w-25.us-all.c-carbon-20 rgba(0, 0, 0, 0.2)
+	 *             td.w-25.us-all.c-carbon-20 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 30 color:
-	 * `.bgc-black-30` `.c-black-30` `.bdc-black-30`
+	 * Carbon 30 color:
+	 * `.bgc-carbon-30` `.c-carbon-30` `.bdc-carbon-30`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-30
-	 *             td.w-25.us-all.c-black-30.maxsm-d-none black-30
-	 *             td.w-25.us-all.c-black-30 rgba(0, 0, 0, 0.3)
-	 *             td.w-25.us-all.c-black-30 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-30
+	 *             td.w-25.us-all.c-carbon-30.maxsm-d-none carbon-30
+	 *             td.w-25.us-all.c-carbon-30 rgba(0, 0, 0, 0.3)
+	 *             td.w-25.us-all.c-carbon-30 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 40 color:
-	 * `.bgc-black-40` `.c-black-40` `.bdc-black-40`
+	 * Carbon 40 color:
+	 * `.bgc-carbon-40` `.c-carbon-40` `.bdc-carbon-40`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-40
-	 *             td.w-25.us-all.c-black-40.maxsm-d-none black-40
-	 *             td.w-25.us-all.c-black-40 rgba(0, 0, 0, 0.4)
-	 *             td.w-25.us-all.c-black-40 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-40
+	 *             td.w-25.us-all.c-carbon-40.maxsm-d-none carbon-40
+	 *             td.w-25.us-all.c-carbon-40 rgba(0, 0, 0, 0.4)
+	 *             td.w-25.us-all.c-carbon-40 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 50 color:
-	 * `.bgc-black-50` `.c-black-50` `.bdc-black-50`
+	 * Carbon 50 color:
+	 * `.bgc-carbon-50` `.c-carbon-50` `.bdc-carbon-50`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-50
-	 *             td.w-25.us-all.c-black-50.maxsm-d-none black-50
-	 *             td.w-25.us-all.c-black-50 rgba(0, 0, 0, 0.5)
-	 *             td.w-25.us-all.c-black-50 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-50
+	 *             td.w-25.us-all.c-carbon-50.maxsm-d-none carbon-50
+	 *             td.w-25.us-all.c-carbon-50 rgba(0, 0, 0, 0.5)
+	 *             td.w-25.us-all.c-carbon-50 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 60 color:
-	 * `.bgc-black-60` `.c-black-60` `.bdc-black-60`
+	 * Carbon 60 color:
+	 * `.bgc-carbon-60` `.c-carbon-60` `.bdc-carbon-60`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-60
-	 *             td.w-25.us-all.c-black-60.maxsm-d-none black-60
-	 *             td.w-25.us-all.c-black-60 rgba(0, 0, 0, 0.6)
-	 *             td.w-25.us-all.c-black-60 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-60
+	 *             td.w-25.us-all.c-carbon-60.maxsm-d-none carbon-60
+	 *             td.w-25.us-all.c-carbon-60 rgba(0, 0, 0, 0.6)
+	 *             td.w-25.us-all.c-carbon-60 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 70 color:
-	 * `.bgc-black-70` `.c-black-70` `.bdc-black-70`
+	 * Carbon 70 color:
+	 * `.bgc-carbon-70` `.c-carbon-70` `.bdc-carbon-70`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-70
-	 *             td.w-25.us-all.c-black-70.maxsm-d-none black-70
-	 *             td.w-25.us-all.c-black-70 rgba(0, 0, 0, 0.7)
-	 *             td.w-25.us-all.c-black-70 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-70
+	 *             td.w-25.us-all.c-carbon-70.maxsm-d-none carbon-70
+	 *             td.w-25.us-all.c-carbon-70 rgba(0, 0, 0, 0.7)
+	 *             td.w-25.us-all.c-carbon-70 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 80 color:
-	 * `.bgc-black-80` `.c-black-80` `.bdc-black-80`
+	 * Carbon 80 color:
+	 * `.bgc-carbon-80` `.c-carbon-80` `.bdc-carbon-80`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-80
-	 *             td.w-25.us-all.c-black-80.maxsm-d-none black-80
-	 *             td.w-25.us-all.c-black-80 rgba(0, 0, 0, 0.8)
-	 *             td.w-25.us-all.c-black-80 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-80
+	 *             td.w-25.us-all.c-carbon-80.maxsm-d-none carbon-80
+	 *             td.w-25.us-all.c-carbon-80 rgba(0, 0, 0, 0.8)
+	 *             td.w-25.us-all.c-carbon-80 rgb( 0, 0, 0 )
 	 */
 /**
-	 * Black 90 color:
-	 * `.bgc-black-90` `.c-black-90` `.bdc-black-90`
+	 * Carbon 90 color:
+	 * `.bgc-carbon-90` `.c-carbon-90` `.bdc-carbon-90`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-black-90
-	 *             td.w-25.us-all.c-black-90.maxsm-d-none black-90
-	 *             td.w-25.us-all.c-black-90 rgba(0, 0, 0, 0.9)
-	 *             td.w-25.us-all.c-black-90 rgb( 0, 0, 0 )
+	 *                 div.doc-color-swatch.bgc-carbon-90
+	 *             td.w-25.us-all.c-carbon-90.maxsm-d-none carbon-90
+	 *             td.w-25.us-all.c-carbon-90 rgba(0, 0, 0, 0.9)
+	 *             td.w-25.us-all.c-carbon-90 rgb( 0, 0, 0 )
 	 */
 /**
-	 * White 0125 color:
-	 * `.bgc-white-0125` `.c-white-0125` `.bdc-white-0125`
+	 * Coconut 0125 color:
+	 * `.bgc-coconut-0125` `.c-coconut-0125` `.bdc-coconut-0125`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-0125
-	 *             td.w-25.us-all.c-white-0125.maxsm-d-none white-0125
-	 *             td.w-25.us-all.c-white-0125 rgba(255, 255, 255, 0.0125)
-	 *             td.w-25.us-all.c-white-0125 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-0125
+	 *             td.w-25.us-all.c-coconut-0125.maxsm-d-none coconut-0125
+	 *             td.w-25.us-all.c-coconut-0125 rgba(255, 255, 255, 0.0125)
+	 *             td.w-25.us-all.c-coconut-0125 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 025 color:
-	 * `.bgc-white-025` `.c-white-025` `.bdc-white-025`
+	 * Coconut 025 color:
+	 * `.bgc-coconut-025` `.c-coconut-025` `.bdc-coconut-025`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-025
-	 *             td.w-25.us-all.c-white-025.maxsm-d-none white-025
-	 *             td.w-25.us-all.c-white-025 rgba(255, 255, 255, 0.025)
-	 *             td.w-25.us-all.c-white-025 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-025
+	 *             td.w-25.us-all.c-coconut-025.maxsm-d-none coconut-025
+	 *             td.w-25.us-all.c-coconut-025 rgba(255, 255, 255, 0.025)
+	 *             td.w-25.us-all.c-coconut-025 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 05 color:
-	 * `.bgc-white-05` `.c-white-05` `.bdc-white-05`
+	 * Coconut 05 color:
+	 * `.bgc-coconut-05` `.c-coconut-05` `.bdc-coconut-05`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-05
-	 *             td.w-25.us-all.c-white-05.maxsm-d-none white-05
-	 *             td.w-25.us-all.c-white-05 rgba(255, 255, 255, 0.05)
-	 *             td.w-25.us-all.c-white-05 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-05
+	 *             td.w-25.us-all.c-coconut-05.maxsm-d-none coconut-05
+	 *             td.w-25.us-all.c-coconut-05 rgba(255, 255, 255, 0.05)
+	 *             td.w-25.us-all.c-coconut-05 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 075 color:
-	 * `.bgc-white-075` `.c-white-075` `.bdc-white-075`
+	 * Coconut 075 color:
+	 * `.bgc-coconut-075` `.c-coconut-075` `.bdc-coconut-075`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-075
-	 *             td.w-25.us-all.c-white-075.maxsm-d-none white-075
-	 *             td.w-25.us-all.c-white-075 rgba(255, 255, 255, 0.075)
-	 *             td.w-25.us-all.c-white-075 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-075
+	 *             td.w-25.us-all.c-coconut-075.maxsm-d-none coconut-075
+	 *             td.w-25.us-all.c-coconut-075 rgba(255, 255, 255, 0.075)
+	 *             td.w-25.us-all.c-coconut-075 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 10 color:
-	 * `.bgc-white-10` `.c-white-10` `.bdc-white-10`
+	 * Coconut 10 color:
+	 * `.bgc-coconut-10` `.c-coconut-10` `.bdc-coconut-10`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-10
-	 *             td.w-25.us-all.c-white-10.maxsm-d-none white-10
-	 *             td.w-25.us-all.c-white-10 rgba(255, 255, 255, 0.1)
-	 *             td.w-25.us-all.c-white-10 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-10
+	 *             td.w-25.us-all.c-coconut-10.maxsm-d-none coconut-10
+	 *             td.w-25.us-all.c-coconut-10 rgba(255, 255, 255, 0.1)
+	 *             td.w-25.us-all.c-coconut-10 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 20 color:
-	 * `.bgc-white-20` `.c-white-20` `.bdc-white-20`
+	 * Coconut 20 color:
+	 * `.bgc-coconut-20` `.c-coconut-20` `.bdc-coconut-20`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-20
-	 *             td.w-25.us-all.c-white-20.maxsm-d-none white-20
-	 *             td.w-25.us-all.c-white-20 rgba(255, 255, 255, 0.2)
-	 *             td.w-25.us-all.c-white-20 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-20
+	 *             td.w-25.us-all.c-coconut-20.maxsm-d-none coconut-20
+	 *             td.w-25.us-all.c-coconut-20 rgba(255, 255, 255, 0.2)
+	 *             td.w-25.us-all.c-coconut-20 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 30 color:
-	 * `.bgc-white-30` `.c-white-30` `.bdc-white-30`
+	 * Coconut 30 color:
+	 * `.bgc-coconut-30` `.c-coconut-30` `.bdc-coconut-30`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-30
-	 *             td.w-25.us-all.c-white-30.maxsm-d-none white-30
-	 *             td.w-25.us-all.c-white-30 rgba(255, 255, 255, 0.3)
-	 *             td.w-25.us-all.c-white-30 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-30
+	 *             td.w-25.us-all.c-coconut-30.maxsm-d-none coconut-30
+	 *             td.w-25.us-all.c-coconut-30 rgba(255, 255, 255, 0.3)
+	 *             td.w-25.us-all.c-coconut-30 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 40 color:
-	 * `.bgc-white-40` `.c-white-40` `.bdc-white-40`
+	 * Coconut 40 color:
+	 * `.bgc-coconut-40` `.c-coconut-40` `.bdc-coconut-40`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-40
-	 *             td.w-25.us-all.c-white-40.maxsm-d-none white-40
-	 *             td.w-25.us-all.c-white-40 rgba(255, 255, 255, 0.4)
-	 *             td.w-25.us-all.c-white-40 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-40
+	 *             td.w-25.us-all.c-coconut-40.maxsm-d-none coconut-40
+	 *             td.w-25.us-all.c-coconut-40 rgba(255, 255, 255, 0.4)
+	 *             td.w-25.us-all.c-coconut-40 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 50 color:
-	 * `.bgc-white-50` `.c-white-50` `.bdc-white-50`
+	 * Coconut 50 color:
+	 * `.bgc-coconut-50` `.c-coconut-50` `.bdc-coconut-50`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-50
-	 *             td.w-25.us-all.c-white-50.maxsm-d-none white-50
-	 *             td.w-25.us-all.c-white-50 rgba(255, 255, 255, 0.5)
-	 *             td.w-25.us-all.c-white-50 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-50
+	 *             td.w-25.us-all.c-coconut-50.maxsm-d-none coconut-50
+	 *             td.w-25.us-all.c-coconut-50 rgba(255, 255, 255, 0.5)
+	 *             td.w-25.us-all.c-coconut-50 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 60 color:
-	 * `.bgc-white-60` `.c-white-60` `.bdc-white-60`
+	 * Coconut 60 color:
+	 * `.bgc-coconut-60` `.c-coconut-60` `.bdc-coconut-60`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-60
-	 *             td.w-25.us-all.c-white-60.maxsm-d-none white-60
-	 *             td.w-25.us-all.c-white-60 rgba(255, 255, 255, 0.6)
-	 *             td.w-25.us-all.c-white-60 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-60
+	 *             td.w-25.us-all.c-coconut-60.maxsm-d-none coconut-60
+	 *             td.w-25.us-all.c-coconut-60 rgba(255, 255, 255, 0.6)
+	 *             td.w-25.us-all.c-coconut-60 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 70 color:
-	 * `.bgc-white-70` `.c-white-70` `.bdc-white-70`
+	 * Coconut 70 color:
+	 * `.bgc-coconut-70` `.c-coconut-70` `.bdc-coconut-70`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-70
-	 *             td.w-25.us-all.c-white-70.maxsm-d-none white-70
-	 *             td.w-25.us-all.c-white-70 rgba(255, 255, 255, 0.7)
-	 *             td.w-25.us-all.c-white-70 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-70
+	 *             td.w-25.us-all.c-coconut-70.maxsm-d-none coconut-70
+	 *             td.w-25.us-all.c-coconut-70 rgba(255, 255, 255, 0.7)
+	 *             td.w-25.us-all.c-coconut-70 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 80 color:
-	 * `.bgc-white-80` `.c-white-80` `.bdc-white-80`
+	 * Coconut 80 color:
+	 * `.bgc-coconut-80` `.c-coconut-80` `.bdc-coconut-80`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-80
-	 *             td.w-25.us-all.c-white-80.maxsm-d-none white-80
-	 *             td.w-25.us-all.c-white-80 rgba(255, 255, 255, 0.8)
-	 *             td.w-25.us-all.c-white-80 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-80
+	 *             td.w-25.us-all.c-coconut-80.maxsm-d-none coconut-80
+	 *             td.w-25.us-all.c-coconut-80 rgba(255, 255, 255, 0.8)
+	 *             td.w-25.us-all.c-coconut-80 rgb( 255, 255, 255 )
 	 */
 /**
-	 * White 90 color:
-	 * `.bgc-white-90` `.c-white-90` `.bdc-white-90`
+	 * Coconut 90 color:
+	 * `.bgc-coconut-90` `.c-coconut-90` `.bdc-coconut-90`
 	 *
 	 *     @example
 	 *     table
 	 *         tr
 	 *             td.w-25
-	 *                 div.doc-color-swatch.bgc-white-90
-	 *             td.w-25.us-all.c-white-90.maxsm-d-none white-90
-	 *             td.w-25.us-all.c-white-90 rgba(255, 255, 255, 0.9)
-	 *             td.w-25.us-all.c-white-90 rgb( 255, 255, 255 )
+	 *                 div.doc-color-swatch.bgc-coconut-90
+	 *             td.w-25.us-all.c-coconut-90.maxsm-d-none coconut-90
+	 *             td.w-25.us-all.c-coconut-90 rgba(255, 255, 255, 0.9)
+	 *             td.w-25.us-all.c-coconut-90 rgb( 255, 255, 255 )
 	 */
-.bgc-cyan {
-  background-color: #008c98 !important; }
+.bgc-sky {
+  background-color: #4b9cd6 !important; }
 
-.bdc-cyan {
-  border-color: #008c98 !important; }
+.bdc-sky {
+  border-color: #4b9cd6 !important; }
 
-.c-cyan {
-  color: #008c98 !important; }
+.c-sky {
+  color: #4b9cd6 !important; }
 
-.bgc-red {
-  background-color: #e65719 !important; }
+.bgc-cherry {
+  background-color: #dc605c !important; }
 
-.bdc-red {
-  border-color: #e65719 !important; }
+.bdc-cherry {
+  border-color: #dc605c !important; }
 
-.c-red {
-  color: #e65719 !important; }
+.c-cherry {
+  color: #dc605c !important; }
 
-.bgc-yellow {
-  background-color: #f8d526 !important; }
+.bgc-gold {
+  background-color: #edc862 !important; }
 
-.bdc-yellow {
-  border-color: #f8d526 !important; }
+.bdc-gold {
+  border-color: #edc862 !important; }
 
-.c-yellow {
-  color: #f8d526 !important; }
+.c-gold {
+  color: #edc862 !important; }
 
-.bgc-black {
+.bgc-carbon {
   background-color: #000 !important; }
 
-.bdc-black {
+.bdc-carbon {
   border-color: #000 !important; }
 
-.c-black {
+.c-carbon {
   color: #000 !important; }
 
-.bgc-white {
+.bgc-coconut {
   background-color: #fff !important; }
 
-.bdc-white {
+.bdc-coconut {
   border-color: #fff !important; }
 
-.c-white {
+.c-coconut {
   color: #fff !important; }
 
-.bgc-cyan-1 {
-  background-color: #def9fb !important; }
+.bgc-sky-1 {
+  background-color: #e3f5fc !important; }
 
-.bdc-cyan-1 {
-  border-color: #def9fb !important; }
+.bdc-sky-1 {
+  border-color: #e3f5fc !important; }
 
-.c-cyan-1 {
-  color: #def9fb !important; }
+.c-sky-1 {
+  color: #e3f5fc !important; }
 
-.bgc-cyan-10 {
-  background-color: #aceff4 !important; }
+.bgc-sky-10 {
+  background-color: #bae5f8 !important; }
 
-.bdc-cyan-10 {
-  border-color: #aceff4 !important; }
+.bdc-sky-10 {
+  border-color: #bae5f8 !important; }
 
-.c-cyan-10 {
-  color: #aceff4 !important; }
+.c-sky-10 {
+  color: #bae5f8 !important; }
 
-.bgc-cyan-20 {
-  background-color: #70e4ee !important; }
+.bgc-sky-20 {
+  background-color: #8fd4f4 !important; }
 
-.bdc-cyan-20 {
-  border-color: #70e4ee !important; }
+.bdc-sky-20 {
+  border-color: #8fd4f4 !important; }
 
-.c-cyan-20 {
-  color: #70e4ee !important; }
+.c-sky-20 {
+  color: #8fd4f4 !important; }
 
-.bgc-cyan-30 {
-  background-color: #00d9e8 !important; }
+.bgc-sky-30 {
+  background-color: #6cc3ed !important; }
 
-.bdc-cyan-30 {
-  border-color: #00d9e8 !important; }
+.bdc-sky-30 {
+  border-color: #6cc3ed !important; }
 
-.c-cyan-30 {
-  color: #00d9e8 !important; }
+.c-sky-30 {
+  color: #6cc3ed !important; }
 
-.bgc-cyan-40 {
-  background-color: #00d0e3 !important; }
+.bgc-sky-40 {
+  background-color: #5ab7e9 !important; }
 
-.bdc-cyan-40 {
-  border-color: #00d0e3 !important; }
+.bdc-sky-40 {
+  border-color: #5ab7e9 !important; }
 
-.c-cyan-40 {
-  color: #00d0e3 !important; }
+.c-sky-40 {
+  color: #5ab7e9 !important; }
 
-.bgc-cyan-50 {
-  background-color: #00c7df !important; }
+.bgc-sky-50 {
+  background-color: #51aae5 !important; }
 
-.bdc-cyan-50 {
-  border-color: #00c7df !important; }
+.bdc-sky-50 {
+  border-color: #51aae5 !important; }
 
-.c-cyan-50 {
-  color: #00c7df !important; }
+.c-sky-50 {
+  color: #51aae5 !important; }
 
-.bgc-cyan-60 {
-  background-color: #00b6cc !important; }
+.bgc-sky-60 {
+  background-color: #4b9cd6 !important; }
 
-.bdc-cyan-60 {
-  border-color: #00b6cc !important; }
+.bdc-sky-60 {
+  border-color: #4b9cd6 !important; }
 
-.c-cyan-60 {
-  color: #00b6cc !important; }
+.c-sky-60 {
+  color: #4b9cd6 !important; }
 
-.bgc-cyan-70 {
-  background-color: #00a1b1 !important; }
+.bgc-sky-70 {
+  background-color: #4489c2 !important; }
 
-.bdc-cyan-70 {
-  border-color: #00a1b1 !important; }
+.bdc-sky-70 {
+  border-color: #4489c2 !important; }
 
-.c-cyan-70 {
-  color: #00a1b1 !important; }
+.c-sky-70 {
+  color: #4489c2 !important; }
 
-.bgc-cyan-80 {
-  background-color: #008c98 !important; }
+.bgc-sky-80 {
+  background-color: #3e78ad !important; }
 
-.bdc-cyan-80 {
-  border-color: #008c98 !important; }
+.bdc-sky-80 {
+  border-color: #3e78ad !important; }
 
-.c-cyan-80 {
-  color: #008c98 !important; }
+.c-sky-80 {
+  color: #3e78ad !important; }
 
-.bgc-cyan-90 {
-  background-color: #00696b !important; }
+.bgc-sky-90 {
+  background-color: #33598a !important; }
 
-.bdc-cyan-90 {
-  border-color: #00696b !important; }
+.bdc-sky-90 {
+  border-color: #33598a !important; }
 
-.c-cyan-90 {
-  color: #00696b !important; }
+.c-sky-90 {
+  color: #33598a !important; }
 
-.bgc-red-1 {
-  background-color: #fbeae7 !important; }
+.bgc-cherry-1 {
+  background-color: #fbecee !important; }
 
-.bdc-red-1 {
-  border-color: #fbeae7 !important; }
+.bdc-cherry-1 {
+  border-color: #fbecee !important; }
 
-.c-red-1 {
-  color: #fbeae7 !important; }
+.c-cherry-1 {
+  color: #fbecee !important; }
 
-.bgc-red-10 {
-  background-color: #ffcfbd !important; }
+.bgc-cherry-10 {
+  background-color: #f6cfd4 !important; }
 
-.bdc-red-10 {
-  border-color: #ffcfbd !important; }
+.bdc-cherry-10 {
+  border-color: #f6cfd4 !important; }
 
-.c-red-10 {
-  color: #ffcfbd !important; }
+.c-cherry-10 {
+  color: #f6cfd4 !important; }
 
-.bgc-red-20 {
-  background-color: #ffb093 !important; }
+.bgc-cherry-20 {
+  background-color: #e29e9f !important; }
 
-.bdc-red-20 {
-  border-color: #ffb093 !important; }
+.bdc-cherry-20 {
+  border-color: #e29e9f !important; }
 
-.c-red-20 {
-  color: #ffb093 !important; }
+.c-cherry-20 {
+  color: #e29e9f !important; }
 
-.bgc-red-30 {
-  background-color: #ff9267 !important; }
+.bgc-cherry-30 {
+  background-color: #d37b7b !important; }
 
-.bdc-red-30 {
-  border-color: #ff9267 !important; }
+.bdc-cherry-30 {
+  border-color: #d37b7b !important; }
 
-.c-red-30 {
-  color: #ff9267 !important; }
+.c-cherry-30 {
+  color: #d37b7b !important; }
 
-.bgc-red-40 {
-  background-color: #ff7b45 !important; }
+.bgc-cherry-40 {
+  background-color: #dc605c !important; }
 
-.bdc-red-40 {
-  border-color: #ff7b45 !important; }
+.bdc-cherry-40 {
+  border-color: #dc605c !important; }
 
-.c-red-40 {
-  color: #ff7b45 !important; }
+.c-cherry-40 {
+  color: #dc605c !important; }
 
-.bgc-red-50 {
-  background-color: #ff6522 !important; }
+.bgc-cherry-50 {
+  background-color: #e05547 !important; }
 
-.bdc-red-50 {
-  border-color: #ff6522 !important; }
+.bdc-cherry-50 {
+  border-color: #e05547 !important; }
 
-.c-red-50 {
-  color: #ff6522 !important; }
+.c-cherry-50 {
+  color: #e05547 !important; }
 
-.bgc-red-60 {
-  background-color: #f45f1e !important; }
+.bgc-cherry-60 {
+  background-color: #d14c44 !important; }
 
-.bdc-red-60 {
-  border-color: #f45f1e !important; }
+.bdc-cherry-60 {
+  border-color: #d14c44 !important; }
 
-.c-red-60 {
-  color: #f45f1e !important; }
+.c-cherry-60 {
+  color: #d14c44 !important; }
 
-.bgc-red-70 {
-  background-color: #e65719 !important; }
+.bgc-cherry-70 {
+  background-color: #bf443e !important; }
 
-.bdc-red-70 {
-  border-color: #e65719 !important; }
+.bdc-cherry-70 {
+  border-color: #bf443e !important; }
 
-.c-red-70 {
-  color: #e65719 !important; }
+.c-cherry-70 {
+  color: #bf443e !important; }
 
-.bgc-red-80 {
-  background-color: #d85015 !important; }
+.bgc-cherry-80 {
+  background-color: #b13e38 !important; }
 
-.bdc-red-80 {
-  border-color: #d85015 !important; }
+.bdc-cherry-80 {
+  border-color: #b13e38 !important; }
 
-.c-red-80 {
-  color: #d85015 !important; }
+.c-cherry-80 {
+  color: #b13e38 !important; }
 
-.bgc-red-90 {
-  background-color: #c0430c !important; }
+.bgc-cherry-90 {
+  background-color: #a3352d !important; }
 
-.bdc-red-90 {
-  border-color: #c0430c !important; }
+.bdc-cherry-90 {
+  border-color: #a3352d !important; }
 
-.c-red-90 {
-  color: #c0430c !important; }
+.c-cherry-90 {
+  color: #a3352d !important; }
 
-.bgc-yellow-1 {
-  background-color: #fefde6 !important; }
+.bgc-gold-1 {
+  background-color: #fcf6e3 !important; }
 
-.bdc-yellow-1 {
-  border-color: #fefde6 !important; }
+.bdc-gold-1 {
+  border-color: #fcf6e3 !important; }
 
-.c-yellow-1 {
-  color: #fefde6 !important; }
+.c-gold-1 {
+  color: #fcf6e3 !important; }
 
-.bgc-yellow-10 {
-  background-color: #fdf8c2 !important; }
+.bgc-gold-10 {
+  background-color: #f7e6b8 !important; }
 
-.bdc-yellow-10 {
-  border-color: #fdf8c2 !important; }
+.bdc-gold-10 {
+  border-color: #f7e6b8 !important; }
 
-.c-yellow-10 {
-  color: #fdf8c2 !important; }
+.c-gold-10 {
+  color: #f7e6b8 !important; }
 
-.bgc-yellow-20 {
-  background-color: #fcf399 !important; }
+.bgc-gold-20 {
+  background-color: #f2d68b !important; }
 
-.bdc-yellow-20 {
-  border-color: #fcf399 !important; }
+.bdc-gold-20 {
+  border-color: #f2d68b !important; }
 
-.c-yellow-20 {
-  color: #fcf399 !important; }
+.c-gold-20 {
+  color: #f2d68b !important; }
 
-.bgc-yellow-30 {
-  background-color: #fbef70 !important; }
+.bgc-gold-30 {
+  background-color: #edc862 !important; }
 
-.bdc-yellow-30 {
-  border-color: #fbef70 !important; }
+.bdc-gold-30 {
+  border-color: #edc862 !important; }
 
-.c-yellow-30 {
-  color: #fbef70 !important; }
+.c-gold-30 {
+  color: #edc862 !important; }
 
-.bgc-yellow-40 {
-  background-color: #f8ea4e !important; }
+.bgc-gold-40 {
+  background-color: #e9bc4a !important; }
 
-.bdc-yellow-40 {
-  border-color: #f8ea4e !important; }
+.bdc-gold-40 {
+  border-color: #e9bc4a !important; }
 
-.c-yellow-40 {
-  color: #f8ea4e !important; }
+.c-gold-40 {
+  color: #e9bc4a !important; }
 
-.bgc-yellow-50 {
-  background-color: #f9e82d !important; }
+.bgc-gold-50 {
+  background-color: #e6b138 !important; }
 
-.bdc-yellow-50 {
-  border-color: #f9e82d !important; }
+.bdc-gold-50 {
+  border-color: #e6b138 !important; }
 
-.c-yellow-50 {
-  color: #f9e82d !important; }
+.c-gold-50 {
+  color: #e6b138 !important; }
 
-.bgc-yellow-60 {
-  background-color: #f8d526 !important; }
+.bgc-gold-60 {
+  background-color: #e5a534 !important; }
 
-.bdc-yellow-60 {
-  border-color: #f8d526 !important; }
+.bdc-gold-60 {
+  border-color: #e5a534 !important; }
 
-.c-yellow-60 {
-  color: #f8d526 !important; }
+.c-gold-60 {
+  color: #e5a534 !important; }
 
-.bgc-yellow-70 {
-  background-color: #f6bd1d !important; }
+.bgc-gold-70 {
+  background-color: #e3942f !important; }
 
-.bdc-yellow-70 {
-  border-color: #f6bd1d !important; }
+.bdc-gold-70 {
+  border-color: #e3942f !important; }
 
-.c-yellow-70 {
-  color: #f6bd1d !important; }
+.c-gold-70 {
+  color: #e3942f !important; }
 
-.bgc-yellow-80 {
-  background-color: #f5a513 !important; }
+.bgc-gold-80 {
+  background-color: #e1852b !important; }
 
-.bdc-yellow-80 {
-  border-color: #f5a513 !important; }
+.bdc-gold-80 {
+  border-color: #e1852b !important; }
 
-.c-yellow-80 {
-  color: #f5a513 !important; }
+.c-gold-80 {
+  color: #e1852b !important; }
 
-.bgc-yellow-90 {
-  background-color: #f27b00 !important; }
+.bgc-gold-90 {
+  background-color: #de6922 !important; }
 
-.bdc-yellow-90 {
-  border-color: #f27b00 !important; }
+.bdc-gold-90 {
+  border-color: #de6922 !important; }
 
-.c-yellow-90 {
-  color: #f27b00 !important; }
+.c-gold-90 {
+  color: #de6922 !important; }
 
-.bgc-black-0125 {
+.bgc-carbon-0125 {
   background-color: rgba(0, 0, 0, 0.0125) !important; }
 
-.bdc-black-0125 {
+.bdc-carbon-0125 {
   border-color: rgba(0, 0, 0, 0.0125) !important; }
 
-.c-black-0125 {
+.c-carbon-0125 {
   color: rgba(0, 0, 0, 0.0125) !important; }
 
-.bgc-black-025 {
+.bgc-carbon-025 {
   background-color: rgba(0, 0, 0, 0.025) !important; }
 
-.bdc-black-025 {
+.bdc-carbon-025 {
   border-color: rgba(0, 0, 0, 0.025) !important; }
 
-.c-black-025 {
+.c-carbon-025 {
   color: rgba(0, 0, 0, 0.025) !important; }
 
-.bgc-black-05 {
+.bgc-carbon-05 {
   background-color: rgba(0, 0, 0, 0.05) !important; }
 
-.bdc-black-05 {
+.bdc-carbon-05 {
   border-color: rgba(0, 0, 0, 0.05) !important; }
 
-.c-black-05 {
+.c-carbon-05 {
   color: rgba(0, 0, 0, 0.05) !important; }
 
-.bgc-black-075 {
+.bgc-carbon-075 {
   background-color: rgba(0, 0, 0, 0.075) !important; }
 
-.bdc-black-075 {
+.bdc-carbon-075 {
   border-color: rgba(0, 0, 0, 0.075) !important; }
 
-.c-black-075 {
+.c-carbon-075 {
   color: rgba(0, 0, 0, 0.075) !important; }
 
-.bgc-black-10 {
+.bgc-carbon-10 {
   background-color: rgba(0, 0, 0, 0.1) !important; }
 
-.bdc-black-10 {
+.bdc-carbon-10 {
   border-color: rgba(0, 0, 0, 0.1) !important; }
 
-.c-black-10 {
+.c-carbon-10 {
   color: rgba(0, 0, 0, 0.1) !important; }
 
-.bgc-black-20 {
+.bgc-carbon-20 {
   background-color: rgba(0, 0, 0, 0.2) !important; }
 
-.bdc-black-20 {
+.bdc-carbon-20 {
   border-color: rgba(0, 0, 0, 0.2) !important; }
 
-.c-black-20 {
+.c-carbon-20 {
   color: rgba(0, 0, 0, 0.2) !important; }
 
-.bgc-black-30 {
+.bgc-carbon-30 {
   background-color: rgba(0, 0, 0, 0.3) !important; }
 
-.bdc-black-30 {
+.bdc-carbon-30 {
   border-color: rgba(0, 0, 0, 0.3) !important; }
 
-.c-black-30 {
+.c-carbon-30 {
   color: rgba(0, 0, 0, 0.3) !important; }
 
-.bgc-black-40 {
+.bgc-carbon-40 {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
-.bdc-black-40 {
+.bdc-carbon-40 {
   border-color: rgba(0, 0, 0, 0.4) !important; }
 
-.c-black-40 {
+.c-carbon-40 {
   color: rgba(0, 0, 0, 0.4) !important; }
 
-.bgc-black-50 {
+.bgc-carbon-50 {
   background-color: rgba(0, 0, 0, 0.5) !important; }
 
-.bdc-black-50 {
+.bdc-carbon-50 {
   border-color: rgba(0, 0, 0, 0.5) !important; }
 
-.c-black-50 {
+.c-carbon-50 {
   color: rgba(0, 0, 0, 0.5) !important; }
 
-.bgc-black-60 {
+.bgc-carbon-60 {
   background-color: rgba(0, 0, 0, 0.6) !important; }
 
-.bdc-black-60 {
+.bdc-carbon-60 {
   border-color: rgba(0, 0, 0, 0.6) !important; }
 
-.c-black-60 {
+.c-carbon-60 {
   color: rgba(0, 0, 0, 0.6) !important; }
 
-.bgc-black-70 {
+.bgc-carbon-70 {
   background-color: rgba(0, 0, 0, 0.7) !important; }
 
-.bdc-black-70 {
+.bdc-carbon-70 {
   border-color: rgba(0, 0, 0, 0.7) !important; }
 
-.c-black-70 {
+.c-carbon-70 {
   color: rgba(0, 0, 0, 0.7) !important; }
 
-.bgc-black-80 {
+.bgc-carbon-80 {
   background-color: rgba(0, 0, 0, 0.8) !important; }
 
-.bdc-black-80 {
+.bdc-carbon-80 {
   border-color: rgba(0, 0, 0, 0.8) !important; }
 
-.c-black-80 {
+.c-carbon-80 {
   color: rgba(0, 0, 0, 0.8) !important; }
 
-.bgc-black-90 {
+.bgc-carbon-90 {
   background-color: rgba(0, 0, 0, 0.9) !important; }
 
-.bdc-black-90 {
+.bdc-carbon-90 {
   border-color: rgba(0, 0, 0, 0.9) !important; }
 
-.c-black-90 {
+.c-carbon-90 {
   color: rgba(0, 0, 0, 0.9) !important; }
 
-.bgc-white-0125 {
+.bgc-coconut-0125 {
   background-color: rgba(255, 255, 255, 0.0125) !important; }
 
-.bdc-white-0125 {
+.bdc-coconut-0125 {
   border-color: rgba(255, 255, 255, 0.0125) !important; }
 
-.c-white-0125 {
+.c-coconut-0125 {
   color: rgba(255, 255, 255, 0.0125) !important; }
 
-.bgc-white-025 {
+.bgc-coconut-025 {
   background-color: rgba(255, 255, 255, 0.025) !important; }
 
-.bdc-white-025 {
+.bdc-coconut-025 {
   border-color: rgba(255, 255, 255, 0.025) !important; }
 
-.c-white-025 {
+.c-coconut-025 {
   color: rgba(255, 255, 255, 0.025) !important; }
 
-.bgc-white-05 {
+.bgc-coconut-05 {
   background-color: rgba(255, 255, 255, 0.05) !important; }
 
-.bdc-white-05 {
+.bdc-coconut-05 {
   border-color: rgba(255, 255, 255, 0.05) !important; }
 
-.c-white-05 {
+.c-coconut-05 {
   color: rgba(255, 255, 255, 0.05) !important; }
 
-.bgc-white-075 {
+.bgc-coconut-075 {
   background-color: rgba(255, 255, 255, 0.075) !important; }
 
-.bdc-white-075 {
+.bdc-coconut-075 {
   border-color: rgba(255, 255, 255, 0.075) !important; }
 
-.c-white-075 {
+.c-coconut-075 {
   color: rgba(255, 255, 255, 0.075) !important; }
 
-.bgc-white-10 {
+.bgc-coconut-10 {
   background-color: rgba(255, 255, 255, 0.1) !important; }
 
-.bdc-white-10 {
+.bdc-coconut-10 {
   border-color: rgba(255, 255, 255, 0.1) !important; }
 
-.c-white-10 {
+.c-coconut-10 {
   color: rgba(255, 255, 255, 0.1) !important; }
 
-.bgc-white-20 {
+.bgc-coconut-20 {
   background-color: rgba(255, 255, 255, 0.2) !important; }
 
-.bdc-white-20 {
+.bdc-coconut-20 {
   border-color: rgba(255, 255, 255, 0.2) !important; }
 
-.c-white-20 {
+.c-coconut-20 {
   color: rgba(255, 255, 255, 0.2) !important; }
 
-.bgc-white-30 {
+.bgc-coconut-30 {
   background-color: rgba(255, 255, 255, 0.3) !important; }
 
-.bdc-white-30 {
+.bdc-coconut-30 {
   border-color: rgba(255, 255, 255, 0.3) !important; }
 
-.c-white-30 {
+.c-coconut-30 {
   color: rgba(255, 255, 255, 0.3) !important; }
 
-.bgc-white-40 {
+.bgc-coconut-40 {
   background-color: rgba(255, 255, 255, 0.4) !important; }
 
-.bdc-white-40 {
+.bdc-coconut-40 {
   border-color: rgba(255, 255, 255, 0.4) !important; }
 
-.c-white-40 {
+.c-coconut-40 {
   color: rgba(255, 255, 255, 0.4) !important; }
 
-.bgc-white-50 {
+.bgc-coconut-50 {
   background-color: rgba(255, 255, 255, 0.5) !important; }
 
-.bdc-white-50 {
+.bdc-coconut-50 {
   border-color: rgba(255, 255, 255, 0.5) !important; }
 
-.c-white-50 {
+.c-coconut-50 {
   color: rgba(255, 255, 255, 0.5) !important; }
 
-.bgc-white-60 {
+.bgc-coconut-60 {
   background-color: rgba(255, 255, 255, 0.6) !important; }
 
-.bdc-white-60 {
+.bdc-coconut-60 {
   border-color: rgba(255, 255, 255, 0.6) !important; }
 
-.c-white-60 {
+.c-coconut-60 {
   color: rgba(255, 255, 255, 0.6) !important; }
 
-.bgc-white-70 {
+.bgc-coconut-70 {
   background-color: rgba(255, 255, 255, 0.7) !important; }
 
-.bdc-white-70 {
+.bdc-coconut-70 {
   border-color: rgba(255, 255, 255, 0.7) !important; }
 
-.c-white-70 {
+.c-coconut-70 {
   color: rgba(255, 255, 255, 0.7) !important; }
 
-.bgc-white-80 {
+.bgc-coconut-80 {
   background-color: rgba(255, 255, 255, 0.8) !important; }
 
-.bdc-white-80 {
+.bdc-coconut-80 {
   border-color: rgba(255, 255, 255, 0.8) !important; }
 
-.c-white-80 {
+.c-coconut-80 {
   color: rgba(255, 255, 255, 0.8) !important; }
 
-.bgc-white-90 {
+.bgc-coconut-90 {
   background-color: rgba(255, 255, 255, 0.9) !important; }
 
-.bdc-white-90 {
+.bdc-coconut-90 {
   border-color: rgba(255, 255, 255, 0.9) !important; }
 
-.c-white-90 {
+.c-coconut-90 {
   color: rgba(255, 255, 255, 0.9) !important; }
 
 /***
@@ -13539,8 +13545,8 @@ p.dcap:first-letter {
   text-decoration: underline; }
 
 .a-underline-alt a {
-  background-image: -webkit-linear-gradient(top, transparent 50%, #008c98 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #008c98 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, #4b9cd6 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #4b9cd6 50%);
   background-repeat: repeat-x;
   background-size: 0.125rem 0.125rem;
   background-position: 0 90%;
@@ -13550,8 +13556,8 @@ p.dcap:first-letter {
     background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.9) 50%); }
 
 .night .a-underline-alt a {
-  background-image: -webkit-linear-gradient(top, transparent 50%, #008c98 50%);
-  background-image: linear-gradient(to bottom, transparent 50%, #008c98 50%);
+  background-image: -webkit-linear-gradient(top, transparent 50%, #4b9cd6 50%);
+  background-image: linear-gradient(to bottom, transparent 50%, #4b9cd6 50%);
   background-repeat: repeat-x;
   background-size: 0.125rem 0.125rem;
   background-position: 0 90%;
@@ -14705,11 +14711,11 @@ p.dcap:first-letter {
   .menu--pills li a:link, .menu--pills li a:visited, .menu--pills li a:hover, .menu--pills li a:active {
     color: rgba(0, 0, 0, 0.9); }
   .menu--pills li a:hover {
-    background-color: #e6f4f5; }
+    background-color: #edf5fb; }
 
 .menu--pills li.active a,
 .menu--pills li.active a:hover {
-  background-color: #cce8ea;
+  background-color: #dbebf7;
   color: rgba(0, 0, 0, 0.9); }
 
 .night .menu--pills li a {
@@ -14717,11 +14723,11 @@ p.dcap:first-letter {
   .night .menu--pills li a:link, .night .menu--pills li a:visited, .night .menu--pills li a:hover, .night .menu--pills li a:active {
     color: rgba(255, 255, 255, 0.9); }
   .night .menu--pills li a:hover {
-    background-color: #172526; }
+    background-color: #1e262c; }
 
 .night .menu--pills li.active a,
 .night .menu--pills li.active a:hover {
-  background-color: #143032;
+  background-color: #23333f;
   color: rgba(255, 255, 255, 0.9); }
 
 /**
@@ -15484,7 +15490,7 @@ a.navbar__item--icn {
   -webkit-transform: scale(0);
   transform: scale(0);
   border-radius: 50%;
-  background-color: #008c98;
+  background-color: #4b9cd6;
   will-change: transform; }
 
 .mobile-menu-open .burger__circle {
@@ -15498,7 +15504,7 @@ a.navbar__item--icn {
   width: 4.5rem;
   height: 4.5rem;
   border-radius: 50%;
-  background-color: #008c98; }
+  background-color: #4b9cd6; }
 
 .burger__img {
   position: absolute;
@@ -15601,7 +15607,7 @@ a.navbar__item--icn {
         color: rgba(0, 0, 0, 0.9); }
     .tabs li.active a {
       border-bottom-width: 0.188rem;
-      border-bottom-color: #008c98; }
+      border-bottom-color: #4b9cd6; }
       .tabs li.active a:link, .tabs li.active a:visited {
         color: rgba(0, 0, 0, 0.9); }
       .tabs li.active a:hover {
@@ -15619,7 +15625,7 @@ a.navbar__item--icn {
     color: rgba(255, 255, 255, 0.9); }
 
 .night .tabs li.active a {
-  border-bottom-color: #008c98; }
+  border-bottom-color: #4b9cd6; }
   .night .tabs li.active a:link, .night .tabs li.active a:visited {
     color: rgba(255, 255, 255, 0.9); }
   .night .tabs li.active a:hover {
@@ -15681,7 +15687,7 @@ a.navbar__item--icn {
  *             li(style='transform: translate3d( 71px, 0, 0 ); width: 73px;').active-underline
  */
 .active-underline {
-  background-color: #008c98;
+  background-color: #4b9cd6;
   height: 0.188rem;
   position: absolute;
   left: 0;
@@ -15692,7 +15698,7 @@ a.navbar__item--icn {
   width: 71px; }
 
 .night .active-underline {
-  background-color: #008c98; }
+  background-color: #4b9cd6; }
 
 .tabs-details > div:not(.active) {
   display: none; }
