@@ -3868,7 +3868,7 @@ ul, ol, dl, figure {
  */
 a {
   color: #28a0a5;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   transition: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, text-shadow 0.16s ease-out; }
   a:link {
@@ -3883,8 +3883,6 @@ a {
     outline: 0; }
   a:focus {
     outline: thin dotted; }
-  a[target='_blank']::after {
-    content: ' ↗'; }
 
 .night a {
   color: #28a0a5; }
@@ -3965,7 +3963,7 @@ h1,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h1 a,
   .h1 a {
@@ -3982,7 +3980,7 @@ h2,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h2 a,
   .h2 a {
@@ -3999,7 +3997,7 @@ h3,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h3 a,
   .h3 a {
@@ -4016,7 +4014,7 @@ h4,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h4 a,
   .h4 a {
@@ -4033,7 +4031,7 @@ h5,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h5 a,
   .h5 a {
@@ -4050,7 +4048,7 @@ h6,
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   h6 a,
   .h6 a {
@@ -5794,10 +5792,10 @@ hr {
     height: 4rem; }
 
 svg {
-  fill: rgba(0, 0, 0, 0.9); }
+  stroke: rgba(0, 0, 0, 0.9); }
 
 .night svg {
-  fill: rgba(255, 255, 255, 0.9); }
+  stroke: rgba(255, 255, 255, 0.9); }
 
 /***
  * Input group:
@@ -5947,6 +5945,9 @@ svg {
   padding-left: 0.5em; }
   .item:first-child {
     padding-left: 0; }
+
+.item__icn {
+  display: flex; }
 
 /**
  * Multiple item groups:
@@ -13220,7 +13221,7 @@ svg {
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   .dh1 a {
     font-weight: inherit; }
@@ -13234,7 +13235,7 @@ svg {
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   .dh2 a {
     font-weight: inherit; }
@@ -13248,7 +13249,7 @@ svg {
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   .dh3 a {
     font-weight: inherit; }
@@ -13262,7 +13263,7 @@ svg {
   letter-spacing: -0.015em;
   line-height: 1.25;
   margin-bottom: 1rem;
-  text-transform: capitalize;
+  text-transform: none;
   word-spacing: normal; }
   .dh4 a {
     font-weight: inherit; }
