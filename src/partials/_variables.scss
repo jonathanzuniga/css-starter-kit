@@ -38,6 +38,12 @@ $colors:             colors( $color-palette );
 $day__color-primary: color( 'aqua' );
 $ngt__color-primary: color( 'aqua' );
 
+$day__color-danger: color( 'cherry' );
+$ngt__color-danger: color( 'cherry' );
+
+$day__color-warning: color( 'gold' );
+$ngt__color-warning: color( 'gold' );
+
 $day__body-color:    color( 'carbon 90' );
 $ngt__body-color:    color( 'coconut 90' );
 
@@ -47,8 +53,8 @@ $ngt__border-color:  color( 'coconut 20' );
 $day__border-dark-color: color( 'carbon 90' );
 $ngt__border-dark-color: color( 'coconut 90' );
 
-$day__bg-color-selection: rgba( color( 'aqua' ), 0.25 );
-$ngt__bg-color-selection: rgba( color( 'aqua' ), 0.25 );
+$day__bg-color-selection: rgba( $day__color-primary, 0.25 );
+$ngt__bg-color-selection: rgba( $ngt__color-primary, 0.25 );
 
 
 // Transition
@@ -64,8 +70,8 @@ $transition-base:            background-color $transition-duration $transition-t
 
 // Hyperlink
 
-$day__a-color:                     color( 'aqua' );
-$ngt__a-color:                     color( 'aqua' );
+$day__a-color:                     $day__color-primary;
+$ngt__a-color:                     $ngt__color-primary;
 $a-font-weight:                    400;
 $a-text-decoration:                none;
 
@@ -238,8 +244,8 @@ $list__li-before-height:        0.5em;
 
 $list__li-before-transform:     rotate( -45deg );
 
-$day__list__li-before-bg-color: color( 'gold' );
-$ngt__list__li-before-bg-color: color( 'gold' );
+$day__list__li-before-bg-color: $day__color-warning;
+$ngt__list__li-before-bg-color: $ngt__color-warning;
 
 // Hr
 
@@ -299,17 +305,17 @@ $el-lg-padding-x:              $el-padding-x;
 
 $el-lg-font-size:              1.25em;
 
-$day__el-invalid-border-color: color( 'cherry 30' );
-$ngt__el-invalid-border-color: color( 'cherry 30' );
+$day__el-invalid-border-color: $day__color-danger;
+$ngt__el-invalid-border-color: $ngt__color-danger;
 
-$day__el-focus-border-color:   color( 'aqua' );
-$ngt__el-focus-border-color:   color( 'aqua' );
+$day__el-focus-border-color:   $day__color-primary;
+$ngt__el-focus-border-color:   $ngt__color-primary;
 
 $day__el-focus-box-shadow:     none; // inset 0 0 0 0.063rem $day__el-focus-border-color;
 $ngt__el-focus-box-shadow:     none; // inset 0 0 0 0.063rem $ngt__el-focus-border-color;
 
-$day__el-active-border-color:  color( 'aqua' );
-$ngt__el-active-border-color:  color( 'aqua' );
+$day__el-active-border-color:  $day__color-primary;
+$ngt__el-active-border-color:  $ngt__color-primary;
 
 
 // Button
@@ -335,7 +341,7 @@ $btn-transition:             $transition-base;
 // name, bg color, night bg color, text color, night text color, light colors on hover/active state?
 
 $btns: (
-    'primary'   $day__color-primary  $ngt__color-primary  $ngt__body-color $day__body-color '',
+    'primary'   $day__color-primary  $ngt__color-primary  $ngt__body-color $ngt__body-color '',
     'secondary' color( 'carbon 50' )  color( 'coconut 20' )  $ngt__body-color $ngt__body-color '',
     'light'     color( 'carbon 075' ) color( 'coconut 075' ) $day__body-color $ngt__body-color ''
 );
@@ -426,8 +432,8 @@ $ngt__input-focus-box-shadow:        $ngt__el-focus-box-shadow;
 $day__input-placeholder-color:       color( 'carbon 30' );
 $ngt__input-placeholder-color:       color( 'coconut 30' );
 
-$day__input-focus-placeholder-color: rgba( color( 'aqua' ), 0.5 );
-$ngt__input-focus-placeholder-color: rgba( color( 'aqua' ), 0.5 );
+$day__input-focus-placeholder-color: rgba( $day__color-primary, 0.5 );
+$ngt__input-focus-placeholder-color: rgba( $ngt__color-primary, 0.5 );
 
 $input-placeholder-opacity:          1;
 
@@ -1188,11 +1194,11 @@ $ngt__menu-pills__item__a-color:        $ngt__body-color;
 $day__menu-pills__item-active__a-color: $day__body-color;
 $ngt__menu-pills__item-active__a-color: $ngt__body-color;
 
-$day__menu-pills__a-hover-bg-color:     tint( color( 'aqua' ), 90% );
-$ngt__menu-pills__a-hover-bg-color:     shade( color( 'aqua' ), 90% );
+$day__menu-pills__a-hover-bg-color:     tint( $day__color-primary, 90% );
+$ngt__menu-pills__a-hover-bg-color:     shade( $ngt__color-primary, 90% );
 
-$day__menu-pills__item-active-bg-color: tint( color( 'aqua' ), 80% );
-$ngt__menu-pills__item-active-bg-color: shade( color( 'aqua' ), 80% );
+$day__menu-pills__item-active-bg-color: tint( $day__color-primary, 80% );
+$ngt__menu-pills__item-active-bg-color: shade( $ngt__color-primary, 80% );
 
 
 // Modal
@@ -1351,9 +1357,9 @@ $burger-height:                4.5rem;
 
 $burger__line-bg-color:        #fff;
 
-$burger__circle-bg-color:      color( 'aqua' );
+$burger__circle-bg-color:      $day__color-primary;
 
-$burger__img-wrap-bg-color:    color( 'aqua' );
+$burger__img-wrap-bg-color:    $day__color-primary;
 
 $burger__img-wrap-width:       4.5rem;
 $burger__img-wrap-height:      4.5rem;
