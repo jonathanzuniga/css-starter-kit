@@ -26,12 +26,36 @@
 
     @each $name, $hex in $colors {
 
+        $base-number: 50;
+
+        @for $i from 3 through 1 {
+
+            $colors-list:
+                append(
+                    $colors-list,
+                    '#{ $name } #{ $base-number - ( $i * 10 ) }' lighten( $hex, $i * 10% ),
+                    comma
+                );
+
+        }
+
         $colors-list:
             append(
                 $colors-list,
-                '#{ $name }' $hex,
+                '#{ $name } #{ $base-number }' $hex,
                 comma
             );
+
+        @for $i from 1 through 3 {
+
+            $colors-list:
+                append(
+                    $colors-list,
+                    '#{ $name } #{ $base-number + ( $i * 10 ) }' darken( $hex, $i * 10% ),
+                    comma
+                );
+
+        }
 
     }
 

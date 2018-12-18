@@ -504,10 +504,12 @@
 
 			&:hover ~ label .indic {
 				background-color: shade( $day__color-primary, $el-hover-amount );
+				border-color: $day__color-primary;
 			}
 
 			&:active ~ label .indic {
 				background-color: shade( $day__color-primary, $el-active-amount );
+				border-color: $day__color-primary;
 			}
 		}
 	}
@@ -516,7 +518,7 @@
 		padding-left: $ctrl--custom-check__label-padding-left;
 
 		&:hover {
-			.indic {
+			.indic:not( .indic--focused ) {
 				background-color: $day__el-hover-bg-color;
 				border-color: $day__el-hover-border-color;
 			}
@@ -544,17 +546,19 @@
 
 			&:hover ~ label .indic {
 				background-color: shade( $ngt__color-primary, $el-hover-amount );
+				border-color: $ngt__color-primary;
 			}
 
 			&:active ~ label .indic {
 				background-color: shade( $ngt__color-primary, $el-active-amount );
+				border-color: $ngt__color-primary;
 			}
 		}
 	}
 
 	label {
 		&:hover {
-			.indic {
+			.indic:not( .indic--focused ) {
 				background-color: $ngt__el-hover-bg-color;
 				border-color: $ngt__el-hover-border-color;
 			}
@@ -588,11 +592,23 @@
 		display: none;
 		position: absolute;
 	}
+
+	&--focused,
+	&--focused:hover {
+		border-color: $day__color-primary;
+		box-shadow: $day__indic-focus-box-shadow;
+	}
 }
 
 .night .indic {
 	background-color: $ngt__indic-bg-color;
 	border-color: $ngt__indic-border-color;
+
+	&--focused,
+	&--focused:hover {
+		border-color: $ngt__color-primary;
+		box-shadow: $ngt__indic-focus-box-shadow;
+	}
 }
 
 .indic--checkbox {

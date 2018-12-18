@@ -6,7 +6,7 @@
  * Color:
  */
 
-@each $name, $hex, $gen in $color-palette {
+@each $name, $hex in $colors {
 
 	$name_ucf: str_ucfirst( $name );
 	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
@@ -25,13 +25,6 @@
 	 *             td.w-25.us-all.c-#{ $name_r } #{ $hex }
 	 *             td.w-25.us-all.c-#{ $name_r } #{ $rgb }
 	 */
-
-}
-
-@each $name, $hex in $colors {
-
-	$name_ucf: str_ucfirst( $name );
-	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
 
 	$rule: ' !important';
 	$hex: $hex + unquote( $rule );
