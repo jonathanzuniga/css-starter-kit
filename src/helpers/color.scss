@@ -10,7 +10,7 @@
 
 	$name_ucf: str_ucfirst( $name );
 	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
-	$rgb: unquote( 'rgb( #{ red( $hex ) }, #{ green( $hex ) }, #{ blue( $hex ) } )' );
+	$rgb: unquote( 'rgb( #{ round( red( $hex ) ) }, #{ round( green( $hex ) ) }, #{ round( blue( $hex ) ) } )' );
 
 	/**
 	 * #{ $name_ucf } color:
