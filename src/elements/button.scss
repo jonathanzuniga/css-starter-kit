@@ -35,7 +35,7 @@
 	}
 }
 
-@each $name, $day-background-color, $ngt-background-color, $day-text-color, $ngt-text-color, $state-light-color in $btns {
+@each $name, $day-background-color, $ngt-background-color, $day-text-color, $ngt-text-color in $btns {
 
 	$name_ucf: str_ucfirst( $name );
 	$name_r: str_replace( to_lower_case( $name ), ' ', '-' );
@@ -60,46 +60,21 @@
 		}
 
 		&:hover {
-			@if not ($state-light-color == '') {
-
-				background-color:
-					tint(
-						$day-background-color,
-						$el-hover-amount
-					);
-
-			} @else {
-
-				background-color:
-					shade(
-						$day-background-color,
-						$el-hover-amount
-					);
-			}
-
+			background-color:
+				shade(
+					$day-background-color,
+					$el-hover-amount
+				);
 			color: $day-text-color;
 		}
 
 		&:active,
 		&.active {
-			@if not ( $state-light-color == '' ) {
-
-				background-color:
-					tint(
-						$day-background-color,
-						$el-active-amount
-					);
-
-			} @else {
-
-				background-color:
-					shade(
-						$day-background-color,
-						$el-active-amount
-					);
-
-			}
-
+			background-color:
+				shade(
+					$day-background-color,
+					$el-active-amount
+				);
 			color: $day-text-color;
 		}
 	}
@@ -109,47 +84,21 @@
 		color: $ngt-text-color;
 
 		&:hover {
-			@if not ( $state-light-color == '' ) {
-
-				background-color:
-					tint(
-						$ngt-background-color,
-						$el-hover-amount
-					);
-
-			} @else {
-
-				background-color:
-					shade(
-						$ngt-background-color,
-						$el-hover-amount
-					);
-
-			}
-
+			background-color:
+				tint(
+					$ngt-background-color,
+					$el-hover-amount
+				);
 			color: $ngt-text-color;
 		}
 
 		&:active,
 		&.active {
-			@if not ( $state-light-color == '' ) {
-
-				background-color:
-					tint(
-						$ngt-background-color,
-						$el-active-amount
-					);
-
-			} @else {
-
-				background-color:
-					shade(
-						$ngt-background-color,
-						$el-active-amount
-					);
-
-			}
-
+			background-color:
+				tint(
+					$ngt-background-color,
+					$el-active-amount
+				);
 			color: $ngt-text-color;
 		}
 	}
@@ -172,57 +121,23 @@
 			}
 
 			&:hover {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$day-background-color,
-							$el-hover-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$day-background-color,
-							$el-hover-amount
-						);
-
-				}
-
+				background-color:
+					shade(
+						$day-background-color,
+						$el-hover-amount
+					);
 				border-color: transparent;
-
 				color: $day-text-color;
 			}
 
 			&:active,
 			&.active {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$day-background-color,
-							$el-active-amount
-						);
-					border-color: transparentize(
-						tint(
-							$day-background-color,
-							$el-active-amount
-						),
-						$btn-outline-border-transparentize-amount
+				background-color:
+					shade(
+						$day-background-color,
+						$el-active-amount
 					);
-
-				} @else {
-
-					background-color:
-						shade(
-							$day-background-color,
-							$el-active-amount
-						);
-					border-color: transparent;
-
-				}
-
+				border-color: transparent;
 				color: $day-text-color;
 			}
 		}
@@ -245,57 +160,29 @@
 			}
 
 			&:hover {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$ngt-background-color,
-							$el-hover-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$ngt-background-color,
-							$el-hover-amount
-						);
-
-				}
-
+				background-color:
+					tint(
+						$ngt-background-color,
+						$el-hover-amount
+					);
 				border-color: transparent;
-
 				color: $ngt-text-color;
 			}
 
 			&:active,
 			&.active {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$ngt-background-color,
-							$el-active-amount
-						);
-					border-color: transparentize(
-						tint(
-							$ngt-background-color,
-							$el-active-amount
-						),
-						$btn-outline-border-transparentize-amount
+				background-color:
+					tint(
+						$ngt-background-color,
+						$el-active-amount
 					);
-
-				} @else {
-
-					background-color:
-						shade(
-							$ngt-background-color,
-							$el-active-amount
-						);
-					border-color: transparent;
-
-				}
-
+				border-color: transparentize(
+					tint(
+						$ngt-background-color,
+						$el-active-amount
+					),
+					$btn-outline-border-transparentize-amount
+				);
 				color: $ngt-text-color;
 			}
 		}
@@ -348,23 +235,11 @@
 
 			&::after {
 				transform: scale( 1.2 );
-
-				@if not ($state-light-color == '') {
-
-					background-color:
-						tint(
-							$day-background-color,
-							$el-hover-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$day-background-color,
-							$el-hover-amount
-						);
-				}
+				background-color:
+					shade(
+						$day-background-color,
+						$el-hover-amount
+					);
 			}
 		}
 
@@ -373,23 +248,11 @@
 			background-color: transparent;
 
 			&::after {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$day-background-color,
-							$el-active-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$day-background-color,
-							$el-active-amount
-						);
-
-				}
+				background-color:
+					shade(
+						$day-background-color,
+						$el-active-amount
+					);
 			}
 		}
 	}
@@ -401,46 +264,22 @@
 
 		&:hover {
 			&::after {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$ngt-background-color,
-							$el-hover-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$ngt-background-color,
-							$el-hover-amount
-						);
-
-				}
+				background-color:
+					tint(
+						$ngt-background-color,
+						$el-hover-amount
+					);
 			}
 		}
 
 		&:active,
 		&.active {
 			&::after {
-				@if not ( $state-light-color == '' ) {
-
-					background-color:
-						tint(
-							$ngt-background-color,
-							$el-active-amount
-						);
-
-				} @else {
-
-					background-color:
-						shade(
-							$ngt-background-color,
-							$el-active-amount
-						);
-
-				}
+				background-color:
+					tint(
+						$ngt-background-color,
+						$el-active-amount
+					);
 			}
 		}
 	}
