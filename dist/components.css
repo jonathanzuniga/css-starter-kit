@@ -60,7 +60,7 @@
  *     div.row
  *         div.md-col-6
  *             div.bx.bxsh-0063.bd-0063.card
- *                 div.card__head.bd-bottom-0063
+ *                 div.card__head
  *                     h4.m-0.p-125 Card title
  *                 div.card__body.p-125
  *                     p.m-0 Lorem ipsum dolor sit amet, mei nisl meliore eu. Ne ius quaeque discere, homero inermis ex eos. Iuvaret quaestio sapientem te nec. Falli legendos expetendis ei sed, sed quidam interpretaris ei, ipsum soleat quaestio ad mel.
@@ -115,7 +115,7 @@
  *     div.row
  *         div.md-col-6
  *             div.bx.bxsh-0063.bd-0063.card
- *                 div.card__head.bd-bottom-0063
+ *                 div.card__head
  *                     div.item-group
  *                         div.item
  *                             h4.m-0.p-125 Card title
@@ -822,17 +822,21 @@
  *
  *     @example
  *     nav.navbar.md-navbar--expand
- *         div.navbar__items.fxg-1
+ *         div.navbar__items.maxmd-jc-space-between.fxg-1
  *             div.navbar__brand
- *                 a(href='#!').navbar__item Brand
+ *                 div.navbar__item
+ *                     a(href='#!').p-left-0 Brand
  *             div.navbar__toggler
- *                 a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item.navbar__item--icn
+ *                 a(href="#!", data-target='#eg-navbar-collapse', data-toggle='collapse').navbar__item.navbar__item--icn.p-right-0
  *                         i.icon.ion-md-menu.navbar__icn
  *         div(id='eg-navbar-collapse').navbar__collapse.collapse
  *             div.navbar__items.ta-right
- *                 a(href='#!').navbar__item.active Home
- *                 a(href='#!').navbar__item Archive
- *                 a(href='#!').navbar__item About
+ *                 div.navbar__item.active
+ *                     a(href='#!') Home
+ *                 div.navbar__item
+ *                     a(href='#!') Archive
+ *                 div.navbar__item
+ *                     a(href='#!') About
  */
 .navbar {
   display: flex;

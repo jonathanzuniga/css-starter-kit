@@ -1,83 +1,6 @@
-/*
- * Code expansion
- *
- *     .sg-example
- *       .sg-canvas
- *       pre.sg-code
- *       button.sg-expando
- */
-
-.sg-code.sg-hidden {
-	display: none;
+.doc-navbar {
+	height: 60px;
 }
-
-.sg-expando {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	outline: 0;
-	border: 0;
-	background: transparent;
-
-	position: relative;
-/*	top: -10px;
-	left: -10px;
-	padding: 5px 10px;
-	margin-bottom: -20px;*/
-}
-
-.sg-expando-contract {
-	top: 0;
-	margin-bottom: 0;
-}
-
-.sg-expando:before {
-	content: '•••';
-	display: inline-block;
-
-	height: 16px;
-	width: 36px;
-	line-height: 16px;
-	text-align: center;
-
-	font-size: 10px;
-	background: #f4f4f5;
-	border-radius: 3px;
-	color: #252729;
-
-}
-
-.sg-expando:hover:before,
-.sg-expando:focus:before {
-	background: #d9d9d9;
-}
-
-.sg-expando:active:before {
-	background: #c2c2c2;
-}
-
-.night .sg-expando:before {
-	background: #252729;
-	color: #fff;
-
-}
-
-.night .sg-expando:hover:before,
-.night .sg-expando:focus:before {
-	background: #222426;
-}
-
-.night .sg-expando:active:before {
-	background: #202223;
-}
-
-.sg-expando-contract:before {
-	content: '\2715';
-}
-
-/*
-* Custom classes
-*/
 
 .doc-sidebar {
 	font-size: 14px;
@@ -85,6 +8,21 @@
 
 h2 {
 	margin-bottom: 1.25rem;
+}
+
+.sg-canvas {
+	*zoom: 1;
+	position: relative;
+}
+
+.sg-canvas:before,
+.sg-canvas:after {
+	content: ' ';
+	display: table;
+}
+
+.sg-canvas:after {
+	clear: both;
 }
 
 .doc-color-swatch {
@@ -95,6 +33,10 @@ h2 {
 
 .doc-h-100px {
 	height: 100px;
+}
+
+.sg-block:last-of-type {
+	border-bottom: none;
 }
 
 @media (min-width: 1024px) {
@@ -112,6 +54,30 @@ h2 {
 		overflow-y: auto;
 		position: relative;
 	}
+}
+
+.sg-block {
+	border-top-color: #e8e9ec;
+	transition: background-color 0.16s ease-out,
+				border-color 0.16s ease-out,
+				box-shadow 0.16s ease-out,
+				color 0.16s ease-out;
+}
+
+.night .sg-block {
+	border-top-color: #3a3b3e;
+}
+
+.night .sg-expando::before {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.night .sg-expando:hover::before {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.night .sg-code {
+	background: #fafaff !important;
 }
 
 .eg-drawer,
@@ -183,14 +149,6 @@ code {
 .eg-burger,
 .eg-mobile-menu__nav {
 	position: absolute;
-}
-
-.sg-block {
-	margin-bottom: 2rem;
-}
-
-.sg-canvas {
-	margin-bottom: 1rem;
 }
 
 .sg,

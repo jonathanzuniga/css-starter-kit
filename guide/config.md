@@ -6,7 +6,6 @@
 
 	link( rel='stylesheet', href='https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css' )
 	link( rel='stylesheet', href='../dist/csssk.css' )
-	link( rel='stylesheet', href='css/styledown.css' )
 	link( rel='stylesheet', href='css/doc.css' )
 
 	script().
