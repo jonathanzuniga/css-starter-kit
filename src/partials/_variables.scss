@@ -53,8 +53,11 @@ $ngt__body-color:    color( 'light 20' );
 $day__border-color:  color( 'light 40' );
 $ngt__border-color:  color( 'dark 40' );
 
-$day__bg-color-selection: rgba( $day__color-primary, 0.25 );
-$ngt__bg-color-selection: rgba( $ngt__color-primary, 0.25 );
+$day__selection-bg-color: #b4d5fe;
+$ngt__selection-bg-color: #b4d5fe;
+
+$day__selection-color: $day__body-color;
+$ngt__selection-color: $day__body-color;
 
 
 // Transition
@@ -273,7 +276,7 @@ $ngt__hr-border-bottom-color: $day__border-color;
 // Box
 
 $day__box-bg-color:     $day__body-bg-color;
-$ngt__box-bg-color:     color( 'dark 50' );
+$ngt__box-bg-color:     rgba( #fff, 0.05 );
 
 $box-border-radius:     $border-radius-base;
 
@@ -302,7 +305,7 @@ $ngt__el-color:                $ngt__body-color;
 $el-line-height:               inherit;
 
 $el-padding-y:                 0.250em;
-$el-padding-x:                 0.750em;
+$el-padding-x:                 1.125em;
 
 $el-sm-padding-y:              $el-padding-y;
 $el-sm-padding-x:              $el-padding-x;
@@ -772,7 +775,7 @@ $ngt__tbl-striped-border-color: transparent;
 $tbl-striped-index:             odd; // 'even'
 
 $day__tbl-striped-bg-color:     color( 'light 30' );
-$ngt__tbl-striped-bg-color:     color( 'light 50' );
+$ngt__tbl-striped-bg-color:     color( 'dark 50' );
 
 
 // ==========================================================================
@@ -1092,8 +1095,8 @@ $gutters: (
 
 // Card
 
-$day__card-head-bg-color:                   color( 'light 30' );
-$ngt__card-head-bg-color:                   color( 'dark 40' );
+$day__card-head-bg-color:                   rgba( #000, 0.05 );
+$ngt__card-head-bg-color:                   rgba( #fff, 0.05 );
 
 $card-head-border-top-right-radius:         $border-radius-base;
 $card-head-border-top-left-radius:          $border-radius-base;
@@ -1101,8 +1104,8 @@ $card-head-border-top-left-radius:          $border-radius-base;
 $day__card-body-bg-color:                   transparent;
 $ngt__card-body-bg-color:                   transparent;
 
-$day__card-foot-bg-color:                   $day__box-bg-color;
-$ngt__card-foot-bg-color:                   $ngt__box-bg-color;
+$day__card-foot-bg-color:                   transparent;
+$ngt__card-foot-bg-color:                   transparent;
 
 $card-foot-border-bottom-right-radius:      $border-radius-base;
 $card-foot-border-bottom-left-radius:       $border-radius-base;
