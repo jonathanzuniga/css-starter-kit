@@ -115,6 +115,10 @@ gulp.task( 'styledown', function () {
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'form.html' } ) )
         .pipe( gulp.dest( dest ) );
 
+    gulp.src( 'dist/elements/image.css' )
+        .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'image.html' } ) )
+        .pipe( gulp.dest( dest ) );
+
     gulp.src( 'dist/elements/input-group.css' )
         .pipe( styledown( { config: config, template: template, filename: prefix_elements + 'input-group.html' } ) )
         .pipe( gulp.dest( dest ) );

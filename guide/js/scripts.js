@@ -29,7 +29,7 @@ $( function () {
 		open: function () {
 
 			this.addClass( 'open' )
-				.css( { height: this.children().outerHeight() } );
+				.css( { height: this.children().outerHeight() + 16 } );
 
 		},
 
@@ -46,7 +46,7 @@ $( function () {
 
 	$( '.doc-sidebar .collapse[ aria-hidden="false" ]' )
 		.addClass( 'open' )
-		.css( { height: expandedItem.children().outerHeight() } );
+		.css( { height: expandedItem.children().outerHeight() + 16 } );
 
 	fsMenuToggle();
 	switchNightMode();

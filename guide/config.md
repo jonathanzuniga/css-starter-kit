@@ -98,6 +98,8 @@
 										li
 											a( href='elements-form.html' ) Form
 										li
+											a( href='elements-image.html' ) Image
+										li
 											a( href='elements-input-group.html' ) Input group
 										li
 											a( href='elements-item-group.html' ) Item group
@@ -190,6 +192,7 @@
 	script( src='js/jquery.collapse.js' )
 	script( src='js/jquery.collapse_storage.js' )
 	script( src='js/styledown.js' )
+	script( src='js/holder.min.js' )
 	script( src='js/scripts.js' )
 	script( src='js/components/collapse.js' )
 	script( src='js/components/modal.js' )

@@ -3848,7 +3848,7 @@ html {
 body {
   background-color: #fff;
   color: #252729;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-feature-settings: normal;
   font-size: 16px;
   font-variant-ligatures: common-ligatures;
@@ -3886,7 +3886,7 @@ a {
     color: #3b7fa9;
     text-decoration: none; }
   a:hover {
-    color: #2e6383;
+    color: #32698a;
     text-decoration: none; }
   a:hover, a:active {
     outline: 0; }
@@ -3900,7 +3900,7 @@ a {
   .night a:visited {
     color: #3b7fa9; }
   .night a:hover {
-    color: #5499c3; }
+    color: #6299ba; }
 
 p:not(.ac-c) > a:not(.btn),
 .a-bd-bottom a:not(.btn) {
@@ -3912,7 +3912,7 @@ p:not(.ac-c) > a:not(.btn),
     border-bottom-color: #3b7fa9; }
   p:not(.ac-c) > a:not(.btn):hover,
   .a-bd-bottom a:not(.btn):hover {
-    border-bottom-color: #2e6383; }
+    border-bottom-color: #32698a; }
 
 .night p:not(.ac-c) > a:not(.btn),
 .night .a-bd-bottom a:not(.btn) {
@@ -3922,7 +3922,7 @@ p:not(.ac-c) > a:not(.btn),
     border-bottom-color: #3b7fa9; }
   .night p:not(.ac-c) > a:not(.btn):hover,
   .night .a-bd-bottom a:not(.btn):hover {
-    border-bottom-color: #5499c3; }
+    border-bottom-color: #6299ba; }
 
 a.ac-c:not(.btn):link, a.ac-c:not(.btn):visited,
 .ac-c a:not(.btn):link,
@@ -4181,7 +4181,7 @@ code {
   background-color: #f4f4f5;
   border-radius: 0.125em;
   color: inherit;
-  font-family: "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
   font-size: 0.875em;
   font-weight: 300;
   padding: 0.2em; }
@@ -4212,7 +4212,7 @@ pre {
   border-left: none;
   border-color: transparent;
   border-radius: 0.125em;
-  font-family: "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace;
   font-size: 0.875em;
   font-weight: 300;
   overflow-x: auto;
@@ -4252,37 +4252,68 @@ figure {
  *     @example
  *     div.row
  *         div.col-6
- *             ol
- *                 li List item
- *                 li List item
- *                 li List item
- *         div.col-6
  *             ul
  *                 li List item
  *                 li List item
  *                 li List item
+ *                     ul
+ *                         li List item
+ *                         li List item
+ *                         li List item
+ *                             ul
+ *                                 li List item
+ *                                 li List item
+ *                                 li List item
+ *                             ol
+ *                                 li List item
+ *                                 li List item
+ *                                 li List item
+ *         div.col-6
+ *             ol
+ *                 li List item
+ *                 li List item
+ *                 li List item
+ *                     ol
+ *                         li List item
+ *                         li List item
+ *                         li List item
+ *                             ol
+ *                                 li List item
+ *                                 li List item
+ *                                 li List item
+ *                             ul
+ *                                 li List item
+ *                                 li List item
+ *                                 li List item
  */
 ol, ul {
-  list-style-position: outside;
+  list-style-position: inside;
   padding: 0; }
   ol li, ul li {
-    margin: 0 0 0.5rem 0; }
+    margin: 0.5rem 0;
+    padding: 0;
+    position: relative; }
+    ol li ol, ol li ul, ul li ol, ul li ul {
+      padding: 0 0 0 1.5em; }
 
 ul {
   list-style-type: none; }
-  ul li {
-    margin-bottom: 0;
-    padding: 0 0 0 1.5em; }
-    ul li::before {
-      position: relative;
-      top: 1em;
-      left: -1.25em;
+  ul > li {
+    padding: 0 0 0 1.25em; }
+    ul > li::before {
+      position: absolute;
+      top: 0.5em;
+      left: 0;
       display: block;
       width: 0.5em;
       height: 0.5em;
       content: '';
-      transform: rotate(-45deg);
-      background-color: #3b7fa9; }
+      transform: none;
+      background-color: #599fa0;
+      border-radius: 50%; }
+
+.night ul > li::before {
+  background-color: #599fa0; }
 
 .ls > li,
 .menu > li,
@@ -4292,9 +4323,6 @@ ul {
   .menu > li::before,
   .tabs ul > li::before {
     content: normal; }
-
-.night ul li::before {
-  background-color: #3b7fa9; }
 
 /**
  * Standard table:
@@ -4778,10 +4806,10 @@ hr {
     text-decoration: none; }
   .btn--link:hover {
     background-color: #f4f4f5;
-    color: #2e6383;
+    color: #32698a;
     text-decoration: none; }
   .btn--link:active, .btn--link.active {
-    color: #2e6383; }
+    color: #32698a; }
 
 .night .btn--link {
   background-color: transparent;
@@ -4790,9 +4818,9 @@ hr {
     color: #3b7fa9; }
   .night .btn--link:hover {
     background-color: #252729;
-    color: #5499c3; }
+    color: #6299ba; }
   .night .btn--link:active, .night .btn--link.active {
-    color: #5499c3; }
+    color: #6299ba; }
 
 /**
  * Button size:
@@ -5802,6 +5830,13 @@ hr {
 /***
  * Image:
  */
+/**
+  * Responsive image:
+  * `.img--responsive`
+  *
+  *     @example
+  *     img( src='holder.js/1240x320?auto=yes' ).img-responsive
+  */
 .img-responsive {
   max-width: 100%;
   height: auto; }
@@ -5809,9 +5844,18 @@ hr {
 .img {
   display: block;
   position: relative; }
-  .img--4x4 {
-    width: 4rem;
-    height: 4rem; }
+
+/**
+	 * 4x4rem image:
+	 * `.img--[#]`
+	 *
+	 *     @example
+	 *     div.img.img--4x4
+	 *         img( src='holder.js/64x64' )
+	 */
+.img--4x4 {
+  width: 4rem;
+  height: 4rem; }
 
 svg {
   stroke: #252729; }
@@ -5948,7 +5992,7 @@ svg {
  *     div.item-group
  *         div.item.fxg-0
  *             div.img.img--4x4
- *                 img(src="http://via.placeholder.com/64x64").bdr-025
+ *                 img( src='holder.js/64x64' ).bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -5979,7 +6023,7 @@ svg {
  *     div.item-group.m-bottom-1
  *         div.item.fxg-0
  *             div.img.img--4x4
- *                 img(src="http://via.placeholder.com/64x64").bdr-025
+ *                 img( src='holder.js/64x64' ).bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -5987,7 +6031,7 @@ svg {
  *     div.item-group.m-bottom-1
  *         div.item.fxg-0
  *             div.img.img--4x4
- *                 img(src="http://via.placeholder.com/64x64").bdr-025
+ *                 img( src='holder.js/64x64' ).bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -5995,7 +6039,7 @@ svg {
  *     div.item-group
  *         div.item.fxg-0
  *             div.img.img--4x4
- *                 img(src="http://via.placeholder.com/64x64").bdr-025
+ *                 img( src='holder.js/64x64' ).bdr-025
  *         div.item.fxd-col
  *             p.m-0
  *                 strong John Doe
@@ -6008,7 +6052,7 @@ svg {
  *     div.item-group.ai-center
  *         div.item.fxg-0
  *             div.img.img--4x4
- *                 img(src="http://via.placeholder.com/64x64").bdr-025
+ *                 img( src='holder.js/64x64' ).bdr-025
  *         div.item
  *             p.m-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
  */
@@ -6021,18 +6065,15 @@ svg {
  *
  *     @example
  *     ul.ls
- *         li Apricot
- *         li Banana
- *         li Cherry
- *             ul
- *                 li Caramel
- *                 li Ice cream
+ *         li List item
+ *         li List item
+ *         li List item
  */
 .ls {
   list-style: none;
   padding-left: 0; }
   .ls > li {
-    margin: 0 0 0.5rem 0; }
+    margin: 0.5rem 0; }
 
 /**
  * Inline list:
@@ -6040,9 +6081,9 @@ svg {
  *
  *     @example
  *     ul.ls.ls--inline
- *         li Apricot
- *         li Banana
- *         li Cherry
+ *         li List item
+ *         li List item
+ *         li List item
  */
 .ls--inline > li {
   display: inline-block;

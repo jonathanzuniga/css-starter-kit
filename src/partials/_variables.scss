@@ -9,9 +9,9 @@
 
 // Base
 
-$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
-$font-family-monospace:  'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
-$font-family-serif:      Georgia, serif;
+$font-family-sans-serif: Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$font-family-monospace:  Lucida Sans Typewriter, Lucida Console, monaco, Bitstream Vera Sans Mono, monospace !default;
+$font-family-serif:      Georgia, Times, Times New Roman, serif !default;
 $font-family-base:       $font-family-sans-serif;
 $font-size-base:         16px !default;
 $font-size-sm:           0.813em; // 13px
@@ -44,6 +44,9 @@ $ngt__color-danger:  color( 'danger 50' );
 $day__color-warning: color( 'warning 50' );
 $ngt__color-warning: color( 'warning 50' );
 
+$day__color-success: color( 'success 50' );
+$ngt__color-success: color( 'success 50' );
+
 $day__body-color:    color( 'dark 50' );
 $ngt__body-color:    color( 'light 20' );
 
@@ -72,12 +75,12 @@ $ngt__a-color:                     $ngt__color-primary;
 $a-font-weight:                    500;
 $a-text-decoration:                none;
 
-$day__a-visited-color:             $day__a-color;
-$ngt__a-visited-color:             $ngt__a-color;
+$day__a-visited-color:             $day__color-primary;
+$ngt__a-visited-color:             $ngt__color-primary;
 $a-visited-text-decoration:        none;
 
-$day__a-hover-color:               color( 'primary 70' );
-$ngt__a-hover-color:               color( 'primary 50' );
+$day__a-hover-color:               shade( $day__color-primary, 20% );
+$ngt__a-hover-color:               tint( $ngt__color-primary, 20% );
 $a-hover-text-decoration:          none;
 
 
@@ -226,23 +229,30 @@ $pre-padding-x:         1.5rem;
 
 // List
 
-$list-list-style-position:      outside;
+$list-list-style-position:      inside;
 $list-padding:                  0;
 $list-list-style-type:          none;
 
-$list__li-margin:               0 0 0.5rem 0;
-$list__li-padding:              0 0 0 1.5em;
+$list__li-margin:               0.5rem 0;
+$list__li-padding:              0;
 
-$list__li-before-top:           1em;
-$list__li-before-left:         -1.25em;
+$list__li-before-top:           0.5em;
+$list__li-before-left:          0; // -1.25em; // <-- outside
 
 $list__li-before-width:         0.5em;
 $list__li-before-height:        0.5em;
 
-$list__li-before-transform:     rotate( -45deg );
+$list__li-before-transform:     none;
 
-$day__list__li-before-bg-color: $day__color-primary;
-$ngt__list__li-before-bg-color: $ngt__color-primary;
+$day__list__li-before-bg-color: $day__color-success;
+$ngt__list__li-before-bg-color: $ngt__color-success;
+
+$list__li-before-border-radius: 50%;
+
+$list__li__list-padding:        0 0 0 1.5em;
+
+$ul__li-padding: 0 0 0 1.25em;
+
 
 // Hr
 

@@ -6,6 +6,14 @@
  * Image:
  */
 
+ /**
+  * Responsive image:
+  * `.img--responsive`
+  *
+  *     @example
+  *     img( src='holder.js/1240x320?auto=yes' ).img-responsive
+  */
+
 .img-responsive {
 	max-width: 100%;
 	height: auto;
@@ -14,15 +22,24 @@
 .img {
 	display: block;
 	position: relative;
+}
 
-	@each $key, $value in $fixed-sq-imgs {
+@each $key, $value in $fixed-sq-imgs {
 
-		&--#{ $key }x#{ $key } {
-			width: #{ $value };
-			height: #{ $value };
-		}
+	/**
+	 * #{ $key }x#{ $value } image:
+	 * `.img--[#]`
+	 *
+	 *     @example
+	 *     div.img.img--#{ $key }x#{ $key }
+	 *         img( src='holder.js/64x64' )
+	 */
 
+	.img--#{ $key }x#{ $key } {
+		width: #{ $value };
+		height: #{ $value };
 	}
+
 }
 
 svg {
